@@ -15,6 +15,8 @@
     <link href="css/vendors.css" rel="stylesheet" type="text/css" >
     <link href="css/style.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
+     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+<script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
 
 </head>
@@ -108,13 +110,13 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a class="menu-item" href="#section-about">About</a></li>
-                                        <li><a class="menu-item" href="#section-why-attend">Why Attend</a></li>
-                                        <li><a class="menu-item" href="#section-speakers">Speakers</a></li>
-                                        <li><a class="menu-item" href="#section-schedule">Schedule</a></li>
-                                        <li><a class="menu-item" href="#section-tickets">Tickets</a></li>
-                                        <li><a class="menu-item" href="#section-venue">Venue</a></li>
-                                        <li><a class="menu-item" href="#section-faq">FAQ</a></li>
+                                        <li><a class="menu-item" href="">About</a></li>
+                                        <li><a class="menu-item" href="">Why Attend</a></li>
+                                        <li><a class="menu-item" href="">Speakers</a></li>
+                                        <li><a class="menu-item" href="">Schedule</a></li>
+                                        <li><a class="menu-item" href="">Tickets</a></li>
+                                        <li><a class="menu-item" href="">Venue</a></li>
+                                        <li><a class="menu-item" href="">FAQ</a></li>
                                         <li><a class="menu-item" href="news.html">Pages</a>
                                             <ul>
                                                 <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
@@ -150,7 +152,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="subtitle">The Future of Intelligence</div>
-                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">AI Summit 2025</h1>
+                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">Wish group</h1>
 
                             <div class="d-block d-md-flex justify-content-center">
                                 <div class="d-flex justify-content-center align-items-center mx-4">
@@ -199,6 +201,13 @@
             </div>
         </section>
 
+
+
+
+
+
+
+        
         <section id="section-about" class="bg-dark section-dark text-light">
             <div class="container">
                 <div class="row  gx-5 align-items-center justify-content-between">
@@ -220,7 +229,17 @@
 
                     <div class="col-lg-5">
                         <div class="wow scaleIn">
-                            <img src="images/misc/c1.webp" class="w-100 rotate-animation" alt="">
+                            <!-- Globe container -->
+                            <div id="business-globe" style="width:100%;height:400px;background:#000;border-radius:10px;"></div>
+                            <h4 class="mt-4 text-center text-light">Our Business Countries</h4>
+                            <ul class="list-unstyled text-center text-light">
+                                <li>United States</li>
+                                <li>Canada</li>
+                                <li>United Kingdom</li>
+                                <li>Germany</li>
+                                <li>UAE</li>
+                                <li>India</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -1045,7 +1064,7 @@
                                             <li>Digital materials and session recordings.</li>
                                         </ul>
                                     </div>
-
+       
                                     <a class="btn-main fx-slide w-100" href="tickets.html"><span>Buy Ticket</span></a>
                                     
                                 </div>
@@ -1389,7 +1408,60 @@
     <script src="js/designesia.js"></script>
     <script src="js/countdown-custom.js"></script>
     <script src="js/custom-marquee.js"></script>
+<script>
+    // Ensure DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const globeContainer = document.getElementById('business-globe');
+    if (!globeContainer) {
+        console.error('Globe container #business-globe not found');
+        return;
+    }
 
+    // List of countries with coordinates (latitude, longitude)
+    const countries = [
+        { code: 'USA', name: 'United States', lat: 37.0902, lng: -95.7129 },
+        { code: 'CAN', name: 'Canada', lat: 56.1304, lng: -106.3468 },
+        { code: 'GBR', name: 'United Kingdom', lat: 55.3781, lng: -3.4360 },
+        { code: 'DEU', name: 'Germany', lat: 51.1657, lng: 10.4515 },
+        { code: 'ARE', name: 'UAE', lat: 23.4241, lng: 53.8478 },
+        { code: 'IND', name: 'India', lat: 20.5937, lng: 78.9629 }
+    ];
+
+    // Initialize the globe
+    const globe = Globe()
+        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+        .backgroundColor('#000000') // Matches container background
+        .pointOfView({ lat: 0, lng: 0, altitude: 2.5 }, 0)
+        .pointRadius(1.0) // Larger pins
+        .pointColor(() => '#ff4d4d') // Red pins matching id-color
+        .pointLabel('name')
+        .pointsData(countries)
+        .pointLat('lat')
+        .pointLng('lng')
+        .labelText('name')
+        .labelSize(0.7) // Increased for larger pins
+        .labelDotRadius(0.5) // Increased for larger pins
+        .labelColor(() => '#ffffff')
+        .labelLabel(p => `
+            <div style="background-color: rgba(0, 0, 0, 0.75); color: white; padding: 5px; border-radius: 5px;">
+                ${p.name}
+            </div>
+        `)
+        (globeContainer);
+
+    // Auto-rotate the globe
+    globe.controls().autoRotate = true;
+    globe.controls().autoRotateSpeed = 1;
+
+    // Handle window resizing
+    function resizeGlobe() {
+        globe.width(globeContainer.offsetWidth);
+        globe.height(globeContainer.offsetHeight);
+    }
+    resizeGlobe();
+    window.addEventListener('resize', resizeGlobe);
+});
+</script>
 </body>
 
 </html>
