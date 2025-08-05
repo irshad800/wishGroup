@@ -159,7 +159,10 @@ Table of content:
 .bg-gradient-1{  background: -moz-linear-gradient(var(--bg-gradient-1)) !important;  background: -webkit-linear-gradient(var(--bg-gradient-1)) !important;background: linear-gradient(var(--bg-gradient-1)) !important;
 }
 /* base color */
-.id-color{color:var(--primary-color)}
+.id-color {
+  color: #B30000;
+}
+
 .rounded-1{
   border-radius: var(--rounded-1) !important;
   -moz-border-radius: var(--rounded-1) !important;
@@ -3151,7 +3154,7 @@ a.btn-main:visited,
 input[type=button].btn-main,
 a.btn-line,
 #mainmenu li ul.mega a.btn-main {
-  background: var(--primary-color);
+  background: linear-gradient(to bottom, black 0%, #B30000 100%);
   color: var(--btn-color);
   font-family: var(--btn-font-family);
   font-size: var(--btn-font-size);
@@ -7141,8 +7144,8 @@ footer .tiny-border span {
   background: linear-gradient(0deg, rgba(var(--bg-dark-1-rgb), 1) 0%, rgba(var(--bg-dark-1-rgb), 0) 100%);
 }
 
-.gradient-edge-top.color{
-  background: linear-gradient(180deg, rgba(var(--primary-color-rgb), 1) 0%, rgba(var(--primary-color-rgb), 0) 100%);
+.gradient-edge-top.color {
+  background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 100%);
 }
 
 .gradient-edge-bottom.color{
