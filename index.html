@@ -43,10 +43,10 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo.jpeg" alt="" >
-                                        <img class="logo-scroll" src="/images/wishgroup/logo.jpeg" alt="" >
-                                        <img class="logo-mobile" src="/images/wishgroup/logo.jpeg" alt="" >
-                                    </a>
+    <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
+    <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
+    <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" width="160" height="auto">
+</a>
                                 </div>
                                 <!-- logo close -->
                             </div>
@@ -104,11 +104,6 @@
 
                             <div class="subtitle">Decades of Value and Vectory</div>
                             <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1"> Make Your Wish</h1>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a55b60f4cceeccf6a9040e77474ee3429b0544f6
 
                             <div class="d-block d-md-flex justify-content-center">
                                 <div class="d-flex justify-content-center align-items-center mx-4">
@@ -142,15 +137,16 @@
                     <div class="col-lg-5">
                         <div class="wow scaleIn">
                             <!-- Globe container -->
-                            <div id="business-globe" style="width:100%;height:400px;background:#000;border-radius:10px;"></div>
+                            <div id="business-globe" style="width:100%;height:600px;background:#000;border-radius:10px;"></div>
                             <h4 class="mt-4 text-center text-light">Our Business Countries</h4>
                             <ul class="list-unstyled text-center text-light">
-                                <li>United States</li>
-                                <li>Canada</li>
+                                <li>United Arab Emirates</li>
+                                <li>Sri Lanka</li>
+                                <li>Maldives</li>
+                                <li>Malaysia</li>
+                                <li>Ghana</li>
+                                <li>South Africa</li>
                                 <li>United Kingdom</li>
-                                <li>Germany</li>
-                                <li>UAE</li>
-                                <li>India</li>
                             </ul>
                         </div>
                     </div>
@@ -526,7 +522,7 @@
                                 <!-- schedule item begin -->
                                 <div class="border-white-bottom-op-2 pb-5 mb-5">
                                     <div class="row g-4 align-items-center">
-                                        <div class="col-md-2">
+                                        <div class="col-md-2>
                                             20:00 – 22:00 PM
                                         </div>
                                         <div class="col-md-4">
@@ -1322,44 +1318,82 @@
     <script src="js/custom-marquee.js"></script>
 <script>
     // Ensure DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    const globeContainer = document.getElementById('business-globe');
-    if (!globeContainer) {
-        console.error('Globe container #business-globe not found');
-        return;
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const globeContainer = document.getElementById('business-globe');
+        if (!globeContainer) {
+            console.error('Globe container #business-globe not found');
+            return;
+        }
 
-    // List of countries with coordinates (latitude, longitude)
-    const countries = [
-        { code: 'USA', name: 'United States', lat: 37.0902, lng: -95.7129 },
-        { code: 'CAN', name: 'Canada', lat: 56.1304, lng: -106.3468 },
-        { code: 'GBR', name: 'United Kingdom', lat: 55.3781, lng: -3.4360 },
-        { code: 'DEU', name: 'Germany', lat: 51.1657, lng: 10.4515 },
-        { code: 'ARE', name: 'UAE', lat: 23.4241, lng: 53.8478 },
-        { code: 'IND', name: 'India', lat: 20.5937, lng: 78.9629 }
-    ];
+        // List of countries with coordinates (latitude, longitude)
+        const countries = [
+            { code: 'ARE', name: 'United Arab Emirates', lat: 24.4539, lng: 54.3773 },
+            { code: 'LKA', name: 'Sri Lanka', lat: 7.8731, lng: 80.7718 },
+            { code: 'MDV', name: 'Maldives', lat: 3.2028, lng: 73.2207 },
+            { code: 'MYS', name: 'Malaysia', lat: 4.2105, lng: 101.9758 },
+            { code: 'GHA', name: 'Ghana', lat: 7.9465, lng: -1.0232 },
+            { code: 'ZAF', name: 'South Africa', lat: -30.5595, lng: 22.9375 },
+            { code: 'GBR', name: 'United Kingdom', lat: 55.3781, lng: -3.4360 }
+        ];
 
-    // Initialize the globe
-    const globe = Globe()
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .backgroundColor('#000000') // Matches container background
-        .pointOfView({ lat: 0, lng: 0, altitude: 2.5 }, 0)
-        .pointRadius(1.0) // Larger pins
-        .pointColor(() => '#ff4d4d') // Red pins matching id-color
-        .pointLabel('name')
-        .pointsData(countries)
-        .pointLat('lat')
-        .pointLng('lng')
-        .labelText('name')
-        .labelSize(0.7) // Increased for larger pins
-        .labelDotRadius(0.5) // Increased for larger pins
-        .labelColor(() => '#ffffff')
-        .labelLabel(p => `
-            <div style="background-color: rgba(0, 0, 0, 0.75); color: white; padding: 5px; border-radius: 5px;">
-                ${p.name}
-            </div>
-        `)
-        (globeContainer);
+        // Country flag URLs (using flagcdn.com, 32x24 PNG)
+        const flagUrls = {
+            ARE: 'https://flagcdn.com/32x24/ae.png',
+            LKA: 'https://flagcdn.com/32x24/lk.png',
+            MDV: 'https://flagcdn.com/32x24/mv.png',
+            MYS: 'https://flagcdn.com/32x24/my.png',
+            GHA: 'https://flagcdn.com/32x24/gh.png',
+            ZAF: 'https://flagcdn.com/32x24/za.png',
+            GBR: 'https://flagcdn.com/32x24/gb.png'
+        };
+
+        // Initialize the globe with country flags
+        const globe = Globe()
+            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+            .backgroundColor('#000000')
+            .pointOfView({ lat: 0, lng: 0, altitude: 2.5 }, 0)
+            .htmlElementsData(countries)
+            .htmlLat('lat')
+            .htmlLng('lng')
+            .htmlElement(country => {
+                const el = document.createElement('img');
+                el.src = flagUrls[country.code];
+                el.alt = country.name;
+                el.style.width = '32px';
+                el.style.height = '24px';
+                el.style.cursor = 'pointer';
+                el.style.transform = 'translate(-50%, -100%)';
+                el.title = country.name;
+                // Show place name on click
+                el.addEventListener('click', e => {
+                    e.stopPropagation();
+                    // Remove any existing tooltip
+                    document.querySelectorAll('.globe-tooltip').forEach(tip => tip.remove());
+                    // Create tooltip
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'globe-tooltip';
+                    tooltip.textContent = country.name;
+                    tooltip.style.position = 'fixed';
+                    tooltip.style.left = `${e.clientX + 10}px`;
+                    tooltip.style.top = `${e.clientY - 10}px`;
+                    tooltip.style.background = 'rgba(0,0,0,0.85)';
+                    tooltip.style.color = '#fff';
+                    tooltip.style.padding = '6px 14px';
+                    tooltip.style.borderRadius = '6px';
+                    tooltip.style.fontSize = '16px';
+                    tooltip.style.pointerEvents = 'none';
+                    tooltip.style.zIndex = 9999;
+                    document.body.appendChild(tooltip);
+                    // Remove tooltip on next click anywhere
+                    const removeTooltip = () => {
+                        tooltip.remove();
+                        window.removeEventListener('click', removeTooltip);
+                    };
+                    setTimeout(() => window.addEventListener('click', removeTooltip), 0);
+                });
+                return el;
+            })
+            (globeContainer);
 
     // Auto-rotate the globe
     globe.controls().autoRotate = true;
