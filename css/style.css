@@ -149,8 +149,14 @@ Table of content:
 }
 
 /* base background color */
-.bg-color{background: var(--primary-color)}
-.bg-color-2{background: var(--secondary-color)}
+.bg-color {
+  background: linear-gradient(to bottom, #B30000 10%, #000000 90%);
+}
+
+.bg-color-2 {
+  background: linear-gradient(to bottom, #B30000 10%, #000000 90%);
+}
+
 .bg-light{background: var(--bg-light) !important}
 .bg-dark,.bg-dark-1{background-color: var(--bg-dark-1) !important}
 .bg-dark-2{background-color: var(--bg-dark-2) !important}
