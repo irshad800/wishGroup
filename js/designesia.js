@@ -1608,3 +1608,22 @@
     });
     
  })(jQuery);
+
+ $(document).ready(function(){
+  $('.team-carousel').owlCarousel({
+    loop:true,
+    margin:24,
+    nav:true,
+    dots:true,
+    navText: [
+      '<i class="fa fa-chevron-left"></i>',
+      '<i class="fa fa-chevron-right"></i>'
+    ],
+    responsive:{
+      0:{ items:1 },
+      600:{ items:2 },
+      992:{ items:3 },
+      1200:{ items:4 }
+    }
+  });
+});

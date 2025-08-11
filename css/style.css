@@ -149,8 +149,14 @@ Table of content:
 }
 
 /* base background color */
-.bg-color{background: var(--primary-color)}
-.bg-color-2{background: var(--secondary-color)}
+.bg-color {
+  background: linear-gradient(to bottom, #B30000 10%, #000000 90%);
+}
+
+.bg-color-2 {
+  background: linear-gradient(to bottom, #B30000 10%, #000000 90%);
+}
+
 .bg-light{background: var(--bg-light) !important}
 .bg-dark,.bg-dark-1{background-color: var(--bg-dark-1) !important}
 .bg-dark-2{background-color: var(--bg-dark-2) !important}
@@ -11933,7 +11939,7 @@ img {
   position: relative;
   overflow: hidden;
   padding: 30px;
-  background: url('../images/misc/l3.webp');
+  background: url('../images/misc/l4.webp');
   border-radius: var(--rounded-1);
   -moz-border-radius: var(--rounded-1);
   -webkit-border-radius: var(--rounded-1);
@@ -13129,3 +13135,259 @@ img {
     width: auto;
   }
 }
+/* --- Who We Are Section Professional Card Design --- */
+.who-pro-card {
+    background: linear-gradient(120deg, rgba(30,30,30,0.98) 80%, rgba(225,6,0,0.08) 100%);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(225,6,0,0.13), 0 1.5rem 2.2rem rgb(0 0 0 / 30%);
+    border: 1.5px solid rgba(255,255,255,0.10);
+    padding: 2.2rem 1.7rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    backdrop-filter: blur(8px);
+}
+.who-pro-card:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 40px 0 rgba(225,6,0,0.22), 0 2.5rem 3.2rem rgb(0 0 0 / 40%);
+    border-color: #e10600;
+}
+.who-pro-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 12px 0 rgba(225,6,0,0.18);
+    border: 2px solid rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.25);
+    transition: background 0.2s;
+}
+.who-pro-icon-lg {
+    width: 80px;
+    height: 80px;
+    font-size: 2.7rem;
+}
+.bg-gradient-red {
+    background: linear-gradient(135deg, #e10600 0%, #b30000 100%);
+}
+.bg-gradient-black {
+    background: linear-gradient(135deg, #000 0%, #222 100%);
+}
+.bg-gradient-white {
+    background: linear-gradient(135deg, #fff 0%, #e10600 100%);
+    color: #e10600 !important;
+}
+.who-value-pro {
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 1.3rem 0.8rem 1.1rem 0.8rem;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(225,6,0,0.09);
+    border: 1px solid rgba(255,255,255,0.09);
+    position: relative;
+}
+.who-value-pro:hover {
+    background: rgba(225,6,0,0.13);
+    box-shadow: 0 4px 16px 0 rgba(225,6,0,0.18);
+}
+.who-value-pro i {
+    color: #e10600;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50%;
+    padding: 8px;
+}
+.who-pro-divider {
+    border: 0;
+    height: 5px;
+    width: 120px;
+    background: linear-gradient(90deg, #e10600 0%, #fff 100%);
+    border-radius: 2px;
+    opacity: 0.8;
+}
+@media (max-width: 991px) {
+    .who-pro-card { margin-bottom: 1.5rem; }
+    .who-pro-divider { width: 80px; }
+}
+@media (max-width: 767px) {
+    .who-pro-card, .who-value-pro { padding: 1.2rem 0.7rem; }
+    .who-pro-divider { width: 50px; }
+}
+
+.motto-highlight {
+    background: linear-gradient(90deg, #e10600 0%, #b30000 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 24px 0 rgba(225,6,0,0.13);
+    border-radius: 12px;
+    border: 2px solid #fff2;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.2s;
+}
+.motto-highlight:hover {
+    box-shadow: 0 8px 32px 0 rgba(225,6,0,0.22);
+}
+
+
+/* --- Professional Who We Are Modern Card Styles --- */
+.pro-card-modern {
+    background: linear-gradient(120deg, rgba(30,30,30,0.98) 80%, rgba(225,6,0,0.08) 100%);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(225,6,0,0.13), 0 1.5rem 2.2rem rgb(0 0 0 / 30%);
+    border: 1.5px solid rgba(255,255,255,0.10);
+    padding: 2.2rem 1.7rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    backdrop-filter: blur(8px);
+}
+.pro-card-modern:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 40px 0 rgba(225,6,0,0.22), 0 2.5rem 3.2rem rgb(0 0 0 / 40%);
+    border-color: #e10600;
+}
+.pro-value-modern {
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 1.3rem 0.8rem 1.1rem 0.8rem;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(225,6,0,0.09);
+    border: 1px solid rgba(255,255,255,0.09);
+    position: relative;
+}
+.pro-value-modern:hover {
+    background: rgba(225,6,0,0.13);
+    box-shadow: 0 4px 16px 0 rgba(225,6,0,0.18);
+}
+.pro-value-modern i {
+    color: #e10600;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50%;
+    padding: 8px;
+}
+.pro-motto-modern {
+    background: linear-gradient(90deg, #e10600 0%, #b30000 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 24px 0 rgba(225,6,0,0.13);
+    border-radius: 12px;
+    border: 2px solid #fff2;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.2s;
+}
+.pro-motto-modern:hover {
+    box-shadow: 0 8px 32px 0 rgba(225,6,0,0.22);
+}
+
+/* Responsive fix for Core Values grid */
+@media (max-width: 991.98px) {
+  #section-why-attend .row.text-center > .col-6.col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767.98px) {
+  #section-why-attend .row.text-center > .col-6.col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .who-value-pro.pro-value-modern {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+/* --- Team Horizontal Scroll Section --- */
+.team-scroll-wrapper {
+  overflow-x: auto;
+  padding-bottom: 24px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  position: relative;
+  scrollbar-color: #B30000 #222;
+  scrollbar-width: thin;
+}
+.team-scroll-inner {
+  display: flex;
+  gap: 32px;
+  min-width: 900px;
+  padding-bottom: 10px;
+}
+.team-card {
+  min-width: 320px;
+  max-width: 320px;
+  background: linear-gradient(135deg, rgba(179,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  margin-bottom: 10px;
+  position: relative;
+}
+.team-card:hover {
+  transform: translateY(-10px) scale(1.04) rotate(-2deg);
+  box-shadow: 0 16px 40px 0 rgba(179,0,0,0.25), 0 2px 8px 0 rgba(0,0,0,0.15);
+  z-index: 2;
+}
+.team-card img {
+  border-radius: 18px 18px 0 0;
+  height: 260px;
+  object-fit: cover;
+  filter: grayscale(0.1) brightness(0.95);
+  transition: filter 0.3s;
+}
+.team-card:hover img {
+  filter: grayscale(0) brightness(1.05) drop-shadow(0 0 10px #B30000);
+}
+.team-card .bg-blur {
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 2px 12px 0 rgba(179,0,0,0.15);
+  border-radius: 0 0 18px 18px;
+  margin-top: -30px;
+  padding-top: 24px !important;
+}
+.team-card h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.team-card span {
+  font-size: 1rem;
+  color: #ffb3b3;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.team-scroll-wrapper::-webkit-scrollbar {
+  height: 10px;
+  background: #222;
+  border-radius: 8px;
+}
+.team-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #B30000 0%, #222 100%);
+  border-radius: 8px;
+}
+@media (max-width: 991px) {
+  .team-card, .team-scroll-inner { min-width: 260px; max-width: 260px; }
+  .team-scroll-inner { gap: 18px; }
+}
+@media (max-width: 600px) {
+  .team-card, .team-scroll-inner { min-width: 210px; max-width: 210px; }
+  .team-card img { height: 140px; }
+  .team-scroll-inner { gap: 10px; }
+}
+
+
+

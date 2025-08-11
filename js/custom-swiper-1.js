@@ -30,3 +30,20 @@ const de_swiper = new Swiper('.swiper', {
   watchSlidesProgress: true
 
 });
+
+// Add this after Swiper JS is loaded
+var teamSwiper = new Swiper('.team-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 32,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    loop: true,
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 }
+    }
+});
