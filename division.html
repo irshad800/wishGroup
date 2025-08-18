@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Wish Group - Our Companies</title>
+  <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Wish Group Companies Portfolio" name="description">
+  <meta content="Wish Group, Companies, Real Estate, Manufacturing, Trading, Hospitality, Media, Finance" name="keywords">
+  <meta content="Wish Group" name="author">
+  <!-- CSS Files -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+  <link href="css/vendors.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- color scheme -->
+  <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+
+  <style>
+    /* Enhanced company card styling */
+    .company-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .company-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    .company-card .gradient-edge-bottom {
+      transition: opacity 0.3s ease;
+    }
+    
+    .company-card:hover .gradient-edge-bottom {
+      opacity: 0.8 !important;
+    }
+    
+    .company-item h4 {
+      transition: color 0.2s ease;
+    }
+    
+    .company-card:hover .company-item h4 {
+      color: #c9a02f !important;
+    }
+    
+    /* Division modal styling with animations */
+    .division-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      overflow-y: auto;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .division-modal.show {
+      display: block;
+      opacity: 1;
+    }
+    
+    .modal-content {
+      background: #1a1a1a;
+      border-radius: 5px;
+      max-width: 900px;
+      margin: 50px auto;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.1);
+      transform: translateY(20px);
+      transition: all 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+      opacity: 0;
+    }
+    
+    .division-modal.show .modal-content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+      transform: scale(1);
+    }
+    
+    .close-modal:hover {
+      color: #c9a02f;
+      transform: scale(1.1);
+    }
+    
+    /* Company card enhancements */
+    .company-card .company-item + .company-item { 
+      border-top: 1px dashed rgba(255,255,255,.15); 
+      padding-top: 16px; 
+      margin-top: 16px; 
+    }
+    
+    .company-item h4 { 
+      margin: 0 0 6px; 
+      font-size: 1.05rem; 
+      color: #fff; 
+    }
+    
+    .company-meta { 
+      margin: 0; 
+      opacity: .85; 
+      font-size: 0.9rem;
+    }
+    
+    .section-title { 
+      font-size: 44px; 
+      line-height: 1.1; 
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    
+    @media (max-width: 575.98px){
+      .section-title { 
+        font-size: 34px; 
+      }
+    }
+    
+    /* Gold accent */
+    .accent { 
+      color: #c9a02f; 
+    }
+    
+    /* New enhancements */
+    .division-header {
+      position: relative;
+      padding: 60px 0;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, rgba(201,160,47,0.1) 0%, rgba(0,0,0,0) 100%);
+      border-bottom: 1px solid rgba(201,160,47,0.2);
+    }
+    
+    .division-header h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    
+    .division-description {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    .company-logo-placeholder {
+      width: 60px;
+      height: 60px;
+      background: rgba(201,160,47,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .company-logo-placeholder:hover {
+      transform: rotate(15deg) scale(1.1);
+      background: rgba(201,160,47,0.2);
+    }
+    
+    .company-logo-placeholder i {
+      color: #c9a02f;
+      font-size: 24px;
+      transition: all 0.3s ease;
+    }
+    
+    .company-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    /* Animated globe background */
+    .globe-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      z-index: 0;
+    }
+    
+    /* Floating animation for cards */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Fade-in animation for company items */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .company-item {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 767.98px) {
+      .company-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .company-logo-placeholder {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .modal-content {
+        margin: 20px auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-scheme">
+  <div id="wrapper">
+
+      <div class="float-text show-on-scroll">
+        <span><a href="#">Scroll to top</a></span>
+      </div>
+      <div class="scrollbar-v show-on-scroll"></div>
+
+      <!-- page preloader begin -->
+      <div id="de-loader"></div>
+      <!-- page preloader close -->
+
+      <header class="transparent">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="de-flex">
+                <div class="de-flex-col">
+                  <!-- logo begin -->
+                  <div id="logo">
+                    <a href="index.html">
+                      <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
+                      <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
+                      <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" width="160" height="auto">
+                    </a>
+                  </div>
+                  <!-- logo close -->
+                </div>
+
+                <div class="de-flex-col">
+                  <div class="de-flex-col header-col-mid">
+                    <ul id="mainmenu">
+                      <li><a class="menu-item active" href="#section-hero">Home</a></li>
+                      <li><a class="menu-item" href="about.html">About Us</a></li>
+                      <li><a class="menu-item" href="#section-companies">Divisions</a></li>
+                      <li><a class="menu-item" href="#">Projects</a></li>
+                      <li><a class="menu-item" href="#">Countries</a></li>
+                      <li><a class="menu-item" href="#">News</a></li>
+                      <li><a class="menu-item" href="#">Our Policies</a></li>
+                      <li><a class="menu-item" href="#">Career</a></li>
+                      <li><a class="menu-item" href="news.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="de-flex-col">
+                  <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                  <div class="menu_side_area">
+                    <span id="menu-btn"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO SECTION -->
+      <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+        <img src="images/background/7.webp" class="jarallax-img" alt="">
+        <div class="gradient-edge-bottom h-50"></div>
+        <div class="sw-overlay op-5"></div>
+        <div class="abs w-80 bottom-10 z-2 w-100">
+          <div class="container">
+            <div class="row align-items-center justify-content-between gx-5">
+              <div class="col-lg-7">
+                <div class="relative wow mask-right">
+                  <div class="text-start">
+                    <h1 class="section-title text-uppercase fs-sm-10vw mb-0 lh-1">Our Global Portfolio</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
+                <p class="mb-0">A diversified portfolio spanning across Real Estate, Manufacturing, Trading, Hospitality, Media, and Capital & Finance sectors worldwide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIVISIONS INTRO -->
+      <section class="bg-dark text-light pt-60 pb-40">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+              <h2 class="fs-32 mb-3">Our Business Divisions</h2>
+              <p class="opacity-75">Wish Group operates across multiple industries with a global footprint. Click on any division below to explore our companies in that sector.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPANIES SECTION -->
+      <section id="section-companies" class="bg-dark section-dark text-light pt-40 pb-80 relative" aria-label="section">
+        <div class="globe-container" id="globe"></div>
+        <div class="container relative z-2">
+          <div class="row gy-4 gx-5 justify-content-center">
+            <div class="col-lg-10">
+              <div class="row g-4">
+
+                <!-- 3.1 Real Estate -->
+                <div class="col-md-6">
+                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('real-estate')">
+                    <div class="gradient-edge-bottom color op-5"></div>
+                    <div class="p-40 pb-40 z-2">
+                      <div class="text-start">
+                        <h2 class="fs-32 mb-2">Real Estate</h2>
+                        <div class="border-white-bottom-op-2 mb-3"></div>
+                        <p class="opacity-75 mb-4">Developing visionary properties across global markets</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>WISH REAL ESTATE DEVELOPER L.L.C <span class="accent">• UAE</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Villas and Apartments Development</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>WORLD CAPITAL CENTRE LTD <span class="accent">• Sri Lanka</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Mixed-Use Developments</p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span class="badge bg-dark text-light">4 Companies</span>
+                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3.2 Manufacturing -->
+                <div class="col-md-6">
+                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('manufacturing')">
+                    <div class="gradient-edge-bottom color op-5"></div>
+                    <div class="p-40 pb-40 z-2">
+                      <div class="text-start">
+                        <h2 class="fs-32 mb-2">Manufacturing</h2>
+                        <div class="border-white-bottom-op-2 mb-3"></div>
+                        <p class="opacity-75 mb-4">Producing quality goods across diverse industries</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>THE ONE APPARELS CORPORATION LTD <span class="accent">• Sri Lanka</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Apparel and Textiles</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>WISH HOLDINGS PVT LTD <span class="accent">• Maldives</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Seafood Processing</p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span class="badge bg-dark text-light">4 Companies</span>
+                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3.3 Trading -->
+                <div class="col-md-6">
+                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('trading')">
+                    <div class="gradient-edge-bottom color op-5"></div>
+                    <div class="p-40 pb-40 z-2">
+                      <div class="text-start">
+                        <h2 class="fs-32 mb-2">Trading</h2>
+                        <div class="border-white-bottom-op-2 mb-3"></div>
+                        <p class="opacity-75 mb-4">Global trade network connecting markets worldwide</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>PRIME WISH TRADING L.L.C <span class="accent">• UAE</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Seafood Distribution</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>AL LINCAMO INTERNATIONAL FZC <span class="accent">• UAE</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Commodities Trading</p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span class="badge bg-dark text-light">4 Companies</span>
+                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3.4 Hospitality -->
+                <div class="col-md-6">
+                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('hospitality')">
+                    <div class="gradient-edge-bottom color op-5"></div>
+                    <div class="p-40 pb-40 z-2">
+                      <div class="text-start">
+                        <h2 class="fs-32 mb-2">Hospitality</h2>
+                        <div class="border-white-bottom-op-2 mb-3"></div>
+                        <p class="opacity-75 mb-4">Exceptional experiences in premier destinations</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>WISH HOSPITALITY LTD <span class="accent">• Sri Lanka</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Luxury Accommodation</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>ARENA BLUE HOTEL AND RESORT LTD <span class="accent">• Sri Lanka</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Resort Management</p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span class="badge bg-dark text-light">6 Companies</span>
+                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3.5 Media -->
+                <div class="col-md-6">
+                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('media')">
+                    <div class="gradient-edge-bottom color op-5"></div>
+                    <div class="p-40 pb-40 z-2">
+                      <div class="text-start">
+                        <h2 class="fs-32 mb-2">Media</h2>
+                        <div class="border-white-bottom-op-2 mb-3"></div>
+                        <p class="opacity-75 mb-4">Creating engaging content and experiences</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>WISH MEDIA CORPORATION LTD <span class="accent">• Sri Lanka</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Entertainment Production</p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span class="badge bg-dark text-light">1 Company</span>
+                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3.6 Capital & Finance -->
+                <div class="col-md-6">
+                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('capital-finance')">
+                    <div class="gradient-edge-bottom color op-5"></div>
+                    <div class="p-40 pb-40 z-2">
+                      <div class="text-start">
+                        <h2 class="fs-32 mb-2">Capital & Finance</h2>
+                        <div class="border-white-bottom-op-2 mb-3"></div>
+                        <p class="opacity-75 mb-4">Strategic investments and financial solutions</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>WISH GROUP L.L.C <span class="accent">• UAE</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Group Investments</p>
+                      </div>
+
+                      <div class="company-item">
+                        <h4>WORLD INVESTMENT SOURCES HOLDINGS LTD <span class="accent">• Sri Lanka</span></h4>
+                        <p class="company-meta"><strong>Focus:</strong> Strategic Holdings</p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span class="badge bg-dark text-light">3 Companies</span>
+                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- /.row -->
+            </div><!-- /.col-lg-10 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+
+      <!-- DIVISION MODALS -->
+      <!-- Real Estate Modal -->
+      <div id="real-estate-modal" class="division-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeModal('real-estate')">&times;</span>
+          <div class="division-header text-center">
+            <div class="container">
+              <h2>Real Estate Division</h2>
+              <p class="division-description">Developing visionary properties that redefine skylines and communities across global markets, creating lasting value through innovative design and strategic locations.</p>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class="company-header">
+              <div class="company-logo-placeholder">
+                <i class="fas fa-building"></i>
+              </div>
+              <div>
+                <h3>WISH REAL ESTATE DEVELOPER L.L.C</h3>
+                <p class="text-accent mb-0">UAE • Real Estate Development</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Type:</strong> Real Estate and Property Development Company</p>
+                <p><strong>Primary Activities:</strong></p>
+                <ul>
+                  <li>Development of luxury villas and apartments</li>
+                  <li>Commercial property development</li>
+                  <li>Mixed-use community projects</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Key Projects:</strong></p>
+                <ul>
+                  <li>Marina Vista Towers - Dubai</li>
+                  <li>Palm Jumeirah Luxury Villas</li>
+                  <li>Downtown Abu Dhabi Commercial Complex</li>
+                </ul>
+                <p><strong>Established:</strong> 2015</p>
+              </div>
+            </div>
+            <hr class="my-4 border-white-op-2">
+            
+            <div class="company-header mt-5">
+              <div class="company-logo-placeholder">
+                <i class="fas fa-city"></i>
+              </div>
+              <div>
+                <h3>WORLD CAPITAL CENTRE LTD</h3>
+                <p class="text-accent mb-0">Sri Lanka • Mixed-Use Development</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Type:</strong> Real Estate and Property Development Company</p>
+                <p><strong>Primary Activities:</strong></p>
+                <ul>
+                  <li>Large-scale mixed-use developments</li>
+                  <li>Urban regeneration projects</li>
+                  <li>Commercial and residential complexes</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Key Projects:</strong></p>
+                <ul>
+                  <li>Colombo Financial District</li>
+                  <li>Galle Face Mixed Development</li>
+                  <li>Kandy Hills Residential Community</li>
+                </ul>
+                <p><strong>Established:</strong> 2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manufacturing Modal -->
+      <div id="manufacturing-modal" class="division-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeModal('manufacturing')">&times;</span>
+          <div class="division-header text-center">
+            <div class="container">
+              <h2>Manufacturing Division</h2>
+              <p class="division-description">Producing quality goods across diverse industries with a commitment to innovation, sustainability, and operational excellence in our global manufacturing facilities.</p>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class="company-header">
+              <div class="company-logo-placeholder">
+                <i class="fas fa-tshirt"></i>
+              </div>
+              <div>
+                <h3>THE ONE APPARELS CORPORATION LTD</h3>
+                <p class="text-accent mb-0">Sri Lanka • Apparel Manufacturing</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Type:</strong> Manufacturing and Trading Company</p>
+                <p><strong>Primary Activities:</strong></p>
+                <ul>
+                  <li>Design and production of apparel</li>
+                  <li>Textile manufacturing</li>
+                  <li>Private label production</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Specializations:</strong></p>
+                <ul>
+                  <li>Sustainable and ethical manufacturing</li>
+                  <li>High-end fashion production</li>
+                  <li>Technical sportswear</li>
+                </ul>
+                <p><strong>Established:</strong> 2012</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trading Modal -->
+      <div id="trading-modal" class="division-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeModal('trading')">&times;</span>
+          <div class="division-header text-center">
+            <div class="container">
+              <h2>Trading Division</h2>
+              <p class="division-description">Connecting global markets through our extensive trade network, specializing in high-demand commodities and consumer goods across multiple continents.</p>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class="company-header">
+              <div class="company-logo-placeholder">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <div>
+                <h3>PRIME WISH TRADING L.L.C</h3>
+                <p class="text-accent mb-0">UAE • Commodities Trading</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Type:</strong> General Trading Company</p>
+                <p><strong>Primary Activities:</strong></p>
+                <ul>
+                  <li>International seafood distribution</li>
+                  <li>Commodities trading</li>
+                  <li>Supply chain solutions</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Key Markets:</strong></p>
+                <ul>
+                  <li>Middle East</li>
+                  <li>Europe</li>
+                  <li>Asia-Pacific</li>
+                </ul>
+                <p><strong>Established:</strong> 2016</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospitality Modal -->
+      <div id="hospitality-modal" class="division-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeModal('hospitality')">&times;</span>
+          <div class="division-header text-center">
+            <div class="container">
+              <h2>Hospitality Division</h2>
+              <p class="division-description">Creating exceptional experiences in the world's most sought-after destinations through our portfolio of luxury hotels, resorts, and hospitality services.</p>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class="company-header">
+              <div class="company-logo-placeholder">
+                <i class="fas fa-hotel"></i>
+              </div>
+              <div>
+                <h3>WISH HOSPITALITY LTD</h3>
+                <p class="text-accent mb-0">Sri Lanka • Luxury Accommodation</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Type:</strong> Hospitality and Tourism Company</p>
+                <p><strong>Primary Activities:</strong></p>
+                <ul>
+                  <li>Luxury hotel management</li>
+                  <li>Resort operations</li>
+                  <li>Hospitality consultancy</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Properties:</strong></p>
+                <ul>
+                  <li>Wish Colombo - 5 Star Urban Resort</li>
+                  <li>Blue Sands Beach Resort</li>
+                  <li>Mountain View Retreat</li>
+                </ul>
+                <p><strong>Established:</strong> 2014</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Media Modal -->
+      <div id="media-modal" class="division-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeModal('media')">&times;</span>
+          <div class="division-header text-center">
+            <div class="container">
+              <h2>Media Division</h2>
+              <p class="division-description>Creating engaging content and experiences that captivate audiences through innovative media production and distribution channels.</p>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class="company-header">
+              <div class="company-logo-placeholder">
+                <i class="fas fa-film"></i>
+              </div>
+              <div>
+                <h3>WISH MEDIA CORPORATION LTD</h3>
+                <p class="text-accent mb-0">Sri Lanka • Media Production</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Type:</strong> Media and Entertainment Company</p>
+                <p><strong>Primary Activities:</strong></p>
+                <ul>
+                  <li>Film and television production</li>
+                  <li>Digital content creation</li>
+                  <li>Media distribution</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Notable Productions:</strong></p>
+                <ul>
+                  <li>Island Dreams TV Series</li>
+                  <li>Wish Entertainment Network</li>
+                  <li>Digital streaming platform</li>
+                </ul>
+                <p><strong>Established:</strong> 2017</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Capital & Finance Modal -->
+      <div id="capital-finance-modal" class="division-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeModal('capital-finance')">&times;</span>
+          <div class="division-header text-center">
+            <div class="container">
+              <h2>Capital & Finance Division</h2>
+              <p class="division-description">Providing strategic investments and financial solutions that power growth across our group companies and partner organizations worldwide.</p>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class="company-header">
+              <div class="company-logo-placeholder">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div>
+                <h3>WISH GROUP L.L.C</h3>
+                <p class="text-accent mb-0">UAE • Group Investments</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Type:</strong> Main Investment Company of Group</p>
+                <p><strong>Primary Activities:</strong></p>
+                <ul>
+                  <li>Strategic investments</li>
+                  <li>Portfolio management</li>
+                  <li>Group financial oversight</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Key Focus Areas:</strong></p>
+                <ul>
+                  <li>Emerging markets</li>
+                  <li>Sustainable investments</li>
+                  <li>Technology ventures</li>
+                </ul>
+                <p><strong>Established:</strong> 2010</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer begin -->
+      <footer class="text-light section-dark pt-5">
+        <div class="container">
+          <div class="row g-4">
+
+            <!-- Logo & Social -->
+            <div class="col-sm-6 col-lg-3 text-center">
+              <img src="images\wishgroup\logo remove.png" class="w-150px mb-3" alt="">
+              <div class="social-icons mt-3">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+              <h3 class="fs-20 mb-3">Global Headquarters</h3>
+              <p class="mb-0">Wish Group LLC</p>
+              <p class="mb-0">Business Bay, Dubai</p>
+              <p>United Arab Emirates</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+              <h3 class="fs-20 mb-3">Quick Links</h3>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#" class="text-light">Home</a></li>
+                <li><a href="about.html" class="text-light">About Us</a></li>
+                <li><a href="#section-companies" class="text-light">Divisions</a></li>
+                <li><a href="#" class="text-light">Projects</a></li>
+                <li><a href="#" class="text-light">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Us with Email -->
+            <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+              <h3 class="fs-20 mb-3">Contact Us</h3>
+              <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+              <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+              <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+              <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Subfooter -->
+        <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                &copy; 2025 Wish Group. All rights reserved. <span class="d-block d-md-inline">A global enterprise spanning 6 industries across 8 countries.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+
+    </div><!-- /#wrapper -->
+
+<!-- Javascript Files -->
+  <script src="js/vendors.js"></script>
+  <script src="js/designesia.js"></script>
+  <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+
+  <script>
+    // Modal functions with enhanced animations
+    function openDivisionModal(division) {
+      const modal = document.getElementById(division + '-modal');
+      document.body.style.overflow = 'hidden';
+      
+      // Show modal
+      modal.style.display = 'block';
+      
+      // Trigger reflow to enable animation
+      void modal.offsetWidth;
+      
+      // Add show class to trigger animations
+      modal.classList.add('show');
+      
+      // Animate company items sequentially
+      const companyItems = modal.querySelectorAll('.company-item');
+      companyItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.15}s`;
+      });
+    }
+    
+    function closeModal(division) {
+      const modal = document.getElementById(division + '-modal');
+      
+      // Remove show class to trigger fade out
+      modal.classList.remove('show');
+      
+      // Wait for animation to complete before hiding
+      setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }, 300); // Match this with your CSS transition duration
+    }
+    
+    // Close modal when clicking outside content
+    window.onclick = function(event) {
+      if (event.target.className === 'division-modal') {
+        const modalId = event.target.id;
+        const division = modalId.replace('-modal', '');
+        closeModal(division);
+      }
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const openModal = document.querySelector('.division-modal.show');
+        if (openModal) {
+          const modalId = openModal.id;
+          const division = modalId.replace('-modal', '');
+          closeModal(division);
+        }
+      }
+    });
+    
+    // Initialize globe visualization
+    document.addEventListener('DOMContentLoaded', function() {
+      // Countries where Wish Group operates
+      const wishGroupCountries = [
+        'United Arab Emirates', 'Sri Lanka', 'Malaysia', 
+        'United Kingdom', 'Maldives', 'Ghana', 'South Africa'
+      ];
+      
+      // Generate some sample data for visualization
+      const data = wishGroupCountries.map(country => ({
+        lat: Math.random() * 30 - 15, // Rough latitudes for demo
+        lng: Math.random() * 60 + 20, // Rough longitudes for demo
+        size: 5 + Math.random() * 10,
+        color: ['#c9a02f', '#ffffff', '#e0e0e0'][Math.round(Math.random() * 2)]
+      }));
+      
+      // Create the globe
+      const globe = GlobeGL()
+        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+        .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+        .pointsData(data)
+        .pointAltitude(0)
+        .pointRadius('size')
+        .pointColor('color')
+        .pointResolution(8)
+        (document.getElementById('globe'));
+      
+      // Auto-rotate
+      globe.controls().autoRotate = true;
+      globe.controls().autoRotateSpeed = 0.8;
+      
+      // Responsive adjustments
+      function resizeGlobe() {
+        const width = window.innerWidth;
+        if (width < 768) {
+          globe.width(300).height(300);
+        } else {
+          globe.width(500).height(500);
+        }
+      }
+      
+      window.addEventListener('resize', resizeGlobe);
+      resizeGlobe();
+      
+      // Add floating animation to cards with delay
+      const cards = document.querySelectorAll('.company-card');
+      cards.forEach((card, index) => {
+        // Apply different animation delays for a wave effect
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+      
+      // Add hover effect to company logo placeholders
+      const logos = document.querySelectorAll('.company-logo-placeholder');
+      logos.forEach(logo => {
+        logo.addEventListener('mouseenter', function() {
+          this.querySelector('i').style.transform = 'scale(1.1)';
+        });
+        logo.addEventListener('mouseleave', function() {
+          this.querySelector('i').style.transform = 'scale(1)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

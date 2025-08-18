@@ -2,21 +2,59 @@
 <html lang="en">
 
 <head>
-    <title>AIvent - AI Event, Conference and Meetup Website Template</title>
-    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <title>Wish Group - Contact Us</title>
+    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="AIvent" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
-    <!-- CSS Files
-    ================================================== -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Wish Group" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Leaflet CSS for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <!-- color scheme -->
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
-
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        #headOfficeMap {
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .gallery-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .gallery-item img {
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        #success_message, #error_message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        #success_message {
+            background-color: #28a745;
+            color: white;
+        }
+        #error_message {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
 </head>
 
 <body class="dark-scheme">
@@ -41,9 +79,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/logo.webp" alt="" >
-                                        <img class="logo-scroll" src="images/logo.webp" alt="" >
-                                        <img class="logo-mobile" src="images/logo.webp" alt="" >
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -52,85 +90,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="index.html#section-hero">Home</a>
-                                            <ul class="mega">
-                                                <li>
-                                                    <div class="container">
-                                                        <div class="sb-menu p-4">
-                                                            <div class="row g-3">
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index.html">
-                                                                            <img src="images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 1</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider.html">
-                                                                            <img src="images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 2</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-static-background.html">
-                                                                            <img src="images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 3</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider-text.html">
-                                                                            <img src="images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 4</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-countdown.html">
-                                                                            <img src="images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 5</h6>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="menu-item" href="index.html#section-about">About</a></li>
-                                        <li><a class="menu-item" href="index.html#section-why-attend">Why Attend</a></li>
-                                        <li><a class="menu-item" href="index.html#section-speakers">Speakers</a></li>
-                                        <li><a class="menu-item" href="index.html#section-schedule">Schedule</a></li>
-                                        <li><a class="menu-item" href="index.html#section-tickets">Tickets</a></li>
-                                        <li><a class="menu-item" href="index.html#section-venue">Venue</a></li>
-                                        <li><a class="menu-item" href="index.html#section-faq">FAQ</a></li>
-                                        <li><a class="menu-item" href="news.html">Pages</a>
-                                            <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a>
-                                            </ul>
-                                        </li>
+                                        <li><a class="menu-item" href="index.html">Home</a></li>
+                                        <li><a class="menu-item" href="about.html">About Us</a></li>
+                                        <li><a class="menu-item" href="">Divisions</a></li>
+                                        <li><a class="menu-item" href="">Projects</a></li>
+                                        <li><a class="menu-item" href="">Countries</a></li>
+                                        <li><a class="menu-item" href="">News</a></li>
+                                        <li><a class="menu-item" href="">Our Policies</a></li>
+                                        <li><a class="menu-item" href="">Carrier</a></li>
+                                        <li><a class="menu-item active" href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href="tickets-2.html"><span>Buy Tickets</span></a>
-
+                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -151,156 +125,268 @@
                         <div class="col-lg-6">
                             <div class="relative wow mask-right">
                                 <div class="text-start">
-                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1">Contact</h1>
+                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1">Contact Us</h1>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
-                            <p class="mb-0">Join thought leaders, developers, researchers, and founders as we explore how artificial intelligence is reshaping industries, creativity.</p>
+                            <p class="mb-0">Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section class="section-dark relative">
+
+        <!-- Head Office Map Section -->
+        <section class="section-dark relative pt-5 pb-5">
             <div class="container">
-              <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6">
-                    <div class="subtitle">Get In Touch</div>
-                    <h2 class="wow fadeInUp">We’re here to answer your questions.</h2>
-
-                    <p class="col-lg-8">Have a question, suggestion, or just want to say hi? We’re here and happy to hear from you!</p>
-
-                    <div class="spacer-single"></div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="relative mb-4">
-                                <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-location-pin"></i>
-                                <div class="ms-80px">
-                                    <h4 class="mb-0">Event Location</h4>
-                                    121 AI Blvd, San Francisco, BCA 94107
-                                </div>
-                            </div>
-
-                            <div class="relative mb-4">
-                                <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-envelope"></i>
-                                <div class="ms-80px">
-                                    <h4 class="mb-0">Send a Message</h4>
-                                    contact@aivent-support.com
-                                </div>
-                            </div>
-
-                            <div class="relative mb-4">
-                                <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-phone"></i>
-                                <div class="ms-80px">
-                                    <h4 class="mb-0">Call Us Directly</h4>
-                                    +1 123 456 789
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="bg-dark-2 rounded-1 p-60 relative">
-                        <form name="contactForm" id="contact_form" method="post" action="#">
-                        <div class="row g-4">
-                            <div class="col-lg-12">
-                                <h3>Get In Touch</h3>
-                                <p>Have a question, suggestion, or just want to say hi? Fill out the form below and we’ll get back to you soon.</p>
-
-                                <div class="field-set">
-                                    <input type="text" name="name" id="name" class="form-underline" placeholder="Your Name" required>
-                                </div>
-
-                                <div class="field-set">
-                                    <input type="text" name="email" id="email" class="form-underline" placeholder="Your Email" required>
-                                </div>
-
-                                <div class="field-set">
-                                    <input type="text" name="phone" id="phone" class="form-underline" placeholder="Your Phone" required>
-                                </div>
-
-                                <div class="field-set">
-                                    <textarea name="message" id="message" class="form-underline h-100px" placeholder="Your Message" required></textarea>
-                                </div>
-                            </div>
-                        </div>
-                            
-                        
-                        <div class="g-recaptcha" data-sitekey="6LdW03QgAAAAAJko8aINFd1eJUdHlpvT4vNKakj6"></div>
-                        <div id='submit' class="mt-3">
-                            <input type='submit' id='send_message' value='Send Message' class="btn-main">
-                        </div>
-
-                        <div id="success_message" class='success'>
-                            Your message has been sent successfully. Refresh this page if you want to send more messages.
-                        </div>
-                        <div id="error_message" class='error'>
-                            Sorry there was an error sending your form.
-                        </div>
-                    </form>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="subtitle">Our Location</div>
+                        <h2 class="wow fadeInUp">Wish Group Headquarters</h2>
+                        <p class="mb-4">Business Bay, Dubai, United Arab Emirates</p>
                     </div>
                 </div>
-              </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="headOfficeMap"></div>
+                    </div>
+                </div>
             </div>
-        </section>        
+        </section>
+
+        <!-- Head Office Gallery Section -->
+        <section class="section-dark relative pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="subtitle">Our Workplace</div>
+                        <h2 class="wow fadeInUp">Head Office Gallery</h2>
+                        <p class="mb-5">Take a look at our professional work environment</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gallery-item">
+                            <img src="images/news/s5.webp" alt="Front View of Head Office" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-item">
+                            <img src="images/news/s5.webp" alt="Office Reception" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-item">
+                            <img src="images/news/s5.webp" alt="Board Room or Workspace Area" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiry Form Section -->
+        <section class="section-dark relative pt-5 pb-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="subtitle">Get In Touch</div>
+                        <h2 class="wow fadeInUp">We'd love to hear from you</h2>
+                        <p>Submit your inquiry and our team will get back to you shortly.</p>
+
+                        <div class="spacer-single"></div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="relative mb-4">
+                                    <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-location-pin"></i>
+                                    <div class="ms-80px">
+                                        <h4 class="mb-0">Head Office Location</h4>
+                                        Business Bay, Dubai, United Arab Emirates
+                                    </div>
+                                </div>
+
+                                <div class="relative mb-4">
+                                    <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-envelope"></i>
+                                    <div class="ms-80px">
+                                        <h4 class="mb-0">Email Us</h4>
+                                        info@wishgroup.ae<br>
+                                        info@wishgroup.world
+                                    </div>
+                                </div>
+
+                                <div class="relative mb-4">
+                                    <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-phone"></i>
+                                    <div class="ms-80px">
+                                        <h4 class="mb-0">Call Us</h4>
+                                        +971 4259 7167<br>
+                                        +971 4259 4795
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="bg-dark-2 rounded-1 p-60 relative">
+                            <form name="contactForm" id="contact_form" method="post">
+                                <div class="row g-4">
+                                    <div class="col-lg-12">
+                                        <h3>Enquiry Form</h3>
+                                        <p>Fill out the form below and we'll get back to you soon.</p>
+
+                                        <div class="field-set">
+                                            <input type="text" name="name" id="name" class="form-underline" placeholder="Full Name" required>
+                                        </div>
+
+                                        <div class="field-set">
+                                            <input type="email" name="email" id="email" class="form-underline" placeholder="Email Address" required>
+                                        </div>
+
+                                        <div class="field-set">
+                                            <input type="tel" name="phone" id="phone" class="form-underline" placeholder="Phone Number">
+                                        </div>
+
+                                        <div class="field-set">
+                                            <input type="text" name="subject" id="subject" class="form-underline" placeholder="Subject" required>
+                                        </div>
+
+                                        <div class="field-set">
+                                            <textarea name="message" id="message" class="form-underline h-100px" placeholder="Your Message" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="submit" class="mt-3">
+                                    <input type="submit" id="send_message" value="Submit Inquiry" class="btn-main">
+                                </div>
+
+                                <div id="success_message" class="success">
+                                    Your message has been sent successfully. Refresh this page if you want to send more messages.
+                                </div>
+                                <div id="error_message" class="error">
+                                    Sorry, there was an error sending your form.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
 
     <!-- footer begin -->
-    <footer class="text-light section-dark">
+    <footer class="text-light section-dark pt-5">
         <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-12">
-                    <div class="d-lg-flex align-items-center justify-content-between text-center">
-                        <div>
-                            <h3 class="fs-20">Address</h3>
-                            121 AI Blvd, San Francisco<br>
-                            BCA 94107
-                        </div>
-                        <div>
-                            <img src="images/logo.webp" class="w-150px" alt=""><br>
-                            <div class="social-icons mb-sm-30 mt-4">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-
-                        </div>
-                        <div>
-                            <h3 class="fs-20">Contact Us</h3>
-                            T. +1 123 456 789<br>
-                            M. contact@aivent.com
-                        </div>
+            <div class="row g-4">
+                <!-- Logo & Social -->
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
                     </div>
-                </div>                    
+                </div>
+
+                <!-- Address -->
+                <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                    <h3 class="fs-20 mb-3">Address</h3>
+                    <p class="mb-0">Business Bay</p>
+                    <p>Dubai, United Arab Emirates</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                    <h3 class="fs-20 mb-3">Quick Links</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="about.html" class="text-light">About Us</a></li>
+                        <li><a href="#" class="text-light">Divisions</a></li>
+                        <li><a href="#" class="text-light">Projects</a></li>
+                        <li><a href="contact.html" class="text-light">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us with Email -->
+                <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                    <h3 class="fs-20 mb-3">Contact Us</h3>
+                    <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                    <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                    <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                    <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                </div>
             </div>
         </div>
-        <div class="subfooter">
+
+        <!-- Subfooter -->
+        <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        Copyright 2025 - AIvent by Designesia
+                        Copyright 2025 - Wish Group. All rights reserved.
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- footer end -->
-    
-    <!-- Javascript Files
-    ================================================== -->
+
+    <!-- Javascript Files -->
     <script src="js/vendors.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="js/validation-contact.js"></script>
+    <!-- Leaflet JS for map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        // Initialize Leaflet Map
+        var map = L.map('headOfficeMap').setView([25.1865, 55.2793], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker([25.1865, 55.2793]).addTo(map)
+            .bindPopup('Wish Group Headquarters<br>Business Bay, Dubai, United Arab Emirates')
+            .openPopup();
 
+        // Form submission
+        document.getElementById('contact_form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const successMessage = document.getElementById('success_message');
+            const errorMessage = document.getElementById('error_message');
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                phoneNumber: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const response = await fetch('http://localhost:4000/api/enquiries', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    successMessage.style.display = 'block';
+                    document.getElementById('contact_form').reset();
+                } else {
+                    errorMessage.textContent = result.error || 'Sorry, there was an error sending your form.';
+                    errorMessage.style.display = 'block';
+                }
+            } catch (error) {
+                errorMessage.textContent = 'Network error: Unable to submit the form.';
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
 </body>
-
 </html>

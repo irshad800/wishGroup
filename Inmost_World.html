@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Inmost World | Luxury Deep Sea Activities</title>
+    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Inmost World - Premium deep sea adventures and water sports in exotic locations" name="description">
+    <meta content="Deep Sea Diving, Scuba, Yacht Charters, Water Sports, Fishing, Underwater Photography" name="keywords">
+    <meta content="Wish Group" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Custom Styles */
+        .activity-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .activity-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .activity-card:hover .activity-image {
+            transform: scale(1.05);
+        }
+        .activity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+        }
+        .full-width-ocean {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .experience-section {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        .activity-badge {
+            background: var(--color);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .activity-option {
+            transition: all 0.3s ease;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .activity-option:hover {
+            background: rgba(255,255,255,0.05);
+            transform: translateX(5px);
+        }
+        .activity-details {
+            flex: 1;
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--color);
+            position: absolute;
+            left: 0;
+        }
+        .activity-icon {
+            font-size: 48px;
+            color: var(--color);
+            margin-bottom: 20px;
+        }
+        .difficulty-level {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .beginner {
+            background-color: #4CAF50;
+        }
+        .intermediate {
+            background-color: #FFC107;
+            color: #000;
+        }
+        .advanced {
+            background-color: #F44336;
+        }
+        .expert {
+            background-color: #9C27B0;
+        }
+    </style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item" href="index.html">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
+                                        <li><a class="menu-item" href="">Divisions</a></li>
+                                        <li><a class="menu-item" href="">Projects</a></li>
+                                        <li><a class="menu-item" href="">Countries</a></li>
+                                        <li><a class="menu-item" href="">News</a></li>
+                                        <li><a class="menu-item" href="">Our Policies</a></li>
+                                        <li><a class="menu-item" href="">Carrier</a></li>
+                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+            <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="jarallax-img" alt="">
+            <div class="gradient-edge-bottom h-50"></div>
+            <div class="sw-overlay op-5"></div>
+            <div class="abs bottom-10 z-2 w-100">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-8">
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
+                                Inmost World
+                            </h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s">Premium Deep Sea Adventures & Water Sports</p>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="relative text-lg-end">
+                                <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
+                                    <span class="fs-20 fw-600">PADI Certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Overview -->
+                        <div class="intro-section mb-5">
+                            <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                 alt="Deep Sea Activities" 
+                                 class="full-width-ocean">
+                            <div class="text-center mt-4">
+                                <h2 class="fs-36 mb-3">Ocean Adventures Redefined</h2>
+                                <p class="lead fs-20">Where adrenaline meets the deep blue</p>
+                            </div>
+                        </div>
+
+                        <!-- Key Activities Section -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30">Our Signature Activities</h2>
+                            <p class="lead">World-class water sports and deep sea experiences</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <!-- Deep Sea Diving -->
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Deep Sea Diving" 
+                                         class="activity-image">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1">Deep Sea Diving <span class="difficulty-level advanced">ADVANCED</span></h3>
+                                        <p class="mb-0">Certified scuba diving expeditions to 40m+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Stand-up Paddleboarding -->
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Stand-up Paddleboarding" 
+                                         class="activity-image">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1">Stand-up Paddleboarding <span class="difficulty-level beginner">BEGINNER</span></h3>
+                                        <p class="mb-0">Guided tours along coastal waters</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Deep Sea Fishing -->
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1576771313520589-0b7d534b9d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Deep Sea Fishing" 
+                                         class="activity-image">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1">Big Game Fishing <span class="difficulty-level intermediate">INTERMEDIATE</span></h3>
+                                        <p class="mb-0">Chase marlin, tuna and more</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Kayaking -->
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Kayaking" 
+                                         class="activity-image">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1">Ocean Kayaking <span class="difficulty-level beginner">BEGINNER</span></h3>
+                                        <p class="mb-0">Explore hidden coves and sea caves</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Surfing -->
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Surfing" 
+                                         class="activity-image">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1">Surfing <span class="difficulty-level intermediate">INTERMEDIATE</span></h3>
+                                        <p class="mb-0">World-class waves with instructors</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Snorkeling -->
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Snorkeling" 
+                                         class="activity-image">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1">Snorkeling <span class="difficulty-level beginner">BEGINNER</span></h3>
+                                        <p class="mb-0">Vibrant coral reefs teeming with life</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Activities Section -->
+                        <div class="experience-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                         alt="More Activities" 
+                                         class="w-100 rounded-1">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="ps-lg-4">
+                                        <h3 class="fs-24 mb-3">More Thrilling Experiences</h3>
+                                        <ul class="feature-list">
+                                            <li>Underwater Photography & Videography Tours (Capture your adventure)</li>
+                                            <li>Jet Skiing (High-speed ocean adventures)</li>
+                                            <li>Parasailing (Breathtaking aerial views)</li>
+                                            <li>Flyboarding (Defy gravity above the waves)</li>
+                                            <li>Speed Boat Rides (Coastal exploration at pace)</li>
+                                            <li>Luxury Deep-Sea Yacht Charters (With dive options available)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Packages -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30">Premium Packages</h2>
+                            <p class="lead">Tailored experiences for every adventurer</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <!-- Beginner Package -->
+                            <div class="col-md-4">
+                                <div class="activity-type">
+                                    <h3 class="fs-24 mb-3">Ocean Explorer</h3>
+                                    <div class="activity-option">
+                                        <div class="activity-badge">1D</div>
+                                        <div class="activity-details">
+                                            <span>Perfect for beginners</span>
+                                            <span>Includes: Snorkeling, Kayaking, Paddleboarding</span>
+                                            <span>Duration: Full Day</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Intermediate Package -->
+                            <div class="col-md-4">
+                                <div class="activity-type">
+                                    <h3 class="fs-24 mb-3">Adrenaline Seeker</h3>
+                                    <div class="activity-option">
+                                        <div class="activity-badge">2D</div>
+                                        <div class="activity-details">
+                                            <span>For intermediate adventurers</span>
+                                            <span>Includes: Jet Skiing, Parasailing, Surfing</span>
+                                            <span>Duration: 2 Days</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Advanced Package -->
+                            <div class="col-md-4">
+                                <div class="activity-type">
+                                    <h3 class="fs-24 mb-3">Deep Blue Challenge</h3>
+                                    <div class="activity-option">
+                                        <div class="activity-badge">3D</div>
+                                        <div class="activity-details">
+                                            <span>For certified divers</span>
+                                            <span>Includes: Deep Sea Diving, Underwater Photography, Big Game Fishing</span>
+                                            <span>Duration: 3 Days</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Luxury Options -->
+                        <div class="experience-section">
+                            <h3 class="fs-24 mb-3 text-center">Luxury Experiences</h3>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="activity-option">
+                                        <div class="activity-badge">VIP</div>
+                                        <div class="activity-details">
+                                            <span>Glass Bottom Boat Tours</span>
+                                            <span>Private guided marine life viewing</span>
+                                            <span>Duration: 2-4 hours</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="activity-option">
+                                        <div class="activity-badge">VIP</div>
+                                        <div class="activity-details">
+                                            <span>Banana Boat Rides</span>
+                                            <span>Group fun activity</span>
+                                            <span>Duration: 30-60 minutes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="activity-option">
+                                        <div class="activity-badge">ELITE</div>
+                                        <div class="activity-details">
+                                            <span>Private Yacht Charter</span>
+                                            <span>Full-day deep sea experience with crew</span>
+                                            <span>Customizable itinerary</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Safety & Certification -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30">Safety & Certification</h2>
+                            <p class="lead">Your adventure is our priority</p>
+                        </div>
+                        
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="text-center p-4">
+                                    <i class="fas fa-shield-alt activity-icon"></i>
+                                    <h4 class="fs-20">Certified Instructors</h4>
+                                    <p>All activities led by PADI/SSI certified professionals with 5+ years experience</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-4">
+                                    <i class="fas fa-first-aid activity-icon"></i>
+                                    <h4 class="fs-20">Medical Support</h4>
+                                    <p>On-site hyperbaric chamber and emergency oxygen available 24/7</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-4">
+                                    <i class="fas fa-life-ring activity-icon"></i>
+                                    <h4 class="fs-20">Equipment Quality</h4>
+                                    <p>Premium gear serviced weekly and replaced annually</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section text-center pt-4 pb-5">
+                            <h3 class="fs-28 mb-3">Dive Into Adventure</h3>
+                            <p class="mb-4">Book your deep sea experience with Inmost World today</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a class="btn-main fx-slide" href="contact.html"><span>Check Availability</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Get Certified</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer begin -->
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Logo & Social -->
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Address</h3>
+                        <p class="mb-0">121 AI Blvd, San Francisco</p>
+                        <p>BCA 94107</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light">Home</a></li>
+                            <li><a href="about.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Divisions</a></li>
+                            <li><a href="#" class="text-light">Projects</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us with Email -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Subfooter -->
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            Copyright 2025 - Wish Group. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- Javascript Files
+        ================================================== -->
+        <script src="js/vendors.js"></script>
+        <script src="js/designesia.js"></script>
+        <script src="js/countdown-custom.js"></script>
+        <script src="js/custom-marquee.js"></script>
+    </div>
+</body>
+</html>

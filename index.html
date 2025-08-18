@@ -55,17 +55,25 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="#section-hero">Home</a>
+                                        <li>   <a class="menu-item" href=index.html>Home</a>
                                         </li>
 
                                         <li><a class="menu-item" href="about.html">About Us</a></li>
                                         <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
+                                        <li><a class="menu-item" href="">Projects</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="tickets.html">Ongoing Projects</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html">Completed Projects</a></li>
+                                                <li><a class="menu-item" href="news.html">Strategic Investment and Collabration</a></li>
+                                                <li><a class="menu-item" href="news-single.html">Proposed Future Projects</a></li>
+                                                
+                                            </ul></li>
+                                        
                                         <li><a class="menu-item" href="">Countries</a></li>
                                         <li><a class="menu-item" href="">News</a></li>
                                         <li><a class="menu-item" href="">Our Policies</a></li>
                                         <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="">Contact Us</a>
 
                                  
                                             <ul>
@@ -1091,7 +1099,7 @@ document.addEventListener('DOMContentLoaded', () => {
             el.style.transform = 'translate(-50%, -100%)';
             el.title = country.name;
             el.setAttribute('role', 'button');
-            el.setAttribute('aria-label', `Navigate to ${country.name} page`);
+            el.setAttribute('aria-label', `Navi         gate to ${country.name} page`);
 
             // Handle image load error
             el.onerror = () => {
