@@ -12989,7 +12989,8 @@ a.d-block.hover.relative.rounded-20.overflow-hidden.text-light img {
     .pb-xs-90 { padding-bottom: 90px; }
     .pb-xs-100 { padding-bottom: 10px; }
     /* Margin top */
-    .mt-xs-10 { margin-top: 10px; }
+    .mt-xs-1
+    { margin-top: 10px; }
     .mt-xs-20 { margin-top: 20px; }
     .mt-xs-30 { margin-top: 30px; }
     .mt-xs-40 { margin-top: 40px; }
