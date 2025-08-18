@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wish Group - Global Presence</title>
+    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Explore Wish Group's global presence across continents and industries" name="description">
+    <meta content="global business, international presence, corporate locations" name="keywords">
+    <meta content="Wish Group" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <style>
+        /* Map Section Styles */
+        .map-hero-section {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+            overflow: hidden;
+            margin-top: 0;
+        }
+        
+        #world-map-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        #world-map {
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a;
+        }
+        
+        .map-overlay-content {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        
+        .map-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .map-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+            margin-bottom: 30px;
+        }
+        
+        .locations-counter {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.8);
+            padding: 12px 25px;
+            border-radius: 30px;
+            z-index: 1000;
+            border: 1px solid rgba(255,77,77,0.3);
+            backdrop-filter: blur(5px);
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .locations-counter span {
+            font-weight: bold;
+            color: #ff4d4d;
+        }
+        
+        /* Custom Marker Style */
+        .map-marker-icon {
+            background: #ff4d4d;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            border: 3px solid white;
+            box-shadow: 0 0 20px rgba(255,77,77,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .map-marker-icon:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        .map-marker-icon.pulse:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,77,77,0.5);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Popup Styling */
+        .leaflet-popup-content {
+            background: rgba(5,5,5,0.95);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.7);
+            border: 1px solid rgba(255,77,77,0.3);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .leaflet-popup-content-wrapper {
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        
+        .leaflet-popup-tip {
+            background: rgba(5,5,5,0.95);
+            border: 1px solid rgba(255,77,77,0.3);
+        }
+        
+        /* Darker map tiles */
+        .leaflet-tile {
+            filter: brightness(0.6) contrast(1.2) saturate(0.8);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .map-title {
+                font-size: 2.8rem;
+            }
+            
+            .map-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .map-hero-section {
+                height: 70vh;
+                min-height: 500px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .map-title {
+                font-size: 2.2rem;
+            }
+            
+            .map-subtitle {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+            
+            .map-hero-section {
+                height: 60vh;
+                min-height: 400px;
+            }
+            
+            .locations-counter {
+                top: 15px;
+                right: 15px;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .map-marker-icon {
+                width: 18px;
+                height: 18px;
+                border-width: 2px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .map-title {
+                font-size: 1.8rem;
+            }
+            
+            .map-hero-section {
+                height: 55vh;
+                min-height: 350px;
+            }
+            
+            .map-overlay-content {
+                bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-scheme">
+
+    <div id="wrapper">
+
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <!-- Original Header (unchanged) -->
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item" href="index.html">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
+                                        <li><a class="menu-item" href="">Divisions</a></li>
+                                        <li><a class="menu-item" href="">Projects</a></li>
+                                        <li><a class="menu-item" href="">Countries</a></li>
+                                        <li><a class="menu-item" href="">News</a></li>
+                                        <li><a class="menu-item" href="">Our Policies</a></li>
+                                        <li><a class="menu-item" href="">Carrier</a></li>
+                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Map as First Section - now full width -->
+        <section class="map-hero-section">
+            <div id="world-map-container">
+                <div class="locations-counter">
+                    Operating in <span>7</span> countries worldwide
+                </div>
+                <div id="world-map"></div>
+                <div class="container">
+                    <div class="map-overlay-content">
+                        <h1 class="map-title">Our Global Presence</h1>
+                        <p class="map-subtitle">Wish Group operates across multiple continents, delivering excellence through our strategically located offices and operations worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Original Footer (unchanged) -->
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Logo & Social -->
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Address</h3>
+                        <p class="mb-0">121 AI Blvd, San Francisco</p>
+                        <p>BCA 94107</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light">Home</a></li>
+                            <li><a href="about.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Divisions</a></li>
+                            <li><a href="#" class="text-light">Projects</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Us with Email -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subfooter -->
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            Copyright 2025 - Wish Group. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the map with enhanced settings
+        const map = L.map('world-map', {
+            minZoom: 2,
+            maxZoom: 6,
+            zoomControl: false,
+            tap: false,
+            touchZoom: true,
+            scrollWheelZoom: false,
+            fadeAnimation: true,
+            zoomAnimation: true
+        }).setView([20, 0], 2);
+
+        // Add ultra-dark tile layer
+        const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abcd',
+            maxZoom: 6
+        }).addTo(map);
+
+        // Apply additional darkening filter
+        darkTiles.getContainer().style.filter = 'brightness(0.5) contrast(1.3) saturate(0.7)';
+        
+        // Add custom overlay for colored regions
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
+            maxZoom: 6
+        }).addTo(map);
+
+        // Mobile detection
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        // Add zoom control with custom position
+        L.control.zoom({
+            position: isMobile ? 'bottomright' : 'topright'
+        }).addTo(map);
+
+        // Enhanced marker icon with pulse effect
+        const markerIcon = L.divIcon({
+            className: 'map-marker-icon pulse',
+            iconSize: isMobile ? [20, 20] : [24, 24]
+        });
+
+        // Corrected locations with proper coordinates and enhanced descriptions
+        const locations = [
+            {
+                name: "United Arab Emirates",
+                coords: [23.4241, 53.8478],
+                description: "<strong>Middle East Headquarters</strong><br>Our central hub for regional operations and strategic initiatives"
+            },
+            {
+                name: "Sri Lanka",
+                coords: [7.8731, 80.7718],
+                description: "<strong>South Asia Operations Center</strong><br>Driving growth and innovation in the South Asian market"
+            },
+            {
+                name: "Maldives",
+                coords: [3.2028, 73.2207],
+                description: "<strong>Luxury Hospitality Division</strong><br>Managing our premium island resorts and tourism ventures"
+            },
+            {
+                name: "Malaysia",
+                coords: [4.2105, 101.9758],
+                description: "<strong>Southeast Asia Regional Hub</strong><br>Coordinating operations across ASEAN markets"
+            },
+            {
+                name: "Ghana",
+                coords: [7.9465, -1.0232],
+                description: "<strong>West Africa Development Center</strong><br>Leading infrastructure and energy projects in the region"
+            },
+            {
+                name: "South Africa",
+                coords: [-30.5595, 22.9375],
+                description: "<strong>African Continental Headquarters</strong><br>Overseeing pan-African operations and investments"
+            },
+            {
+                name: "United Kingdom",
+                coords: [51.5074, -0.1278],
+                description: "<strong>European Corporate Office</strong><br>Managing European investments and partnerships"
+            }
+        ];
+
+        // Add markers with enhanced popups
+        locations.forEach(location => {
+            const marker = L.marker(location.coords, {
+                icon: markerIcon,
+                riseOnHover: true
+            }).addTo(map);
+            
+            marker.bindPopup(location.description, {
+                autoClose: false,
+                closeOnClick: false,
+                className: 'custom-popup',
+                maxWidth: 300,
+                minWidth: 200
+            });
+            
+            if (isMobile) {
+                marker.openPopup();
+            }
+            
+            // Add hover effect
+            marker.on('mouseover', function() {
+                this.openPopup();
+            });
+        });
+
+        // Fit map to show all markers when loaded
+        const bounds = L.latLngBounds(locations.map(loc => loc.coords));
+        map.fitBounds(bounds, { padding: [50, 50] });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            map.invalidateSize();
+            map.fitBounds(bounds, { padding: [50, 50] });
+        });
+    });
+    </script>
+</body>
+</html>

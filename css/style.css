@@ -7155,7 +7155,11 @@ footer .tiny-border span {
 }
 
 .gradient-edge-bottom.color{
-  background: linear-gradient(0deg, rgba(var(--primary-color-rgb), 1) 0%, rgba(var(--primary-color-rgb), 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(179,0,0,1) 0%,   /* #B30000 */
+    rgba(179,0,0,0) 100%
+  );
 }
 
 .de-gradient-edge-bottom.light {
@@ -12221,7 +12225,23 @@ img {
     -moz-box-shadow: none;
     box-shadow: none;
   }
+/* Custom CSS for project cards */
+a.d-block.hover.relative.rounded-20.overflow-hidden.text-light {
+  height: 400px; /* Revert to original height */
+}
 
+a.d-block.hover.relative.rounded-20.overflow-hidden.text-light img {
+  height: 250px; /* Revert to original image height */
+}
+
+@media (min-width: 992px) {
+  .col-lg-3 a.d-block.hover.relative.rounded-20.overflow-hidden.text-light {
+    height: 400px; /* Ensure consistent height on large screens */
+  }
+  .col-lg-3 a.d-block.hover.relative.rounded-20.overflow-hidden.text-light img {
+    height: 250px; /* Consistent image height */
+  }
+}
   #mainmenu a.menu-item {
     text-align: left;
     padding-left: 0;
@@ -12820,200 +12840,197 @@ img {
     /* -------------------------------------------------- */
 
 @media only screen and (max-width: 767px) {
+    /* Logo handling */
+    header .logo-main {
+        display: none;
+    }
+    header .logo-init {
+        display: none;
+    }
+    header .logo-mobile {
+        display: block !important; /* Ensure logo is always visible */
+    }
+    div#logo img {
+        max-width: 100px !important; /* Adjust logo size for mobile */
+        height: auto !important;
+        margin: 10px auto; /* Center the logo */
+    }
 
-   header .logo-main {
-    display: none;
-  }
+    /* Hide page name (e.g., "Home") and related text */
+    #subheader h1,
+    .crumb,
+    .crumb-wrapper {
+        display: none !important;
+    }
 
-  header .logo-init {
-    display: none;
-  }
+    /* Hide menu text, keep structure for toggle if needed */
+    #mainmenu a {
+        font-size: 0 !important; /* Hides text but preserves menu functionality */
+    }
+    #mainmenu li {
+        padding: 10px 0 !important; /* Maintain spacing for menu icons */
+    }
+    /* Preserve menu toggle icon if present */
+    header.header-mobile #mainmenu > li > span {
+        display: block !important;
+        background: url(../images/ui/arrow-down.png) center no-repeat !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0 !important; /* Ensure no text shows */
+    }
 
-  header .logo-mobile {
-    display: block;
-  }
-
-  header .btn-main{
-    display: none;
-  }
-
-  #topbar{
-    display: none;
-  }
-
-  .menu_side_area {
-    margin-left: 20px;
-    width: 100%;
-    position: relative;
-    right: 0;
-    text-align: right;
-    z-index: 0;
-    display: block;
-  }
-
-  header .container {
-    min-width: 100%;
-  }
-
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  #filters li.pull-right {
-    float: none;
-  }
-
-  .text-item {
-    font-size: 48px;
-    line-height: 48px;
-  }
-
-  .text-item i {
-    font-size: 36px;
-  }
-
-  .de_tab.tab_style_4 .de_nav {
-    border-radius: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-
-  .de_tab.tab_style_4 .de_nav li {
-    min-width: 33.3%;
-    width: 33.3%;
-    border: none;
-  }
-
-  .de_tab.tab_style_4 .de_nav li:first-child,
-  .de_tab.tab_style_4 .de_nav li:last-child {
-    border-radius: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-  
-  .xs-hide {
-    display: none;
-  }
-
-  header a.btn-main{
-    display: none !important;
-  }
-
-  .scrollbar-v,
-  .float-text{
-    display: none;
-  }
-
-  .de-spot span{
-    display: none;
-  }
-
-  .de-spot .de-circle-1,
-  .de-spot .de-circle-2{
-    transform: scale(.25);
-  }
-
-  section{
-    padding: 40px 0;
-  }
-
-  #subheader{
-    padding-top: 100px;
-  }
-
-  /* title phone */
-
-  h1,
-  h1.ultra-big,
-  h1.ultra-big .text-line,
-  h1.ultra-big-2,
-  .title-text,
-  h1.slider-title,
-  h2.slider-title{
-    font-size: 48px;
-  }
-
-  h2{
-    font-size: 36px;
-  }
-
-  .mt-xs-0{
-    margin-top: 0;
-  }
-
-  /* padding top (px) */
-  .pt-xs-10{padding-top:10px;}
-  .pt-xs-20{padding-top:20px;}
-  .pt-xs-30{padding-top:30px;}
-  .pt-xs-40{padding-top:40px;}
-  .pt-xs-50{padding-top:50px;}
-  .pt-xs-60{padding-top:60px;}
-  .pt-xs-70{padding-top:70px;}
-  .pt-xs-80{padding-top:80px;}
-  .pt-xs-90{padding-top:90px;}
-  .pt-xs-100{padding-top:10px;}
-
-  /* padding top (px) */
-  .pb-xs-10{padding-bottom:10px;}
-  .pb-xs-20{padding-bottom:20px;}
-  .pb-xs-30{padding-bottom:30px;}
-  .pb-xs-40{padding-bottom:40px;}
-  .pb-xs-50{padding-bottom:50px;}
-  .pb-xs-60{padding-bottom:60px;}
-  .pb-xs-70{padding-bottom:70px;}
-  .pb-xs-80{padding-bottom:80px;}
-  .pb-xs-90{padding-bottom:90px;}
-  .pb-xs-100{padding-bottom:10px;}
-
-  /* margin top (px) */
-  .mt-xs-10{margin-top:10px;}
-  .mt-xs-20{margin-top:20px;}
-  .mt-xs-30{margin-top:30px;}
-  .mt-xs-40{margin-top:40px;}
-  .mt-xs-50{margin-top:50px;}
-  .mt-xs-60{margin-top:60px;}
-  .mt-xs-70{margin-top:70px;}
-  .mt-xs-80{margin-top:80px;}
-  .mt-xs-90{margin-top:90px;}
-  .mt-xs-100{margin-top:10px;}
-
-  /* margin top (px) */
-  .mb-xs-10{margin-bottom:10px;}
-  .mb-xs-20{margin-bottom:20px;}
-  .mb-xs-30{margin-bottom:30px;}
-  .mb-xs-40{margin-bottom:40px;}
-  .mb-xs-50{margin-bottom:50px;}
-  .mb-xs-60{margin-bottom:60px;}
-  .mb-xs-70{margin-bottom:70px;}
-  .mb-xs-80{margin-bottom:80px;}
-  .mb-xs-90{margin-bottom:90px;}
-  .mb-xs-100{margin-bottom:10px;}
-
-  .ss-wrap{
-    position: relative;
-    width: 200%;
-    margin-left: -50%;
-  }
-
-  .fs-xs-1vw{font-size: 1vw}
-  .fs-xs-2vw{font-size: 2vw}
-  .fs-xs-3vw{font-size: 3vw}
-  .fs-xs-4vw{font-size: 4vw}
-  .fs-xs-5vw{font-size: 5vw}
-  .fs-xs-6vw{font-size: 6vw}
-  .fs-xs-7vw{font-size: 7vw}
-  .fs-xs-8vw{font-size: 8vw}
-  .fs-xs-9vw{font-size: 9vw}
-  .fs-xs-10vw{font-size: 10vw}
-  .fs-xs-11vw{font-size: 11vw}
-  .fs-xs-12vw{font-size: 12vw}
-  .fs-xs-13vw{font-size: 13vw}
-  .fs-xs-14vw{font-size: 14vw}
-  .fs-xs-15vw{font-size: 15vw}
-
+    /* Existing mobile-specific styles */
+    header .btn-main {
+        display: none;
+    }
+    #topbar {
+        display: none;
+    }
+    .menu_side_area {
+        margin-left: 20px;
+        width: 100%;
+        position: relative;
+        right: 0;
+        text-align: right;
+        z-index: 0;
+        display: block;
+    }
+    header .container {
+        min-width: 100%;
+    }
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #filters li.pull-right {
+        float: none;
+    }
+    .text-item {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    .text-item i {
+        font-size: 36px;
+    }
+    .de_tab.tab_style_4 .de_nav {
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .de_tab.tab_style_4 .de_nav li {
+        min-width: 33.3%;
+        width: 33.3%;
+        border: none;
+    }
+    .de_tab.tab_style_4 .de_nav li:first-child,
+    .de_tab.tab_style_4 .de_nav li:last-child {
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .xs-hide {
+        display: none;
+    }
+    header a.btn-main {
+        display: none !important;
+    }
+    .scrollbar-v,
+    .float-text {
+        display: none;
+    }
+    .de-spot span {
+        display: none;
+    }
+    .de-spot .de-circle-1,
+    .de-spot .de-circle-2 {
+        transform: scale(.25);
+    }
+    section {
+        padding: 40px 0;
+    }
+    #subheader {
+        padding-top: 100px;
+    }
+    h1,
+    h1.ultra-big,
+    h1.ultra-big .text-line,
+    h1.ultra-big-2,
+    .title-text,
+    h1.slider-title,
+    h2.slider-title {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .mt-xs-0 {
+        margin-top: 0;
+    }
+    /* Padding top */
+    .pt-xs-10 { padding-top: 10px; }
+    .pt-xs-20 { padding-top: 20px; }
+    .pt-xs-30 { padding-top: 30px; }
+    .pt-xs-40 { padding-top: 40px; }
+    .pt-xs-50 { padding-top: 50px; }
+    .pt-xs-60 { padding-top: 60px; }
+    .pt-xs-70 { padding-top: 70px; }
+    .pt-xs-80 { padding-top: 80px; }
+    .pt-xs-90 { padding-top: 90px; }
+    .pt-xs-100 { padding-top: 10px; }
+    /* Padding bottom */
+    .pb-xs-10 { padding-bottom: 10px; }
+    .pb-xs-20 { padding-bottom: 20px; }
+    .pb-xs-30 { padding-bottom: 30px; }
+    .pb-xs-40 { padding-bottom: 40px; }
+    .pb-xs-50 { padding-bottom: 50px; }
+    .pb-xs-60 { padding-bottom: 60px; }
+    .pb-xs-70 { padding-bottom: 70px; }
+    .pb-xs-80 { padding-bottom: 80px; }
+    .pb-xs-90 { padding-bottom: 90px; }
+    .pb-xs-100 { padding-bottom: 10px; }
+    /* Margin top */
+    .mt-xs-10 { margin-top: 10px; }
+    .mt-xs-20 { margin-top: 20px; }
+    .mt-xs-30 { margin-top: 30px; }
+    .mt-xs-40 { margin-top: 40px; }
+    .mt-xs-50 { margin-top: 50px; }
+    .mt-xs-60 { margin-top: 60px; }
+    .mt-xs-70 { margin-top: 70px; }
+    .mt-xs-80 { margin-top: 80px; }
+    .mt-xs-90 { margin-top: 90px; }
+    .mt-xs-100 { margin-top: 10px; }
+    /* Margin bottom */
+    .mb-xs-10 { margin-bottom: 10px; }
+    .mb-xs-20 { margin-bottom: 20px; }
+    .mb-xs-30 { margin-bottom: 30px; }
+    .mb-xs-40 { margin-bottom: 40px; }
+    .mb-xs-50 { margin-bottom: 50px; }
+    .mb-xs-60 { margin-bottom: 60px; }
+    .mb-xs-70 { margin-bottom: 70px; }
+    .mb-xs-80 { margin-bottom: 80px; }
+    .mb-xs-90 { margin-bottom: 90px; }
+    .mb-xs-100 { margin-bottom: 10px; }
+    .ss-wrap {
+        position: relative;
+        width: 200%;
+        margin-left: -50%;
+    }
+    .fs-xs-1vw { font-size: 1vw; }
+    .fs-xs-2vw { font-size: 2vw; }
+    .fs-xs-3vw { font-size: 3vw; }
+    .fs-xs-4vw { font-size: 4vw; }
+    .fs-xs-5vw { font-size: 5vw; }
+    .fs-xs-6vw { font-size: 6vw; }
+    .fs-xs-7vw { font-size: 7vw; }
+    .fs-xs-8vw { font-size: 8vw; }
+    .fs-xs-9vw { font-size: 9vw; }
+    .fs-xs-10vw { font-size: 10vw; }
+    .fs-xs-11vw { font-size: 11vw; }
+    .fs-xs-12vw { font-size: 12vw; }
+    .fs-xs-13vw { font-size: 13vw; }
+    .fs-xs-14vw { font-size: 14vw; }
+    .fs-xs-15vw { font-size: 15vw; }
 }
-
 /* -------------------------------------------------- 
     design for 480px
     /* -------------------------------------------------- */
@@ -13135,6 +13152,7 @@ img {
     width: auto;
   }
 }
+
 /* --- Who We Are Section Professional Card Design --- */
 .who-pro-card {
     background: linear-gradient(120deg, rgba(30,30,30,0.98) 80%, rgba(225,6,0,0.08) 100%);

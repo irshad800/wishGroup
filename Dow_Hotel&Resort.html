@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dow Hotel & Resort | Luxury Island Accommodations</title>
+    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Dow Hotel & Resort - Luxury accommodations with world-class amenities in the Maldives" name="description">
+    <meta content="Luxury Resort, Maldives, Beach Villas, Underwater Villas, Spa Resort" name="keywords">
+    <meta content="Wish Group" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Custom Styles */
+        .amenity-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        .amenity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .amenity-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .amenity-card:hover .amenity-image {
+            transform: scale(1.05);
+        }
+        .amenity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+        }
+        .full-width-resort {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .accommodation-section {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        .room-badge {
+            background: var(--color);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .room-option {
+            transition: all 0.3s ease;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .room-option:hover {
+            background: rgba(255,255,255,0.05);
+            transform: translateX(5px);
+        }
+        .room-details {
+            flex: 1;
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--color);
+            position: absolute;
+            left: 0;
+        }
+        .amenity-icon {
+            font-size: 48px;
+            color: var(--color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item" href="index.html">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
+                                        <li><a class="menu-item" href="">Divisions</a></li>
+                                        <li><a class="menu-item" href="">Projects</a></li>
+                                        <li><a class="menu-item" href="">Countries</a></li>
+                                        <li><a class="menu-item" href="">News</a></li>
+                                        <li><a class="menu-item" href="">Our Policies</a></li>
+                                        <li><a class="menu-item" href="">Carrier</a></li>
+                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="jarallax-img" alt="">
+            <div class="gradient-edge-bottom h-50"></div>
+            <div class="sw-overlay op-5"></div>
+            <div class="abs bottom-10 z-2 w-100">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-8">
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
+                                Dow Hotel & Resort
+                            </h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s">Luxury redefined in the heart of the Maldives</p>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="relative text-lg-end">
+                                <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
+                                    <span class="fs-20 fw-600">5-Star Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Resort Overview -->
+                        <div class="intro-section mb-5">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                 alt="Dow Hotel & Resort" 
+                                 class="full-width-resort">
+                            <div class="text-center mt-4">
+                                <h2 class="fs-36 mb-3">Island Luxury Redefined</h2>
+                                <p class="lead fs-20">Where world-class amenities meet unparalleled natural beauty</p>
+                            </div>
+                        </div>
+
+                        <!-- Key Amenities Section -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30">Key Amenities</h2>
+                            <p class="lead">Exceptional facilities for the discerning traveler</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="amenity-card">
+                                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Luxury Lobby" 
+                                         class="amenity-image">
+                                    <div class="amenity-overlay">
+                                        <h3 class="fs-20 mb-1">Luxurious Lobby</h3>
+                                        <p class="mb-0">500 sqm of elegant arrival space</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="amenity-card">
+                                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Dining Area" 
+                                         class="amenity-image">
+                                    <div class="amenity-overlay">
+                                        <h3 class="fs-20 mb-1">Global Dining Area</h3>
+                                        <p class="mb-0">600 sqm culinary experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="amenity-card">
+                                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Wellness Center" 
+                                         class="amenity-image">
+                                    <div class="amenity-overlay">
+                                        <h3 class="fs-20 mb-1">Wellness Center</h3>
+                                        <p class="mb-0">850 sqm of spa and fitness facilities</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="amenity-card">
+                                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Indoor Pool" 
+                                         class="amenity-image">
+                                    <div class="amenity-overlay">
+                                        <h3 class="fs-20 mb-1">Indoor Swimming Complex</h3>
+                                        <p class="mb-0">1,000 sqm with café and bar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="amenity-card">
+                                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="Event Spaces" 
+                                         class="amenity-image">
+                                    <div class="amenity-overlay">
+                                        <h3 class="fs-20 mb-1">Event Facilities</h3>
+                                        <p class="mb-0">1,600 sqm of versatile spaces</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="amenity-card">
+                                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="VIP Spa" 
+                                         class="amenity-image">
+                                    <div class="amenity-overlay">
+                                        <h3 class="fs-20 mb-1">VIP Spa & Wellness</h3>
+                                        <p class="mb-0">Exclusive 200 sqm sanctuary</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unique Features Section -->
+                        <div class="accommodation-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="https://images.unsplash.com/photo-1582719471381-9719a8a5a61c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                         alt="Resort Features" 
+                                         class="w-100 rounded-1">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="ps-lg-4">
+                                        <h3 class="fs-24 mb-3">Resort Highlights</h3>
+                                        <ul class="feature-list">
+                                            <li>State-of-the-art fitness center (300 sqm)</li>
+                                            <li>Exclusive screening room (400 sqm)</li>
+                                            <li>Digital games and billiard room (200 sqm)</li>
+                                            <li>Kids club and playroom (100 sqm)</li>
+                                            <li>1km jogging track with ocean views</li>
+                                            <li>VIP private bar (150 sqm)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accommodation Options -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30">Luxury Accommodations</h2>
+                            <p class="lead">Tailored stays for every preference</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <!-- Floating Villas -->
+                            <div class="col-md-4">
+                                <div class="accommodation-type">
+                                    <h3 class="fs-24 mb-3">Floating Haven Villas</h3>
+                                    <div class="room-option">
+                                        <div class="room-badge">1BHK</div>
+                                        <div class="room-details">
+                                            <span>20 Units Available</span>
+                                            <span>100 sqm each</span>
+                                        </div>
+                                    </div>
+                                    <div class="room-option">
+                                        <div class="room-badge">2BHK</div>
+                                        <div class="room-details">
+                                            <span>10 Units Available</span>
+                                            <span>120 sqm each</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Underwater Villas -->
+                            <div class="col-md-4">
+                                <div class="accommodation-type">
+                                    <h3 class="fs-24 mb-3">Underwater Paradise</h3>
+                                    <div class="room-option">
+                                        <div class="room-badge">1BHK</div>
+                                        <div class="room-details">
+                                            <span>20 Units Available</span>
+                                            <span>90 sqm each</span>
+                                        </div>
+                                    </div>
+                                    <div class="room-option">
+                                        <div class="room-badge">2BHK</div>
+                                        <div class="room-details">
+                                            <span>10 Units Available</span>
+                                            <span>100 sqm each</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- VIP Bungalows -->
+                            <div class="col-md-4">
+                                <div class="accommodation-type">
+                                    <h3 class="fs-24 mb-3">VIP Bungalows</h3>
+                                    <div class="room-option">
+                                        <div class="room-badge">2BHK</div>
+                                        <div class="room-details">
+                                            <span>10 Units Available</span>
+                                            <span>180 sqm each</span>
+                                        </div>
+                                    </div>
+                                    <div class="room-option">
+                                        <div class="room-badge">3BHK</div>
+                                        <div class="room-details">
+                                            <span>10 Units Available</span>
+                                            <span>220 sqm each</span>
+                                        </div>
+                                    </div>
+                                    <div class="room-option">
+                                        <div class="room-badge">4BHK</div>
+                                        <div class="room-details">
+                                            <span>5 Units Available</span>
+                                            <span>250 sqm each</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel Rooms Section -->
+                        <div class="accommodation-section">
+                            <h3 class="fs-24 mb-3 text-center">Hotel Rooms</h3>
+                            <div class="row g-4">
+                                <div class="col-md-3">
+                                    <div class="room-option">
+                                        <div class="room-badge">STD</div>
+                                        <div class="room-details">
+                                            <span>35 Rooms</span>
+                                            <span>40 sqm each</span>
+                                            <span>Serene Retreats</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="room-option">
+                                        <div class="room-badge">DLX</div>
+                                        <div class="room-details">
+                                            <span>40 Rooms</span>
+                                            <span>50 sqm each</span>
+                                            <span>Tranquil Havens</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="room-option">
+                                        <div class="room-badge">SUITE</div>
+                                        <div class="room-details">
+                                            <span>10 Rooms</span>
+                                            <span>70 sqm each</span>
+                                            <span>Mystic Suites</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="room-option">
+                                        <div class="room-badge">VIP</div>
+                                        <div class="room-details">
+                                            <span>10 Rooms</span>
+                                            <span>100 sqm each</span>
+                                            <span>Penthouses</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beach Villas Section -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30">Beachfront Villas</h2>
+                            <p class="lead">Steps away from pristine sands</p>
+                        </div>
+                        
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="room-option">
+                                    <div class="room-badge">1BHK</div>
+                                    <div class="room-details">
+                                        <span>16 Units Available</span>
+                                        <span>120 sqm each</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="room-option">
+                                    <div class="room-badge">2BHK</div>
+                                    <div class="room-details">
+                                        <span>17 Units Available</span>
+                                        <span>150 sqm each</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="room-option">
+                                    <div class="room-badge">3BHK</div>
+                                    <div class="room-details">
+                                        <span>17 Units Available</span>
+                                        <span>180 sqm each</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section text-center pt-4 pb-5">
+                            <h3 class="fs-28 mb-3">Experience Unmatched Luxury</h3>
+                            <p class="mb-4">Book your stay at Dow Hotel & Resort today</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a class="btn-main fx-slide" href="contact.html"><span>Check Availability</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Request Brochure</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer begin -->
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Logo & Social -->
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Address</h3>
+                        <p class="mb-0">121 AI Blvd, San Francisco</p>
+                        <p>BCA 94107</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light">Home</a></li>
+                            <li><a href="about.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Divisions</a></li>
+                            <li><a href="#" class="text-light">Projects</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us with Email -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Subfooter -->
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            Copyright 2025 - Wish Group. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- Javascript Files
+        ================================================== -->
+        <script src="js/vendors.js"></script>
+        <script src="js/designesia.js"></script>
+        <script src="js/countdown-custom.js"></script>
+        <script src="js/custom-marquee.js"></script>
+    </div>
+</body>
+</html>

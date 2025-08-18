@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>World Capital Centre | Colombo's Iconic Development</title>
+    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="World Capital Centre Limited - Developing Asia's tallest tower in Colombo, Sri Lanka" name="description">
+    <meta content="Colombo, Sri Lanka, Skyscraper, Mixed-Use Development, WCC, World Capital Centre" name="keywords">
+    <meta content="Wish Group" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Custom Styles */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--color);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .spec-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+        }
+        .cost-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        .cost-table th {
+            background: var(--color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        .cost-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .cost-table tr:last-child td {
+            border-bottom: none;
+            font-weight: bold;
+            background: rgba(255,255,255,0.05);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--color);
+        }
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            width: 1px;
+            height: calc(100% - 15px);
+            background: rgba(255,255,255,0.2);
+        }
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        .project-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        .project-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item" href="index.html">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html">About</a></li>
+                                        <li><a class="menu-item" href="">Projects</a></li>
+                                        <li><a class="menu-item" href="">Investments</a></li>
+                                        <li><a class="menu-item" href="">News</a></li>
+                                        <li><a class="menu-item" href="">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="jarallax-img" alt="">
+            <div class="hero-overlay"></div>
+            <div class="gradient-edge-bottom h-50"></div>
+            <div class="abs bottom-10 z-2 w-100">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-8">
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
+                                World Capital Centre Colombo
+                            </h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s">Asia's tallest tower in the heart of Sri Lanka</p>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="relative text-lg-end">
+                                <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
+                                    <span class="fs-20 fw-600">$2.5B Project</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Company Introduction -->
+                        <div class="intro-section mb-5 text-center">
+                            <h2 class="fs-36 mb-3">World Capital Centre Limited</h2>
+                            <p class="lead fs-20">A diversified group with an international network, specializing in investments, projects, and trading on a global platform</p>
+                        </div>
+
+                        <!-- Vision & Mission -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Our Vision</h3>
+                                    <p>To create a world capital market inspired through humanity, transforming Colombo into a global destination with iconic architecture and sustainable development.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Our Mission</h3>
+                                    <p>To coordinate with world-class architects and engineers in developing structural designs that push boundaries, while maintaining a focus on innovation, humanity, and exceptional project execution.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Status -->
+                        <div class="section-header text-center mb-5">
+                            <h2 class="fs-30">Current Project Status</h2>
+                            <p class="lead">World Capital Centre Colombo development progress</p>
+                        </div>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Engineering & Design</h3>
+                                    <ul>
+                                        <li>RSP appointed as lead architect</li>
+                                        <li>Structural engineering commencing soon</li>
+                                        <li>MEP design companies under evaluation</li>
+                                        <li>Q-Pro Services handling quantity surveying</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Investments</h3>
+                                    <ul>
+                                        <li>Partial land payment completed</li>
+                                        <li>BOI direct investment agreement signed</li>
+                                        <li>Prime Colombo location secured</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Approvals</h3>
+                                    <ul>
+                                        <li>Urban Development Authority approval</li>
+                                        <li>Board of Investment agreement in place</li>
+                                        <li>All necessary permits progressing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Why Invest Section -->
+                        <div class="section-header text-center mb-5">
+                            <h2 class="fs-30">Why Invest in WCC Colombo</h2>
+                            <p class="lead">Key benefits of this transformative project</p>
+                        </div>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Iconic Architecture">
+                                </div>
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Iconic Structure</h3>
+                                    <p>A state-of-the-art tower in the heart of Colombo, set to be Asia's tallest with unique and groundbreaking architecture that will redefine the city skyline.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Economic Impact">
+                                </div>
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Economic Impact</h3>
+                                    <p>Attracts local and international businesses, creating thousands of jobs for both locals and foreigners while supporting nearby businesses and services.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sustainability">
+                                </div>
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Sustainability</h3>
+                                    <p>Incorporates cutting-edge green building techniques and sustainable practices to minimize environmental impact while maximizing efficiency.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Destination Appeal">
+                                </div>
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Destination Appeal</h3>
+                                    <p>Mixed-use development with recreational facilities that will attract tourists, non-residents, and locals, positioning Colombo as an international destination.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Specifications -->
+                        <div class="section-header text-center mb-5">
+                            <h2 class="fs-30">Project Specifications</h2>
+                            <p class="lead">The scale and scope of World Capital Centre Colombo</p>
+                        </div>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="spec-item">
+                                    <h3 class="fs-24 mb-3 text-color">Total Area</h3>
+                                    <p class="fs-36 fw-bold">800,000 sqm</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="spec-item">
+                                    <h3 class="fs-24 mb-3 text-color">Apartments</h3>
+                                    <p class="fs-36 fw-bold">1,200 Units</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="spec-item">
+                                    <h3 class="fs-24 mb-3 text-color">Retail Outlets</h3>
+                                    <p class="fs-36 fw-bold">3,000 Spaces</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="spec-item">
+                                    <h3 class="fs-24 mb-3 text-color">Hotel Rooms</h3>
+                                    <p class="fs-36 fw-bold">2,000 Rooms</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="spec-item">
+                                    <h3 class="fs-24 mb-3 text-color">Total Project Cost</h3>
+                                    <p class="fs-36 fw-bold">$2.5 Billion</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cost Breakdown -->
+                        <div class="section-header text-center mb-5">
+                            <h2 class="fs-30">Construction Cost Breakdown</h2>
+                            <p class="lead">Detailed investment allocation</p>
+                        </div>
+
+                        <div class="mb-5">
+                            <table class="cost-table">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Land Cost</td>
+                                        <td>$300,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>All Consultant Cost</td>
+                                        <td>$150,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main Works (800,000 sqm x $200/sqm)</td>
+                                        <td>$1,600,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Access Connection, Roads, Flyover, etc.</td>
+                                        <td>$150,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advertising, Sales & Marketing</td>
+                                        <td>$60,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Special Finishes, Common Area Decoration, Fitted Furniture & Equipment</td>
+                                        <td>$90,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contingency</td>
+                                        <td>$100,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td>$2,450,000,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Project Timeline -->
+                        <div class="section-header text-center mb-5">
+                            <h2 class="fs-30">Project Timeline</h2>
+                            <p class="lead">Key phases of development</p>
+                        </div>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="timeline-item">
+                                    <h3 class="fs-20 mb-2">2019-2020</h3>
+                                    <p>Planning and design phase with RSP architects. Initial land acquisition and approvals secured.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h3 class="fs-20 mb-2">2020</h3>
+                                    <p>Estimated annual investment: $445 million. Commencement of foundation work and initial construction.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h3 class="fs-20 mb-2">2021</h3>
+                                    <p>Estimated annual investment: $450 million. Vertical construction begins with core structure development.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="timeline-item">
+                                    <h3 class="fs-20 mb-2">2022</h3>
+                                    <p>Estimated annual investment: $838 million. Major construction milestones achieved with tower reaching significant height.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h3 class="fs-20 mb-2">2023</h3>
+                                    <p>Final construction phase with interior fit-outs and systems commissioning. Preparation for grand opening.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revenue Projections -->
+                        <div class="section-header text-center mb-5">
+                            <h2 class="fs-30">Revenue Projections</h2>
+                            <p class="lead">Financial outlook for World Capital Centre</p>
+                        </div>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Sale Revenue</h3>
+                                    <p class="fs-36 fw-bold mb-3">$2.33 Billion</p>
+                                    <p>Projected from residential and commercial unit sales during development phase.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Annual Lease Revenue</h3>
+                                    <p class="fs-36 fw-bold mb-3">$500 Million</p>
+                                    <p>Expected recurring revenue from retail, office, and hospitality operations post-completion.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="feature-card">
+                                    <h3 class="fs-24 mb-3">Post-Sales Assets</h3>
+                                    <p>World Capital Centre will retain $1.5 billion in premium assets while generating $500 million in annual revenue from ongoing operations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section text-center pt-4 pb-5">
+                            <h3 class="fs-28 mb-3">Join This Transformational Project</h3>
+                            <p class="mb-4">Investment opportunities available in Asia's next iconic landmark</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a class="btn-main fx-slide" href="contact.html"><span>Investment Inquiries</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Request Brochure</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer begin -->
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Logo & Social -->
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">World Capital Centre Limited</h3>
+                        <p class="mb-0">Colombo, Sri Lanka</p>
+                        <p>International Network</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light">Home</a></li>
+                            <li><a href="about.html" class="text-light">About</a></li>
+                            <li><a href="#" class="text-light">Projects</a></li>
+                            <li><a href="#" class="text-light">Investments</a></li>
+                            <li><a href="#" class="text-light">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us with Email -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Subfooter -->
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            Copyright 2025 - World Capital Centre Limited. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- Javascript Files
+        ================================================== -->
+        <script src="js/vendors.js"></script>
+        <script src="js/designesia.js"></script>
+    </div>
+</body>
+</html>
