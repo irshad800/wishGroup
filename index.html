@@ -1,39 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Wish Group</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="AIvent" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
-    <!-- CSS Files
-    ================================================== -->
+    <title data-translate="wish_group">Wish Group</title>
+    <link rel="icon" href="images/wishgroup/logo.jpeg" type="image/png" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIvent">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
-    <!-- color scheme -->
-     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
-<script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
-
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <!-- Globe dependencies -->
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="dark-scheme">
-
     <div id="wrapper">
-
         <div class="float-text show-on-scroll">
             <span><a href="#">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
-        <!-- page preloader begin -->
+        <!-- Page preloader -->
         <div id="de-loader"></div>
-        <!-- page preloader close -->
 
         <header class="transparent">
             <div class="container">
@@ -41,57 +37,57 @@
                     <div class="col-md-12">
                         <div class="de-flex">
                             <div class="de-flex-col">
-                                <!-- logo begin -->
+                                <!-- Logo -->
                                 <div id="logo">
                                     <a href="index.html">
-    <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
-    <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
-    <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" width="160" height="auto">
-</a>
+                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo" width="200" height="auto">
+                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo" width="200" height="auto">
+                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo" width="160" height="auto">
+                                    </a>
                                 </div>
-                                <!-- logo close -->
                             </div>
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li>   <a class="menu-item" href=index.html>Home</a>
-                                        </li>
-
-                                        <li><a class="menu-item" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a>
-                                            <ul>
-                                                <li><a class="menu-item" href="tickets.html">Ongoing Projects</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Completed Projects</a></li>
-                                                <li><a class="menu-item" href="news.html">Strategic Investment and Collabration</a></li>
-                                                <li><a class="menu-item" href="news-single.html">Proposed Future Projects</a></li>
-                                                
-                                            </ul></li>
-                                        
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="">Contact Us</a>
-
-                                 
-                                            <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a>
+                                        <li><a class="menu-item active" href="#section-hero" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                                        <li><a class="menu-item" href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                          <ul>
+                                               <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
+    <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
+    <li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
+    <li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
                                             </ul>
-
+                                        </li>
+                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
+                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
+                                        <li>
+                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
+                                          
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
+                            <!-- Language Selector -->
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
-
+                                <div class="language-selector">
+                                    <button class="btn-main fx-slide w-100" id="language-toggle" aria-label="Toggle language selection">
+                                        <span>EN</span>
+                                        <i class="fa fa-chevron-down ms-2"></i>
+                                    </button>
+                                    <div class="language-dropdown">
+                                        <a href="#" data-lang="en" aria-label="Select English">English (EN)</a>
+                                        <a href="#" data-lang="ar" aria-label="Select Arabic">العربية (AR)</a>
+                                        <a href="#" data-lang="fr" aria-label="Select French">Français (FR)</a>
+                                        <a href="#" data-lang="si" aria-label="Select Sinhala">සිංහල (SIN)</a>
+                                        <a href="#" data-lang="dv" aria-label="Select Dhivehi">ދިވެހި (MDV)</a>
+                                    </div>
+                                </div>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -110,178 +106,111 @@
                 <div class="container wow scaleIn" data-wow-duration="3s">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-
-                            <div class="subtitle">Decades of Value and Vectory</div>
-                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1"> Make Your Wish</h1>
-
-                            <div class="d-block d-md-flex justify-content-center">
-                                <div class="d-flex justify-content-center align-items-center mx-4">
-                                    <i class="fa fa-calendar id-color me-3"></i>
-                                    <h4 class="mb-0">Since 2000</h4>
-                                </div>
-                            </div>
+                            <div class="subtitle" data-translate="decades">Decades of Value and Victory</div>
+                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1" data-translate="make_your_wish">Make Your Wish</h1>
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">Wish Group</h2>
+                            <h4 class="mb-0" data-translate="since">Since 2000</h4>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
+
         <section id="section-about" class="bg-dark section-dark text-light">
             <div class="container">
-                <div class="row  gx-5 align-items-center justify-content-between">
+                <div class="row gx-5 align-items-center justify-content-between">
                     <div class="col-lg-6">
-                          <div class="me-lg-5 pe-lg-5 py-5 my-5">
-                              <h2 class="wow fadeInUp" data-wow-delay=".4s">Wish Group</h2>
-                              <p class="wow fadeInUp" data-wow-delay=".6s">Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.</p>
-                          </div>
+                        <div class="me-lg-5 pe-lg-5 py-5 my-5">
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">Wish Group</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".6s" data-translate="about_text">Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.</p>
+                            <h3 data-translate="world_map">Wish Group Around the World</h3>
+                        </div>
                     </div>
-
                     <div class="col-lg-5">
                         <div class="wow scaleIn">
-                            <h3>Wish Group Around the World</h3>
-                            <!-- Globe container -->
+                            <h3 data-translate="world_map">Wish Group Around the World</h3>
                             <div id="business-globe" style="width:100%;height:600px;background:#000;border-radius:10px;"></div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <section class="section-dark p-0" aria-label="section">
             <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
-              <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
-                <span class="fs-60 mx-3">Wish Islands</span>
-                <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Wish Harbour</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Wish Casa</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Prime Wish </span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Prime Bond Investment</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">World Capital Centre (WCC)</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-              </div>
+                <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
+                    <span class="fs-60 mx-3">Wish Islands</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Wish Harbour</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Wish Casa</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Prime Wish</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Prime Bond Investment</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">World Capital Centre (WCC)</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                </div>
             </div>
-
             <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20">
-              <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
-               <span class="fs-60 mx-3">Wish Islands</span>
-                <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Wish Harbour</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Wish Casa</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Prime Wish </span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">Prime Bond Investment</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-                <span class="fs-60 mx-3">World Capital Centre (WCC)</span>
-                 <span class="fs-60 mx-3 op-2">/</span>
-              </div>
+                <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
+                    <span class="fs-60 mx-3">Wish Islands</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Wish Harbour</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Wish Casa</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Prime Wish</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">Prime Bond Investment</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                    <span class="fs-60 mx-3">World Capital Centre (WCC)</span>
+                    <span class="fs-60 mx-3 op-2">/</span>
+                </div>
             </div>
         </section>
 
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <section id="section-why-attend" class="section-dark text-light bg-dark py-5">
+            <div class="container text-center">
+                <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
+                <div class="swiper myProjectSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="images/misc/s3.webp" class="img-fluid mb-3 rounded" alt="Wish Island">
+                                <h4>Wish Islands</h4>
+                                <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="images/misc/s4.webp" class="img-fluid mb-3 rounded" alt="Wish Casa">
+                                <h4>Wish Casa</h4>
+                                <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="images/misc/s5.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
+                                <h4>Prime Wish</h4>
+                                <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="images/misc/s6.webp" class="img-fluid mb-3 rounded" alt="Wish Harbour">
+                                <h4>Wish Harbour</h4>
+                                <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
 
-<section id="section-why-attend" class="section-dark text-light bg-dark py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Latest Projects</h2>
-
-    <div class="swiper myProjectSlider">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="project-box">
-            <img src="images/misc/s3.webp" class="img-fluid mb-3 rounded" alt="Wish Island">
-            <h4>Wish Island</h4>
-            <p>Luxury, tranquility & natural beauty in the Maldives.</p>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="project-box">
-            <img src="images/misc/s4.webp" class="img-fluid mb-3 rounded" alt="Wish Casa">
-            <h4>Wish Casa</h4>
-            <p>Premium biscuits & juices with global standards.</p>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="project-box">
-            <img src="images/misc/s5.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
-            <h4>Prime Wish</h4>
-            <p>UAE-based food manufacturing & export company.</p>
-          </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="swiper-slide">
-          <div class="project-box">
-            <img src="images/misc/s6.webp" class="img-fluid mb-3 rounded" alt="Wish Harbour">
-            <h4>Wish Harbour</h4>
-            <p>we don't just chase dreams — we hold your wish and turn it into reality.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Optional pagination -->
-      <div class="swiper-pagination mt-3"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Swiper Configuration -->
-<script>
-  new Swiper('.myProjectSlider', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 },
-      992: { slidesPerView: 3 },
-      1200: { slidesPerView: 4 }
-    }
-  });
-</script>
-
-<!-- Styling -->
-<style>
-  .project-box {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    height: 100%;
-    color: #fff;
-    text-align: left;
-  }
-
-  .project-box img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .swiper-slide {
-    height: auto !important;
-  }
-</style>
-
-
-        <section class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
             <img src="images/background/2.webp" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
             <div class="gradient-edge-bottom"></div>
@@ -293,278 +222,221 @@
                             <div class="abs bg-color w-80px h-80px rounded-1 text-center end-0 z-2 wow scaleIn">
                                 <i class="icofont-quote-left text-white fs-40 d-block pt-3"></i>
                             </div>
-                            <img src="/images/wishgroup/ahmed.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                            <img src="images/team/ahmed.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="Asaid Ahmed Arabi Moulana">
                         </div>
                     </div>
-
                     <div class="col-md-8">
                         <h3 class="fs-32 mb-4 wow fadeInUp">“”</h3>
-
                         <span>Asaid Ahmed Arabi Moulana</span>
                     </div>
                 </div>
             </div>
         </section>
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-<section id="section-speakers" class="bg-dark section-dark text-light py-5">
-  <div class="container">
-    <div class="row g-4 justify-content-center">
-      <div class="col-lg-6 relative z-3">
-        <div class="text-center">
-        <div class="subtitle wow fadeInUp" data-wow-delay=".0s">WISH GROUP </div>
-          <h2 class="wow fadeInUp" data-wow-delay=".2s">GROUP MANAGEMENT TEAM</h2>
-        </div>
-      </div>
-    </div>
+        <section id="section-speakers" class="bg-dark section-dark text-light py-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6 relative z-3">
+                        <div class="text-center">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="wish_group">Wish Group</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="management_team">GROUP MANAGEMENT TEAM</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper mySwiper mt-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/1.webp" class="w-100 hover-scale-1-1" alt="Mashreq Bank">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Group Chairman & Founder</h3>
+                                        <span>Mr. Asaid Ahmed Arabi Moulana</span><br>
+                                        <span>chairman@wishgroup.ae</span><br>
+                                        <span>+971 50 578 6860</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/2.webp" class="w-100 hover-scale-1-1" alt="ADIB">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Group CEO</h3>
+                                        <span>Mr. Fathih Afeef</span><br>
+                                        <span>ceo@wishgroup.ae</span><br>
+                                        <span>+971 55 123 4567</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/4.webp" class="w-100 hover-scale-1-1" alt="Partner 4">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Director – Project Development</h3>
+                                        <span>Mr. Afzal Khalid</span><br>
+                                        <span>projects@wishgroup.ae</span><br>
+                                        <span>+971 56 000 1111</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/5.webp" class="w-100 hover-scale-1-1" alt="Partner 5">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Chief Financial Officer (CFO)</h3>
+                                        <span>Mr. Azmi Latheef</span><br>
+                                        <span>finance@wishgroup.ae</span><br>
+                                        <span>+971 58 111 2222</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/7.webp" class="w-100 hover-scale-1-1" alt="Partner 7">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Director – International Trade</h3>
+                                        <span>Mr. Mubarak Younus</span><br>
+                                        <span>trade@wishgroup.ae</span><br>
+                                        <span>+971 50 999 8888</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/8.webp" class="w-100 hover-scale-1-1" alt="Partner 8">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Group Legal Advisor</h3>
+                                        <span>ALMAHY Legal Services</span><br>
+                                        <span>info@almahy.ae</span><br>
+                                        <span>+971 50 409 6028</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/9.webp" class="w-100 hover-scale-1-1" alt="Partner 9">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Group Auditor</h3>
+                                        <span>EXL Auditing</span><br>
+                                        <span>info@exlauditing.com</span><br>
+                                        <span>+971 50 431 8384</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/10.webp" class="w-100 hover-scale-1-1" alt="Partner 10">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Director – Marketing & Branding</h3>
+                                        <span>Ms. Sabeena Shafir</span><br>
+                                        <span>marketing@wishgroup.ae</span><br>
+                                        <span>+971 54 444 5555</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/11.webp" class="w-100 hover-scale-1-1" alt="Partner 11">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Country Director – Sri Lanka</h3>
+                                        <span>Mr. Rameez Hassan</span><br>
+                                        <span>srilanka@wishgroup.world</span><br>
+                                        <span>+94 77 123 4567</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/12.webp" class="w-100 hover-scale-1-1" alt="Partner 12">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Country Director – Maldives</h3>
+                                        <span>Mr. Zaeem Imran</span><br>
+                                        <span>maldives@wishgroup.world</span><br>
+                                        <span>+960 778 1234</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/13.webp" class="w-100 hover-scale-1-1" alt="Partner 13">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Country Director – Africa (Ghana/SA)</h3>
+                                        <span>Mr. Kwame Mensah</span><br>
+                                        <span>africa@wishgroup.world</span><br>
+                                        <span>+27 82 123 4567</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hover relative rounded-1 overflow-hidden">
+                                <img src="images/team/14.webp" class="w-100 hover-scale-1-1" alt="Partner 14">
+                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
+                                <div class="abs w-100 start-0 bottom-0 z-3">
+                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
+                                        <h3 class="mb-0">Country Director – UK & Europe</h3>
+                                        <span>Mr. Adam Williams</span><br>
+                                        <span>uk@wishgroup.world</span><br>
+                                        <span>+44 7700 900123</span>
+                                    </div>
+                                    <div class="gradient-edge-bottom h-100 op-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Swiper Slider -->
-    <div class="swiper mySwiper mt-5">
-      <div class="swiper-wrapper">
-
-        <!-- Partner 1 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/1.webp" class="w-100 hover-scale-1-1" alt="Mashreq Bank">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                <h3 class="mb-0">Group Chairman & Founder</h3>
-                <span>Mr. Asaid Ahmed Arabi Moulana</span><br>
-                 <span>chairman@wishgroup.ae</span><br>
-                 <span>+971 50 578 6860</span>
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 2 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/2.webp" class="w-100 hover-scale-1-1" alt="ADIB">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                <h3 class="mb-0">Group CEO</h3>
-                <span>Mr. Fathih Afeef</span><br>
-                 <span>ceo@wishgroup.ae</span><br>
-                 <span>+971 55 123 4567</span>
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 3 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/3.webp" class="w-100 hover-scale-1-1" alt="NeuralCore">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                <h3 class="mb-0">Director – Global Operations</h3>
-                <span>Mr. Safwan</span><br>
-                 <span>ops@wishgroup.ae</span><br>
-                 <span>+971 52 987 6543</span>			
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 4 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/4.webp" class="w-100 hover-scale-1-1" alt="Partner 4">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-               <h3 class="mb-0">Director – Project Development</h3>
-                <span>	Mr. Afzal Khalid</span><br>
-                 <span>projects@wishgroup.ae</span><br>
-                 <span>+971 56 000 1111</span>				
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 5 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/5.webp" class="w-100 hover-scale-1-1" alt="Partner 5">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                 <h3 class="mb-0">Chief Financial Officer (CFO)</h3>
-                <span>Mr. Azmi Latheef</span><br>
-                 <span>finance@wishgroup.ae</span><br>
-                 <span>+971 58 111 2222</span>				
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 6 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/6.webp" class="w-100 hover-scale-1-1" alt="Partner 6">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                <h3 class="mb-0">Chief Financial Officer (CFO)</h3>
-                <span>Mr. Azmi Latheef</span><br>
-                 <span>finance@wishgroup.ae</span><br>
-                 <span>+971 58 111 2222</span>	
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 7 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/7.webp" class="w-100 hover-scale-1-1" alt="Partner 7">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                <h3 class="mb-0">Director – International Trade</h3>
-                <span>Mr. Mubarak Younus</span><br>
-                 <span>	trade@wishgroup.ae</span><br>
-                 <span>+971 50 999 8888</span>			
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 8 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/8.webp" class="w-100 hover-scale-1-1" alt="Partner 8">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                <h3 class="mb-0">Group Legal Advisor</h3>
-                <span>ALMAHY Legal Services</span><br>
-                 <span>info@almahy.ae</span><br>
-                 <span>+971 50 409 6028</span>		
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 9 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/9.webp" class="w-100 hover-scale-1-1" alt="Partner 9">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                <h3 class="mb-0">Group Auditor</h3>
-                <span>EXL Auditing</span><br>
-                 <span>info@exlauditing.com</span><br>
-                 <span>+971 50 431 8384</span>	
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Partner 10 -->
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/10.webp" class="w-100 hover-scale-1-1" alt="Partner 10">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-               <h3 class="mb-0">Director – Marketing & Branding</h3>
-                <span>Ms. Sabeena Shafir</span><br>
-                 <span>marketing@wishgroup.ae</span><br>
-                 <span>+971 54 444 5555</span>	
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/10.webp" class="w-100 hover-scale-1-1" alt="Partner 10">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-               <h3 class="mb-0">Country Director – Sri Lanka</h3>
-                <span>Mr. Rameez Hassan</span><br>
-                 <span>srilanka@wishgroup.world</span><br>
-                 <span>+94 77 123 4567</span>	
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/10.webp" class="w-100 hover-scale-1-1" alt="Partner 10">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-               <h3 class="mb-0">Country Director – Maldives</h3>
-                <span>Mr. Zaeem Imran</span><br>
-                 <span>maldives@wishgroup.world</span><br>
-                 <span>+960 778 1234</span>	
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/10.webp" class="w-100 hover-scale-1-1" alt="Partner 10">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-               <h3 class="mb-0">Country Director – Africa (Ghana/SA)</h3>
-                <span>Mr. Kwame Mensah</span><br>
-                 <span>africa@wishgroup.world</span><br>
-                 <span>+27 82 123 4567</span>	
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hover relative rounded-1 overflow-hidden">
-            <img src="images/team/10.webp" class="w-100 hover-scale-1-1" alt="Partner 10">
-            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-            <div class="abs w-100 start-0 bottom-0 z-3">
-              <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-               <h3 class="mb-0">Country Director – UK & Europe</h3>
-                <span>Mr. Adam Williams</span><br>
-                 <span>uk@wishgroup.world</span><br>
-            	 <span>+44 7700 900123</span>
-              </div>
-              <div class="gradient-edge-bottom h-100 op-8"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
- <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
+        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
             <img src="images/background/1.webp" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-8"></div>
             <div class="container">
                 <div class="row g-4">
-
                     <div class="col-md-12 wow fadeInUp">
                         <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
                             <img src="images/logo-light/1.webp" class="w-100 px-4" alt="">
@@ -583,576 +455,869 @@
             </div>
         </section>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<!-- Swiper Initialization -->
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    spaceBetween: 30,
-    slidesPerView: 1,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      }
-    }
-  });
-</script>
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-<!-- Team Section -->
-<section id="section-speakers" class="bg-dark section-dark text-light py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Wish Group</div>
-      <h2 class="wow fadeInUp" data-wow-delay=".2s">SECONDARY MANAGEMENT TEAM</h2>
-    </div>
-
-    <!-- Swiper Slider -->
-    <div class="swiper teamSwiper">
-      <div class="swiper-wrapper">
-        <!-- Team Member: Asaid Ahmed -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Asaid Ahmed" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/wishgroup/ahmed.jpeg" class="team-img" alt="Asaid Ahmed" loading="lazy">
+        <section id="section-speakers" class="bg-dark section-dark text-light py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="wish_group">Wish Group</div>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="secondary_team">SECONDARY MANAGEMENT TEAM</h2>
+                </div>
+                <div class="swiper teamSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Ahmed Fairooz" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/ahmed.jpg" class="team-img" alt="Ahmed Fairooz" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Ahmed Fairooz</h5>
+                                <p class="text-warning mb-2">Deputy Director – Global Operations</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:fairooz@wishgroup.ae" class="text-light text-decoration-none">fairooz@wishgroup.ae</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +971 52 555 9876</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Fathih Afeef" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/fathih.jpg" class="team-img" alt="Fathih Afeef" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Fathih Afeef</h5>
+                                <p class="text-warning mb-2">Deputy Director – Project Development</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:projects@wishgroup.ae" class="text-light text-decoration-none">projects@wishgroup.ae</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +971 58 333 1122</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Safwan" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/safwan.jpg" class="team-img" alt="Safwan" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Safwan</h5>
+                                <p class="text-warning mb-2">Director – Global Operations</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:ops@wishgroup.ae" class="text-light text-decoration-none">ops@wishgroup.ae</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +971 52 987 6543</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Afzal Khalid" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/afzal.jpg" class="team-img" alt="Afzal Khalid" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Afzal Khalid</h5>
+                                <p class="text-warning mb-2">Director – Project Development</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:projects@wishgroup.ae" class="text-light text-decoration-none">projects@wishgroup.ae</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +971 56 000 1111</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Azmi Latheef" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/azmi.jpg" class="team-img" alt="Azmi Latheef" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Azmi Latheef</h5>
+                                <p class="text-warning mb-2">Chief Financial Officer (CFO)</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:finance@wishgroup.ae" class="text-light text-decoration-none">finance@wishgroup.ae</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +971 58 111 2222</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Mubarak Younus" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/mubarak.jpg" class="team-img" alt="Mubarak Younus" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Mubarak Younus</h5>
+                                <p class="text-warning mb-2">Director – International Trade</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:trade@wishgroup.ae" class="text-light text-decoration-none">trade@wishgroup.ae</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +971 50 999 8888</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Sabeena Shafir" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/sabeena.jpg" class="team-img" alt="Sabeena Shafir" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Ms. Sabeena Shafir</h5>
+                                <p class="text-warning mb-2">Director – Marketing & Branding</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:marketing@wishgroup.ae" class="text-light text-decoration-none">marketing@wishgroup.ae</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +971 54 444 5555</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Rameez Hassan" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/rameez.jpg" class="team-img" alt="Rameez Hassan" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Rameez Hassan</h5>
+                                <p class="text-warning mb-2">Country Director – Sri Lanka</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:srilanka@wishgroup.world" class="text-light text-decoration-none">srilanka@wishgroup.world</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +94 77 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Zaeem Imran" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/zaeem.jpg" class="team-img" alt="Zaeem Imran" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Zaeem Imran</h5>
+                                <p class="text-warning mb-2">Country Director – Maldives</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:maldives@wishgroup.world" class="text-light text-decoration-none">maldives@wishgroup.world</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +960 778 1234</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Adam Williams" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                                <div class="team-img-wrapper mb-3">
+                                    <img src="images/team/adam.jpg" class="team-img" alt="Adam Williams" loading="lazy">
+                                </div>
+                                <h5 class="fw-bold mb-1">Mr. Adam Williams</h5>
+                                <p class="text-warning mb-2">Country Director – UK & Europe</p>
+                                <p class="small mb-1"><strong>Email:</strong> <a href="mailto:uk@wishgroup.world" class="text-light text-decoration-none">uk@wishgroup.world</a></p>
+                                <p class="small mb-0"><strong>Contact:</strong> +44 7700 900123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
-            <h5 class="fw-bold mb-1">Mr. Ahmed Fairooz</h5>
-            <p class="text-warning mb-2">Deputy Director – Global Operations</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:chairman@wishgroup.ae" class="text-light text-decoration-none">fairooz@wishgroup.ae</a></p>
-            <p class="small mb-0"><strong>Contact:</strong> +971 52 555 9876</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Fathih Afeef -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Fathih Afeef" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/fathih.jpg" class="team-img" alt="Fathih Afeef" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Fathih Afeef</h5>
-            <p class="text-warning mb-2">Deputy Director – Project Development</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:ceo@wishgroup.ae" class="text-light text-decoration-none">zainab@wishgroup.ae</a></p>
-            <p class="small mb-0"><strong>Contact:</strong> +971 58 333 1122</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Safwan -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Safwan" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/safwan.jpg" class="team-img" alt="Safwan" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Safwan</h5>
-            <p class="text-warning mb-2">Director – Global Operations</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:ops@wishgroup.ae" class="text-light text-decoration-none">ops@wishgroup.ae</a></p>
-            <p class="small mb-0"><strong>Contact:</strong> +971 52 987 6543</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Afzal Khalid -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Afzal Khalid" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/afzal.jpg" class="team-img" alt="Afzal Khalid" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Afzal Khalid</h5>
-            <p class="text-warning mb-2">Director – Project Development</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:projects@wishgroup.ae" class="text-light text-decoration-none">projects@wishgroup.ae</a></p>
-            <p class="small mb-0"><strong>Contact:</strong> +971 56 000 1111</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Azmi Latheef -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Azmi Latheef" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/azmi.jpg" class="team-img" alt="Azmi Latheef" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Azmi Latheef</h5>
-            <p class="text-warning mb-2">Chief Financial Officer (CFO)</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:finance@wishgroup.ae" class="text-light text-decoration-none">finance@wishgroup.ae</a></p>
-            <p class="small mb-0"><strong>Contact:</strong> +971 58 111 2222</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Mubarak Younus -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Mubarak Younus" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/mubarak.jpg" class="team-img" alt="Mubarak Younus" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Mubarak Younus</h5>
-            <p class="text-warning mb-2">Director – International Trade</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:trade@wishgroup.ae" class="text-light text-decoration-none">trade@wishgroup.ae</a></p>
-            <p class="small mb-0"><strong>Contact:</strong> +971 50 999 8888</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Sabeena Shafir -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Sabeena Shafir" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/sabeena.jpg" class="team-img" alt="Sabeena Shafir" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Ms. Sabeena Shafir</h5>
-            <p class="text-warning mb-2">Director – Marketing & Branding</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:marketing@wishgroup.ae" class="text-light text-decoration-none">marketing@wishgroup.ae</a></p>
-            <p class="small mb-0"><strong>Contact:</strong> +971 54 444 5555</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Rameez Hassan -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Rameez Hassan" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/rameez.jpg" class="team-img" alt="Rameez Hassan" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Rameez Hassan</h5>
-            <p class="text-warning mb-2">Country Director – Sri Lanka</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:srilanka@wishgroup.world" class="text-light text-decoration-none">srilanka@wishgroup.world</a></p>
-            <p class="small mb-3"><strong>Contact:</strong> +94 77 123 4567</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Zaeem Imran -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Zaeem Imran" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/zaeem.jpg" class="team-img" alt="Zaeem Imran" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Zaeem Imran</h5>
-            <p class="text-warning mb-2">Country Director – Maldives</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:maldives@wishgroup.world" class="text-light text-decoration-none">maldives@wishgroup.world</a></p>
-            <p class="small mb-3"><strong>Contact:</strong> +960 778 1234</p>
-          </div>
-        </div>
-
-        <!-- Team Member: Adam Williams -->
-        <div class="swiper-slide">
-          <div class="team-card bg-dark-2 rounded-3 p-4 text-center h-100" role="article" aria-label="Profile of Adam Williams" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-            <div class="team-img-wrapper mb-3">
-              <img src="/images/team/adam.jpg" class="team-img" alt="Adam Williams" loading="lazy">
-            </div>
-            <h5 class="fw-bold mb-1">Mr. Adam Williams</h5>
-            <p class="text-warning mb-2">Country Director – UK & Europe</p>
-            <p class="small mb-1"><strong>Email:</strong> <a href="mailto:uk@wishgroup.world" class="text-light text-decoration-none">uk@wishgroup.world</a></p>
-            <p class="small mb-3"><strong>Contact:</strong> +44 7700 900123</p>
-          </div>
-        </div>
-      </div>
-      <!-- Swiper Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Swiper Navigation -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<!-- Vanilla Tilt JS (for card tilt effect) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-
-<!-- Swiper Initialization -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.teamSwiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      spaceBetween: 20,
-      slidesPerView: 1,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 25,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
-
-    // Pause autoplay on hover and touch
-    const swiperContainer = document.querySelector('.teamSwiper');
-    swiperContainer.addEventListener('mouseenter', () => {
-      swiper.autoplay.stop();
-    });
-    swiperContainer.addEventListener('mouseleave', () => {
-      swiper.autoplay.start();
-    });
-    swiperContainer.addEventListener('touchstart', () => {
-      swiper.autoplay.stop();
-    });
-    swiperContainer.addEventListener('touchend', () => {
-      swiper.autoplay.start();
-    });
-
-    // Initialize Vanilla Tilt for cards
-    VanillaTilt.init(document.querySelectorAll('.team-card'), {
-      max: 10,
-      speed: 400,
-      perspective: 1000,
-      glare: true,
-      'max-glare': 0.3,
-    });
-  });
-</script>
-
-<!-- Custom Styles -->
-<style>
-  .teamSwiper {
-    padding-bottom: 60px;
-  }
-
-  .team-card {
-    background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-  }
-
-  .team-img-wrapper {
-    position: relative;
-    width: 140px;
-    height: 140px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid transparent;
-    background: linear-gradient(45deg,#B30000, #B30000);
-    padding: 3px;
-  }
-
-  .team-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    background: #2a2a2a;
-  }
-
-  .team-card h5 {
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-  }
-
-  .team-card .text-warning {
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-
-  .team-card .small {
-    font-size: 0.85rem;
-    color: #cccccc;
-  }
-
-  .team-card a.btn {
-    font-size: 0.9rem;
-    border-radius: 25px;
-    padding: 0.4rem 1.5rem;
-    transition: all 0.3s ease;
-  }
-
-  .team-card a.btn:hover {
-    background: #B30000;
-    color: #1a1a1a;
-    border-color:#B30000;
-    transform: translateY(-2px);
-  }
-
-  .team-card a.text-light:hover {
-    color: #B30000 !important;
-  }
-
-  .swiper-pagination-bullet {
-    background: #ffffff;
-    opacity: 0.5;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: #B30000;
-    opacity: 1;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
-
-  .swiper-button-prev:hover,
-  .swiper-button-next:hover {
-    background: #B30000;
-    color: #1a1a1a;
-  }
-
-  @media (max-width: 768px) {
-    .team-img-wrapper {
-      width: 110px;
-      height: 110px;
-    }
-
-    .team-card h5 {
-      font-size: 1.15rem;
-    }
-
-    .team-card .text-warning {
-      font-size: 0.9rem;
-    }
-
-    .team-card .small {
-      font-size: 0.8rem;
-    }
-
-    .team-card a.btn {
-      font-size: 0.85rem;
-      padding: 0.3rem 1.2rem;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .teamSwiper {
-      padding-bottom: 50px;
-    }
-
-    .team-card {
-      padding: 1.5rem;
-    }
-  }
-</style>
+        </section>
 
         <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
-          <div class="container relative z-2">
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Wish Group</h2>
-                    <p class="lead wow fadeInUp" data-wow-delay=".6s">
-Wish Group, founded in 2000 in the UAE, is a Dubai-based global conglomerate in 7+ countries, uniting real estate, hospitality, seafood, trading, and capital ventures under its vision “One Capital World” to connect capital with compassion and shape futures.</p>
+            <div class="container relative z-2">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="wish_group">Wish Group</h2>
+                        <p class="lead wow fadeInUp" data-wow-delay=".6s" data-translate="about_text">Wish Group, founded in 2000 in the UAE, is a Dubai-based global conglomerate in 7+ countries, uniting real estate, hospitality, seafood, trading, and capital ventures under its vision “One Capital World” to connect capital with compassion and shape futures.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-sm-6">
+                        <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                    </div>
                 </div>
             </div>
-
-            <div class="row g-4">
-                <div class="col-sm-6">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-
-                <div class="col-sm-6">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-            </div>
-
-          </div>
         </section>
+
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo.jpeg" class="w-150px mb-3" alt="Wish Group Logo">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f" aria-label="Visit our Facebook page"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram" aria-label="Visit our Instagram page"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter" aria-label="Visit our Twitter page"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
+                        <p class="mb-0">Business Bay, Dubai</p>
+                        <p>United Arab Emirates</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="contact_us">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <span data-translate="copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <!-- footer begin -->
-<footer class="text-light section-dark pt-5">
-  <div class="container">
-    <div class="row g-4">
-
-      <!-- Logo & Social -->
-      <div class="col-sm-6 col-lg-3 text-center">
-        <img src="images\wishgroup\logo remove.png" class="w-150px mb-3" alt="">
-        <div class="social-icons mt-3">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-      </div>
-
-      <!-- Address -->
-      <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-        <h3 class="fs-20 mb-3">Address</h3>
-        <p class="mb-0">121 AI Blvd, San Francisco</p>
-        <p>BCA 94107</p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-        <h3 class="fs-20 mb-3">Quick Links</h3>
-        <ul class="list-unstyled mb-0">
-          <li><a href="#" class="text-light">Home</a></li>
-          <li><a href="about.html" class="text-light">About Us</a></li>
-          <li><a href="#" class="text-light">Divisions</a></li>
-          <li><a href="#" class="text-light">Projects</a></li>
-          <li><a href="#" class="text-light">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Us with Email -->
-      <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-        <h3 class="fs-20 mb-3">Contact Us</h3>
-        <p class="mb-1">T. <a href="tel:+1123456789" class="text-light">+971 4259 7167 </a></p>
-        <p class="mb-1">M. <a href="tel:+1987654321" class="text-light">+971 4259 4795</a></p>
-        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a>
-          <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">iinfo@wishgroup.world</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Subfooter -->
-  <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          Copyright 2025 - Wish Group.All rights reserved.
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-    <!-- footer end -->
-    
-    <!-- Javascript Files
-    ================================================== -->
+    <!-- Javascript Files -->
     <script src="js/vendors.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/countdown-custom.js"></script>
     <script src="js/custom-marquee.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const globeContainer = document.getElementById('business-globe');
-    if (!globeContainer) {
-        console.error('Globe container #business-globe not found');
-        return;
-    }
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="js/translations.js"></script>
 
-    const countries = [
-        { code: 'ARE', name: 'United Arab Emirates', lat: 24.4539, lng: 54.3773 },
-        { code: 'LKA', name: 'Sri Lanka', lat: 7.8731, lng: 80.7718 },
-        { code: 'MDV', name: 'Maldives', lat: 3.2028, lng: 73.2207 },
-        { code: 'MYS', name: 'Malaysia', lat: 4.2105, lng: 101.9758 },
-        { code: 'GHA', name: 'Ghana', lat: 7.9465, lng: -1.0232 },
-        { code: 'ZAF', name: 'South Africa', lat: -30.5595, lng: 22.9375 },
-        { code: 'GBR', name: 'United Kingdom', lat: 55.3781, lng: -3.4360 }
-    ];
+    <!-- Language Selector Styles -->
+    <style>
+        .language-selector {
+            position: relative;
+            display: inline-block;
+            z-index: 1000;
+        }
+        .language-selector .btn-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            min-width: 80px;
+        }
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 5px;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .language-dropdown a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        .language-dropdown a:hover {
+            background: #B30000;
+            color: #fff;
+        }
+        .language-dropdown a[data-lang="ar"],
+        .language-dropdown a[data-lang="dv"] {
+            text-align: right;
+            font-family: 'Arial', sans-serif;
+        }
+        .language-selector:hover .language-dropdown,
+        .language-selector:focus-within .language-dropdown {
+            display: block;
+        }
+        [dir="rtl"] {
+            direction: rtl;
+            text-align: right;
+        }
+        [dir="rtl"] .language-dropdown {
+            right: auto;
+            left: 0;
+        }
+        [dir="rtl"] .swiper-wrapper {
+            flex-direction: row-reverse;
+        }
+    </style>
 
-    const flagUrls = {
-        ARE: 'https://flagcdn.com/32x24/ae.png',
-        LKA: 'https://flagcdn.com/32x24/lk.png',
-        MDV: 'https://flagcdn.com/32x24/mv.png',
-        MYS: 'https://flagcdn.com/32x24/my.png',
-        GHA: 'https://flagcdn.com/32x24/gh.png',
-        ZAF: 'https://flagcdn.com/32x24/za.png',
-        GBR: 'https://flagcdn.com/32x24/gb.png'
-    };
+    <!-- Swiper Configuration and Language Selector Logic -->
+    <script>
+        // translations.js content inline for completeness
+        const translations = {
+            en: {
+                // Navigation
+                "home": "Home",
+                "about": "About Us",
+                "divisions": "Divisions",
+                "projects": "Projects",
+                "countries": "Countries",
+                "news": "News",
+                "policies": "Our Policies",
+                "career": "Career",
+                "contact": "Contact Us",
+                
+                // Hero Section
+                "decades": "Decades of Value and Victory",
+                "make_your_wish": "Make Your Wish",
+                "since": "Since 2000",
+                
+                // About Section
+                "wish_group": "Wish Group",
+                "about_text": "Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai's Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of 'One Capital World,' Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.",
+                "world_map": "Wish Group Around the World",
+                
+                // Projects
+                "latest_projects": "Latest Projects",
+                "wish_island_desc": "Luxury, tranquility & natural beauty in the Maldives.",
+                "wish_casa_desc": "Premium biscuits & juices with global standards.",
+                "prime_wish_desc": "UAE-based food manufacturing & export company.",
+                "wish_harbour_desc": "We don't just chase dreams — we hold your wish and turn it into reality.",
+                
+                // Team
+                "management_team": "GROUP MANAGEMENT TEAM",
+                "secondary_team": "SECONDARY MANAGEMENT TEAM",
+                
+                // Footer
+                "address": "Address",
+                "quick_links": "Quick Links",
+                "contact_us": "Contact Us",
+                "copyright": "Copyright 2025 - Wish Group. All rights reserved."
+            },
+            ar: {
+                // Navigation
+                "home": "الرئيسية",
+                "about": "من نحن",
+                "divisions": "أقسامنا",
+                "projects": "المشاريع",
+                "countries": "الدول",
+                "news": "الأخبار",
+                "policies": "سياساتنا",
+                "career": "الوظائف",
+                "contact": "اتصل بنا",
+                
+                // Hero Section
+                "decades": "عقود من القيمة والانتصار",
+                "make_your_wish": "احلم بتحقيق أمنيتك",
+                "since": "منذ عام 2000",
+                
+                // About Section
+                "wish_group": "مجموعة وِش",
+                "about_text": "تأسست مجموعة وِش في عام 2000 في الإمارات العربية المتحدة، وهي تكتل عالمي يقع مقره الرئيسي في منطقة الخليج التجاري في دبي. تعمل المجموعة في أكثر من 7 دول وتشمل قطاعات مثل العقارات والضيافة والمأكولات البحرية والتجارة واستثمارات رأس المال. بتوجيه من رؤية 'عاصمة عالم واحدة'، تربط مجموعة وِش رأس المال بالتعاطف من خلال التنمية المستدامة والشاملة والمبتكرة. تتمثل مهمتها الأساسية في تمكين الأشخاص وتشكيل المستقبل من خلال توحيد الاستثمار مع التأثير.",
+                "world_map": "مجموعة وِش حول العالم",
+                
+                // Projects
+                "latest_projects": "أحدث المشاريع",
+                "wish_island_desc": "الفخامة والهدوء والجمال الطبيعي في جزر المالديف.",
+                "wish_casa_desc": "بسكويت وعصائر عالية الجودة بمعايير عالمية.",
+                "prime_wish_desc": "شركة تصنيع وتصدير أغذية مقرها الإمارات.",
+                "wish_harbour_desc": "نحن لا نطارد الأحلام فقط - نحن نحقق أمنياتك.",
+                
+                // Team
+                "management_team": "فريق الإدارة العليا",
+                "secondary_team": "فريق الإدارة الثانوي",
+                
+                // Footer
+                "address": "العنوان",
+                "quick_links": "روابط سريعة",
+                "contact_us": "اتصل بنا",
+                "copyright": "حقوق النشر 2025 - مجموعة وِش. جميع الحقوق محفوظة."
+            },
+            fr: {
+                // Navigation
+                "home": "Accueil",
+                "about": "À propos",
+                "divisions": "Divisions",
+                "projects": "Projets",
+                "countries": "Pays",
+                "news": "Actualités",
+                "policies": "Nos politiques",
+                "career": "Carrière",
+                "contact": "Contactez-nous",
+                
+                // Hero Section
+                "decades": "Des décennies de valeur et de victoire",
+                "make_your_wish": "Faites un Vœu",
+                "since": "Depuis 2000",
+                
+                // About Section
+                "wish_group": "Groupe Wish",
+                "about_text": "Fondé en 2000 aux Émirats Arabes Unis, Wish Group est un conglomérat mondial dont le siège est situé à Business Bay à Dubaï. Opérant dans plus de 7 pays, il couvre des secteurs tels que l'immobilier, l'hôtellerie, les produits de la mer, le commerce et les investissements en capital. Guidé par la vision 'One Capital World', Wish Group connecte le capital avec compassion grâce à un développement durable, inclusif et innovant. Sa mission principale est d'autonomiser les personnes et de façonner les avenirs en unissant investissement et impact.",
+                "world_map": "Wish Group dans le monde",
+                
+                // Projects
+                "latest_projects": "Derniers projets",
+                "wish_island_desc": "Luxe, tranquillité et beauté naturelle aux Maldives.",
+                "wish_casa_desc": "Biscuits et jus premium aux normes mondiales.",
+                "prime_wish_desc": "Société de fabrication et d'exportation alimentaire basée aux Émirats.",
+                "wish_harbour_desc": "Nous ne poursuivons pas seulement les rêves - nous réalisons vos souhaits.",
+                
+                // Team
+                "management_team": "ÉQUIPE DE DIRECTION",
+                "secondary_team": "ÉQUIPE DE DIRECTION SECONDAIRE",
+                
+                // Footer
+                "address": "Adresse",
+                "quick_links": "Liens rapides",
+                "contact_us": "Contactez-nous",
+                "copyright": "Droits d'auteur 2025 - Groupe Wish. Tous droits réservés."
+            },
+            si: {
+                // Navigation
+                "home": "මුල් පිටුව",
+                "about": "අපි ගැන",
+                "divisions": "අංශ",
+                "projects": "ව්‍යාපෘති",
+                "countries": "රටවල්",
+                "news": "පුවත්",
+                "policies": "අපගේ ප්‍රතිපත්ති",
+                "career": "වෘත්තිය",
+                "contact": "අප අමතන්න",
+                
+                // Hero Section
+                "decades": "වටිනාකම හා ජයග්‍රහණයේ දශක",
+                "make_your_wish": "ඔබේ ආශාව සාක්ෂාත් කර ගන්න",
+                "since": "2000 සිට",
+                
+                // About Section
+                "wish_group": "විෂ් ගෲප්",
+                "about_text": "2000 දී එක්සත් අරාබි එමීර් රාජ්‍යයේ පිහිටුවන ලද විෂ් ගෲප්, ඩුබායිහි බිසිනස් බේ හි ප්‍රධාන කාර්යාලයක් ඇති ගෝලීය සමූහයකි. රටවල් 7කට වැඩි ගණනක ක්‍රියාත්මක වන එය රියල් එස්ටේට්, සංචාරක, මුහුදු ආහාර, වෙළඳාම සහ ප්‍රාග්ධන ආයෝජන වැනි ක්ෂේත්‍ර ආවරණය කරයි. 'එක් ප්‍රාග්ධන ලෝකය' යන දැක්මෙන් මෙහෙයවෙන විෂ් ගෲප්, තිරසාර, සම්බන්ධිත හා නවෝත්පාදන සංවර්ධනය හරහා ප්‍රාග්ධනය සහචේතනාව සම්බන්ධ කරයි. ආයෝජනය සහ බලපෑම එක්සත් කිරීමෙන් පුද්ගලයන් බලගැන්වීම සහ අනාගතය හැඩගැස්වීම එහි මූලික අරමුණයි.",
+                "world_map": "ලොව පුරා විෂ් ගෲප්",
+                
+                // Projects
+                "latest_projects": "නවතම ව්‍යාපෘති",
+                "wish_island_desc": "මාලදිවයිනේ විලාසිතාව, සන්සුන්තාව සහ ස්වාභාවික අලංකාරය.",
+                "wish_casa_desc": "ගෝලීය ප්‍රමිති සහිත විශේෂ බිස්කට් සහ යුෂ.",
+                "prime_wish_desc": "එක්සත් අරාබි එමීර් රාජ්‍යයේ පදනම් වූ ආහාර නිෂ්පාදන හා අපනයන සමාගම.",
+                "wish_harbour_desc": "අපි සිහිසුන්ව සිටිමු - ඔබේ ආශාව අපි සැබෑ කරමු.",
+                
+                // Team
+                "management_team": "කළමනාකරණ කණ්ඩායම",
+                "secondary_team": "ද්විතීය කළමනාකරණ කණ්ඩායම",
+                
+                // Footer
+                "address": "ලිපිනය",
+                "quick_links": "ක්ෂණික සබැඳි",
+                "contact_us": "අප අමතන්න",
+                "copyright": "ප්‍රකාශන සියලුම හිමිකම් ඇත 2025 - විෂ් ගෲප්."
+            },
+            dv: {
+                // Navigation
+                "home": "މައި ސަފްހާ",
+                "about": "އަހަރެންގެ ވަނަ",
+                "divisions": "ބައްޓަން",
+                "projects": "ޕްރޮޖެކްޓްތައް",
+                "countries": "ދިވެހިރާއްޖެ",
+                "news": "ޙަބަރު",
+                "policies":"އަހަރެންގެ ސިޔާސަތްތައް",
+                "career": "ކަރިއަރ",
+                "contact": "އަޅުގަނޑުމެންނާ ގުޅިގެން",
+                
+                // Hero Section
+                "decades": "މިނިވަންތަކާއި ފާހަގަތަކުގެ ދިހައި",
+                "make_your_wish": "ތިބާގެ އަމަލު ހަދައިގަންނަވާ",
+                "since": "2000 ވަނަ",
+                
+                // About Section
+                "wish_group": "ވިޝް ގްރޫޕް",
+                "about_text": "2000 ވަނަ އެމިރޭޓްސްގެ ތެރޭގައި ޤާއިމުކުރެވިފައިވާ ވިޝް ގްރޫޕް، ޑުބައިގެ ބިޒިނަސް ބޭ އަށް މުޅިން ޤާއިމުކުރެވިފައިވާ ޤައުމީ ކޮމްޕެނީއެއްކަން ކަމުގައިވާ އެއްޗެކެވެ. ރަށް 7 އަށްވުރެ އެއްވަރަށް ކަނޑުމަތީގައި އެކުލަވާލަނީ ރީއަލް އިސްޓޭޓް، ހޮޓެލް، މަސް މަސްވެރިކަމާއި ވިޔަފާރި، އަދި ރަށްގެ މުދަލުގެ ވިޔަފާރި ފަދަ ގޮތްތަކަށެވެ. 'އެކު ރަށްގެ މުދަލު ދުނިޔެ' އެއްގޮތުން މަގުބައިކޮށް، ވިޝް ގްރޫޕް މުދަލާއި ރަހުމަތް އެކުވެރިކޮށް ތަންފީޒު ކުރަނީ ދަތުރުވެރި، އެކުވެރިވާ އަދި އެހީތެރި އުފެއްދުންތެރިކަމާއެކުވެވަޑައިގަންނަވަނީއެވެ. އެގެ މުހިއްމު މަސައްކަތަކީ މުދަލާއި ތަފާތު އެކުވެރިކޮށް މީހުންނަށް ބާރުދެއްވުމާއި ދެން ހަމަޖެހުމަށް ފުރުސަތު ދެވޭނެކަމަށެވެ.",
+                "world_map": "ދުނިޔެއިން ވިޝް ގްރޫޕް",
+                
+                // Projects
+                "latest_projects": "އާންމު ޕްރޮޖެކްޓްތައް",
+                "wish_island_desc": "މޯލްޑިވްސްގައި ލަގުވަތް، ހަމަކަށަވަރާއި ސުވަރުންގެ ޞަފާ.",
+                "wish_casa_desc": "ދުނިޔޭގެ މައިގަނޑުގައި ނަގައިގެން ދިޔަ ބިސްކެޓްތައް އަދި ޖޫސް.",
+                "prime_wish_desc": "އެމިރޭޓްސްގެ ތެރޭގައި ޤާއިމުކުރެވިފައިވާ ކަންފަތްތައް އަދި ވިޔަފާރި ކުރާ ކޮމްޕެނީ.",
+                "wish_harbour_desc": "އަހަރެން ހަމަޖެހުނީ ތިބާގެ އަމަލު ހަދައިގަންނަވާނެ ގޮތަށް.",
+                
+                // Team
+                "management_team": "މެނޭޖްމަންޓް ޓީމް",
+                "secondary_team": "ސެކަންޑަރީ މެނޭޖްމަންޓް ޓީމް",
+                
+                // Footer
+                "address": "ތަރުކީގައި",
+                "quick_links": "އަވަސް ލިންކްތައް",
+                "contact_us": "އަޅުގަނޑުމެންނާ ގުޅިގެން",
+                "copyright": "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ޙައްޤު ދަންނަވާނެ."
+            }
+        };
 
-    // Custom page mappings for specific countries
-    const countryPageMap = {
-        LKA: 'srilanka.html', // Map LKA to srilanka.html
-        ARE: 'are.html',
-        MDV: 'mdv.html',
-        MYS: 'mys.html',
-        GHA: 'gha.html',
-        ZAF: 'zaf.html',
-        GBR: 'gbr.html'
-    };
+        let myProjectSlider, mySwiper, teamSwiper;
 
-    const globe = Globe()
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .backgroundColor('#000000')
-        .pointOfView({ lat: 0, lng: 0, altitude: 2.5 }, 0)
-        .htmlElementsData(countries)
-        .htmlLat('lat')
-        .htmlLng('lng')
-        .htmlElement(country => {
-            const el = document.createElement('img');
-            el.src = flagUrls[country.code] || 'https://flagcdn.com/32x24/xx.png';
-            el.alt = `Flag of ${country.name}`;
-            el.style.width = '32px';
-            el.style.height = '24px';
-            el.style.cursor = 'pointer';
-            el.style.transform = 'translate(-50%, -100%)';
-            el.title = country.name;
-            el.setAttribute('role', 'button');
-            el.setAttribute('aria-label', `Navi         gate to ${country.name} page`);
+        function initSliders() {
+            myProjectSlider = new Swiper('.myProjectSlider', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
+                    1200: { slidesPerView: 4 }
+                }
+            });
 
-            // Handle image load error
-            el.onerror = () => {
-                el.src = 'https://flagcdn.com/32x24/xx.png';
-                console.warn(`Failed to load flag for ${country.name}`);
+            mySwiper = new Swiper(".mySwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                spaceBetween: 30,
+                slidesPerView: 1,
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                }
+            });
+
+            teamSwiper = new Swiper('.teamSwiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                spaceBetween: 20,
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2, spaceBetween: 25 },
+                    1024: { slidesPerView: 3, spaceBetween: 30 }
+                }
+            });
+
+            const teamSwiperContainer = document.querySelector('.teamSwiper');
+            teamSwiperContainer.addEventListener('mouseenter', () => {
+                teamSwiper.autoplay.stop();
+            });
+            teamSwiperContainer.addEventListener('mouseleave', () => {
+                teamSwiper.autoplay.start();
+            });
+            teamSwiperContainer.addEventListener('touchstart', () => {
+                teamSwiper.autoplay.stop();
+            });
+            teamSwiperContainer.addEventListener('touchend', () => {
+                teamSwiper.autoplay.start();
+            });
+
+            VanillaTilt.init(document.querySelectorAll('.team-card'), {
+                max: 10,
+                speed: 400,
+                perspective: 1000,
+                glare: true,
+                'max-glare': 0.3
+            });
+        }
+
+        // Globe Configuration
+        function initGlobe() {
+            const globeContainer = document.getElementById('business-globe');
+            if (!globeContainer) {
+                console.error('Globe container #business-globe not found');
+                return;
+            }
+
+            const countries = [
+                { code: 'ARE', name: 'United Arab Emirates', lat: 24.4539, lng: 54.3773 },
+                { code: 'LKA', name: 'Sri Lanka', lat: 7.8731, lng: 80.7718 },
+                { code: 'MDV', name: 'Maldives', lat: 3.2028, lng: 73.2207 },
+                { code: 'MYS', name: 'Malaysia', lat: 4.2105, lng: 101.9758 },
+                { code: 'GHA', name: 'Ghana', lat: 7.9465, lng: -1.0232 },
+                { code: 'ZAF', name: 'South Africa', lat: -30.5595, lng: 22.9375 },
+                { code: 'GBR', name: 'United Kingdom', lat: 55.3781, lng: -3.4360 }
+            ];
+
+            const flagUrls = {
+                ARE: 'https://flagcdn.com/32x24/ae.png',
+                LKA: 'https://flagcdn.com/32x24/lk.png',
+                MDV: 'https://flagcdn.com/32x24/mv.png',
+                MYS: 'https://flagcdn.com/32x24/my.png',
+                GHA: 'https://flagcdn.com/32x24/gh.png',
+                ZAF: 'https://flagcdn.com/32x24/za.png',
+                GBR: 'https://flagcdn.com/32x24/gb.png'
             };
 
-            // Click event
-           el.addEventListener('click', e => {
-    e.stopPropagation();
-    const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
-    try {
-        window.location.href = pageUrl;
-    } catch (err) {
-        console.error(`Navigation to ${pageUrl} failed: ${err.message}`);
-    }
-});
+            const countryPageMap = {
+                LKA: 'srilanka.html',
+                ARE: 'are.html',
+                MDV: 'mdv.html',
+                MYS: 'mys.html',
+                GHA: 'gha.html',
+                ZAF: 'zaf.html',
+                GBR: 'gbr.html'
+            };
 
-            // Keyboard accessibility
-          el.tabIndex = 0;
-el.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        e.stopPropagation();
-        const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
-        window.location.href = pageUrl;
-    }
-});
+            const globe = Globe()
+                .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+                .backgroundColor('#000000')
+                .pointOfView({ lat: 0, lng: 0, altitude: 2.5 }, 0)
+                .htmlElementsData(countries)
+                .htmlLat('lat')
+                .htmlLng('lng')
+                .htmlElement(country => {
+                    const el = document.createElement('img');
+                    el.src = flagUrls[country.code] || 'https://flagcdn.com/32x24/xx.png';
+                    el.alt = `Flag of ${country.name}`;
+                    el.style.width = '32px';
+                    el.style.height = '24px';
+                    el.style.cursor = 'pointer';
+                    el.style.transform = 'translate(-50%, -100%)';
+                    el.title = country.name;
+                    el.setAttribute('role', 'button');
+                    el.setAttribute('aria-label', `Navigate to ${country.name} page`);
 
-            return el;
-        })
-        (globeContainer);
+                    el.onerror = () => {
+                        el.src = 'https://flagcdn.com/32x24/xx.png';
+                        console.warn(`Failed to load flag for ${country.name}`);
+                    };
 
-    globe.controls().autoRotate = true;
-    globe.controls().autoRotateSpeed = 1;
+                    el.addEventListener('click', e => {
+                        e.stopPropagation();
+                        const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
+                        try {
+                            window.location.href = pageUrl;
+                        } catch (err) {
+                            console.error(`Navigation to ${pageUrl} failed: ${err.message}`);
+                        }
+                    });
 
-    // Pause rotation on hover
-    globeContainer.addEventListener('mouseenter', () => {
-        globe.controls().autoRotate = false;
-    });
-    globeContainer.addEventListener('mouseleave', () => {
-        globe.controls().autoRotate = true;
-    });
+                    el.tabIndex = 0;
+                    el.addEventListener('keydown', e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
+                            window.location.href = pageUrl;
+                        }
+                    });
 
-    // Handle window resizing
-    function resizeGlobe() {
-        globe.width(globeContainer.offsetWidth);
-        globe.height(globeContainer.offsetHeight);
-    }
-    resizeGlobe();
-    window.addEventListener('resize', resizeGlobe);
-});
-</script>
+                    return el;
+                })
+                (globeContainer);
+
+            globe.controls().autoRotate = true;
+            globe.controls().autoRotateSpeed = 1;
+
+            globeContainer.addEventListener('mouseenter', () => {
+                globe.controls().autoRotate = false;
+            });
+            globeContainer.addEventListener('mouseleave', () => {
+                globe.controls().autoRotate = true;
+            });
+
+            function resizeGlobe() {
+                globe.width(globeContainer.offsetWidth);
+                globe.height(globeContainer.offsetHeight);
+            }
+            resizeGlobe();
+            window.addEventListener('resize', resizeGlobe);
+        }
+
+        // Language Selector Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageToggle = document.getElementById('language-toggle');
+            const languageDropdown = document.querySelector('.language-dropdown');
+
+            if (!languageToggle || !languageDropdown) {
+                console.error('Language toggle or dropdown not found');
+                return;
+            }
+
+            // Toggle dropdown on click
+            languageToggle.addEventListener('click', () => {
+                languageDropdown.style.display = languageDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
+                    languageDropdown.style.display = 'none';
+                }
+            });
+
+            // Language selection
+            document.querySelectorAll('.language-dropdown a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    console.log(`Switching to language: ${lang}`);
+                    setLanguage(lang);
+                    languageDropdown.style.display = 'none';
+                });
+            });
+
+            initSliders();
+            initGlobe();
+            initLanguage();
+        });
+
+        function translatePage(lang) {
+            if (!translations[lang]) {
+                console.error(`Language ${lang} not found in translations object`);
+                return;
+            }
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                } else {
+                    console.warn(`Translation key ${key} not found for language ${lang}`);
+                }
+            });
+
+            // Update RTL/LTR direction
+            const isRtl = (lang === 'ar' || lang === 'dv');
+            document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
+            if (isRtl) {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+
+            // Update sliders for RTL
+            [myProjectSlider, mySwiper, teamSwiper].forEach(swiperInstance => {
+                if (swiperInstance) {
+                    swiperInstance.changeLanguageDirection(isRtl ? 'rtl' : 'ltr');
+                    swiperInstance.update();
+                }
+            });
+
+            // Update language toggle button
+            const langToggle = document.getElementById('language-toggle');
+            if (langToggle) {
+                langToggle.querySelector('span').textContent = lang.toUpperCase();
+            }
+        }
+
+        function initLanguage() {
+            let savedLang = 'en';
+            try {
+                savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            } catch (e) {
+                console.warn('localStorage is not available, defaulting to English');
+            }
+            console.log(`Initializing with language: ${savedLang}`);
+            setLanguage(savedLang);
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem('selectedLanguage', lang);
+            translatePage(lang);
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        .project-box {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            height: 100%;
+            color: #fff;
+            text-align: left;
+        }
+        .project-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .swiper-slide {
+            height: auto !important;
+        }
+        .teamSwiper {
+            padding-bottom: 60px;
+        }
+        .team-card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .team-img-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #B30000, #B30000);
+            padding: 3px;
+        }
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background: #2a2a2a;
+        }
+        .team-card h5 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .team-card .text-warning {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .team-card .small {
+            font-size: 0.85rem;
+            color: #cccccc;
+        }
+        .team-card a.btn {
+            font-size: 0.9rem;
+            border-radius: 25px;
+            padding: 0.4rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .team-card a.btn:hover {
+            background: #B30000;
+            color: #1a1a1a;
+            border-color: #B30000;
+            transform: translateY(-2px);
+        }
+        .team-card a.text-light:hover {
+            color: #B30000 !important;
+        }
+        .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            background: #B30000;
+            opacity: 1;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background: #B30000;
+            color: #1a1a1a;
+        }
+        @media (max-width: 768px) {
+            .team-img-wrapper {
+                width: 110px;
+                height: 110px;
+            }
+            .team-card h5 {
+                font-size: 1.15rem;
+            }
+            .team-card .text-warning {
+                font-size: 0.9rem;
+            }
+            .team-card .small {
+                font-size: 0.8rem;
+            }
+            .team-card a.btn {
+                font-size: 0.85rem;
+                padding: 0.3rem 1.2rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .teamSwiper {
+                padding-bottom: 50px;
+            }
+            .team-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </body>
-
 </html>

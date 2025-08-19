@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Wish Group - Global Presence</title>
+    <title data-translate="page_title">Wish Group</title>
     <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,210 +13,56 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!-- color scheme -->
+    <!-- Color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
     <style>
-        /* Map Section Styles */
-        .map-hero-section {
-            position: relative;
-            height: 80vh;
-            min-height: 600px;
-            overflow: hidden;
-            margin-top: 0;
+        /* Language switcher styling */
+        #language-switcher {
+            background: #1a1a1a;
+            color: #fff;
+            border: 1px solid rgba(201, 160, 47, 0.3);
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-        
-        #world-map-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
+
+        #language-switcher:hover {
+            border-color: #c9a02f;
         }
-        
-        #world-map {
-            width: 100%;
-            height: 100%;
-            background-color: #0a0a0a;
+
+        #language-switcher:focus {
+            outline: none;
+            border-color: #c9a02f;
         }
-        
-        .map-overlay-content {
-            position: absolute;
-            bottom: 50px;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 0 20px;
-            box-sizing: border-box;
+
+        /* RTL support */
+        body[lang="ar"], body[lang="dv"] {
+            direction: rtl;
+            text-align: right;
         }
-        
-        .map-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: white;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-            margin-bottom: 15px;
-            line-height: 1.2;
+
+        body[lang="ar"] .text-center, body[lang="dv"] .text-center {
+            text-align: center !important;
         }
-        
-        .map-subtitle {
-            font-size: 1.3rem;
-            color: rgba(255,255,255,0.9);
-            max-width: 600px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-            margin-bottom: 30px;
+
+        body[lang="ar"] .de-flex-col.header-col-mid, body[lang="dv"] .de-flex-col.header-col-mid {
+            direction: ltr;
         }
-        
-        .locations-counter {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            background: rgba(0,0,0,0.8);
-            padding: 12px 25px;
-            border-radius: 30px;
-            z-index: 1000;
-            border: 1px solid rgba(255,77,77,0.3);
-            backdrop-filter: blur(5px);
-            color: white;
-            font-size: 1.1rem;
-        }
-        
-        .locations-counter span {
-            font-weight: bold;
-            color: #ff4d4d;
-        }
-        
-        /* Custom Marker Style */
-        .map-marker-icon {
-            background: #ff4d4d;
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            border: 3px solid white;
-            box-shadow: 0 0 20px rgba(255,77,77,0.9);
+
+        body[lang="ar"] #mainmenu, body[lang="dv"] #mainmenu {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            flex-direction: row-reverse;
         }
-        
-        .map-marker-icon:after {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-        }
-        
-        .map-marker-icon.pulse:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,77,77,0.5);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-            z-index: -1;
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(2.5);
-                opacity: 0;
-            }
-        }
-        
-        /* Popup Styling */
-        .leaflet-popup-content {
-            background: rgba(5,5,5,0.95);
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.7);
-            border: 1px solid rgba(255,77,77,0.3);
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        
-        .leaflet-popup-content-wrapper {
-            background: transparent;
-            box-shadow: none;
-            border-radius: 0;
-        }
-        
-        .leaflet-popup-tip {
-            background: rgba(5,5,5,0.95);
-            border: 1px solid rgba(255,77,77,0.3);
-        }
-        
-        /* Darker map tiles */
-        .leaflet-tile {
-            filter: brightness(0.6) contrast(1.2) saturate(0.8);
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .map-title {
-                font-size: 2.8rem;
-            }
-            
-            .map-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .map-hero-section {
-                height: 70vh;
-                min-height: 500px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .map-title {
-                font-size: 2.2rem;
-            }
-            
-            .map-subtitle {
-                font-size: 1rem;
-                max-width: 100%;
-            }
-            
-            .map-hero-section {
-                height: 60vh;
-                min-height: 400px;
-            }
-            
-            .locations-counter {
-                top: 15px;
-                right: 15px;
-                padding: 8px 15px;
-                font-size: 0.9rem;
-            }
-            
-            .map-marker-icon {
-                width: 18px;
-                height: 18px;
-                border-width: 2px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .map-title {
-                font-size: 1.8rem;
-            }
-            
-            .map-hero-section {
-                height: 55vh;
-                min-height: 350px;
-            }
-            
-            .map-overlay-content {
-                bottom: 30px;
-            }
+
+        body[lang="ar"] #mainmenu ul, body[lang="dv"] #mainmenu ul {
+            direction: ltr;
         }
     </style>
 </head>
@@ -226,7 +72,7 @@
     <div id="wrapper">
 
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -234,14 +80,13 @@
         <div id="de-loader"></div>
         <!-- page preloader close -->
 
-        <!-- Original Header (unchanged) -->
+        <!-- Header -->
         <header class="transparent">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="de-flex">
                             <div class="de-flex-col">
-                                <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
                                         <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
@@ -249,35 +94,32 @@
                                         <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
                                     </a>
                                 </div>
-                                <!-- logo close -->
                             </div>
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
-                                            <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a class="menu-item" href="index.html" data-translate="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_career">Career</a></li>
+                                        <li><a class="menu-item" href="contact.html" data-translate="menu_contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <select id="language-switcher" onchange="setLanguage(this.value)">
+                                    <option value="en" selected>EN</option>
+                                    <option value="ar">AR</option>
+                                    <option value="fr">FR</option>
+                                    <option value="si">SI</option>
+                                    <option value="dv">DV</option>
+                                </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -288,27 +130,432 @@
             </div>
         </header>
 
-        <!-- Map as First Section - now full width -->
+        <!-- Map Section -->
         <section class="map-hero-section">
             <div id="world-map-container">
-                <div class="locations-counter">
-                    Operating in <span>7</span> countries worldwide
+                <div class="locations-counter" data-translate="locations_counter">
+                    Operating in <span data-translate="locations_count">7</span> countries worldwide
                 </div>
                 <div id="world-map"></div>
-                <div class="container">
-                    <div class="map-overlay-content">
-                        <h1 class="map-title">Our Global Presence</h1>
-                        <p class="map-subtitle">Wish Group operates across multiple continents, delivering excellence through our strategically located offices and operations worldwide</p>
+            </div>
+        </section>
+
+        <!-- Flags Section -->
+        <section class="flags-section">
+            <div class="flags-container">
+                <h2 class="flags-title" data-translate="flags_title">Countries</h2>
+                <div class="flags-grid">
+                    <div class="flag-item" data-country="uae">
+                        <img src="https://flagcdn.com/w160/ae.png" alt="UAE Flag" class="country-flag">
+                    </div>
+                    <div class="flag-item" data-country="sri-lanka">
+                        <img src="https://flagcdn.com/w160/lk.png" alt="Sri Lanka Flag" class="country-flag">
+                    </div>
+                    <div class="flag-item" data-country="maldives">
+                        <img src="https://flagcdn.com/w160/mv.png" alt="Maldives Flag" class="country-flag">
+                    </div>
+                    <div class="flag-item" data-country="malaysia">
+                        <img src="https://flagcdn.com/w160/my.png" alt="Malaysia Flag" class="country-flag">
+                    </div>
+                    <div class="flag-item" data-country="ghana">
+                        <img src="https://flagcdn.com/w160/gh.png" alt="Ghana Flag" class="country-flag">
+                    </div>
+                    <div class="flag-item" data-country="south-africa">
+                        <img src="https://flagcdn.com/w160/za.png" alt="South Africa Flag" class="country-flag">
+                    </div>
+                    <div class="flag-item" data-country="uk">
+                        <img src="https://flagcdn.com/w160/gb.png" alt="UK Flag" class="country-flag">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Original Footer (unchanged) -->
+        <!-- Companies by Country Section -->
+        <section class="companies-section">
+            <div class="container">
+                <h2 class="text-center mb-4" data-translate="companies_title">Our Companies Across the Globe</h2>
+
+                <!-- Country Filters -->
+              <div class="country-filters text-center mb-4">
+    <button class="filter-btn active" data-country="all" data-translate="filter_all">All</button>
+    <button class="filter-btn" data-country="uae" data-translate="filter_uae">UAE</button>
+    <button class="filter-btn" data-country="sri-lanka" data-translate="filter_srilanka">Sri Lanka</button>
+    <button class="filter-btn" data-country="maldives" data-translate="filter_maldives">Maldives</button>
+    <button class="filter-btn" data-country="malaysia" data-translate="filter_malaysia">Malaysia</button>
+    <button class="filter-btn" data-country="ghana" data-translate="filter_ghana">Ghana</button>
+    <button class="filter-btn" data-country="south-africa" data-translate="filter_southafrica">South Africa</button>
+    <button class="filter-btn" data-country="uk" data-translate="filter_uk">UK</button>
+</div>
+
+                <div class="row g-4">
+                    <!-- UAE -->
+                    <div class="col-12 col-md-6 col-lg-4 country-box uae">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_uae">UAE</h4>
+                            <div class="company-card">
+                                <img src="/images/wishgroup/logo.jpeg" alt="Wish Properties" class="company-logo">
+                                <div class="company-details">
+                                    <h6 data-translate="country_uae">United Arab Emirates (UAE)</h6>
+                                    <h4 class="company-name" data-translate="company_wish_group_llc_name">WISH GROUP L.L.C</h4>
+                                    <p class="company-industry" data-translate="company_wish_group_llc_info">
+                                        Type: Main Investment Company of Group<br>
+                                        Activity: Project and Trading
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box uae">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_uae">UAE</h4>
+                            <div class="company-card">
+                                <img src="/images/wishgroup/logo.jpeg" alt="Wish Properties" class="company-logo">
+                                <div class="company-details">
+                                    <h6 data-translate="country_uae">United Arab Emirates (UAE)</h6>
+                                    <h4 class="company-name" data-translate="company_al_lincamo_name">AL LINCAMO INTERNATIONAL FZC</h4>
+                                    <p class="company-industry" data-translate="company_al_lincamo_info">
+                                        Type: General Trading Company<br>
+                                        Activity: Sugar / Garments / Foods
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box uae">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_uae">UAE</h4>
+                            <div class="company-card">
+                                <img src="/images/wishgroup/logo.jpeg" alt="Wish Properties" class="company-logo">
+                                <div class="company-details">
+                                    <h6 data-translate="country_uae">United Arab Emirates (UAE)</h6>
+                                    <h4 class="company-name" data-translate="company_prime_wish_trading_name">PRIME WISH TRADING L.L.C</h4>
+                                    <p class="company-industry" data-translate="company_prime_wish_trading_info">
+                                        Type: General Trading Company<br>
+                                        Activity: Prawn / Tuna / Sprats
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box uae">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_uae">UAE</h4>
+                            <div class="company-card">
+                                <img src="/images/wishgroup/logo.jpeg" alt="Wish Properties" class="company-logo">
+                                <div class="company-details">
+                                    <h6 data-translate="country_uae">United Arab Emirates (UAE)</h6>
+                                    <h4 class="company-name" data-translate="company_wish_real_estate_name">WISH REAL ESTATE DEVELOPER L.L.C</h4>
+                                    <p class="company-industry" data-translate="company_wish_real_estate_info">
+                                        Type: Real Estate and Property Development Company<br>
+                                        Activity: Villas and Apartments
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Sri Lanka Co" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_lanka_name">Wish Lanka Pvt Ltd</h5>
+                                    <p class="company-industry" data-translate="company_wish_lanka_info">
+                                        Type: Subsidiary<br>
+                                        Activity: Trading & Projects
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="World Investment Sources Holdings Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_world_investment_sources_name">WORLD INVESTMENT SOURCES HOLDINGS LTD</h5>
+                                    <p class="company-industry" data-translate="company_world_investment_sources_info">
+                                        Type: Main Investment Company of Group<br>
+                                        Activity: Project and Trading
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Prime Wish (Pvt) Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_prime_wish_pvt_name">PRIME WISH (PVT) LTD</h5>
+                                    <p class="company-industry" data-translate="company_prime_wish_pvt_info">
+                                        Type: Manufacturing and Trading Company<br>
+                                        Activity: Prawn / Tuna / Fish
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Wish Capital (Pvt) Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_capital_srilanka_name">WISH CAPITAL (PVT) LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_capital_srilanka_info">
+                                        Type: Investment and Trading Company<br>
+                                        Activity: Finance Market and Instruments
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Wish Hospitality Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_hospitality_name">WISH HOSPITALITY LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_hospitality_info">
+                                        Type: Hospitality and Tourism Company<br>
+                                        Activity: Hotel and Tourism
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Wish Brands (Pvt) Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_brands_name">WISH BRANDS (PVT) LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_brands_info">
+                                        Type: Manufacturing and Trading Company<br>
+                                        Activity: Biscuit and Juice
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="World Capital Centre Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_world_capital_centre_name">WORLD CAPITAL CENTRE LTD</h5>
+                                    <p class="company-industry" data-translate="company_world_capital_centre_info">
+                                        Type: Real Estate and Property Development Company<br>
+                                        Activity: Mix Development Projects
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Arena Blue Hotel and Resort Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_arena_blue_name">ARENA BLUE HOTEL AND RESORT LTD</h5>
+                                    <p class="company-industry" data-translate="company_arena_blue_info">
+                                        Type: Hospitality and Resort Company<br>
+                                        Activity: Hotel and Resorts
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="The One Apparels Corporation Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_one_apparels_name">THE ONE APPARELS CORPORATION LTD</h5>
+                                    <p class="company-industry" data-translate="company_one_apparels_info">
+                                        Type: Manufacturing and Trading Company<br>
+                                        Activity: Apparel and Textiles
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Wish HR Consultancy (Pvt) Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_hr_name">WISH HR CONSULTANCY (PVT) LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_hr_info">
+                                        Type: Consultancy and Professional Services Company<br>
+                                        Activity: Professional Services
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Wish Roamer (Pvt) Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_roamer_name">WISH ROAMER (PVT) LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_roamer_info">
+                                        Type: Travel and Tourism Company<br>
+                                        Activity: Travel and Tourism
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box sri-lanka">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_srilanka">Sri Lanka</h4>
+                            <div class="company-card">
+                                <img src="/images/srilanka/logo.jpeg" alt="Wish Media Corporation Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_media_name">WISH MEDIA CORPORATION LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_media_info">
+                                        Type: Media and Entertainment Company<br>
+                                        Activity: Media and Entertainment
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maldives -->
+                    <div class="col-12 col-md-6 col-lg-4 country-box maldives">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_maldives">Maldives</h4>
+                            <div class="company-card">
+                                <img src="/images/maldives/logo.jpeg" alt="World Capital Centre Pvt Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_world_capital_centre_maldives_name">WORLD CAPITAL CENTRE PVT LTD</h5>
+                                    <p class="company-industry" data-translate="company_world_capital_centre_maldives_info">
+                                        Type: Hospitality and Resort Company<br>
+                                        Activity: Hotel and Resorts
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box maldives">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_maldives">Maldives</h4>
+                            <div class="company-card">
+                                <img src="/images/maldives/logo.jpeg" alt="Wish Hospitality Pvt Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_hospitality_maldives_name">WISH HOSPITALITY PVT LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_hospitality_maldives_info">
+                                        Type: Hospitality and Tourism Company<br>
+                                        Activity: Hotel and Tourism
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 country-box maldives">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_maldives">Maldives</h4>
+                            <div class="company-card">
+                                <img src="/images/maldives/logo.jpeg" alt="Wish Holdings Pvt Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_holdings_name">WISH HOLDINGS PVT LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_holdings_info">
+                                        Type: Manufacturing and Trading Company<br>
+                                        Activity: Prawn / Tuna / Fish
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Malaysia -->
+                    <div class="col-12 col-md-6 col-lg-4 country-box malaysia">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_malaysia">Malaysia</h4>
+                            <div class="company-card">
+                                <img src="/images/malaysia/logo.jpeg" alt="World Capital Centre Sdn Bhd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_world_capital_centre_malaysia_name">WORLD CAPITAL CENTRE SDN BHD</h5>
+                                    <p class="company-industry" data-translate="company_world_capital_centre_malaysia_info">
+                                        Type: Real Estate and Property Development Company<br>
+                                        Activity: Mix Development Projects
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ghana -->
+                    <div class="col-12 col-md-6 col-lg-4 country-box ghana">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_ghana">Ghana</h4>
+                            <div class="company-card">
+                                <img src="/images/ghana/logo.jpeg" alt="Wish Capital (Pvt) Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_capital_ghana_name">WISH CAPITAL (PVT) LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_capital_ghana_info">
+                                        Type: Manufacturing and Trading Company<br>
+                                        Activity: Cashew / Gold / Energy
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- South Africa -->
+                    <div class="col-12 col-md-6 col-lg-4 country-box south-africa">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_southafrica">South Africa</h4>
+                            <div class="company-card">
+                                <img src="/images/southafrica/logo.jpeg" alt="Wish Capital (Pvt) Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_wish_capital_southafrica_name">WISH CAPITAL (PVT) LTD</h5>
+                                    <p class="company-industry" data-translate="company_wish_capital_southafrica_info">
+                                        Type: Manufacturing and Trading Company<br>
+                                        Activity: Fruit / Spices / Fertilizer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UK -->
+                    <div class="col-12 col-md-6 col-lg-4 country-box uk">
+                        <div class="country-group h-100">
+                            <h4 class="country-title" data-translate="country_uk">UK</h4>
+                            <div class="company-card">
+                                <img src="/images/uk/logo.jpeg" alt="World Capital Centre Ltd" class="company-logo">
+                                <div class="company-details">
+                                    <h5 class="company-name" data-translate="company_world_capital_centre_uk_name">WORLD CAPITAL CENTRE LTD</h5>
+                                    <p class="company-industry" data-translate="company_world_capital_centre_uk_info">
+                                        Type: Real Estate and Property Development Company<br>
+                                        Activity: Mix Development Projects
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="text-light section-dark pt-5">
             <div class="container">
                 <div class="row g-4">
-                    <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
                         <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
                         <div class="social-icons mt-3">
@@ -319,42 +566,38 @@
                         </div>
                     </div>
 
-                    <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">Address</h3>
+                        <p class="mb-0" data-translate="footer_address_line1">121 AI Blvd, San Francisco</p>
+                        <p data-translate="footer_address_line2">BCA 94107</p>
                     </div>
 
-                    <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-translate="footer_quick_links_title">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="menu_about">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_contact">Contact Us</a></li>
                         </ul>
                     </div>
 
-                    <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_phone_1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1" data-translate="footer_phone_2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0" data-translate="footer_email_1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0" data-translate="footer_email_2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
 
-            <!-- Subfooter -->
             <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -365,126 +608,519 @@
     <!-- Javascript Files -->
     <script src="js/vendors.js"></script>
     <script src="js/designesia.js"></script>
+    <script src="js/validation-contact.js"></script>
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    
+
+    <!-- Translation Data and Logic -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize the map with enhanced settings
-        const map = L.map('world-map', {
-            minZoom: 2,
-            maxZoom: 6,
-            zoomControl: false,
-            tap: false,
-            touchZoom: true,
-            scrollWheelZoom: false,
-            fadeAnimation: true,
-            zoomAnimation: true
-        }).setView([20, 0], 2);
-
-        // Add ultra-dark tile layer
-        const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            subdomains: 'abcd',
-            maxZoom: 6
-        }).addTo(map);
-
-        // Apply additional darkening filter
-        darkTiles.getContainer().style.filter = 'brightness(0.5) contrast(1.3) saturate(0.7)';
-        
-        // Add custom overlay for colored regions
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
-            maxZoom: 6
-        }).addTo(map);
-
-        // Mobile detection
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        
-        // Add zoom control with custom position
-        L.control.zoom({
-            position: isMobile ? 'bottomright' : 'topright'
-        }).addTo(map);
-
-        // Enhanced marker icon with pulse effect
-        const markerIcon = L.divIcon({
-            className: 'map-marker-icon pulse',
-            iconSize: isMobile ? [20, 20] : [24, 24]
-        });
-
-        // Corrected locations with proper coordinates and enhanced descriptions
-        const locations = [
-            {
-                name: "United Arab Emirates",
-                coords: [23.4241, 53.8478],
-                description: "<strong>Middle East Headquarters</strong><br>Our central hub for regional operations and strategic initiatives"
+        const translations = {
+            en: {
+                page_title: "Wish Group",
+                scroll_to_top: "Scroll to top",
+                menu_home: "Home",
+                menu_about: "About Us",
+                menu_divisions: "Divisions",
+                menu_projects: "Projects",
+                menu_countries: "Countries",
+                menu_news: "News",
+                menu_policies: "Our Policies",
+                menu_career: "Career",
+                menu_contact: "Contact",
+                locations_counter: "Operating in <span data-translate='locations_count'>7</span> countries worldwide",
+                locations_count: "7",
+                flags_title: "Countries",
+                companies_title: "Our Companies Across the Globe",
+                filter_all: "All",
+                filter_uae: "UAE",
+                filter_srilanka: "Sri Lanka",
+                filter_maldives: "Maldives",
+                filter_malaysia: "Malaysia",
+                filter_ghana: "Ghana",
+                filter_southafrica: "South Africa",
+                filter_uk: "UK",
+                country_uae: "UAE",
+                country_srilanka: "Sri Lanka",
+                country_maldives: "Maldives",
+                country_malaysia: "Malaysia",
+                country_ghana: "Ghana",
+                country_southafrica: "South Africa",
+                country_uk: "UK",
+                company_wish_group_llc_name: "WISH GROUP L.L.C",
+                company_wish_group_llc_info: "Type: Main Investment Company of Group<br>Activity: Project and Trading",
+                company_al_lincamo_name: "AL LINCAMO INTERNATIONAL FZC",
+                company_al_lincamo_info: "Type: General Trading Company<br>Activity: Sugar / Garments / Foods",
+                company_prime_wish_trading_name: "PRIME WISH TRADING L.L.C",
+                company_prime_wish_trading_info: "Type: General Trading Company<br>Activity: Prawn / Tuna / Sprats",
+                company_wish_real_estate_name: "WISH REAL ESTATE DEVELOPER L.L.C",
+                company_wish_real_estate_info: "Type: Real Estate and Property Development Company<br>Activity: Villas and Apartments",
+                company_wish_lanka_name: "Wish Lanka Pvt Ltd",
+                company_wish_lanka_info: "Type: Subsidiary<br>Activity: Trading & Projects",
+                company_world_investment_sources_name: "WORLD INVESTMENT SOURCES HOLDINGS LTD",
+                company_world_investment_sources_info: "Type: Main Investment Company of Group<br>Activity: Project and Trading",
+                company_prime_wish_pvt_name: "PRIME WISH (PVT) LTD",
+                company_prime_wish_pvt_info: "Type: Manufacturing and Trading Company<br>Activity: Prawn / Tuna / Fish",
+                company_wish_capital_srilanka_name: "WISH CAPITAL (PVT) LTD",
+                company_wish_capital_srilanka_info: "Type: Investment and Trading Company<br>Activity: Finance Market and Instruments",
+                company_wish_hospitality_name: "WISH HOSPITALITY LTD",
+                company_wish_hospitality_info: "Type: Hospitality and Tourism Company<br>Activity: Hotel and Tourism",
+                company_wish_brands_name: "WISH BRANDS (PVT) LTD",
+                company_wish_brands_info: "Type: Manufacturing and Trading Company<br>Activity: Biscuit and Juice",
+                company_world_capital_centre_name: "WORLD CAPITAL CENTRE LTD",
+                company_world_capital_centre_info: "Type: Real Estate and Property Development Company<br>Activity: Mix Development Projects",
+                company_arena_blue_name: "ARENA BLUE HOTEL AND RESORT LTD",
+                company_arena_blue_info: "Type: Hospitality and Resort Company<br>Activity: Hotel and Resorts",
+                company_one_apparels_name: "THE ONE APPARELS CORPORATION LTD",
+                company_one_apparels_info: "Type: Manufacturing and Trading Company<br>Activity: Apparel and Textiles",
+                company_wish_hr_name: "WISH HR CONSULTANCY (PVT) LTD",
+                company_wish_hr_info: "Type: Consultancy and Professional Services Company<br>Activity: Professional Services",
+                company_wish_roamer_name: "WISH ROAMER (PVT) LTD",
+                company_wish_roamer_info: "Type: Travel and Tourism Company<br>Activity: Travel and Tourism",
+                company_wish_media_name: "WISH MEDIA CORPORATION LTD",
+                company_wish_media_info: "Type: Media and Entertainment Company<br>Activity: Media and Entertainment",
+                company_world_capital_centre_maldives_name: "WORLD CAPITAL CENTRE PVT LTD",
+                company_world_capital_centre_maldives_info: "Type: Hospitality and Resort Company<br>Activity: Hotel and Resorts",
+                company_wish_hospitality_maldives_name: "WISH HOSPITALITY PVT LTD",
+                company_wish_hospitality_maldives_info: "Type: Hospitality and Tourism Company<br>Activity: Hotel and Tourism",
+                company_wish_holdings_name: "WISH HOLDINGS PVT LTD",
+                company_wish_holdings_info: "Type: Manufacturing and Trading Company<br>Activity: Prawn / Tuna / Fish",
+                company_world_capital_centre_malaysia_name: "WORLD CAPITAL CENTRE SDN BHD",
+                company_world_capital_centre_malaysia_info: "Type: Real Estate and Property Development Company<br>Activity: Mix Development Projects",
+                company_wish_capital_ghana_name: "WISH CAPITAL (PVT) LTD",
+                company_wish_capital_ghana_info: "Type: Manufacturing and Trading Company<br>Activity: Cashew / Gold / Energy",
+                company_wish_capital_southafrica_name: "WISH CAPITAL (PVT) LTD",
+                company_wish_capital_southafrica_info: "Type: Manufacturing and Trading Company<br>Activity: Fruit / Spices / Fertilizer",
+                company_world_capital_centre_uk_name: "WORLD CAPITAL CENTRE LTD",
+                company_world_capital_centre_uk_info: "Type: Real Estate and Property Development Company<br>Activity: Mix Development Projects",
+                footer_address_title: "Address",
+                footer_address_line1: "121 AI Blvd, San Francisco",
+                footer_address_line2: "BCA 94107",
+                footer_quick_links_title: "Quick Links",
+                footer_contact_title: "Contact Us",
+                footer_phone_1: "T. +971 4259 7167",
+                footer_phone_2: "M. +971 4259 4795",
+                footer_email_1: "E. info@wishgroup.ae",
+                footer_email_2: "E. info@wishgroup.world",
+                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
             },
-            {
-                name: "Sri Lanka",
-                coords: [7.8731, 80.7718],
-                description: "<strong>South Asia Operations Center</strong><br>Driving growth and innovation in the South Asian market"
+            ar: {
+                page_title: "مجموعة ويش",
+                scroll_to_top: "انتقل إلى الأعلى",
+                menu_home: "الرئيسية",
+                menu_about: "معلومات عنا",
+                menu_divisions: "الأقسام",
+                menu_projects: "المشاريع",
+                menu_countries: "الدول",
+                menu_news: "الأخبار",
+                menu_policies: "سياساتنا",
+                menu_career: "وظائف",
+                menu_contact: "اتصل بنا",
+                locations_counter: "نعمل في <span data-translate='locations_count'>7</span> دول حول العالم",
+                locations_count: "7",
+                flags_title: "الدول",
+                companies_title: "شركاتنا حول العالم",
+                filter_all: "الكل",
+                filter_uae: "الإمارات",
+                filter_srilanka: "سريلانكا",
+                filter_maldives: "المالديف",
+                filter_malaysia: "ماليزيا",
+                filter_ghana: "غانا",
+                filter_southafrica: "جنوب إفريقيا",
+                filter_uk: "المملكة المتحدة",
+                country_uae: "الإمارات",
+                country_srilanka: "سريلانكا",
+                country_maldives: "المالديف",
+                country_malaysia: "ماليزيا",
+                country_ghana: "غانا",
+                country_southafrica: "جنوب إفريقيا",
+                country_uk: "المملكة المتحدة",
+                company_wish_group_llc_name: "ويش جروب ذ.م.م",
+                company_wish_group_llc_info: "النوع: الشركة الرئيسية للاستثمار في المجموعة<br>النشاط: المشاريع والتجارة",
+                company_al_lincamo_name: "ال لينكامو الدولية فزك",
+                company_al_lincamo_info: "النوع: شركة تجارية عامة<br>النشاط: السكر / الملابس / الأغذية",
+                company_prime_wish_trading_name: "برايم ويش للتجارة ذ.م.م",
+                company_prime_wish_trading_info: "النوع: شركة تجارية عامة<br>النشاط: الروبيان / التونا / السبروط",
+                company_wish_real_estate_name: "ويش للتطوير العقاري ذ.م.م",
+                company_wish_real_estate_info: "النوع: شركة تطوير عقاري وعقارات<br>النشاط: الفلل والشقق",
+                company_wish_lanka_name: "ويش لانكا الخاصة المحدودة",
+                company_wish_lanka_info: "النوع: شركة تابعة<br>النشاط: التجارة والمشاريع",
+                company_world_investment_sources_name: "ورلد إنفستمنت سورسز هولدنجز ليميتد",
+                company_world_investment_sources_info: "النوع: الشركة الرئيسية للاستثمار في المجموعة<br>النشاط: المشاريع والتجارة",
+                company_prime_wish_pvt_name: "برايم ويش (الخاصة) المحدودة",
+                company_prime_wish_pvt_info: "النوع: شركة تصنيع وتجارة<br>النشاط: الروبيان / التونا / الأسماك",
+                company_wish_capital_srilanka_name: "ويش كابيتال (الخاصة) المحدودة",
+                company_wish_capital_srilanka_info: "النوع: شركة استثمار وتجارة<br>النشاط: السوق المالية والأدوات",
+                company_wish_hospitality_name: "ويش هوسبيتاليتي ليميتد",
+                company_wish_hospitality_info: "النوع: شركة الضيافة والسياحة<br>النشاط: الفنادق والسياحة",
+                company_wish_brands_name: "ويش براندز (الخاصة) المحدودة",
+                company_wish_brands_info: "النوع: شركة تصنيع وتجارة<br>النشاط: البسكويت والعصائر",
+                company_world_capital_centre_name: "ورلد كابيتال سنتر ليميتد",
+                company_world_capital_centre_info: "النوع: شركة تطوير عقاري وعقارات<br>النشاط: مشاريع التطوير المختلط",
+                company_arena_blue_name: "أرينا بلو هوتيل آند ريزورت ليميتد",
+                company_arena_blue_info: "النوع: شركة الضيافة والمنتجعات<br>النشاط: الفنادق والمنتجعات",
+                company_one_apparels_name: "ذا ون أباريلز كوربوريشن ليميتد",
+                company_one_apparels_info: "النوع: شركة تصنيع وتجارة<br>النشاط: الملابس والمنسوجات",
+                company_wish_hr_name: "ويش إتش آر كونسلتنسي (الخاصة) المحدودة",
+                company_wish_hr_info: "النوع: شركة استشارات وخدمات مهنية<br>النشاط: الخدمات المهنية",
+                company_wish_roamer_name: "ويش رومر (الخاصة) المحدودة",
+                company_wish_roamer_info: "النوع: شركة السفر والسياحة<br>النشاط: السفر والسياحة",
+                company_wish_media_name: "ويش ميديا كوربوريشن ليميتد",
+                company_wish_media_info: "النوع: شركة الإعلام والترفيه<br>النشاط: الإعلام والترفيه",
+                company_world_capital_centre_maldives_name: "ورلد كابيتال سنتر الخاصة المحدودة",
+                company_world_capital_centre_maldives_info: "النوع: شركة الضيافة والمنتجعات<br>النشاط: الفنادق والمنتجعات",
+                company_wish_hospitality_maldives_name: "ويش هوسبيتاليتي الخاصة المحدودة",
+                company_wish_hospitality_maldives_info: "النوع: شركة الضيافة والسياحة<br>النشاط: الفنادق والسياحة",
+                company_wish_holdings_name: "ويش هولدنجز الخاصة المحدودة",
+                company_wish_holdings_info: "النوع: شركة تصنيع وتجارة<br>النشاط: الروبيان / التونا / الأسماك",
+                company_world_capital_centre_malaysia_name: "ورلد كابيتال سنتر إس دي إن بي إتش دي",
+                company_world_capital_centre_malaysia_info: "النوع: شركة تطوير عقاري وعقارات<br>النشاط: مشاريع التطوير المختلط",
+                company_wish_capital_ghana_name: "ويش كابيتال (الخاصة) المحدودة",
+                company_wish_capital_ghana_info: "النوع: شركة تصنيع وتجارة<br>النشاط: الكاجو / الذهب / الطاقة",
+                company_wish_capital_southafrica_name: "ويش كابيتال (الخاصة) المحدودة",
+                company_wish_capital_southafrica_info: "النوع: شركة تصنيع وتجارة<br>النشاط: الفواكه / التوابل / الأسمدة",
+                company_world_capital_centre_uk_name: "ورلد كابيتال سنتر ليميتد",
+                company_world_capital_centre_uk_info: "النوع: شركة تطوير عقاري وعقارات<br>النشاط: مشاريع التطوير المختلط",
+                footer_address_title: "العنوان",
+                footer_address_line1: "121 شارع الذكاء الاصطناعي، سان فرانسيسكو",
+                footer_address_line2: "BCA 94107",
+                footer_quick_links_title: "روابط سريعة",
+                footer_contact_title: "اتصل بنا",
+                footer_phone_1: "هاتف: +971 4259 7167",
+                footer_phone_2: "جوال: +971 4259 4795",
+                footer_email_1: "البريد الإلكتروني: info@wishgroup.ae",
+                footer_email_2: "البريد الإلكتروني: info@wishgroup.world",
+                footer_copyright: "حقوق الطبع والنشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
             },
-            {
-                name: "Maldives",
-                coords: [3.2028, 73.2207],
-                description: "<strong>Luxury Hospitality Division</strong><br>Managing our premium island resorts and tourism ventures"
+            fr: {
+                // French translations (placeholder, replace with accurate translations)
+                page_title: "Groupe Wish",
+                scroll_to_top: "Retour en haut",
+                menu_home: "Accueil",
+                menu_about: "À propos",
+                menu_divisions: "Divisions",
+                menu_projects: "Projets",
+                menu_countries: "Pays",
+                menu_news: "Actualités",
+                menu_policies: "Nos politiques",
+                menu_career: "Carrière",
+                menu_contact: "Contact",
+                locations_counter: "Opérant dans <span data-translate='locations_count'>7</span> pays à travers le monde",
+                locations_count: "7",
+                flags_title: "Pays",
+                companies_title: "Nos entreprises à travers le monde",
+                filter_all: "Tous",
+                filter_uae: "Émirats Arabes Unis",
+                filter_srilanka: "Sri Lanka",
+                filter_maldives: "Maldives",
+                filter_malaysia: "Malaisie",
+                filter_ghana: "Ghana",
+                filter_southafrica: "Afrique du Sud",
+                filter_uk: "Royaume-Uni",
+                country_uae: "Émirats Arabes Unis",
+                country_srilanka: "Sri Lanka",
+                country_maldives: "Maldives",
+                country_malaysia: "Malaisie",
+                country_ghana: "Ghana",
+                country_southafrica: "Afrique du Sud",
+                country_uk: "Royaume-Uni",
+                company_wish_group_llc_name: "WISH GROUP L.L.C",
+                company_wish_group_llc_info: "Type : Société principale d'investissement du groupe<br>Activité : Projets et commerce",
+                company_al_lincamo_name: "AL LINCAMO INTERNATIONAL FZC",
+                company_al_lincamo_info: "Type : Société de commerce général<br>Activité : Sucre / Vêtements / Aliments",
+                company_prime_wish_trading_name: "PRIME WISH TRADING L.L.C",
+                company_prime_wish_trading_info: "Type : Société de commerce général<br>Activité : Crevettes / Thon / Sprats",
+                company_wish_real_estate_name: "WISH REAL ESTATE DEVELOPER L.L.C",
+                company_wish_real_estate_info: "Type : Société de développement immobilier<br>Activité : Villas et appartements",
+                company_wish_lanka_name: "Wish Lanka Pvt Ltd",
+                company_wish_lanka_info: "Type : Filiale<br>Activité : Commerce et projets",
+                company_world_investment_sources_name: "WORLD INVESTMENT SOURCES HOLDINGS LTD",
+                company_world_investment_sources_info: "Type : Société principale d'investissement du groupe<br>Activité : Projets et commerce",
+                company_prime_wish_pvt_name: "PRIME WISH (PVT) LTD",
+                company_prime_wish_pvt_info: "Type : Société de fabrication et de commerce<br>Activité : Crevettes / Thon / Poisson",
+                company_wish_capital_srilanka_name: "WISH CAPITAL (PVT) LTD",
+                company_wish_capital_srilanka_info: "Type : Société d'investissement et de commerce<br>Activité : Marché financier et instruments",
+                company_wish_hospitality_name: "WISH HOSPITALITY LTD",
+                company_wish_hospitality_info: "Type : Société d'hospitalité et de tourisme<br>Activité : Hôtels et tourisme",
+                company_wish_brands_name: "WISH BRANDS (PVT) LTD",
+                company_wish_brands_info: "Type : Société de fabrication et de commerce<br>Activité : Biscuits et jus",
+                company_world_capital_centre_name: "WORLD CAPITAL CENTRE LTD",
+                company_world_capital_centre_info: "Type : Société de développement immobilier<br>Activité : Projets de développement mixte",
+                company_arena_blue_name: "ARENA BLUE HOTEL AND RESORT LTD",
+                company_arena_blue_info: "Type : Société d'hospitalité et de resorts<br>Activité : Hôtels et resorts",
+                company_one_apparels_name: "THE ONE APPARELS CORPORATION LTD",
+                company_one_apparels_info: "Type : Société de fabrication et de commerce<br>Activité : Vêtements et textiles",
+                company_wish_hr_name: "WISH HR CONSULTANCY (PVT) LTD",
+                company_wish_hr_info: "Type : Société de conseil et de services professionnels<br>Activité : Services professionnels",
+                company_wish_roamer_name: "WISH ROAMER (PVT) LTD",
+                company_wish_roamer_info: "Type : Société de voyage et de tourisme<br>Activité : Voyage et tourisme",
+                company_wish_media_name: "WISH MEDIA CORPORATION LTD",
+                company_wish_media_info: "Type : Société de médias et de divertissement<br>Activité : Médias et divertissement",
+                company_world_capital_centre_maldives_name: "WORLD CAPITAL CENTRE PVT LTD",
+                company_world_capital_centre_maldives_info: "Type : Société d'hospitalité et de resorts<br>Activité : Hôtels et resorts",
+                company_wish_hospitality_maldives_name: "WISH HOSPITALITY PVT LTD",
+                company_wish_hospitality_maldives_info: "Type : Société d'hospitalité et de tourisme<br>Activité : Hôtels et tourisme",
+                company_wish_holdings_name: "WISH HOLDINGS PVT LTD",
+                company_wish_holdings_info: "Type : Société de fabrication et de commerce<br>Activité : Crevettes / Thon / Poisson",
+                company_world_capital_centre_malaysia_name: "WORLD CAPITAL CENTRE SDN BHD",
+                company_world_capital_centre_malaysia_info: "Type : Société de développement immobilier<br>Activité : Projets de développement mixte",
+                company_wish_capital_ghana_name: "WISH CAPITAL (PVT) LTD",
+                company_wish_capital_ghana_info: "Type : Société de fabrication et de commerce<br>Activité : Noix de cajou / Or / Énergie",
+                company_wish_capital_southafrica_name: "WISH CAPITAL (PVT) LTD",
+                company_wish_capital_southafrica_info: "Type : Société de fabrication et de commerce<br>Activité : Fruits / Épices / Engrais",
+                company_world_capital_centre_uk_name: "WORLD CAPITAL CENTRE LTD",
+                company_world_capital_centre_uk_info: "Type : Société de développement immobilier<br>Activité : Projets de développement mixte",
+                footer_address_title: "Adresse",
+                footer_address_line1: "121 AI Blvd, San Francisco",
+                footer_address_line2: "BCA 94107",
+                footer_quick_links_title: "Liens rapides",
+                footer_contact_title: "Contactez-nous",
+                footer_phone_1: "T. +971 4259 7167",
+                footer_phone_2: "M. +971 4259 4795",
+                footer_email_1: "E. info@wishgroup.ae",
+                footer_email_2: "E. info@wishgroup.world",
+                footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
             },
-            {
-                name: "Malaysia",
-                coords: [4.2105, 101.9758],
-                description: "<strong>Southeast Asia Regional Hub</strong><br>Coordinating operations across ASEAN markets"
+            si: {
+                // Sinhala translations (placeholder, replace with accurate translations)
+                page_title: "විෂ් ගෘප්",
+                scroll_to_top: "ඉහළට යන්න",
+                menu_home: "මුල් පිටුව",
+                menu_about: "අප ගැන",
+                menu_divisions: "අංශ",
+                menu_projects: "ව්‍යාපෘති",
+                menu_countries: "රටවල්",
+                menu_news: "පුවත්",
+                menu_policies: "අපගේ ප්‍රතිපත්ති",
+                menu_career: "වෘත්තිය",
+                menu_contact: "සම්බන්ධ කරන්න",
+                locations_counter: "ලොව පුරා <span data-translate='locations_count'>7</span> රටවල් තුළ ක්‍රියාත්මක වේ",
+                locations_count: "7",
+                flags_title: "රටවල්",
+                companies_title: "ලොව පුරා අපගේ සමාගම්",
+                filter_all: "සියල්ල",
+                filter_uae: "එක්සත් අරාබි එමිරේට්ස්",
+                filter_srilanka: "ශ්‍රී ලංකා",
+                filter_maldives: "මාලදිවයින",
+                filter_malaysia: "මැලේසියාව",
+                filter_ghana: "ඝානා",
+                filter_southafrica: "දකුණු අප්‍රිකාව",
+                filter_uk: "එක්සත් රාජධානිය",
+                country_uae: "එක්සත් අරාබි එමිරේට්ස්",
+                country_srilanka: "ශ්‍රී ලංකා",
+                country_maldives: "මාලදිවයින",
+                country_malaysia: "මැලේසියාව",
+                country_ghana: "ඝානා",
+                country_southafrica: "දකුණු අප්‍රිකාව",
+                country_uk: "එක්සත් රාජධානිය",
+                company_wish_group_llc_name: "විෂ් ගෘප් එල්.එල්.සී",
+                company_wish_group_llc_info: "වර්ගය: සමූහයේ ප්‍රධාන ආයෝජන සමාගම<br>ක්‍රියාකාරකම: ව්‍යාපෘති සහ වෙළඳාම",
+                company_al_lincamo_name: "ඇල් ලින්කමෝ ඉන්ටර්නැෂනල් එෆ්.සී.එස්",
+                company_al_lincamo_info: "වර්ගය: සාමාන්‍ය වෙළඳ සමාගම<br>ක්‍රියාකාරකම: සීනි / ඇඟලුම් / ආහාර",
+                company_prime_wish_trading_name: "ප්‍රයිම් විෂ් ට්‍රේඩින් එල්.එල්.සී",
+                company_prime_wish_trading_info: "වර්ගය: සාමාන්‍ය වෙළඳ සමාගම<br>ක්‍රියාකාරකම: ඉස්සන් / ටූනා / ස්ප්‍රැට්ස්",
+                company_wish_real_estate_name: "විෂ් රියල් එස්ටේට් ඩිවලපර් එල්.එල්.සී",
+                company_wish_real_estate_info: "වර්ගය: ඉඩකඩම් සහ දේපල සංවර්ධන සමාගම<br>ක්‍රියාකාරකම: විලා සහ මහල් නිවාස",
+                company_wish_lanka_name: "විෂ් ලංකා පුද්ගලික සමාගම",
+                company_wish_lanka_info: "වර්ගය: අනුබද්ධ සමාගම<br>ක්‍රියාකාරකම: වෙළඳාම සහ ව්‍යාපෘති",
+                company_world_investment_sources_name: "වර්ල්ඩ් ඉන්වෙස්ට්මන්ට් සෝර්සස් හෝල්ඩින්ග්ස් ලිමිටඩ්",
+                company_world_investment_sources_info: "වර්ගය: සමූහයේ ප්‍රධාන ආයෝජන සමාගම<br>ක්‍රියාකාරකම: ව්‍යාපෘති සහ වෙළඳාම",
+                company_prime_wish_pvt_name: "ප්‍රයිම් විෂ් (පුද්ගලික) ලිමිටඩ්",
+                company_prime_wish_pvt_info: "වර්ගය: නිෂ්පාදන සහ වෙළඳ සමාගම<br>ක්‍රියාකාරකම: ඉස්සන් / ටූනා / මාළු",
+                company_wish_capital_srilanka_name: "විෂ් කැපිටල් (පුද්ගලික) ලිමිටඩ්",
+                company_wish_capital_srilanka_info: "වර්ගය: ආයෝජන සහ වෙළඳ සමාගම<br>ක්‍රියාකාරකම: මූල්‍ය වෙළඳපොළ සහ උපකරණ",
+                company_wish_hospitality_name: "විෂ් හොස්පිටලිටි ලිමිටඩ්",
+                company_wish_hospitality_info: "වර්ගය: ආගන්තුක සත්කාර සහ සංචාරක සමාගම<br>ක්‍රියාකාරකම: හෝටල් සහ සංචාරක",
+                company_wish_brands_name: "විෂ් බ්‍රෑන්ඩ්ස් (පුද්ගලික) ලිමිටඩ්",
+                company_wish_brands_info: "වර්ගය: නිෂ්පාදන සහ වෙළඳ සමාගම<br>ක්‍රියාකාරකම: බිස්කට් සහ යුෂ",
+                company_world_capital_centre_name: "වර්ල්ඩ් කැපිටල් සෙන්ටර් ලිමිටඩ්",
+                company_world_capital_centre_info: "වර්ගය: ඉඩකඩම් සහ දේපල සංවර්ධන සමාගම<br>ක්‍රියාකාරකම: මිශ්‍ර සංවර්ධන ව්‍යාපෘති",
+                company_arena_blue_name: "අරීනා බ්ලූ හෝටල් ඇන්ඩ් රිසෝර්ට් ලිමිටඩ්",
+                company_arena_blue_info: "වර්ගය: ආගන්තුක සත්කාර සහ රිසෝර්ට් සමාගම<br>ක්‍රියාකාරකම: හෝටල් සහ රිසෝර්ට්",
+                company_one_apparels_name: "ද එක ඇපරල්ස් කෝපරේෂන් ලිමිටඩ්",
+                company_one_apparels_info: "වර්ගය: නිෂ්පාදන සහ වෙළඳ සමාගම<br>ක්‍රියාකාරකම: ඇඟලුම් සහ රෙදිපිළි",
+                company_wish_hr_name: "විෂ් එච්ආර් කන්සල්ටන්සි (පුද්ගලික) ලිමිටඩ්",
+                company_wish_hr_info: "වර්ගය: උපදේශන සහ වෘත්තීය සේවා සමාගම<br>ක්‍රියාකාරකම: වෘත්තීය සේවා",
+                company_wish_roamer_name: "විෂ් රෝමර් (පුද්ගලික) ලිමිටඩ්",
+                company_wish_roamer_info: "වර්ගය: සංචාරක සහ සංචාරක සමාගම<br>ක්‍රියාකාරකම: සංචාරක සහ සංචාරක",
+                company_wish_media_name: "විෂ් මීඩියා කෝපරේෂන් ලිමිටඩ්",
+                company_wish_media_info: "වර්ගය: මාධ්‍ය සහ විනෝදාස්වාද සමාගම<br>ක්‍රියාකාරකම: මාධ්‍ය සහ විනෝදාස්වාද",
+                company_world_capital_centre_maldives_name: "වර්ල්ඩ් කැපිටල් සෙන්ටර් පුද්ගලික ලිමිටඩ්",
+                company_world_capital_centre_maldives_info: "වර්ගය: ආගන්තුක සත්කාර සහ රිසෝර්ට් සමාගම<br>ක්‍රියාකාරකම: හෝටල් සහ රිසෝර්ට්",
+                company_wish_hospitality_maldives_name: "විෂ් හොස්පිටලිටි පුද්ගලික ලිමිටඩ්",
+                company_wish_hospitality_maldives_info: "වර්ගය: ආගන්තුක සත්කාර සහ සංචාරක සමාගම<br>ක්‍රියාකාරකම: හෝටල් සහ සංචාරක",
+                company_wish_holdings_name: "විෂ් හෝල්ඩින්ග්ස් පුද්ගලික ලිමිටඩ්",
+                company_wish_holdings_info: "වර්ගය: නිෂ්පාදන සහ වෙළඳ සමාගම<br>ක්‍රියාකාරකම: ඉස්සන් / ටූනා / මාළු",
+                company_world_capital_centre_malaysia_name: "වර්ල්ඩ් කැපිටල් සෙන්ටර් එස්ඩීඑන් බීඑච්ඩී",
+                company_world_capital_centre_malaysia_info: "වර්ගය: ඉඩකඩම් සහ දේපල සංවර්ධන සමාගම<br>ක්‍රියාකාරකම: මිශ්‍ර සංවර්ධන ව්‍යාපෘති",
+                company_wish_capital_ghana_name: "විෂ් කැපිටල් (පුද්ගලික) ලිමිටඩ්",
+                company_wish_capital_ghana_info: "වර්ගය: නිෂ්පාදන සහ වෙළඳ සමාගම<br>ක්‍රියාකාරකම: කජු / රන් / බලශක්ති",
+                company_wish_capital_southafrica_name: "විෂ් කැපිටල් (පුද්ගලික) ලිමිටඩ්",
+                company_wish_capital_southafrica_info: "වර්ගය: නිෂ්පාදන සහ වෙළඳ සමාගම<br>ක්‍රියාකාරකම: පලතුරු / කුළුබඩු / පොහොර",
+                company_world_capital_centre_uk_name: "වර්ල්ඩ් කැපිටල් සෙන්ටර් ලිමිටඩ්",
+                company_world_capital_centre_uk_info: "වර්ගය: ඉඩකඩම් සහ දේපල සංවර්ධන සමාගම<br>ක්‍රියාකාරකම: මිශ්‍ර සංවර්ධන ව්‍යාපෘති",
+                footer_address_title: "ලිපිනය",
+                footer_address_line1: "121 AI Blvd, සැන් ෆ්‍රැන්සිස්කෝ",
+                footer_address_line2: "BCA 94107",
+                footer_quick_links_title: "වේගවත් සබැඳි",
+                footer_contact_title: "අප හා සම්බන්ධ වන්න",
+                footer_phone_1: "දුරකථන: +971 4259 7167",
+                footer_phone_2: "ජංගම: +971 4259 4795",
+                footer_email_1: "විද්‍යුත් තැපෑල: info@wishgroup.ae",
+                footer_email_2: "විද්‍යුත් තැපෑල: info@wishgroup.world",
+                footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ගෘප්. සියලු හිමිකම් ඇවිරිණි."
             },
-            {
-                name: "Ghana",
-                coords: [7.9465, -1.0232],
-                description: "<strong>West Africa Development Center</strong><br>Leading infrastructure and energy projects in the region"
-            },
-            {
-                name: "South Africa",
-                coords: [-30.5595, 22.9375],
-                description: "<strong>African Continental Headquarters</strong><br>Overseeing pan-African operations and investments"
-            },
-            {
-                name: "United Kingdom",
-                coords: [51.5074, -0.1278],
-                description: "<strong>European Corporate Office</strong><br>Managing European investments and partnerships"
+     
+    dv: {
+        page_title: "ވިޝް ގްރޫޕް",
+        scroll_to_top: "މަތީގައި ސްކްރޯލް ކުރަން",
+        menu_home: "މުޚްތަޞަރ ޞަފްޙާ",
+        menu_about: "އަބަދުލް ހަމަލައި",
+        menu_divisions: "ބައިބައި",
+        menu_projects: "ޕްރޮޖެކްޓުތައް",
+        menu_countries: "ޤައުމުތައް",
+        menu_news: "ޚަބަރު",
+        menu_policies: "އަދި ޤާނޫނު",
+        menu_career: "ކެރިއަރ",
+        menu_contact: "ފޮނުވުން",
+        locations_counter: "<span data-translate='locations_count'>7</span> ޤައުމުތަކުގައި އަމަލު ކުރަން",
+        locations_count: "7",
+        flags_title: "ޤައުމުތައް",
+        companies_title: "ބައިނަލްއަޤްވާމީ ކުންފުނިތައް",
+        filter_all: "ހުރިހާ",
+        filter_uae: "އިމާރާތު",
+        filter_srilanka: "ސްރީ ލަންކާ",
+        filter_maldives: "މާލެ",
+        filter_malaysia: "މަލޭޝިއާ",
+        filter_ghana: "ގާނާ",
+        filter_southafrica: "ދެކުނު އަފްރީކާ",
+        filter_uk: "ޔޫ.ކޭ",
+        country_uae: "އިމާރާތު",
+        country_srilanka: "ސްރީ ލަންކާ",
+        country_maldives: "މާލެ",
+        country_malaysia: "މަލޭޝިއާ",
+        country_ghana: "ގާނާ",
+        country_southafrica: "ދެކުނު އަފްރީކާ",
+        country_uk: "ޔޫ.ކޭ",
+        company_wish_group_llc_name: "ވިޝް ގްރޫޕް އެލް.އެލް.ސީ",
+        company_wish_group_llc_info: "ވައްތަރު: ގްރޫޕްގެ މައިން އިންވެސްޓްމަންޓް ކުންފުނި<br>އަމަލު: ޕްރޮޖެކްޓު އަދި ވިޔަފާރި",
+        company_al_lincamo_name: "އަލް ލިންކަމޯ އިންޓަރނެޝަނަލް އެފް.ޒެޑް.ސީ",
+        company_al_lincamo_info: "ވައްތަރު: ޖެނަރަލް ޓްރޭޑިން ކުންފުނި<br>އަމަލު: ޝުކަރ / ލިބާސް / ކާނާ",
+        company_prime_wish_trading_name: "ޕްރައިމް ވިޝް ޓްރޭޑިން އެލް.އެލް.ސީ",
+        company_prime_wish_trading_info: "ވައްތަރު: ޖެނަރަލް ޓްރޭޑިން ކުންފުނި<br>އަމަލު: އިއްސަ / ތޫނާ / ސްޕްރަޓް",
+        company_wish_real_estate_name: "ވިޝް ރިއަލް އެސްޓޭޓް ޑިވެލޮޕަރ އެލް.އެލް.ސީ",
+        company_wish_real_estate_info: "ވައްތަރު: ރިއަލް އެސްޓޭޓް އަދި ޕްރޮޕަޓީ ޑިވެލޮޕްމަންޓް ކުންފުނި<br>އަމަލު: ވިލާ އަދި އެޕާޓްމަންޓް",
+        company_wish_lanka_name: "ވިޝް ލަންކާ ޕްރައިވެޓް ލިމިޓެޑް",
+        company_wish_lanka_info: "ވައްތަރު: ސަބްސިޑިއަރީ<br>އަމަލު: ވިޔަފާރި އަދި ޕްރޮޖެކްޓު",
+        company_world_investment_sources_name: "ވަރލްޑް އިންވެސްޓްމަންޓް ސޯރސެސް ހޯލްޑިންގްސް ލިމިޓެޑް",
+        company_world_investment_sources_info: "ވައްތަރު: ގްރޫޕްގެ މައިން އިންވެސްޓްމަންޓް ކުންފުނި<br>އަމަލު: ޕްރޮޖެކްޓު އަދި ވިޔަފާރި",
+        company_prime_wish_pvt_name: "ޕްރައިމް ވިޝް (ޕްރައިވެޓް) ލިމިޓެޑް",
+        company_prime_wish_pvt_info: "ވައްތަރު: މެނިފެކްޗަރިންގ އަދި ވިޔަފާރި ކުންފުނި<br>އަމަލު: އިއްސަ / ތޫނާ / މިން",
+        company_wish_capital_srilanka_name: "ވިޝް ކެޕިޓަލް (ޕްރައިވެޓް) ލިމިޓެޑް",
+        company_wish_capital_srilanka_info: "ވައްތަރު: އިންވެސްޓްމަންޓް އަދި ވިޔަފާރި ކުންފުނި<br>އަމަލު: ފައިނަންސިއަލް މާކެޓް އަދި އިންސްޓްރުމަންޓް",
+        company_wish_hospitality_name: "ވިޝް ހޮސްޕިޓަލިޓީ ލިމިޓެޑް",
+        company_wish_hospitality_info: "ވައްތަރު: ހޮސްޕިޓަލިޓީ އަދި ޓޫރިޒަމް ކުންފުނި<br>އަމަލު: ހޮޓަލް އަދި ޓޫރިޒަމް",
+        company_wish_brands_name: "ވިޝް ބްރާންޑްސް (ޕްރައިވެޓް) ލިމިޓެޑް",
+        company_wish_brands_info: "ވައްތަރު: މެނިފެކްޗަރިންގ އަދި ވިޔަފާރި ކުންފުނި<br>އަމަލު: ބިސްކެޓް އަދި ޖޫސް",
+        company_world_capital_centre_name: "ވަރލްޑް ކެޕިޓަލް ސެންޓަރ ލިމިޓެޑް",
+        company_world_capital_centre_info: "ވައްތަރު: ރިއަލް އެސްޓޭޓް އަދި ޕްރޮޕަޓީ ޑިވެލޮޕްމަންޓް ކުންފުނި<br>އަމަލު: މިކްސް ޑިވެލޮޕްމަންޓް ޕްރޮޖެކްޓު",
+        company_arena_blue_name: "އަރީނާ ބްލޫ ހޮޓަލް އެންޑް ރިސޯރޓް ލިމިޓެޑް",
+        company_arena_blue_info: "ވައްތަރު: ހޮސްޕިޓަލިޓީ އަދި ރިސޯރޓް ކުންފުނި<br>އަމަލު: ހޮޓަލް އަދި ރިސޯރޓް",
+        company_one_apparels_name: "ދަ ވަން އެޕަރެލްސް ކޯޕޮރޭޝަން ލިމިޓެޑް",
+        company_one_apparels_info: "ވައްތަރު: މެނިފެކްޗަރިންގ އަދި ވިޔަފާރި ކުންފުނި<br>އަމަލު: ލިބާސް އަދި ޓެކްސްޓައިލް",
+        company_wish_hr_name: "ވިޝް އެޗް.އާރ ކޮންސަލްޓަންސީ (ޕްރައިވެޓް) ލިމިޓެޑް",
+        company_wish_hr_info: "ވައްތަރު: ކޮންސަލްޓަންސީ އަދި ޕްރޮފެޝަނަލް ސަރވިސް ކުންފުނި<br>އަމަލު: ޕްރޮފެޝަނަލް ސަރވިސް",
+        company_wish_roamer_name: "ވިޝް ރޯމަރ (ޕްރައިވެޓް) ލިމިޓެޑް",
+        company_wish_roamer_info: "ވައްތަރު: ޓްރެވަލް އަދި ޓޫރިޒަމް ކުންފުނި<br>އަމަލު: ޓްރެވަލް އަދި ޓޫރިޒަމް",
+        company_wish_media_name: "ވިޝް މީޑިއާ ކޯޕޮރޭޝަން ލިމިޓެޑް",
+        company_wish_media_info: "ވައްތަރު: މީޑިއާ އަދި އެންޓަޓޭންމަންޓް ކުންފުނި<br>އަމަލު: މީޑިއާ އަދި އެންޓަޓޭންމަންޓް",
+        company_world_capital_centre_maldives_name: "ވަރލްޑް ކެޕިޓަލް ސެންޓަރ ޕްރައިވެޓް ލިމިޓެޑް",
+        company_world_capital_centre_maldives_info: "ވައްތަރު: ހޮސްޕިޓަލިޓީ އަދި ރިސޯރޓް ކުންފުނި<br>އަމަލު: ހޮޓަލް އަދި ރިސޯރޓް",
+        company_wish_hospitality_maldives_name: "ވިޝް ހޮސްޕިޓަލިޓީ ޕްރައިވެޓް ލިމިޓެޑް",
+        company_wish_hospitality_maldives_info: "ވައްތަރު: ހޮސްޕިޓަލިޓީ އަދި ޓޫރިޒަމް ކުންފުނި<br>އަމަލު: ހޮޓަލް އަދި ޓޫރިޒަމް",
+        company_wish_holdings_name: "ވިޝް ހޯލްޑިންގްސް ޕްރައިވެޓް ލިމިޓެޑް",
+        company_wish_holdings_info: "ވައްތަރު: މެނިފެކްޗަރިންގ އަދި ވިޔަފާރި ކުންފުނި<br>އަމަލު: އިއްސަ / ތޫނާ / މިން",
+        company_world_capital_centre_malaysia_name: "ވަރލްޑް ކެޕިޓަލް ސެންޓަރ އެސް.ޑީ.އެން.ބީ.އެޗް.ޑީ",
+        company_world_capital_centre_malaysia_info: "ވައްތަރު: ރިއަލް އެސްޓޭޓް އަދި ޕްރޮޕަޓީ ޑިވެލޮޕްމަންޓް ކުންފުނި<br>އަމަލު: މިކްސް ޑިވެލޮޕްމަންޓް ޕްރޮޖެކްޓު",
+        company_wish_capital_ghana_name: "ވިޝް ކެޕިޓަލް (ޕްރައިވެޓް) ލިމިޓެޑް",
+        company_wish_capital_ghana_info: "ވައްތަރު: މެނިފެކްޗަރިންގ އަދި ވިޔަފާރި ކުންފުނި<br>އަމަލު: ކެޝޫ / ރަން / އެނަޖީ",
+        company_wish_capital_southafrica_name: "ވިޝް ކެޕިޓަލް (ޕްރައިވެޓް) ލިމިޓެޑް",
+        company_wish_capital_southafrica_info: "ވައްތަރު: މެނިފެކްޗަރިންގ އަދި ވިޔަފާރި ކުންފުނި<br>އަމަލު: ފަލަ / ސްޕައިސް / ފަރްޓިލައިޒަރ",
+        company_world_capital_centre_uk_name: "ވަރލްޑް ކެޕިޓަލް ސެންޓަރ ލިމިޓެޑް",
+        company_world_capital_centre_uk_info: "ވައްތަރު: ރިއަލް އެސްޓޭޓް އަދި ޕްރޮޕަޓީ ޑިވެލޮޕްމަންޓް ކުންފުނި<br>އަމަލު: މިކްސް ޑިވެލޮޕްމަންޓް ޕްރޮޖެކްޓު",
+        footer_address_title: "އެޑްރެސް",
+        footer_address_line1: "121 އޭ.އައި ބުލިވާޑް، ސެން ފްރެންސިސްކޯ",
+        footer_address_line2: "ބީ.ސީ.އޭ 94107",
+        footer_quick_links_title: "އަވަސް ލިންކްސް",
+        footer_contact_title: "އަބަދުލް ފޮނުވުން",
+        footer_phone_1: "ޓީ: +971 4259 7167",
+        footer_phone_2: "އެމް: +971 4259 4795",
+        footer_email_1: "އީ: info@wishgroup.ae",
+        footer_email_2: "އީ: info@wishgroup.world",
+        footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ހިމިކަމެއް ރިޒަރވް ކުރެވިފަ"
+    }
+};
+</script>
+    <script>
+function setLanguage(lang) {
+    // Ensure the selected language exists in translations
+    if (!translations[lang]) {
+        console.error(`Language ${lang} not found in translations`);
+        return;
+    }
+    // Update the document's language attribute for RTL support
+    document.body.setAttribute('lang', lang);
+    // Apply RTL styling for Arabic and Dhivehi
+    if (lang === 'ar' || lang === 'dv') {
+        document.body.classList.add('rtl');
+    } else {
+        document.body.classList.remove('rtl');
+    }
+    // List of translation keys that contain HTML (e.g., <br>)
+    const htmlTranslationKeys = Object.keys(translations[lang]).filter(key => 
+        key.includes('company_') && key.endsWith('_info')
+    );
+    // Update text content based on selected language
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            // Use innerHTML for elements with HTML content (company info or elements with <span> or <title>)
+            if (htmlTranslationKeys.includes(key) || element.innerHTML.includes('<span') || element.tagName === 'TITLE') {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
             }
-        ];
-
-        // Add markers with enhanced popups
-        locations.forEach(location => {
-            const marker = L.marker(location.coords, {
-                icon: markerIcon,
-                riseOnHover: true
-            }).addTo(map);
-            
-            marker.bindPopup(location.description, {
-                autoClose: false,
-                closeOnClick: false,
-                className: 'custom-popup',
-                maxWidth: 300,
-                minWidth: 200
-            });
-            
-            if (isMobile) {
-                marker.openPopup();
-            }
-            
-            // Add hover effect
-            marker.on('mouseover', function() {
-                this.openPopup();
-            });
-        });
-
-        // Fit map to show all markers when loaded
-        const bounds = L.latLngBounds(locations.map(loc => loc.coords));
-        map.fitBounds(bounds, { padding: [50, 50] });
-        
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            map.invalidateSize();
-            map.fitBounds(bounds, { padding: [50, 50] });
-        });
+        } else {
+            console.warn(`Translation key ${key} not found for language ${lang}`);
+        }
     });
-    </script>
+    // Reapply the current filter
+    const activeFilter = document.querySelector('.filter-btn.active');
+    const country = activeFilter ? activeFilter.getAttribute('data-country') : 'all';
+    applyFilter(country);
+}
+const filterBtns = document.querySelectorAll(".filter-btn");
+const countryBoxes = document.querySelectorAll(".country-box");
+
+function applyFilter(country) {
+    filterBtns.forEach(btn => btn.classList.remove("active"));
+    const activeBtn = Array.from(filterBtns).find(btn => btn.getAttribute("data-country") === country);
+    if (activeBtn) activeBtn.classList.add("active");
+
+    countryBoxes.forEach(box => {
+        box.style.display = (country === "all" || box.classList.contains(country)) ? "block" : "none";
+    });
+}
+
+filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const country = btn.getAttribute("data-country");
+        console.log(`Filter clicked: ${country}`);
+        applyFilter(country);
+    });
+});
+
+// Initialize with "all" filter
+applyFilter("all");
+</script>
 </body>
 </html>
