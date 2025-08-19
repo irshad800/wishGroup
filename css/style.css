@@ -237,7 +237,7 @@ header {
   position: absolute;
   left: 0;
   z-index: 1001;
-  background: var(--bg-dark-1);
+  background: none; /* Transparent initially, no BG */
   margin: 0;
 }
 
@@ -333,12 +333,12 @@ header.smaller #mainmenu ul ul {
 header.smaller {
   position: fixed;
   top: 0px;
-  background: var(--bg-dark-1);
+  background: var(--bg-dark-1); /* BG appears on scroll */
   -webkit-backdrop-filter: blur(10px);
   -o-backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: none;*/
+  border: none;
 }
 
 header.header-mobile.header-float .header-inner,
@@ -12840,198 +12840,188 @@ a.d-block.hover.relative.rounded-20.overflow-hidden.text-light img {
     /* -------------------------------------------------- */
 
 @media only screen and (max-width: 767px) {
-    /* Logo handling */
-    header .logo-main {
-        display: none;
-    }
-    header .logo-init {
-        display: none;
-    }
-    header .logo-mobile {
-        display: block !important; /* Ensure logo is always visible */
-    }
-    div#logo img {
-        max-width: 100px !important; /* Adjust logo size for mobile */
-        height: auto !important;
-        margin: 10px auto; /* Center the logo */
-    }
+  /* Logo handling - show only image logo, hide text/page name */
+  header .logo-main {
+    display: none;
+  }
+  header .logo-init {
+    display: none;
+  }
+  header .logo-mobile {
+    display: block !important;
+  }
+  div#logo img.logo-mobile {
+    display: block !important;
+    max-width: 100px !important; /* Adjust size as needed */
+    height: auto !important;
+    margin: 10px auto !important; /* Center the logo */
+  }
+  div#logo a {
+    font-size: 0 !important; /* Hide any text-based logo or page name like "Home" */
+    text-indent: -9999px !important;
+    overflow: hidden !important;
+  }
 
-    /* Hide page name (e.g., "Home") and related text */
-    #subheader h1,
-    .crumb,
-    .crumb-wrapper {
-        display: none !important;
-    }
+  /* Hide menu text/items, show only menu icon */
+  #mainmenu {
+    display: none !important;
+  }
+  #mainmenu a,
+  #mainmenu li {
+    display: none !important;
+  }
+  #menu-btn {
+    display: block !important; /* Ensure hamburger icon shows */
+  }
 
-    /* Hide menu text, keep structure for toggle if needed */
-    #mainmenu a {
-        font-size: 0 !important; /* Hides text but preserves menu functionality */
-    }
-    #mainmenu li {
-        padding: 10px 0 !important; /* Maintain spacing for menu icons */
-    }
-    /* Preserve menu toggle icon if present */
-    header.header-mobile #mainmenu > li > span {
-        display: block !important;
-        background: url(../images/ui/arrow-down.png) center no-repeat !important;
-        width: 30px !important;
-        height: 30px !important;
-        font-size: 0 !important; /* Ensure no text shows */
-    }
-
-    /* Existing mobile-specific styles */
-    header .btn-main {
-        display: none;
-    }
-    #topbar {
-        display: none;
-    }
-    .menu_side_area {
-        margin-left: 20px;
-        width: 100%;
-        position: relative;
-        right: 0;
-        text-align: right;
-        z-index: 0;
-        display: block;
-    }
-    header .container {
-        min-width: 100%;
-    }
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    #filters li.pull-right {
-        float: none;
-    }
-    .text-item {
-        font-size: 48px;
-        line-height: 48px;
-    }
-    .text-item i {
-        font-size: 36px;
-    }
-    .de_tab.tab_style_4 .de_nav {
-        border-radius: 0;
-        -moz-border-radius: 0;
-        -webkit-border-radius: 0;
-    }
-    .de_tab.tab_style_4 .de_nav li {
-        min-width: 33.3%;
-        width: 33.3%;
-        border: none;
-    }
-    .de_tab.tab_style_4 .de_nav li:first-child,
-    .de_tab.tab_style_4 .de_nav li:last-child {
-        border-radius: 0;
-        -moz-border-radius: 0;
-        -webkit-border-radius: 0;
-    }
-    .xs-hide {
-        display: none;
-    }
-    header a.btn-main {
-        display: none !important;
-    }
-    .scrollbar-v,
-    .float-text {
-        display: none;
-    }
-    .de-spot span {
-        display: none;
-    }
-    .de-spot .de-circle-1,
-    .de-spot .de-circle-2 {
-        transform: scale(.25);
-    }
-    section {
-        padding: 40px 0;
-    }
-    #subheader {
-        padding-top: 100px;
-    }
-    h1,
-    h1.ultra-big,
-    h1.ultra-big .text-line,
-    h1.ultra-big-2,
-    .title-text,
-    h1.slider-title,
-    h2.slider-title {
-        font-size: 48px;
-    }
-    h2 {
-        font-size: 36px;
-    }
-    .mt-xs-0 {
-        margin-top: 0;
-    }
-    /* Padding top */
-    .pt-xs-10 { padding-top: 10px; }
-    .pt-xs-20 { padding-top: 20px; }
-    .pt-xs-30 { padding-top: 30px; }
-    .pt-xs-40 { padding-top: 40px; }
-    .pt-xs-50 { padding-top: 50px; }
-    .pt-xs-60 { padding-top: 60px; }
-    .pt-xs-70 { padding-top: 70px; }
-    .pt-xs-80 { padding-top: 80px; }
-    .pt-xs-90 { padding-top: 90px; }
-    .pt-xs-100 { padding-top: 10px; }
-    /* Padding bottom */
-    .pb-xs-10 { padding-bottom: 10px; }
-    .pb-xs-20 { padding-bottom: 20px; }
-    .pb-xs-30 { padding-bottom: 30px; }
-    .pb-xs-40 { padding-bottom: 40px; }
-    .pb-xs-50 { padding-bottom: 50px; }
-    .pb-xs-60 { padding-bottom: 60px; }
-    .pb-xs-70 { padding-bottom: 70px; }
-    .pb-xs-80 { padding-bottom: 80px; }
-    .pb-xs-90 { padding-bottom: 90px; }
-    .pb-xs-100 { padding-bottom: 10px; }
-    /* Margin top */
-    .mt-xs-1
-    { margin-top: 10px; }
-    .mt-xs-20 { margin-top: 20px; }
-    .mt-xs-30 { margin-top: 30px; }
-    .mt-xs-40 { margin-top: 40px; }
-    .mt-xs-50 { margin-top: 50px; }
-    .mt-xs-60 { margin-top: 60px; }
-    .mt-xs-70 { margin-top: 70px; }
-    .mt-xs-80 { margin-top: 80px; }
-    .mt-xs-90 { margin-top: 90px; }
-    .mt-xs-100 { margin-top: 10px; }
-    /* Margin bottom */
-    .mb-xs-10 { margin-bottom: 10px; }
-    .mb-xs-20 { margin-bottom: 20px; }
-    .mb-xs-30 { margin-bottom: 30px; }
-    .mb-xs-40 { margin-bottom: 40px; }
-    .mb-xs-50 { margin-bottom: 50px; }
-    .mb-xs-60 { margin-bottom: 60px; }
-    .mb-xs-70 { margin-bottom: 70px; }
-    .mb-xs-80 { margin-bottom: 80px; }
-    .mb-xs-90 { margin-bottom: 90px; }
-    .mb-xs-100 { margin-bottom: 10px; }
-    .ss-wrap {
-        position: relative;
-        width: 200%;
-        margin-left: -50%;
-    }
-    .fs-xs-1vw { font-size: 1vw; }
-    .fs-xs-2vw { font-size: 2vw; }
-    .fs-xs-3vw { font-size: 3vw; }
-    .fs-xs-4vw { font-size: 4vw; }
-    .fs-xs-5vw { font-size: 5vw; }
-    .fs-xs-6vw { font-size: 6vw; }
-    .fs-xs-7vw { font-size: 7vw; }
-    .fs-xs-8vw { font-size: 8vw; }
-    .fs-xs-9vw { font-size: 9vw; }
-    .fs-xs-10vw { font-size: 10vw; }
-    .fs-xs-11vw { font-size: 11vw; }
-    .fs-xs-12vw { font-size: 12vw; }
-    .fs-xs-13vw { font-size: 13vw; }
-    .fs-xs-14vw { font-size: 14vw; }
-    .fs-xs-15vw { font-size: 15vw; }
-}
+  /* Existing styles preserved */
+  header .btn-main {
+    display: none;
+  }
+  #topbar {
+    display: none;
+  }
+  .menu_side_area {
+    margin-left: 20px;
+    width: 100%;
+    position: relative;
+    right: 0;
+    text-align: right;
+    z-index: 0;
+    display: block;
+  }
+  header .container {
+    min-width: 100%;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #filters li.pull-right {
+    float: none;
+  }
+  .text-item {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .text-item i {
+    font-size: 36px;
+  }
+  .de_tab.tab_style_4 .de_nav {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  .de_tab.tab_style_4 .de_nav li {
+    min-width: 33.3%;
+    width: 33.3%;
+    border: none;
+  }
+  .de_tab.tab_style_4 .de_nav li:first-child,
+  .de_tab.tab_style_4 .de_nav li:last-child {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  .xs-hide {
+    display: none;
+  }
+  header a.btn-main {
+    display: none !important;
+  }
+  .scrollbar-v,
+  .float-text {
+    display: none;
+  }
+  .de-spot span {
+    display: none;
+  }
+  .de-spot .de-circle-1,
+  .de-spot .de-circle-2 {
+    transform: scale(.25);
+  }
+  section {
+    padding: 40px 0;
+  }
+  #subheader {
+    padding-top: 100px;
+  }
+  h1,
+  h1.ultra-big,
+  h1.ultra-big .text-line,
+  h1.ultra-big-2,
+  .title-text,
+  h1.slider-title,
+  h2.slider-title {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .mt-xs-0 {
+    margin-top: 0;
+  }
+  .pt-xs-10 { padding-top: 10px; }
+  .pt-xs-20 { padding-top: 20px; }
+  .pt-xs-30 { padding-top: 30px; }
+  .pt-xs-40 { padding-top: 40px; }
+  .pt-xs-50 { padding-top: 50px; }
+  .pt-xs-60 { padding-top: 60px; }
+  .pt-xs-70 { padding-top: 70px; }
+  .pt-xs-80 { padding-top: 80px; }
+  .pt-xs-90 { padding-top: 90px; }
+  .pt-xs-100 { padding-top: 10px; }
+  .pb-xs-10 { padding-bottom: 10px; }
+  .pb-xs-20 { padding-bottom: 20px; }
+  .pb-xs-30 { padding-bottom: 30px; }
+  .pb-xs-40 { padding-bottom: 40px; }
+  .pb-xs-50 { padding-bottom: 50px; }
+  .pb-xs-60 { padding-bottom: 60px; }
+  .pb-xs-70 { padding-bottom: 70px; }
+  .pb-xs-80 { padding-bottom: 80px; }
+  .pb-xs-90 { padding-bottom: 90px; }
+  .pb-xs-100 { padding-bottom: 10px; }
+  .mt-xs-10 { margin-top: 10px; }
+  .mt-xs-20 { margin-top: 20px; }
+  .mt-xs-30 { margin-top: 30px; }
+  .mt-xs-40 { margin-top: 40px; }
+  .mt-xs-50 { margin-top: 50px; }
+  .mt-xs-60 { margin-top: 60px; }
+  .mt-xs-70 { margin-top: 70px; }
+  .mt-xs-80 { margin-top: 80px; }
+  .mt-xs-90 { margin-top: 90px; }
+  .mt-xs-100 { margin-top: 10px; }
+  .mb-xs-10 { margin-bottom: 10px; }
+  .mb-xs-20 { margin-bottom: 20px; }
+  .mb-xs-30 { margin-bottom: 30px; }
+  .mb-xs-40 { margin-bottom: 40px; }
+  .mb-xs-50 { margin-bottom: 50px; }
+  .mb-xs-60 { margin-bottom: 60px; }
+  .mb-xs-70 { margin-bottom: 70px; }
+  .mb-xs-80 { margin-bottom: 80px; }
+  .mb-xs-90 { margin-bottom: 90px; }
+  .mb-xs-100 { margin-bottom: 10px; }
+  .ss-wrap {
+    position: relative;
+    width: 200%;
+    margin-left: -50%;
+  }
+  .fs-xs-1vw { font-size: 1vw; }
+  .fs-xs-2vw { font-size: 2vw; }
+  .fs-xs-3vw { font-size: 3vw; }
+  .fs-xs-4vw { font-size: 4vw; }
+  .fs-xs-5vw { font-size: 5vw; }
+  .fs-xs-6vw { font-size: 6vw; }
+  .fs-xs-7vw { font-size: 7vw; }
+  .fs-xs-8vw { font-size: 8vw; }
+  .fs-xs-9vw { font-size: 9vw; }
+  .fs-xs-10vw { font-size: 10vw; }
+  .fs-xs-11vw { font-size: 11vw; }
+  .fs-xs-12vw { font-size: 12vw; }
+  .fs-xs-13vw { font-size: 13vw; }
+  .fs-xs-14vw { font-size: 14vw; }
+  .fs-xs-15vw { font-size: 15vw; }
+}}
 /* -------------------------------------------------- 
     design for 480px
     /* -------------------------------------------------- */
@@ -13410,3 +13400,500 @@ a.d-block.hover.relative.rounded-20.overflow-hidden.text-light img {
 
 
 
+ /* Map Section Styles */
+        .map-hero-section {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+            overflow: hidden;
+            margin-top: 0;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        #world-map-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        #world-map {
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a;
+            border-radius: 12px;
+        }
+        
+        .locations-counter {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.8);
+            padding: 12px 25px;
+            border-radius: 30px;
+            z-index: 1000;
+            border: 1px solid rgba(255,77,77,0.3);
+            backdrop-filter: blur(5px);
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .locations-counter span {
+            font-weight: bold;
+            color: #ff4d4d;
+        }
+        
+        /* Custom Marker Style */
+        .map-marker-icon {
+            background: #ff4d4d;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            border: 3px solid white;
+            box-shadow: 0 0 20px rgba(255,77,77,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .map-marker-icon:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        .map-marker-icon.pulse:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,77,77,0.5);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Popup Styling */
+        .leaflet-popup-content {
+            background: rgba(5,5,5,0.95);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.7);
+            border: 1px solid rgba(255,77,77,0.3);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .leaflet-popup-content-wrapper {
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        
+        .leaflet-popup-tip {
+            background: rgba(5,5,5,0.95);
+            border: 1px solid rgba(255,77,77,0.3);
+        }
+        
+        /* Darker map tiles */
+        .leaflet-tile {
+            filter: brightness(0.6) contrast(1.2) saturate(0.8);
+        }
+        
+        /* Companies Section */
+        .companies-section {
+            padding: 80px 0;
+            background-color: #111;
+        }
+        
+        .company-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(135deg, rgba(30,30,30,0.9) 0%, rgba(20,20,20,0.9) 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255,77,77,0.2);
+            border-color: rgba(255,77,77,0.3);
+        }
+        
+        .country-header {
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,77,77,0.3);
+            display: flex;
+            align-items: center;
+        }
+        
+        .country-flag-large {
+            width: 60px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-right: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .country-info {
+            flex: 1;
+        }
+        
+        .country-name {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .country-description {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        
+        .company-logo {
+            height: 80px;
+            object-fit: contain;
+            margin: 20px auto;
+            display: block;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+        }
+        
+        .company-card:hover .company-logo {
+            filter: none;
+            transform: scale(1.05);
+        }
+        
+        .company-details {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .company-name {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .company-industry {
+            color: #ff4d4d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        .company-description {
+            color: #bbb;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        
+        .company-link {
+            color: #fff;
+            font-size: 0.8rem;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 15px;
+            border: 1px solid rgba(255,77,77,0.5);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .company-link:hover {
+            background: rgba(255,77,77,0.2);
+            color: #fff;
+        }
+        
+        /* Flags Section */
+        .flags-section {
+            padding: 60px 0;
+            background-color: #0a0a0a;
+            text-align: center;
+        }
+        
+        .flags-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .flags-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .flags-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #ff4d4d;
+            margin: 15px auto 0;
+        }
+        
+        .flags-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .flag-item {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .flag-item:hover {
+            transform: scale(1.1);
+        }
+        
+        .flag-item.active {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 77, 77, 0.7);
+            border-radius: 8px;
+        }
+        
+        .country-flag {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Highlight effect for country sections */
+        .country-group {
+            transition: all 0.5s ease;
+        }
+        
+        .country-group.highlighted {
+            background: rgba(255, 77, 77, 0.1);
+            box-shadow: 0 0 30px rgba(255, 77, 77, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .map-hero-section {
+                width: 95%;
+            }
+            
+            .map-hero-section {
+                height: 70vh;
+                min-height: 500px;
+            }
+            
+            .flags-title {
+                font-size: 2.2rem;
+            }
+            
+            .country-flag {
+                width: 100px;
+                height: 70px;
+            }
+            
+            .country-name {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .map-hero-section {
+                width: 100%;
+                border-radius: 0;
+            }
+            
+            .map-hero-section {
+                height: 60vh;
+                min-height: 400px;
+            }
+            
+            .locations-counter {
+                top: 15px;
+                right: 15px;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .map-marker-icon {
+                width: 18px;
+                height: 18px;
+                border-width: 2px;
+            }
+            
+            .flags-section {
+                padding: 40px 0;
+            }
+            
+            .flags-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .flags-grid {
+                gap: 20px;
+            }
+            
+            .country-flag {
+                width: 90px;
+                height: 60px;
+            }
+            
+            .country-name {
+                font-size: 1.4rem;
+            }
+            
+            .country-flag-large {
+                width: 50px;
+                height: 35px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .map-hero-section {
+                height: 55vh;
+                min-height: 350px;
+            }
+            
+            .flags-title {
+                font-size: 1.8rem;
+            }
+            
+            .flags-grid {
+                gap: 15px;
+            }
+            
+            .country-flag {
+                width: 80px;
+                height: 50px;
+            }
+            
+            .country-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .country-flag-large {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .country-name {
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+
+.country-group {
+  background: linear-gradient(135deg,rgba(255, 0, 0, 1) , #0a0a0a); /* Red to light red */
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  color: #fff; /* makes text more readable on gradient */
+}
+
+
+.country-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.company-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  background: #000; /* 🔥 Set black background */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}
+
+.company-details {
+  flex: 1;
+}
+
+.company-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.company-industry {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.country-filters {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: #b00;
+  color: #0a0a0a;
+}
