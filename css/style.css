@@ -12841,35 +12841,53 @@ a.d-block.hover.relative.rounded-20.overflow-hidden.text-light img {
 
 @media only screen and (max-width: 767px) {
   /* Logo handling - show only image logo, hide text/page name */
-  header .logo-main {
-    display: none;
-  }
-  header .logo-init {
-    display: none;
-  }
-  header .logo-mobile {
-    display: block !important;
-  }
-  div#logo img.logo-mobile {
-    display: block !important;
-    max-width: 100px !important; /* Adjust size as needed */
-    height: auto !important;
-    margin: 10px auto !important; /* Center the logo */
-  }
-  div#logo a {
-    font-size: 0 !important; /* Hide any text-based logo or page name like "Home" */
-    text-indent: -9999px !important;
-    overflow: hidden !important;
-  }
-
-  /* Hide menu text/items, show only menu icon */
-  #mainmenu {
-    display: none !important;
-  }
-  #mainmenu a,
-  #mainmenu li {
-    display: none !important;
-  }
+ header .logo-main {
+  display: none;
+}
+header .logo-init {
+  display: none;
+}
+header .logo-mobile {
+  display: block;
+}
+header .btn-main {
+  display: none;
+}
+#topbar {
+  display: none;
+}
+/* Ensure menu is not hidden by default; let JS toggle it */
+#mainmenu {
+  display: none; /* Changed from !important to allow JS override */
+}
+#mainmenu li {
+  display: block; /* Ensure list items are block for vertical menu */
+  width: 100%;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+#mainmenu li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--body-font-color-dark);
+}
+#menu-btn.menu-open + #mainmenu {
+  display: block; /* Show menu when hamburger is clicked */
+  position: absolute;
+  top: 70px; /* Adjust based on header height */
+  left: 0;
+  width: 100%;
+  background: var(--bg-dark-1);
+  z-index: 1000;
+}
+#mainmenu li.has-child ul {
+  display: none; /* Hidden by default, shown on click via JS */
+  position: static;
+  width: 100%;
+  padding-left: 20px;
+}
+#mainmenu li.has-child.active ul {
+  display: block; /* Show submenu when parent is active */
+}
   #menu-btn {
     display: block !important; /* Ensure hamburger icon shows */
   }

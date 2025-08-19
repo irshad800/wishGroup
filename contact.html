@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Wish Group - Contact Us</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <title data-lang-key="page_title">Wish Group - Contact Us</title>
+    <link rel="icon" href="images/wishgroup/logo.jpeg" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Wish Group" name="description">
@@ -54,6 +54,28 @@
             background-color: #dc3545;
             color: white;
         }
+        .lang-switcher {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switcher .btn-main {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .lang-switcher .dropdown-menu {
+            min-width: 60px;
+            background-color: #1a1a1a;
+            border: none;
+            border-radius: 4px;
+        }
+        .lang-switcher .dropdown-menu a {
+            color: #fff;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        .lang-switcher .dropdown-menu a:hover {
+            background-color: #333;
+        }
     </style>
 </head>
 
@@ -62,7 +84,7 @@
     <div id="wrapper">
 
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-lang-key="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -79,9 +101,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="">
+                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="">
+                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -90,21 +112,30 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item active" href="contact.html">Contact Us</a></li>
+                                        <li><a class="menu-item" href="index.html" data-lang-key="menu_home">Home</a></li>
+                                        <li><a class="menu-item" href="about.html" data-lang-key="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-lang-key="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-lang-key="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-lang-key="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-lang-key="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="" data-lang-key="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-lang-key="menu_career">Career</a></li>
+                                        <li><a class="menu-item active" href="contact.html" data-lang-key="menu_contact">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="lang-switcher">
+                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                                    </ul>
+                                </div>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -125,13 +156,13 @@
                         <div class="col-lg-6">
                             <div class="relative wow mask-right">
                                 <div class="text-start">
-                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1">Contact Us</h1>
+                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1" data-lang-key="contact_us_title">Contact Us</h1>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
-                            <p class="mb-0">Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.</p>
+                            <p class="mb-0" data-lang-key="contact_us_description">Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.</p>
                         </div>
                     </div>
                 </div>
@@ -143,9 +174,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <div class="subtitle">Our Location</div>
-                        <h2 class="wow fadeInUp">Wish Group Headquarters</h2>
-                        <p class="mb-4">Business Bay, Dubai, United Arab Emirates</p>
+                        <div class="subtitle" data-lang-key="our_location">Our Location</div>
+                        <h2 class="wow fadeInUp" data-lang-key="headquarters_title">Wish Group Headquarters</h2>
+                        <p class="mb-4" data-lang-key="headquarters_address">Business Bay, Dubai, United Arab Emirates</p>
                     </div>
                 </div>
                 <div class="row">
@@ -161,9 +192,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <div class="subtitle">Our Workplace</div>
-                        <h2 class="wow fadeInUp">Head Office Gallery</h2>
-                        <p class="mb-5">Take a look at our professional work environment</p>
+                        <div class="subtitle" data-lang-key="our_workplace">Our Workplace</div>
+                        <h2 class="wow fadeInUp" data-lang-key="gallery_title">Head Office Gallery</h2>
+                        <p class="mb-5" data-lang-key="gallery_description">Take a look at our professional work environment</p>
                     </div>
                 </div>
                 <div class="row">
@@ -191,9 +222,9 @@
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6">
-                        <div class="subtitle">Get In Touch</div>
-                        <h2 class="wow fadeInUp">We'd love to hear from you</h2>
-                        <p>Submit your inquiry and our team will get back to you shortly.</p>
+                        <div class="subtitle" data-lang-key="get_in_touch">Get In Touch</div>
+                        <h2 class="wow fadeInUp" data-lang-key="enquiry_title">We'd love to hear from you</h2>
+                        <p data-lang-key="enquiry_description">Submit your inquiry and our team will get back to you shortly.</p>
 
                         <div class="spacer-single"></div>
 
@@ -202,15 +233,15 @@
                                 <div class="relative mb-4">
                                     <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-location-pin"></i>
                                     <div class="ms-80px">
-                                        <h4 class="mb-0">Head Office Location</h4>
-                                        Business Bay, Dubai, United Arab Emirates
+                                        <h4 class="mb-0" data-lang-key="head_office_location">Head Office Location</h4>
+                                        <span data-lang-key="headquarters_address">Business Bay, Dubai, United Arab Emirates</span>
                                     </div>
                                 </div>
 
                                 <div class="relative mb-4">
                                     <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-envelope"></i>
                                     <div class="ms-80px">
-                                        <h4 class="mb-0">Email Us</h4>
+                                        <h4 class="mb-0" data-lang-key="email_us">Email Us</h4>
                                         info@wishgroup.ae<br>
                                         info@wishgroup.world
                                     </div>
@@ -219,7 +250,7 @@
                                 <div class="relative mb-4">
                                     <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-phone"></i>
                                     <div class="ms-80px">
-                                        <h4 class="mb-0">Call Us</h4>
+                                        <h4 class="mb-0" data-lang-key="call_us">Call Us</h4>
                                         +971 4259 7167<br>
                                         +971 4259 4795
                                     </div>
@@ -233,40 +264,40 @@
                             <form name="contactForm" id="contact_form" method="post">
                                 <div class="row g-4">
                                     <div class="col-lg-12">
-                                        <h3>Enquiry Form</h3>
-                                        <p>Fill out the form below and we'll get back to you soon.</p>
+                                        <h3 data-lang-key="enquiry_form_title">Enquiry Form</h3>
+                                        <p data-lang-key="enquiry_form_description">Fill out the form below and we'll get back to you soon.</p>
 
                                         <div class="field-set">
-                                            <input type="text" name="name" id="name" class="form-underline" placeholder="Full Name" required>
+                                            <input type="text" name="name" id="name" class="form-underline" placeholder="Full Name" data-lang-placeholder="full_name" required>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type="email" name="email" id="email" class="form-underline" placeholder="Email Address" required>
+                                            <input type="email" name="email" id="email" class="form-underline" placeholder="Email Address" data-lang-placeholder="email_address" required>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type="tel" name="phone" id="phone" class="form-underline" placeholder="Phone Number">
+                                            <input type="tel" name="phone" id="phone" class="form-underline" placeholder="Phone Number" data-lang-placeholder="phone_number">
                                         </div>
 
                                         <div class="field-set">
-                                            <input type="text" name="subject" id="subject" class="form-underline" placeholder="Subject" required>
+                                            <input type="text" name="subject" id="subject" class="form-underline" placeholder="Subject" data-lang-placeholder="subject" required>
                                         </div>
 
                                         <div class="field-set">
-                                            <textarea name="message" id="message" class="form-underline h-100px" placeholder="Your Message" required></textarea>
+                                            <textarea name="message" id="message" class="form-underline h-100px" placeholder="Your Message" data-lang-placeholder="your_message" required></textarea>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div id="submit" class="mt-3">
-                                    <input type="submit" id="send_message" value="Submit Inquiry" class="btn-main">
+                                    <input type="submit" id="send_message" value="Submit Inquiry" data-lang-value="submit_inquiry" class="btn-main">
                                 </div>
 
                                 <div id="success_message" class="success">
-                                    Your message has been sent successfully. Refresh this page if you want to send more messages.
+                                    <span data-lang-key="success_message">Your message has been sent successfully. Refresh this page if you want to send more messages.</span>
                                 </div>
                                 <div id="error_message" class="error">
-                                    Sorry, there was an error sending your form.
+                                    <span data-lang-key="error_message">Sorry, there was an error sending your form.</span>
                                 </div>
                             </form>
                         </div>
@@ -283,7 +314,7 @@
             <div class="row g-4">
                 <!-- Logo & Social -->
                 <div class="col-sm-6 col-lg-3 text-center">
-                    <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                    <img src="images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="">
                     <div class="social-icons mt-3">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -294,26 +325,26 @@
 
                 <!-- Address -->
                 <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                    <h3 class="fs-20 mb-3">Address</h3>
-                    <p class="mb-0">Business Bay</p>
-                    <p>Dubai, United Arab Emirates</p>
+                    <h3 class="fs-20 mb-3" data-lang-key="footer_address">Address</h3>
+                    <p class="mb-0" data-lang-key="headquarters_address">Business Bay</p>
+                    <p data-lang-key="headquarters_country">Dubai, United Arab Emirates</p>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                    <h3 class="fs-20 mb-3">Quick Links</h3>
+                    <h3 class="fs-20 mb-3" data-lang-key="quick_links">Quick Links</h3>
                     <ul class="list-unstyled mb-0">
-                        <li><a href="index.html" class="text-light">Home</a></li>
-                        <li><a href="about.html" class="text-light">About Us</a></li>
-                        <li><a href="#" class="text-light">Divisions</a></li>
-                        <li><a href="#" class="text-light">Projects</a></li>
-                        <li><a href="contact.html" class="text-light">Contact Us</a></li>
+                        <li><a href="index.html" class="text-light" data-lang-key="menu_home">Home</a></li>
+                        <li><a href="about.html" class="text-light" data-lang-key="menu_about">About Us</a></li>
+                        <li><a href="division.html" class="text-light" data-lang-key="menu_divisions">Divisions</a></li>
+                        <li><a href="#" class="text-light" data-lang-key="menu_projects">Projects</a></li>
+                        <li><a href="contact.html" class="text-light" data-lang-key="menu_contact">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Us with Email -->
                 <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                    <h3 class="fs-20 mb-3">Contact Us</h3>
+                    <h3 class="fs-20 mb-3" data-lang-key="footer_contact">Contact Us</h3>
                     <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
                     <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
                     <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
@@ -327,7 +358,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        Copyright 2025 - Wish Group. All rights reserved.
+                        <span data-lang-key="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                     </div>
                 </div>
             </div>
@@ -340,52 +371,305 @@
     <!-- Leaflet JS for map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
-        // Initialize Leaflet Map
-        var map = L.map('headOfficeMap').setView([25.1865, 55.2793], 15);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        L.marker([25.1865, 55.2793]).addTo(map)
-            .bindPopup('Wish Group Headquarters<br>Business Bay, Dubai, United Arab Emirates')
-            .openPopup();
+        // Translations object
+        const translations = {
+            en: {
+                page_title: "Wish Group - Contact Us",
+                scroll_to_top: "Scroll to top",
+                menu_home: "Home",
+                menu_about: "About Us",
+                menu_divisions: "Divisions",
+                menu_projects: "Projects",
+                menu_countries: "Countries",
+                menu_news: "News",
+                menu_policies: "Our Policies",
+                menu_career: "Career",
+                menu_contact: "Contact Us",
+                contact_us_title: "Contact Us",
+                contact_us_description: "Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.",
+                our_location: "Our Location",
+                headquarters_title: "Wish Group Headquarters",
+                headquarters_address: "Business Bay, Dubai, United Arab Emirates",
+                headquarters_country: "Dubai, United Arab Emirates",
+                our_workplace: "Our Workplace",
+                gallery_title: "Head Office Gallery",
+                gallery_description: "Take a look at our professional work environment",
+                get_in_touch: "Get In Touch",
+                enquiry_title: "We'd love to hear from you",
+                enquiry_description: "Submit your inquiry and our team will get back to you shortly.",
+                head_office_location: "Head Office Location",
+                email_us: "Email Us",
+                call_us: "Call Us",
+                enquiry_form_title: "Enquiry Form",
+                enquiry_form_description: "Fill out the form below and we'll get back to you soon.",
+                full_name: "Full Name",
+                email_address: "Email Address",
+                phone_number: "Phone Number",
+                subject: "Subject",
+                your_message: "Your Message",
+                submit_inquiry: "Submit Inquiry",
+                success_message: "Your message has been sent successfully. Refresh this page if you want to send more messages.",
+                error_message: "Sorry, there was an error sending your form.",
+                footer_address: "Address",
+                quick_links: "Quick Links",
+                footer_contact: "Contact Us",
+                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+            },
+            ar: {
+                page_title: "مجموعة ويش - اتصل بنا",
+                scroll_to_top: "التمرير إلى الأعلى",
+                menu_home: "الرئيسية",
+                menu_about: "معلومات عنا",
+                menu_divisions: "الأقسام",
+                menu_projects: "المشاريع",
+                menu_countries: "الدول",
+                menu_news: "الأخبار",
+                menu_policies: "سياساتنا",
+                menu_career: "الوظائف",
+                menu_contact: "اتصل بنا",
+                contact_us_title: "اتصل بنا",
+                contact_us_description: "تواصل مع مجموعة ويش. نحن هنا للإجابة على استفساراتك ومناقشة كيفية التعاون معًا.",
+                our_location: "موقعنا",
+                headquarters_title: "مقر مجموعة ويش",
+                headquarters_address: "خليج الأعمال، دبي، الإمارات العربية المتحدة",
+                headquarters_country: "دبي، الإمارات العربية المتحدة",
+                our_workplace: "مكان عملنا",
+                gallery_title: "معرض المقر الرئيسي",
+                gallery_description: "ألق نظرة على بيئة العمل المهنية لدينا",
+                get_in_touch: "تواصل معنا",
+                enquiry_title: "يسعدنا سماع رأيك",
+                enquiry_description: "قدم استفسارك وسيتواصل معك فريقنا قريبًا.",
+                head_office_location: "موقع المقر الرئيسي",
+                email_us: "راسلنا عبر البريد الإلكتروني",
+                call_us: "اتصل بنا",
+                enquiry_form_title: "نموذج الاستفسار",
+                enquiry_form_description: "املأ النموذج أدناه وسنعاود التواصل معك قريبًا.",
+                full_name: "الاسم الكامل",
+                email_address: "عنوان البريد الإلكتروني",
+                phone_number: "رقم الهاتف",
+                subject: "الموضوع",
+                your_message: "رسالتك",
+                submit_inquiry: "إرسال الاستفسار",
+                success_message: "تم إرسال رسالتك بنجاح. قم بتحديث الصفحة إذا كنت ترغب في إرسال المزيد من الرسائل.",
+                error_message: "عذرًا، حدث خطأ أثناء إرسال النموذج.",
+                footer_address: "العنوان",
+                quick_links: "روابط سريعة",
+                footer_contact: "اتصل بنا",
+                footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
+            },
+            fr: {
+                page_title: "Groupe Wish - Contactez-nous",
+                scroll_to_top: "Faire défiler vers le haut",
+                menu_home: "Accueil",
+                menu_about: "À propos de nous",
+                menu_divisions: "Divisions",
+                menu_projects: "Projets",
+                menu_countries: "Pays",
+                menu_news: "Actualités",
+                menu_policies: "Nos politiques",
+                menu_career: "Carrière",
+                menu_contact: "Contactez-nous",
+                contact_us_title: "Contactez-nous",
+                contact_us_description: "Entrez en contact avec le Groupe Wish. Nous sommes là pour répondre à vos questions et discuter de la manière dont nous pouvons collaborer.",
+                our_location: "Notre emplacement",
+                headquarters_title: "Siège du Groupe Wish",
+                headquarters_address: "Business Bay, Dubaï, Émirats Arabes Unis",
+                headquarters_country: "Dubaï, Émirats Arabes Unis",
+                our_workplace: "Notre lieu de travail",
+                gallery_title: "Galerie du siège",
+                gallery_description: "Découvrez notre environnement de travail professionnel",
+                get_in_touch: "Contactez-nous",
+                enquiry_title: "Nous serions ravis d'avoir de vos nouvelles",
+                enquiry_description: "Soumettez votre demande et notre équipe vous répondra sous peu.",
+                head_office_location: "Emplacement du siège",
+                email_us: "Envoyez-nous un courriel",
+                call_us: "Appelez-nous",
+                enquiry_form_title: "Formulaire de demande",
+                enquiry_form_description: "Remplissez le formulaire ci-dessous et nous vous répondrons bientôt.",
+                full_name: "Nom complet",
+                email_address: "Adresse e-mail",
+                phone_number: "Numéro de téléphone",
+                subject: "Sujet",
+                your_message: "Votre message",
+                submit_inquiry: "Soumettre la demande",
+                success_message: "Votre message a été envoyé avec succès. Actualisez cette page si vous souhaitez envoyer d'autres messages.",
+                error_message: "Désolé, une erreur s'est produite lors de l'envoi de votre formulaire.",
+                footer_address: "Adresse",
+                quick_links: "Liens rapides",
+                footer_contact: "Contactez-nous",
+                footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
+            },
+            si: {
+                page_title: "Wish Group - Contact Us",
+                scroll_to_top: "Scroll to top",
+                menu_home: "Home",
+                menu_about: "About Us",
+                menu_divisions: "Divisions",
+                menu_projects: "Projects",
+                menu_countries: "Countries",
+                menu_news: "News",
+                menu_policies: "Our Policies",
+                menu_career: "Career",
+                menu_contact: "Contact Us",
+                contact_us_title: "Contact Us",
+                contact_us_description: "Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.",
+                our_location: "Our Location",
+                headquarters_title: "Wish Group Headquarters",
+                headquarters_address: "Business Bay, Dubai, United Arab Emirates",
+                headquarters_country: "Dubai, United Arab Emirates",
+                our_workplace: "Our Workplace",
+                gallery_title: "Head Office Gallery",
+                gallery_description: "Take a look at our professional work environment",
+                get_in_touch: "Get In Touch",
+                enquiry_title: "We'd love to hear from you",
+                enquiry_description: "Submit your inquiry and our team will get back to you shortly.",
+                head_office_location: "Head Office Location",
+                email_us: "Email Us",
+                call_us: "Call Us",
+                enquiry_form_title: "Enquiry Form",
+                enquiry_form_description: "Fill out the form below and we'll get back to you soon.",
+                full_name: "Full Name",
+                email_address: "Email Address",
+                phone_number: "Phone Number",
+                subject: "Subject",
+                your_message: "Your Message",
+                submit_inquiry: "Submit Inquiry",
+                success_message: "Your message has been sent successfully. Refresh this page if you want to send more messages.",
+                error_message: "Sorry, there was an error sending your form.",
+                footer_address: "Address",
+                quick_links: "Quick Links",
+                footer_contact: "Contact Us",
+                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+            },
+            dv: {
+                page_title: "Wish Group - Contact Us",
+                scroll_to_top: "Scroll to top",
+                menu_home: "Home",
+                menu_about: "About Us",
+                menu_divisions: "Divisions",
+                menu_projects: "Projects",
+                menu_countries: "Countries",
+                menu_news: "News",
+                menu_policies: "Our Policies",
+                menu_career: "Career",
+                menu_contact: "Contact Us",
+                contact_us_title: "Contact Us",
+                contact_us_description: "Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.",
+                our_location: "Our Location",
+                headquarters_title: "Wish Group Headquarters",
+                headquarters_address: "Business Bay, Dubai, United Arab Emirates",
+                headquarters_country: "Dubai, United Arab Emirates",
+                our_workplace: "Our Workplace",
+                gallery_title: "Head Office Gallery",
+                gallery_description: "Take a look at our professional work environment",
+                get_in_touch: "Get In Touch",
+                enquiry_title: "We'd love to hear from you",
+                enquiry_description: "Submit your inquiry and our team will get back to you shortly.",
+                head_office_location: "Head Office Location",
+                email_us: "Email Us",
+                call_us: "Call Us",
+                enquiry_form_title: "Enquiry Form",
+                enquiry_form_description: "Fill out the form below and we'll get back to you soon.",
+                full_name: "Full Name",
+                email_address: "Email Address",
+                phone_number: "Phone Number",
+                subject: "Subject",
+                your_message: "Your Message",
+                submit_inquiry: "Submit Inquiry",
+                success_message: "Your message has been sent successfully. Refresh this page if you want to send more messages.",
+                error_message: "Sorry, there was an error sending your form.",
+                footer_address: "Address",
+                quick_links: "Quick Links",
+                footer_contact: "Contact Us",
+                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+            }
+        };
 
-        // Form submission
-        document.getElementById('contact_form').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const successMessage = document.getElementById('success_message');
-            const errorMessage = document.getElementById('error_message');
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
+        // Function to change language
+        function changeLanguage(lang) {
+            document.getElementById('currentLang').textContent = lang.toUpperCase();
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-lang-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-lang-placeholder');
+                if (translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-lang-value]').forEach(element => {
+                const key = element.getAttribute('data-lang-value');
+                if (translations[lang][key]) {
+                    element.value = translations[lang][key];
+                }
+            });
+            document.querySelector('html').lang = lang;
+            if (lang === 'ar') {
+                document.querySelector('html').dir = 'rtl';
+                document.querySelector('body').style.textAlign = 'right';
+            } else {
+                document.querySelector('html').dir = 'ltr';
+                document.querySelector('body').style.textAlign = 'left';
+            }
+            document.querySelector('title').textContent = translations[lang].page_title;
+            localStorage.setItem('selectedLanguage', lang);
+        }
 
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                phoneNumber: document.getElementById('phone').value,
-                message: document.getElementById('message').value
-            };
+        // Initialize language
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            changeLanguage(savedLang);
 
-            try {
-                const response = await fetch('http://localhost:4000/api/enquiries', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
+            // Initialize Leaflet Map
+            var map = L.map('headOfficeMap').setView([25.1865, 55.2793], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            L.marker([25.1865, 55.2793]).addTo(map)
+                .bindPopup('Wish Group Headquarters<br>Business Bay, Dubai, United Arab Emirates')
+                .openPopup();
 
-                const result = await response.json();
-                if (response.ok) {
-                    successMessage.style.display = 'block';
-                    document.getElementById('contact_form').reset();
-                } else {
-                    errorMessage.textContent = result.error || 'Sorry, there was an error sending your form.';
+            // Form submission
+            document.getElementById('contact_form').addEventListener('submit', async function(event) {
+                event.preventDefault();
+                const successMessage = document.getElementById('success_message');
+                const errorMessage = document.getElementById('error_message');
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    phoneNumber: document.getElementById('phone').value,
+                    message: document.getElementById('message').value
+                };
+
+                try {
+                    const response = await fetch('http://localhost:4000/api/enquiries', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const result = await response.json();
+                    if (response.ok) {
+                        successMessage.style.display = 'block';
+                        document.getElementById('contact_form').reset();
+                    } else {
+                        errorMessage.textContent = translations[document.getElementById('currentLang').textContent.toLowerCase()].error_message;
+                        errorMessage.style.display = 'block';
+                    }
+                } catch (error) {
+                    errorMessage.textContent = translations[document.getElementById('currentLang').textContent.toLowerCase()].error_message;
                     errorMessage.style.display = 'block';
                 }
-            } catch (error) {
-                errorMessage.textContent = 'Network error: Unable to submit the form.';
-                errorMessage.style.display = 'block';
-            }
+            });
         });
     </script>
 </body>
