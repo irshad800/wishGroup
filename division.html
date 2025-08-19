@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Wish Group - Our Companies</title>
+  <title data-translate="page_title">Wish Group - Our Companies</title>
   <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -15,7 +15,7 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- color scheme -->
+  <!-- Color scheme -->
   <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
   <style>
@@ -244,282 +244,311 @@
         margin: 20px auto;
       }
     }
+    
+    /* Language switcher styling */
+    #language-switcher {
+      background: #1a1a1a;
+      color: #fff;
+      border: 1px solid rgba(201, 160, 47, 0.3);
+      border-radius: 5px;
+      padding: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    #language-switcher:hover {
+      border-color: #c9a02f;
+    }
+    
+    #language-switcher:focus {
+      outline: none;
+      border-color: #c9a02f;
+    }
+    
+    body[lang="ar"] {
+      direction: rtl;
+      text-align: right;
+    }
+    
+    body[lang="ar"] .text-center {
+      text-align: center !important;
+    }
+    
+    body[lang="ar"] .de-flex-col.header-col-mid {
+      direction: ltr;
+    }
+    
+    body[lang="ar"] #mainmenu {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    
+    body[lang="ar"] #mainmenu ul {
+      direction: ltr;
+    }
   </style>
 </head>
 
 <body class="dark-scheme">
   <div id="wrapper">
+    <div class="float-text show-on-scroll">
+      <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
+    </div>
+    <div class="scrollbar-v show-on-scroll"></div>
 
-      <div class="float-text show-on-scroll">
-        <span><a href="#">Scroll to top</a></span>
+    <!-- page preloader begin -->
+    <div id="de-loader"></div>
+    <!-- page preloader close -->
+
+    <header class="transparent">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="de-flex">
+              <div class="de-flex-col">
+                <!-- logo begin -->
+                <div id="logo">
+                  <a href="index.html">
+                    <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
+                    <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
+                    <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" width="160" height="auto">
+                  </a>
+                </div>
+                <!-- logo close -->
+              </div>
+
+              <div class="de-flex-col">
+                <div class="de-flex-col header-col-mid">
+                  <ul id="mainmenu">
+                    <li><a class="menu-item active" href="#section-hero" data-translate="menu_home">Home</a></li>
+                    <li><a class="menu-item" href="about.html" data-translate="menu_about">About Us</a></li>
+                    <li><a class="menu-item" href="#section-companies" data-translate="menu_divisions">Divisions</a></li>
+                    <li><a class="menu-item" href="#" data-translate="menu_projects">Projects</a></li>
+                    <li><a class="menu-item" href="#" data-translate="menu_countries">Countries</a></li>
+                    <li><a class="menu-item" href="#" data-translate="menu_news">News</a></li>
+                    <li><a class="menu-item" href="#" data-translate="menu_policies">Our Policies</a></li>
+                    <li><a class="menu-item" href="#" data-translate="menu_career">Career</a></li>
+                    <li><a class="menu-item" href="news.html" data-translate="menu_contact">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="de-flex-col">
+                                <select id="language-switcher" onchange="setLanguage(this.value)">
+                                    <option value="en">EN</option>
+                                    <option value="ar">AR</option>
+                                    <option value="fr">FR</option>
+                                    <option value="si">SI</option>
+                                    <option value="dv">DV</option>
+                                </select>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="scrollbar-v show-on-scroll"></div>
+    </header>
 
-      <!-- page preloader begin -->
-      <div id="de-loader"></div>
-      <!-- page preloader close -->
-
-      <header class="transparent">
+    <!-- HERO SECTION -->
+    <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+      <img src="images/background/7.webp" class="jarallax-img" alt="">
+      <div class="gradient-edge-bottom h-50"></div>
+      <div class="sw-overlay op-5"></div>
+      <div class="abs w-80 bottom-10 z-2 w-100">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="de-flex">
-                <div class="de-flex-col">
-                  <!-- logo begin -->
-                  <div id="logo">
-                    <a href="index.html">
-                      <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
-                      <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" width="200" height="auto">
-                      <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" width="160" height="auto">
-                    </a>
-                  </div>
-                  <!-- logo close -->
+          <div class="row align-items-center justify-content-between gx-5">
+            <div class="col-lg-7">
+              <div class="relative wow mask-right">
+                <div class="text-start">
+                  <h1 class="section-title text-uppercase fs-sm-10vw mb-0 lh-1" data-translate="hero_title">Our Global Portfolio</h1>
                 </div>
+              </div>
+            </div>
+            <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
+              <p class="mb-0" data-translate="hero_description">A diversified portfolio spanning across Real Estate, Manufacturing, Trading, Hospitality, Media, and Capital & Finance sectors worldwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="de-flex-col">
-                  <div class="de-flex-col header-col-mid">
-                    <ul id="mainmenu">
-                      <li><a class="menu-item active" href="#section-hero">Home</a></li>
-                      <li><a class="menu-item" href="about.html">About Us</a></li>
-                      <li><a class="menu-item" href="#section-companies">Divisions</a></li>
-                      <li><a class="menu-item" href="#">Projects</a></li>
-                      <li><a class="menu-item" href="#">Countries</a></li>
-                      <li><a class="menu-item" href="#">News</a></li>
-                      <li><a class="menu-item" href="#">Our Policies</a></li>
-                      <li><a class="menu-item" href="#">Career</a></li>
-                      <li><a class="menu-item" href="news.html">Contact Us</a></li>
-                    </ul>
+    <!-- DIVISIONS INTRO -->
+    <section class="bg-dark text-light pt-60 pb-40">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h2 class="fs-32 mb-3" data-translate="divisions_title">Our Business Divisions</h2>
+            <p class="opacity-75" data-translate="divisions_description">Wish Group operates across multiple industries with a global footprint. Click on any division below to explore our companies in that sector.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANIES SECTION -->
+    <section id="section-companies" class="bg-dark section-dark text-light pt-40 pb-80 relative" aria-label="section">
+      <div class="globe-container" id="globe"></div>
+      <div class="container relative z-2">
+        <div class="row gy-4 gx-5 justify-content-center">
+          <div class="col-lg-10">
+            <div class="row g-4">
+
+              <!-- Real Estate -->
+              <div class="col-md-6">
+                <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('real-estate')">
+                  <div class="gradient-edge-bottom color op-5"></div>
+                  <div class="p-40 pb-40 z-2">
+                    <div class="text-start">
+                      <h2 class="fs-32 mb-2" data-translate="real_estate_title">Real Estate</h2>
+                      <div class="border-white-bottom-op-2 mb-3"></div>
+                      <p class="opacity-75 mb-4" data-translate="real_estate_description">Developing visionary properties across global markets</p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_wish_real_estate_name">WISH REAL ESTATE DEVELOPER L.L.C <span class="accent" data-translate="company_wish_real_estate_location">• UAE</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_wish_real_estate_focus">Villas and Apartments Development</span></p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_world_capital_name">WORLD CAPITAL CENTRE LTD <span class="accent" data-translate="company_world_capital_location">• Sri Lanka</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_world_capital_focus">Mixed-Use Developments</span></p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                      <span class="badge bg-dark text-light" data-translate="real_estate_companies_count">4 Companies</span>
+                      <span class="text-accent" data-translate="view_details">view more <i class="fas fa-arrow-right ms-1"></i></span>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="de-flex-col">
-                  <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
-                  <div class="menu_side_area">
-                    <span id="menu-btn"></span>
+              <!-- Manufacturing -->
+              <div class="col-md-6">
+                <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('manufacturing')">
+                  <div class="gradient-edge-bottom color op-5"></div>
+                  <div class="p-40 pb-40 z-2">
+                    <div class="text-start">
+                      <h2 class="fs-32 mb-2" data-translate="manufacturing_title">Manufacturing</h2>
+                      <div class="border-white-bottom-op-2 mb-3"></div>
+                      <p class="opacity-75 mb-4" data-translate="manufacturing_description">Producing quality goods across diverse industries</p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_one_apparels_name">THE ONE APPARELS CORPORATION LTD <span class="accent" data-translate="company_one_apparels_location">• Sri Lanka</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_one_apparels_focus">Apparel and Textiles</span></p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_wish_holdings_name">WISH HOLDINGS PVT LTD <span class="accent" data-translate="company_wish_holdings_location">• Maldives</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_wish_holdings_focus">Seafood Processing</span></p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                      <span class="badge bg-dark text-light" data-translate="manufacturing_companies_count">4 Companies</span>
+                      <span class="text-accent" data-translate="view_details">view more <i class="fas fa-arrow-right ms-1"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trading -->
+              <div class="col-md-6">
+                <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('trading')">
+                  <div class="gradient-edge-bottom color op-5"></div>
+                  <div class="p-40 pb-40 z-2">
+                    <div class="text-start">
+                      <h2 class="fs-32 mb-2" data-translate="trading_title">Trading</h2>
+                      <div class="border-white-bottom-op-2 mb-3"></div>
+                      <p class="opacity-75 mb-4" data-translate="trading_description">Global trade network connecting markets worldwide</p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_prime_wish_name">PRIME WISH TRADING L.L.C <span class="accent" data-translate="company_prime_wish_location">• UAE</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_prime_wish_focus">Seafood Distribution</span></p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_al_lincamo_name">AL LINCAMO INTERNATIONAL FZC <span class="accent" data-translate="company_al_lincamo_location">• UAE</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_al_lincamo_focus">Commodities Trading</span></p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                      <span class="badge bg-dark text-light" data-translate="trading_companies_count">4 Companies</span>
+                      <span class="text-accent" data-translate="view_details">view more <i class="fas fa-arrow-right ms-1"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hospitality -->
+              <div class="col-md-6">
+                <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('hospitality')">
+                  <div class="gradient-edge-bottom color op-5"></div>
+                  <div class="p-40 pb-40 z-2">
+                    <div class="text-start">
+                      <h2 class="fs-32 mb-2" data-translate="hospitality_title">Hospitality</h2>
+                      <div class="border-white-bottom-op-2 mb-3"></div>
+                      <p class="opacity-75 mb-4" data-translate="hospitality_description">Exceptional experiences in premier destinations</p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_wish_hospitality_name">WISH HOSPITALITY LTD <span class="accent" data-translate="company_wish_hospitality_location">• Sri Lanka</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_wish_hospitality_focus">Luxury Accommodation</span></p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_arena_blue_name">ARENA BLUE HOTEL AND RESORT LTD <span class="accent" data-translate="company_arena_blue_location">• Sri Lanka</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_arena_blue_focus">Resort Management</span></p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                      <span class="badge bg-dark text-light" data-translate="hospitality_companies_count">6 Companies</span>
+                      <span class="text-accent" data-translate="view_details">view more <i class="fas fa-arrow-right ms-1"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Media -->
+              <div class="col-md-6">
+                <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('media')">
+                  <div class="gradient-edge-bottom color op-5"></div>
+                  <div class="p-40 pb-40 z-2">
+                    <div class="text-start">
+                      <h2 class="fs-32 mb-2" data-translate="media_title">Media</h2>
+                      <div class="border-white-bottom-op-2 mb-3"></div>
+                      <p class="opacity-75 mb-4" data-translate="media_description">Creating engaging content and experiences</p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_wish_media_name">WISH MEDIA CORPORATION LTD <span class="accent" data-translate="company_wish_media_location">• Sri Lanka</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_wish_media_focus">Entertainment Production</span></p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                      <span class="badge bg-dark text-light" data-translate="media_companies_count">1 Company</span>
+                      <span class="text-accent" data-translate="view_details">view more <i class="fas fa-arrow-right ms-1"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Capital & Finance -->
+              <div class="col-md-6">
+                <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('capital-finance')">
+                  <div class="gradient-edge-bottom color op-5"></div>
+                  <div class="p-40 pb-40 z-2">
+                    <div class="text-start">
+                      <h2 class="fs-32 mb-2" data-translate="capital_finance_title">Capital & Finance</h2>
+                      <div class="border-white-bottom-op-2 mb-3"></div>
+                      <p class="opacity-75 mb-4" data-translate="capital_finance_description">Strategic investments and financial solutions</p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_wish_group_name">WISH GROUP L.L.C <span class="accent" data-translate="company_wish_group_location">• UAE</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_wish_group_focus">Group Investments</span></p>
+                    </div>
+                    <div class="company-item">
+                      <h4 data-translate="company_world_investment_name">WORLD INVESTMENT SOURCES HOLDINGS LTD <span class="accent" data-translate="company_world_investment_location">• Sri Lanka</span></h4>
+                      <p class="company-meta"><strong data-translate="focus_label">Focus:</strong> <span data-translate="company_world_investment_focus">Strategic Holdings</span></p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                      <span class="badge bg-dark text-light" data-translate="capital_finance_companies_count">3 Companies</span>
+                      <span class="text-accent" data-translate="view_details">view more <i class="fas fa-arrow-right ms-1"></i></span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </header>
-
-      <!-- HERO SECTION -->
-      <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-        <img src="images/background/7.webp" class="jarallax-img" alt="">
-        <div class="gradient-edge-bottom h-50"></div>
-        <div class="sw-overlay op-5"></div>
-        <div class="abs w-80 bottom-10 z-2 w-100">
-          <div class="container">
-            <div class="row align-items-center justify-content-between gx-5">
-              <div class="col-lg-7">
-                <div class="relative wow mask-right">
-                  <div class="text-start">
-                    <h1 class="section-title text-uppercase fs-sm-10vw mb-0 lh-1">Our Global Portfolio</h1>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
-                <p class="mb-0">A diversified portfolio spanning across Real Estate, Manufacturing, Trading, Hospitality, Media, and Capital & Finance sectors worldwide.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- DIVISIONS INTRO -->
-      <section class="bg-dark text-light pt-60 pb-40">
-        <div class="container">
-          <div class="row justify-content-center text-center">
-            <div class="col-lg-8">
-              <h2 class="fs-32 mb-3">Our Business Divisions</h2>
-              <p class="opacity-75">Wish Group operates across multiple industries with a global footprint. Click on any division below to explore our companies in that sector.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- COMPANIES SECTION -->
-      <section id="section-companies" class="bg-dark section-dark text-light pt-40 pb-80 relative" aria-label="section">
-        <div class="globe-container" id="globe"></div>
-        <div class="container relative z-2">
-          <div class="row gy-4 gx-5 justify-content-center">
-            <div class="col-lg-10">
-              <div class="row g-4">
-
-                <!-- 3.1 Real Estate -->
-                <div class="col-md-6">
-                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('real-estate')">
-                    <div class="gradient-edge-bottom color op-5"></div>
-                    <div class="p-40 pb-40 z-2">
-                      <div class="text-start">
-                        <h2 class="fs-32 mb-2">Real Estate</h2>
-                        <div class="border-white-bottom-op-2 mb-3"></div>
-                        <p class="opacity-75 mb-4">Developing visionary properties across global markets</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>WISH REAL ESTATE DEVELOPER L.L.C <span class="accent">• UAE</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Villas and Apartments Development</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>WORLD CAPITAL CENTRE LTD <span class="accent">• Sri Lanka</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Mixed-Use Developments</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between align-items-center mt-4">
-                        <span class="badge bg-dark text-light">4 Companies</span>
-                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3.2 Manufacturing -->
-                <div class="col-md-6">
-                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('manufacturing')">
-                    <div class="gradient-edge-bottom color op-5"></div>
-                    <div class="p-40 pb-40 z-2">
-                      <div class="text-start">
-                        <h2 class="fs-32 mb-2">Manufacturing</h2>
-                        <div class="border-white-bottom-op-2 mb-3"></div>
-                        <p class="opacity-75 mb-4">Producing quality goods across diverse industries</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>THE ONE APPARELS CORPORATION LTD <span class="accent">• Sri Lanka</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Apparel and Textiles</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>WISH HOLDINGS PVT LTD <span class="accent">• Maldives</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Seafood Processing</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between align-items-center mt-4">
-                        <span class="badge bg-dark text-light">4 Companies</span>
-                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3.3 Trading -->
-                <div class="col-md-6">
-                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('trading')">
-                    <div class="gradient-edge-bottom color op-5"></div>
-                    <div class="p-40 pb-40 z-2">
-                      <div class="text-start">
-                        <h2 class="fs-32 mb-2">Trading</h2>
-                        <div class="border-white-bottom-op-2 mb-3"></div>
-                        <p class="opacity-75 mb-4">Global trade network connecting markets worldwide</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>PRIME WISH TRADING L.L.C <span class="accent">• UAE</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Seafood Distribution</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>AL LINCAMO INTERNATIONAL FZC <span class="accent">• UAE</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Commodities Trading</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between align-items-center mt-4">
-                        <span class="badge bg-dark text-light">4 Companies</span>
-                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3.4 Hospitality -->
-                <div class="col-md-6">
-                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('hospitality')">
-                    <div class="gradient-edge-bottom color op-5"></div>
-                    <div class="p-40 pb-40 z-2">
-                      <div class="text-start">
-                        <h2 class="fs-32 mb-2">Hospitality</h2>
-                        <div class="border-white-bottom-op-2 mb-3"></div>
-                        <p class="opacity-75 mb-4">Exceptional experiences in premier destinations</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>WISH HOSPITALITY LTD <span class="accent">• Sri Lanka</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Luxury Accommodation</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>ARENA BLUE HOTEL AND RESORT LTD <span class="accent">• Sri Lanka</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Resort Management</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between align-items-center mt-4">
-                        <span class="badge bg-dark text-light">6 Companies</span>
-                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3.5 Media -->
-                <div class="col-md-6">
-                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('media')">
-                    <div class="gradient-edge-bottom color op-5"></div>
-                    <div class="p-40 pb-40 z-2">
-                      <div class="text-start">
-                        <h2 class="fs-32 mb-2">Media</h2>
-                        <div class="border-white-bottom-op-2 mb-3"></div>
-                        <p class="opacity-75 mb-4">Creating engaging content and experiences</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>WISH MEDIA CORPORATION LTD <span class="accent">• Sri Lanka</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Entertainment Production</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between align-items-center mt-4">
-                        <span class="badge bg-dark text-light">1 Company</span>
-                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3.6 Capital & Finance -->
-                <div class="col-md-6">
-                  <div class="relative overflow-hidden h-100 border-white-op-3 rounded-1 bg-blur company-card floating" onclick="openDivisionModal('capital-finance')">
-                    <div class="gradient-edge-bottom color op-5"></div>
-                    <div class="p-40 pb-40 z-2">
-                      <div class="text-start">
-                        <h2 class="fs-32 mb-2">Capital & Finance</h2>
-                        <div class="border-white-bottom-op-2 mb-3"></div>
-                        <p class="opacity-75 mb-4">Strategic investments and financial solutions</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>WISH GROUP L.L.C <span class="accent">• UAE</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Group Investments</p>
-                      </div>
-
-                      <div class="company-item">
-                        <h4>WORLD INVESTMENT SOURCES HOLDINGS LTD <span class="accent">• Sri Lanka</span></h4>
-                        <p class="company-meta"><strong>Focus:</strong> Strategic Holdings</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between align-items-center mt-4">
-                        <span class="badge bg-dark text-light">3 Companies</span>
-                        <span class="text-accent">View Details <i class="fas fa-arrow-right ms-1"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div><!-- /.row -->
-            </div><!-- /.col-lg-10 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
       </section>
 
       <!-- DIVISION MODALS -->
@@ -529,8 +558,8 @@
           <span class="close-modal" onclick="closeModal('real-estate')">&times;</span>
           <div class="division-header text-center">
             <div class="container">
-              <h2>Real Estate Division</h2>
-              <p class="division-description">Developing visionary properties that redefine skylines and communities across global markets, creating lasting value through innovative design and strategic locations.</p>
+              <h2 data-translate="real_estate_modal_title">Real Estate Division</h2>
+              <p class="division-description" data-translate="real_estate_modal_description">Developing visionary properties that redefine skylines and communities across global markets, creating lasting value through innovative design and strategic locations.</p>
             </div>
           </div>
           <div class="container py-5">
@@ -539,59 +568,58 @@
                 <i class="fas fa-building"></i>
               </div>
               <div>
-                <h3>WISH REAL ESTATE DEVELOPER L.L.C</h3>
-                <p class="text-accent mb-0">UAE • Real Estate Development</p>
+                <h3 data-translate="company_wish_real_estate_name">WISH REAL ESTATE DEVELOPER L.L.C</h3>
+                <p class="text-accent mb-0" data-translate="company_wish_real_estate_location">UAE • Real Estate Development</p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <p><strong>Type:</strong> Real Estate and Property Development Company</p>
-                <p><strong>Primary Activities:</strong></p>
+                <p><strong data-translate="type_label">Type:</strong> Real Estate and Property Development Company</p>
+                <p><strong data-translate="primary_activities_label">Primary Activities:</strong></p>
                 <ul>
-                  <li>Development of luxury villas and apartments</li>
-                  <li>Commercial property development</li>
-                  <li>Mixed-use community projects</li>
+                  <li data-translate="real_estate_activity_1">Development of luxury villas and apartments</li>
+                  <li data-translate="real_estate_activity_2">Commercial property development</li>
+                  <li data-translate="real_estate_activity_3">Mixed-use community projects</li>
                 </ul>
               </div>
               <div class="col-md-6">
-                <p><strong>Key Projects:</strong></p>
+                <p><strong data-translate="key_projects_label">Key Projects:</strong></p>
                 <ul>
-                  <li>Marina Vista Towers - Dubai</li>
-                  <li>Palm Jumeirah Luxury Villas</li>
-                  <li>Downtown Abu Dhabi Commercial Complex</li>
+                  <li data-translate="real_estate_project_1">Marina Vista Towers - Dubai</li>
+                  <li data-translate="real_estate_project_2">Palm Jumeirah Luxury Villas</li>
+                  <li data-translate="real_estate_project_3">Downtown Abu Dhabi Commercial Complex</li>
                 </ul>
-                <p><strong>Established:</strong> 2015</p>
+                <p><strong data-translate="established_label">Established:</strong> 2015</p>
               </div>
             </div>
             <hr class="my-4 border-white-op-2">
-            
             <div class="company-header mt-5">
               <div class="company-logo-placeholder">
                 <i class="fas fa-city"></i>
               </div>
               <div>
-                <h3>WORLD CAPITAL CENTRE LTD</h3>
-                <p class="text-accent mb-0">Sri Lanka • Mixed-Use Development</p>
+                <h3 data-translate="company_world_capital_name">WORLD CAPITAL CENTRE LTD</h3>
+                <p class="text-accent mb-0" data-translate="company_world_capital_location">Sri Lanka • Mixed-Use Development</p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <p><strong>Type:</strong> Real Estate and Property Development Company</p>
-                <p><strong>Primary Activities:</strong></p>
+                <p><strong data-translate="type_label">Type:</strong> Real Estate and Property Development Company</p>
+                <p><strong data-translate="primary_activities_label">Primary Activities:</strong></p>
                 <ul>
-                  <li>Large-scale mixed-use developments</li>
-                  <li>Urban regeneration projects</li>
-                  <li>Commercial and residential complexes</li>
+                  <li data-translate="world_capital_activity_1">Large-scale mixed-use developments</li>
+                  <li data-translate="world_capital_activity_2">Urban regeneration projects</li>
+                  <li data-translate="world_capital_activity_3">Commercial and residential complexes</li>
                 </ul>
               </div>
               <div class="col-md-6">
-                <p><strong>Key Projects:</strong></p>
+                <p><strong data-translate="key_projects_label">Key Projects:</strong></p>
                 <ul>
-                  <li>Colombo Financial District</li>
-                  <li>Galle Face Mixed Development</li>
-                  <li>Kandy Hills Residential Community</li>
+                  <li data-translate="world_capital_project_1">Colombo Financial District</li>
+                  <li data-translate="world_capital_project_2">Galle Face Mixed Development</li>
+                  <li data-translate="world_capital_project_3">Kandy Hills Residential Community</li>
                 </ul>
-                <p><strong>Established:</strong> 2018</p>
+                <p><strong data-translate="established_label">Established:</strong> 2018</p>
               </div>
             </div>
           </div>
@@ -604,8 +632,8 @@
           <span class="close-modal" onclick="closeModal('manufacturing')">&times;</span>
           <div class="division-header text-center">
             <div class="container">
-              <h2>Manufacturing Division</h2>
-              <p class="division-description">Producing quality goods across diverse industries with a commitment to innovation, sustainability, and operational excellence in our global manufacturing facilities.</p>
+              <h2 data-translate="manufacturing_modal_title">Manufacturing Division</h2>
+              <p class="division-description" data-translate="manufacturing_modal_description">Producing quality goods across diverse industries with a commitment to innovation, sustainability, and operational excellence in our global manufacturing facilities.</p>
             </div>
           </div>
           <div class="container py-5">
@@ -614,28 +642,28 @@
                 <i class="fas fa-tshirt"></i>
               </div>
               <div>
-                <h3>THE ONE APPARELS CORPORATION LTD</h3>
-                <p class="text-accent mb-0">Sri Lanka • Apparel Manufacturing</p>
+                <h3 data-translate="company_one_apparels_name">THE ONE APPARELS CORPORATION LTD</h3>
+                <p class="text-accent mb-0" data-translate="company_one_apparels_location">Sri Lanka • Apparel Manufacturing</p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <p><strong>Type:</strong> Manufacturing and Trading Company</p>
-                <p><strong>Primary Activities:</strong></p>
+                <p><strong data-translate="type_label">Type:</strong> Manufacturing and Trading Company</p>
+                <p><strong data-translate="primary_activities_label">Primary Activities:</strong></p>
                 <ul>
-                  <li>Design and production of apparel</li>
-                  <li>Textile manufacturing</li>
-                  <li>Private label production</li>
+                  <li data-translate="one_apparels_activity_1">Design and production of apparel</li>
+                  <li data-translate="one_apparels_activity_2">Textile manufacturing</li>
+                  <li data-translate="one_apparels_activity_3">Private label production</li>
                 </ul>
               </div>
               <div class="col-md-6">
-                <p><strong>Specializations:</strong></p>
+                <p><strong data-translate="specializations_label">Specializations:</strong></p>
                 <ul>
-                  <li>Sustainable and ethical manufacturing</li>
-                  <li>High-end fashion production</li>
-                  <li>Technical sportswear</li>
+                  <li data-translate="one_apparels_specialization_1">Sustainable and ethical manufacturing</li>
+                  <li data-translate="one_apparels_specialization_2">High-end fashion production</li>
+                  <li data-translate="one_apparels_specialization_3">Technical sportswear</li>
                 </ul>
-                <p><strong>Established:</strong> 2012</p>
+                <p><strong data-translate="established_label">Established:</strong> 2012</p>
               </div>
             </div>
           </div>
@@ -648,8 +676,8 @@
           <span class="close-modal" onclick="closeModal('trading')">&times;</span>
           <div class="division-header text-center">
             <div class="container">
-              <h2>Trading Division</h2>
-              <p class="division-description">Connecting global markets through our extensive trade network, specializing in high-demand commodities and consumer goods across multiple continents.</p>
+              <h2 data-translate="trading_modal_title">Trading Division</h2>
+              <p class="division-description" data-translate="trading_modal_description">Connecting global markets through our extensive trade network, specializing in high-demand commodities and consumer goods across multiple continents.</p>
             </div>
           </div>
           <div class="container py-5">
@@ -658,28 +686,28 @@
                 <i class="fas fa-exchange-alt"></i>
               </div>
               <div>
-                <h3>PRIME WISH TRADING L.L.C</h3>
-                <p class="text-accent mb-0">UAE • Commodities Trading</p>
+                <h3 data-translate="company_prime_wish_name">PRIME WISH TRADING L.L.C</h3>
+                <p class="text-accent mb-0" data-translate="company_prime_wish_location">UAE • Commodities Trading</p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <p><strong>Type:</strong> General Trading Company</p>
-                <p><strong>Primary Activities:</strong></p>
+                <p><strong data-translate="type_label">Type:</strong> General Trading Company</p>
+                <p><strong data-translate="primary_activities_label">Primary Activities:</strong></p>
                 <ul>
-                  <li>International seafood distribution</li>
-                  <li>Commodities trading</li>
-                  <li>Supply chain solutions</li>
+                  <li data-translate="prime_wish_activity_1">International seafood distribution</li>
+                  <li data-translate="prime_wish_activity_2">Commodities trading</li>
+                  <li data-translate="prime_wish_activity_3">Supply chain solutions</li>
                 </ul>
               </div>
               <div class="col-md-6">
-                <p><strong>Key Markets:</strong></p>
+                <p><strong data-translate="key_markets_label">Key Markets:</strong></p>
                 <ul>
-                  <li>Middle East</li>
-                  <li>Europe</li>
-                  <li>Asia-Pacific</li>
+                  <li data-translate="prime_wish_market_1">Middle East</li>
+                  <li data-translate="prime_wish_market_2">Europe</li>
+                  <li data-translate="prime_wish_market_3">Asia-Pacific</li>
                 </ul>
-                <p><strong>Established:</strong> 2016</p>
+                <p><strong data-translate="established_label">Established:</strong> 2016</p>
               </div>
             </div>
           </div>
@@ -692,8 +720,8 @@
           <span class="close-modal" onclick="closeModal('hospitality')">&times;</span>
           <div class="division-header text-center">
             <div class="container">
-              <h2>Hospitality Division</h2>
-              <p class="division-description">Creating exceptional experiences in the world's most sought-after destinations through our portfolio of luxury hotels, resorts, and hospitality services.</p>
+              <h2 data-translate="hospitality_modal_title">Hospitality Division</h2>
+              <p class="division-description" data-translate="hospitality_modal_description">Creating exceptional experiences in the world's most sought-after destinations through our portfolio of luxury hotels, resorts, and hospitality services.</p>
             </div>
           </div>
           <div class="container py-5">
@@ -702,28 +730,28 @@
                 <i class="fas fa-hotel"></i>
               </div>
               <div>
-                <h3>WISH HOSPITALITY LTD</h3>
-                <p class="text-accent mb-0">Sri Lanka • Luxury Accommodation</p>
+                <h3 data-translate="company_wish_hospitality_name">WISH HOSPITALITY LTD</h3>
+                <p class="text-accent mb-0" data-translate="company_wish_hospitality_location">Sri Lanka • Luxury Accommodation</p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <p><strong>Type:</strong> Hospitality and Tourism Company</p>
-                <p><strong>Primary Activities:</strong></p>
+                <p><strong data-translate="type_label">Type:</strong> Hospitality and Tourism Company</p>
+                <p><strong data-translate="primary_activities_label">Primary Activities:</strong></p>
                 <ul>
-                  <li>Luxury hotel management</li>
-                  <li>Resort operations</li>
-                  <li>Hospitality consultancy</li>
+                  <li data-translate="wish_hospitality_activity_1">Luxury hotel management</li>
+                  <li data-translate="wish_hospitality_activity_2">Resort operations</li>
+                  <li data-translate="wish_hospitality_activity_3">Hospitality consultancy</li>
                 </ul>
               </div>
               <div class="col-md-6">
-                <p><strong>Properties:</strong></p>
+                <p><strong data-translate="properties_label">Properties:</strong></p>
                 <ul>
-                  <li>Wish Colombo - 5 Star Urban Resort</li>
-                  <li>Blue Sands Beach Resort</li>
-                  <li>Mountain View Retreat</li>
+                  <li data-translate="wish_hospitality_property_1">Wish Colombo - 5 Star Urban Resort</li>
+                  <li data-translate="wish_hospitality_property_2">Blue Sands Beach Resort</li>
+                  <li data-translate="wish_hospitality_property_3">Mountain View Retreat</li>
                 </ul>
-                <p><strong>Established:</strong> 2014</p>
+                <p><strong data-translate="established_label">Established:</strong> 2014</p>
               </div>
             </div>
           </div>
@@ -736,8 +764,8 @@
           <span class="close-modal" onclick="closeModal('media')">&times;</span>
           <div class="division-header text-center">
             <div class="container">
-              <h2>Media Division</h2>
-              <p class="division-description>Creating engaging content and experiences that captivate audiences through innovative media production and distribution channels.</p>
+              <h2 data-translate="media_modal_title">Media Division</h2>
+              <p class="division-description" data-translate="media_modal_description">Creating engaging content and experiences that captivate audiences through innovative media production and distribution channels.</p>
             </div>
           </div>
           <div class="container py-5">
@@ -746,28 +774,28 @@
                 <i class="fas fa-film"></i>
               </div>
               <div>
-                <h3>WISH MEDIA CORPORATION LTD</h3>
-                <p class="text-accent mb-0">Sri Lanka • Media Production</p>
+                <h3 data-translate="company_wish_media_name">WISH MEDIA CORPORATION LTD</h3>
+                <p class="text-accent mb-0" data-translate="company_wish_media_location">Sri Lanka • Media Production</p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <p><strong>Type:</strong> Media and Entertainment Company</p>
-                <p><strong>Primary Activities:</strong></p>
+                <p><strong data-translate="type_label">Type:</strong> Media and Entertainment Company</p>
+                <p><strong data-translate="primary_activities_label">Primary Activities:</strong></p>
                 <ul>
-                  <li>Film and television production</li>
-                  <li>Digital content creation</li>
-                  <li>Media distribution</li>
+                  <li data-translate="wish_media_activity_1">Film and television production</li>
+                  <li data-translate="wish_media_activity_2">Digital content creation</li>
+                  <li data-translate="wish_media_activity_3">Media distribution</li>
                 </ul>
               </div>
               <div class="col-md-6">
-                <p><strong>Notable Productions:</strong></p>
+                <p><strong data-translate="notable_productions_label">Notable Productions:</strong></p>
                 <ul>
-                  <li>Island Dreams TV Series</li>
-                  <li>Wish Entertainment Network</li>
-                  <li>Digital streaming platform</li>
+                  <li data-translate="wish_media_production_1">Island Dreams TV Series</li>
+                  <li data-translate="wish_media_production_2">Wish Entertainment Network</li>
+                  <li data-translate="wish_media_production_3">Digital streaming platform</li>
                 </ul>
-                <p><strong>Established:</strong> 2017</p>
+                <p><strong data-translate="established_label">Established:</strong> 2017</p>
               </div>
             </div>
           </div>
@@ -780,8 +808,8 @@
           <span class="close-modal" onclick="closeModal('capital-finance')">&times;</span>
           <div class="division-header text-center">
             <div class="container">
-              <h2>Capital & Finance Division</h2>
-              <p class="division-description">Providing strategic investments and financial solutions that power growth across our group companies and partner organizations worldwide.</p>
+              <h2 data-translate="capital_finance_modal_title">Capital & Finance Division</h2>
+              <p class="division-description" data-translate="capital_finance_modal_description">Providing strategic investments and financial solutions that power growth across our group companies and partner organizations worldwide.</p>
             </div>
           </div>
           <div class="container py-5">
@@ -790,42 +818,40 @@
                 <i class="fas fa-chart-line"></i>
               </div>
               <div>
-                <h3>WISH GROUP L.L.C</h3>
-                <p class="text-accent mb-0">UAE • Group Investments</p>
+                <h3 data-translate="company_wish_group_name">WISH GROUP L.L.C</h3>
+                <p class="text-accent mb-0" data-translate="company_wish_group_location">UAE • Group Investments</p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <p><strong>Type:</strong> Main Investment Company of Group</p>
-                <p><strong>Primary Activities:</strong></p>
+                <p><strong data-translate="type_label">Type:</strong> Main Investment Company of Group</p>
+                <p><strong data-translate="primary_activities_label">Primary Activities:</strong></p>
                 <ul>
-                  <li>Strategic investments</li>
-                  <li>Portfolio management</li>
-                  <li>Group financial oversight</li>
+                  <li data-translate="wish_group_activity_1">Strategic investments</li>
+                  <li data-translate="wish_group_activity_2">Portfolio management</li>
+                  <li data-translate="wish_group_activity_3">Group financial oversight</li>
                 </ul>
               </div>
               <div class="col-md-6">
-                <p><strong>Key Focus Areas:</strong></p>
+                <p><strong data-translate="key_focus_areas_label">Key Focus Areas:</strong></p>
                 <ul>
-                  <li>Emerging markets</li>
-                  <li>Sustainable investments</li>
-                  <li>Technology ventures</li>
+                  <li data-translate="wish_group_focus_1">Emerging markets</li>
+                  <li data-translate="wish_group_focus_2">Sustainable investments</li>
+                  <li data-translate="wish_group_focus_3">Technology ventures</li>
                 </ul>
-                <p><strong>Established:</strong> 2010</p>
+                <p><strong data-translate="established_label">Established:</strong> 2010</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- footer begin -->
+      <!-- Footer -->
       <footer class="text-light section-dark pt-5">
         <div class="container">
           <div class="row g-4">
-
-            <!-- Logo & Social -->
             <div class="col-sm-6 col-lg-3 text-center">
-              <img src="images\wishgroup\logo remove.png" class="w-150px mb-3" alt="">
+              <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
               <div class="social-icons mt-3">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -834,179 +860,895 @@
                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
               </div>
             </div>
-
-            <!-- Address -->
             <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-              <h3 class="fs-20 mb-3">Global Headquarters</h3>
-              <p class="mb-0">Wish Group LLC</p>
+              <h3 class="fs-20 mb-3" data-translate="footer_headquarters_title">Global Headquarters</h3>
+              <p class="mb-0" data-translate="footer_headquarters_name">Wish Group LLC</p>
               <p class="mb-0">Business Bay, Dubai</p>
-              <p>United Arab Emirates</p>
+              <p data-translate="footer_headquarters_location">United Arab Emirates</p>
             </div>
-
-            <!-- Quick Links -->
             <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-              <h3 class="fs-20 mb-3">Quick Links</h3>
+              <h3 class="fs-20 mb-3" data-translate="footer_quick_links_title">Quick Links</h3>
               <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-light">Home</a></li>
-                <li><a href="about.html" class="text-light">About Us</a></li>
-                <li><a href="#section-companies" class="text-light">Divisions</a></li>
-                <li><a href="#" class="text-light">Projects</a></li>
-                <li><a href="#" class="text-light">Contact Us</a></li>
+                <li><a href="#" class="text-light" data-translate="menu_home">Home</a></li>
+                <li><a href="about.html" class="text-light" data-translate="menu_about">About Us</a></li>
+                <li><a href="#section-companies" class="text-light" data-translate="menu_divisions">Divisions</a></li>
+                <li><a href="#" class="text-light" data-translate="menu_projects">Projects</a></li>
+                <li><a href="#" class="text-light" data-translate="menu_contact">Contact Us</a></li>
               </ul>
             </div>
-
-            <!-- Contact Us with Email -->
             <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-              <h3 class="fs-20 mb-3">Contact Us</h3>
-              <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-              <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-              <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-              <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+              <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+              <p class="mb-1" data-translate="footer_phone_1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+              <p class="mb-1" data-translate="footer_phone_2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+              <p class="mb-0" data-translate="footer_email_1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+              <p class="mb-0" data-translate="footer_email_2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
             </div>
-
           </div>
         </div>
-
-        <!-- Subfooter -->
         <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
           <div class="container">
             <div class="row">
               <div class="col-md-12 text-center">
-                &copy; 2025 Wish Group. All rights reserved. <span class="d-block d-md-inline">A global enterprise spanning 6 industries across 8 countries.</span>
+                <span data-translate="footer_copyright">© 2025 Wish Group. All rights reserved.</span> <span class="d-block d-md-inline" data-translate="footer_tagline">A global enterprise spanning 6 industries across 8 countries.</span>
               </div>
             </div>
           </div>
         </div>
       </footer>
-      <!-- footer end -->
+    </div>
 
-    </div><!-- /#wrapper -->
-
-<!-- Javascript Files -->
-  <script src="js/vendors.js"></script>
-  <script src="js/designesia.js"></script>
-  <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
-  <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
-
-  <script>
-    // Modal functions with enhanced animations
-    function openDivisionModal(division) {
-      const modal = document.getElementById(division + '-modal');
-      document.body.style.overflow = 'hidden';
-      
-      // Show modal
-      modal.style.display = 'block';
-      
-      // Trigger reflow to enable animation
-      void modal.offsetWidth;
-      
-      // Add show class to trigger animations
-      modal.classList.add('show');
-      
-      // Animate company items sequentially
-      const companyItems = modal.querySelectorAll('.company-item');
-      companyItems.forEach((item, index) => {
-        item.style.animationDelay = `${index * 0.15}s`;
-      });
+    <!-- Javascript Files -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+ <script>
+ 
+ function setLanguage(lang) {
+    // Ensure the selected language exists in translations
+    if (!translations[lang]) {
+        console.error(`Language ${lang} not found in translations`);
+        return;
     }
-    
-    function closeModal(division) {
-      const modal = document.getElementById(division + '-modal');
-      
-      // Remove show class to trigger fade out
-      modal.classList.remove('show');
-      
-      // Wait for animation to complete before hiding
-      setTimeout(() => {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }, 300); // Match this with your CSS transition duration
+
+    // Update the document's language attribute for RTL support
+    document.body.setAttribute('lang', lang);
+
+    // Apply RTL styling for Arabic
+    if (lang === 'ar') {
+        document.body.classList.add('rtl');
+    } else {
+        document.body.classList.remove('rtl');
     }
+
+    // Get all elements with data-translate attribute
+    const elements = document.querySelectorAll('[data-translate]');
     
-    // Close modal when clicking outside content
-    window.onclick = function(event) {
-      if (event.target.className === 'division-modal') {
-        const modalId = event.target.id;
-        const division = modalId.replace('-modal', '');
+    // Update text content based on selected language
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            // Handle HTML content (like spans in vision_description)
+            if (element.innerHTML.includes('<span')) {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation key ${key} not found for language ${lang}`);
+        }
+    });
+}
+</script>
+    <script>
+      // Translations object
+      const translations = {
+  en: {
+    page_title: "Wish Group - Our Companies",
+    scroll_to_top: "Scroll to top",
+    menu_home: "Home",
+    menu_about: "About Us",
+    menu_divisions: "Divisions",
+    menu_projects: "Projects",
+    menu_countries: "Countries",
+    menu_news: "News",
+    menu_policies: "Our Policies",
+    menu_career: "Career",
+    menu_contact: "Contact Us",
+    hero_title: "Our Global Portfolio",
+    hero_description: "A diversified portfolio spanning across Real Estate, Manufacturing, Trading, Hospitality, Media, and Capital & Finance sectors worldwide.",
+    divisions_title: "Our Business Divisions",
+    divisions_description: "Wish Group operates across multiple industries with a global footprint. Click on any division below to explore our companies in that sector.",
+    focus_label: "Focus:",
+    view_details: "view more",
+    type_label: "Type:",
+    primary_activities_label: "Primary Activities:",
+    key_projects_label: "Key Projects:",
+    specializations_label: "Specializations:",
+    key_markets_label: "Key Markets:",
+    properties_label: "Properties:",
+    notable_productions_label: "Notable Productions:",
+    key_focus_areas_label: "Key Focus Areas:",
+    established_label: "Established:",
+    real_estate_title: "Real Estate",
+    real_estate_description: "Developing visionary properties across global markets",
+    real_estate_modal_title: "Real Estate Division",
+    real_estate_modal_description: "Developing visionary properties that redefine skylines and communities across global markets, creating lasting value through innovative design and strategic locations.",
+    company_wish_real_estate_name: "WISH REAL ESTATE DEVELOPER L.L.C",
+    company_wish_real_estate_location: "UAE",
+    company_wish_real_estate_focus: "Villas and Apartments Development",
+    real_estate_activity_1: "Development of luxury villas and apartments",
+    real_estate_activity_2: "Commercial property development",
+    real_estate_activity_3: "Mixed-use community projects",
+    real_estate_project_1: "Marina Vista Towers - Dubai",
+    real_estate_project_2: "Palm Jumeirah Luxury Villas",
+    real_estate_project_3: "Downtown Abu Dhabi Commercial Complex",
+    company_world_capital_name: "WORLD CAPITAL CENTRE LTD",
+    company_world_capital_location: "Sri Lanka",
+    company_world_capital_focus: "Mixed-Use Developments",
+    world_capital_activity_1: "Large-scale mixed-use developments",
+    world_capital_activity_2: "Urban regeneration projects",
+    world_capital_activity_3: "Commercial and residential complexes",
+    world_capital_project_1: "Colombo Financial District",
+    world_capital_project_2: "Galle Face Mixed Development",
+    world_capital_project_3: "Kandy Hills Residential Community",
+    real_estate_companies_count: "4 Companies",
+    manufacturing_title: "Manufacturing",
+    manufacturing_description: "Producing quality goods across diverse industries",
+    manufacturing_modal_title: "Manufacturing Division",
+    manufacturing_modal_description: "Producing quality goods across diverse industries with a commitment to innovation, sustainability, and operational excellence in our global manufacturing facilities.",
+    company_one_apparels_name: "THE ONE APPARELS CORPORATION LTD",
+    company_one_apparels_location: "Sri Lanka",
+    company_one_apparels_focus: "Apparel and Textiles",
+    one_apparels_activity_1: "Design and production of apparel",
+    one_apparels_activity_2: "Textile manufacturing",
+    one_apparels_activity_3: "Private label production",
+    one_apparels_specialization_1: "Sustainable and ethical manufacturing",
+    one_apparels_specialization_2: "High-end fashion production",
+    one_apparels_specialization_3: "Technical sportswear",
+    company_wish_holdings_name: "WISH HOLDINGS PVT LTD",
+    company_wish_holdings_location: "Maldives",
+    company_wish_holdings_focus: "Seafood Processing",
+    manufacturing_companies_count: "4 Companies",
+    trading_title: "Trading",
+    trading_description: "Global trade network connecting markets worldwide",
+    trading_modal_title: "Trading Division",
+    trading_modal_description: "Connecting global markets through our extensive trade network, specializing in high-demand commodities and consumer goods across multiple continents.",
+    company_prime_wish_name: "PRIME WISH TRADING L.L.C",
+    company_prime_wish_location: "UAE",
+    company_prime_wish_focus: "Seafood Distribution",
+    prime_wish_activity_1: "International seafood distribution",
+    prime_wish_activity_2: "Commodities trading",
+    prime_wish_activity_3: "Supply chain solutions",
+    prime_wish_market_1: "Middle East",
+    prime_wish_market_2: "Europe",
+    prime_wish_market_3: "Asia-Pacific",
+    company_al_lincamo_name: "AL LINCAMO INTERNATIONAL FZC",
+    company_al_lincamo_location: "UAE",
+    company_al_lincamo_focus: "Commodities Trading",
+    trading_companies_count: "4 Companies",
+    hospitality_title: "Hospitality",
+    hospitality_description: "Exceptional experiences in premier destinations",
+    hospitality_modal_title: "Hospitality Division",
+    hospitality_modal_description: "Creating exceptional experiences in the world's most sought-after destinations through our portfolio of luxury hotels, resorts, and hospitality services.",
+    company_wish_hospitality_name: "WISH HOSPITALITY LTD",
+    company_wish_hospitality_location: "Sri Lanka",
+    company_wish_hospitality_focus: "Luxury Accommodation",
+    wish_hospitality_activity_1: "Luxury hotel management",
+    wish_hospitality_activity_2: "Resort operations",
+    wish_hospitality_activity_3: "Hospitality consultancy",
+    wish_hospitality_property_1: "Wish Colombo - 5 Star Urban Resort",
+    wish_hospitality_property_2: "Blue Sands Beach Resort",
+    wish_hospitality_property_3: "Mountain View Retreat",
+    company_arena_blue_name: "ARENA BLUE HOTEL AND RESORT LTD",
+    company_arena_blue_location: "Sri Lanka",
+    company_arena_blue_focus: "Resort Management",
+    hospitality_companies_count: "6 Companies",
+    media_title: "Media",
+    media_description: "Creating engaging content and experiences",
+    media_modal_title: "Media Division",
+    media_modal_description: "Creating engaging content and experiences that captivate audiences through innovative media production and distribution channels.",
+    company_wish_media_name: "WISH MEDIA CORPORATION LTD",
+    company_wish_media_location: "Sri Lanka",
+    company_wish_media_focus: "Entertainment Production",
+    wish_media_activity_1: "Film and television production",
+    wish_media_activity_2: "Digital content creation",
+    wish_media_activity_3: "Media distribution",
+    wish_media_production_1: "Island Dreams TV Series",
+    wish_media_production_2: "Wish Entertainment Network",
+    wish_media_production_3: "Digital streaming platform",
+    media_companies_count: "1 Company",
+    capital_finance_title: "Capital & Finance",
+    capital_finance_description: "Strategic investments and financial solutions",
+    capital_finance_modal_title: "Capital & Finance Division",
+    capital_finance_modal_description: "Providing strategic investments and financial solutions that power growth across our group companies and partner organizations worldwide.",
+    company_wish_group_name: "WISH GROUP L.L.C",
+    company_wish_group_location: "UAE",
+    company_wish_group_focus: "Group Investments",
+    wish_group_activity_1: "Strategic investments",
+    wish_group_activity_2: "Portfolio management",
+    wish_group_activity_3: "Group financial oversight",
+    wish_group_focus_1: "Emerging markets",
+    wish_group_focus_2: "Sustainable investments",
+    wish_group_focus_3: "Technology ventures",
+    company_world_investment_name: "WORLD INVESTMENT SOURCES HOLDINGS LTD",
+    company_world_investment_location: "Sri Lanka",
+    company_world_investment_focus: "Strategic Holdings",
+    capital_finance_companies_count: "3 Companies",
+    footer_headquarters_title: "Global Headquarters",
+    footer_headquarters_name: "Wish Group LLC",
+    footer_headquarters_location: "Business Bay, Dubai, United Arab Emirates",
+    footer_quick_links_title: "Quick Links",
+    footer_contact_title: "Contact Us",
+    footer_phone_1: "T. +971 4259 7167",
+    footer_phone_2: "M. +971 4259 4795",
+    footer_email_1: "E. info@wishgroup.ae",
+    footer_email_2: "E. info@wishgroup.world",
+    footer_copyright: "© 2025 Wish Group. All rights reserved.",
+    footer_tagline: "A global enterprise spanning 6 industries across 8 countries."
+  },
+  ar: {
+    page_title: "مجموعة ويش - شركاتنا",
+    scroll_to_top: "التمرير إلى الأعلى",
+    menu_home: "الرئيسية",
+    menu_about: "معلومات عنا",
+    menu_divisions: "الأقسام",
+    menu_projects: "المشاريع",
+    menu_countries: "الدول",
+    menu_news: "الأخبار",
+    menu_policies: "سياساتنا",
+    menu_career: "وظائف",
+    menu_contact: "اتصل بنا",
+    hero_title: "محفظتنا العالمية",
+    hero_description: "محفظة متنوعة تمتد عبر قطاعات العقارات، التصنيع، التجارة، الضيافة، الإعلام، والرأسمال والتمويل في جميع أنحاء العالم.",
+    divisions_title: "أقسام أعمالنا",
+    divisions_description: "تعمل مجموعة ويش عبر صناعات متعددة ببصمة عالمية. انقر على أي قسم أدناه لاستكشاف شركاتنا في هذا القطاع.",
+    focus_label: "التركيز:",
+    view_details: "عرض التفاصيل",
+    type_label: "النوع:",
+    primary_activities_label: "الأنشطة الأساسية:",
+    key_projects_label: "المشاريع الرئيسية:",
+    specializations_label: "التخصصات:",
+    key_markets_label: "الأسواق الرئيسية:",
+    properties_label: "الخصائص:",
+    notable_productions_label: "الإنتاجات البارزة:",
+    key_focus_areas_label: "مجالات التركيز الرئيسية:",
+    established_label: "تأسست:",
+    real_estate_title: "العقارات",
+    real_estate_description: "تطوير عقارات رؤيوية عبر الأسواق العالمية",
+    real_estate_modal_title: "قسم العقارات",
+    real_estate_modal_description: "تطوير عقارات رؤيوية تعيد تعريف أفق المجتمعات والمدن عبر الأسواق العالمية، مما يخلق قيمة دائمة من خلال التصميم المبتكر والمواقع الاستراتيجية.",
+    company_wish_real_estate_name: "ويش ريال استيت ديفيلوبر ذ.م.م",
+    company_wish_real_estate_location: "الإمارات",
+    company_wish_real_estate_focus: "تطوير الفلل والشقق",
+    real_estate_activity_1: "تطوير الفلل والشقق الفاخرة",
+    real_estate_activity_2: "تطوير العقارات التجارية",
+    real_estate_activity_3: "مشاريع المجتمعات متعددة الاستخدامات",
+    real_estate_project_1: "أبراج مارينا فيستا - دبي",
+    real_estate_project_2: "فلل بالم جميرا الفاخرة",
+    real_estate_project_3: "مجمع أبوظبي التجاري وسط المدينة",
+    company_world_capital_name: "ورلد كابيتال سنتر ليمتد",
+    company_world_capital_location: "سريلانكا",
+    company_world_capital_focus: "التطويرات متعددة الاستخدامات",
+    world_capital_activity_1: "تطويرات واسعة النطاق متعددة الاستخدامات",
+    world_capital_activity_2: "مشاريع تجديد الحضر",
+    world_capital_activity_3: "مجمعات تجارية وسكنية",
+    world_capital_project_1: "منطقة كولومبو المالية",
+    world_capital_project_2: "تطوير جالي فيس متعدد الاستخدامات",
+    world_capital_project_3: "مجتمع كاندي هيلز السكني",
+    real_estate_companies_count: "4 شركات",
+    manufacturing_title: "التصنيع",
+    manufacturing_description: "إنتاج سلع عالية الجودة عبر صناعات متنوعة",
+    manufacturing_modal_title: "قسم التصنيع",
+    manufacturing_modal_description: "إنتاج سلع عالية الجودة عبر صناعات متنوعة مع التزام بالابتكار، الاستدامة، والتميز التشغيلي في مرافق التصنيع العالمية الخاصة بنا.",
+    company_one_apparels_name: "ذي ون أباريلز كوربوريشن ليمتد",
+    company_one_apparels_location: "سريلانكا",
+    company_one_apparels_focus: "الملابس والمنسوجات",
+    one_apparels_activity_1: "تصميم وإنتاج الملابس",
+    one_apparels_activity_2: "تصنيع المنسوجات",
+    one_apparels_activity_3: "إنتاج العلامات التجارية الخاصة",
+    one_apparels_specialization_1: "التصنيع المستدام والأخلاقي",
+    one_apparels_specialization_2: "إنتاج الأزياء الراقية",
+    one_apparels_specialization_3: "الملابس الرياضية التقنية",
+    company_wish_holdings_name: "ويش هولدينغز بي في تي ليمتد",
+    company_wish_holdings_location: "المالديف",
+    company_wish_holdings_focus: "معالجة المأكولات البحرية",
+    manufacturing_companies_count: "4 شركات",
+    trading_title: "التجارة",
+    trading_description: "شبكة تجارة عالمية تربط الأسواق في جميع أنحاء العالم",
+    trading_modal_title: "قسم التجارة",
+    trading_modal_description: "ربط الأسواق العالمية من خلال شبكة تجارة واسعة، متخصصة في السلع والمنتجات الاستهلاكية عالية الطلب عبر قارات متعددة.",
+    company_prime_wish_name: "برايم ويش تريدينغ ذ.م.م",
+    company_prime_wish_location: "الإمارات",
+    company_prime_wish_focus: "توزيع المأكولات البحرية",
+    prime_wish_activity_1: "توزيع المأكولات البحرية الدولية",
+    prime_wish_activity_2: "تجارة السلع",
+    prime_wish_activity_3: "حلول سلسلة التوريد",
+    prime_wish_market_1: "الشرق الأوسط",
+    prime_wish_market_2: "أوروبا",
+    prime_wish_market_3: "آسيا والمحيط الهادئ",
+    company_al_lincamo_name: "ال لينكامو إنترناشيونال إف زي سي",
+    company_al_lincamo_location: "الإمارات",
+    company_al_lincamo_focus: "تجارة السلع",
+    trading_companies_count: "4 شركات",
+    hospitality_title: "الضيافة",
+    hospitality_description: "تجارب استثنائية في وجهات متميزة",
+    hospitality_modal_title: "قسم الضيافة",
+    hospitality_modal_description: "خلق تجارب استثنائية في أكثر الوجهات المرغوبة في العالم من خلال محفظتنا من الفنادق الفاخرة، المنتجعات، وخدمات الضيافة.",
+    company_wish_hospitality_name: "ويش هوسبيتاليتي ليمتد",
+    company_wish_hospitality_location: "سريلانكا",
+    company_wish_hospitality_focus: "الإقامة الفاخرة",
+    wish_hospitality_activity_1: "إدارة الفنادق الفاخرة",
+    wish_hospitality_activity_2: "عمليات المنتجعات",
+    wish_hospitality_activity_3: "الاستشارات في مجال الضيافة",
+    wish_hospitality_property_1: "ويش كولومبو - منتجع حضري 5 نجوم",
+    wish_hospitality_property_2: "منتجع بلو ساندس الشاطئي",
+    wish_hospitality_property_3: "ملاذ ماونتن فيو",
+    company_arena_blue_name: "أرينا بلو هوتيل آند ريزورت ليمتد",
+    company_arena_blue_location: "سريلانكا",
+    company_arena_blue_focus: "إدارة المنتجعات",
+    hospitality_companies_count: "6 شركات",
+    media_title: "الإعلام",
+    media_description: "خلق محتوى وتجارب جذابة",
+    media_modal_title: "قسم الإعلام",
+    media_modal_description: "خلق محتوى وتجارب جذابة تأسر الجماهير من خلال قنوات إنتاج وتوزيع إعلامية مبتكرة.",
+    company_wish_media_name: "ويش ميديا كوربوريشن ليمتد",
+    company_wish_media_location: "سريلانكا",
+    company_wish_media_focus: "إنتاج الترفيه",
+    wish_media_activity_1: "إنتاج الأفلام والتلفزيون",
+    wish_media_activity_2: "إنشاء المحتوى الرقمي",
+    wish_media_activity_3: "توزيع الإعلام",
+    wish_media_production_1: "سلسلة أحلام الجزيرة التلفزيونية",
+    wish_media_production_2: "شبكة ويش الترفيهية",
+    wish_media_production_3: "منصة البث الرقمي",
+    media_companies_count: "شركة واحدة",
+    capital_finance_title: "الرأسمال والتمويل",
+    capital_finance_description: "استثمارات استراتيجية وحلول مالية",
+    capital_finance_modal_title: "قسم الرأسمال والتمويل",
+    capital_finance_modal_description: "توفير استثمارات استراتيجية وحلول مالية تدعم النمو عبر شركات المجموعة ومنظمات الشركاء في جميع أنحاء العالم.",
+    company_wish_group_name: "ويش جروب ذ.م.م",
+    company_wish_group_location: "الإمارات",
+    company_wish_group_focus: "استثمارات المجموعة",
+    wish_group_activity_1: "الاستثمارات الاستراتيجية",
+    wish_group_activity_2: "إدارة المحفظة",
+    wish_group_activity_3: "الإشراف المالي للمجموعة",
+    wish_group_focus_1: "الأسواق الناشئة",
+    wish_group_focus_2: "الاستثمارات المستدامة",
+    wish_group_focus_3: "المشاريع التكنولوجية",
+    company_world_investment_name: "ورلد إنفستمنت سورسز هولدينغز ليمتد",
+    company_world_investment_location: "سريلانكا",
+    company_world_investment_focus: "الحيازات الاستراتيجية",
+    capital_finance_companies_count: "3 شركات",
+    footer_headquarters_title: "المقر العالمي",
+    footer_headquarters_name: "ويش جروب ذ.م.م",
+    footer_headquarters_location: "خليج الأعمال، دبي، الإمارات العربية المتحدة",
+    footer_quick_links_title: "روابط سريعة",
+    footer_contact_title: "اتصل بنا",
+    footer_phone_1: "هـ. +971 4259 7167",
+    footer_phone_2: "ج. +971 4259 4795",
+    footer_email_1: "ب. info@wishgroup.ae",
+    footer_email_2: "ب. info@wishgroup.world",
+    footer_copyright: "© 2025 ويش جروب. جميع الحقوق محفوظة.",
+    footer_tagline: "مؤسسة عالمية تمتد عبر 6 صناعات في 8 دول."
+  },
+  fr: {
+    page_title: "Groupe Wish - Nos Entreprises",
+    scroll_to_top: "Retour en haut",
+    menu_home: "Accueil",
+    menu_about: "À propos de nous",
+    menu_divisions: "Divisions",
+    menu_projects: "Projets",
+    menu_countries: "Pays",
+    menu_news: "Actualités",
+    menu_policies: "Nos politiques",
+    menu_career: "Carrière",
+    menu_contact: "Contactez-nous",
+    hero_title: "Notre portefeuille mondial",
+    hero_description: "Un portefeuille diversifié couvrant l'immobilier, la fabrication, le commerce, l'hospitalité, les médias et les secteurs du capital et de la finance à travers le monde.",
+    divisions_title: "Nos divisions commerciales",
+    divisions_description: "Le groupe Wish opère dans plusieurs industries avec une présence mondiale. Cliquez sur une division ci-dessous pour découvrir nos entreprises dans ce secteur.",
+    focus_label: "Focus :",
+    view_details: "Voir les détails",
+    type_label: "Type :",
+    primary_activities_label: "Activités principales :",
+    key_projects_label: "Projets clés :",
+    specializations_label: "Spécialisations :",
+    key_markets_label: "Marchés clés :",
+    properties_label: "Propriétés :",
+    notable_productions_label: "Productions notables :",
+    key_focus_areas_label: "Domaines de focus clés :",
+    established_label: "Établi :",
+    real_estate_title: "Immobilier",
+    real_estate_description: "Développement de propriétés visionnaires sur les marchés mondiaux",
+    real_estate_modal_title: "Division Immobilière",
+    real_estate_modal_description: "Développement de propriétés visionnaires qui redéfinissent les horizons et les communautés sur les marchés mondiaux, créant une valeur durable grâce à un design innovant et des emplacements stratégiques.",
+    company_wish_real_estate_name: "WISH REAL ESTATE DEVELOPER L.L.C",
+    company_wish_real_estate_location: "Émirats Arabes Unis",
+    company_wish_real_estate_focus: "Développement de villas et appartements",
+    real_estate_activity_1: "Développement de villas et appartements de luxe",
+    real_estate_activity_2: "Développement immobilier commercial",
+    real_estate_activity_3: "Projets communautaires à usage mixte",
+    real_estate_project_1: "Tours Marina Vista - Dubaï",
+    real_estate_project_2: "Villas de luxe Palm Jumeirah",
+    real_estate_project_3: "Complexe commercial du centre-ville d'Abou Dhabi",
+    company_world_capital_name: "WORLD CAPITAL CENTRE LTD",
+    company_world_capital_location: "Sri Lanka",
+    company_world_capital_focus: "Développements à usage mixte",
+    world_capital_activity_1: "Développements à usage mixte à grande échelle",
+    world_capital_activity_2: "Projets de régénération urbaine",
+    world_capital_activity_3: "Complexes commerciaux et résidentiels",
+    world_capital_project_1: "Quartier financier de Colombo",
+    world_capital_project_2: "Développement mixte de Galle Face",
+    world_capital_project_3: "Communauté résidentielle de Kandy Hills",
+    real_estate_companies_count: "4 Entreprises",
+    manufacturing_title: "Fabrication",
+    manufacturing_description: "Production de biens de qualité dans diverses industries",
+    manufacturing_modal_title: "Division Fabrication",
+    manufacturing_modal_description: "Production de biens de qualité dans diverses industries avec un engagement envers l'innovation, la durabilité et l'excellence opérationnelle dans nos installations de fabrication mondiales.",
+    company_one_apparels_name: "THE ONE APPARELS CORPORATION LTD",
+    company_one_apparels_location: "Sri Lanka",
+    company_one_apparels_focus: "Vêtements et textiles",
+    one_apparels_activity_1: "Conception et production de vêtements",
+    one_apparels_activity_2: "Fabrication de textiles",
+    one_apparels_activity_3: "Production de marques privées",
+    one_apparels_specialization_1: "Fabrication durable et éthique",
+    one_apparels_specialization_2: "Production de mode haut de gamme",
+    one_apparels_specialization_3: "Vêtements de sport techniques",
+    company_wish_holdings_name: "WISH HOLDINGS PVT LTD",
+    company_wish_holdings_location: "Maldives",
+    company_wish_holdings_focus: "Transformation de fruits de mer",
+    manufacturing_companies_count: "4 Entreprises",
+    trading_title: "Commerce",
+    trading_description: "Réseau commercial mondial reliant les marchés du monde entier",
+    trading_modal_title: "Division Commerce",
+    trading_modal_description: "Connexion des marchés mondiaux grâce à notre vaste réseau commercial, spécialisé dans les produits de base et les biens de consommation très demandés sur plusieurs continents.",
+    company_prime_wish_name: "PRIME WISH TRADING L.L.C",
+    company_prime_wish_location: "Émirats Arabes Unis",
+    company_prime_wish_focus: "Distribution de fruits de mer",
+    prime_wish_activity_1: "Distribution internationale de fruits de mer",
+    prime_wish_activity_2: "Commerce de produits de base",
+    prime_wish_activity_3: "Solutions de chaîne d'approvisionnement",
+    prime_wish_market_1: "Moyen-Orient",
+    prime_wish_market_2: "Europe",
+    prime_wish_market_3: "Asie-Pacifique",
+    company_al_lincamo_name: "AL LINCAMO INTERNATIONAL FZC",
+    company_al_lincamo_location: "Émirats Arabes Unis",
+    company_al_lincamo_focus: "Commerce de produits de base",
+    trading_companies_count: "4 Entreprises",
+    hospitality_title: "Hospitalité",
+    hospitality_description: "Expériences exceptionnelles dans des destinations de premier choix",
+    hospitality_modal_title: "Division Hospitalité",
+    hospitality_modal_description: "Création d'expériences exceptionnelles dans les destinations les plus prisées au monde grâce à notre portefeuille d'hôtels de luxe, de complexes touristiques et de services d'hospitalité.",
+    company_wish_hospitality_name: "WISH HOSPITALITY LTD",
+    company_wish_hospitality_location: "Sri Lanka",
+    company_wish_hospitality_focus: "Hébergement de luxe",
+    wish_hospitality_activity_1: "Gestion d'hôtels de luxe",
+    wish_hospitality_activity_2: "Opérations de complexes touristiques",
+    wish_hospitality_activity_3: "Conseil en hospitalité",
+    wish_hospitality_property_1: "Wish Colombo - Resort urbain 5 étoiles",
+    wish_hospitality_property_2: "Blue Sands Beach Resort",
+    wish_hospitality_property_3: "Mountain View Retreat",
+    company_arena_blue_name: "ARENA BLUE HOTEL AND RESORT LTD",
+    company_arena_blue_location: "Sri Lanka",
+    company_arena_blue_focus: "Gestion de complexes touristiques",
+    hospitality_companies_count: "6 Entreprises",
+    media_title: "Médias",
+    media_description: "Création de contenus et d'expériences captivantes",
+    media_modal_title: "Division Médias",
+    media_modal_description: "Création de contenus et d'expériences captivantes qui captivent les publics grâce à des canaux de production et de distribution médiatique innovants.",
+    company_wish_media_name: "WISH MEDIA CORPORATION LTD",
+    company_wish_media_location: "Sri Lanka",
+    company_wish_media_focus: "Production de divertissements",
+    wish_media_activity_1: "Production de films et de télévision",
+    wish_media_activity_2: "Création de contenu numérique",
+    wish_media_activity_3: "Distribution médiatique",
+    wish_media_production_1: "Série télévisée Island Dreams",
+    wish_media_production_2: "Réseau de divertissement Wish",
+    wish_media_production_3: "Plateforme de streaming numérique",
+    media_companies_count: "1 Entreprise",
+    capital_finance_title: "Capital et Finance",
+    capital_finance_description: "Investissements stratégiques et solutions financières",
+    capital_finance_modal_title: "Division Capital et Finance",
+    capital_finance_modal_description: "Fourniture d'investissements stratégiques et de solutions financières qui favorisent la croissance de nos entreprises du groupe et des organisations partenaires à travers le monde.",
+    company_wish_group_name: "WISH GROUP L.L.C",
+    company_wish_group_location: "Émirats Arabes Unis",
+    company_wish_group_focus: "Investissements du groupe",
+    wish_group_activity_1: "Investissements stratégiques",
+    wish_group_activity_2: "Gestion de portefeuille",
+    wish_group_activity_3: "Supervision financière du groupe",
+    wish_group_focus_1: "Marchés émergents",
+    wish_group_focus_2: "Investissements durables",
+    wish_group_focus_3: "Entreprises technologiques",
+    company_world_investment_name: "WORLD INVESTMENT SOURCES HOLDINGS LTD",
+    company_world_investment_location: "Sri Lanka",
+    company_world_investment_focus: "Participations stratégiques",
+    capital_finance_companies_count: "3 Entreprises",
+    footer_headquarters_title: "Siège mondial",
+    footer_headquarters_name: "Wish Group LLC",
+    footer_headquarters_location: "Business Bay, Dubaï, Émirats Arabes Unis",
+    footer_quick_links_title: "Liens rapides",
+    footer_contact_title: "Contactez-nous",
+    footer_phone_1: "T. +971 4259 7167",
+    footer_phone_2: "M. +971 4259 4795",
+    footer_email_1: "E. info@wishgroup.ae",
+    footer_email_2: "E. info@wishgroup.world",
+    footer_copyright: "© 2025 Wish Group. Tous droits réservés.",
+    footer_tagline: "Une entreprise mondiale couvrant 6 industries dans 8 pays."
+  },
+  si: {
+    page_title: "විෂ් ග්‍රූප් - අපගේ සමාගම්",
+    scroll_to_top: "ඉහළට ගමන් කරන්න",
+    menu_home: "මුල් පිටුව",
+    menu_about: "අප ගැන",
+    menu_divisions: "අංශ",
+    menu_projects: "ව්‍යාපෘති",
+    menu_countries: "රටවල්",
+    menu_news: "පුවත්",
+    menu_policies: "අපගේ ප්‍රතිපත්ති",
+    menu_career: "වෘත්තිය",
+    menu_contact: "අප හා සම්බන්ධ වන්න",
+    hero_title: "අපගේ ගෝලීය ආයෝජන පත්‍රිකාව",
+    hero_description: "ලෝකය පුරා විවිධ වූ ඉඩම්, නිෂ්පාදන, වෙළඳාම, ආගන්තුක සත්කාර, මාධ්‍ය, සහ මූල්‍ය හා ප්‍රාග්ධන ක්ෂේත්‍ර ආවරණය කරන බහුවිධ ආයෝජන පත්‍රිකාව.",
+    divisions_title: "අපගේ ව්‍යාපාරික අංශ",
+    divisions_description: "විෂ් ග්‍රූප් ගෝලීය පැතිරීමක් සහිතව බහුවිධ කර්මාන්ත හරහා ක්‍රියාත්මක වේ. පහත ඕනෑම අංශයක් මත ක්ලික් කර එම ක්ෂේත්‍රයේ අපගේ සමාගම් ගවේෂණය කරන්න.",
+    focus_label: "අවධානය:",
+    view_details: "විස්තර බලන්න",
+    type_label: "වර්ගය:",
+    primary_activities_label: "ප්‍රාථමික ක්‍රියාකාරකම්:",
+    key_projects_label: "ප්‍රධාන ව්‍යාපෘති:",
+    specializations_label: "විශේෂීකරණය:",
+    key_markets_label: "ප්‍රධාන වෙළඳපොළවල්:",
+    properties_label: "දේපළ:",
+    notable_productions_label: "කැපී පෙනෙන නිෂ්පාදන:",
+    key_focus_areas_label: "ප්‍රධාන අවධාන යොමු කිරීමේ ක්ෂේත්‍ර:",
+    established_label: "පිහිටුවන ලද:",
+    real_estate_title: "ඉඩකඩම්",
+    real_estate_description: "ලෝක වෙළඳපොළ හරහා දෘෂ්ටිවාදී දේපළවල වැඩිදියුණු කිරීම",
+    real_estate_modal_title: "ඉඩකඩම් අංශය",
+    real_estate_modal_description: "ලෝක වෙළඳපොළ හරහා නගර රේඛා සහ ප්‍රජාවන් නැවත අර්ථකථනය කරන දෘෂ්ටිවාදී දේපළවල වැඩිදියුණු කිරීම, නව්‍ය නිර්මාණ සහ උපායමාර්ගික ස්ථාන හරහා දිගුකාලීන වටිනාකමක් නිර්මාණය කරයි.",
+    company_wish_real_estate_name: "විෂ් රියල් එස්ටේට් ඩිවලපර් එල්.එල්.සී",
+    company_wish_real_estate_location: "එක්සත් අරාබි එමිරේට්ස්",
+    company_wish_real_estate_focus: "විලා සහ මහල් නිවාස සංවර්ධනය",
+    real_estate_activity_1: "සුඛෝපභෝගී විලා සහ මහල් නිවාස සංවර්ධනය",
+    real_estate_activity_2: "වාණිජ දේපළ සංවර්ධනය",
+    real_estate_activity_3: "බහු-භාවිත ප්‍රජා ව්‍යාපෘති",
+    real_estate_project_1: "මරීනා විස්ටා ටවර්ස් - ඩුබායි",
+    real_estate_project_2: "පාම් ජුමේරා සුඛෝපභෝගී විලා",
+    real_estate_project_3: "අබුඩාබි මධ්‍යම වාණිජ සංකීර්ණය",
+    company_world_capital_name: "වර්ල්ඩ් කැපිටල් සෙන්ටර් ලිමිටඩ්",
+    company_world_capital_location: "ශ්‍රී ලංකා",
+    company_world_capital_focus: "බහු-භාවිත සංවර්ධන",
+    world_capital_activity_1: "විශාල පරිමාණ බහු-භාවිත සංවර්ධන",
+    world_capital_activity_2: "නාගරික පුනර්ජනන ව්‍යාපෘති",
+    world_capital_activity_3: "වාණිජ හා නේවාසික සංකීර්ණ",
+    world_capital_project_1: "කොළඹ මූල්‍ය දිස්ත්‍රික්කය",
+    world_capital_project_2: "ගෝල් ෆේස් බහු-භාවිත සංවර්ධනය",
+    world_capital_project_3: "කැන්ඩි හිල්ස් නේවාසික ප්‍රජාව",
+    real_estate_companies_count: "සමාගම් 4",
+    manufacturing_title: "නිෂ්පාදන",
+    manufacturing_description: "විවිධ කර්මාන්ත හරහා ගුණාත්මක භාණ්ඩ නිෂ්පාදනය",
+    manufacturing_modal_title: "නිෂ්පාදන අංශය",
+    manufacturing_modal_description: "අපගේ ගෝලීය නිෂ්පාදන පහසුකම්වල නව්‍යතාව, තිරසාරභාවය සහ මෙහෙයුම් විශිෂ්ටත්වය කෙරෙහි කැපවීමෙන් විවිධ කර්මාන්ත හරහා ගුණාත්මක භාණ්ඩ නිෂ්පාදනය.",
+    company_one_apparels_name: "දි වන් ඇපරල්ස් කෝපරේෂන් ලිමිටඩ්",
+    company_one_apparels_location: "ශ්‍රී ලංකා",
+    company_one_apparels_focus: "ඇඟලුම් හා රෙදිපිළි",
+    one_apparels_activity_1: "ඇඟලුම් නිර්මාණය හා නිෂ්පාදනය",
+    one_apparels_activity_2: "රෙදිපිළි නිෂ්පාදනය",
+    one_apparels_activity_3: "පුද්ගලික ලේබල් නිෂ්පාදනය",
+    one_apparels_specialization_1: "තිරසාර හා ආචාරධාර්මික නිෂ්පාදනය",
+    one_apparels_specialization_2: "ඉහළ මට්ටමේ විලාසිතා නිෂ්පාදනය",
+    one_apparels_specialization_3: "තාක්ෂණික ක්‍රීඩා ඇඳුම්",
+    company_wish_holdings_name: "විෂ් හෝල්ඩින්ග්ස් පීවීටී ලිමිටඩ්",
+    company_wish_holdings_location: "මාලදිවයින්",
+    company_wish_holdings_focus: "මුහුදු ආහාර සැකසුම",
+    manufacturing_companies_count: "සමාගම් 4",
+    trading_title: "වෙළඳාම",
+    trading_description: "ලෝක වෙළඳපොළ සම්බන්ධ කරන ගෝලීය වෙළඳ ජාලය",
+    trading_modal_title: "වෙළඳ අංශය",
+    trading_modal_description: "අපගේ පුළුල් වෙළඳ ජාලය හරහා ගෝලීය වෙළඳපොළවල් සම්බන්ධ කිරීම, බහු මහද්වීප හරහා ඉහළ ඉල්ලුමක් ඇති භාණ්ඩ හා පාරිභෝගික භාණ්ඩවල විශේෂීකරණය.",
+    company_prime_wish_name: "ප්‍රයිම් විෂ් ට්‍රේඩින් එල්.එල්.සී",
+    company_prime_wish_location: "එක්සත් අරාබි එමිරේට්ස්",
+    company_prime_wish_focus: "මුහුදු ආහාර බෙදාහැරීම",
+    prime_wish_activity_1: "ජාත්‍යන්තර මුහුදු ආහාර බෙදාහැරීම",
+    prime_wish_activity_2: "භාණ්ඩ වෙළඳාම",
+    prime_wish_activity_3: "සැපයුම් ජාල විසඳුම්",
+    prime_wish_market_1: "මැදපෙරදිග",
+    prime_wish_market_2: "යුරෝපය",
+    prime_wish_market_3: "ආසියා-පැසිෆික්",
+    company_al_lincamo_name: "අල් ලින්කමෝ ඉන්ටර්නැෂනල් එෆ්සීඩ්",
+    company_al_lincamo_location: "එක්සත් අරාබි එමිරේට්ස්",
+    company_al_lincamo_focus: "භාණ්ඩ වෙළඳාම",
+    trading_companies_count: "සමාගම් 4",
+    hospitality_title: "ආගන්තුක සත්කාර",
+    hospitality_description: "ප්‍රමුඛ ගමනාන්තවල සුවිශේෂී අත්දැකීම්",
+    hospitality_modal_title: "ආගන්තුක සත්කාර අංශය",
+    hospitality_modal_description: "අපගේ සුඛෝපභෝගී හෝටල්, රිසෝට් සහ ආගන්තුක සත්කාර සේවා පත්‍රිකාව හරහා ලෝකයේ වඩාත් ඉල්ලුම් ඇති ගමනාන්තවල සුවිශේෂී අත්දැකීම් නිර්මාණය.",
+    company_wish_hospitality_name: "විෂ් හොස්පිටැලිටි ලිමිටඩ්",
+    company_wish_hospitality_location: "ශ්‍රී ලංකා",
+    company_wish_hospitality_focus: "සුඛෝපභෝගී නවාතැන්",
+    wish_hospitality_activity_1: "සුඛෝපභෝගී හෝටල් කළමනාකරණය",
+    wish_hospitality_activity_2: "රිසෝට් මෙහෙයුම්",
+    wish_hospitality_activity_3: "ආගන්තුක සත්කාර උපදේශන",
+    wish_hospitality_property_1: "විෂ් කොළඹ - 5 තරු නාගරික රිසෝට්",
+    wish_hospitality_property_2: "බ්ලූ සෑන්ඩ්ස් වෙරළ රිසෝට්",
+    wish_hospitality_property_3: "මවුන්ටන් විව් රිට්‍රීට්",
+    company_arena_blue_name: "අරීනා බ්ලූ හෝටල් ඇන්ඩ් රිසෝට් ලිමිටඩ්",
+    company_arena_blue_location: "ශ්‍රී ලංකා",
+    company_arena_blue_focus: "රිසෝට් කළමනාකරණය",
+    hospitality_companies_count: "සමාගම් 6",
+    media_title: "මාධ්‍ය",
+    media_description: "ආකර්ෂණීය අන්තර්ගතයන් සහ අත්දැකීම් නිර්මාණය",
+    media_modal_title: "මාධ්‍ය අංශය",
+    media_modal_description: "නව්‍ය මාධ්‍ය නිෂ්පාදන සහ බෙදාහැරීමේ නාලිකා හරහා ප්‍රේක්ෂකයන් ආකර්ෂණය කරන ආකර්ෂණීය අන්තර්ගතයන් සහ අත්දැකීම් නිර්මාණය.",
+    company_wish_media_name: "විෂ් මීඩියා කෝපරේෂන් ලිමිටඩ්",
+    company_wish_media_location: "ශ්‍රී ලංකා",
+    company_wish_media_focus: "විනෝදාස්වාද නිෂ්පාදන",
+    wish_media_activity_1: "චිත්‍රපට සහ රූපවාහිනී නිෂ්පාදන",
+    wish_media_activity_2: "ඩිජිටල් අන්තර්ගත නිර්මාණය",
+    wish_media_activity_3: "මාධ්‍ය බෙදාහැරීම",
+    wish_media_production_1: "අයිලන්ඩ් ඩ්‍රීම්ස් රූපවාහිනී මාලාව",
+    wish_media_production_2: "විෂ් විනෝදාස්වාද ජාලය",
+    wish_media_production_3: "ඩිජිටල් ගලායාමේ වේදිකාව",
+    media_companies_count: "සමාගම් 1",
+    capital_finance_title: "ප්‍රාග්ධන සහ මූල්‍ය",
+    capital_finance_description: "උපායමාර්ගික ආයෝජන සහ මූල්‍ය විසඳුම්",
+    capital_finance_modal_title: "ප්‍රාග්ධන සහ මූල්‍ය අංශය",
+    capital_finance_modal_description: "අපගේ කණ්ඩායම් සමාගම් සහ ලෝකය පුරා හවුල්කාර සංවිධානවල වර්ධනය බලගන්වන උපායමාර්ගික ආයෝජන සහ මූල්‍ය විසඳුම් සැපයීම.",
+    company_wish_group_name: "විෂ් ග්‍රූප් එල්.එල්.සී",
+    company_wish_group_location: "එක්සත් අරාබි එමිරේට්ස්",
+    company_wish_group_focus: "කණ්ඩායම් ආයෝජන",
+    wish_group_activity_1: "උපායමාර්ගික ආයෝජන",
+    wish_group_activity_2: "පත්‍රිකා කළමනාකරණය",
+    wish_group_activity_3: "කණ්ඩායම් මූල්‍ය අධීක්ෂණය",
+    wish_group_focus_1: "නැගී එන වෙළඳපොළවල්",
+    wish_group_focus_2: "තිරසාර ආයෝජන",
+    wish_group_focus_3: "තාක්ෂණික ව්‍යාපාර",
+    company_world_investment_name: "වර්ල්ඩ් ඉන්වෙස්ට්මන්ට් සෝර්සස් හෝල්ඩින්ග්ස් ලිමිටඩ්",
+    company_world_investment_location: "ශ්‍රී ලංකා",
+    company_world_investment_focus: "උපායමාර්ගික හිමිකම්",
+    capital_finance_companies_count: "සමාගම් 3",
+    footer_headquarters_title: "ගෝලීය මූලස්ථානය",
+    footer_headquarters_name: "විෂ් ග්‍රූප් එල්.එල්.සී",
+    footer_headquarters_location: "බිස්නස් බේ, ඩුබායි, එක්සත් අරාබි එමිරේට්ස්",
+    footer_quick_links_title: "ඉක්මන් සබැඳි",
+    footer_contact_title: "අප හා සම්බන්ධ වන්න",
+    footer_phone_1: "දු. +971 4259 7167",
+    footer_phone_2: "ජ. +971 4259 4795",
+    footer_email_1: "වි. info@wishgroup.ae",
+    footer_email_2: "වි. info@wishgroup.world",
+    footer_copyright: "© 2025 විෂ් ග්‍රූප්. සියලු හිමිකම් ඇවිරිණි.",
+    footer_tagline: "රටවල් 8ක කර්මාන්ත 6ක් හරහා විහිදුනු ගෝලීය ව්‍යාපාරයක්."
+  },
+dv: {
+    page_title: "ވިޝް ގްރޫޕް - އަޅާގެ ކޮމްޕަނީތައް",
+    scroll_to_top: "މަތިޔަށް ސްކްރޯލް ކުރަން",
+    menu_home: "މުހިންމު ޞަފުހާ",
+    menu_about: "އަޅާ ގައި",
+    menu_divisions: "ބައިތައް",
+    menu_projects: "ޕްރޮޖެކްޓްތައް",
+    menu_countries: "ޤައުމުތައް",
+    menu_news: "ޚަބަރު",
+    menu_policies: "އަޅާގެ ސިޔާސަތް",
+    menu_career: "ކެރިއަ",
+    menu_contact: "އަޅާ ގައި ގުޅުން",
+    hero_title: "އަޅާގެ ބައިނަލްއަޤަވާމީ ޕޯޓްފޯލިއޯ",
+    hero_description: "ދުނިޔެ ޕުރަ އިންޑަސްޓްރީތަކަށް ފެތުރި، ރިއަލް އިސްޓޭޓް، މެނިފެކްޗަރިންގ، ޓްރޭޑިންގ، ހޮސްޕިޓަލިޓީ، މީޑިއާ، އަދި ކެޕިޓަލް އަދި ފަޔިނޭންސް ކްޝޭތްރުތަކަށް ފެތުރި ޑައިވަރްސިފައިޑް ޕޯޓްފޯލިއޯ.",
+    divisions_title: "އަޅާގެ ބިޒިނަސް ބައިތައް",
+    divisions_description: "ވިޝް ގްރޫޕް ގްލޯބަލް ފުޓްޕްރިންޓެކް އެކު ބައިވަރު އިންޑަސްޓްރީތަކަށް އަމަލު ކުރަން. ތިރިގައި އެއްވެސް ބަޔަކަށް ކްލިކް ކުރުމަކުން އެ ކްޝޭތްރުގައި އަޅާގެ ކޮމްޕަނީތައް ހޯދައި ބަލާލާށެ.",
+    focus_label: "ފޯކަސް:",
+    view_details: "ތަފްސީލް ބަލާލާ",
+    type_label: "ވައްތަރު:",
+    primary_activities_label: "މުހިންމު އެކްޓިވިޓީތައް:",
+    key_projects_label: "މުހިންމު ޕްރޮޖެކްޓްތައް:",
+    specializations_label: "ޚާއްސަ ކުރެވިފައިވާ ކްޝޭތްރުތައް:",
+    key_markets_label: "މުހިންމު މާކެޓްތައް:",
+    properties_label: "ޕްރޮޕަޓީތައް:",
+    notable_productions_label: "ކާންކެވި ޕްރޮޑަކްޝަންތައް:",
+    key_focus_areas_label: "މުހިންމު ފޯކަސް ކުރެވިފައިވާ ކްޝޭތްރުތައް:",
+    established_label: "ޤާއިމްވެގެން:",
+    real_estate_title: "ރިއަލް އިސްޓޭޓް",
+    real_estate_description: "ގްލޯބަލް މާކެޓްތަކުގައި ވިޝަނަރީ ޕްރޮޕަޓީތައް ޑިވެލަޕް ކުރުން",
+    real_estate_modal_title: "ރިއަލް އިސްޓޭޓް ބަޔަކަ",
+    real_estate_modal_description: "ގްލޯބަލް މާކެޓްތަކުގައި ސްކައިލައިން އަދި ކޮމިއުނިޓީތައް އަލުން ތަޢާރަފް ކުރާ ވިޝަނަރީ ޕްރޮޕަޓީތައް ޑިވެލަޕް ކުރުން، އިނޮވޭޓިވް ޑިޒައިން އަދި ސްޓްރަޓެޖިކް ލޮކޭޝަންތަކުގެ އެހީގައި ދިގުކާލީ ވެލިއު ހަމަޖެއްސުން.",
+    company_wish_real_estate_name: "ވިޝް ރިއަލް އިސްޓޭޓް ޑިވެލަޕަރ އެލް.އެލް.ސީ",
+    company_wish_real_estate_location: "އިމާރާތް",
+    company_wish_real_estate_focus: "ވިލާތަކާއި އެޕާޓްމަންޓް ޑިވެލަޕްމަންޓް",
+    real_estate_activity_1: "ސުޚޯޕަބޯގީ ވިލާތަކާއި އެޕާޓްމަންޓް ޑިވެލަޕްމަންޓް",
+    real_estate_activity_2: "ކޮމާޝަލް ޕްރޮޕަޓީ ޑިވެލަޕްމަންޓް",
+    real_estate_activity_3: "މިކްސް-ޔޫސް ކޮމިއުނިޓީ ޕްރޮޖެކްޓްތައް",
+    real_estate_project_1: "މަރީނާ ވިސްޓާ ޓަވަރުތައް - ދުބައި",
+    real_estate_project_2: "ޕާމް ޖުމޭރާ ސުޚޯޕަބޯގީ ވިލާތައް",
+    real_estate_project_3: "އަބޫ ޒަބީ މަދު މަގު ކޮމާޝަލް ކޮމްޕްލެކްސް",
+    company_world_capital_name: "ވަރލްޑް ކެޕިޓަލް ސެންޓަރ ލިމިޓެޑް",
+    company_world_capital_location: "ސްރީ ލަންކާ",
+    company_world_capital_focus: "މިކްސް-ޔޫސް ޑިވެލަޕްމަންޓް",
+    world_capital_activity_1: "ބޮޑު މިންވަރުގެ މިކްސް-ޔޫސް ޑިވެލަޕްމަންޓް",
+    world_capital_activity_2: "އަރްބަން ރިޖެނަރޭޝަން ޕްރޮޖެކްޓްތައް",
+    world_capital_activity_3: "ކޮމާޝަލް އަދި ރެސިޑެންޝަލް ކޮމްޕްލެކްސް",
+    world_capital_project_1: "ކޮލަންބޯ ފައިނޭންޝަލް ޑިސްޓްރިކް",
+    world_capital_project_2: "ގާލް ފޭސް މިކްސް ޑިވެލަޕްމަންޓް",
+    world_capital_project_3: "ކެންޑީ ހިލްސް ރެސިޑެންޝަލް ކޮމިއުނިޓީ",
+    real_estate_companies_count: "ކޮމްޕަނީ 4",
+    manufacturing_title: "މެނިފެކްޗަރިންގ",
+    manufacturing_description: "ބައިވަރު އިންޑަސްޓްރީތަކުގައި ގުނަތަކަން އަށް އުފެދުން",
+    manufacturing_modal_title: "މެނިފެކްޗަރިންގ ބަޔަކަ",
+    manufacturing_modal_description: "އަޅާގެ ގްލޯބަލް މެނިފެކްޗަރިންގ ފެސިލިޓީތަކުގައި އިނޮވޭޝަން، ސަސްޓެއިނަބިލިޓީ އަދި އޮޕަރޭޝަނަލް އެކްސެލަންސް އަށް ކޮމިޓްމަންޓް އެކު ބައިވަރު އިންޑަސްޓްރީތަކުގައި ގުނަތަކަން އަށް އުފެދުން.",
+    company_one_apparels_name: "ދަ ވަން އެޕަރަލްސް ކޮރަޕޮރޭޝަން ލިމިޓެޑް",
+    company_one_apparels_location: "ސްރީ ލަންކާ",
+    company_one_apparels_focus: "އެޕަރަލް އަދި ޓެކްސްޓައިލް",
+    one_apparels_activity_1: "އެޕަރަލް ޑިޒައިން އަދި ޕްރޮޑަކްޝަން",
+    one_apparels_activity_2: "ޓެކްސްޓައިލް މެނިފެކްޗަރިންގ",
+    one_apparels_activity_3: "ޕްރައިވެޓް ލޭބަލް ޕްރޮޑަކްޝަން",
+    one_apparels_specialization_1: "ސަސްޓެއިނަބަލް އަދި އެތިކަލް މެނިފެކްޗަރިންގ",
+    one_apparels_specialization_2: "ހައި-އެންޑް ފެޝަން ޕްރޮޑަކްޝަން",
+    one_apparels_specialization_3: "ޓެކްނިކަލް ސްޕޯރޓްސްވެއަރ",
+    company_wish_holdings_name: "ވިޝް ހޯލްޑިންގްސް ޕްރައިވެޓް ލިމިޓެޑް",
+    company_wish_holdings_location: "މާލެ",
+    company_wish_holdings_focus: "ސީފޫޑް ޕްރޮސެސިންގ",
+    manufacturing_companies_count: "ކޮމްޕަނީ 4",
+    trading_title: "ޓްރޭޑިންގ",
+    trading_description: "ދުނިޔެ މާކެޓްތައް ގުޅާލަން ގްލޯބަލް ޓްރޭޑް ނެޓްވާކް",
+    trading_modal_title: "ޓްރޭޑިންގ ބަޔަކަ",
+    trading_modal_description: "އަޅާގެ ޕުޅުލް ޓްރޭޑް ނެޓްވާކް އެކު ގްލޯބަލް މާކެޓްތައް ގުޅާލަން، ބައި ކޮންޓިނަންޓްތަކުގައި އިލްލުމަށް ބޮޑު ކޮމޮޑިޓީތަކާއި ކަންސިއުމަރ ގުޑްސް ގައި ޚާއްސަ ކުރެވިފަ.",
+    company_prime_wish_name: "ޕްރައިމް ވިޝް ޓްރޭޑިންގ އެލް.އެލް.ސީ",
+    company_prime_wish_location: "އިމާރާތް",
+    company_prime_wish_focus: "ސީފޫޑް ޑިސްޓްރިބިއުޝަން",
+    prime_wish_activity_1: "ބައިނަލްއަޤަވާމީ ސީފޫޑް ޑިސްޓްރިބިއުޝަން",
+    prime_wish_activity_2: "ކޮމޮޑިޓީތަކުގެ ޓްރޭޑިންގ",
+    prime_wish_activity_3: "ސަޕްލައި ޗެއިން ސޮލިއުޝަންތައް",
+    prime_wish_market_1: "މިޑަލް އީސްޓް",
+    prime_wish_market_2: "ޔޫރޮޕް",
+    prime_wish_market_3: "އޭޝިޔާ-ޕެސިފިކް",
+    company_al_lincamo_name: "އަލް ލިންކަމޯ އިންޓަރނެޝަނަލް އެފްޒެޑް ސީ",
+    company_al_lincamo_location: "އިމާރާތް",
+    company_al_lincamo_focus: "ކޮމޮޑިޓީތަކުގެ ޓްރޭޑިންގ",
+    trading_companies_count: "ކޮމްޕަނީ 4",
+    hospitality_title: "ހޮސްޕިޓަލިޓީ",
+    hospitality_description: "ޕްރިމިއަރ ޑެސްޓިނޭޝަންތަކުގައި އެކްސެޕްޝަނަލް އެކްސްޕިއެންސް",
+    hospitality_modal_title: "ހޮސްޕިޓަލިޓީ ބަޔަކަ",
+    hospitality_modal_description: "އަޅާގެ ސުޚޯޕަބޯގީ ހޯޓަލް، ރިސޯޓްތަކާއި ހޮސްޕިޓަލިޓީ ސަރވިސްތަކުގެ ޕޯޓްފޯލިއޯ އެކު ދުނިޔެގައި އިލްލުމަށް ބޮޑު ޑެސްޓިނޭޝަންތަކުގައި އެކްސެޕްޝަނަލް އެކްސްޕިއެންސް ހަމަޖެއްސުން.",
+    company_wish_hospitality_name: "ވިޝް ހޮސްޕިޓަލިޓީ ލިމިޓެޑް",
+    company_wish_hospitality_location: "ސްރީ ލަންކާ",
+    company_wish_hospitality_focus: "ސުޚޯޕަބޯގީ އެކޮމޮޑޭޝަން",
+    wish_hospitality_activity_1: "ސުޚޯޕަބޯގީ ހޯޓަލް މެނެޖްމަންޓް",
+    wish_hospitality_activity_2: "ރިސޯޓް އޮޕަރޭޝަންތައް",
+    wish_hospitality_activity_3: "ހޮސްޕިޓަލިޓީ ކޮންސަލްޓެންސީ",
+    wish_hospitality_property_1: "ވިޝް ކޮލަންބޯ - 5 ސްޓާ އަރްބަން ރިސޯޓް",
+    wish_hospitality_property_2: "ބްލޫ ސެންޑްސް ބީޗް ރިސޯޓް",
+    wish_hospitality_property_3: "މައުންޓައިން ވިޔޫ ރިޓްރީޓް",
+    company_arena_blue_name: "އަރީނާ ބްލޫ ހޯޓަލް އެންޑް ރިސޯޓް ލިމިޓެޑް",
+    company_arena_blue_location: "ސްރީ ލަންކާ",
+    company_arena_blue_focus: "ރިސޯޓް މެނެޖްމަންޓް",
+    hospitality_companies_count: "ކޮމްޕަނީ 6",
+    media_title: "މީޑިއާ",
+    media_description: "އެންގޭޖިންގ ކޮންޓެންޓް އަދި އެކްސްޕިއެންސް ހަމަޖެއްސުން",
+    media_modal_title: "މީޑިއާ ބަޔަކަ",
+    media_modal_description: "އިނޮވޭޓިވް މީޑިއާ ޕްރޮޑަކްޝަން އަދި ޑިސްޓްރިބިއުޝަން ޗެނަލްތަކުގެ އެހީގައި އޯޑިއަންސް ކެޕްޓިވޭޓް ކުރާ އެންގޭޖިންގ ކޮންޓެންޓް އަދި އެކްސްޕިއެންސް ހަމަޖެއްސުން.",
+    company_wish_media_name: "ވިޝް މީޑިއާ ކޮރަޕޮރޭޝަން ލިމިޓެޑް",
+    company_wish_media_location: "ސްރީ ލަންކާ",
+    company_wish_media_focus: "އެންޓަޓޭންމަންޓް ޕްރޮޑަކްޝަން",
+    wish_media_activity_1: "ފިލްމް އަދި ޓީވީ ޕްރޮޑަކްޝަން",
+    wish_media_activity_2: "ޑިޖިޓަލް ކޮންޓެންޓް ކްރިއޭޝަން",
+    wish_media_activity_3: "މީޑިއާ ޑިސްޓްރިބިއުޝަން",
+    wish_media_production_1: "އައިލެންޑް ޑްރީމްސް ޓީވީ ސިރީސް",
+    wish_media_production_2: "ވިޝް އެންޓަޓޭންމަންޓް ނެޓްވާކް",
+    wish_media_production_3: "ޑިޖިޓަލް ސްޓްރީމިންގ ޕްލެޓްފޯމް",
+    media_companies_count: "ކޮމްޕަނީ 1",
+    capital_finance_title: "ކެޕިޓަލް އަދި ފަޔިނޭންސް",
+    capital_finance_description: "ސްޓްރަޓެޖިކް އިންވެސްޓްމަންޓް އަދި ފަޔިނޭންޝަލް ސޮލިއުޝަންތައް",
+    capital_finance_modal_title: "ކެޕިޓަލް އަދި ފަޔިނޭންސް ބަޔަކަ",
+    capital_finance_modal_description: "އަޅާގެ ގްރޫޕް ކޮމްޕަނީތަކާއި ދުނިޔެ ޕުރަ ޕާޓްނަރ އޮގަނައިޒޭޝަންތަކުގެ ވަރުގަދަ ކުރުމަށް ބަލި ސްޓްރަޓެޖިކް އިންވެސްޓްމަންޓް އަދި ފަޔިނޭންޝަލް ސޮލިއުޝަންތައް ހަމަޖެއްސުން.",
+    company_wish_group_name: "ވިޝް ގްރޫޕް އެލް.އެލް.ސީ",
+    company_wish_group_location: "އިމާރާތް",
+    company_wish_group_focus: "ގްރޫޕް އިންވެސްޓްމަންޓް",
+    wish_group_activity_1: "ސްޓްރަޓެޖިކް އިންވެސްޓްމަންޓް",
+    wish_group_activity_2: "ޕޯޓްފޯލިއޯ މެނެޖްމަންޓް",
+    wish_group_activity_3: "ގްރޫޕް ފަޔިނޭންޝަލް އޯވަރސައިޓް",
+    wish_group_focus_1: "އެމަރޖިންގ މާކެޓްތައް",
+    wish_group_focus_2: "ސަސްޓެއިނަބަލް އިންވެސްޓްމަންޓް",
+    wish_group_focus_3: "ޓެކްނޮލޮޖީ ވެންޗަރުތައް",
+    company_world_investment_name: "ވަރލްޑް އިންވެސްޓްމަންޓް ސޯރސެސް ހޯލްޑިންގްސް ލިމިޓެޑް",
+    company_world_investment_location: "ސްރީ ލަންކާ",
+    company_world_investment_focus: "ސްޓްރަޓެޖިކް ހޯލްޑިންގްސް",
+    capital_finance_companies_count: "ކޮމްޕަނީ 3",
+    footer_headquarters_title: "ގްލޯބަލް ހެޑްކޯރޓަރު",
+    footer_headquarters_name: "ވިޝް ގްރޫޕް އެލް.އެލް.ސީ",
+    footer_headquarters_location: "ބިޒިނަސް ބޭ، ދުބައި، އިމާރާތް",
+    footer_quick_links_title: "އިގްމާން ލިންކްތައް",
+    footer_contact_title: "އަޅާ ގައި ގުޅުން",
+    footer_phone_1: "ޓީ. +971 4259 7167",
+    footer_phone_2: "އެމް. +971 4259 4795",
+    footer_email_1: "އީ. info@wishgroup.ae",
+    footer_email_2: "އީ. info@wishgroup.world",
+    footer_copyright: "© 2025 ވިޝް ގްރޫޕް. ހުރިހާ ހައްޤުތައް ރިޒާވް ކުރެވިފަ.",
+    footer_tagline: "ޤައުމު 8ގައި އިންޑަސްޓްރީ 6 އަށް ފެތުރި ގްލޯބަލް އެންޓަޕްރައިޒް."
+}}
+
+
+
+function openDivisionModal(division) {
+  // Find the modal by ID
+  const modal = document.getElementById(`${division}-modal`);
+  if (modal) {
+    // Add the 'show' class to display the modal
+    modal.classList.add('show');
+    // Prevent body scrolling while modal is open
+    document.body.style.overflow = 'hidden';
+  } else {
+    console.error(`Modal for ${division} not found`);
+  }
+}
+
+function closeModal(division) {
+  // Find the modal by ID
+  const modal = document.getElementById(`${division}-modal`);
+  if (modal) {
+    // Remove the 'show' class to hide the modal
+    modal.classList.remove('show');
+    // Restore body scrolling
+    document.body.style.overflow = 'auto';
+  } else {
+    console.error(`Modal for ${division} not found`);
+  }
+}function openDivisionModal(division) {
+  const modal = document.getElementById(`${division}-modal`);
+  if (modal) {
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    // Add click event to close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
         closeModal(division);
       }
-    }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        const openModal = document.querySelector('.division-modal.show');
-        if (openModal) {
-          const modalId = openModal.id;
-          const division = modalId.replace('-modal', '');
-          closeModal(division);
-        }
+    });
+  } else {
+    console.error(`Modal for ${division} not found`);
+  }
+}
+
+function closeModal(division) {
+  const modal = document.getElementById(`${division}-modal`);
+  if (modal) {
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+  } else {
+    console.error(`Modal for ${division} not found`);
+  }
+}function openDivisionModal(division) {
+  const modal = document.getElementById(`${division}-modal`);
+  if (modal) {
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal(division);
       }
     });
-    
-    // Initialize globe visualization
-    document.addEventListener('DOMContentLoaded', function() {
-      // Countries where Wish Group operates
-      const wishGroupCountries = [
-        'United Arab Emirates', 'Sri Lanka', 'Malaysia', 
-        'United Kingdom', 'Maldives', 'Ghana', 'South Africa'
-      ];
-      
-      // Generate some sample data for visualization
-      const data = wishGroupCountries.map(country => ({
-        lat: Math.random() * 30 - 15, // Rough latitudes for demo
-        lng: Math.random() * 60 + 20, // Rough longitudes for demo
-        size: 5 + Math.random() * 10,
-        color: ['#c9a02f', '#ffffff', '#e0e0e0'][Math.round(Math.random() * 2)]
-      }));
-      
-      // Create the globe
-      const globe = GlobeGL()
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-        .pointsData(data)
-        .pointAltitude(0)
-        .pointRadius('size')
-        .pointColor('color')
-        .pointResolution(8)
-        (document.getElementById('globe'));
-      
-      // Auto-rotate
-      globe.controls().autoRotate = true;
-      globe.controls().autoRotateSpeed = 0.8;
-      
-      // Responsive adjustments
-      function resizeGlobe() {
-        const width = window.innerWidth;
-        if (width < 768) {
-          globe.width(300).height(300);
-        } else {
-          globe.width(500).height(500);
-        }
+    // Add Escape key listener
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeModal(division);
+        document.removeEventListener('keydown', handleEscape);
       }
-      
-      window.addEventListener('resize', resizeGlobe);
-      resizeGlobe();
-      
-      // Add floating animation to cards with delay
-      const cards = document.querySelectorAll('.company-card');
-      cards.forEach((card, index) => {
-        // Apply different animation delays for a wave effect
-        card.style.animationDelay = `${index * 0.1}s`;
-      });
-      
-      // Add hover effect to company logo placeholders
-      const logos = document.querySelectorAll('.company-logo-placeholder');
-      logos.forEach(logo => {
-        logo.addEventListener('mouseenter', function() {
-          this.querySelector('i').style.transform = 'scale(1.1)';
-        });
-        logo.addEventListener('mouseleave', function() {
-          this.querySelector('i').style.transform = 'scale(1)';
-        });
-      });
-    });
-  </script>
+    };
+    document.addEventListener('keydown', handleEscape);
+  } else {
+    console.error(`Modal for ${division} not found`);
+  }
+}
+
+function closeModal(division) {
+  const modal = document.getElementById(`${division}-modal`);
+  if (modal) {
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+  } else {
+    console.error(`Modal for ${division} not found`);
+  }
+}
+
+
+
+ </script>
 </body>
 </html>

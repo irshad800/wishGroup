@@ -2,31 +2,26 @@
 <html lang="en">
 
 <head>
-    <title>Wish Group</title>
+    <title>Wish Group - About Us</title>
     <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="AIvent" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
-    <!-- CSS Files
-    ================================================== -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Wish Group - About Us" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
-    <!-- color scheme -->
-     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
-<script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
-
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="dark-scheme">
-
     <div id="wrapper">
-
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -43,9 +38,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" >
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" >
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" >
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -53,31 +48,36 @@
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
-                                <ul id="mainmenu">
-    <li><a class="menu-item" href="index.html">Home</a></li>
-    <li><a class="menu-item active" href="about.html">About Us</a></li>
-    <li><a class="menu-item" href="">Divisions</a></li>
-    <li><a class="menu-item" href="">Projects</a></li>
-    <li><a class="menu-item" href="">Countries</a></li>
-    <li><a class="menu-item" href="">News</a></li>
-    <li><a class="menu-item" href="">Our Policies</a></li>
-    <li><a class="menu-item" href="">Carrier</a></li>
-    <li><a class="menu-item" href="news.html">Contact Us</a>
-        <ul>
-            <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-            <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-            <li><a class="menu-item" href="news.html">News</a></li>
-            <li><a class="menu-item" href="news-single.html">News Single</a></li>
-            <li><a class="menu-item" href="contact.html">Contact</a></li>
-        </ul>
-    </li>
-</ul>
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item" href="index.html" data-translate="home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="about_us">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="our_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-translate="career">Career</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="contact_us">Contact Us</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="tickets.html" data-translate="tickets_style_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-translate="tickets_style_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-translate="news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-translate="news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-translate="contact">Contact</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
-
+                                <select id="language-switcher" onchange="setLanguage(this.value)">
+                                    <option value="en">EN</option>
+                                    <option value="ar">AR</option>
+                                    <option value="fr">FR</option>
+                                    <option value="si">SI</option>
+                                    <option value="dv">DV</option>
+                                </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -88,143 +88,116 @@
             </div>
         </header>
 
-     <!-- Replace the section-hero video background with an image background -->
-<section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" style="background: url('images/background/hero-image.webp') center center / cover no-repeat;">
-    <div class="gradient-edge-top op-6 h-50 color"></div>
-    <div class="gradient-edge-bottom"></div>
-    <div class="sw-overlay op-8"></div>
-    <div class="abs abs-centered z-2 w-80">
-        <div class="container wow scaleIn" data-wow-duration="3s">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-
-                    <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1"> About-US</h1>
-
-                    <div class="d-block d-md-flex justify-content-center">
-                       
-
-                       
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" style="background: url('images/background/hero-image.webp') center center / cover no-repeat;">
+            <div class="gradient-edge-top op-6 h-50 color"></div>
+            <div class="gradient-edge-bottom"></div>
+            <div class="sw-overlay op-8"></div>
+            <div class="abs abs-centered z-2 w-80">
+                <div class="container wow scaleIn" data-wow-duration="3s">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1" data-translate="about_us">About Us</h1>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-
-
-
-
-
-
-        
-      
-<section id="section-why-attend" class="bg-dark section-dark text-light py-5">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-12 text-center">
-                <div class="subtitle wow fadeInUp mb-2" style="letter-spacing:2px;">Who We Are</div>
-                <h2 class="wow fadeInUp display-5 fw-bold mb-3" data-wow-delay=".2s" style="text-transform:uppercase;">
-                    We Make A Wish
-                </h2>
-                <div class="mx-auto mb-4" style="width:90px;height:5px;background:linear-gradient(90deg,#e10600 0%,#fff 100%);border-radius:2px;opacity:.8;"></div>
-            </div>
-        </div>
-        <!-- Vision & Mission in One Row -->
-        <div class="row g-4 justify-content-center align-items-stretch mb-4">
-            <!-- Vision -->
-            <div class="col-md-6">
-                <div class="who-pro-card pro-card-modern text-center h-100 wow fadeInUp" data-wow-delay=".15s">
-                    <div class="who-pro-icon mx-auto mb-3 bg-gradient-white">
-                        <i class="fa fa-eye"></i>
+        <section id="section-why-attend" class="bg-dark section-dark text-light py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-12 text-center">
+                        <div class="subtitle wow fadeInUp mb-2" style="letter-spacing:2px;" data-translate="who_we_are">Who We Are</div>
+                        <h2 class="wow fadeInUp display-5 fw-bold mb-3" data-wow-delay=".2s" style="text-transform:uppercase;" data-translate="make_your_wish">Make Your Wish</h2>
+                        <div class="mx-auto mb-4" style="width:90px;height:5px;background:linear-gradient(90deg,#e10600 0%,#fff 100%);border-radius:2px;opacity:.8;"></div>
                     </div>
-                    <h4 class="mb-2">Vision</h4>
-                    <p class="mb-0 fs-6">
-                        To create a unified future under <span class="fw-bold text-danger">‘One Capital World’</span> through humanity, sustainability, and inclusive growth.
-                    </p>
+                </div>
+                <!-- Vision & Mission -->
+                <div class="row g-4 justify-content-center align-items-stretch mb-4">
+                    <div class="col-md-6">
+                        <div class="who-pro-card pro-card-modern text-center h-100 wow fadeInUp" data-wow-delay=".15s">
+                            <div class="who-pro-icon mx-auto mb-3 bg-gradient-white">
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <h4 class="mb-2" data-translate="vision">Vision</h4>
+                            <p class="mb-0 fs-6" data-translate="vision_description">To create a unified future under <span class="fw-bold text-danger">‘One Capital World’</span> through humanity, sustainability, and inclusive growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="who-pro-card pro-card-modern text-center h-100 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="who-pro-icon mx-auto mb-3 bg-gradient-black">
+                                <i class="fa fa-bullseye"></i>
+                            </div>
+                            <h4 class="mb-2" data-translate="mission">Mission</h4>
+                            <p class="mb-0 fs-6" data-translate="mission_description">We empower people to achieve their dreams through inclusive investments, responsible innovation, and global partnerships — working together to become the world’s number one capital company.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Core Values -->
+                <div class="row g-4 justify-content-center mt-4">
+                    <div class="col-lg-10">
+                        <div class="who-pro-card pro-card-modern shadow-soft wow fadeInUp p-4" data-wow-delay=".3s">
+                            <div class="mb-3 text-center">
+                                <span class="who-pro-icon who-pro-icon-lg bg-gradient-red"><i class="fa fa-star"></i></span>
+                            </div>
+                            <h4 class="mb-4 text-center" data-translate="core_values">Core Values</h4>
+                            <div class="row text-center">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="who-value-pro pro-value-modern h-100">
+                                        <i class="fa fa-thumbs-up mb-2"></i>
+                                        <h5 class="mb-2" data-translate="respect">Respect</h5>
+                                        <p class="mb-0 small" data-translate="respect_description">We value all ideas and foster openness to inspire trust and cooperation.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="who-value-pro pro-value-modern h-100">
+                                        <i class="fa fa-shield mb-2"></i>
+                                        <h5 class="mb-2" data-translate="integrity">Integrity</h5>
+                                        <p class="mb-0 small" data-translate="integrity_description">Our principles are never compromised — no deal or client outweighs our commitment.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="who-value-pro pro-value-modern h-100">
+                                        <i class="fa fa-users mb-2"></i>
+                                        <h5 class="mb-2" data-translate="service">Service</h5>
+                                        <p class="mb-0 small" data-translate="service_description">We build lasting relationships by connecting the right people, capital, and opportunities.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="who-value-pro pro-value-modern h-100">
+                                        <i class="fa fa-trophy mb-2"></i>
+                                        <h5 class="mb-2" data-translate="excellence">Excellence</h5>
+                                        <p class="mb-0 small" data-translate="excellence_description">We relentlessly pursue winning outcomes for our stakeholders worldwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="who-pro-divider mx-auto mt-4"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Mission -->
-            <div class="col-md-6">
-                <div class="who-pro-card pro-card-modern text-center h-100 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="who-pro-icon mx-auto mb-3 bg-gradient-black">
-                        <i class="fa fa-bullseye"></i>
-                    </div>
-                    <h4 class="mb-2">Mission</h4>
-                    <p class="mb-0 fs-6">
-                        We empower people to achieve their dreams through inclusive investments, responsible innovation, and global partnerships — working together to become the world’s number one capital company.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Motto Highlighted Below Vision/Mission -->
-        <div class="row mb-5 justify-content-center">
-           
-        </div>
-        <!-- Core Values -->
-        <div class="row g-4 justify-content-center mt-4">
-            <div class="col-lg-10">
-                <div class="who-pro-card pro-card-modern shadow-soft wow fadeInUp p-4" data-wow-delay=".3s">
-                    <div class="mb-3 text-center">
-                        <span class="who-pro-icon who-pro-icon-lg bg-gradient-red"><i class="fa fa-star"></i></span>
-                    </div>
-                    <h4 class="mb-4 text-center">Core Values</h4>
-                    <div class="row text-center">
-                        <div class="col-6 col-md-3 mb-3">
-                            <div class="who-value-pro pro-value-modern h-100">
-<i class="fa fa-thumbs-up mb-2"></i>                 <h5 class="mb-2">Respect</h5>
-                                <p class="mb-0 small">We value all ideas and foster openness to inspire trust and cooperation.</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-3">
-                            <div class="who-value-pro pro-value-modern h-100">
-                                <i class="fa fa-shield mb-2"></i>
-                                <h5 class="mb-2">Integrity</h5>
-                                <p class="mb-0 small">Our principles are never compromised — no deal or client outweighs our commitment.</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-3">
-                            <div class="who-value-pro pro-value-modern h-100">
-                                <i class="fa fa-users mb-2"></i>
-                                <h5 class="mb-2">Service</h5>
-                                <p class="mb-0 small">We build lasting relationships by connecting the right people, capital, and opportunities.</p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-3">
-                            <div class="who-value-pro pro-value-modern h-100">
-                                <i class="fa fa-trophy mb-2"></i>
-                                <h5 class="mb-2">Excellence</h5>
-                                <p class="mb-0 small">We relentlessly pursue winning outcomes for our stakeholders worldwide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="who-pro-divider mx-auto mt-4"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    
+        </section>
+
         <section id="section-speakers" class="bg-dark section-dark text-light">
             <div class="container">
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-6 relative z-3">
-                          <div class="text-center">
-                              <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Our Team</div>
-                              <h2 class="wow fadeInUp" data-wow-delay=".2s">Meet the Visionaries</h2>
-                          </div>
+                        <div class="text-center">
+                            <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="our_team">Our Team</div>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="meet_the_visionaries">Meet the Visionaries</h2>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row g-4">
                     <div class="col-lg-4">
                         <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask">
-                            <img src="images\team\TeamHavindu.jpeg" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/team/1.webp" class="w-100 hover-scale-1-1" alt="">
                             <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             <div class="abs w-100 start-0 bottom-0 z-3">
                                 <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                    <h3 class="mb-0">Joshua Henry</h3>
-                                    <span>Chief AI Scientist, OpenAI</span>
+                                    <h3 class="mb-0" data-translate="team_member_1_name">Asaid Ahmed Arabi Moulana</h3>
+                                    <span data-translate="team_member_1_role">Group Chairman & Founder</span>
                                 </div>
                                 <div class="gradient-edge-bottom h-100 op-8"></div>
                             </div>
@@ -237,8 +210,8 @@
                             <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             <div class="abs w-100 start-0 bottom-0 z-3">
                                 <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                    <h3 class="mb-0">Leila Zhang</h3>
-                                    <span>VP of Machine Learning, Google</span>
+                                    <h3 class="mb-0" data-translate="team_member_2_name">Fathih Afeef</h3>
+                                    <span data-translate="team_member_2_role">Group CEO</span>
                                 </div>
                                 <div class="gradient-edge-bottom h-100 op-8"></div>
                             </div>
@@ -251,675 +224,1176 @@
                             <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
                             <div class="abs w-100 start-0 bottom-0 z-3">
                                 <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                    <h3 class="mb-0">Carlos Rivera</h3>
-                                    <span>Founder & CEO, NeuralCore</span>
+                                    <h3 class="mb-0" data-translate="team_member_3_name">Afzal Khalid</h3>
+                                    <span data-translate="team_member_3_role">Director – Project Development</span>
                                 </div>
                                 <div class="gradient-edge-bottom h-100 op-8"></div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-      <section id="section-tickets" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
-            <img src="images\background\bfFullAllience.png" class="jarallax-img" alt="">
+        <section id="section-tickets" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+            <img src="images/background/bfFullAllience.png" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-7"></div>
 
             <div class="container relative z-2">
                 <div class="row g-4 gx-5 justify-content-center">
-                  <div class="col-lg-6 text-center">
-                      <h2 class="wow fadeInUp" data-wow-delay=".2s">Our Allies</h2>
-                  </div>
+                    <div class="col-lg-6 text-center">
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="our_allies">Our Allies</h2>
+                    </div>
                 </div>
 
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-12">
                         <div class="owl-carousel owl-theme owl-3-dots wow mask-right">
-                            <!-- ticket item begin -->
                             <div class="item">
                                 <div class="d-ticket">
                                     <img src="images/team/mashreq.png" class="w-80px mb-4" alt="">
                                     <img src="" class="w-20 p-2 abs abs-middle end-0 me-2" alt="">
-                                    <h3>MASHREQ BANK PJSC</h3>
-                                    <h4 class="mb-4">National Bankers</h4>
-                                    <div class="fs-14">DUBAI, UAE
-</div>
+                                    <h3 data-translate="ally_1_name">MASHREQ BANK PJSC</h3>
+                                    <h4 class="mb-4" data-translate="ally_1_role">National Bankers</h4>
+                                    <div class="fs-14" data-translate="ally_1_location">DUBAI, UAE</div>
                                 </div>
-
                                 <div class="relative overflow-hidden">
-                                    <div class="py-4 z-2">
-                                        
-                                    </div>
-       
-                                    
+                                    <div class="py-4 z-2"></div>
                                 </div>
                             </div>
-
-               
-                            <!-- ticket item end -->
-
-                            <!-- ticket item begin -->
-                                 <div class="item">
+                            <div class="item">
                                 <div class="d-ticket">
-                                    <img src="images\team\adib.png" class="w-80px mb-4" alt="">
+                                    <img src="images/team/adib.png" class="w-80px mb-4" alt="">
                                     <img src="" class="w-20 p-2 abs abs-middle end-0 me-2" alt="">
-                                    <br>
-                                    <h2>ABU DHABI ISLAMIC BANK</h2>
-                                    <h4 class="mb-4">National Bankers</h4>
-                                    <div class="fs-14">DUBAI, UAE
-</div>
+                                    <h2 data-translate="ally_2_name">ABU DHABI ISLAMIC BANK</h2>
+                                    <h4 class="mb-4" data-translate="ally_2_role">National Bankers</h4>
+                                    <div class="fs-14" data-translate="ally_2_location">DUBAI, UAE</div>
                                 </div>
-
                                 <div class="relative overflow-hidden">
-                                    <div class="py-4 z-2">
-                                        
-                                    </div>
-       
-                                    
+                                    <div class="py-4 z-2"></div>
                                 </div>
                             </div>
-
-
-                                    <div class="item">
+                            <div class="item">
                                 <div class="d-ticket">
-                                    <img src="images\team\almahy.png" class="w-80px mb-4" alt="">
+                                    <img src="images/team/almahy.png" class="w-80px mb-4" alt="">
                                     <img src="" class="w-20 p-2 abs abs-middle end-0 me-2" alt="">
-                                    <h3>ALMAHY LEGAL SERVICES</h3>
-                                    <h4 class="mb-4">Legal Partner</h4>
-                                    <div class="fs-14">DUBAI, UAE
-</div>
+                                    <h3 data-translate="ally_3_name">ALMAHY LEGAL SERVICES</h3>
+                                    <h4 class="mb-4" data-translate="ally_3_role">Legal Partner</h4>
+                                    <div class="fs-14" data-translate="ally_3_location">DUBAI, UAE</div>
                                 </div>
-
                                 <div class="relative overflow-hidden">
-                                    <div class="py-4 z-2">
-                                        
-                                    </div>
-       
-                                    
+                                    <div class="py-4 z-2"></div>
                                 </div>
                             </div>
-
-                               <div class="item">
+                            <div class="item">
                                 <div class="d-ticket">
-                                    <img src="images\team\exlauditing.png" class="w-80px mb-4" alt="">
+                                    <img src="images/team/exlauditing.png" class="w-80px mb-4" alt="">
                                     <img src="" class="w-20 p-2 abs abs-middle end-0 me-2" alt="">
-                                        <h2>EXL AUDITING</h2>
-                                    <h4 class="mb-4">Auditor</h4>
-                                    <div class="fs-14">DUBAI, UAE
-</div>
+                                    <h2 data-translate="ally_4_name">EXL AUDITING</h2>
+                                    <h4 class="mb-4" data-translate="ally_4_role">Auditor</h4>
+                                    <div class="fs-14" data-translate="ally_4_location">DUBAI, UAE</div>
                                 </div>
-
                                 <div class="relative overflow-hidden">
-                                    <div class="py-4 z-2">
-                                        
-                                    </div>
-       
-                                    
+                                    <div class="py-4 z-2"></div>
                                 </div>
                             </div>
-                         
-                            <!-- ticket item end -->
-
-                            
-                       
-                       
-                       
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-    <section id="section-businesses" class="bg-dark section-dark text-light">
-    <div class="container">
-        <div class="row g-4 gx-5 justify-content-center">
-            <div class="col-lg-6 text-center">
-                <div class="subtitle s2 mb-3 wow fadeInUp" data-wow-delay=".0s">Diverse Industries, Unified Excellence</div>
-                <h2 class="wow fadeInUp" data-wow-delay=".2s">Our Businesses</h2>
-            </div>
-        </div>
-        <div class="row g-4 gx-5 justify-content-center wow fadeInUp">
-            <div class="col-lg-12">
-                <div class="de-tab plain">
-                    <ul class="d-tab-content pt-3 wow fadeInUp">
-                        <li>
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-briefcase id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Investment and Finance</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Focusing on financial investments and related services, we drive value through strategic capital allocation and innovative financial solutions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-bolt id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Energy and Oil</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Our operations in the energy sector, including oil and gas, power sustainable growth and innovation in energy solutions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-tshirt id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Apparel and Clothing</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">We design, manufacture, and retail clothing and fashion items, blending style with quality to meet global demands.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-building id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Real Estate and Development</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Engaging in property development and real estate investments, we create spaces that inspire and endure.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-cubes id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Commodities</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Our expertise in trading and investment in various commodities ensures robust market presence and value creation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-laptop id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Media and Technology</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">We innovate in media production and technology, delivering cutting-edge solutions that shape the future of communication.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-hard-hat id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Contracting and Engineering</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Delivering high-quality construction and engineering projects with precision and innovation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-star id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Entertainment and Event Management</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Crafting memorable experiences through expert entertainment and event planning services.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-hotel id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Hospitality and Tourism</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Providing world-class hospitality and tourism services to create unforgettable travel experiences.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-users id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Human Resources and Consulting</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Offering expert HR management and consultancy services to empower organizations and their people.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-
-                            <!-- business item begin -->
-                            <div class="border-white-bottom-op-2 pb-5 mb-5">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-md-2">
-                                        <i class="fa fa-truck id-color fs-40"></i>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5 class="mb-0">Logistics and Supply Chain</h5>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="fs-15 mb-0">Optimizing logistics and supply chain operations for efficiency and reliability across global markets.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- business item end -->
-                        </li>
-                    </ul>
+        <section id="section-businesses" class="bg-dark section-dark text-light">
+            <div class="container">
+                <div class="row g-4 gx-5 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle s2 mb-3 wow fadeInUp" data-wow-delay=".0s" data-translate="diverse_industries">Diverse Industries, Unified Excellence</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="our_businesses">Our Businesses</h2>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="section-our-legacy" class="bg-dark text-light pt-80 relative overflow-hidden">
-  <!-- soft glow accents -->
-  <span class="legacy-glow legacy-glow-1"></span>
-  <span class="legacy-glow legacy-glow-2"></span>
-
-  <div class="container relative z-2">
-    <div class="row g-4 gx-5 justify-content-center">
-      <div class="col-lg-9 text-center">
-        <div class="subtitle s2 mb-2 wow fadeInUp" data-wow-delay=".0s">Our Legacy</div>
-
-        <h2 class="legacy-title wow fadeInUp" data-wow-delay=".1s">
-          Our Legacy
-        </h2>
-
-        <div class="legacy-underline mx-auto wow fadeInUp" data-wow-delay=".15s"></div>
-
-        <p class="lead mt-3 wow fadeInUp" data-wow-delay=".2s">
-          Wish Group was born from a single principle—that dreams are not merely imagined, they are designed, funded, and realized.
-          Our legacy is not just in the businesses we’ve built but in the lives we’ve touched.
-        </p>
-      </div>
-    </div>
-
-    <!-- quick stats -->
-    <div class="row g-4 justify-content-center mt-4">
-      <div class="col-6 col-md-3">
-        <div class="legacy-stat wow fadeInUp" data-wow-delay=".25s">
-          <div class="legacy-num">15+</div>
-          <div class="legacy-label">Countries</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="legacy-stat wow fadeInUp" data-wow-delay=".3s">
-          <div class="legacy-num">5+</div>
-          <div class="legacy-label">Industries</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="legacy-stat wow fadeInUp" data-wow-delay=".35s">
-          <div class="legacy-num">20k+</div>
-          <div class="legacy-label">Members & Clients</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="legacy-stat wow fadeInUp" data-wow-delay=".4s">
-          <div class="legacy-num">100%</div>
-          <div class="legacy-label">Ethical Vision</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- highlights -->
-    <div class="row g-4 justify-content-center mt-5">
-      <div class="col-lg-10">
-        <div class="legacy-list glass wow fadeInUp" data-wow-delay=".45s">
-          <ul class="ul-check fs-18 mb-0">
-            <li>
-              <span class="legacy-icon" aria-hidden="true">
-                <!-- globe -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm6.92 6h-3.04a14.9 14.9 0 0 0-1.37-3.61A8.03 8.03 0 0 1 18.92 8ZM9.49 4.39A12.9 12.9 0 0 0 8.13 8H5.08a8.03 8.03 0 0 1 4.41-3.61ZM4.06 10h3.71a14.3 14.3 0 0 0 0 4H4.06a7.98 7.98 0 0 1 0-4Zm1.02 6h3.05c.33 1.26.8 2.46 1.36 3.61A8.03 8.03 0 0 1 5.08 16Zm6.86 3.61A12.9 12.9 0 0 1 9.87 16h4.26a12.9 12.9 0 0 1-1.19 3.61 8.2 8.2 0 0 1-1 .01Zm3.98 0c.56-1.15 1.03-2.35 1.36-3.61h3.05a8.03 8.03 0 0 1-4.41 3.61ZM19.94 10a7.98 7.98 0 0 1 0 4h-3.71a14.3 14.3 0 0 0 0-4h3.71ZM14.13 8H9.87c.32-1.26.79-2.46 1.36-3.61A8.03 8.03 0 0 1 14.13 8Z"/></svg>
-              </span>
-              Global presence across 15 countries
-            </li>
-            <li>
-              <span class="legacy-icon" aria-hidden="true">
-                <!-- building -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 22h18v-2H3v2Zm2-4h2v-2H5v2Zm0-4h2v-2H5v2Zm0-4h2V8H5v2Zm0-4h2V4H5v2Zm4 12h2v-2H9v2Zm0-4h2v-2H9v2Zm0-4h2V8H9v2Zm0-4h2V4H9v2Zm4 12h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2V8h-2v2Zm0-4h2V4h-2v2Zm4 12h2V2h-6v4h2v12Z"/></svg>
-              </span>
-              Multiple industries: Real Estate, Hospitality, Trading, Investments, Lifestyle
-            </li>
-            <li>
-              <span class="legacy-icon" aria-hidden="true">
-                <!-- users -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4ZM8 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm8 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4ZM8 14c-.87 0-1.86.11-2.86.32C3.16 14.7 2 15.65 2 17v2h6v-2c0-.74.27-1.4.73-2-.23-.01-.48-.01-.73-.01Z"/></svg>
-              </span>
-              Over 20,000+ members, clients, and partners
-            </li>
-            <li>
-              <span class="legacy-icon" aria-hidden="true">
-                <!-- island -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 20h18v-2c-3.5-2-7.5-2-11 0-2-1.2-4.5-1.7-7-1.5V20Zm11.5-9.5 1.3-1.3 1.2 1.2 1.5-1.5-1.2-1.2 1.3-1.3-1.4-1.4-1.3 1.3-1.2-1.2-1.5 1.5 1.2 1.2-1.3 1.3 1.4 1.4Z"/></svg>
-              </span>
-              Projects ranging from floating villas to sustainable island developments
-            </li>
-            <li>
-              <span class="legacy-icon" aria-hidden="true">
-                <!-- award -->
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2 9.9 8H4l4.8 3.5L6.7 18 12 14.6 17.3 18l-2.1-6.5L20 8h-5.9L12 2Z"/></svg>
-              </span>
-              Recognized for ethical entrepreneurship and creative innovation
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- closing line -->
-    <div class="row g-4 justify-content-center mt-4">
-      <div class="col-lg-9 text-center">
-        <p class="fs-16 opacity-90 wow fadeInUp" data-wow-delay=".5s">
-          Our legacy lives in every project, every island, every member we serve.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<style>/* accents */
-.legacy-title{
-  background: linear-gradient(90deg,#fff, #7cc3ff 30%, #a58bff 60%, #ffd38b 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing:.2px;
-}
-.legacy-underline{
-  width:120px;height:3px;border-radius:999px;
-  background: linear-gradient(90deg,#7cc3ff,#a58bff,#ffd38b);
-}
-
-/* glass card for list */
-.glass{
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 16px;
-  padding: 24px 22px;
-  backdrop-filter: blur(6px);
-}
-
-/* stat cards */
-.legacy-stat{
-  text-align:center;
-  background: rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:16px;padding:18px 14px;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.legacy-stat:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0,0,0,.25);
-}
-.legacy-num{font-size:32px;font-weight:800;line-height:1}
-.legacy-label{opacity:.85;margin-top:6px}
-
-/* icons inside list */
-.legacy-list .ul-check li{
-  display:flex; gap:10px; align-items:flex-start;
-}
-.legacy-icon{display:inline-flex; margin-top:2px; opacity:.9}
-
-/* soft background glows */
-.legacy-glow{
-  position:absolute; filter: blur(70px); opacity:.25; z-index:0;
-}
-.legacy-glow-1{
-  width:340px;height:340px; border-radius:50%;
-  background: radial-gradient(closest-side, #7cc3ff, transparent 70%);
-  top:-80px; left:-60px;
-}
-.legacy-glow-2{
-  width:360px;height:360px;border-radius:50%;
-  background: radial-gradient(closest-side, #a58bff, transparent 70%);
-  bottom:-100px; right:-40px;
-}
-</style>
-
-
-      
-
-      <section id="section-our-history" class="bg-dark section-dark text-light">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-5">
-                <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Our History – From Dream to Global Force</div>
-                <h2 class="wow fadeInUp" data-wow-delay=".2s">
-                    The journey of Wish Group began with a single vision in 2012.
-                </h2>
-                <p class="lead wow fadeInUp" data-wow-delay=".4s">
-                    What started as a boutique concept in Maldives and Sri Lanka has grown into a multinational organization.
-                </p>
-            </div>
-
-            <div class="col-lg-7">
-                <div class="accordion s2 wow fadeInUp">
-                    <div class="accordion-section">
-                        <div class="accordion-section-title" data-tab="#history-2012">
-                            2012: Conceptualization in Sri Lanka
-                        </div>
-                        <div class="accordion-section-content" id="history-2012">
-                            The seed of Wish Group was planted, with a vision to create a unique lifestyle brand blending innovation, ethics, and global ambition.
-                        </div>
-
-                        <div class="accordion-section-title" data-tab="#history-2014">
-                            2014: First trading operations begin under Wish Brand
-                        </div>
-                        <div class="accordion-section-content" id="history-2014">
-                            Our trading division launched, marking the first step in turning our vision into reality.
-                        </div>
-
-                        <div class="accordion-section-title" data-tab="#history-2017">
-                            2017: Expansion into UAE & official registration of Wish Group
-                        </div>
-                        <div class="accordion-section-content" id="history-2017">
-                            The UAE became our new base of operations, solidifying our presence in the Middle East market.
-                        </div>
-
-                        <div class="accordion-section-title" data-tab="#history-2019">
-                            2019: Launch of real estate and investment projects
-                        </div>
-                        <div class="accordion-section-content" id="history-2019">
-                            We ventured into luxury real estate and high-value investment opportunities, expanding our portfolio.
-                        </div>
-
-                        <div class="accordion-section-title" data-tab="#history-2021">
-                            2021: Initiation of floating villa innovation & Wish Island Project
-                        </div>
-                        <div class="accordion-section-content" id="history-2021">
-                            Our pioneering floating villa concept and the grand Wish Island Project began, redefining luxury living.
-                        </div>
-
-                        <div class="accordion-section-title" data-tab="#history-2023">
-                            2023: Launch of Wish I Club, Prime Bond, and entry into Europe
-                        </div>
-                        <div class="accordion-section-content" id="history-2023">
-                            We introduced exclusive membership programs and investment platforms while expanding into European markets.
-                        </div>
-
-                        <div class="accordion-section-title" data-tab="#history-2025">
-                            2025: 20+ registered companies, cross-continental partnerships, and luxury CSR projects
-                        </div>
-                        <div class="accordion-section-content" id="history-2025">
-                            Today, we stand as a global force, committed to excellence, partnerships, and impactful social responsibility.
+                <div class="row g-4 gx-5 justify-content-center wow fadeInUp">
+                    <div class="col-lg-12">
+                        <div class="de-tab plain">
+                            <ul class="d-tab-content pt-3 wow fadeInUp">
+                                <li>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-briefcase id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="investment_and_finance">Investment and Finance</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="investment_and_finance_description">Focusing on financial investments and related services, we drive value through strategic capital allocation and innovative financial solutions.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-bolt id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="energy_and_oil">Energy and Oil</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="energy_and_oil_description">Our operations in the energy sector, including oil and gas, power sustainable growth and innovation in energy solutions.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-tshirt id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="apparel_and_clothing">Apparel and Clothing</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="apparel_and_clothing_description">We design, manufacture, and retail clothing and fashion items, blending style with quality to meet global demands.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-building id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="real_estate_and_development">Real Estate and Development</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="real_estate_and_development_description">Engaging in property development and real estate investments, we create spaces that inspire and endure.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-cubes id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="commodities">Commodities</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="commodities_description">Our expertise in trading and investment in various commodities ensures robust market presence and value creation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-laptop id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="media_and_technology">Media and Technology</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="media_and_technology_description">We innovate in media production and technology, delivering cutting-edge solutions that shape the future of communication.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-hard-hat id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="contracting_and_engineering">Contracting and Engineering</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="contracting_and_engineering_description">Delivering high-quality construction and engineering projects with precision and innovation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-star id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="entertainment_and_event_management">Entertainment and Event Management</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="entertainment_and_event_management_description">Crafting memorable experiences through expert entertainment and event planning services.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-hotel id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="hospitality_and_tourism">Hospitality and Tourism</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="hospitality_and_tourism_description">Providing world-class hospitality and tourism services to create unforgettable travel experiences.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-users id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="human_resources_and_consulting">Human Resources and Consulting</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="human_resources_and_consulting_description">Offering expert HR management and consultancy services to empower organizations and their people.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-white-bottom-op-2 pb-5 mb-5">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-md-2">
+                                                <i class="fa fa-truck id-color fs-40"></i>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="mb-0" data-translate="logistics_and_supply_chain">Logistics and Supply Chain</h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="fs-15 mb-0" data-translate="logistics_and_supply_chain_description">Optimizing logistics and supply chain operations for efficiency and reliability across global markets.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div> 
-
-                <div class="mt-4 text-light wow fadeInUp" data-wow-delay=".6s">
-                    <strong>Every year, every move — aligned with a higher purpose.</strong>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section id="section-our-legacy" class="bg-dark text-light pt-80 relative overflow-hidden">
+            <span class="legacy-glow legacy-glow-1"></span>
+            <span class="legacy-glow legacy-glow-2"></span>
+
+            <div class="container relative z-2">
+                <div class="row g-4 gx-5 justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <div class="subtitle s2 mb-2 wow fadeInUp" data-wow-delay=".0s" data-translate="our_legacy">Our Legacy</div>
+                        <h2 class="legacy-title wow fadeInUp" data-wow-delay=".1s" data-translate="our_legacy">Our Legacy</h2>
+                        <div class="legacy-underline mx-auto wow fadeInUp" data-wow-delay=".15s"></div>
+                        <p class="lead mt-3 wow fadeInUp" data-wow-delay=".2s" data-translate="our_legacy_description">Wish Group was born from a single principle—that dreams are not merely imagined, they are designed, funded, and realized. Our legacy is not just in the businesses we’ve built but in the lives we’ve touched.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center mt-4">
+                    <div class="col-6 col-md-3">
+                        <div class="legacy-stat wow fadeInUp" data-wow-delay=".25s">
+                            <div class="legacy-num" data-translate="countries_stat">15+</div>
+                            <div class="legacy-label" data-translate="countries">Countries</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="legacy-stat wow fadeInUp" data-wow-delay=".3s">
+                            <div class="legacy-num" data-translate="industries_stat">5+</div>
+                            <div class="legacy-label" data-translate="industries">Industries</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="legacy-stat wow fadeInUp" data-wow-delay=".35s">
+                            <div class="legacy-num" data-translate="members_clients_stat">20k+</div>
+                            <div class="legacy-label" data-translate="members_clients">Members & Clients</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="legacy-stat wow fadeInUp" data-wow-delay=".4s">
+                            <div class="legacy-num" data-translate="ethical_vision_stat">100%</div>
+                            <div class="legacy-label" data-translate="ethical_vision">Ethical Vision</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <div class="legacy-list glass wow fadeInUp" data-wow-delay=".45s">
+                            <ul class="ul-check fs-18 mb-0">
+                                <li>
+                                    <span class="legacy-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm6.92 6h-3.04a14.9 14.9 0 0 0-1.37-3.61A8.03 8.03 0 0 1 18.92 8ZM9.49 4.39A12.9 12.9 0 0 0 8.13 8H5.08a8.03 8.03 0 0 1 4.41-3.61ZM4.06 10h3.71a14.3 14.3 0 0 0 0 4H4.06a7.98 7.98 0 0 1 0-4Zm1.02 6h3.05c.33 1.26.8 2.46 1.36 3.61A8.03 8.03 0 0 1 5.08 16Zm6.86 3.61A12.9 12.9 0 0 1 9.87 16h4.26a12.9 12.9 0 0 1-1.19 3.61 8.2 8.2 0 0 1-1 .01Zm3.98 0c.56-1.15 1.03-2.35 1.36-3.61h3.05a8.03 8.03 0 0 1-4.41 3.61ZM19.94 10a7.98 7.98 0 0 1 0 4h-3.71a14.3 14.3 0 0 0 0-4h3.71ZM14.13 8H9.87c.32-1.26.79-2.46 1.36-3.61A8.03 8.03 0 0 1 14.13 8Z"/></svg>
+                                    </span>
+                                    <span data-translate="global_presence">Global presence across 15 countries</span>
+                                </li>
+                                <li>
+                                    <span class="legacy-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 22h18v-2H3v2Zm2-4h2v-2H5v2Zm0-4h2v-2H5v2Zm0-4h2V8H5v2Zm0-4h2V4H5v2Zm4 12h2v-2H9v2Zm0-4h2v-2H9v2Zm0-4h2V8H9v2Zm0-4h2V4H9v2Zm4 12h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2V8h-2v2Zm0-4h2V4h-2v2Zm4 12h2V2h-6v4h2v12Z"/></svg>
+                                    </span>
+                                    <span data-translate="multiple_industries">Multiple industries: Real Estate, Hospitality, Trading, Investments, Lifestyle</span>
+                                </li>
+                                <li>
+                                    <span class="legacy-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4ZM8 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm8 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4ZM8 14c-.87 0-1.86.11-2.86.32C3.16 14.7 2 15.65 2 17v2h6v-2c0-.74.27-1.4.73-2-.23-.01-.48-.01-.73-.01Z"/></svg>
+                                    </span>
+                                    <span data-translate="members_clients_count">Over 20,000+ members, clients, and partners</span>
+                                </li>
+                                <li>
+                                    <span class="legacy-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 20h18v-2c-3.5-2-7.5-2-11 0-2-1.2-4.5-1.7-7-1.5V20Zm11.5-9.5 1.3-1.3 1.2 1.2 1.5-1.5-1.2-1.2 1.3-1.3-1.4-1.4-1.3 1.3-1.2-1.2-1.5 1.5 1.2 1.2-1.3 1.3 1.4 1.4Z"/></svg>
+                                    </span>
+                                    <span data-translate="projects_range">Projects ranging from floating villas to sustainable island developments</span>
+                                </li>
+                                <li>
+                                    <span class="legacy-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2 9.9 8H4l4.8 3.5L6.7 18 12 14.6 17.3 18l-2.1-6.5L20 8h-5.9L12 2Z"/></svg>
+                                    </span>
+                                    <span data-translate="ethical_recognition">Recognized for ethical entrepreneurship and creative innovation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center mt-4">
+                    <div class="col-lg-9 text-center">
+                        <p class="fs-16 opacity-90 wow fadeInUp" data-wow-delay=".5s" data-translate="legacy_closing">Our legacy lives in every project, every island, every member we serve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-our-history" class="bg-dark section-dark text-light">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="our_history">Our History – From Dream to Global Force</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="history_title">The journey of Wish Group began with a single vision in 2012.</h2>
+                        <p class="lead wow fadeInUp" data-wow-delay=".4s" data-translate="history_description">What started as a boutique concept in Maldives and Sri Lanka has grown into a multinational organization.</p>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="accordion s2 wow fadeInUp">
+                            <div class="accordion-section">
+                                <div class="accordion-section-title" data-tab="#history-2012" data-translate="history_2012_title">2012: Conceptualization in Sri Lanka</div>
+                                <div class="accordion-section-content" id="history-2012" data-translate="history_2012_description">The seed of Wish Group was planted, with a vision to create a unique lifestyle brand blending innovation, ethics, and global ambition.</div>
+
+                                <div class="accordion-section-title" data-tab="#history-2014" data-translate="history_2014_title">2014: First trading operations begin under Wish Brand</div>
+                                <div class="accordion-section-content" id="history-2014" data-translate="history_2014_description">Our trading division launched, marking the first step in turning our vision into reality.</div>
+
+                                <div class="accordion-section-title" data-tab="#history-2017" data-translate="history_2017_title">2017: Expansion into UAE & official registration of Wish Group</div>
+                                <div class="accordion-section-content" id="history-2017" data-translate="history_2017_description">The UAE became our new base of operations, solidifying our presence in the Middle East market.</div>
+
+                                <div class="accordion-section-title" data-tab="#history-2019" data-translate="history_2019_title">2019: Launch of real estate and investment projects</div>
+                                <div class="accordion-section-content" id="history-2019" data-translate="history_2019_description">We ventured into luxury real estate and high-value investment opportunities, expanding our portfolio.</div>
+
+                                <div class="accordion-section-title" data-tab="#history-2021" data-translate="history_2021_title">2021: Initiation of floating villa innovation & Wish Island Project</div>
+                                <div class="accordion-section-content" id="history-2021" data-translate="history_2021_description">Our pioneering floating villa concept and the grand Wish Island Project began, redefining luxury living.</div>
+
+                                <div class="accordion-section-title" data-tab="#history-2023" data-translate="history_2023_title">2023: Launch of Wish I Club, Prime Bond, and entry into Europe</div>
+                                <div class="accordion-section-content" id="history-2023" data-translate="history_2023_description">We introduced exclusive membership programs and investment platforms while expanding into European markets.</div>
+
+                                <div class="accordion-section-title" data-tab="#history-2025" data-translate="history_2025_title">2025: 20+ registered companies, cross-continental partnerships, and luxury CSR projects</div>
+                                <div class="accordion-section-content" id="history-2025" data-translate="history_2025_description">Today, we stand as a global force, committed to excellence, partnerships, and impactful social responsibility.</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-light wow fadeInUp" data-wow-delay=".6s">
+                            <strong data-translate="history_closing">Every year, every move — aligned with a higher purpose.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative">
+            <div class="container relative z-2">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="head_office">Head Office</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="location_venue">Location & Venue</h2>
+                        <p class="lead wow fadeInUp" data-wow-delay=".4s" data-translate="location_venue_description">Explore our head office—designed for innovation, collaboration, and client experiences.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-sm-6">
+                        <figure class="office-figure wow scale-in-mask" data-wow-delay=".1s">
+                            <img src="images/misc/l1.webp" class="w-100 rounded-2" alt="Head office lobby">
+                            <figcaption data-translate="reception_lobby">Reception & Lobby</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-6">
+                        <figure class="office-figure wow scale-in-mask" data-wow-delay=".2s">
+                            <img src="images/misc/l2.webp" class="w-100 rounded-2" alt="Head office meeting room">
+                            <figcaption data-translate="executive_meeting_suite">Executive Meeting Suite</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
+                        <p class="mb-0" data-translate="address_line_1">Business Bay, Dubai</p>
+                        <p data-translate="address_line_2">United Arab Emirates</p>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light" data-translate="home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="about_us">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="contact_us">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="contact_us">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light" data-translate="phone_1">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light" data-translate="phone_2">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light" data-translate="email_1">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light" data-translate="email_2">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center" data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <style>
+            .legacy-title {
+                background: linear-gradient(90deg, #fff, #7cc3ff 30%, #a58bff 60%, #ffd38b 90%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                letter-spacing: .2px;
+            }
+
+            .legacy-underline {
+                width: 120px;
+                height: 3px;
+                border-radius: 999px;
+                background: linear-gradient(90deg, #7cc3ff, #a58bff, #ffd38b);
+            }
+
+            .glass {
+                background: rgba(255, 255, 255, .04);
+                border: 1px solid rgba(255, 255, 255, .08);
+                border-radius: 16px;
+                padding: 24px 22px;
+                backdrop-filter: blur(6px);
+            }
+
+            .legacy-stat {
+                text-align: center;
+                background: rgba(255, 255, 255, .03);
+                border: 1px solid rgba(255, 255, 255, .08);
+                border-radius: 16px;
+                padding: 18px 14px;
+                transition: transform .25s ease, box-shadow .25s ease;
+            }
+
+            .legacy-stat:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
+            }
+
+            .legacy-num {
+                font-size: 32px;
+                font-weight: 800;
+                line-height: 1;
+            }
+
+            .legacy-label {
+                opacity: .85;
+                margin-top: 6px;
+            }
+
+            .legacy-list .ul-check li {
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+            }
+
+            .legacy-icon {
+                display: inline-flex;
+                margin-top: 2px;
+                opacity: .9;
+            }
+
+            .legacy-glow {
+                position: absolute;
+                filter: blur(70px);
+                opacity: .25;
+                z-index: 0;
+            }
+
+            .legacy-glow-1 {
+                width: 340px;
+                height: 340px;
+                border-radius: 50%;
+                background: radial-gradient(closest-side, #7cc3ff, transparent 70%);
+                top: -80px;
+                left: -60px;
+            }
+
+            .legacy-glow-2 {
+                width: 360px;
+                height: 360px;
+                border-radius: 50%;
+                background: radial-gradient(closest-side, #a58bff, transparent 70%);
+                bottom: -100px;
+                right: -40px;
+            }
+
+            #language-switcher {
+                background: #fff;
+                color: #000;
+                border: none;
+                padding: 8px 12px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+
+            /* Arabic RTL support */
+            body[lang="ar"] {
+                direction: rtl;
+                text-align: right;
+            }
+
+            body[lang="ar"] .text-center {
+                text-align: center !important;
+            }
+
+            body[lang="ar"] .de-flex-col.header-col-mid {
+                direction: ltr;
+            }
+
+            body[lang="ar"] #mainmenu {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            body[lang="ar"] #mainmenu ul {
+                direction: ltr;
+            }
+        </style>
+
+        <!-- Javascript Files -->
+        <script src="js/vendors.js"></script>
+        <script src="js/designesia.js"></script>
+        <script src="js/countdown-custom.js"></script>
+        <script src="js/custom-marquee.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+        <script src="js/translationsAbout.js"></script>
     </div>
-</section>
+    <script>function setLanguage(lang) {
+    // Ensure the selected language exists in translations
+    if (!translations[lang]) {
+        console.error(`Language ${lang} not found in translations`);
+        return;
+    }
 
+    // Update the document's language attribute for RTL support
+    document.body.setAttribute('lang', lang);
 
-<section id="section-venue" class="bg-dark section-dark text-light pt-80 relative">
-  <div class="container relative z-2">
-    <!-- header -->
-    <div class="row g-4 justify-content-center">
-      <div class="col-lg-8 text-center">
-        <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Head Office</div>
-        <h2 class="wow fadeInUp" data-wow-delay=".2s">Location & Venue</h2>
-        <p class="lead wow fadeInUp" data-wow-delay=".4s">
-          Explore our head office—designed for innovation, collaboration, and client experiences.
-        </p>
-      </div>
-    </div>
+    // Apply RTL styling for Arabic
+    if (lang === 'ar') {
+        document.body.classList.add('rtl');
+    } else {
+        document.body.classList.remove('rtl');
+    }
 
-    <!-- gallery -->
-    <div class="row g-4 mt-2">
-      <div class="col-sm-6">
-        <figure class="office-figure wow scale-in-mask" data-wow-delay=".1s">
-          <img src="images/misc/l1.webp" class="w-100 rounded-2" alt="Head office lobby">
-          <figcaption>Reception & Lobby</figcaption>
-        </figure>
-      </div>
-      <div class="col-sm-6">
-        <figure class="office-figure wow scale-in-mask" data-wow-delay=".2s">
-          <img src="images/misc/l2.webp" class="w-100 rounded-2" alt="Head office meeting room">
-          <figcaption>Executive Meeting Suite</figcaption>
-        </figure>
-      </div>
-      
-    </div>
-
-   
-  </div>
-</section>
-
+    // Get all elements with data-translate attribute
+    const elements = document.querySelectorAll('[data-translate]');
     
-
-    </div>
-
-    <!-- footer begin -->
-  <footer class="text-light section-dark pt-5">
-  <div class="container">
-    <div class="row g-4">
-
-      <!-- Logo & Social -->
-      <div class="col-sm-6 col-lg-3 text-center">
-        <img src="images\wishgroup\logo remove.png" class="w-150px mb-3" alt="">
-        <div class="social-icons mt-3">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>      
-        </div>
-      </div>
-
-      <!-- Address -->
-      <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-        <h3 class="fs-20 mb-3">Address</h3>
-        <p class="mb-0">121 AI Blvd, San Francisco</p>
-        <p>BCA 94107</p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-        <h3 class="fs-20 mb-3">Quick Links</h3>
-        <ul class="list-unstyled mb-0">
-          <li><a href="#" class="text-light">Home</a></li>
-          <li><a href="about.html" class="text-light">About Us</a></li>
-          <li><a href="#" class="text-light">Divisions</a></li>
-          <li><a href="#" class="text-light">Projects</a></li>
-          <li><a href="#" class="text-light">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Us with Email -->
-      <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-        <h3 class="fs-20 mb-3">Contact Us</h3>
-        <p class="mb-1">T. <a href="tel:+1123456789" class="text-light">+971 4259 7167 </a></p>
-        <p class="mb-1">M. <a href="tel:+1987654321" class="text-light">+971 4259 4795</a></p>
-        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a>
-          <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">iinfo@wishgroup.world</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Subfooter -->
-  <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          Copyright 2025 - Wish Group.All rights reserved.
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-    <!-- footer end -->
-    
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="js/vendors.js"></script>
-    <script src="js/designesia.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/custom-marquee.js"></script>
-
+    // Update text content based on selected language
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            // Handle HTML content (like spans in vision_description)
+            if (element.innerHTML.includes('<span')) {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation key ${key} not found for language ${lang}`);
+        }
+    });
+}</script>
+    <script>const translations = {
+    en: {
+        scroll_to_top: "Scroll to top",
+        home: "Home",
+        about_us: "About Us",
+        divisions: "Divisions",
+        projects: "Projects",
+        countries: "Countries",
+        news: "News",
+        our_policies: "Our Policies",
+        career: "Career",
+        contact_us: "Contact Us",
+        tickets_style_1: "Tickets Style 1",
+        tickets_style_2: "Tickets Style 2",
+        news_single: "News Single",
+        contact: "Contact",
+        who_we_are: "Who We Are",
+        make_your_wish: "Make Your Wish",
+        vision: "Vision",
+        vision_description: "To create a unified future under <span class=\"fw-bold text-danger\">‘One Capital World’</span> through humanity, sustainability, and inclusive growth.",
+        mission: "Mission",
+        mission_description: "We empower people to achieve their dreams through inclusive investments, responsible innovation, and global partnerships — working together to become the world’s number one capital company.",
+        core_values: "Core Values",
+        respect: "Respect",
+        respect_description: "We value all ideas and foster openness to inspire trust and cooperation.",
+        integrity: "Integrity",
+        integrity_description: "Our principles are never compromised — no deal or client outweighs our commitment.",
+        service: "Service",
+        service_description: "We build lasting relationships by connecting the right people, capital, and opportunities.",
+        excellence: "Excellence",
+        excellence_description: "We relentlessly pursue winning outcomes for our stakeholders worldwide.",
+        our_team: "Our Team",
+        meet_the_visionaries: "Meet the Visionaries",
+        team_member_1_name: "Joshua Henry",
+        team_member_1_role: "Chief AI Scientist, OpenAI",
+        team_member_2_name: "Leila Zhang",
+        team_member_2_role: "VP of Machine Learning, Google",
+        team_member_3_name: "Carlos Rivera",
+        team_member_3_role: "Founder & CEO, NeuralCore",
+        our_allies: "Our Allies",
+        ally_1_name: "MASHREQ BANK PJSC",
+        ally_1_role: "National Bankers",
+        ally_1_location: "DUBAI, UAE",
+        ally_2_name: "ABU DHABI ISLAMIC BANK",
+        ally_2_role: "National Bankers",
+        ally_2_location: "DUBAI, UAE",
+        ally_3_name: "ALMAHY LEGAL SERVICES",
+        ally_3_role: "Legal Partner",
+        ally_3_location: "DUBAI, UAE",
+        ally_4_name: "EXL AUDITING",
+        ally_4_role: "Auditor",
+        ally_4_location: "DUBAI, UAE",
+        diverse_industries: "Diverse Industries, Unified Excellence",
+        our_businesses: "Our Businesses",
+        investment_and_finance: "Investment and Finance",
+        investment_and_finance_description: "Focusing on financial investments and related services, we drive value through strategic capital allocation and innovative financial solutions.",
+        energy_and_oil: "Energy and Oil",
+        energy_and_oil_description: "Our operations in the energy sector, including oil and gas, power sustainable growth and innovation in energy solutions.",
+        apparel_and_clothing: "Apparel and Clothing",
+        apparel_and_clothing_description: "We design, manufacture, and retail clothing and fashion items, blending style with quality to meet global demands.",
+        real_estate_and_development: "Real Estate and Development",
+        real_estate_and_development_description: "Engaging in property development and real estate investments, we create spaces that inspire and endure.",
+        commodities: "Commodities",
+        commodities_description: "Our expertise in trading and investment in various commodities ensures robust market presence and value creation.",
+        media_and_technology: "Media and Technology",
+        media_and_technology_description: "We innovate in media production and technology, delivering cutting-edge solutions that shape the future of communication.",
+        contracting_and_engineering: "Contracting and Engineering",
+        contracting_and_engineering_description: "Delivering high-quality construction and engineering projects with precision and innovation.",
+        entertainment_and_event_management: "Entertainment and Event Management",
+        entertainment_and_event_management_description: "Crafting memorable experiences through expert entertainment and event planning services.",
+        hospitality_and_tourism: "Hospitality and Tourism",
+        hospitality_and_tourism_description: "Providing world-class hospitality and tourism services to create unforgettable travel experiences.",
+        human_resources_and_consulting: "Human Resources and Consulting",
+        human_resources_and_consulting_description: "Offering expert HR management and consultancy services to empower organizations and their people.",
+        logistics_and_supply_chain: "Logistics and Supply Chain",
+        logistics_and_supply_chain_description: "Optimizing logistics and supply chain operations for efficiency and reliability across global markets.",
+        our_legacy: "Our Legacy",
+        our_legacy_description: "Wish Group was born from a single principle—that dreams are not merely imagined, they are designed, funded, and realized. Our legacy is not just in the businesses we’ve built but in the lives we’ve touched.",
+        countries_stat: "15+",
+        countries: "Countries",
+        industries_stat: "5+",
+        industries: "Industries",
+        members_clients_stat: "20k+",
+        members_clients: "Members & Clients",
+        ethical_vision_stat: "100%",
+        ethical_vision: "Ethical Vision",
+        global_presence: "Global presence across 15 countries",
+        multiple_industries: "Multiple industries: Real Estate, Hospitality, Trading, Investments, Lifestyle",
+        members_clients_count: "Over 20,000+ members, clients, and partners",
+        projects_range: "Projects ranging from floating villas to sustainable island developments",
+        ethical_recognition: "Recognized for ethical entrepreneurship and creative innovation",
+        legacy_closing: "Our legacy lives in every project, every island, every member we serve.",
+        our_history: "Our History – From Dream to Global Force",
+        history_title: "The journey of Wish Group began with a single vision in 2012.",
+        history_description: "What started as a boutique concept in Maldives and Sri Lanka has grown into a multinational organization.",
+        history_2012_title: "2012: Conceptualization in Sri Lanka",
+        history_2012_description: "The seed of Wish Group was planted, with a vision to create a unique lifestyle brand blending innovation, ethics, and global ambition.",
+        history_2014_title: "2014: First trading operations begin under Wish Brand",
+        history_2014_description: "Our trading division launched, marking the first step in turning our vision into reality.",
+        history_2017_title: "2017: Expansion into UAE & official registration of Wish Group",
+        history_2017_description: "The UAE became our new base of operations, solidifying our presence in the Middle East market.",
+        history_2019_title: "2019: Launch of real estate and investment projects",
+        history_2019_description: "We ventured into luxury real estate and high-value investment opportunities, expanding our portfolio.",
+        history_2021_title: "2021: Initiation of floating villa innovation & Wish Island Project",
+        history_2021_description: "Our pioneering floating villa concept and the grand Wish Island Project began, redefining luxury living.",
+        history_2023_title: "2023: Launch of Wish I Club, Prime Bond, and entry into Europe",
+        history_2023_description: "We introduced exclusive membership programs and investment platforms while expanding into European markets.",
+        history_2025_title: "2025: 20+ registered companies, cross-continental partnerships, and luxury CSR projects",
+        history_2025_description: "Today, we stand as a global force, committed to excellence, partnerships, and impactful social responsibility.",
+        history_closing: "Every year, every move — aligned with a higher purpose.",
+        head_office: "Head Office",
+        location_venue: "Location & Venue",
+        location_venue_description: "Explore our head office—designed for innovation, collaboration, and client experiences.",
+        reception_lobby: "Reception & Lobby",
+        executive_meeting_suite: "Executive Meeting Suite",
+        address: "Address",
+        address_line_1: "121 AI Blvd, San Francisco",
+        address_line_2: "BCA 94107",
+        quick_links: "Quick Links",
+        phone_1: "+971 4259 7167",
+        phone_2: "+971 4259 4795",
+        email_1: "info@wishgroup.ae",
+        email_2: "info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+    },
+    ar: {
+        scroll_to_top: "التمرير إلى الأعلى",
+        home: "الرئيسية",
+        about_us: "معلومات عنا",
+        divisions: "الأقسام",
+        projects: "المشاريع",
+        countries: "الدول",
+        news: "الأخبار",
+        our_policies: "سياساتنا",
+        career: "وظائف",
+        contact_us: "اتصل بنا",
+        tickets_style_1: "تذكرة النمط 1",
+        tickets_style_2: "تذكرة النمط 2",
+        news_single: "خبر مفرد",
+        contact: "اتصال",
+        who_we_are: "من نحن",
+        make_your_wish: "حقق أمنيتك",
+        vision: "الرؤية",
+        vision_description: "خلق مستقبل موحد تحت شعار <span class=\"fw-bold text-danger\">'عالم رأس المال الواحد'</span> من خلال الإنسانية، الاستدامة، والنمو الشامل.",
+        mission: "المهمة",
+        mission_description: "نحن نمكن الناس من تحقيق أحلامهم من خلال استثمارات شاملة، ابتكار مسؤول، وشراكات عالمية — نعمل معًا لنصبح الشركة الرائدة عالميًا في رأس المال.",
+        core_values: "القيم الأساسية",
+        respect: "الاحترام",
+        respect_description: "نحن نقدر جميع الأفكار ونشجع الانفتاح لإلهام الثقة والتعاون.",
+        integrity: "النزاهة",
+        integrity_description: "مبادئنا لا تُساوم — لا صفقة أو عميل يفوق التزامنا.",
+        service: "الخدمة",
+        service_description: "نبني علاقات دائمة من خلال ربط الأشخاص المناسبين، رأس المال، والفرص.",
+        excellence: "التميز",
+        excellence_description: "نسعى بلا هوادة لتحقيق نتائج فائزة لأصحاب المصلحة في جميع أنحاء العالم.",
+        our_team: "فريقنا",
+        meet_the_visionaries: "تعرف على الرواد",
+        team_member_1_name: "جوشوا هنري",
+        team_member_1_role: "كبير علماء الذكاء الاصطناعي، أوبن إيه آي",
+        team_member_2_name: "ليلى زانغ",
+        team_member_2_role: "نائب رئيس التعلم الآلي، جوجل",
+        team_member_3_name: "كارلوس ريفيرا",
+        team_member_3_role: "المؤسس والرئيس التنفيذي، نيورالكور",
+        our_allies: "حلفاؤنا",
+        ally_1_name: "مشرق بنك بي جي إس سي",
+        ally_1_role: "مصرفيون وطنيون",
+        ally_1_location: "دبي، الإمارات",
+        ally_2_name: "بنك أبوظبي الإسلامي",
+        ally_2_role: "مصرفيون وطنيون",
+        ally_2_location: "دبي، الإمارات",
+        ally_3_name: "المحي للخدمات القانونية",
+        ally_3_role: "شريك قانوني",
+        ally_3_location: "دبي، الإمارات",
+        ally_4_name: "إكس إل للتدقيق",
+        ally_4_role: "مدقق",
+        ally_4_location: "دبي، الإمارات",
+        diverse_industries: "صناعات متنوعة، تميز موحد",
+        our_businesses: "أعمالنا",
+        investment_and_finance: "الاستثمار والتمويل",
+        investment_and_finance_description: "مع التركيز على الاستثمارات المالية والخدمات ذات الصلة، نحن ندفع القيمة من خلال تخصيص رأس المال الاستراتيجي والحلول المالية المبتكرة.",
+        energy_and_oil: "الطاقة والنفط",
+        energy_and_oil_description: "عملياتنا في قطاع الطاقة، بما في ذلك النفط والغاز، تدعم النمو المستدام والابتكار في حلول الطاقة.",
+        apparel_and_clothing: "الملابس والأزياء",
+        apparel_and_clothing_description: "نصمم ونصنع ونبيع الملابس ومنتجات الأزياء، مزجًا بين الأناقة والجودة لتلبية الطلبات العالمية.",
+        real_estate_and_development: "العقارات والتطوير",
+        real_estate_and_development_description: "من خلال التطوير العقاري والاستثمارات العقارية، نحن نخلق مساحات تلهم وتدوم.",
+        commodities: "السلع",
+        commodities_description: "خبرتنا في تجارة واستثمار السلع المختلفة تضمن حضورًا قويًا في السوق وخلق القيمة.",
+        media_and_technology: "الإعلام والتكنولوجيا",
+        media_and_technology_description: "نحن نبتكر في إنتاج الإعلام والتكنولوجيا، مقدمين حلولًا متطورة تشكل مستقبل الاتصالات.",
+        contracting_and_engineering: "المقاولات والهندسة",
+        contracting_and_engineering_description: "تقديم مشاريع بناء وهندسة عالية الجودة بدقة وابتكار.",
+        entertainment_and_event_management: "الترفيه وإدارة الفعاليات",
+        entertainment_and_event_management_description: "صيغة تجارب لا تُنسى من خلال خدمات الترفيه وتخطيط الفعاليات الخبيرة.",
+        hospitality_and_tourism: "الضيافة والسياحة",
+        hospitality_and_tourism_description: "توفير خدمات ضيافة وسياحة عالمية المستوى لخلق تجارب سفر لا تُنسى.",
+        human_resources_and_consulting: "الموارد البشرية والاستشارات",
+        human_resources_and_consulting_description: "تقديم خدمات إدارة الموارد البشرية والاستشارات الخبيرة لتمكين المنظمات وأشخاصها.",
+        logistics_and_supply_chain: "اللوجستيات وسلسلة التوريد",
+        logistics_and_supply_chain_description: "تحسين عمليات اللوجستيات وسلسلة التوريد لتحقيق الكفاءة والموثوقية عبر الأسواق العالمية.",
+        our_legacy: "إرثنا",
+        our_legacy_description: "وُلدت مجموعة ويش من مبدأ واحد—أن الأحلام لا تُتخيل فقط، بل تُصمم وتُمول وتُحقق. إرثنا ليس فقط في الأعمال التي بنيناها ولكن في الحياة التي أثرنا فيها.",
+        countries_stat: "15+",
+        countries: "دول",
+        industries_stat: "5+",
+        industries: "صناعات",
+        members_clients_stat: "20 ألف+",
+        members_clients: "الأعضاء والعملاء",
+        ethical_vision_stat: "100%",
+        ethical_vision: "رؤية أخلاقية",
+        global_presence: "حضور عالمي عبر 15 دولة",
+        multiple_industries: "صناعات متعددة: العقارات، الضيافة، التجارة، الاستثمارات، نمط الحياة",
+        members_clients_count: "أكثر من 20,000 عضو، عميل، وشريك",
+        projects_range: "مشاريع تتراوح من الفلل العائمة إلى التطورات الجزرية المستدامة",
+        ethical_recognition: "معترف بها لريادة الأعمال الأخلاقية والابتكار الإبداعي",
+        legacy_closing: "يعيش إرثنا في كل مشروع، كل جزيرة، كل عضو نخدمه.",
+        our_history: "تاريخنا - من الحلم إلى قوة عالمية",
+        history_title: "بدأت رحلة مجموعة ويش برؤية واحدة في عام 2012.",
+        history_description: "ما بدأ كمفهوم بوتيكي في جزر المالديف وسريلانكا نما ليصبح منظمة متعددة الجنسيات.",
+        history_2012_title: "2012: التصور في سريلانكا",
+        history_2012_description: "زرعت بذرة مجموعة ويش، برؤية لخلق علامة تجارية فريدة لنمط الحياة تجمع بين الابتكار، الأخلاق، والطموح العالمي.",
+        history_2014_title: "2014: بدء عمليات التجارة الأولى تحت العلامة التجارية ويش",
+        history_2014_description: "أطلق قسم التجارة لدينا، مما يمثل الخطوة الأولى في تحويل رؤيتنا إلى واقع.",
+        history_2017_title: "2017: التوسع في الإمارات وتسجيل مجموعة ويش رسميًا",
+        history_2017_description: "أصبحت الإمارات قاعدة عملياتنا الجديدة، مما عزز وجودنا في سوق الشرق الأوسط.",
+        history_2019_title: "2019: إطلاق مشاريع العقارات والاستثمار",
+        history_2019_description: "غامرنا في العقارات الفاخرة وفرص الاستثمار ذات القيمة العالية، موسعين محفظتنا.",
+        history_2021_title: "2021: بدء ابتكار الفلل العائمة ومشروع جزيرة ويش",
+        history_2021_description: "بدأ مفهوم الفلل العائمة الرائد ومشروع جزيرة ويش الكبير، معيدًا تعريف الحياة الفاخرة.",
+        history_2023_title: "2023: إطلاق نادي ويش آي، السندات الرئيسية، والدخول إلى أوروبا",
+        history_2023_description: "قدمنا برامج عضوية حصرية ومنصات استثمار بينما توسعنا في الأسواق الأوروبية.",
+        history_2025_title: "2025: أكثر من 20 شركة مسجلة، شراكات عابرة للقارات، ومشاريع CSR فاخرة",
+        history_2025_description: "اليوم، نحن نقف كقوة عالمية، ملتزمون بالتميز، الشراكات، والمسؤولية الاجتماعية المؤثرة.",
+        history_closing: "كل عام، كل خطوة — تتماشى مع غرض أعلى.",
+        head_office: "المقر الرئيسي",
+        location_venue: "الموقع والمكان",
+        location_venue_description: "استكشف مقرنا الرئيسي—مصمم للابتكار، التعاون، وتجارب العملاء.",
+        reception_lobby: "الاستقبال والردهة",
+        executive_meeting_suite: "جناح الاجتماعات التنفيذية",
+        address: "العنوان",
+        address_line_1: "121 شارع الذكاء الاصطناعي، سان فرانسيسكو",
+        address_line_2: "BCA 94107",
+        quick_links: "روابط سريعة",
+        phone_1: "+971 4259 7167",
+        phone_2: "+971 4259 4795",
+        email_1: "info@wishgroup.ae",
+        email_2: "info@wishgroup.world",
+        footer_copyright: "حقوق الطبع والنشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
+    },
+    fr: {
+        scroll_to_top: "Retour en haut",
+        home: "Accueil",
+        about_us: "À propos de nous",
+        divisions: "Divisions",
+        projects: "Projets",
+        countries: "Pays",
+        news: "Actualités",
+        our_policies: "Nos politiques",
+        career: "Carrière",
+        contact_us: "Contactez-nous",
+        tickets_style_1: "Billets Style 1",
+        tickets_style_2: "Billets Style 2",
+        news_single: "Actualité unique",
+        contact: "Contact",
+        who_we_are: "Qui nous sommes",
+        make_your_wish: "Réalisez votre souhait",
+        vision: "Vision",
+        vision_description: "Créer un avenir unifié sous <span class=\"fw-bold text-danger\">‘Un monde de capital’</span> à travers l’humanité, la durabilité et la croissance inclusive.",
+        mission: "Mission",
+        mission_description: "Nous permettons aux gens de réaliser leurs rêves grâce à des investissements inclusifs, une innovation responsable et des partenariats mondiaux — travaillant ensemble pour devenir la première entreprise mondiale de capital.",
+        core_values: "Valeurs fondamentales",
+        respect: "Respect",
+        respect_description: "Nous valorisons toutes les idées et favorisons l’ouverture pour inspirer la confiance et la coopération.",
+        integrity: "Intégrité",
+        integrity_description: "Nos principes ne sont jamais compromis — aucun accord ou client ne prime sur notre engagement.",
+        service: "Service",
+        service_description: "Nous construisons des relations durables en connectant les bonnes personnes, le capital et les opportunités.",
+        excellence: "Excellence",
+        excellence_description: "Nous poursuivons sans relâche des résultats gagnants pour nos parties prenantes dans le monde entier.",
+        our_team: "Notre équipe",
+        meet_the_visionaries: "Rencontrez les visionnaires",
+        team_member_1_name: "Joshua Henry",
+        team_member_1_role: "Scientifique en chef de l’IA, OpenAI",
+        team_member_2_name: "Leila Zhang",
+        team_member_2_role: "Vice-présidente de l’apprentissage automatique, Google",
+        team_member_3_name: "Carlos Rivera",
+        team_member_3_role: "Fondateur et PDG, NeuralCore",
+        our_allies: "Nos alliés",
+        ally_1_name: "MASHREQ BANK PJSC",
+        ally_1_role: "Banquiers nationaux",
+        ally_1_location: "DUBAÏ, ÉAU",
+        ally_2_name: "BANQUE ISLAMIQUE D’ABU DHABI",
+        ally_2_role: "Banquiers nationaux",
+        ally_2_location: "DUBAÏ, ÉAU",
+        ally_3_name: "SERVICES JURIDIQUES ALMAHY",
+        ally_3_role: "Partenaire juridique",
+        ally_3_location: "DUBAÏ, ÉAU",
+        ally_4_name: "EXL AUDITING",
+        ally_4_role: "Auditeur",
+        ally_4_location: "DUBAÏ, ÉAU",
+        diverse_industries: "Industries diverses, excellence unifiée",
+        our_businesses: "Nos activités",
+        investment_and_finance: "Investissement et finance",
+        investment_and_finance_description: "En nous concentrant sur les investissements financiers et les services associés, nous créons de la valeur grâce à une allocation stratégique du capital et des solutions financières innovantes.",
+        energy_and_oil: "Énergie et pétrole",
+        energy_and_oil_description: "Nos opérations dans le secteur de l’énergie, y compris le pétrole et le gaz, favorisent une croissance durable et l’innovation dans les solutions énergétiques.",
+        apparel_and_clothing: "Vêtements et mode",
+        apparel_and_clothing_description: "Nous concevons, fabriquons et vendons des vêtements et articles de mode, alliant style et qualité pour répondre aux demandes mondiales.",
+        real_estate_and_development: "Immobilier et développement",
+        real_estate_and_development_description: "Engagés dans le développement immobilier et les investissements immobiliers, nous créons des espaces qui inspirent et perdurent.",
+        commodities: "Matières premières",
+        commodities_description: "Notre expertise dans le commerce et l’investissement dans diverses matières premières garantit une présence robuste sur le marché et la création de valeur.",
+        media_and_technology: "Médias et technologie",
+        media_and_technology_description: "Nous innovons dans la production médiatique et la technologie, offrant des solutions de pointe qui façonnent l’avenir de la communication.",
+        contracting_and_engineering: "Construction et ingénierie",
+        contracting_and_engineering_description: "Réalisation de projets de construction et d’ingénierie de haute qualité avec précision et innovation.",
+        entertainment_and_event_management: "Divertissement et gestion d’événements",
+        entertainment_and_event_management_description: "Création d’expériences mémorables grâce à des services experts en divertissement et planification d’événements.",
+        hospitality_and_tourism: "Hôtellerie et tourisme",
+        hospitality_and_tourism_description: "Fourniture de services d’hôtellerie et de tourisme de classe mondiale pour créer des expériences de voyage inoubliables.",
+        human_resources_and_consulting: "Ressources humaines et conseil",
+        human_resources_and_consulting_description: "Offre de services experts en gestion des ressources humaines et conseil pour autonomiser les organisations et leurs employés.",
+        logistics_and_supply_chain: "Logistique et chaîne d’approvisionnement",
+        logistics_and_supply_chain_description: "Optimisation des opérations logistiques et de la chaîne d’approvisionnement pour une efficacité et une fiabilité accrues sur les marchés mondiaux.",
+        our_legacy: "Notre héritage",
+        our_legacy_description: "Le groupe Wish est né d’un seul principe : les rêves ne sont pas seulement imaginés, ils sont conçus, financés et réalisés. Notre héritage réside non seulement dans les entreprises que nous avons construites, mais dans les vies que nous avons touchées.",
+        countries_stat: "15+",
+        countries: "Pays",
+        industries_stat: "5+",
+        industries: "Industries",
+        members_clients_stat: "20k+",
+        members_clients: "Membres et clients",
+        ethical_vision_stat: "100%",
+        ethical_vision: "Vision éthique",
+        global_presence: "Présence mondiale dans 15 pays",
+        multiple_industries: "Multiples industries : immobilier, hôtellerie, commerce, investissements, style de vie",
+        members_clients_count: "Plus de 20 000 membres, clients et partenaires",
+        projects_range: "Projets allant des villas flottantes aux développements insulaires durables",
+        ethical_recognition: "Reconnu pour l’entrepreneuriat éthique et l’innovation créative",
+        legacy_closing: "Notre héritage vit dans chaque projet, chaque île, chaque membre que nous servons.",
+        our_history: "Notre histoire – Du rêve à la force mondiale",
+        history_title: "Le voyage du groupe Wish a commencé avec une seule vision en 2012.",
+        history_description: "Ce qui a commencé comme un concept boutique aux Maldives et au Sri Lanka est devenu une organisation multinationale.",
+        history_2012_title: "2012 : Conceptualisation au Sri Lanka",
+        history_2012_description: "La graine du groupe Wish a été plantée, avec une vision de créer une marque de style de vie unique alliant innovation, éthique et ambition mondiale.",
+        history_2014_title: "2014 : Début des premières opérations commerciales sous la marque Wish",
+        history_2014_description: "Notre division commerciale a été lancée, marquant le premier pas vers la concrétisation de notre vision.",
+        history_2017_title: "2017 : Expansion aux Émirats arabes unis et enregistrement officiel du groupe Wish",
+        history_2017_description: "Les Émirats arabes unis sont devenus notre nouvelle base d’opérations, consolidant notre présence sur le marché du Moyen-Orient.",
+        history_2019_title: "2019 : Lancement de projets immobiliers et d’investissement",
+        history_2019_description: "Nous nous sommes aventurés dans l’immobilier de luxe et les opportunités d’investissement à haute valeur, élargissant notre portefeuille.",
+        history_2021_title: "2021 : Initiation de l’innovation des villas flottantes et du projet Wish Island",
+        history_2021_description: "Notre concept pionnier de villas flottantes et le grand projet Wish Island ont commencé, redéfinissant la vie de luxe.",
+        history_2023_title: "2023 : Lancement de Wish I Club, Prime Bond, et entrée en Europe",
+        history_2023_description: "Nous avons introduit des programmes d’adhésion exclusifs et des plateformes d’investissement tout en nous étendant sur les marchés européens.",
+        history_2025_title: "2025 : Plus de 20 entreprises enregistrées, partenariats transcontinentaux et projets CSR de luxe",
+        history_2025_description: "Aujourd’hui, nous sommes une force mondiale, engagée dans l’excellence, les partenariats et une responsabilité sociale impactante.",
+        history_closing: "Chaque année, chaque mouvement — aligné sur un objectif supérieur.",
+        head_office: "Siège social",
+        location_venue: "Lieu et emplacement",
+        location_venue_description: "Découvrez notre siège social — conçu pour l’innovation, la collaboration et les expériences client.",
+        reception_lobby: "Réception et hall",
+        executive_meeting_suite: "Suite de réunion exécutive",
+        address: "Adresse",
+        address_line_1: "121 AI Blvd, San Francisco",
+        address_line_2: "BCA 94107",
+        quick_links: "Liens rapides",
+        phone_1: "+971 4259 7167",
+        phone_2: "+971 4259 4795",
+        email_1: "info@wishgroup.ae",
+        email_2: "info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
+    },
+    si: {
+        scroll_to_top: "ඉහළට ගමන් කරන්න",
+        home: "මුල් පිටුව",
+        about_us: "අප ගැන",
+        divisions: "අංශ",
+        projects: "ව්‍යාපෘති",
+        countries: "රටවල්",
+        news: "පුවත්",
+        our_policies: "අපගේ ප්‍රතිපත්ති",
+        career: "වෘත්තිය",
+        contact_us: "අප හා සම්බන්ධ වන්න",
+        tickets_style_1: "ටිකට් විලාසය 1",
+        tickets_style_2: "ටිකට් විලාසය 2",
+        news_single: "තනි පුවත",
+        contact: "සම්බන්ධතා",
+        who_we_are: "අපි කවුද",
+        make_your_wish: "ඔබේ ආශාව සපුරාලන්න",
+        vision: "දැක්ම",
+        vision_description: "මානවත්වය, තිරසාරභාවය සහ ඇතුළත් වර්ධනය හරහා <span class=\"fw-bold text-danger\">‘එකම ප්‍රාග්ධන ලෝකය’</span> යටතේ ඒකාබද්ධ අනාගතයක් නිර්මාණය කිරීම.",
+        mission: "මෙහෙවර",
+        mission_description: "ඇතුළත් ආයෝජන, වගකිවයුතු නවෝත්පාදනයන් සහ ගෝලීය හවුල්කාරිත්වයන් හරහා මිනිසුන්ට ඔවුන්ගේ සිහින සාක්ෂාත් කර ගැනීමට බලය ලබා දෙමින්, ලෝකයේ ප්‍රමුඛතම ප්‍රාග්ධන සමාගම බවට පත්වීමට එක්ව කටයුතු කරමු.",
+        core_values: "මූලික වටිනාකම්",
+        respect: "ගෞරවය",
+        respect_description: "අපි සියලුම අදහස් අගය කරන අතර විවෘතභාවය පෝෂණය කරමින් විශ්වාසය සහ සහයෝගීතාව ආනුභාවිත කරමු.",
+        integrity: "අඛණ්ඩතාව",
+        integrity_description: "අපගේ මූලධර්ම කිසිවිටෙක සම්මුතියකට ලක් නොවේ — කිසිදු ගනුදෙනුවක් හෝ ගනුදෙනුකරුවෙකු අපගේ කැපවීමට ඉහළින් නොවේ.",
+        service: "සේවය",
+        service_description: "නිවැරදි පුද්ගලයන්, ප්‍රාග්ධනය සහ අවස්ථා සම්බන්ධ කරමින් අපි දිගුකාලීන සබඳතා ගොඩනඟමු.",
+        excellence: "විශිෂ්ටත්වය",
+        excellence_description: "අපි ලෝකව්‍යාප්තව අපගේ පාර්ශවකරුවන් සඳහා ජයග්‍රාහී ප්‍රතිඵල ලබා ගැනීමට නිරන්තරයෙන් උත්සාහ කරමු.",
+        our_team: "අපගේ කණ්ඩායම",
+        meet_the_visionaries: "දූරදර්ශීන් හමුවන්න",
+        team_member_1_name: "ජෝෂුවා හෙන්රි",
+        team_member_1_role: "ප්‍රධාන AI විද්‍යාඥ, ඕපන්AI",
+        team_member_2_name: "ලීලා ජෑන්",
+        team_member_2_role: "යන්ත්‍ර ඉගෙනුම් අංශයේ උප සභාපති, ගූගල්",
+        team_member_3_name: "කාලෝස් රිවේරා",
+        team_member_3_role: "නිර්මාතෘ සහ ප්‍රධාන විධායක, නියුරල්කෝර්",
+        our_allies: "අපගේ මිත්‍රයෝ",
+        ally_1_name: "මෂ්රික් බැංකුව PJSC",
+        ally_1_role: "ජාතික බැංකුකරුවන්",
+        ally_1_location: "දුබායි, එක්සත් අරාබි එමිරේට්ස්",
+        ally_2_name: "අබුඩාබි ඉස්ලාමික බැංකුව",
+        ally_2_role: "ජාතික බැංකුකරුවන්",
+        ally_2_location: "දුබායි, එක්සත් අරාබි එමිරේට්ස්",
+        ally_3_name: "අල්මාහි නීති සේවා",
+        ally_3_role: "නීති හවුල්කරු",
+        ally_3_location: "දුබායි, එක්සත් අරාබි එමිරේට්ස්",
+        ally_4_name: "එක්ස්එල් විගණන",
+        ally_4_role: "විගණක",
+        ally_4_location: "දුබායි, එක්සත් අරාබි එමිරේට්ස්",
+        diverse_industries: "විවිධ කර්මාන්ත, ඒකාබද්ධ විශිෂ්ටත්වය",
+        our_businesses: "අපගේ ව්‍යාපාර",
+        investment_and_finance: "ආයෝජන සහ මූල්‍ය",
+        investment_and_finance_description: "මූල්‍ය ආයෝජන සහ ඒ ආශ්‍රිත සේවාවන් කෙරෙහි අවධානය යොමු කරමින්, අපි උපායමාර්ගික ප්‍රාග්ධන වෙන් කිරීම සහ නව්‍ය මූල්‍ය විසඳුම් හරහා වටිනාකම ගෙන එමු.",
+        energy_and_oil: "ශක්තිය සහ තෙල්",
+        energy_and_oil_description: "තෙල් සහ ගෑස් ඇතුළු බලශක්ති අංශයේ අපගේ මෙහෙයුම්, තිරසාර වර්ධනය සහ බලශක්ති විසඳුම්වල නවෝත්පාදනයන් බලගන්වයි.",
+        apparel_and_clothing: "ඇඳුම් පැළඳුම්",
+        apparel_and_clothing_description: "අපි ඇඳුම් සහ විලාසිතා භාණ්ඩ නිර්මාණය, නිෂ්පාදනය සහ සිල්ලර විකිණීම, විලාසිතාව සහ ගුණාත්මකභාවය ඒකාබද්ධ කරමින් ගෝලීය ඉල්ලුම් සපුරාලමු.",
+        real_estate_and_development: "නිශ්චල දේපළ සහ සංවර්ධනය",
+        real_estate_and_development_description: "දේපළ සංවර්ධනය සහ නිශ්චල දේපළ ආයෝජනවල යෙදෙමින්, අපි ආනුභාවිත සහ පවත්නා අවකාශයන් නිර්මාණය කරමු.",
+        commodities: "වෙළඳ භාණ්ඩ",
+        commodities_description: "විවිධ වෙළඳ භාණ්ඩවල වෙළඳාම සහ ආයෝජනය පිළිබඳ අපගේ විශේෂඥතාව, ශක්තිමත් වෙළඳපොළ පැවැත්මක් සහ වටිනාකම් නිර්මාණය සහතික කරයි.",
+        media_and_technology: "මාධ්‍ය සහ තාක්ෂණය",
+        media_and_technology_description: "අපි මාධ්‍ය නිෂ්පාදනය සහ තාක්ෂණයේ නවෝත්පාදනය කරමින්, සන්නිවේදනයේ අනාගතය හැඩගස්වන අති නවීන විසඳුම් ලබා දෙමු.",
+        contracting_and_engineering: "කොන්ත්‍රාත්කරණය සහ ඉංජිනේරු",
+        contracting_and_engineering_description: "ඉහළ ගුණාත්මක ඉදිකිරීම් සහ ඉංජිනේරු ව්‍යාපෘති, නිරවද්‍යතාවයෙන් සහ නවෝත්පාදනයෙන් ලබා දෙමු.",
+        entertainment_and_event_management: "විනෝදාස්වාදය සහ උත්සව කළමනාකරණය",
+        entertainment_and_event_management_description: "විශේෂඥ විනෝදාස්වාද සහ උත්සව සැලසුම් සේවා හරහා අමතක නොවන අත්දැකීම් ගොඩනඟමු.",
+        hospitality_and_tourism: "ආගන්තුක සත්කාර සහ සංචාරක",
+        hospitality_and_tourism_description: "ලෝක මට්ටමේ ආගන්තුක සත්කාර සහ සංචාරක සේවා සපයමින් අමතක නොවන ගමන් අත්දැකීම් නිර්මාණය කරමු.",
+        human_resources_and_consulting: "මානව සම්පත් සහ උපදේශන",
+        human_resources_and_consulting_description: "විශේෂඥ මානව සම්පත් කළමනාකරණය සහ උපදේශන සේවා ලබා දෙමින් සංවිධාන සහ ඔවුන්ගේ පුද්ගලයන් බලගන්වමු.",
+        logistics_and_supply_chain: "ලොජිස්ටික්ස් සහ සැපයුම් දාමය",
+        logistics_and_supply_chain_description: "ගෝලීය වෙළඳපොළවල කාර්යක්ෂමතාව සහ විශ්වාසනීයත්වය සඳහා ලොජිස්ටික්ස් සහ සැපයුම් දාම මෙහෙයුම් ප්‍රශස්ත කිරීම.",
+        our_legacy: "අපගේ උරුමය",
+        our_legacy_description: "විෂ් ගෘප් එකම මූලධර්මයකින් බිහි විය—සිහින හුදෙක් සිතුවිලි නොව, ඒවා නිර්මාණය කර, අරමුදල් සපයා, සාක්ෂාත් කර ගනු ලැබේ. අපගේ උරුමය අප ගොඩනැගූ ව්‍යාපාරවල පමණක් නොව, අප බලපෑ ජීවිතවල ද වේ.",
+        countries_stat: "15+",
+        countries: "රටවල්",
+        industries_stat: "5+",
+        industries: "කර්මාන්ත",
+        members_clients_stat: "20,000+",
+        members_clients: "සාමාජිකයින් සහ ගනුදෙනුකරුවන්",
+        ethical_vision_stat: "100%",
+        ethical_vision: "ආචාරධාර්මික දැක්ම",
+        global_presence: "රටවල් 15ක ගෝලීය පැවැත්ම",
+        multiple_industries: "බහුවිධ කර්මාන්ත: නිශ්චල දේපළ, ආගන්තුක සත්කාර, වෙළඳාම, ආයෝජන, ජීවන රටාව",
+        members_clients_count: "සාමාජිකයින්, ගනුදෙනුකරුවන් සහ හවුල්කරුවන් 20,000කට වැඩි",
+        projects_range: "පාවෙන විලාවල සිට තිරසාර දූපත් සංවර්ධනය දක්වා ව්‍යාපෘති",
+        ethical_recognition: "ආචාරධාර්මික ව්‍යවසායකත්වය සහ නිර්මාණාත්මක නවෝත්පාදනය සඳහා පිළිගැනීම",
+        legacy_closing: "අපගේ උරුමය ජීවත් වන්නේ සෑම ව්‍යාපෘතියකම, සෑම දූපතකම, අප සේවය කරන සෑම සාමාජිකයෙකු තුළමය.",
+        our_history: "අපගේ ඉතිහාසය - සිහිනයක සිට ගෝලීය බලවේගයකට",
+        history_title: "විෂ් ගෘප්හි ගමන 2012 දී එකම දැක්මකින් ආරම්භ විය.",
+        history_description: "මාලදිවයින සහ ශ්‍රී ලංකාවේ බුටික් සංකල්පයක් ලෙස ආරම්භ වූ එය බහුජාතික සංවිධානයක් බවට වර්ධනය වී ඇත.",
+        history_2012_title: "2012: ශ්‍රී ලංකාවේ සංකල්පනය",
+        history_2012_description: "විෂ් ගෘප්හි බීජය රෝපණය වූයේ, නවෝත්පාදනය, ආචාරධර්ම සහ ගෝලීය ආශාව ඒකාබද්ධ කරමින් අනන්‍ය ජීවන රටාවක වෙළඳනාමයක් නිර්මාණය කිරීමේ දැක්මකින්.",
+        history_2014_title: "2014: විෂ් වෙළඳනාමය යටතේ පළමු වෙළඳ මෙහෙයුම් ආරම්භය",
+        history_2014_description: "අපගේ වෙළඳ අංශය ආරම්භ කරමින්, අපගේ දැක්ම යථාර්ථයක් බවට පත් කිරීමේ පළමු පියවර සනිටුහන් කළේය.",
+        history_2017_title: "2017: එක්සත් අරාබි එමිරේට්ස් වෙත ව්‍යාප්තිය සහ විෂ් ගෘප්හි නිල ලියාපදිංචිය",
+        history_2017_description: "එක්සත් අරාබි එමිරේට්ස් අපගේ නව මෙහෙයුම් කේන්ද්‍රස්ථානය බවට පත්වූ අතර, මැදපෙරදිග වෙළඳපොළේ අපගේ පැවැත්ම ශක්තිමත් කළේය.",
+        history_2019_title: "2019: නිශ්චල දේපළ සහ ආයෝජන ව්‍යාපෘති ආරම්භය",
+        history_2019_description: "අපි සුඛෝපභෝගී නිශ්චල දේපළ සහ ඉහළ වටිනාකම් ආයෝජන අවස්ථාවන් වෙත යොමු වී, අපගේ පෝට්ෆෝලියෝ ව්‍යාප්ත කළෙමු.",
+        history_2021_title: "2021: පාවෙන විලා නවෝත්පාදනය සහ විෂ් දූපත් ව්‍යාපෘතිය ආරම්භය",
+        history_2021_description: "අපගේ පුරෝගාමී පාවෙන විලා සංකල්පය සහ විශාල විෂ් දූපත් ව්‍යාපෘතිය ආරම්භ වූ අතර, සුඛෝපභෝගී ජීවිතය නැවත අර්ථ දැක්වීය.",
+        history_2023_title: "2023: විෂ් අයි ක්ලබ්, ප්‍රයිම් බෝන්ඩ්, සහ යුරෝපයට ඇතුළුවීම ආරම්භය",
+        history_2023_description: "අපි සුවිශේෂී සාමාජිකත්ව වැඩසටහන් සහ ආයෝජන වේදිකා හඳුන්වා දුන් අතර, යුරෝපීය වෙළඳපොළවලට ව්‍යාප්ත විය.",
+        history_2025_title: "2025: ලියාපදිංචි සමාගම් 20කට වැඩි, අන්තර්මහද්වීපික හවුල්කාරිත්වයන්, සහ සුඛෝපභෝගී CSR ව්‍යාපෘති",
+        history_2025_description: "අද, අපි විශිෂ්ටත්වය, හවුල්කාරිත්වයන් සහ බලපෑම් සහිත සමාජ වගකීම සඳහා කැපවූ ගෝලීය බලවේගයක් ලෙස පවතිමු.",
+        history_closing: "සෑම වසරකම, සෑම චලනයකම — ඉහළ පරමාර්ථයකට ගැලපෙයි.",
+        head_office: "ප්‍රධාන කාර්යාලය",
+        location_venue: "ස්ථානය සහ ස්ථානය",
+        location_venue_description: "අපගේ ප්‍රධාන කාර්යාලය ගවේෂණය කරන්න—නවෝත්පාදනය, සහයෝගීතාව සහ ගනුදෙනුකරුවන්ගේ අත්දැකීම් සඳහා නිර්මාණය කර ඇත.",
+        reception_lobby: "පිළිගැනීමේ හා ලොබි",
+        executive_meeting_suite: "විධායක රැස්වීම් කට්ටලය",
+        address: "ලිපිනය",
+        address_line_1: "121 AI මාවත, සැන් ෆ්‍රැන්සිස්කෝ",
+        address_line_2: "BCA 94107",
+        quick_links: "ඉක්මන් සබැඳි",
+        phone_1: "+971 4259 7167",
+        phone_2: "+971 4259 4795",
+        email_1: "info@wishgroup.ae",
+        email_2: "info@wishgroup.world",
+        footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ගෘප්. සියලු හිමිකම් ඇවිරිණි."
+    },
+    dv: {
+        scroll_to_top: "މަތިޔަށް ސްކްރޯލް ކުރަން",
+        home: "މަންދު",
+        about_us: "އަހަރެމެންގެ ވާހަކަ",
+        divisions: "ބައިތައް",
+        projects: "ޕްރޮޖެކްޓްތައް",
+        countries: "ޤައުމުތައް",
+        news: "ޚަބަރު",
+        our_policies: "އަހަރެމެންގެ ސިޔާސަތްތައް",
+        career: "ޒަމާން",
+        contact_us: "އަހަރެމެން ގައި ގުޅުން",
+        tickets_style_1: "ޓިކެޓް ސްޓައިލް 1",
+        tickets_style_2: "ޓިކެޓް ސްޓައިލް 2",
+        news_single: "އެކަލަ ޚަބަރު",
+        contact: "ގުޅުން",
+        who_we_are: "އަހަރެމެން ކާކު",
+        make_your_wish: "ތިޔަ އެދުން ފުރިހަމަ ކުރަން",
+        vision: "ވިޒަން",
+        vision_description: "އިންސާނިއްޔަ، ދިމާވި ވާހަންތަ އަދި އެކުމެއްގައި ވަރުގަދަ ވާހަންތަ ހިމެނޭ <span class=\"fw-bold text-danger\">‘އެކަލަ ޤައުމީ ރައުފަ’</span> ގެ ދިގުމަތިގައި އެކު މަންޒަރެއް ހެދުން.",
+        mission: "މިޝަން",
+        mission_description: "އެކުމެއްގައި އިންވެސްޓްމަންޓްތަކާއި، ވަގުދާނަ ނަވުތަންތަންތަކާއި ގޮލްބަލް ޕާޓްނަރޝިޕްތަކާއި އެކު މީހުންގެ އެދުން ފުރިހަމަ ކުރުމަށް ބަލަގަންނަމުއި، ދުނިޔޭގެ ނަމްބަރ އެކް ޤައުމީ ކޮމްޕަނީ ކަމަށް ވަނަމަ އެކު މަސައްކަތް ކުރަމުއު.",
+        core_values: "މުހިންމު އަދި ޤިޔަމަތްތައް",
+        respect: "ޙުރުމަތް",
+        respect_description: "އަހަރެމެން ހުރިހާ ޚިޔާލެއް އަދި އަވަހަށް ތަނަވަސް ކުރުމުން، ވިޝްވާސާއި އެކުމެއްގައި މަސައްކަތް ކުރުމަށް މަސައްކަތް ކުރަމުއު.",
+        integrity: "ސިއްހަތް",
+        integrity_description: "އަހަރެމެންގެ އުސޫލުތައް އެއްވެސް ކަމެއް ސަމްމުތި ނުކުރަމު — އެއްވެސް ޑީލެއް ނުވަތަ ކްލަޔަންޓެއް އަހަރެމެންގެ ކޮމިޓްމަންޓް އަށް އަނބުރާ ނުދައްކަމު.",
+        service: "ޚިދުމަތް",
+        service_description: "އަހަރެމެން ރަނގަޅު މީހުން، ޤައުމީ ރައުފަ އަދި އަވަސްތަތައް ގުޅާލަމުން ދިގުކާލީ ގުޅުމްތައް ބިނާ ކުރަމުއު.",
+        excellence: "ފުރިހަމަ ކަމުގެ ދަރަޖަ",
+        excellence_description: "އަހަރެމެން ދުނިޔޭގެ ހުރިހާ ޕާޓީސްޓޭކްހޯލްޑަރުންގެ ލާބަ ޖައްސަވަމުން ވަރުގަދަ މަސައްކަތް ކުރަމުއު.",
+        our_team: "އަހަރެމެންގެ ޓީމް",
+        meet_the_visionaries: "ވިޒަންރީސްޓްތައް ބަލާ",
+        team_member_1_name: "ޖޯޝުއާ ހެންރީ",
+        team_member_1_role: "ޗީފް AI ސަޔަންޓިސްޓް، އޯޕަންAI",
+        team_member_2_name: "ލަޔިލާ ޒަންގް",
+        team_member_2_role: "މެޝިން ލަރނިން އަށް ވީޕީ، ގޫގަލް",
+        team_member_3_name: "ކާލޯސް ރިވެރާ",
+        team_member_3_role: "ފައުންޑަރ އަދި ސީއީއޯ، ނިއުރަލްކޯރ",
+        our_allies: "އަހަރެމެންގެ އެލަޔިސް",
+        ally_1_name: "މަޝްރީގް ބޭންކް PJSC",
+        ally_1_role: "ޤައުމީ ބޭންކަރުން",
+        ally_1_location: "ދުބަޔި، އެމިރޭޓްސް",
+        ally_2_name: "އަބޫ ޒަބީ އިސްލާމިކް ބޭންކް",
+        ally_2_role: "ޤައުމީ ބޭންކަރުން",
+        ally_2_location: "ދުބަޔި، އެމިރޭޓްސް",
+        ally_3_name: "އަލްމަހީ ލީގަލް ސަރވިސެސް",
+        ally_3_role: "ލީގަލް ޕާޓްނަރ",
+        ally_3_location: "ދުބަޔި، އެމިރޭޓްސް",
+        ally_4_name: "އެކްސްއެލް އޯޑިޓިން",
+        ally_4_role: "އޯޑިޓަރ",
+        ally_4_location: "ދުބަޔި، އެމިރޭޓްސް",
+        diverse_industries: "ތަފާތު އިންޑަސްޓްރީސް، އެކު ފުރިހަމަ ކަމުގެ ދަރަޖަ",
+        our_businesses: "އަހަރެމެންގެ ބިޒިނަސްތައް",
+        investment_and_finance: "އިންވެސްޓްމަންޓް އަދި ފަޔިނޭންސް",
+        investment_and_finance_description: "ފަޔިނޭންސިއަލް އިންވެސްޓްމަންޓްތަކާއި އެކަށަވަރު ގުޅިފައިވާ ޚިދުމަތްތަކަށް ބަލައި، ސް"}
+    }
+        </script>
 </body>
-
 </html>

@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wish Group - Careers</title>
+    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Wish Group Careers" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+<style>
+    /* Enhanced Dark Red Color Scheme */
+    :root {
+        --primary: #d1000f;
+        --primary-dark: #9a0007;
+        --primary-light: #ff4d4d;
+        --dark-bg: #0a0a0a;
+        --darker-bg: #050505;
+        --card-bg: #121212;
+        --card-border: #2a2a2a;
+        --text-light: #f8f9fa;
+        --text-muted: #adb5bd;
+        --gradient-red: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        --glow-red: 0 0 15px rgba(209, 0, 15, 0.7);
+    }
+
+    /* Particle Background for Hero */
+    .particle-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.3;
+    }
+
+    /* Enhanced Hero Section with Animation */
+    .career-hero {
+        background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(30,30,30,0.95) 100%), 
+                    url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 180px 0 120px;
+        color: var(--text-light);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .career-hero:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 75% 30%, rgba(209,0,15,0.2) 0%, transparent 50%);
+        z-index: 1;
+        animation: pulse 8s infinite alternate;
+    }
+    
+    .career-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .career-hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        background: linear-gradient(to right, #ffffff, #f8f9fa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    .career-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 40px;
+        opacity: 0;
+        animation: fadeInUp 1s ease-out 0.3s forwards;
+    }
+
+    /* Enhanced Buttons with Hover Animation */
+    .btn-career {
+        background: var(--gradient-red);
+        color: white;
+        padding: 16px 40px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: none;
+        box-shadow: 0 4px 15px rgba(209, 0, 15, 0.4);
+        position: relative;
+        overflow: hidden;
+        transform: translateY(20px);
+        opacity: 0;
+        animation: fadeInUp 1s ease-out 0.6s forwards;
+    }
+    
+    .btn-career:hover {
+        background: linear-gradient(135deg, var(--primary-dark) 0%, #6e0004 100%);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(209, 0, 15, 0.5);
+    }
+    
+    .btn-career:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: 0.5s;
+    }
+    
+    .btn-career:hover:after {
+        left: 100%;
+    }
+
+    /* Section Titles */
+    .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+    }
+    
+    .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+    }
+    
+    .section-title h2:after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-red);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+    }
+    
+    .section-title p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Enhanced Cards with 3D Effect */
+    .program-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-bottom: 30px;
+        border-left: 4px solid var(--primary);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--card-border);
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+    }
+    
+    .program-card:hover {
+        transform: translateY(-10px) scale(1.02) rotateX(5deg) rotateY(5deg);
+        box-shadow: 0 15px 40px rgba(209, 0, 15, 0.3), var(--glow-red);
+        border-color: rgba(209, 0, 15, 0.7);
+    }
+    
+    .program-header {
+        background: var(--gradient-red);
+        color: white;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .program-header:before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+        transform: rotate(30deg);
+        animation: shine 3s infinite;
+    }
+    
+    .program-header h3 {
+        position: relative;
+        z-index: 1;
+        font-size: 1.5rem;
+    }
+    
+    .program-body {
+        padding: 30px;
+    }
+    
+    .program-body p {
+        color: var(--text-muted);
+        margin-bottom: 20px;
+    }
+    
+    .program-body ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .program-body ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        transition: all 0.3s;
+    }
+    
+    .program-body ul li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        background: var(--primary);
+        border-radius: 50%;
+    }
+    
+    .program-body ul li:hover {
+        color: var(--text-light);
+        transform: translateX(5px);
+    }
+
+    /* Animated Stats Section */
+    .stats-section {
+        background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stats-section:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://www.transparenttextures.com/patterns/dark-stripes.png');
+        opacity: 0.1;
+    }
+    
+    .stats-item {
+        text-align: center;
+        padding: 50px 30px;
+        background: linear-gradient(135deg, rgba(18,18,18,0.8) 0%, rgba(30,30,30,0.8) 100%);
+        border-radius: 12px;
+        margin-bottom: 30px;
+        border: 1px solid var(--card-border);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stats-item:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-red);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease-out;
+    }
+    
+    .stats-item:hover:after {
+        transform: scaleX(1);
+    }
+    
+    .stats-item h3 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: var(--gradient-red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 15px;
+    }
+    
+    .stats-item p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+    }
+
+    /* Enhanced Benefits with Flip Animation */
+    .benefit-item {
+        text-align: center;
+        padding: 40px 25px;
+        background: var(--card-bg);
+        border-radius: 12px;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--primary);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--card-border);
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        min-height: 300px;
+    }
+    
+    .benefit-item:hover {
+        transform: translateY(-10px) rotateX(5deg) rotateY(5deg) scale(1.03);
+        box-shadow: 0 15px 35px rgba(209, 0, 15, 0.25), var(--glow-red);
+        background: linear-gradient(135deg, #151515 0%, #1a1a1a 100%);
+    }
+
+    /* Enhanced Icon Boxes with Animation */
+    .icon-box {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, rgba(209,0,15,0.1) 0%, rgba(154,0,7,0.1) 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+    }
+    
+    .icon-box:before {
+        content: "";
+        position: absolute;
+        inset: -5px;
+        border-radius: 25px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+    
+    .benefit-item:hover .icon-box {
+        transform: rotate(15deg) scale(1.1);
+        background: transparent;
+    }
+    
+    .benefit-item:hover .icon-box:before {
+        opacity: 1;
+    }
+    
+    .icon-box i {
+        color: var(--primary);
+        font-size: 32px;
+        transition: all 0.3s;
+    }
+    
+    .benefit-item:hover .icon-box i {
+        color: white;
+        transform: scale(1.2);
+    }
+    
+    .benefit-item h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        transition: all 0.3s;
+    }
+    
+    .benefit-item:hover h4 {
+        color: var(--primary-light);
+    }
+    
+    .benefit-item p {
+        color: var(--text-muted);
+        transition: all 0.3s;
+    }
+    
+    .benefit-item:hover p {
+        color: var(--text-light);
+    }
+
+    /* Enhanced Application Section with Floating Elements */
+    .application-section {
+        background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%), 
+                    url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0;
+        color: var(--text-light);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .application-section:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 25% 70%, rgba(209,0,15,0.15) 0%, transparent 50%);
+        animation: pulse 8s infinite alternate-reverse;
+    }
+    
+    .application-form {
+        background: rgba(18, 18, 18, 0.95);
+        padding: 50px;
+        border-radius: 12px;
+        border-top: 5px solid var(--primary);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--card-border);
+        transform: translateY(20px);
+        opacity: 0;
+        animation: fadeInUp 1s ease-out 0.3s forwards;
+    }
+    
+    .application-form h3 {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+    
+    .application-form h3:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--gradient-red);
+    }
+
+    /* Enhanced Form Elements */
+    .form-control {
+        background: rgba(30, 30, 30, 0.7);
+        border: 1px solid var(--card-border);
+        color: var(--text-light);
+        padding: 12px 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 0.25rem rgba(209, 0, 15, 0.25);
+        background: rgba(40, 40, 40, 0.7);
+    }
+    
+    .form-control::placeholder {
+        color: var(--text-muted);
+    }
+    
+    select.form-control {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d1000f' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 12px;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes pulse {
+        0% {
+            opacity: 0.3;
+        }
+        100% {
+            opacity: 0.7;
+        }
+    }
+    
+    @keyframes shine {
+        from {
+            transform: translateX(-100%) rotate(30deg);
+        }
+        to {
+            transform: translateX(100%) rotate(30deg);
+        }
+    }
+    
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .career-hero h1 {
+            font-size: 3rem;
+        }
+        
+        .stats-item {
+            padding: 30px 20px;
+        }
+        
+        .application-form {
+            padding: 30px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .career-hero {
+            padding: 120px 0 80px;
+        }
+        
+        .career-hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .benefit-item {
+            min-height: auto;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item" href="index.html" data-translate="home">Home</a></li>
+                                        <li><a class="menu-item" href="about.html" data-translate="about_us">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="our_policies">Our Policies</a></li>
+                                        <li><a class="menu-item active" href="career.html" data-translate="career">Career</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="contact_us">Contact Us</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="tickets.html" data-translate="tickets_style_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-translate="tickets_style_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-translate="news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-translate="news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-translate="contact">Contact</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <select id="language-switcher" onchange="setLanguage(this.value)">
+                                    <option value="en">EN</option>
+                                    <option value="ar">AR</option>
+                                    <option value="fr">FR</option>
+                                    <option value="si">SI</option>
+                                    <option value="dv">DV</option>
+                                </select>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Enhanced Career Hero Section -->
+        <section class="career-hero">
+            <div class="particle-background" id="particles-js"></div>
+            <div class="container">
+                <h1 data-translate="career_hero_title">Shape Your Future With Wish Group</h1>
+                <p data-translate="career_hero_text">At Wish Group, we don't just offer jobs - we build careers. Join our global family and unlock your potential with our comprehensive growth programs, international opportunities, and entrepreneurial support.</p>
+                <a href="#apply-now" class="btn btn-career" data-translate="apply_now">Begin Your Journey</a>
+            </div>
+        </section>
+
+        <!-- Enhanced Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <h2 data-translate="global_presence">Our Global Presence</h2>
+                    <p class="lead" data-translate="stats_subtitle">Numbers that define our worldwide impact</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-item">
+                            <h3>15+</h3>
+                            <p data-translate="stats_countries">Countries</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-item">
+                            <h3>200+</h3>
+                            <p data-translate="stats_employees">Employees</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-item">
+                            <h3>50+</h3>
+                            <p data-translate="stats_projects">Projects</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-item">
+                            <h3>10+</h3>
+                            <p data-translate="stats_years">Years</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WishFriends Program Section -->
+        <section class="container py-5">
+            <div class="section-title">
+                <h2 data-translate="wishfriends_title">WishFriends - Career & Growth</h2>
+                <p data-translate="wishfriends_subtitle">Comprehensive programs designed to accelerate your professional development</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="career_growth_title">Career Growth Roadmap</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="career_growth_text">From internship to director track, we provide clear pathways for your professional development with measurable milestones.</p>
+                            <ul>
+                                <li data-translate="career_growth_point1">Structured promotion tracks with transparent criteria</li>
+                                <li data-translate="career_growth_point2">Quarterly performance reviews with growth planning</li>
+                                <li data-translate="career_growth_point3">Leadership development programs for high-potential employees</li>
+                                <li data-translate="career_growth_point4">Cross-functional rotation opportunities</li>
+                                <li data-translate="career_growth_point5">Personalized career coaching sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="wish_academy_title">Wish Academy</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="wish_academy_text">Our state-of-the-art learning platform with customized development paths for every role.</p>
+                            <ul>
+                                <li data-translate="wish_academy_point1">Monthly workshops on technical and soft skills</li>
+                                <li data-translate="wish_academy_point2">Certification programs with leading institutions</li>
+                                <li data-translate="wish_academy_point3">E-learning platform with 500+ courses</li>
+                                <li data-translate="wish_academy_point4">Language training for international assignments</li>
+                                <li data-translate="wish_academy_point5">Executive education partnerships</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="global_opportunities_title">Global Opportunities</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="global_opportunities_text">Expand your horizons with our international assignment programs across 15+ countries.</p>
+                            <ul>
+                                <li data-translate="global_opportunities_point1">Internal applications for jobs in other group countries</li>
+                                <li data-translate="global_opportunities_point2">Short-term project assignments abroad (3-6 months)</li>
+                                <li data-translate="global_opportunities_point3">Cultural preparation training for international moves</li>
+                                <li data-translate="global_opportunities_point4">Full relocation support for you and your family</li>
+                                <li data-translate="global_opportunities_point5">Global leadership immersion programs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="mentorship_title">Mentorship Program</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="mentorship_text">Accelerate your growth through our structured mentorship ecosystem.</p>
+                            <ul>
+                                <li data-translate="mentorship_point1">Senior leaders mentor juniors quarterly</li>
+                                <li data-translate="mentorship_point2">Reverse mentoring opportunities</li>
+                                <li data-translate="mentorship_point3">Personalized career coaching sessions</li>
+                                <li data-translate="mentorship_point4">Exclusive networking events with industry leaders</li>
+                                <li data-translate="mentorship_point5">Mentor-matching algorithm based on goals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="container py-5">
+            <div class="section-title">
+                <h2 data-translate="benefits_title">Why Join Wish Group?</h2>
+                <p data-translate="benefits_subtitle">We invest in your growth and wellbeing with industry-leading benefits</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <div class="icon-box">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4 data-translate="benefit_global_title">Global Exposure</h4>
+                        <p data-translate="benefit_global_text">Work with international teams across 15+ countries with relocation opportunities</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <div class="icon-box">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 data-translate="benefit_learning_title">Continuous Learning</h4>
+                        <p data-translate="benefit_learning_text">$2,000 annual training budget plus access to our Wish Academy programs</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <div class="icon-box">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 data-translate="benefit_innovation_title">Innovation Culture</h4>
+                        <p data-translate="benefit_innovation_text">Pitch and implement new solutions with our innovation fund support</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <div class="icon-box">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 data-translate="benefit_health_title">Health & Wellness</h4>
+                        <p data-translate="benefit_health_text">Comprehensive medical coverage plus mental health and fitness programs</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <div class="icon-box">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4 data-translate="benefit_career_title">Career Flexibility</h4>
+                        <p data-translate="benefit_career_text">Customize your career path with multiple growth tracks and role variations</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <div class="icon-box">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4 data-translate="benefit_rewards_title">Competitive Rewards</h4>
+                        <p data-translate="benefit_rewards_text">Attractive compensation with performance bonuses and profit sharing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WishHands Section -->
+        <section class="container py-5">
+            <div class="section-title">
+                <h2 data-translate="wishhands_title">WishHands - Entrepreneurial Support</h2>
+                <p data-translate="wishhands_subtitle">Turn your ideas into reality with our startup incubation programs</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="startup_pitch_title">Startup Pitch Day</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="startup_pitch_text">Quarterly events where employees pitch ideas to our executive panel and investors.</p>
+                            <ul>
+                                <li data-translate="startup_pitch_point1">Executive panel with venture capitalists</li>
+                                <li data-translate="startup_pitch_point2">Detailed feedback on business models</li>
+                                <li data-translate="startup_pitch_point3">Prototyping lab access for winning ideas</li>
+                                <li data-translate="startup_pitch_point4">Full access to Wish Group's network</li>
+                                <li data-translate="startup_pitch_point5">Legal and IP support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="seed_fund_title">Seed Fund Grants</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="seed_fund_text">Financial support to validate and launch your entrepreneurial ideas.</p>
+                            <ul>
+                                <li data-translate="seed_fund_point1">Up to $5,000 per venture after review</li>
+                                <li data-translate="seed_fund_point2">Milestone-based funding structure</li>
+                                <li data-translate="seed_fund_point3">Equity-free investment for employees</li>
+                                <li data-translate="seed_fund_point4">Follow-on funding opportunities</li>
+                                <li data-translate="seed_fund_point5">Accounting and legal support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WishSprite Section -->
+        <section class="container py-5">
+            <div class="section-title">
+                <h2 data-translate="wishsprite_title">WishSprite - Talent Discovery</h2>
+                <p data-translate="wishsprite_subtitle">Showcase your unique talents beyond your professional role</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="talent_fest_title">Annual Talent Fest</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="talent_fest_text">Our flagship event celebrating diverse talents across the Wish Group family.</p>
+                            <ul>
+                                <li data-translate="talent_fest_point1">Music, dance, poetry competitions</li>
+                                <li data-translate="talent_fest_point2">Tech invention showcases</li>
+                                <li data-translate="talent_fest_point3">Creative writing exhibitions</li>
+                                <li data-translate="talent_fest_point4">Judges from creative industries</li>
+                                <li data-translate="talent_fest_point5">Substantial cash prizes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="sprite_month_title">Sprite of the Month</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="sprite_month_text">Recognizing exceptional employees who go beyond their job descriptions.</p>
+                            <ul>
+                                <li data-translate="sprite_month_point1">Peer-nominated recognition</li>
+                                <li data-translate="sprite_month_point2">Featured on company platforms</li>
+                                <li data-translate="sprite_month_point3">Special privileges and rewards</li>
+                                <li data-translate="sprite_month_point4">Year-end grand prize</li>
+                                <li data-translate="sprite_month_point5">Executive mentorship</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3 data-translate="talent_exchange_title">Talent Exchange</h3>
+                        </div>
+                        <div class="program-body">
+                            <p data-translate="talent_exchange_text">Cross-border creative collaborations between our global offices.</p>
+                            <ul>
+                                <li data-translate="talent_exchange_point1">Maldives artists in UAE events</li>
+                                <li data-translate="talent_exchange_point2">Cross-border creative projects</li>
+                                <li data-translate="talent_exchange_point3">Cultural exchange programs</li>
+                                <li data-translate="talent_exchange_point4">Global talent showcase</li>
+                                <li data-translate="talent_exchange_point5">Skill-sharing workshops</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+     
+
+        <!-- Application Section -->
+        <section class="application-section" id="apply-now">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4" data-translate="apply_title">Ready to Join Wish Group?</h2>
+                        <p class="lead" data-translate="apply_text">Submit your application and our HR team will review it within 7 business days. Shortlisted candidates will be contacted for interviews.</p>
+                        
+                        <div class="mt-5">
+                            <h4 data-translate="contact_hr_title">Contact HR</h4>
+                            <p class="mb-1"><i class="fas fa-envelope me-2"></i> <a href="mailto:careers@wishgroup.com" class="text-light">careers@wishgroup.com</a></p>
+                            <p class="mb-1"><i class="fas fa-phone me-2"></i> <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                            <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i> <span data-translate="hr_address">HR Department, Wish Group HQ, Dubai, UAE</span></p>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h4 data-translate="diversity_title">Diversity & Inclusion</h4>
+                            <p data-translate="diversity_text">Wish Group promotes diversity and equal opportunity across all roles. We welcome applicants from all backgrounds. Internship and leadership tracks available throughout the year.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="application-form">
+                            <h3 data-translate="application_form_title">Application Form</h3>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Full Name" data-translate="name_placeholder" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email Address" data-translate="email_placeholder" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" data-translate="phone_placeholder" required>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" required>
+                                        <option value="" data-translate="position_select">Select Position</option>
+                                        <option value="intern" data-translate="intern_option">Internship</option>
+                                        <option value="entry" data-translate="entry_option">Entry Level</option>
+                                        <option value="manager" data-translate="manager_option">Manager</option>
+                                        <option value="director" data-translate="director_option">Director</option>
+                                        <option value="executive" data-translate="executive_option">Executive</option>
+                                        <option value="other" data-translate="other_option">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Cover Letter" data-translate="cover_letter_placeholder" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-muted mb-2" data-translate="resume_label">Upload Resume</label>
+                                    <input type="file" class="form-control" required>
+                                    <small class="text-muted" data-translate="resume_hint">PDF, DOC, or DOCX files only (Max 5MB)</small>
+                                </div>
+                                <div class="form-group form-check mb-4">
+                                    <input type="checkbox" class="form-check-input" id="consent" required>
+                                    <label class="form-check-label" for="consent" data-translate="consent_text">I consent to Wish Group processing my data for recruitment purposes</label>
+                                </div>
+                                <button type="submit" class="btn btn-career w-100" data-translate="submit_application">Submit Application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
+                        <p class="mb-0" data-translate="address_line_1">121 AI Blvd, San Francisco</p>
+                        <p data-translate="address_line_2">BCA 94107</p>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light" data-translate="home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="about_us">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="contact_us">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="contact_us">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light" data-translate="phone_1">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light" data-translate="phone_2">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light" data-translate="email_1">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light" data-translate="email_2">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center" data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Javascript Files -->
+        <script src="js/vendors.js"></script>
+        <script src="js/designesia.js"></script>
+        <script src="js/countdown-custom.js"></script>
+        <script src="js/custom-marquee.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+        <script src="js/translationsAbout.js"></script>
+        <script>
+            // Initialize particle.js background
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof particlesJS !== 'undefined') {
+                    particlesJS('particles-js', {
+                        particles: {
+                            number: { value: 80, density: { enable: true, value_area: 800 } },
+                            color: { value: "#d1000f" },
+                            shape: { type: "circle" },
+                            opacity: { value: 0.5, random: true },
+                            size: { value: 3, random: true },
+                            line_linked: { enable: true, distance: 150, color: "#9a0007", opacity: 0.4, width: 1 },
+                            move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+                        },
+                        interactivity: {
+                            detect_on: "canvas",
+                            events: {
+                                onhover: { enable: true, mode: "repulse" },
+                                onclick: { enable: true, mode: "push" }
+                            }
+                        }
+                    });
+                }
+
+                // Add animation to cards on scroll
+                VanillaTilt.init(document.querySelectorAll(".program-card, .benefit-item"), {
+                    max: 5,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.2,
+                });
+                
+                // Smooth scroll for apply button
+                document.querySelector('.btn-career[href="#apply-now"]').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Animate elements when they come into view
+                const animateOnScroll = function() {
+                    const elements = document.querySelectorAll('.program-card, .benefit-item, .stats-item');
+                    elements.forEach(element => {
+                        const elementPosition = element.getBoundingClientRect().top;
+                        const screenPosition = window.innerHeight / 1.2;
+                        
+                        if (elementPosition < screenPosition) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }
+                    });
+                };
+
+                // Set initial state
+                document.querySelectorAll('.program-card, .benefit-item, .stats-item').forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = 'all 0.6s ease-out';
+                });
+
+                window.addEventListener('scroll', animateOnScroll);
+                animateOnScroll(); // Run once on load
+            });
+        </script>
+    </div>
+</body>
+</html>

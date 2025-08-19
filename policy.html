@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Wish Group - Our Policies</title>
+    <title data-translate="page_title">Wish Group - Our Policies</title>
     <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -31,14 +31,14 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-         /* Update the tick mark color to red */
-    .policy-card .fa-check-circle {
-        color: #ff4d4d !important;
-        background: transparent !important;
-        -webkit-background-clip: initial !important;
-        background-clip: initial !important;
-        -webkit-text-fill-color: initial !important;
-    }
+        /* Update the tick mark color to red */
+        .policy-card .fa-check-circle {
+            color: #ff4d4d !important;
+            background: transparent !important;
+            -webkit-background-clip: initial !important;
+            background-clip: initial !important;
+            -webkit-text-fill-color: initial !important;
+        }
         
         .policy-card:hover {
             transform: translateY(-10px);
@@ -112,6 +112,25 @@
                 height: 150px;
             }
         }
+
+        /* RTL Support */
+        body.rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl .policy-section-title:after {
+            left: auto;
+            right: 0;
+        }
+        body.rtl .policy-highlight {
+            border-left: none;
+            border-right: 4px solid #ff4d4d;
+            border-radius: 8px 0 0 8px;
+        }
+        body.rtl .social-icons a {
+            margin-left: 10px;
+            margin-right: 0;
+        }
     </style>
 </head>
 
@@ -120,7 +139,7 @@
     <div id="wrapper">
 
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -148,21 +167,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item active" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-translate="nav_home">Home</a></li>
+                                        <li><a class="menu-item" href="about.html" data-translate="nav_about">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="nav_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="nav_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="nav_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="nav_news">News</a></li>
+                                        <li><a class="menu-item active" href="" data-translate="nav_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-translate="nav_career">Career</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="nav_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-translate="nav_tickets_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-translate="nav_tickets_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-translate="nav_news_sub">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-translate="nav_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-translate="nav_contact_sub">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -170,7 +189,13 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <select id="language-switcher" onchange="setLanguage(this.value)">
+                                    <option value="en">English</option>
+                                    <option value="ar">العربية</option>
+                                    <option value="fr">Français</option>
+                                    <option value="si">සිංහල</option>
+                                    <option value="dv">ދިވެހި</option>
+                                </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -191,14 +216,14 @@
                         <div class="col-lg-6">
                             <div class="relative wow mask-right">
                                 <div class="text-start">
-                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1 animate__animated animate__fadeInDown">Our Policies</h1>
-                                    <p class="lead mt-3 animate__animated animate__fadeIn animate__delay-1s">Guiding Principles for Ethical Business Excellence</p>
+                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1 animate__animated animate__fadeInDown" data-translate="hero_title">Our Policies</h1>
+                                    <p class="lead mt-3 animate__animated animate__fadeIn animate__delay-1s" data-translate="hero_subtitle">Guiding Principles for Ethical Business Excellence</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
                             <div class="policy-highlight animate__animated animate__fadeIn animate__delay-2s">
-                                <p class="mb-0">At Wish Group, our policies reflect our commitment to integrity, innovation, and sustainable growth across all business operations.</p>
+                                <p class="mb-0" data-translate="hero_highlight">At Wish Group, our policies reflect our commitment to integrity, innovation, and sustainable growth across all business operations.</p>
                             </div>
                         </div>
                     </div>
@@ -211,48 +236,47 @@
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-8 text-center">
-                        <h2 class="policy-section-title animate__animated animate__fadeIn">Our Corporate Governance Framework</h2>
-                        <p class="lead animate__animated animate__fadeIn animate__delay-1s">Comprehensive policies designed to ensure transparency, accountability, and sustainable business practices across all our global operations.</p>
+                        <h2 class="policy-section-title animate__animated animate__fadeIn" data-translate="section_title">Our Corporate Governance Framework</h2>
+                        <p class="lead animate__animated animate__fadeIn animate__delay-1s" data-translate="section_subtitle">Comprehensive policies designed to ensure transparency, accountability, and sustainable business practices across all our global operations.</p>
                     </div>
                 </div>
                 
                 <div class="row g-4">
                     <!-- Investment Policy -->
-               <!-- Investment Policy Card (example) -->
-<div class="col-lg-4 col-md-6">
-    <div class="policy-card animate__animated animate__fadeInUp">
-        <img src="images\news\s1.webp" class="policy-img" alt="Strategic Investments">
-        <div class="policy-content">
-            <div class="policy-icon">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>Investment Policy</h3>
-            <p>Our disciplined investment approach combines rigorous due diligence with ethical considerations to deliver sustainable returns across real estate, hospitality, trading, and capital markets.</p>
-            <ul class="list-unstyled mt-3">
-                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Minimum 15% ROI commitment</li>
-                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Full regulatory compliance</li>
-                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Transparent reporting</li>
-                <li><i class="fas fa-check-circle me-2"></i> ESG integration</li>
-            </ul>
-        </div>
-    </div>
-</div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="policy-card animate__animated animate__fadeInUp">
+                            <img src="images/news/s1.webp" class="policy-img" alt="Strategic Investments">
+                            <div class="policy-content">
+                                <div class="policy-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 data-translate="policy_investment_title">Investment Policy</h3>
+                                <p data-translate="policy_investment_desc">Our disciplined investment approach combines rigorous due diligence with ethical considerations to deliver sustainable returns across real estate, hospitality, trading, and capital markets.</p>
+                                <ul class="list-unstyled mt-3" data-translate="policy_investment_list"> 
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Minimum 15% ROI commitment</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Full regulatory compliance</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Transparent reporting</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> ESG integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Employment Policy -->
                     <div class="col-lg-4 col-md-6">
                         <div class="policy-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
-                            <img src="images\news\s1.webp" class="policy-img" alt="Diverse Team">
+                            <img src="images/news/s1.webp" class="policy-img" alt="Diverse Team">
                             <div class="policy-content">
                                 <div class="policy-icon">
                                     <i class="fas fa-users"></i>
                                 </div>
-                                <h3>Employment Policy</h3>
-                                <p>We cultivate an inclusive, high-performance culture that values diversity, professional development, and work-life balance.</p>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Equal opportunity employer</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Competitive compensation</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Leadership development</li>
-                                    <li><i class="fas fa-check-circle text-success me-2"></i> Zero tolerance for discrimination</li>
+                                <h3 data-translate="policy_employment_title">Employment Policy</h3>
+                                <p data-translate="policy_employment_desc">We cultivate an inclusive, high-performance culture that values diversity, professional development, and work-life balance.</p>
+                                <ul class="list-unstyled mt-3" data-translate="policy_employment_list">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Equal opportunity employer</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Competitive compensation</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Leadership development</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Zero tolerance for discrimination</li>
                                 </ul>
                             </div>
                         </div>
@@ -261,18 +285,18 @@
                     <!-- Joint Venture Policy -->
                     <div class="col-lg-4 col-md-6">
                         <div class="policy-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
-                            <img src="images\news\s1.webp" class="policy-img" alt="Business Partnership">
+                            <img src="images/news/s1.webp" class="policy-img" alt="Business Partnership">
                             <div class="policy-content">
                                 <div class="policy-icon">
                                     <i class="fas fa-handshake"></i>
                                 </div>
-                                <h3>Joint Venture Policy</h3>
-                                <p>Strategic alliances built on mutual trust, aligned objectives, and transparent governance frameworks.</p>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Comprehensive due diligence</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Clear governance structures</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Performance benchmarks</li>
-                                    <li><i class="fas fa-check-circle text-success me-2"></i> Dispute resolution protocols</li>
+                                <h3 data-translate="policy_joint_venture_title">Joint Venture Policy</h3>
+                                <p data-translate="policy_joint_venture_desc">Strategic alliances built on mutual trust, aligned objectives, and transparent governance frameworks.</p>
+                                <ul class="list-unstyled mt-3" data-translate="policy_joint_venture_list">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Comprehensive due diligence</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Clear governance structures</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Performance benchmarks</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Dispute resolution protocols</li>
                                 </ul>
                             </div>
                         </div>
@@ -281,38 +305,38 @@
                     <!-- Safety Policy -->
                     <div class="col-lg-4 col-md-6">
                         <div class="policy-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
-                            <img src="images\news\s1.webp" class="policy-img" alt="Workplace Safety">
+                            <img src="images/news/s1.webp" class="policy-img" alt="Workplace Safety">
                             <div class="policy-content">
                                 <div class="policy-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
-                                <h3>Safety Policy</h3>
-                                <p>Uncompromising commitment to protecting our people, assets, and communities through industry-leading safety standards.</p>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> ISO 45001 certified</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Regular safety audits</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Emergency preparedness</li>
-                                    <li><i class="fas fa-check-circle text-success me-2"></i> Mental health support</li>
+                                <h3 data-translate="policy_safety_title">Safety Policy</h3>
+                                <p data-translate="policy_safety_desc">Uncompromising commitment to protecting our people, assets, and communities through industry-leading safety standards.</p>
+                                <ul class="list-unstyled mt-3" data-translate="policy_safety_list">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> ISO 45001 certified</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Regular safety audits</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Emergency preparedness</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Mental health support</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Social Media Policy -->
+                    <!-- Digital Communications Policy -->
                     <div class="col-lg-4 col-md-6">
                         <div class="policy-card animate__animated animate__fadeInUp" style="animation-delay: 0.8s">
-                            <img src="images\news\s1.webp" class="policy-img" alt="Digital Communication">
+                            <img src="images/news/s1.webp" class="policy-img" alt="Digital Communication">
                             <div class="policy-content">
                                 <div class="policy-icon">
                                     <i class="fas fa-globe"></i>
                                 </div>
-                                <h3>Digital Communications Policy</h3>
-                                <p>Maintaining brand integrity and protecting confidential information in the digital landscape.</p>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Brand voice guidelines</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Data protection protocols</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Crisis communication</li>
-                                    <li><i class="fas fa-check-circle text-success me-2"></i> Social media training</li>
+                                <h3 data-translate="policy_digital_comm_title">Digital Communications Policy</h3>
+                                <p data-translate="policy_digital_comm_desc">Maintaining brand integrity and protecting confidential information in the digital landscape.</p>
+                                <ul class="list-unstyled mt-3" data-translate="policy_digital_comm_list">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Brand voice guidelines</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Data protection protocols</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Crisis communication</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Social media training</li>
                                 </ul>
                             </div>
                         </div>
@@ -321,18 +345,18 @@
                     <!-- Social Responsibility Policy -->
                     <div class="col-lg-4 col-md-6">
                         <div class="policy-card animate__animated animate__fadeInUp" style="animation-delay: 1s">
-                            <img src="images\news\s1.webp" class="policy-img" alt="Community Engagement">
+                            <img src="images/news/s1.webp" class="policy-img" alt="Community Engagement">
                             <div class="policy-content">
                                 <div class="policy-icon">
                                     <i class="fas fa-heart"></i>
                                 </div>
-                                <h3>Social Responsibility Policy</h3>
-                                <p>Creating shared value through strategic community investments and sustainable business practices.</p>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> 3% profit commitment</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> SDG-aligned programs</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Employee volunteering</li>
-                                    <li><i class="fas fa-check-circle text-success me-2"></i> Impact measurement</li>
+                                <h3 data-translate="policy_social_resp_title">Social Responsibility Policy</h3>
+                                <p data-translate="policy_social_resp_desc">Creating shared value through strategic community investments and sustainable business practices.</p>
+                                <ul class="list-unstyled mt-3" data-translate="policy_social_resp_list">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> 3% profit commitment</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> SDG-aligned programs</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Employee volunteering</li>
+                                    <li><i class="fas fa-check-circle me-2"></i> Impact measurement</li>
                                 </ul>
                             </div>
                         </div>
@@ -343,8 +367,8 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <div class="policy-highlight">
-                                <h3 class="mb-3">Global Standards, Local Implementation</h3>
-                                <p class="mb-0">Our policies are designed to meet international best practices while respecting local cultural and regulatory contexts in all markets where we operate.</p>
+                                <h3 class="mb-3" data-translate="global_standards_title">Global Standards, Local Implementation</h3>
+                                <p class="mb-0" data-translate="global_standards_desc">Our policies are designed to meet international best practices while respecting local cultural and regulatory contexts in all markets where we operate.</p>
                             </div>
                         </div>
                     </div>
@@ -369,30 +393,30 @@
 
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">Address</h3>
+                        <p class="mb-0" data-translate="footer_address_line1">121 AI Blvd, San Francisco</p>
+                        <p data-translate="footer_address_line2">BCA 94107</p>
                     </div>
 
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-translate="footer_quick_links_title">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="nav_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="nav_about">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="nav_divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="nav_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="nav_contact">Contact Us</a></li>
                         </ul>
                     </div>
 
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_contact_phone1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1" data-translate="footer_contact_phone2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0" data-translate="footer_contact_email1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0" data-translate="footer_contact_email2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
@@ -402,7 +426,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -416,25 +440,309 @@
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
         <script>
-            // Add animations on scroll
-            document.addEventListener('DOMContentLoaded', function() {
-                const policyCards = document.querySelectorAll('.policy-card');
-                
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animate__fadeInUp');
-                        }
-                    });
-                }, { threshold: 0.1 });
-                
-                policyCards.forEach(card => {
-                    observer.observe(card);
-                });
-            });
-        </script>
+             function setLanguage(lang) {
+    // Ensure the selected language exists in translations
+    if (!translations[lang]) {
+        console.error(`Language ${lang} not found in translations`);
+        return;
+    }
 
-    </div>
-</body>
+    // Update the document's language attribute for RTL support
+    document.body.setAttribute('lang', lang);
 
-</html>
+    // Apply RTL styling for Arabic
+    if (lang === 'ar') {
+        document.body.classList.add('rtl');
+    } else {
+        document.body.classList.remove('rtl');
+    }
+
+    // Get all elements with data-translate attribute
+    const elements = document.querySelectorAll('[data-translate]');
+    
+    // Update text content based on selected language
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            // Handle HTML content (like spans in vision_description)
+           if (element.innerHTML.includes('<span')) {
+    element.innerHTML = translations[lang][key];
+} else {
+    element.textContent = translations[lang][key];
+}
+        } else {
+            console.warn(`Translation key ${key} not found for language ${lang}`);
+        }
+    });
+}
+            // Translation object
+            const translations = {
+                en: {
+                    page_title: "Wish Group - Our Policies",
+                    scroll_to_top: "Scroll to top",
+                    nav_home: "Home",
+                    nav_about: "About Us",
+                    nav_divisions: "Divisions",
+                    nav_projects: "Projects",
+                    nav_countries: "Countries",
+                    nav_news: "News",
+                    nav_policies: "Our Policies",
+                    nav_career: "Career",
+                    nav_contact: "Contact Us",
+                    nav_tickets_1: "Tickets Style 1",
+                    nav_tickets_2: "Tickets Style 2",
+                    nav_news_sub: "News",
+                    nav_news_single: "News Single",
+                    nav_contact_sub: "Contact",
+                    hero_title: "Our Policies",
+                    hero_subtitle: "Guiding Principles for Ethical Business Excellence",
+                    hero_highlight: "At Wish Group, our policies reflect our commitment to integrity, innovation, and sustainable growth across all business operations.",
+                    section_title: "Our Corporate Governance Framework",
+                    section_subtitle: "Comprehensive policies designed to ensure transparency, accountability, and sustainable business practices across all our global operations.",
+                    policy_investment_title: "Investment Policy",
+                    policy_investment_desc: "Our disciplined investment approach combines rigorous due diligence with ethical considerations to deliver sustainable returns across real estate, hospitality, trading, and capital markets.",
+                    policy_investment_list: "Minimum 15% ROI commitment<br>Full regulatory compliance<br>Transparent reporting<br>ESG integration",
+                    policy_employment_title: "Employment Policy",
+                    policy_employment_desc: "We cultivate an inclusive, high-performance culture that values diversity, professional development, and work-life balance.",
+                    policy_employment_list: "Equal opportunity employer<br>Competitive compensation<br>Leadership development<br>Zero tolerance for discrimination",
+                    policy_joint_venture_title: "Joint Venture Policy",
+                    policy_joint_venture_desc: "Strategic alliances built on mutual trust, aligned objectives, and transparent governance frameworks.",
+                    policy_joint_venture_list: "Comprehensive due diligence<br>Clear governance structures<br>Performance benchmarks<br>Dispute resolution protocols",
+                    policy_safety_title: "Safety Policy",
+                    policy_safety_desc: "Uncompromising commitment to protecting our people, assets, and communities through industry-leading safety standards.",
+                    policy_safety_list: "ISO 45001 certified<br>Regular safety audits<br>Emergency preparedness<br>Mental health support",
+                    policy_digital_comm_title: "Digital Communications Policy",
+                    policy_digital_comm_desc: "Maintaining brand integrity and protecting confidential information in the digital landscape.",
+                    policy_digital_comm_list: "Brand voice guidelines<br>Data protection protocols<br>Crisis communication<br>Social media training",
+                    policy_social_resp_title: "Social Responsibility Policy",
+                    policy_social_resp_desc: "Creating shared value through strategic community investments and sustainable business practices.",
+                    policy_social_resp_list: "3% profit commitment<br>SDG-aligned programs<br>Employee volunteering<br>Impact measurement",
+                    global_standards_title: "Global Standards, Local Implementation",
+                    global_standards_desc: "Our policies are designed to meet international best practices while respecting local cultural and regulatory contexts in all markets where we operate.",
+                    footer_address_title: "Address",
+                    footer_address_line1: "121 AI Blvd, San Francisco",
+                    footer_address_line2: "BCA 94107",
+                    footer_quick_links_title: "Quick Links",
+                    footer_contact_title: "Contact Us",
+                    footer_contact_phone1: "T. <a href=\"tel:+97142597167\" class=\"text-light\">+971 4259 7167</a>",
+                    footer_contact_phone2: "M. <a href=\"tel:+97142594795\" class=\"text-light\">+971 4259 4795</a>",
+                    footer_contact_email1: "E. <a href=\"mailto:info@wishgroup.ae\" class=\"text-light\">info@wishgroup.ae</a>",
+                    footer_contact_email2: "E. <a href=\"mailto:info@wishgroup.world\" class=\"text-light\">info@wishgroup.world</a>",
+                    footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+                },
+                ar: {
+                    page_title: "مجموعة ويش - سياساتنا",
+                    scroll_to_top: "التمرير إلى الأعلى",
+                    nav_home: "الرئيسية",
+                    nav_about: "من نحن",
+                    nav_divisions: "الأقسام",
+                    nav_projects: "المشاريع",
+                    nav_countries: "الدول",
+                    nav_news: "الأخبار",
+                    nav_policies: "سياساتنا",
+                    nav_career: "وظائف",
+                    nav_contact: "اتصل بنا",
+                    nav_tickets_1: "التذاكر نمط 1",
+                    nav_tickets_2: "التذاكر نمط 2",
+                    nav_news_sub: "الأخبار",
+                    nav_news_single: "خبر واحد",
+                    nav_contact_sub: "اتصال",
+                    hero_title: "سياساتنا",
+                    hero_subtitle: "المبادئ التوجيهية للتميز الأخلاقي في الأعمال",
+                    hero_highlight: "في مجموعة ويش، تعكس سياساتنا التزامنا بالنزاهة والابتكار والنمو المستدام عبر جميع عمليات الأعمال.",
+                    section_title: "إطار الحوكمة المؤسسية",
+                    section_subtitle: "سياسات شاملة مصممة لضمان الشفافية والمساءلة والممارسات التجارية المستدامة عبر جميع عملياتنا العالمية.",
+                    policy_investment_title: "سياسة الاستثمار",
+                    policy_investment_desc: "نهجنا الاستثماري المنضبط يجمع بين العناية الواجبة الصارمة والاعتبارات الأخلاقية لتحقيق عوائد مستدامة عبر العقارات، الضيافة، التجارة، وأسواق رأس المال.",
+                    policy_investment_list: "التزام بعائد استثماري لا يقل عن 15%<br>الامتثال الكامل للتشريعات<br>تقارير شفافة<br>دمج معايير البيئة والاجتماع والحوكمة",
+                    policy_employment_title: "سياسة التوظيف",
+                    policy_employment_desc: "نعزز ثقافة شاملة عالية الأداء تقدر التنوع، التطوير المهني، والتوازن بين العمل والحياة.",
+                    policy_employment_list: "صاحب عمل يوفر فرصًا متساوية<br>تعويضات تنافسية<br>تطوير القيادة<br>عدم التسامح مع التمييز",
+                    policy_joint_venture_title: "سياسة المشاريع المشتركة",
+                    policy_joint_venture_desc: "تحالفات استراتيجية مبنية على الثقة المتبادلة، الأهداف المتوافقة، وأطر الحوكمة الشفافة.",
+                    policy_joint_venture_list: "العناية الواجبة الشاملة<br>هياكل حوكمة واضحة<br>معايير الأداء<br>بروتوكولات حل النزاعات",
+                    policy_safety_title: "سياسة السلامة",
+                    policy_safety_desc: "التزام لا هوادة فيه بحماية موظفينا، أصولنا، ومجتمعاتنا من خلال معايير السلامة الرائدة في الصناعة.",
+                    policy_safety_list: "معتمد بمعيار ISO 45001<br>تدقيقات السلامة المنتظمة<br>الاستعداد للطوارئ<br>دعم الصحة النفسية",
+                    policy_digital_comm_title: "سياسة الاتصالات الرقمية",
+                    policy_digital_comm_desc: "الحفاظ على سلامة العلامة التجارية وحماية المعلومات السرية في المشهد الرقمي.",
+                    policy_digital_comm_list: "إرشادات صوت العلامة التجارية<br>بروتوكولات حماية البيانات<br>الاتصال في الأزمات<br>تدريب على وسائل التواصل الاجتماعي",
+                    policy_social_resp_title: "سياسة المسؤولية الاجتماعية",
+                    policy_social_resp_desc: "خلق قيمة مشتركة من خلال استثمارات المجتمع الاستراتيجية والممارسات التجارية المستدامة.",
+                    policy_social_resp_list: "التزام بنسبة 3% من الأرباح<br>برامج متوافقة مع أهداف التنمية المستدامة<br>تطوع الموظفين<br>قياس التأثير",
+                    global_standards_title: "معايير عالمية، تنفيذ محلي",
+                    global_standards_desc: "تم تصميم سياساتنا لتلبية أفضل الممارسات الدولية مع احترام السياقات الثقافية والتنظيمية المحلية في جميع الأسواق التي نعمل فيها.",
+                    footer_address_title: "العنوان",
+                    footer_address_line1: "121 شارع الذكاء الاصطناعي، سان فرانسيسكو",
+                    footer_address_line2: "BCA 94107",
+                    footer_quick_links_title: "روابط سريعة",
+                    footer_contact_title: "اتصل بنا",
+                    footer_contact_phone1: "هاتف: <a href=\"tel:+97142597167\" class=\"text-light\">+971 4259 7167</a>",
+                    footer_contact_phone2: "جوال: <a href=\"tel:+97142594795\" class=\"text-light\">+971 4259 4795</a>",
+                    footer_contact_email1: "بريد: <a href=\"mailto:info@wishgroup.ae\" class=\"text-light\">info@wishgroup.ae</a>",
+                    footer_contact_email2: "بريد: <a href=\"mailto:info@wishgroup.world\" class=\"text-light\">info@wishgroup.world</a>",
+                    footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
+                },
+                fr: {
+                    page_title: "Wish Group - Nos Politiques",
+                    scroll_to_top: "Retour en haut",
+                    nav_home: "Accueil",
+                    nav_about: "À propos",
+                    nav_divisions: "Divisions",
+                    nav_projects: "Projets",
+                    nav_countries: "Pays",
+                    nav_news: "Actualités",
+                    nav_policies: "Nos Politiques",
+                    nav_career: "Carrière",
+                    nav_contact: "Contactez-nous",
+                    nav_tickets_1: "Billets Style 1",
+                    nav_tickets_2: "Billets Style 2",
+                    nav_news_sub: "Actualités",
+                    nav_news_single: "Article Unique",
+                    nav_contact_sub: "Contact",
+                    hero_title: "Nos Politiques",
+                    hero_subtitle: "Principes directeurs pour l'excellence éthique des affaires",
+                    hero_highlight: "Chez Wish Group, nos politiques reflètent notre engagement envers l'intégrité, l'innovation et la croissance durable dans toutes nos opérations commerciales.",
+                    section_title: "Notre cadre de gouvernance d'entreprise",
+                    section_subtitle: "Des politiques complètes conçues pour garantir la transparence, la responsabilité et des pratiques commerciales durables dans toutes nos opérations mondiales.",
+                    policy_investment_title: "Politique d'Investissement",
+                    policy_investment_desc: "Notre approche d'investissement disciplinée combine une due diligence rigoureuse avec des considérations éthiques pour offrir des rendements durables dans l'immobilier, l'hôtellerie, le commerce et les marchés de capitaux.",
+                    policy_investment_list: "Engagement de ROI minimum de 15%<br>Conformité réglementaire complète<br>Rapports transparents<br>Intégration ESG",
+                    policy_employment_title: "Politique d'Emploi",
+                    policy_employment_desc: "Nous cultivons une culture inclusive et performante qui valorise la diversité, le développement professionnel et l'équilibre entre vie professionnelle et personnelle.",
+                    policy_employment_list: "Employeur offrant l'égalité des chances<br>Rémunération compétitive<br>Développement du leadership<br>Tolérance zéro pour la discrimination",
+                    policy_joint_venture_title: "Politique de Coentreprise",
+                    policy_joint_venture_desc: "Alliances stratégiques fondées sur la confiance mutuelle, des objectifs alignés et des cadres de gouvernance transparents.",
+                    policy_joint_venture_list: "Due diligence complète<br>Structures de gouvernance claires<br>Repères de performance<br>Protocoles de résolution des différends",
+                    policy_safety_title: "Politique de Sécurité",
+                    policy_safety_desc: "Engagement sans compromis à protéger nos employés, nos actifs et nos communautés grâce à des normes de sécurité de pointe.",
+                    policy_safety_list: "Certifié ISO 45001<br>Audits de sécurité réguliers<br>Préparation aux urgences<br>Soutien à la santé mentale",
+                    policy_digital_comm_title: "Politique de Communications Numériques",
+                    policy_digital_comm_desc: "Maintenir l'intégrité de la marque et protéger les informations confidentielles dans le paysage numérique.",
+                    policy_digital_comm_list: "Lignes directrices sur la voix de la marque<br>Protocoles de protection des données<br>Communication de crise<br>Formation aux médias sociaux",
+                    policy_social_resp_title: "Politique de Responsabilité Sociale",
+                    policy_social_resp_desc: "Créer une valeur partagée grâce à des investissements communautaires stratégiques et des pratiques commerciales durables.",
+                    policy_social_resp_list: "Engagement de 3% des profits<br>Programmes alignés sur les ODD<br>Volontariat des employés<br>Mesure de l'impact",
+                    global_standards_title: "Normes Mondiales, Mise en Œuvre Locale",
+                    global_standards_desc: "Nos politiques sont conçues pour répondre aux meilleures pratiques internationales tout en respectant les contextes culturels et réglementaires locaux dans tous les marchés où nous opérons.",
+                    footer_address_title: "Adresse",
+                    footer_address_line1: "121 AI Blvd, San Francisco",
+                    footer_address_line2: "BCA 94107",
+                    footer_quick_links_title: "Liens Rapides",
+                    footer_contact_title: "Contactez-nous",
+                    footer_contact_phone1: "T. <a href=\"tel:+97142597167\" class=\"text-light\">+971 4259 7167</a>",
+                    footer_contact_phone2: "M. <a href=\"tel:+97142594795\" class=\"text-light\">+971 4259 4795</a>",
+                    footer_contact_email1: "E. <a href=\"mailto:info@wishgroup.ae\" class=\"text-light\">info@wishgroup.ae</a>",
+                    footer_contact_email2: "E. <a href=\"mailto:info@wishgroup.world\" class=\"text-light\">info@wishgroup.world</a>",
+                    footer_copyright: "Copyright 2025 - Wish Group. Tous droits réservés."
+                },
+                si: {
+                    page_title: "විෂ් ග්‍රූප් - අපගේ ප්‍රතිපත්ති",
+                    scroll_to_top: "ඉහළට යන්න",
+                    nav_home: "මුල් පිටුව",
+                    nav_about: "අප ගැන",
+                    nav_divisions: "අංශ",
+                    nav_projects: "ව්‍යාපෘති",
+                    nav_countries: "රටවල්",
+                    nav_news: "පුවත්",
+                    nav_policies: "අපගේ ප්‍රතිපත්ති",
+                    nav_career: "වෘත්තිය",
+                    nav_contact: "අප හා සම්බන්ධ වන්න",
+                    nav_tickets_1: "ටිකට් විලාසිතා 1",
+                    nav_tickets_2: "ටිකට් විලාසිතා 2",
+                    nav_news_sub: "පුවත්",
+                    nav_news_single: "තනි පුවත",
+                    nav_contact_sub: "සම්බන්ධතා",
+                    hero_title: "අපගේ ප්‍රතිපත්ති",
+                    hero_subtitle: "ව්‍යාපාරික ආචාරධර්මී උත්කර්ෂය සඳහා මාර්ගෝපදේශක මූලධර්ම",
+                    hero_highlight: "විෂ් ග්‍රූප් හි, අපගේ ප්‍රතිපත්ති සියලුම ව්‍යාපාරික මෙහෙයුම් හරහා අවංකභාවය, නවෝත්පාදනය සහ තිරසර වර්ධනය සඳහා අපගේ කැපවීම පිළිබිඹු කරයි.",
+                    section_title: "අපගේ ආයතනික පාලන රාමුව",
+                    section_subtitle: "අපගේ සියලුම ගෝලීය මෙහෙයුම් හරහා විනිවිදභාවය, වගවීම සහ තිරසර ව්‍යාපාරික පිළිවෙත් සහතික කිරීම සඳහා නිර්මාණය කර ඇති විස්තීර්ණ ප්‍රතිපත්ති.",
+                    policy_investment_title: "ආයෝජන ප්‍රතිපත්ති",
+                    policy_investment_desc: "අපගේ විනයගරුක ආයෝජන ප්‍රවේශය, ඉඩම්, ආගන්තුක සත්කාර, වෙළඳාම සහ ප්‍රාග්ධන වෙළඳපොළ හරහා තිරසර ප්‍රතිලාභ ලබා දීමට ආචාරධර්මී සලකා බැලීම් සමඟ දැඩි උපචිත පරීක්ෂාව ඒකාබද්ධ කරයි.",
+                    policy_investment_list: "අවම 15% ROI කැපවීම<br>සම්පූර්ණ නියාමන අනුකූලතාව<br>විනිවිදභාවය සහිත වාර්තාකරණය<br>ESG ඒකාබද්ධ කිරීම",
+                    policy_employment_title: "රැකියා ප්‍රතිපත්ති",
+                    policy_employment_desc: "අපි විවිධත්වය, වෘත්තීය සංවර්ධනය සහ වැඩ-ජීවිත ඉතිරිය ගරු කරන ඇතුළත්, ඉහළ කාර්යසාධනයක් ඇති සංස්කෘතියක් වගා කරමු.",
+                    policy_employment_list: "සමාන අවස්ථා රැකියා දායකයා<br>තරඟකාරී වන්දි<br>නායකත්ව සංවර්ධනය<br>වෙනස්කම් සඳහා ශුන්‍ය ඉවසීම",
+                    policy_joint_venture_title: "ඒකාබද්ධ ව්‍යාපාර ප්‍රතිපත්ති",
+                    policy_joint_venture_desc: "පාර්ශ්වීය විශ්වාසය, එකඟ වූ ඉලක්ක, සහ විනිවිදභාවය සහිත පාලන රාමු මත ගොඩනැගුණු උපායමාර්ගික සන්ධාන.",
+                    policy_joint_venture_list: "විස්තීර්ණ උපචිත පරීක්ෂාව<br>පැහැදිලි පාලන ව්‍යුහයන්<br>කාර්යසාධන බෙන්ච්මාර්ක්<br>විවාද විසඳුම් ප්‍රොටෝකෝල",
+                    policy_safety_title: "ආරක්ෂණ ප්‍රතිපත්ති",
+                    policy_safety_desc: "අපගේ මිනිසුන්, වත්කම්, සහ ප්‍රජාවන් ආරක්ෂා කිරීම සඳහා කර්මාන්ත-ප්‍රමුඛ ආරක්ෂණ ප්‍රමිතීන් හරහා නොසැලෙන කැපවීම.",
+                    policy_safety_list: "ISO 45001 සහතික කර ඇත<br>නිත්‍ය ආරක්ෂණ විගණන<br>හදිසි සූදානම<br>මානසික සෞඛ්‍ය සහාය",
+                    policy_digital_comm_title: "ඩිජිටල් සන්නිවේදන ප්‍රතිපත්ති",
+                    policy_digital_comm_desc: "ඩිජිටල් භූමිය තුළ වෙළඳ නාම අඛණ්ඩතාව පවත්වා ගැනීම සහ රහස්‍ය තොරතුරු ආරක්ෂා කිරීම.",
+                    policy_digital_comm_list: "වෙළඳ නාම හඬ මාර්ගෝපදේශ<br>දත්ත ආරක්ෂණ ප්‍රොටෝකෝල<br>අර්බුද සන්නිවේදනය<br>සමාජ මාධ්‍ය පුහුණුව",
+                    policy_social_resp_title: "සමාජ වගකීම් ප්‍රතිපත්ති",
+                    policy_social_resp_desc: "උපායමාර්ගික ප්‍රජා ආයෝජන සහ තිරසර ව්‍යාපාරික පිළිවෙත් හරහා බෙදා හදා ගත් වටිනාකමක් නිර්මාණය කිරීම.",
+                    policy_social_resp_list: "ලාභයෙන් 3% කැපවීම<br>තිරසර සංවර්ධන ඉලක්ක සමඟ ගැලපෙන වැඩසටහන්<br>සේවක ස්වේච්ඡා සේවය<br>බලපෑම් මැනීම",
+                    global_standards_title: "ගෝලීය ප්‍රමිතීන්, දේශීය ක්‍රියාත්මක කිරීම",
+                    global_standards_desc: "අපගේ ප්‍රතිපත්ති, අප වැඩ කරන සියලුම වෙළඳපොළවල දේශීය සංස්කෘතික සහ නියාමන සන්දර්භයන් ගරු කරමින්, ජාත්‍යන්තර හොඳම පිළිවෙත් සපුරාලීමට නිර්මාණය කර ඇත.",
+                    footer_address_title: "ලිපිනය",
+                    footer_address_line1: "121 AI Blvd, සැන් ෆ්‍රැන්සිස්කෝ",
+                    footer_address_line2: "BCA 94107",
+                    footer_quick_links_title: "ඉක්මන් ලින්ක්",
+                    footer_contact_title: "අප හා සම්බන්ධ වන්න",
+                    footer_contact_phone1: "දුර: <a href=\"tel:+97142597167\" class=\"text-light\">+971 4259 7167</a>",
+                    footer_contact_phone2: "ජංගම: <a href=\"tel:+97142594795\" class=\"text-light\">+971 4259 4795</a>",
+                    footer_contact_email1: "වි-තැපැල: <a href=\"mailto:info@wishgroup.ae\" class=\"text-light\">info@wishgroup.ae</a>",
+                    footer_contact_email2: "වි-තැපැල: <a href=\"mailto:info@wishgroup.world\" class=\"text-light\">info@wishgroup.world</a>",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ග්‍රූප්. සියලුම හිමිකම් ඇවිරිණි."
+                },
+    dv: {
+    page_title: "ވިޝް ގްރޫޕް - އަޅުގަނޑުމެންގެ ޕޮލިސީތައް",
+    scroll_to_top: "މަތިލައި ސްކްރޯލް ކުރަން",
+    nav_home: "މަންފާ",
+    nav_about: "އަޅުގަނޑުމެން ގެ ޝައިޤަ",
+    nav_divisions: "ބައިބައި",
+    nav_projects: "ޕްރޮޖެކްޓްތައް",
+    nav_countries: "ޤައުމުތައް",
+    nav_news: "ޚަބަރު",
+    nav_policies: "އަޅުގަނޑުމެންގެ ޕޮލިސީތައް",
+    nav_career: "ކެރިއަރ",
+    nav_contact: "އަޅުގަނޑުމެން ގާތްވުން",
+    nav_tickets_1: "ޓިކެޓް ސްޓައިލް 1",
+    nav_tickets_2: "ޓިކެޓް ސްޓައިލް 2",
+    nav_news_sub: "ޚަބަރު",
+    nav_news_single: "އެއް ޚަބަރެއް",
+    nav_contact_sub: "ގާތްވުން",
+    hero_title: "އަޅުގަނޑުމެންގެ ޕޮލިސީތައް",
+    hero_subtitle: "ވިޔަފާރިގެ އެތިކަލް އެކްސަލެންސްގެ ބަސްތައް",
+    hero_highlight: "ވިޝް ގްރޫޕްގައި، އަޅުގަނޑުމެންގެ ޕޮލިސީތައް އަޅުގަނޑުމެންގެ ހުސްތަހައްދުން، އިނޮވޭޝަން، އަދި ސަސްޓެއިނަބަލް ގްރޯތް އަށް އަޅުގަނޑުމެންގެ ކޮމިޓްމަންޓް ފެންނަތި.",
+    section_title: "އަޅުގަނޑުމެންގެ ކޯޕަރެޓް ގަވަރނަންސް ފްރޭމްވާކް",
+    section_subtitle: "އަޅުގަނޑުމެންގެ ގްލޯބަލް އޮޕަރޭޝަންސް ހުރިހާ ތަނެއްގައި ޓްރާންސްޕަރަންސީ، އެކައުންޓަބިލިޓީ، އަދި ސަސްޓެއިނަބަލް ވިޔަފާރި ޕްރެކްޓިސްތައް ސަލާމަތްކުރުމަށް ޑިޒައިން ކުރެވިފައިވާ ކޮމްޕްރިހެންސިވް ޕޮލިސީތައް.",
+    policy_investment_title: "އިންވެސްޓްމަންޓް ޕޮލިސީ",
+    policy_investment_desc: "އަޅުގަނޑުމެންގެ ޑިސިޕްލިންޑް އިންވެސްޓްމަންޓް އެޕްރޯޗް، ރިއަލް އެސްޓޭޓް، ހޮސްޕިޓަލިޓީ، ޓްރޭޑިން، އަދި ކެޕިޓަލް މާކެޓްތަކުގައި ސަސްޓެއިނަބަލް ރިޓަރންސް ދިނުމަށް އެތިކަލް ކޮންސިޑަރޭޝަންތަކާއި ގަނޑި ޑޫ ޑިލިޖަންސް އެކައި ކުރަން.",
+    policy_investment_list: "މިނިމަމް 15% ROI ކޮމިޓްމަންޓް<br>ފުލް ރެގިއުލޭޓަރީ ކޮމްޕްލަޔަންސް<br>ޓްރާންސްޕަރަންޓް ރިޕޯޓިން<br>ESG އިންޓިގްރޭޝަން",
+    policy_employment_title: "އެމްޕްލޮއިމަންޓް ޕޮލިސީ",
+    policy_employment_desc: "އަޅުގަނޑުމެން ޑައިވަރސިޓީ، ޕްރޮފެޝަނަލް ޑިވެލަޕްމަންޓް، އަދި ވާކް-ލައިފް ބެލެންސް ގަދަކުރަމުން އިންކްލޫސިވް، ހައި-ޕަފޯމަންސް ކަލްޗަރ އެއް ވަގައި ކުރަމުން.",
+    policy_employment_list: "އީގަލް އޮޕޮޓިއުނިޓީ އެމްޕްލޮއިއާ<br>ކޮމްޕެޓިޓިވް ކޮމްޕެންސޭޝަން<br>ލީޑަޝިޕް ޑިވެލަޕްމަންޓް<br>ޑިސްކްރިމިނޭޝަނަށް ޒިރޯ ޓޮލަރަންސް",
+    policy_joint_venture_title: "ޖޮއިންޓް ވެންޗަރ ޕޮލިސީ",
+    policy_joint_venture_desc: "މިއުޗުއަލް ޓްރަސްޓް، އެލައިން އޮބްޖެކްޓިވްތައް، އަދި ޓްރާންސްޕަރަންޓް ގަވަރނަންސް ފްރޭމްވާކްތަކުގައި ބިލްޑް ކުރެވިފައިވާ ސްޓްރެޓެޖިކް އެލައިންސްތައް.",
+    policy_joint_venture_list: "ކޮމްޕްރިހެންސިވް ޑޫ ޑިލިޖަންސް<br>ކްލިއަރ ގަވަރނަންސް ސްޓްރަކްޗަރސް<br>ޕަފޯމަންސް ބެންޗްމާކްސް<br>ޑިސްޕިއުޓް ރިޒޮލިއުޝަން ޕްރޮޓޮކޯލްތައް",
+    policy_safety_title: "ސޭފްޓީ ޕޮލިސީ",
+    policy_safety_desc: "އަޅުގަނޑުމެންގެ މީސްތަކުން، އެސެޓްތައް، އަދި ކޮމިއުނިޓީތައް ކަރަންޓީ ލީޑިން ސޭފްޓީ ސްޓެންޑަރޑްތަކުގެ ސަބަބުން އަންކޮމްޕްރޮމައިޒިން ކޮމިޓްމަންޓް.",
+    policy_safety_list: "ISO 45001 ސަފީކުރެވިފަ<br>ރެގިއުލަރ ސޭފްޓީ އޯޑިޓްތައް<br>އިމަރޖަންސީ ޕްރިޕެއަރޑްނަސް<br>މެންޓަލް ހެލްތް ސަޕޯޓް",
+    policy_digital_comm_title: "ޑިޖިޓަލް ކޮމިއުނިކޭޝަންސް ޕޮލިސީ",
+    policy_digital_comm_desc: "ޑިޖިޓަލް ލެންޑްސްކޭޕްގައި ބްރެންޑް އިންޓެގްރިޓީ މެއިންޓެއިން ކުރުމާއި ކޮންފިޑެންޝަލް އިންފަމޭޝަން ކަރަންކުރުން.",
+    policy_digital_comm_list: "ބްރެންޑް ވޮއިސް ގައިޑްލައިންތައް<br>ޑޭޓާ ޕްރޮޓެކްޝަން ޕްރޮޓޮކޯލްތައް<br>ކްރައިސިސް ކޮމިއުނިކޭޝަން<br>ސޯޝަލް މީޑިއާ ޓްރެއިނިން",
+    policy_social_resp_title: "ސޯޝަލް ރިސްޕޮންސިބިލިޓީ ޕޮލިސީ",
+    policy_social_resp_desc: "ސްޓްރެޓެޖިކް ކޮމިއުނިޓީ އިންވެސްޓްމަންޓްތަކާއި ސަސްޓެއިނަބަލް ވިޔަފާރި ޕްރެކްޓިސްތަކުގެ ސަބަބުން ޝެއަރ ކުރެވިފައިވާ ވެލިއު ކުރުން.",
+    policy_social_resp_list: "3% ޕްރޮފިޓް ކޮމިޓްމަންޓް<br>SDG-އައި އެލައިން ކުރެވިފައިވާ ޕްރޮގްރާމްތައް<br>އެމްޕްލޮއިއީ ވޮލަންޓިއަރިން<br>އިމްޕެކްޓް މެޝަރމަންޓް",
+    global_standards_title: "ގްލޯބަލް ސްޓެންޑަރޑްތައް، ލޯކަލް އިމްޕްލިމަންޓޭޝަން",
+    global_standards_desc: "އަޅުގަނޑުމެންގެ ޕޮލިސީތައް، އަޅުގަނޑުމެން އޮޕަރޭޓް ކުރާ ހުރިހާ މާކެޓްތަކުގައި ލޯކަލް ކަލްޗަރަލް އަދި ރެގިއުލޭޓަރީ ކޮންޓެކްސްޓްތައް ރިސްޕެކްޓް ކުރަމުން، އިންޓަރނެޝަނަލް ބެސްޓް ޕްރެކްޓިސް މީޓް ކުރުމަށް ޑިޒައިން ކުރެވިފައި އެވެ.",
+    footer_address_title: "އެޑްރެސް",
+    footer_address_line1: "121 AI ބުލްވާޑް، ސޭން ފްރާންސިސްކޯ",
+    footer_address_line2: "BCA 94107",
+    footer_quick_links_title: "ކްވިކް ލިންކްސް",
+    footer_contact_title: "އަޅުގަނޑުމެން ގާތްވުން",
+    footer_contact_phone1: "ޓެލިފޯން: <a href=\"tel:+97142597167\" class=\"text-light\">+971 4259 7167</a>",
+    footer_contact_phone2: "މޮބައިލް: <a href=\"tel:+97142594795\" class=\"text-light\">+971 4259 4795</a>",
+    footer_contact_email1: "އީމެއިލް: <a href=\"mailto:info@wishgroup.ae\" class=\"text-light\">info@wishgroup.ae</a>",
+    footer_contact_email2: "އީމެއިލް: <a href=\"mailto:info@wishgroup.world\" class=\"text-light\">info@wishgroup.world</a>",
+    footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ހައިޤު ރިޒާވް."
+}   
+            }
+            </script>
+           </body>
+           </html>
