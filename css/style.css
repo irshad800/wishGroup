@@ -13039,7 +13039,7 @@ header .btn-main {
   .fs-xs-13vw { font-size: 13vw; }
   .fs-xs-14vw { font-size: 14vw; }
   .fs-xs-15vw { font-size: 15vw; }
-}}
+}
 /* -------------------------------------------------- 
     design for 480px
     /* -------------------------------------------------- */
@@ -13591,14 +13591,15 @@ header .btn-main {
             font-size: 0.95rem;
         }
         
-        .company-logo {
-            height: 80px;
-            object-fit: contain;
-            margin: 20px auto;
-            display: block;
-            filter: brightness(0) invert(1);
-            transition: all 0.3s ease;
-        }
+       .company-logo {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    transform: none !important;
+    transition: none !important;
+}
         
         .company-card:hover .company-logo {
             filter: none;

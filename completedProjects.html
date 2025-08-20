@@ -2,22 +2,57 @@
 <html lang="en">
 
 <head>
-    <title>Wish Group</title>
+    <title data-lang-key="page_title">Wish Group - Projects</title>
     <link rel="icon" href="images/wishgroup/logo.jpeg" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="AIvent" name="description">
+    <meta content="Wish Group" name="description">
     <meta content="" name="keywords">
     <meta content="" name="author">
-    <!-- CSS Files
-    ================================================== -->
+    <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Google Fonts for Sinhala and Dhivehi -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
     <!-- color scheme -->
     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        .lang-switcher {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switcher .btn-main {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .lang-switcher .dropdown-menu {
+            min-width: 60px;
+            background-color: #1a1a1a;
+            border: none;
+            border-radius: 4px;
+        }
+        .lang-switcher .dropdown-menu a {
+            color: #fff;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        .lang-switcher .dropdown-menu a:hover {
+            background-color: #333;
+        }
+        /* Font styles for multilingual support */
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        html[lang="si"] body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        html[lang="dv"] body {
+            font-family: 'Noto Sans Thaana', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="dark-scheme">
@@ -25,7 +60,7 @@
     <div id="wrapper">
 
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-lang-key="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -42,9 +77,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="">
-                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="">
-                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="">
+                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo">
+                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo">
+                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -53,21 +88,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-lang-key="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-lang-key="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-lang-key="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="projects.html" data-lang-key="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="countries.html" data-lang-key="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="policies.html" data-lang-key="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="career.html" data-lang-key="menu_career">Career</a></li>
+                                        <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-lang-key="menu_tickets_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-lang-key="menu_tickets_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-lang-key="menu_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -75,8 +110,16 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
-
+                                <div class="lang-switcher">
+                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                                    </ul>
+                                </div>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -97,13 +140,13 @@
                         <div class="col-lg-6">
                             <div class="relative wow mask-right">
                                 <div class="text-start">
-                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1">Completed Projects</h1>
+                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1" data-lang-key="projects_title">Completed Projects</h1>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
-                            <p class="mb-0">Discover our vision for luxury, sustainability, and innovation across our completed projects.</p>
+                            <p class="mb-0" data-lang-key="projects_description">Discover our vision for luxury, sustainability, and innovation across our completed projects.</p>
                         </div>
                     </div>
                 </div>
@@ -117,11 +160,11 @@
                         <a href="Wish_Harbour_ciprea.html" class="d-block hover relative rounded-20 overflow-hidden text-light">
                             <div class="abs z-2 bg-color rounded-2 text-white p-3 pb-2 m-4 text-center fw-600">
                                 <h4 class="fs-36 mb-0 lh-1">01</h4>
-                                <span>Project</span>
+                                <span data-lang-key="project_label">Project</span>
                             </div>
-                            <img src="images\logo-light\Wish Holding Logo.png" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/logo-light/Wish Holding Logo.png" class="w-100 hover-scale-1-1" alt="Wish Harbour Ciprea Logo" data-lang-alt="project1_alt">
                             <div class="absolute start-0 bottom-0 p-4 z-2">
-                                <h4>Wish Harbour – Ciprea Phase</h4>
+                                <h4 data-lang-key="project1_title">Wish Harbour – Ciprea Phase</h4>
                             </div>      
                             <div class="gradient-edge-bottom h-70"></div>
                         </a>
@@ -131,11 +174,11 @@
                         <a href="news-single.html" class="d-block hover relative rounded-20 overflow-hidden text-light">
                             <div class="abs z-2 bg-color rounded-2 text-white p-3 pb-2 m-4 text-center fw-600">
                                 <h4 class="fs-36 mb-0 lh-1">02</h4>
-                                <span>Project</span>
+                                <span data-lang-key="project_label">Project</span>
                             </div>
-                            <img src="images/wishgroup/wishcasa logo.jpeg" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/wishgroup/wishcasa logo.jpeg" class="w-100 hover-scale-1-1" alt="Wish Caza Logo" data-lang-alt="project2_alt">
                             <div class="absolute start-0 bottom-0 p-4 z-2">
-                                <h4>Wish Caza</h4>
+                                <h4 data-lang-key="project2_title">Wish Caza</h4>
                             </div>
                             <div class="gradient-edge-bottom h-70"></div>
                         </a>
@@ -145,11 +188,11 @@
                         <a href="news-single.html" class="d-block hover relative rounded-20 overflow-hidden text-light">
                             <div class="abs z-2 bg-color rounded-2 text-white p-3 pb-2 m-4 text-center fw-600">
                                 <h4 class="fs-36 mb-0 lh-1">03</h4>
-                                <span>Project</span>
+                                <span data-lang-key="project_label">Project</span>
                             </div>
-                            <img src="images\primewish\logo.png" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/primewish/logo.png" class="w-100 hover-scale-1-1" alt="Prime Wish Logo" data-lang-alt="project3_alt">
                             <div class="absolute start-0 bottom-0 p-4 z-2">
-                                <h4>Prime Wish</h4>
+                                <h4 data-lang-key="project3_title">Prime Wish</h4>
                             </div>
                             <div class="gradient-edge-bottom h-70"></div>
                         </a>
@@ -159,11 +202,11 @@
                         <a href="news-single.html" class="d-block hover relative rounded-20 overflow-hidden text-light">
                             <div class="abs z-2 bg-color rounded-2 text-white p-3 pb-2 m-4 text-center fw-600">
                                 <h4 class="fs-36 mb-0 lh-1">04</h4>
-                                <span>Project</span>
+                                <span data-lang-key="project_label">Project</span>
                             </div>
-                            <img src="images\logo-light\prime_bond_investment.png" class="w-100 hover-scale-1-1" alt="">
+                            <img src="images/logo-light/prime_bond_investment.png" class="w-100 hover-scale-1-1" alt="Prime Bond Investment Logo" data-lang-alt="project4_alt">
                             <div class="absolute start-0 bottom-0 p-4 z-2">
-                                <h4>Prime Bond Investment</h4>
+                                <h4 data-lang-key="project4_title">Prime Bond Investment</h4>
                             </div>
                             <div class="gradient-edge-bottom h-70"></div>
                         </a>
@@ -178,7 +221,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="Wish Group Footer Logo" data-lang-alt="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -189,26 +232,26 @@
 
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_address">Address</h3>
+                        <p class="mb-0" data-lang-key="headquarters_address">Business Bay</p>
+                        <p data-lang-key="headquarters_country">Dubai, United Arab Emirates</p>
                     </div>
 
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="index.html" class="text-light" data-lang-key="menu_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-lang-key="menu_about">About Us</a></li>
+                            <li><a href="division.html" class="text-light" data-lang-key="menu_divisions">Divisions</a></li>
+                            <li><a href="projects.html" class="text-light" data-lang-key="menu_projects">Projects</a></li>
+                            <li><a href="contact.html" class="text-light" data-lang-key="menu_contact">Contact Us</a></li>
                         </ul>
                     </div>
 
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_contact">Contact Us</h3>
                         <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
                         <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
                         <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
@@ -222,7 +265,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-lang-key="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -230,13 +273,219 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
+        <script>
+            // Translations object
+            const translations = {
+                en: {
+                    page_title: "Wish Group - Projects",
+                    scroll_to_top: "Scroll to top",
+                    menu_home: "Home",
+                    menu_about: "About Us",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projects",
+                    menu_countries: "Countries",
+                    menu_news: "News",
+                    menu_policies: "Our Policies",
+                    menu_career: "Career",
+                    menu_contact: "Contact Us",
+                    menu_tickets_1: "Tickets Style 1",
+                    menu_tickets_2: "Tickets Style 2",
+                    menu_news_single: "News Single",
+                    projects_title: "Completed Projects",
+                    projects_description: "Discover our vision for luxury, sustainability, and innovation across our completed projects.",
+                    project_label: "Project",
+                    project1_title: "Wish Harbour – Ciprea Phase",
+                    project2_title: "Wish Caza",
+                    project3_title: "Prime Wish",
+                    project4_title: "Prime Bond Investment",
+                    project1_alt: "Wish Harbour Ciprea Logo",
+                    project2_alt: "Wish Caza Logo",
+                    project3_alt: "Prime Wish Logo",
+                    project4_especializado_alt: "Prime Bond Investment Logo",
+                    footer_logo_alt: "Wish Group Footer Logo",
+                    footer_address: "Address",
+                    quick_links: "Quick Links",
+                    footer_contact: "Contact Us",
+                    footer_copyright: "Copyright 2025 - Wish Group. All rights reserved.",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubai, United Arab Emirates"
+                },
+                ar: {
+                    page_title: "مجموعة ويش - المشاريع",
+                    scroll_to_top: "التمرير إلى الأعلى",
+                    menu_home: "الرئيسية",
+                    menu_about: "معلومات عنا",
+                    menu_divisions: "الأقسام",
+                    menu_projects: "المشاريع",
+                    menu_countries: "الدول",
+                    menu_news: "الأخبار",
+                    menu_policies: "سياساتنا",
+                    menu_career: "الوظائف",
+                    menu_contact: "اتصل بنا",
+                    menu_tickets_1: "تذاكر النمط الأول",
+                    menu_tickets_2: "تذاكر النمط الثاني",
+                    menu_news_single: "خبر مفرد",
+                    projects_title: "المشاريع المكتملة",
+                    projects_description: "اكتشف رؤيتنا للفخامة والاستدامة والابتكار عبر مشاريعنا المكتملة.",
+                    project_label: "مشروع",
+                    project1_title: "ويش هاربر – مرحلة سيبريا",
+                    project2_title: "ويش كازا",
+                    project3_title: "برايم ويش",
+                    project4_title: "برايم بوند للاستثمار",
+                    project1_alt: "شعار ويش هاربر سيبريا",
+                    project2_alt: "شعار ويش كازا",
+                    project3_alt: "شعار برايم ويش",
+                    project4_alt: "شعار برايم بوند للاستثمار",
+                    footer_logo_alt: "شعار مجموعة ويش في التذييل",
+                    footer_address: "العنوان",
+                    quick_links: "روابط سريعة",
+                    footer_contact: "اتصل بنا",
+                    footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة.",
+                    headquarters_address: "خليج الأعمال",
+                    headquarters_country: "دبي، الإمارات العربية المتحدة"
+                },
+                fr: {
+                    page_title: "Groupe Wish - Projets",
+                    scroll_to_top: "Faire défiler vers le haut",
+                    menu_home: "Accueil",
+                    menu_about: "À propos de nous",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projets",
+                    menu_countries: "Pays",
+                    menu_news: "Actualités",
+                    menu_policies: "Nos politiques",
+                    menu_career: "Carrière",
+                    menu_contact: "Contactez-nous",
+                    menu_tickets_1: "Billets Style 1",
+                    menu_tickets_2: "Billets Style 2",
+                    menu_news_single: "Actualité Unique",
+                    projects_title: "Projets Terminés",
+                    projects_description: "Découvrez notre vision du luxe, de la durabilité et de l'innovation à travers nos projets terminés.",
+                    project_label: "Projet",
+                    project1_title: "Wish Harbour – Phase Ciprea",
+                    project2_title: "Wish Caza",
+                    project3_title: "Prime Wish",
+                    project4_title: "Prime Bond Investment",
+                    project1_alt: "Logo Wish Harbour Ciprea",
+                    project2_alt: "Logo Wish Caza",
+                    project3_alt: "Logo Prime Wish",
+                    project4_alt: "Logo Prime Bond Investment",
+                    footer_logo_alt: "Logo du Groupe Wish dans le pied de page",
+                    footer_address: "Adresse",
+                    quick_links: "Liens rapides",
+                    footer_contact: "Contactez-nous",
+                    footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés.",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubaï, Émirats Arabes Unis"
+                },
+                si: {
+                    page_title: "විෂ් ගෲප් - ව්‍යාපෘති",
+                    scroll_to_top: "ඉහළට ගමන් කරන්න",
+                    menu_home: "මුල් පිටුව",
+                    menu_about: "අප ගැන",
+                    menu_divisions: "අංශ",
+                    menu_projects: "ව්‍යාපෘති",
+                    menu_countries: "රටවල්",
+                    menu_news: "පුවත්",
+                    menu_policies: "අපගේ ප්‍රතිපත්ති",
+                    menu_career: "වෘත්තිය",
+                    menu_contact: "අප හා සම්බන්ධ වන්න",
+                    menu_tickets_1: "ටිකට් විලාසිතා 1",
+                    menu_tickets_2: "ටිකට් විලාසිතා 2",
+                    menu_news_single: "තනි පුවත",
+                    projects_title: "සම්පූර්ණ කළ ව්‍යාපෘති",
+                    projects_description: "අපගේ සම්පූර්ණ කළ ව්‍යාපෘති හරහා සුඛෝපභෝගීත්වය, තිරසාරභාවය සහ නවෝත්පාදනය සඳහා වූ අපගේ දැක්ම ගවේෂණය කරන්න.",
+                    project_label: "ව්‍යාපෘතිය",
+                    project1_title: "විෂ් හාබර් – සිප්‍රියා අදියර",
+                    project2_title: "විෂ් කාසා",
+                    project3_title: "ප්‍රයිම් විෂ්",
+                    project4_title: "ප්‍රයිම් බෝන්ඩ් ආයෝජන",
+                    project1_alt: "විෂ් හාබර් සිප්‍රියා ලෝගෝ",
+                    project2_alt: "විෂ් කාසා ලෝගෝ",
+                    project3_alt: "ප්‍රයිම් විෂ් ලෝගෝ",
+                    project4_alt: "ප්‍රයිම් බෝන්ඩ් ආයෝජන ලෝගෝ",
+                    footer_logo_alt: "විෂ් ගෲප් පාදක ලෝගෝ",
+                    footer_address: "ලිපිනය",
+                    quick_links: "ඉක්මන් සබැඳි",
+                    footer_contact: "අප හා සම්බන්ධ වන්න",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ගෲප්. සියලු හිමිකම් ඇවිරිණි.",
+                    headquarters_address: "බිස්නස් බේ",
+                    headquarters_country: "ඩුබායි, එක්සත් අරාබි එමිරේට්ස්"
+                },
+                dv: {
+                    page_title: "ވިޝް ގްރޫޕް - ޕްރޮޖެކްޓްތައް",
+                    scroll_to_top: "މަތިއަށް ސްކްރޯލް ކުރަން",
+                    menu_home: "މަންދު",
+                    menu_about: "އަލިފަން",
+                    menu_divisions: "ބައިތައް",
+                    menu_projects: "ޕްރޮޖެކްޓްތައް",
+                    menu_countries: "ޤައުމުތައް",
+                    menu_news: "ޚަބަރު",
+                    menu_policies: "އަމިއްލަ ސިޔާސަތުތައް",
+                    menu_career: "ކެރިއަރ",
+                    menu_contact: "ކޮންޓެކްޓް އަސް",
+                    menu_tickets_1: "ޓިކެޓް ސްޓައިލް 1",
+                    menu_tickets_2: "ޓިކެޓް ސްޓައިލް 2",
+                    menu_news_single: "އެކެއް ޚަބަރު",
+                    projects_title: "ފުރިހަމަ ޕްރޮޖެކްޓްތައް",
+                    projects_description: "އަޅުގަނޑުގެ ފުރިހަމަ ޕްރޮޖެކްޓްތަކުގައި ލަކްޝަރީ، ސަސްޓެއިނަބިލިޓީ އަދި އިނަވެޝަން ދެކެން.",
+                    project_label: "ޕްރޮޖެކްޓް",
+                    project1_title: "ވިޝް ހާބަރ – ސިޕްރިއާ ފޭސް",
+                    project2_title: "ވިޝް ކާޒާ",
+                    project3_title: "ޕްރައިމް ވިޝް",
+                    project4_title: "ޕްރައިމް ބޯންޑް އިންވެސްޓްމަންޓް",
+                    project1_alt: "ވިޝް ހާބަރ ސިޕްރިއާ ލޯގޯ",
+                    project2_alt: "ވިޝް ކާޒާ ލޯގޯ",
+                    project3_alt: "ޕްރައިމް ވިޝް ލޯގޯ",
+                    project4_alt: "ޕްރައިމް ބޯންޑް އިންވެސްޓްމަންޓް ލޯގޯ",
+                    footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ",
+                    footer_address: "އެޑްރެސް",
+                    quick_links: "އިކްމަނު ލިންކްތައް",
+                    footer_contact: "ކޮންޓެކްޓް އަސް",
+                    footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ހިމިން ރިޒަރވް.",
+                    headquarters_address: "ބިޒްނަސް ބޭ",
+                    headquarters_country: "ދުބައި، ޔުނައިޓެޑް އަރަބް އިމިރޭޓްސް"
+                }
+            };
 
+            // Function to change language
+            function changeLanguage(lang) {
+                document.getElementById('currentLang').textContent = lang.toUpperCase();
+                document.querySelectorAll('[data-lang-key]').forEach(element => {
+                    const key = element.getAttribute('data-lang-key');
+                    if (translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                    }
+                });
+                document.querySelectorAll('[data-lang-alt]').forEach(element => {
+                    const key = element.getAttribute('data-lang-alt');
+                    if (translations[lang][key]) {
+                        element.alt = translations[lang][key];
+                    }
+                });
+                document.querySelector('html').lang = lang;
+                if (lang === 'ar' || lang === 'dv') {
+                    document.querySelector('html').dir = 'rtl';
+                    document.querySelector('body').style.textAlign = 'right';
+                } else {
+                    document.querySelector('html').dir = 'ltr';
+                    document.querySelector('body').style.textAlign = 'left';
+                }
+                document.querySelector('title').textContent = translations[lang].page_title;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            // Initialize language
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+                changeLanguage(savedLang);
+            });
+        </script>
 </body>
 
 </html>

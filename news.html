@@ -2,27 +2,137 @@
 <html lang="en">
 
 <head>
-    <title>AIvent - AI Event, Conference and Meetup Website Template</title>
-    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <title>Beverley Air | Exclusive Private Island Resort</title>
+    <link rel="icon" href="images/wishgroup/logo.jpeg" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="AIvent" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
-    <!-- CSS Files
-    ================================================== -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Beverley Air Private Island - Luxury resort with golf course, spa, fine dining and exclusive villas" name="description">
+    <meta content="Private Island, Luxury Resort, Golf Course, Spa, Fine Dining, Exclusive Villas" name="keywords">
+    <meta content="Wish Group" name="author">
+    <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Custom Styles */
+        .image-gallery {
+            display: grid;
 
+
+            
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 15px;
+        }
+        .full-width-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .facility-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .villa-option {
+            transition: all 0.3s ease;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .villa-option:hover {
+            background: rgba(255,255,255,0.05);
+            transform: translateX(5px);
+        }
+        .villa-badge {
+            background: var(--color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .testimonial-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1;
+            border-radius: 8px;
+        }
+        .service-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 8px;
+            height: 100%;
+        }
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .service-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .service-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--color);
+            position: absolute;
+            left: 0;
+        }
+    </style>
 </head>
 
 <body class="dark-scheme">
-
     <div id="wrapper">
-
         <div class="float-text show-on-scroll">
             <span><a href="#">Scroll to top</a></span>
         </div>
@@ -41,9 +151,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/logo.webp" alt="" >
-                                        <img class="logo-scroll" src="images/logo.webp" alt="" >
-                                        <img class="logo-mobile" src="images/logo.webp" alt="" >
+                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="">
+                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="">
+                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -52,76 +162,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="index.html#section-hero">Home</a>
-                                            <ul class="mega">
-                                                <li>
-                                                    <div class="container">
-                                                        <div class="sb-menu p-4">
-                                                            <div class="row g-3">
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index.html">
-                                                                            <img src="images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 1</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider.html">
-                                                                            <img src="images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 2</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-static-background.html">
-                                                                            <img src="images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 3</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-slider-text.html">
-                                                                            <img src="images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 4</h6>
-                                                                </div>
-
-                                                                <div class="col-lg-1-5 col-md-4 col-sm-6 text-center">
-                                                                    <div class="relative hover text-center overflow-hidden soft-shadow rounded-1">
-                                                                        <a class="p-0" href="index-countdown.html">
-                                                                            <img src="images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <h6 class="mt-3">Demo 5</h6>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="menu-item" href="index.html#section-about">About</a></li>
-                                        <li><a class="menu-item" href="index.html#section-why-attend">Why Attend</a></li>
-                                        <li><a class="menu-item" href="index.html#section-speakers">Speakers</a></li>
-                                        <li><a class="menu-item" href="index.html#section-schedule">Schedule</a></li>
-                                        <li><a class="menu-item" href="index.html#section-tickets">Tickets</a></li>
-                                        <li><a class="menu-item" href="index.html#section-venue">Venue</a></li>
-                                        <li><a class="menu-item" href="index.html#section-faq">FAQ</a></li>
-                                        <li><a class="menu-item" href="news.html">Pages</a>
+                                        <li><a class="menu-item" href="index.html">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
+                                        <li><a class="menu-item" href="">Divisions</a></li>
+                                        <li><a class="menu-item" href="">Projects</a></li>
+                                        <li><a class="menu-item" href="">Countries</a></li>
+                                        <li><a class="menu-item" href="">News</a></li>
+                                        <li><a class="menu-item" href="">Our Policies</a></li>
+                                        <li><a class="menu-item" href="">Carrier</a></li>
+                                        <li><a class="menu-item" href="news.html">Contact Us</a>
                                             <ul>
                                                 <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
                                                 <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
                                                 <li><a class="menu-item" href="news.html">News</a></li>
                                                 <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a>
+                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -129,8 +184,7 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href="tickets-2.html"><span>Buy Tickets</span></a>
-
+                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -141,7 +195,8 @@
             </div>
         </header>
 
-        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+
+ <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
             <img src="images/background/3.webp" class="jarallax-img" alt="">
             <div class="gradient-edge-bottom h-50"></div>
             <div class="sw-overlay op-5"></div>
@@ -298,57 +353,69 @@
             </div>
         </section>        
 
-    </div>
 
-    <!-- footer begin -->
-    <footer class="text-light section-dark">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-12">
-                    <div class="d-lg-flex align-items-center justify-content-between text-center">
-                        <div>
-                            <h3 class="fs-20">Address</h3>
-                            121 AI Blvd, San Francisco<br>
-                            BCA 94107
-                        </div>
-                        <div>
-                            <img src="images/logo.webp" class="w-150px" alt=""><br>
-                            <div class="social-icons mb-sm-30 mt-4">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
 
-                        </div>
-                        <div>
-                            <h3 class="fs-20">Contact Us</h3>
-                            T. +1 123 456 789<br>
-                            M. contact@aivent.com
+
+         <!-- footer begin -->
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Logo & Social -->
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
-                </div>                    
-            </div>
-        </div>
-        <div class="subfooter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        Copyright 2025 - AIvent by Designesia
+                    <!-- Address -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Address</h3>
+                        <p class="mb-0">121 AI Blvd, San Francisco</p>
+                        <p>BCA 94107</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light">Home</a></li>
+                            <li><a href="about.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Divisions</a></li>
+                            <li><a href="#" class="text-light">Projects</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us with Email -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- footer end -->
-    
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="js/vendors.js"></script>
-    <script src="js/designesia.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/custom-marquee.js"></script>
+            <!-- Subfooter -->
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            Copyright 2025 - Wish Group. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
 
+        <!-- Javascript Files
+        ================================================== -->
+        <script src="js/vendors.js"></script>
+        <script src="js/designesia.js"></script>
+        <script src="js/countdown-custom.js"></script>
+        <script src="js/custom-marquee.js"></script>
+    </div>
 </body>
-
 </html>

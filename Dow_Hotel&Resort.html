@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Dow Hotel & Resort | Luxury Island Accommodations</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <title data-lang-key="page_title">Dow Hotel & Resort - Luxury Island Accommodations</title>
+    <link rel="icon" href="/images/wishgroup/logo_remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Dow Hotel & Resort - Luxury accommodations with world-class amenities in the Maldives" name="description">
@@ -13,6 +13,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Google Fonts for Sinhala and Dhivehi -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
     <!-- color scheme -->
     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
@@ -114,13 +116,44 @@
             color: var(--color);
             margin-bottom: 20px;
         }
+        .lang-switcher {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switcher .btn-main {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .lang-switcher .dropdown-menu {
+            min-width: 60px;
+            background-color: #1a1a1a;
+            border: none;
+            border-radius: 4px;
+        }
+        .lang-switcher .dropdown-menu a {
+            color: #fff;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        .lang-switcher .dropdown-menu a:hover {
+            background-color: #333;
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        html[lang="si"] body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        html[lang="dv"] body {
+            font-family: 'Noto Sans Thaana', sans-serif;
+        }
     </style>
 </head>
 
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-lang-key="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -137,9 +170,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -148,21 +181,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-lang-key="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-lang-key="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-lang-key="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="projects.html" data-lang-key="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="countries.html" data-lang-key="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="policies.html" data-lang-key="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="career.html" data-lang-key="menu_career">Career</a></li>
+                                        <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-lang-key="menu_tickets_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-lang-key="menu_tickets_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-lang-key="menu_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -170,7 +203,16 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="lang-switcher">
+                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                                    </ul>
+                                </div>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -182,22 +224,20 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="/images/wishgroup/dow.jpg" class="jarallax-img" alt="">
+            <img src="/images/wishgroup/dow.jpg" class="jarallax-img" alt="Dow Hotel & Resort" data-lang-alt="hero_alt">
             <div class="gradient-edge-bottom h-50"></div>
             <div class="sw-overlay op-5"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
-                                Dow Hotel & Resort
-                            </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">Luxury redefined in the heart of the Maldives</p>
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-lang-key="hero_title">Dow Hotel & Resort</h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-lang-key="hero_description">Luxury redefined in the heart of the Maldives</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">5-Star Experience</span>
+                                    <span class="fs-20 fw-600" data-lang-key="hero_label">5-Star Experience</span>
                                 </div>
                             </div>
                         </div>
@@ -214,17 +254,17 @@
                         <div class="intro-section mb-5">
                             <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
                                  alt="Dow Hotel & Resort" 
-                                 class="full-width-resort">
+                                 class="full-width-resort" data-lang-alt="intro_image_alt">
                             <div class="text-center mt-4">
-                                <h2 class="fs-36 mb-3">Island Luxury Redefined</h2>
-                                <p class="lead fs-20">Where world-class amenities meet unparalleled natural beauty</p>
+                                <h2 class="fs-36 mb-3" data-lang-key="intro_title">Island Luxury Redefined</h2>
+                                <p class="lead fs-20" data-lang-key="intro_description">Where world-class amenities meet unparalleled natural beauty</p>
                             </div>
                         </div>
 
                         <!-- Key Amenities Section -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Key Amenities</h2>
-                            <p class="lead">Exceptional facilities for the discerning traveler</p>
+                            <h2 class="fs-30" data-lang-key="amenities_title">Key Amenities</h2>
+                            <p class="lead" data-lang-key="amenities_description">Exceptional facilities for the discerning traveler</p>
                         </div>
                         
                         <div class="row g-4">
@@ -232,10 +272,10 @@
                                 <div class="amenity-card">
                                     <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
                                          alt="Luxury Lobby" 
-                                         class="amenity-image">
+                                         class="amenity-image" data-lang-alt="amenity_lobby_alt">
                                     <div class="amenity-overlay">
-                                        <h3 class="fs-20 mb-1">Luxurious Lobby</h3>
-                                        <p class="mb-0">500 sqm of elegant arrival space</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="amenity_lobby_title">Luxurious Lobby</h3>
+                                        <p class="mb-0" data-lang-key="amenity_lobby_description">500 sqm of elegant arrival space</p>
                                     </div>
                                 </div>
                             </div>
@@ -244,10 +284,10 @@
                                 <div class="amenity-card">
                                     <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
                                          alt="Dining Area" 
-                                         class="amenity-image">
+                                         class="amenity-image" data-lang-alt="amenity_dining_alt">
                                     <div class="amenity-overlay">
-                                        <h3 class="fs-20 mb-1">Global Dining Area</h3>
-                                        <p class="mb-0">600 sqm culinary experience</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="amenity_dining_title">Global Dining Area</h3>
+                                        <p class="mb-0" data-lang-key="amenity_dining_description">600 sqm culinary experience</p>
                                     </div>
                                 </div>
                             </div>
@@ -256,10 +296,10 @@
                                 <div class="amenity-card">
                                     <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
                                          alt="Wellness Center" 
-                                         class="amenity-image">
+                                         class="amenity-image" data-lang-alt="amenity_wellness_alt">
                                     <div class="amenity-overlay">
-                                        <h3 class="fs-20 mb-1">Wellness Center</h3>
-                                        <p class="mb-0">850 sqm of spa and fitness facilities</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="amenity_wellness_title">Wellness Center</h3>
+                                        <p class="mb-0" data-lang-key="amenity_wellness_description">850 sqm of spa and fitness facilities</p>
                                     </div>
                                 </div>
                             </div>
@@ -268,10 +308,10 @@
                                 <div class="amenity-card">
                                     <img src="/images/wishgroup/indoor.jpg" 
                                          alt="Indoor Pool" 
-                                         class="amenity-image">
+                                         class="amenity-image" data-lang-alt="amenity_pool_alt">
                                     <div class="amenity-overlay">
-                                        <h3 class="fs-20 mb-1">Indoor Swimming Complex</h3>
-                                        <p class="mb-0">1,000 sqm with café and bar</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="amenity_pool_title">Indoor Swimming Complex</h3>
+                                        <p class="mb-0" data-lang-key="amenity_pool_description">1,000 sqm with café and bar</p>
                                     </div>
                                 </div>
                             </div>
@@ -280,22 +320,22 @@
                                 <div class="amenity-card">
                                     <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
                                          alt="Event Spaces" 
-                                         class="amenity-image">
+                                         class="amenity-image" data-lang-alt="amenity_events_alt">
                                     <div class="amenity-overlay">
-                                        <h3 class="fs-20 mb-1">Event Facilities</h3>
-                                        <p class="mb-0">1,600 sqm of versatile spaces</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="amenity_events_title">Event Facilities</h3>
+                                        <p class="mb-0" data-lang-key="amenity_events_description">1,600 sqm of versatile spaces</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="col-md-4">
                                 <div class="amenity-card">
-                                    <img src="/images/wishgroup/vip spa.jpg" 
+                                    <img src="/images/wishgroup/vip_spa.jpg" 
                                          alt="VIP Spa" 
-                                         class="amenity-image">
+                                         class="amenity-image" data-lang-alt="amenity_vip_spa_alt">
                                     <div class="amenity-overlay">
-                                        <h3 class="fs-20 mb-1">VIP Spa & Wellness</h3>
-                                        <p class="mb-0">Exclusive 200 sqm sanctuary</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="amenity_vip_spa_title">VIP Spa & Wellness</h3>
+                                        <p class="mb-0" data-lang-key="amenity_vip_spa_description">Exclusive 200 sqm sanctuary</p>
                                     </div>
                                 </div>
                             </div>
@@ -307,18 +347,18 @@
                                 <div class="col-lg-6">
                                     <img src="/images/wishgroup/resort.jpg" 
                                          alt="Resort Features" 
-                                         class="w-100 rounded-1">
+                                         class="w-100 rounded-1" data-lang-alt="features_image_alt">
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="ps-lg-4">
-                                        <h3 class="fs-24 mb-3">Resort Highlights</h3>
+                                        <h3 class="fs-24 mb-3" data-lang-key="features_title">Resort Highlights</h3>
                                         <ul class="feature-list">
-                                            <li>State-of-the-art fitness center (300 sqm)</li>
-                                            <li>Exclusive screening room (400 sqm)</li>
-                                            <li>Digital games and billiard room (200 sqm)</li>
-                                            <li>Kids club and playroom (100 sqm)</li>
-                                            <li>1km jogging track with ocean views</li>
-                                            <li>VIP private bar (150 sqm)</li>
+                                            <li data-lang-key="feature_fitness">State-of-the-art fitness center (300 sqm)</li>
+                                            <li data-lang-key="feature_screening">Exclusive screening room (400 sqm)</li>
+                                            <li data-lang-key="feature_games">Digital games and billiard room (200 sqm)</li>
+                                            <li data-lang-key="feature_kids">Kids club and playroom (100 sqm)</li>
+                                            <li data-lang-key="feature_jogging">1km jogging track with ocean views</li>
+                                            <li data-lang-key="feature_bar">VIP private bar (150 sqm)</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -327,27 +367,27 @@
 
                         <!-- Accommodation Options -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Luxury Accommodations</h2>
-                            <p class="lead">Tailored stays for every preference</p>
+                            <h2 class="fs-30" data-lang-key="accommodations_title">Luxury Accommodations</h2>
+                            <p class="lead" data-lang-key="accommodations_description">Tailored stays for every preference</p>
                         </div>
                         
                         <div class="row g-4">
                             <!-- Floating Villas -->
                             <div class="col-md-4">
                                 <div class="accommodation-type">
-                                    <h3 class="fs-24 mb-3">Floating Haven Villas</h3>
+                                    <h3 class="fs-24 mb-3" data-lang-key="floating_villas_title">Floating Haven Villas</h3>
                                     <div class="room-option">
                                         <div class="room-badge">1BHK</div>
                                         <div class="room-details">
-                                            <span>20 Units Available</span>
-                                            <span>100 sqm each</span>
+                                            <span data-lang-key="floating_villa_1bhk_units">20 Units Available</span>
+                                            <span data-lang-key="floating_villa_1bhk_size">100 sqm each</span>
                                         </div>
                                     </div>
                                     <div class="room-option">
                                         <div class="room-badge">2BHK</div>
                                         <div class="room-details">
-                                            <span>10 Units Available</span>
-                                            <span>120 sqm each</span>
+                                            <span data-lang-key="floating_villa_2bhk_units">10 Units Available</span>
+                                            <span data-lang-key="floating_villa_2bhk_size">120 sqm each</span>
                                         </div>
                                     </div>
                                 </div>
@@ -356,19 +396,19 @@
                             <!-- Underwater Villas -->
                             <div class="col-md-4">
                                 <div class="accommodation-type">
-                                    <h3 class="fs-24 mb-3">Underwater Paradise</h3>
+                                    <h3 class="fs-24 mb-3" data-lang-key="underwater_villas_title">Underwater Paradise</h3>
                                     <div class="room-option">
                                         <div class="room-badge">1BHK</div>
                                         <div class="room-details">
-                                            <span>20 Units Available</span>
-                                            <span>90 sqm each</span>
+                                            <span data-lang-key="underwater_villa_1bhk_units">20 Units Available</span>
+                                            <span data-lang-key="underwater_villa_1bhk_size">90 sqm each</span>
                                         </div>
                                     </div>
                                     <div class="room-option">
                                         <div class="room-badge">2BHK</div>
                                         <div class="room-details">
-                                            <span>10 Units Available</span>
-                                            <span>100 sqm each</span>
+                                            <span data-lang-key="underwater_villa_2bhk_units">10 Units Available</span>
+                                            <span data-lang-key="underwater_villa_2bhk_size">100 sqm each</span>
                                         </div>
                                     </div>
                                 </div>
@@ -377,26 +417,26 @@
                             <!-- VIP Bungalows -->
                             <div class="col-md-4">
                                 <div class="accommodation-type">
-                                    <h3 class="fs-24 mb-3">VIP Bungalows</h3>
+                                    <h3 class="fs-24 mb-3" data-lang-key="vip_bungalows_title">VIP Bungalows</h3>
                                     <div class="room-option">
                                         <div class="room-badge">2BHK</div>
                                         <div class="room-details">
-                                            <span>10 Units Available</span>
-                                            <span>180 sqm each</span>
+                                            <span data-lang-key="vip_bungalow_2bhk_units">10 Units Available</span>
+                                            <span data-lang-key="vip_bungalow_2bhk_size">180 sqm each</span>
                                         </div>
                                     </div>
                                     <div class="room-option">
                                         <div class="room-badge">3BHK</div>
                                         <div class="room-details">
-                                            <span>10 Units Available</span>
-                                            <span>220 sqm each</span>
+                                            <span data-lang-key="vip_bungalow_3bhk_units">10 Units Available</span>
+                                            <span data-lang-key="vip_bungalow_3bhk_size">220 sqm each</span>
                                         </div>
                                     </div>
                                     <div class="room-option">
                                         <div class="room-badge">4BHK</div>
                                         <div class="room-details">
-                                            <span>5 Units Available</span>
-                                            <span>250 sqm each</span>
+                                            <span data-lang-key="vip_bungalow_4bhk_units">5 Units Available</span>
+                                            <span data-lang-key="vip_bungalow_4bhk_size">250 sqm each</span>
                                         </div>
                                     </div>
                                 </div>
@@ -405,15 +445,15 @@
 
                         <!-- Hotel Rooms Section -->
                         <div class="accommodation-section">
-                            <h3 class="fs-24 mb-3 text-center">Hotel Rooms</h3>
+                            <h3 class="fs-24 mb-3 text-center" data-lang-key="hotel_rooms_title">Hotel Rooms</h3>
                             <div class="row g-4">
                                 <div class="col-md-3">
                                     <div class="room-option">
                                         <div class="room-badge">STD</div>
                                         <div class="room-details">
-                                            <span>35 Rooms</span>
-                                            <span>40 sqm each</span>
-                                            <span>Serene Retreats</span>
+                                            <span data-lang-key="hotel_std_units">35 Rooms</span>
+                                            <span data-lang-key="hotel_std_size">40 sqm each</span>
+                                            <span data-lang-key="hotel_std_label">Serene Retreats</span>
                                         </div>
                                     </div>
                                 </div>
@@ -421,9 +461,9 @@
                                     <div class="room-option">
                                         <div class="room-badge">DLX</div>
                                         <div class="room-details">
-                                            <span>40 Rooms</span>
-                                            <span>50 sqm each</span>
-                                            <span>Tranquil Havens</span>
+                                            <span data-lang-key="hotel_dlx_units">40 Rooms</span>
+                                            <span data-lang-key="hotel_dlx_size">50 sqm each</span>
+                                            <span data-lang-key="hotel_dlx_label">Tranquil Havens</span>
                                         </div>
                                     </div>
                                 </div>
@@ -431,9 +471,9 @@
                                     <div class="room-option">
                                         <div class="room-badge">SUITE</div>
                                         <div class="room-details">
-                                            <span>10 Rooms</span>
-                                            <span>70 sqm each</span>
-                                            <span>Mystic Suites</span>
+                                            <span data-lang-key="hotel_suite_units">10 Rooms</span>
+                                            <span data-lang-key="hotel_suite_size">70 sqm each</span>
+                                            <span data-lang-key="hotel_suite_label">Mystic Suites</span>
                                         </div>
                                     </div>
                                 </div>
@@ -441,9 +481,9 @@
                                     <div class="room-option">
                                         <div class="room-badge">VIP</div>
                                         <div class="room-details">
-                                            <span>10 Rooms</span>
-                                            <span>100 sqm each</span>
-                                            <span>Penthouses</span>
+                                            <span data-lang-key="hotel_vip_units">10 Rooms</span>
+                                            <span data-lang-key="hotel_vip_size">100 sqm each</span>
+                                            <span data-lang-key="hotel_vip_label">Penthouses</span>
                                         </div>
                                     </div>
                                 </div>
@@ -452,8 +492,8 @@
 
                         <!-- Beach Villas Section -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Beachfront Villas</h2>
-                            <p class="lead">Steps away from pristine sands</p>
+                            <h2 class="fs-30" data-lang-key="beach_villas_title">Beachfront Villas</h2>
+                            <p class="lead" data-lang-key="beach_villas_description">Steps away from pristine sands</p>
                         </div>
                         
                         <div class="row g-4 mb-5">
@@ -461,8 +501,8 @@
                                 <div class="room-option">
                                     <div class="room-badge">1BHK</div>
                                     <div class="room-details">
-                                        <span>16 Units Available</span>
-                                        <span>120 sqm each</span>
+                                        <span data-lang-key="beach_villa_1bhk_units">16 Units Available</span>
+                                        <span data-lang-key="beach_villa_1bhk_size">120 sqm each</span>
                                     </div>
                                 </div>
                             </div>
@@ -470,8 +510,8 @@
                                 <div class="room-option">
                                     <div class="room-badge">2BHK</div>
                                     <div class="room-details">
-                                        <span>17 Units Available</span>
-                                        <span>150 sqm each</span>
+                                        <span data-lang-key="beach_villa_2bhk_units">17 Units Available</span>
+                                        <span data-lang-key="beach_villa_2bhk_size">150 sqm each</span>
                                     </div>
                                 </div>
                             </div>
@@ -479,8 +519,8 @@
                                 <div class="room-option">
                                     <div class="room-badge">3BHK</div>
                                     <div class="room-details">
-                                        <span>17 Units Available</span>
-                                        <span>180 sqm each</span>
+                                        <span data-lang-key="beach_villa_3bhk_units">17 Units Available</span>
+                                        <span data-lang-key="beach_villa_3bhk_size">180 sqm each</span>
                                     </div>
                                 </div>
                             </div>
@@ -488,11 +528,11 @@
 
                         <!-- CTA Section -->
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Experience Unmatched Luxury</h3>
-                            <p class="mb-4">Book your stay at Dow Hotel & Resort today</p>
+                            <h3 class="fs-28 mb-3" data-lang-key="cta_title">Experience Unmatched Luxury</h3>
+                            <p class="mb-4" data-lang-key="cta_description">Book your stay at Dow Hotel & Resort today</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="contact.html"><span>Check Availability</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Request Brochure</span></a>
+                                <a class="btn-main fx-slide" href="contact.html"><span data-lang-key="cta_availability">Check Availability</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-lang-key="cta_brochure">Request Brochure</span></a>
                             </div>
                         </div>
                     </div>
@@ -506,7 +546,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="/images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="Wish Group Footer Logo" data-lang-alt="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -516,24 +556,24 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_address">Address</h3>
+                        <p class="mb-0" data-lang-key="headquarters_address">Business Bay</p>
+                        <p data-lang-key="headquarters_country">Dubai, United Arab Emirates</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="index.html" class="text-light" data-lang-key="menu_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-lang-key="menu_about">About Us</a></li>
+                            <li><a href="division.html" class="text-light" data-lang-key="menu_divisions">Divisions</a></li>
+                            <li><a href="projects.html" class="text-light" data-lang-key="menu_projects">Projects</a></li>
+                            <li><a href="contact.html" class="text-light" data-lang-key="menu_contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_contact">Contact Us</h3>
                         <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
                         <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
                         <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
@@ -546,7 +586,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-lang-key="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -554,12 +594,568 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
-    </div>
+        <script>
+            // Translations object
+            const translations = {
+                en: {
+                    page_title: "Dow Hotel & Resort - Luxury Island Accommodations",
+                    scroll_to_top: "Scroll to top",
+                    menu_home: "Home",
+                    menu_about: "About Us",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projects",
+                    menu_countries: "Countries",
+                    menu_news: "News",
+                    menu_policies: "Our Policies",
+                    menu_career: "Career",
+                    menu_contact: "Contact Us",
+                    menu_tickets_1: "Tickets Style 1",
+                    menu_tickets_2: "Tickets Style 2",
+                    menu_news_single: "News Single",
+                    logo_alt: "Wish Group Logo",
+                    hero_title: "Dow Hotel & Resort",
+                    hero_description: "Luxury redefined in the heart of the Maldives",
+                    hero_label: "5-Star Experience",
+                    hero_alt: "Dow Hotel & Resort",
+                    intro_title: "Island Luxury Redefined",
+                    intro_description: "Where world-class amenities meet unparalleled natural beauty",
+                    intro_image_alt: "Dow Hotel & Resort",
+                    amenities_title: "Key Amenities",
+                    amenities_description: "Exceptional facilities for the discerning traveler",
+                    amenity_lobby_title: "Luxurious Lobby",
+                    amenity_lobby_description: "500 sqm of elegant arrival space",
+                    amenity_lobby_alt: "Luxury Lobby",
+                    amenity_dining_title: "Global Dining Area",
+                    amenity_dining_description: "600 sqm culinary experience",
+                    amenity_dining_alt: "Dining Area",
+                    amenity_wellness_title: "Wellness Center",
+                    amenity_wellness_description: "850 sqm of spa and fitness facilities",
+                    amenity_wellness_alt: "Wellness Center",
+                    amenity_pool_title: "Indoor Swimming Complex",
+                    amenity_pool_description: "1,000 sqm with café and bar",
+                    amenity_pool_alt: "Indoor Pool",
+                    amenity_events_title: "Event Facilities",
+                    amenity_events_description: "1,600 sqm of versatile spaces",
+                    amenity_events_alt: "Event Spaces",
+                    amenity_vip_spa_title: "VIP Spa & Wellness",
+                    amenity_vip_spa_description: "Exclusive 200 sqm sanctuary",
+                    amenity_vip_spa_alt: "VIP Spa",
+                    features_title: "Resort Highlights",
+                    feature_fitness: "State-of-the-art fitness center (300 sqm)",
+                    feature_screening: "Exclusive screening room (400 sqm)",
+                    feature_games: "Digital games and billiard room (200 sqm)",
+                    feature_kids: "Kids club and playroom (100 sqm)",
+                    feature_jogging: "1km jogging track with ocean views",
+                    feature_bar: "VIP private bar (150 sqm)",
+                    features_image_alt: "Resort Features",
+                    accommodations_title: "Luxury Accommodations",
+                    accommodations_description: "Tailored stays for every preference",
+                    floating_villas_title: "Floating Haven Villas",
+                    floating_villa_1bhk_units: "20 Units Available",
+                    floating_villa_1bhk_size: "100 sqm each",
+                    floating_villa_2bhk_units: "10 Units Available",
+                    floating_villa_2bhk_size: "120 sqm each",
+                    underwater_villas_title: "Underwater Paradise",
+                    underwater_villa_1bhk_units: "20 Units Available",
+                    underwater_villa_1bhk_size: "90 sqm each",
+                    underwater_villa_2bhk_units: "10 Units Available",
+                    underwater_villa_2bhk_size: "100 sqm each",
+                    vip_bungalows_title: "VIP Bungalows",
+                    vip_bungalow_2bhk_units: "10 Units Available",
+                    vip_bungalow_2bhk_size: "180 sqm each",
+                    vip_bungalow_3bhk_units: "10 Units Available",
+                    vip_bungalow_3bhk_size: "220 sqm each",
+                    vip_bungalow_4bhk_units: "5 Units Available",
+                    vip_bungalow_4bhk_size: "250 sqm each",
+                    hotel_rooms_title: "Hotel Rooms",
+                    hotel_std_units: "35 Rooms",
+                    hotel_std_size: "40 sqm each",
+                    hotel_std_label: "Serene Retreats",
+                    hotel_dlx_units: "40 Rooms",
+                    hotel_dlx_size: "50 sqm each",
+                    hotel_dlx_label: "Tranquil Havens",
+                    hotel_suite_units: "10 Rooms",
+                    hotel_suite_size: "70 sqm each",
+                    hotel_suite_label: "Mystic Suites",
+                    hotel_vip_units: "10 Rooms",
+                    hotel_vip_size: "100 sqm each",
+                    hotel_vip_label: "Penthouses",
+                    beach_villas_title: "Beachfront Villas",
+                    beach_villas_description: "Steps away from pristine sands",
+                    beach_villa_1bhk_units: "16 Units Available",
+                    beach_villa_1bhk_size: "120 sqm each",
+                    beach_villa_2bhk_units: "17 Units Available",
+                    beach_villa_2bhk_size: "150 sqm each",
+                    beach_villa_3bhk_units: "17 Units Available",
+                    beach_villa_3bhk_size: "180 sqm each",
+                    cta_title: "Experience Unmatched Luxury",
+                    cta_description: "Book your stay at Dow Hotel & Resort today",
+                    cta_availability: "Check Availability",
+                    cta_brochure: "Request Brochure",
+                    footer_address: "Address",
+                    quick_links: "Quick Links",
+                    footer_contact: "Contact Us",
+                    footer_copyright: "Copyright 2025 - Wish Group. All rights reserved.",
+                    footer_logo_alt: "Wish Group Footer Logo",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubai, United Arab Emirates"
+                },
+                ar: {
+                    page_title: "فندق ومنتجع داو - إقامات فاخرة في جزر المالديف",
+                    scroll_to_top: "التمرير إلى الأعلى",
+                    menu_home: "الرئيسية",
+                    menu_about: "معلومات عنا",
+                    menu_divisions: "الأقسام",
+                    menu_projects: "المشاريع",
+                    menu_countries: "الدول",
+                    menu_news: "الأخبار",
+                    menu_policies: "سياساتنا",
+                    menu_career: "الوظائف",
+                    menu_contact: "اتصل بنا",
+                    menu_tickets_1: "تذاكر النمط الأول",
+                    menu_tickets_2: "تذاكر النمط الثاني",
+                    menu_news_single: "خبر مفرد",
+                    logo_alt: "شعار مجموعة ويش",
+                    hero_title: "فندق ومنتجع داو",
+                    hero_description: "إعادة تعريف الفخامة في قلب جزر المالديف",
+                    hero_label: "تجربة 5 نجوم",
+                    hero_alt: "فندق ومنتجع داو",
+                    intro_title: "إعادة تعريف فخامة الجزيرة",
+                    intro_description: "حيث تلتقي وسائل الراحة العالمية بالجمال الطبيعي اللا مثيل له",
+                    intro_image_alt: "فندق ومنتجع داو",
+                    amenities_title: "المرافق الرئيسية",
+                    amenities_description: "مرافق استثنائية للمسافر المميز",
+                    amenity_lobby_title: "ردهة فاخرة",
+                    amenity_lobby_description: "500 متر مربع من مساحة الوصول الأنيقة",
+                    amenity_lobby_alt: "ردهة فاخرة",
+                    amenity_dining_title: "منطقة تناول الطعام العالمية",
+                    amenity_dining_description: "600 متر مربع من تجربة الطهي",
+                    amenity_dining_alt: "منطقة تناول الطعام",
+                    amenity_wellness_title: "مركز العافية",
+                    amenity_wellness_description: "850 متر مربع من مرافق السبا واللياقة البدنية",
+                    amenity_wellness_alt: "مركز العافية",
+                    amenity_pool_title: "مجمع السباحة الداخلي",
+                    amenity_pool_description: "1000 متر مربع مع مقهى وبار",
+                    amenity_pool_alt: "مسبح داخلي",
+                    amenity_events_title: "مرافق الفعاليات",
+                    amenity_events_description: "1600 متر مربع من المساحات متعددة الاستخدامات",
+                    amenity_events_alt: "مساحات الفعاليات",
+                    amenity_vip_spa_title: "سبا ومركز عافية VIP",
+                    amenity_vip_spa_description: "ملاذ حصري بمساحة 200 متر مربع",
+                    amenity_vip_spa_alt: "سبا VIP",
+                    features_title: "أبرز مميزات المنتجع",
+                    feature_fitness: "مركز لياقة بدنية متطور (300 متر مربع)",
+                    feature_screening: "غرفة عرض حصرية (400 متر مربع)",
+                    feature_games: "غرفة ألعاب رقمية وبلياردو (200 متر مربع)",
+                    feature_kids: "نادي الأطفال وغرفة اللعب (100 متر مربع)",
+                    feature_jogging: "مضمار جري بطول 1 كم مع إطلالات على المحيط",
+                    feature_bar: "بار خاص VIP (150 متر مربع)",
+                    features_image_alt: "مميزات المنتجع",
+                    accommodations_title: "إقامات فاخرة",
+                    accommodations_description: "إقامات مصممة حسب كل تفضيل",
+                    floating_villas_title: "فلل الملاذ العائمة",
+                    floating_villa_1bhk_units: "20 وحدة متاحة",
+                    floating_villa_1bhk_size: "100 متر مربع لكل واحدة",
+                    floating_villa_2bhk_units: "10 وحدات متاحة",
+                    floating_villa_2bhk_size: "120 متر مربع لكل واحدة",
+                    underwater_villas_title: "جنة تحت الماء",
+                    underwater_villa_1bhk_units: "20 وحدة متاحة",
+                    underwater_villa_1bhk_size: "90 متر مربع لكل واحدة",
+                    underwater_villa_2bhk_units: "10 وحدات متاحة",
+                    underwater_villa_2bhk_size: "100 متر مربع لكل واحدة",
+                    vip_bungalows_title: "بنجالوات VIP",
+                    vip_bungalow_2bhk_units: "10 وحدات متاحة",
+                    vip_bungalow_2bhk_size: "180 متر مربع لكل واحدة",
+                    vip_bungalow_3bhk_units: "10 وحدات متاحة",
+                    vip_bungalow_3bhk_size: "220 متر مربع لكل واحدة",
+                    vip_bungalow_4bhk_units: "5 وحدات متاحة",
+                    vip_bungalow_4bhk_size: "250 متر مربع لكل واحدة",
+                    hotel_rooms_title: "غرف الفندق",
+                    hotel_std_units: "35 غرفة",
+                    hotel_std_size: "40 متر مربع لكل واحدة",
+                    hotel_std_label: "ملاذات هادئة",
+                    hotel_dlx_units: "40 غرفة",
+                    hotel_dlx_size: "50 متر مربع لكل واحدة",
+                    hotel_dlx_label: "ملاذات هادئة",
+                    hotel_suite_units: "10 غرف",
+                    hotel_suite_size: "70 متر مربع لكل واحدة",
+                    hotel_suite_label: "أجنحة غامضة",
+                    hotel_vip_units: "10 غرف",
+                    hotel_vip_size: "100 متر مربع لكل واحدة",
+                    hotel_vip_label: "بنتهاوس",
+                    beach_villas_title: "فلل الواجهة البحرية",
+                    beach_villas_description: "خطوات من الرمال النقية",
+                    beach_villa_1bhk_units: "16 وحدة متاحة",
+                    beach_villa_1bhk_size: "120 متر مربع لكل واحدة",
+                    beach_villa_2bhk_units: "17 وحدة متاحة",
+                    beach_villa_2bhk_size: "150 متر مربع لكل واحدة",
+                    beach_villa_3bhk_units: "17 وحدة متاحة",
+                    beach_villa_3bhk_size: "180 متر مربع لكل واحدة",
+                    cta_title: "تجربة الفخامة التي لا مثيل لها",
+                    cta_description: "احجز إقامتك في فندق ومنتجع داو اليوم",
+                    cta_availability: "تحقق من التوفر",
+                    cta_brochure: "طلب كتيب",
+                    footer_address: "العنوان",
+                    quick_links: "روابط سريعة",
+                    footer_contact: "اتصل بنا",
+                    footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة.",
+                    footer_logo_alt: "شعار مجموعة ويش في التذييل",
+                    headquarters_address: "خليج الأعمال",
+                    headquarters_country: "دبي، الإمارات العربية المتحدة"
+                },
+                fr: {
+                    page_title: "Hôtel & Resort Dow - Hébergements de luxe aux Maldives",
+                    scroll_to_top: "Faire défiler vers le haut",
+                    menu_home: "Accueil",
+                    menu_about: "À propos de nous",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projets",
+                    menu_countries: "Pays",
+                    menu_news: "Actualités",
+                    menu_policies: "Nos politiques",
+                    menu_career: "Carrière",
+                    menu_contact: "Contactez-nous",
+                    menu_tickets_1: "Billets Style 1",
+                    menu_tickets_2: "Billets Style 2",
+                    menu_news_single: "Actualité Unique",
+                    logo_alt: "Logo du Groupe Wish",
+                    hero_title: "Hôtel & Resort Dow",
+                    hero_description: "Le luxe redéfini au cœur des Maldives",
+                    hero_label: "Expérience 5 étoiles",
+                    hero_alt: "Hôtel & Resort Dow",
+                    intro_title: "Le luxe insulaire redéfini",
+                    intro_description: "Là où les commodités de classe mondiale rencontrent une beauté naturelle inégalée",
+                    intro_image_alt: "Hôtel & Resort Dow",
+                    amenities_title: "Commodités principales",
+                    amenities_description: "Installations exceptionnelles pour le voyageur exigeant",
+                    amenity_lobby_title: "Hall luxueux",
+                    amenity_lobby_description: "500 m² d'espace d'accueil élégant",
+                    amenity_lobby_alt: "Hall de luxe",
+                    amenity_dining_title: "Zone de restauration mondiale",
+                    amenity_dining_description: "600 m² d'expérience culinaire",
+                    amenity_dining_alt: "Zone de restauration",
+                    amenity_wellness_title: "Centre de bien-être",
+                    amenity_wellness_description: "850 m² de commodités spa et fitness",
+                    amenity_wellness_alt: "Centre de bien-être",
+                    amenity_pool_title: "Complexe de natation intérieur",
+                    amenity_pool_description: "1000 m² avec café et bar",
+                    amenity_pool_alt: "Piscine intérieure",
+                    amenity_events_title: "Installations pour événements",
+                    amenity_events_description: "1600 m² d'espaces polyvalents",
+                    amenity_events_alt: "Espaces événementiels",
+                    amenity_vip_spa_title: "Spa et bien-être VIP",
+                    amenity_vip_spa_description: "Sanctuaire exclusif de 200 m²",
+                    amenity_vip_spa_alt: "Spa VIP",
+                    features_title: "Points forts du resort",
+                    feature_fitness: "Centre de fitness ultramoderne (300 m²)",
+                    feature_screening: "Salle de projection exclusive (400 m²)",
+                    feature_games: "Salle de jeux numériques et billard (200 m²)",
+                    feature_kids: "Club pour enfants et salle de jeux (100 m²)",
+                    feature_jogging: "Piste de jogging de 1 km avec vue sur l'océan",
+                    feature_bar: "Bar privé VIP (150 m²)",
+                    features_image_alt: "Caractéristiques du resort",
+                    accommodations_title: "Hébergements de luxe",
+                    accommodations_description: "Séjours adaptés à chaque préférence",
+                    floating_villas_title: "Villas Havre Flottant",
+                    floating_villa_1bhk_units: "20 unités disponibles",
+                    floating_villa_1bhk_size: "100 m² chacune",
+                    floating_villa_2bhk_units: "10 unités disponibles",
+                    floating_villa_2bhk_size: "120 m² chacune",
+                    underwater_villas_title: "Paradis sous-marin",
+                    underwater_villa_1bhk_units: "20 unités disponibles",
+                    underwater_villa_1bhk_size: "90 m² chacune",
+                    underwater_villa_2bhk_units: "10 unités disponibles",
+                    underwater_villa_2bhk_size: "100 m² chacune",
+                    vip_bungalows_title: "Bungalows VIP",
+                    vip_bungalow_2bhk_units: "10 unités disponibles",
+                    vip_bungalow_2bhk_size: "180 m² chacune",
+                    vip_bungalow_3bhk_units: "10 unités disponibles",
+                    vip_bungalow_3bhk_size: "220 m² chacune",
+                    vip_bungalow_4bhk_units: "5 unités disponibles",
+                    vip_bungalow_4bhk_size: "250 m² chacune",
+                    hotel_rooms_title: "Chambres d'hôtel",
+                    hotel_std_units: "35 chambres",
+                    hotel_std_size: "40 m² chacune",
+                    hotel_std_label: "Retraites sereines",
+                    hotel_dlx_units: "40 chambres",
+                    hotel_dlx_size: "50 m² chacune",
+                    hotel_dlx_label: "Havres tranquilles",
+                    hotel_suite_units: "10 chambres",
+                    hotel_suite_size: "70 m² chacune",
+                    hotel_suite_label: "Suites mystiques",
+                    hotel_vip_units: "10 chambres",
+                    hotel_vip_size: "100 m² chacune",
+                    hotel_vip_label: "Penthouses",
+                    beach_villas_title: "Villas en bord de mer",
+                    beach_villas_description: "À quelques pas des sables immaculés",
+                    beach_villa_1bhk_units: "16 unités disponibles",
+                    beach_villa_1bhk_size: "120 m² chacune",
+                    beach_villa_2bhk_units: "17 unités disponibles",
+                    beach_villa_2bhk_size: "150 m² chacune",
+                    beach_villa_3bhk_units: "17 unités disponibles",
+                    beach_villa_3bhk_size: "180 m² chacune",
+                    cta_title: "Vivez un luxe inégalé",
+                    cta_description: "Réservez votre séjour à l'Hôtel & Resort Dow aujourd'hui",
+                    cta_availability: "Vérifier la disponibilité",
+                    cta_brochure: "Demander une brochure",
+                    footer_address: "Adresse",
+                    quick_links: "Liens rapides",
+                    footer_contact: "Contactez-nous",
+                    footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés.",
+                    footer_logo_alt: "Logo du Groupe Wish dans le pied de page",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubaï, Émirats Arabes Unis"
+                },
+                si: {
+                    page_title: "ඩව් හෝටලය සහ නිවාඩු නිකේතනය - සුඛෝපභෝගී දූපත් නවාතැන්",
+                    scroll_to_top: "ඉහළට ගමන් කරන්න",
+                    menu_home: "මුල් පිටුව",
+                    menu_about: "අප ගැන",
+                    menu_divisions: "අංශ",
+                    menu_projects: "ව්‍යාපෘති",
+                    menu_countries: "රටවල්",
+                    menu_news: "පුවත්",
+                    menu_policies: "අපගේ ප්‍රතිපත්ති",
+                    menu_career: "වෘත්තිය",
+                    menu_contact: "අප හා සම්බන්ධ වන්න",
+                    menu_tickets_1: "ටිකට් විලාසිතා 1",
+                    menu_tickets_2: "ටිකට් විලාසිතා 2",
+                    menu_news_single: "තනි පුවත",
+                    logo_alt: "විෂ් ගෲප් ලෝගෝ",
+                    hero_title: "ඩව් හෝටලය සහ නිවාඩු නිකේතනය",
+                    hero_description: "මාලදිවයිනේ හදවතේ සුඛෝපභෝගීත්වය නැවත අර්ථ දක්වයි",
+                    hero_label: "තරු 5 අත්දැකීම",
+                    hero_alt: "ඩව් හෝටලය සහ නිවාඩු නිකේතනය",
+                    intro_title: "දූපත් සුඛෝපභෝගීත්වය නැවත අර්ථ දක්වයි",
+                    intro_description: "ලෝක මට්ටමේ පහසුකම් අනුපම ස්වභාවික ලස්සන සමඟ එකිනෙක බැඳේ",
+                    intro_image_alt: "ඩව් හෝටලය සහ නිවාඩු නිකේතනය",
+                    amenities_title: "ප්‍රධාන පහසුකම්",
+                    amenities_description: "විචක්ෂණ ගමන්කරුවන් සඳහා සුවිශේෂී පහසුකම්",
+                    amenity_lobby_title: "සුඛෝපභෝගී ලොබිය",
+                    amenity_lobby_description: "වර්ග මීටර් 500ක අලංකාර පිවිසුම් අවකාශය",
+                    amenity_lobby_alt: "සුඛෝපභෝගී ලොබිය",
+                    amenity_dining_title: "ගෝලීය භෝජන ප්‍රදේශය",
+                    amenity_dining_description: "වර්ග මීටර් 600ක ආහාර අත්දැකීම",
+                    amenity_dining_alt: "භෝජන ප්‍රදේශය",
+                    amenity_wellness_title: "සුවතා මධ්‍යස්ථානය",
+                    amenity_wellness_description: "වර්ග මීටර් 850ක ස්පා සහ යෝග්‍යතා පහසුකම්",
+                    amenity_wellness_alt: "සුවතා මධ්‍යස්ථානය",
+                    amenity_pool_title: "ගෘහස්ථ පිහිනුම් සංකීර්ණය",
+                    amenity_pool_description: "වර්ග මීටර් 1000ක කැෆේ සහ බාර් සමඟ",
+                    amenity_pool_alt: "ගෘහස්ථ තටාකය",
+                    amenity_events_title: "උත්සව පහසුකම්",
+                    amenity_events_description: "වර්ග මීටර් 1600ක බහුකාර්ය අවකාශ",
+                    amenity_events_alt: "උත්සව අවකාශ",
+                    amenity_vip_spa_title: "VIP ස්පා සහ සුවතා",
+                    amenity_vip_spa_description: "වර්ග මීටර් 200ක විශේෂිත සරණාගතය",
+                    amenity_vip_spa_alt: "VIP ස්පා",
+                    features_title: "නිවාඩු නිකේතනයේ විශේෂාංග",
+                    feature_fitness: "නවීනතම යෝග්‍යතා මධ්‍යස්ථානය (වර්ග මීටර් 300)",
+                    feature_screening: "විශේෂිත තිරසර කාමරය (වර්ග මීටර් 400)",
+                    feature_games: "ඩිජිටල් ක්‍රීඩා සහ බිලියඩ් කාමරය (වර්ග මීටර් 200)",
+                    feature_kids: "ළමා සමාජය සහ ක්‍රීඩා කාමරය (වර්ග මීටර් 100)",
+                    feature_jogging: "සාගර දර්ශන සහිත 1km ජෝගිං මාර්ගය",
+                    feature_bar: "VIP පුද්ගලික බාර් (වර්ග මීටර් 150)",
+                    features_image_alt: "නිවාඩු නිකේතනයේ විශේෂාංග",
+                    accommodations_title: "සුඛෝපභෝගී නවාතැන්",
+                    accommodations_description: "සෑම රුචිකත්වයකටම ගැලපෙන රිසිකරණය කළ රැඳවුම්",
+                    floating_villas_title: "පාවෙන රැකවරණ විලා",
+                    floating_villa_1bhk_units: "විලා 20ක් ඇත",
+                    floating_villa_1bhk_size: "එකක් වර්ග මීටර් 100",
+                    floating_villa_2bhk_units: "විලා 10ක් ඇත",
+                    floating_villa_2bhk_size: "එකක් වර්ග මීටර් 120",
+                    underwater_villas_title: "දිය යට ස්වර්ගය",
+                    underwater_villa_1bhk_units: "විලා 20ක් ඇත",
+                    underwater_villa_1bhk_size: "එකක් වර්ග මීටර් 90",
+                    underwater_villa_2bhk_units: "විලා 10ක් ඇත",
+                    underwater_villa_2bhk_size: "එකක් වර්ග මීටර් 100",
+                    vip_bungalows_title: "VIP බංගලෝ",
+                    vip_bungalow_2bhk_units: "විලා 10ක් ඇත",
+                    vip_bungalow_2bhk_size: "එකක් වර්ග මීටර් 180",
+                    vip_bungalow_3bhk_units: "විලා 10ක් ඇත",
+                    vip_bungalow_3bhk_size: "එකක් වර්ග මීටර් 220",
+                    vip_bungalow_4bhk_units: "විලා 5ක් ඇත",
+                    vip_bungalow_4bhk_size: "එකක් වර්ග මීටර් 250",
+                    hotel_rooms_title: "හෝටල් කාමර",
+                    hotel_std_units: "කාමර 35",
+                    hotel_std_size: "එකක් වර්ග මීටර් 40",
+                    hotel_std_label: "සන්සුන් රැකවරණ",
+                    hotel_dlx_units: "කාමර 40",
+                    hotel_dlx_size: "එකක් වර්ග මීටර් 50",
+                    hotel_dlx_label: "නිස්කලංක රැකවරණ",
+                    hotel_suite_units: "කාමර 10",
+                    hotel_suite_size: "එකක් වර්ග මීටර් 70",
+                    hotel_suite_label: "රහස්‍ය අංගන",
+                    hotel_vip_units: "කාමර 10",
+                    hotel_vip_size: "එකක් වර්ග මීටර් 100",
+                    hotel_vip_label: "පෙන්ට්හවුස්",
+                    beach_villas_title: "වෙරළ ඉදිරිපස විලා",
+                    beach_villas_description: "නිර්මල වැලි වලින් පියවර කිහිපයක් දුරින්",
+                    beach_villa_1bhk_units: "විලා 16ක් ඇත",
+                    beach_villa_1bhk_size: "එකක් වර්ග මීටර් 120",
+                    beach_villa_2bhk_units: "විලා 17ක් ඇත",
+                    beach_villa_2bhk_size: "එකක් වර්ග මීටර් 150",
+                    beach_villa_3bhk_units: "විලා 17ක් ඇත",
+                    beach_villa_3bhk_size: "එකක් වර්ග මීටර් 180",
+                    cta_title: "අනුපම සුඛෝපභෝගීත්වය අත්විඳින්න",
+                    cta_description: "අදම ඩව් හෝටලය සහ නිවාඩු නිකේතනයේ ඔබේ රැඳවුම වෙන් කරවා ගන්න",
+                    cta_availability: "ලබා ගත හැකි බව පරීක්ෂා කරන්න",
+                    cta_brochure: "බ්‍රෝෂරය ඉල්ලන්න",
+                    footer_address: "ලිපිනය",
+                    quick_links: "ඉක්මන් සබැඳි",
+                    footer_contact: "අප හා සම්බන්ධ වන්න",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ගෲප්. සියලු හිමිකම් ඇවිරිණි.",
+                    footer_logo_alt: "විෂ් ගෲප් පාදක ලෝගෝ",
+                    headquarters_address: "බිස්නස් බේ",
+                    headquarters_country: "ඩුබායි, එක්සත් අරාබි එමිරේට්ස්"
+                },
+               dv: {
+    page_title: "ޑައު ހޮޓެލް އެންޑް ރިސޯޓް - ލަކްޝަރީ އައިލެންޑް އެކޮމޮޑެޝަންސް",
+    scroll_to_top: "މަތިއަށް ސްކްރޯލް ކުރަން",
+    menu_home: "މަންދު",
+    menu_about: "އަލިފަން",
+    menu_divisions: "ބައިތައް",
+    menu_projects: "ޕްރޮޖެކްޓްތައް",
+    menu_countries: "ޤައުމުތައް",
+    menu_news: "ޚަބަރު",
+    menu_policies: "އަމިއްލަ ސިޔާސަތުތައް",
+    menu_career: "ކެރިއަރ",
+    menu_contact: "ކޮންޓެކްޓް އަސް",
+    menu_tickets_1: "ޓިކެޓް ސްޓައިލް 1",
+    menu_tickets_2: "ޓިކެޓް ސްޓައިލް 2",
+    menu_news_single: "އެކެއް ޚަބަރު",
+    logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+    hero_title: "ޑައު ހޮޓެލް އެންޑް ރިސޯޓް",
+    hero_description: "މޯލްޑިވްސްގެ ހަރުގައި ލަކްޝަރީ ރީޑިފައިން ކުރެވިފަ",
+    hero_label: "5-ސްޓާރ އެކްސްޕިރިއަންސް",
+    hero_alt: "ޑައު ހޮޓެލް އެންޑް ރިސޯޓް",
+    intro_title: "އައިލެންޑް ލަކްޝަރީ ރީޑިފައިން ކުރެވިފަ",
+    intro_description: "ވާލްޑް-ކްލާސް އެމެނިޓީސް އެކު އަންމެޗްމަތި ނެޗުރަލް ބިއުޓީ އެކު ބެހެއެވެ",
+    intro_image_alt: "ޑައު ހޮޓެލް އެންޑް ރިސޯޓް",
+    amenities_title: "މައިން އެމެނިޓީސް",
+    amenities_description: "ޑިސާރނިން ޓްރެވަލަރަށް އެކްސެޕްޝަނަލް ފެސިލިޓީސް",
+    amenity_lobby_title: "ލަކްޝަރީ ލޮބީ",
+    amenity_lobby_description: "500 ޗަންޑްރެ މީޓަރ އެލެގަންޓް އެރައިވަލް ސްޕެއިސް",
+    amenity_lobby_alt: "ލަކްޝަރީ ލޮބީ",
+    amenity_dining_title: "ގްލޯބަލް ޑައިނިން އޭރިއާ",
+    amenity_dining_description: "600 ޗަންޑްރެ މީޓަރ ކިއުލިނަރީ އެކްސްޕިރިއަންސް",
+    amenity_dining_alt: "ޑައިނިން އޭރިއާ",
+    amenity_wellness_title: "ވެލްނެސް ސެންޓަރ",
+    amenity_wellness_description: "850 ޗަންޑްރެ މީޓަރ ސްޕާ އަދި ފިޓްނެސް ފެސިލިޓީސް",
+    amenity_wellness_alt: "ވެލްނެސް ސެންޓަރ",
+    amenity_pool_title: "އިންޑޯ ސުވިމިން ކޮމްޕްލެކްސް",
+    amenity_pool_description: "1000 ޗަންޑްރެ މީޓަރ ކެފޭ އަދި ބާރ އެކު",
+    amenity_pool_alt: "އިންޑޯ ޕޫލް",
+    amenity_events_title: "އިވެންޓް ފެސިލިޓީސް",
+    amenity_events_description: "1600 ޗަންޑްރެ މީޓަރ ވަރސަޓައިލް ސްޕެއިސް",
+    amenity_events_alt: "އިވެންޓް ސްޕެއިސަސް",
+    amenity_vip_spa_title: "ވީއައިޕީ ސްޕާ އަދި ވެލްނެސް",
+    amenity_vip_spa_description: "200 ޗަންޑްރެ މީޓަރ އެކްސްކްލޫސިވް ސެންޗުއަރީ",
+    amenity_vip_spa_alt: "ވީއައިޕީ ސްޕާ",
+    features_title: "ރިސޯޓް ހައިލައިޓްސް",
+    feature_fitness: "ސްޓެޓް-އޮފް-ދަ-އާޓް ފިޓްނެސް ސެންޓަރ (300 ޗަންޑްރެ މީޓަރ)",
+    feature_screening: "އެކްސްކްލޫސިވް ސްކްރީނިން ރޫމް (400 ޗަންޑްރެ މީޓަރ)",
+    feature_games: "ޑިޖިޓަލް ގެމްސް އަދި ބިލިއަރޑް ރޫމް (200 ޗަންޑްރެ މީޓަރ)",
+    feature_kids: "ކިޑްސް ކްލަބް އަދި ޕްލެރޫމް (100 ޗަންޑްރެ މީޓަރ)",
+    feature_jogging: "1 ކިލޯމީޓަރ ޖޮގިން ޓްރެކް އޯޝަން ވިޔު އެކު",
+    feature_bar: "ވީއައިޕީ ޕްރައިވެޓް ބާރ (150 ޗަންޑްރެ މީޓަރ)",
+    features_image_alt: "ރިސޯޓް ފީޗަރސް",
+    accommodations_title: "ލަކްޝަރީ އެކޮމޮޑެޝަންސް",
+    accommodations_description: "ކޮންމެ ރުޗިއަށް ޓެއިލަރ ކުރެވިފައިވާ ސްޓެއިސް",
+    floating_villas_title: "ފްލޯޓިން ހެވަން ވިލާތައް",
+    floating_villa_1bhk_units: "20 ޔުނިޓްތައް އެވެއިލަބަލް",
+    floating_villa_1bhk_size: "100 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    floating_villa_2bhk_units: "10 ޔުނިޓްތައް އެވެއިލަބަލް",
+    floating_villa_2bhk_size: "120 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    underwater_villas_title: "އަންޑަރވޯޓަރ ޕެރަޑައިސް",
+    underwater_villa_1bhk_units: "20 ޔުނިޓްތައް އެވެއިލަބަލް",
+    underwater_villa_1bhk_size: "90 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    underwater_villa_2bhk_units: "10 ޔުނިޓްތައް އެވެއިލަބަލް",
+    underwater_villa_2bhk_size: "100 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    vip_bungalows_title: "ވީއައިޕީ ބަންގަލޯސް",
+    vip_bungalow_2bhk_units: "10 ޔުނިޓްތައް އެވެއިލަބަލް",
+    vip_bungalow_2bhk_size: "180 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    vip_bungalow_3bhk_units: "10 ޔުނިޓްތައް އެވެއިލަބަލް",
+    vip_bungalow_3bhk_size: "220 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    vip_bungalow_4bhk_units: "5 ޔުނިޓްތައް އެވެއިލަބަލް",
+    vip_bungalow_4bhk_size: "250 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    hotel_rooms_title: "ހޮޓެލް ރޫމްސް",
+    hotel_std_units: "35 ރޫމްސް",
+    hotel_std_size: "40 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    hotel_std_label: "ސިރީން ރިޓްރީޓްސް",
+    hotel_dlx_units: "40 ރޫމްސް",
+    hotel_dlx_size: "50 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    hotel_dlx_label: "ޓްރެންކިލް ހެވަންސް",
+    hotel_suite_units: "10 ރޫމްސް",
+    hotel_suite_size: "70 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    hotel_suite_label: "މިސްޓިކް ސޫޓްސް",
+    hotel_vip_units: "10 ރޫމްސް",
+    hotel_vip_size: "100 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    hotel_vip_label: "ޕެންޓްހައުސް",
+    beach_villas_title: "ބީޗްފްރޮންޓް ވިލާތައް",
+    beach_villas_description: "ޕްރިސްޓީން ސެންޑްސްއިން ޕިޔަވަރު ދުރު",
+    beach_villa_1bhk_units: "16 ޔުނިޓްތައް އެވެއިލަބަލް",
+    beach_villa_1bhk_size: "120 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    beach_villa_2bhk_units: "17 ޔުނިޓްތައް އެވެއިލަބަލް",
+    beach_villa_2bhk_size: "150 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    beach_villa_3bhk_units: "17 ޔުނިޓްތައް އެވެއިލަބަލް",
+    beach_villa_3bhk_size: "180 ޗަންޑްރެ މީޓަރ ކޮންމެ އެއްޗެއް",
+    cta_title: "އަންމެޗްމަތި ލަކްޝަރީ އެކްސްޕިރިއަންސް",
+    cta_description: "އަދި ޑައު ހޮޓެލް އެންޑް ރިސޯޓްގައި ތިޔަބައިގެ ސްޓެއި ބުކް ކުރަން",
+    cta_availability: "އެވެއިލަބިލިޓީ ޗެކް ކުރަން",
+    cta_brochure: "ބްރޯޝަރ ރިކްވެސްޓް ކުރަން",
+    footer_address: "އެޑްރެސް",
+    quick_links: "ކުއިކް ލިންކްސް",
+    footer_contact: "ކޮންޓެކްޓް އަސް",
+    footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ރައިޓްސް ރިޒާވް.",
+    footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ",
+    headquarters_address: "ބިޒްނަސް ބޭ",
+    headquarters_country: "ޑުބައި، ޔުނައިޓެޑް އަރަބް އެމިރެޓްސް"
+}
+
+            }
+
+
+
+
+                       // Function to change language
+            function changeLanguage(lang) {
+                document.getElementById('currentLang').textContent = lang.toUpperCase();
+                document.querySelectorAll('[data-lang-key]').forEach(element => {
+                    const key = element.getAttribute('data-lang-key');
+                    if (translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                    }
+                });
+                document.querySelectorAll('[data-lang-alt]').forEach(element => {
+                    const key = element.getAttribute('data-lang-alt');
+                    if (translations[lang][key]) {
+                        element.alt = translations[lang][key];
+                    }
+                });
+                document.querySelector('html').lang = lang;
+                if (lang === 'ar' || lang === 'dv') {
+                    document.querySelector('html').dir = 'rtl';
+                    document.querySelector('body').style.textAlign = 'right';
+                } else {
+                    document.querySelector('html').dir = 'ltr';
+                    document.querySelector('body').style.textAlign = 'left';
+                }
+                document.querySelector('title').textContent = translations[lang].page_title;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            // Initialize language
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+                changeLanguage(savedLang);
+            });
+        </script>
 </body>
+
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Beverley Air | Exclusive Private Island Resort</title>
+    <title data-lang-key="page_title">Beverley Air - Private Island Resort</title>
     <link rel="icon" href="images/wishgroup/logo.jpeg" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,17 +13,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Google Fonts for Sinhala and Dhivehi -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
     <!-- color scheme -->
     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <style>
-        /* Custom Styles */
         .image-gallery {
             display: grid;
-
-
-            
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin: 40px 0;
@@ -128,13 +126,44 @@
             position: absolute;
             left: 0;
         }
+        .lang-switcher {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switcher .btn-main {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .lang-switcher .dropdown-menu {
+            min-width: 60px;
+            background-color: #1a1a1a;
+            border: none;
+            border-radius: 4px;
+        }
+        .lang-switcher .dropdown-menu a {
+            color: #fff;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        .lang-switcher .dropdown-menu a:hover {
+            background-color: #333;
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        html[lang="si"] body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        html[lang="dv"] body {
+            font-family: 'Noto Sans Thaana', sans-serif;
+        }
     </style>
 </head>
 
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-lang-key="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -151,9 +180,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="">
-                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="">
-                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="">
+                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="Wish Group Logo" data-lang-alt="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -162,21 +191,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-lang-key="menu_home">Home</a></li>
+                                        <li><a class="menu-item" href="about.html" data-lang-key="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-lang-key="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item active" href="projects.html" data-lang-key="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="countries.html" data-lang-key="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="policies.html" data-lang-key="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="career.html" data-lang-key="menu_career">Career</a></li>
+                                        <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-lang-key="menu_tickets_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-lang-key="menu_tickets_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-lang-key="menu_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -184,7 +213,16 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="lang-switcher">
+                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                                    </ul>
+                                </div>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -196,22 +234,20 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="/images/wishgroup/private .jpg" class="jarallax-img" alt="">
+            <img src="/images/wishgroup/private.jpg" class="jarallax-img" alt="Beverley Air Island" data-lang-alt="hero_alt">
             <div class="gradient-edge-bottom h-50"></div>
             <div class="sw-overlay op-5"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
-                                Beverley Air – Ultimate Private Island Experience
-                            </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">Exclusive luxury resort with world-class amenities</p>
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-lang-key="hero_title">Beverley Air – Ultimate Private Island Experience</h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-lang-key="hero_description">Exclusive luxury resort with world-class amenities</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">Private Paradise</span>
+                                    <span class="fs-20 fw-600" data-lang-key="hero_label">Private Paradise</span>
                                 </div>
                             </div>
                         </div>
@@ -226,52 +262,50 @@
                     <div class="col-lg-10">
                         <!-- Island Introduction with Full-width Image -->
                         <div class="intro-section mb-5">
-                            <img src="/images/wishgroup/couple.jpg" 
-                                 alt="Beverley Air Aerial View" 
-                                 class="full-width-image">
+                            <img src="/images/wishgroup/couple.jpg" alt="Beverley Air Aerial View" data-lang-alt="intro_image_alt" class="full-width-image">
                             <div class="text-center mt-4">
-                                <h2 class="fs-36 mb-3">Your Private Island Sanctuary</h2>
-                                <p class="lead fs-20">An exclusive retreat where luxury meets untouched natural beauty</p>
+                                <h2 class="fs-36 mb-3" data-lang-key="intro_title">Your Private Island Sanctuary</h2>
+                                <p class="lead fs-20" data-lang-key="intro_description">An exclusive retreat where luxury meets untouched natural beauty</p>
                             </div>
                         </div>
 
                         <!-- Image Gallery Section -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Island Highlights</h2>
-                            <p class="lead">Discover the unparalleled beauty of Beverley Air</p>
+                            <h2 class="fs-30" data-lang-key="gallery_title">Island Highlights</h2>
+                            <p class="lead" data-lang-key="gallery_description">Discover the unparalleled beauty of Beverley Air</p>
                         </div>
                         
                         <div class="image-gallery mb-5">
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/oceanfrnt.jpg" alt="Luxury Villa">
-                                <div class="gallery-caption">Oceanfront Villas</div>
+                                <img src="/images/wishgroup/oceanfrnt.jpg" alt="Luxury Villa" data-lang-alt="gallery_villa_alt">
+                                <div class="gallery-caption" data-lang-key="gallery_villa_caption">Oceanfront Villas</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/golf.jpg" alt="Golf Course">
-                                <div class="gallery-caption">Championship Golf</div>
+                                <img src="/images/wishgroup/golf.jpg" alt="Golf Course" data-lang-alt="gallery_golf_alt">
+                                <div class="gallery-caption" data-lang-key="gallery_golf_caption">Championship Golf</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Spa">
-                                <div class="gallery-caption">Luxury Spa Retreat</div>
+                                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Spa" data-lang-alt="gallery_spa_alt">
+                                <div class="gallery-caption" data-lang-key="gallery_spa_caption">Luxury Spa Retreat</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Fine Dining">
-                                <div class="gallery-caption">Gourmet Experiences</div>
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Fine Dining" data-lang-alt="gallery_dining_alt">
+                                <div class="gallery-caption" data-lang-key="gallery_dining_caption">Gourmet Experiences</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/pool.jpg" alt="Infinity Pool">
-                                <div class="gallery-caption">Oceanview Infinity Pool</div>
+                                <img src="/images/wishgroup/pool.jpg" alt="Infinity Pool" data-lang-alt="gallery_pool_alt">
+                                <div class="gallery-caption" data-lang-key="gallery_pool_caption">Oceanview Infinity Pool</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/sched.jpg" alt="Private Beach">
-                                <div class="gallery-caption">Secluded Beaches</div>
+                                <img src="/images/wishgroup/sched.jpg" alt="Private Beach" data-lang-alt="gallery_beach_alt">
+                                <div class="gallery-caption" data-lang-key="gallery_beach_caption">Secluded Beaches</div>
                             </div>
                         </div>
 
                         <!-- Facilities Section -->
                         <div class="text-center mb-5">
-                            <h2 class="fs-36 mb-3">Island Facilities</h2>
-                            <p class="lead">Exclusive amenities designed for discerning residents</p>
+                            <h2 class="fs-36 mb-3" data-lang-key="facilities_title">Island Facilities</h2>
+                            <p class="lead" data-lang-key="facilities_description">Exclusive amenities designed for discerning residents</p>
                         </div>
                         
                         <div class="facilities-grid mb-5">
@@ -281,8 +315,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-golf-ball fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">18-Hole Golf Course</h3>
-                                        <p>Championship 1-acre course with stunning ocean views</p>
+                                        <h3 class="fs-20 mb-2" data-lang-key="facility_golf_title">18-Hole Golf Course</h3>
+                                        <p data-lang-key="facility_golf_description">Championship 1-acre course with stunning ocean views</p>
                                     </div>
                                 </div>
                                 
@@ -291,8 +325,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-spa fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Ayurveda-International Spa</h3>
-                                        <p>500-800 sqm wellness sanctuary with traditional therapies</p>
+                                        <h3 class="fs-20 mb-2" data-lang-key="facility_spa_title">Ayurveda-International Spa</h3>
+                                        <p data-lang-key="facility_spa_description">500-800 sqm wellness sanctuary with traditional therapies</p>
                                     </div>
                                 </div>
                                 
@@ -301,8 +335,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-utensils fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Signature Fine Dining</h3>
-                                        <p>450 sqm restaurant with premium wine cellar</p>
+                                        <h3 class="fs-20 mb-2" data-lang-key="facility_dining_title">Signature Fine Dining</h3>
+                                        <p data-lang-key="facility_dining_description">450 sqm restaurant with premium wine cellar</p>
                                     </div>
                                 </div>
                                 
@@ -311,8 +345,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-film fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Private Movie Theatre</h3>
-                                        <p>400 sqm cinema with luxury seating</p>
+                                        <h3 class="fs-20 mb-2" data-lang-key="facility_cinema_title">Private Movie Theatre</h3>
+                                        <p data-lang-key="facility_cinema_description">400 sqm cinema with luxury seating</p>
                                     </div>
                                 </div>
                                 
@@ -321,8 +355,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-palette fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Art Gallery</h3>
-                                        <p>300 sqm space showcasing paintings and sculptures</p>
+                                        <h3 class="fs-20 mb-2" data-lang-key="facility_gallery_title">Art Gallery</h3>
+                                        <p data-lang-key="facility_gallery_description">300 sqm space showcasing paintings and sculptures</p>
                                     </div>
                                 </div>
                                 
@@ -331,8 +365,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-water fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Natural Infinity Pool</h3>
-                                        <p>Breathtaking ocean-edge swimming experience</p>
+                                        <h3 class="fs-20 mb-2" data-lang-key="facility_pool_title">Natural Infinity Pool</h3>
+                                        <p data-lang-key="facility_pool_description">Breathtaking ocean-edge swimming experience</p>
                                     </div>
                                 </div>
                             </div>
@@ -340,45 +374,43 @@
 
                         <!-- New Full-width Resort Image -->
                         <div class="resort-showcase mb-5">
-                            <img src="/images/wishgroup/arch.jpg" 
-                                 alt="Beverley Air Resort Overview" 
-                                 class="full-width-image">
+                            <img src="/images/wishgroup/arch.jpg" alt="Beverley Air Resort Overview" data-lang-alt="resort_image_alt" class="full-width-image">
                             <div class="text-center mt-4">
-                                <h3 class="fs-28 mb-3">Architectural Harmony With Nature</h3>
-                                <p class="fs-18">Our design philosophy blends luxury with the island's natural beauty, creating seamless indoor-outdoor living spaces</p>
+                                <h3 class="fs-28 mb-3" data-lang-key="resort_title">Architectural Harmony With Nature</h3>
+                                <p class="fs-18" data-lang-key="resort_description">Our design philosophy blends luxury with the island's natural beauty, creating seamless indoor-outdoor living spaces</p>
                             </div>
                         </div>
 
                         <!-- Services Section -->
                         <div class="services-section mb-5">
                             <div class="section-header text-center mb-4">
-                                <h2 class="fs-30">Premium Services</h2>
-                                <p class="lead">Exceptional hospitality for our residents</p>
+                                <h2 class="fs-30" data-lang-key="services_title">Premium Services</h2>
+                                <p class="lead" data-lang-key="services_description">Exceptional hospitality for our residents</p>
                             </div>
                             
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <div class="service-card">
-                                        <h3 class="fs-24 mb-3">Resident Services</h3>
+                                        <h3 class="fs-24 mb-3" data-lang-key="resident_services_title">Resident Services</h3>
                                         <ul class="service-list">
-                                            <li>24/7 Access Control & island commute</li>
-                                            <li>Dedicated Concierge Services</li>
-                                            <li>In-house secured safe for each villa</li>
-                                            <li>Private Chef & Butler services</li>
-                                            <li>Personal Shopper & Babysitter</li>
+                                            <li data-lang-key="resident_service_1">24/7 Access Control & island commute</li>
+                                            <li data-lang-key="resident_service_2">Dedicated Concierge Services</li>
+                                            <li data-lang-key="resident_service_3">In-house secured safe for each villa</li>
+                                            <li data-lang-key="resident_service_4">Private Chef & Butler services</li>
+                                            <li data-lang-key="resident_service_5">Personal Shopper & Babysitter</li>
                                         </ul>
                                     </div>
                                 </div>
                                 
                                 <div class="col-md-6">
                                     <div class="service-card">
-                                        <h3 class="fs-24 mb-3">Exclusive Experiences</h3>
+                                        <h3 class="fs-24 mb-3" data-lang-key="exclusive_services_title">Exclusive Experiences</h3>
                                         <ul class="service-list">
-                                            <li>Jet Charter & Yacht Services</li>
-                                            <li>Cultural Shows & Themed Dinners</li>
-                                            <li>DJ Nights & Private Events</li>
-                                            <li>Helicopter Transfers</li>
-                                            <li>Private Gaming Lounge Access</li>
+                                            <li data-lang-key="exclusive_service_1">Jet Charter & Yacht Services</li>
+                                            <li data-lang-key="exclusive_service_2">Cultural Shows & Themed Dinners</li>
+                                            <li data-lang-key="exclusive_service_3">DJ Nights & Private Events</li>
+                                            <li data-lang-key="exclusive_service_4">Helicopter Transfers</li>
+                                            <li data-lang-key="exclusive_service_5">Private Gaming Lounge Access</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -388,57 +420,49 @@
                         <!-- Villa Showcase with Images -->
                         <div class="villas-section mb-5">
                             <div class="section-header text-center mb-4">
-                                <h2 class="fs-30">Luxury Accommodations</h2>
-                                <p class="lead">Exclusive private villas with premium amenities</p>
+                                <h2 class="fs-30" data-lang-key="villas_title">Luxury Accommodations</h2>
+                                <p class="lead" data-lang-key="villas_description">Exclusive private villas with premium amenities</p>
                             </div>
                             
                             <div class="row g-4 mb-5">
                                 <div class="col-md-6">
-                                    <img src="/images/wishgroup/lakeeeee.jpg" 
-                                         alt="Land Villas" 
-                                         class="w-100 rounded-1 shadow-lg">
+                                    <img src="/images/wishgroup/lakeeeee.jpg" alt="Land Villas" data-lang-alt="land_villas_image_alt" class="w-100 rounded-1 shadow-lg">
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="/images/wishgroup/roman.jpg" 
-                                         alt="Floating Villas" 
-                                         class="w-100 rounded-1 shadow-lg">
+                                    <img src="/images/wishgroup/roman.jpg" alt="Floating Villas" data-lang-alt="floating_villas_image_alt" class="w-100 rounded-1 shadow-lg">
                                 </div>
                             </div>
                             
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <div class="villa-type-card">
-                                        <h3 class="fs-24 mb-3">Land Villas</h3>
-                                        
+                                        <h3 class="fs-24 mb-3" data-lang-key="land_villas_title">Land Villas</h3>
                                         <div class="villa-option">
                                             <div class="villa-badge">6BHK</div>
                                             <div class="villa-details">
-                                                <span>3 Units Available</span>
-                                                <span>750 sqm each</span>
+                                                <span data-lang-key="land_villa_6bhk_units">3 Units Available</span>
+                                                <span data-lang-key="land_villa_6bhk_size">750 sqm each</span>
                                             </div>
                                         </div>
-                                        
                                         <div class="villa-option">
                                             <div class="villa-badge">4BHK</div>
                                             <div class="villa-details">
-                                                <span>6 Units Available</span>
-                                                <span>550 sqm each</span>
+                                                <span data-lang-key="land_villa_4bhk_units">6 Units Available</span>
+                                                <span data-lang-key="land_villa_4bhk_size">550 sqm each</span>
                                             </div>
                                         </div>
-                                        
                                         <div class="villa-option">
                                             <div class="villa-badge">3BHK</div>
                                             <div class="villa-details">
-                                                <span>6 Units Available</span>
-                                                <span>450 sqm each</span>
+                                                <span data-lang-key="land_villa_3bhk_units">6 Units Available</span>
+                                                <span data-lang-key="land_villa_3bhk_size">450 sqm each</span>
                                             </div>
                                         </div>
-                                        
                                         <div class="villa-option">
                                             <div class="villa-badge">2BHK</div>
                                             <div class="villa-details">
-                                                <span>5 Units Available</span>
-                                                <span>350 sqm each</span>
+                                                <span data-lang-key="land_villa_2bhk_units">5 Units Available</span>
+                                                <span data-lang-key="land_villa_2bhk_size">350 sqm each</span>
                                             </div>
                                         </div>
                                     </div>
@@ -446,29 +470,26 @@
                                 
                                 <div class="col-md-6">
                                     <div class="villa-type-card">
-                                        <h3 class="fs-24 mb-3">Floating Villas</h3>
-                                        
+                                        <h3 class="fs-24 mb-3" data-lang-key="floating_villas_title">Floating Villas</h3>
                                         <div class="villa-option">
                                             <div class="villa-badge">6BHK</div>
                                             <div class="villa-details">
-                                                <span>3 Units Available</span>
-                                                <span>850 sqm each</span>
+                                                <span data-lang-key="floating_villa_6bhk_units">3 Units Available</span>
+                                                <span data-lang-key="floating_villa_6bhk_size">850 sqm each</span>
                                             </div>
                                         </div>
-                                        
                                         <div class="villa-option">
                                             <div class="villa-badge">4BHK</div>
                                             <div class="villa-details">
-                                                <span>7 Units Available</span>
-                                                <span>550 sqm each</span>
+                                                <span data-lang-key="floating_villa_4bhk_units">7 Units Available</span>
+                                                <span data-lang-key="floating_villa_4bhk_size">550 sqm each</span>
                                             </div>
                                         </div>
-                                        
                                         <div class="villa-option">
                                             <div class="villa-badge">3BHK</div>
                                             <div class="villa-details">
-                                                <span>10 Units Available</span>
-                                                <span>350 sqm each</span>
+                                                <span data-lang-key="floating_villa_3bhk_units">10 Units Available</span>
+                                                <span data-lang-key="floating_villa_3bhk_size">350 sqm each</span>
                                             </div>
                                         </div>
                                     </div>
@@ -483,8 +504,8 @@
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8 text-center text-light">
                                         <i class="fa fa-quote-left fs-48 mb-4 text-color"></i>
-                                        <p class="fs-24 mb-4">Beverley Air redefines private island luxury. The attention to detail in every villa and facility is unparalleled. This is not just a resort - it's a completely personalized paradise.</p>
-                                        <h4 class="fs-20">- James Wilson, Luxury Travel Connoisseur</h4>
+                                        <p class="fs-24 mb-4" data-lang-key="testimonial_text">Beverley Air redefines private island luxury. The attention to detail in every villa and facility is unparalleled. This is not just a resort - it's a completely personalized paradise.</p>
+                                        <h4 class="fs-20" data-lang-key="testimonial_author">- James Wilson, Luxury Travel Connoisseur</h4>
                                     </div>
                                 </div>
                             </div>
@@ -492,11 +513,11 @@
 
                         <!-- Enhanced CTA Section -->
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Experience Ultimate Privacy</h3>
-                            <p class="mb-4">Reserve your exclusive island retreat today</p>
+                            <h3 class="fs-28 mb-3" data-lang-key="cta_title">Experience Ultimate Privacy</h3>
+                            <p class="mb-4" data-lang-key="cta_description">Reserve your exclusive island retreat today</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="contact.html"><span>Request Brochure</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Schedule Visit</span></a>
+                                <a class="btn-main fx-slide" href="contact.html"><span data-lang-key="cta_brochure">Request Brochure</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-lang-key="cta_visit">Schedule Visit</span></a>
                             </div>
                         </div>
                     </div>
@@ -510,7 +531,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="Wish Group Footer Logo" data-lang-alt="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -520,24 +541,24 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_address">Address</h3>
+                        <p class="mb-0" data-lang-key="headquarters_address">Business Bay</p>
+                        <p data-lang-key="headquarters_country">Dubai, United Arab Emirates</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="index.html" class="text-light" data-lang-key="menu_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-lang-key="menu_about">About Us</a></li>
+                            <li><a href="division.html" class="text-light" data-lang-key="menu_divisions">Divisions</a></li>
+                            <li><a href="projects.html" class="text-light" data-lang-key="menu_projects">Projects</a></li>
+                            <li><a href="contact.html" class="text-light" data-lang-key="menu_contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_contact">Contact Us</h3>
                         <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
                         <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
                         <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
@@ -550,7 +571,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-lang-key="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -558,12 +579,549 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
-    </div>
-</body>
+        <script>
+            // Translations object
+            const translations = {
+                en: {
+                    page_title: "Beverley Air - Private Island Resort",
+                    scroll_to_top: "Scroll to top",
+                    menu_home: "Home",
+                    menu_about: "About Us",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projects",
+                    menu_countries: "Countries",
+                    menu_news: "News",
+                    menu_policies: "Our Policies",
+                    menu_career: "Career",
+                    menu_contact: "Contact Us",
+                    menu_tickets_1: "Tickets Style 1",
+                    menu_tickets_2: "Tickets Style 2",
+                    menu_news_single: "News Single",
+                    logo_alt: "Wish Group Logo",
+                    hero_title: "Beverley Air – Ultimate Private Island Experience",
+                    hero_description: "Exclusive luxury resort with world-class amenities",
+                    hero_label: "Private Paradise",
+                    intro_title: "Your Private Island Sanctuary",
+                    intro_description: "An exclusive retreat where luxury meets untouched natural beauty",
+                    intro_image_alt: "Beverley Air Aerial View",
+                    gallery_title: "Island Highlights",
+                    gallery_description: "Discover the unparalleled beauty of Beverley Air",
+                    gallery_villa_alt: "Luxury Villa",
+                    gallery_villa_caption: "Oceanfront Villas",
+                    gallery_golf_alt: "Golf Course",
+                    gallery_golf_caption: "Championship Golf",
+                    gallery_spa_alt: "Spa",
+                    gallery_spa_caption: "Luxury Spa Retreat",
+                    gallery_dining_alt: "Fine Dining",
+                    gallery_dining_caption: "Gourmet Experiences",
+                    gallery_pool_alt: "Infinity Pool",
+                    gallery_pool_caption: "Oceanview Infinity Pool",
+                    gallery_beach_alt: "Private Beach",
+                    gallery_beach_caption: "Secluded Beaches",
+                    facilities_title: "Island Facilities",
+                    facilities_description: "Exclusive amenities designed for discerning residents",
+                    facility_golf_title: "18-Hole Golf Course",
+                    facility_golf_description: "Championship 1-acre course with stunning ocean views",
+                    facility_spa_title: "Ayurveda-International Spa",
+                    facility_spa_description: "500-800 sqm wellness sanctuary with traditional therapies",
+                    facility_dining_title: "Signature Fine Dining",
+                    facility_dining_description: "450 sqm restaurant with premium wine cellar",
+                    facility_cinema_title: "Private Movie Theatre",
+                    facility_cinema_description: "400 sqm cinema with luxury seating",
+                    facility_gallery_title: "Art Gallery",
+                    facility_gallery_description: "300 sqm space showcasing paintings and sculptures",
+                    facility_pool_title: "Natural Infinity Pool",
+                    facility_pool_description: "Breathtaking ocean-edge swimming experience",
+                    resort_title: "Architectural Harmony With Nature",
+                    resort_description: "Our design philosophy blends luxury with the island's natural beauty, creating seamless indoor-outdoor living spaces",
+                    resort_image_alt: "Beverley Air Resort Overview",
+                    services_title: "Premium Services",
+                    services_description: "Exceptional hospitality for our residents",
+                    resident_services_title: "Resident Services",
+                    resident_service_1: "24/7 Access Control & island commute",
+                    resident_service_2: "Dedicated Concierge Services",
+                    resident_service_3: "In-house secured safe for each villa",
+                    resident_service_4: "Private Chef & Butler services",
+                    resident_service_5: "Personal Shopper & Babysitter",
+                    exclusive_services_title: "Exclusive Experiences",
+                    exclusive_service_1: "Jet Charter & Yacht Services",
+                    exclusive_service_2: "Cultural Shows & Themed Dinners",
+                    exclusive_service_3: "DJ Nights & Private Events",
+                    exclusive_service_4: "Helicopter Transfers",
+                    exclusive_service_5: "Private Gaming Lounge Access",
+                    villas_title: "Luxury Accommodations",
+                    villas_description: "Exclusive private villas with premium amenities",
+                    land_villas_title: "Land Villas",
+                    land_villa_6bhk_units: "3 Units Available",
+                    land_villa_6bhk_size: "750 sqm each",
+                    land_villa_4bhk_units: "6 Units Available",
+                    land_villa_4bhk_size: "550 sqm each",
+                    land_villa_3bhk_units: "6 Units Available",
+                    land_villa_3bhk_size: "450 sqm each",
+                    land_villa_2bhk_units: "5 Units Available",
+                    land_villa_2bhk_size: "350 sqm each",
+                    floating_villas_title: "Floating Villas",
+                    floating_villa_6bhk_units: "3 Units Available",
+                    floating_villa_6bhk_size: "850 sqm each",
+                    floating_villa_4bhk_units: "7 Units Available",
+                    floating_villa_4bhk_size: "550 sqm each",
+                    floating_villa_3bhk_units: "10 Units Available",
+                    floating_villa_3bhk_size: "350 sqm each",
+                    land_villas_image_alt: "Land Villas",
+                    floating_villas_image_alt: "Floating Villas",
+                    testimonial_text: "Beverley Air redefines private island luxury. The attention to detail in every villa and facility is unparalleled. This is not just a resort - it's a completely personalized paradise.",
+                    testimonial_author: "- James Wilson, Luxury Travel Connoisseur",
+                    cta_title: "Experience Ultimate Privacy",
+                    cta_description: "Reserve your exclusive island retreat today",
+                    cta_brochure: "Request Brochure",
+                    cta_visit: "Schedule Visit",
+                    footer_address: "Address",
+                    quick_links: "Quick Links",
+                    footer_contact: "Contact Us",
+                    footer_copyright: "Copyright 2025 - Wish Group. All rights reserved.",
+                    footer_logo_alt: "Wish Group Footer Logo",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubai, United Arab Emirates"
+                },
+                ar: {
+                    page_title: "بيفرلي إير - منتجع الجزيرة الخاصة",
+                    scroll_to_top: "التمرير إلى الأعلى",
+                    menu_home: "الرئيسية",
+                    menu_about: "معلومات عنا",
+                    menu_divisions: "الأقسام",
+                    menu_projects: "المشاريع",
+                    menu_countries: "الدول",
+                    menu_news: "الأخبار",
+                    menu_policies: "سياساتنا",
+                    menu_career: "الوظائف",
+                    menu_contact: "اتصل بنا",
+                    menu_tickets_1: "تذاكر النمط الأول",
+                    menu_tickets_2: "تذاكر النمط الثاني",
+                    menu_news_single: "خبر مفرد",
+                    logo_alt: "شعار مجموعة ويش",
+                    hero_title: "بيفرلي إير – تجربة الجزيرة الخاصة النهائية",
+                    hero_description: "منتجع فاخر حصري مع وسائل راحة عالمية المستوى",
+                    hero_label: "جنة خاصة",
+                    intro_title: "ملاذ الجزيرة الخاص بك",
+                    intro_description: "ملاذ حصري يجمع بين الفخامة والجمال الطبيعي البكر",
+                    intro_image_alt: "منظر جوي لبيفرلي إير",
+                    gallery_title: "معالم الجزيرة",
+                    gallery_description: "اكتشف الجمال اللا مثيل له لبيفرلي إير",
+                    gallery_villa_alt: "فيلا فاخرة",
+                    gallery_villa_caption: "فلل على الواجهة البحرية",
+                    gallery_golf_alt: "ملعب غولف",
+                    gallery_golf_caption: "غولف بطولة",
+                    gallery_spa_alt: "سبا",
+                    gallery_spa_caption: "ملاذ سبا فاخر",
+                    gallery_dining_alt: "تناول طعام راقي",
+                    gallery_dining_caption: "تجارب طعام راقية",
+                    gallery_pool_alt: "مسبح إنفينيتي",
+                    gallery_pool_caption: "مسبح إنفينيتي بإطلالة على المحيط",
+                    gallery_beach_alt: "شاطئ خاص",
+                    gallery_beach_caption: "شواطئ منعزلة",
+                    facilities_title: "مرافق الجزيرة",
+                    facilities_description: "وسائل راحة حصرية مصممة للسكان المميزين",
+                    facility_golf_title: "ملعب غولف 18 حفرة",
+                    facility_golf_description: "ملعب بطولة بمساحة فدان واحد مع إطلالات خلابة على المحيط",
+                    facility_spa_title: "سبا أيورفيدا-دولي",
+                    facility_spa_description: "ملاذ صحي بمساحة 500-800 متر مربع مع علاجات تقليدية",
+                    facility_dining_title: "تناول طعام مميز",
+                    facility_dining_description: "مطعم بمساحة 450 متر مربع مع قبو نبيذ مميز",
+                    facility_cinema_title: "سينما خاصة",
+                    facility_cinema_description: "سينما بمساحة 400 متر مربع مع مقاعد فاخرة",
+                    facility_gallery_title: "معرض فني",
+                    facility_gallery_description: "مساحة 300 متر مربع تعرض اللوحات والمنحوتات",
+                    facility_pool_title: "مسبح إنفينيتي طبيعي",
+                    facility_pool_description: "تجربة سباحة خلابة على حافة المحيط",
+                    resort_title: "الانسجام المعماري مع الطبيعة",
+                    resort_description: "فلسفتنا التصميمية تجمع بين الفخامة وجمال الجزيرة الطبيعي، مما يخلق مساحات معيشة داخلية وخارجية سلسة",
+                    resort_image_alt: "نظرة عامة على منتجع بيفرلي إير",
+                    services_title: "خدمات مميزة",
+                    services_description: "ضيافة استثنائية لسكاننا",
+                    resident_services_title: "خدمات السكان",
+                    resident_service_1: "التحكم بالوصول على مدار الساعة والتنقل في الجزيرة",
+                    resident_service_2: "خدمات كونسيرج مخصصة",
+                    resident_service_3: "خزنة آمنة داخل كل فيلا",
+                    resident_service_4: "خدمات طاهٍ خاص وخادم",
+                    resident_service_5: "متسوق شخصي وجليسة أطفال",
+                    exclusive_services_title: "تجارب حصرية",
+                    exclusive_service_1: "خدمات تأجير الطائرات واليخوت",
+                    exclusive_service_2: "عروض ثقافية وعشاء مواضيعي",
+                    exclusive_service_3: "ليالي دي جي وفعاليات خاصة",
+                    exclusive_service_4: "نقل بالهليكوبتر",
+                    exclusive_service_5: "الوصول إلى صالة ألعاب خاصة",
+                    villas_title: "إقامات فاخرة",
+                    villas_description: "فلل خاصة حصرية مع وسائل راحة مميزة",
+                    land_villas_title: "فلل أرضية",
+                    land_villa_6bhk_units: "3 وحدات متاحة",
+                    land_villa_6bhk_size: "750 متر مربع لكل واحدة",
+                    land_villa_4bhk_units: "6 وحدات متاحة",
+                    land_villa_4bhk_size: "550 متر مربع لكل واحدة",
+                    land_villa_3bhk_units: "6 وحدات متاحة",
+                    land_villa_3bhk_size: "450 متر مربع لكل واحدة",
+                    land_villa_2bhk_units: "5 وحدات متاحة",
+                    land_villa_2bhk_size: "350 متر مربع لكل واحدة",
+                    floating_villas_title: "فلل عائمة",
+                    floating_villa_6bhk_units: "3 وحدات متاحة",
+                    floating_villa_6bhk_size: "850 متر مربع لكل واحدة",
+                    floating_villa_4bhk_units: "7 وحدات متاحة",
+                    floating_villa_4bhk_size: "550 متر مربع لكل واحدة",
+                    floating_villa_3bhk_units: "10 وحدات متاحة",
+                    floating_villa_3bhk_size: "350 متر مربع لكل واحدة",
+                    land_villas_image_alt: "فلل أرضية",
+                    floating_villas_image_alt: "فلل عائمة",
+                    testimonial_text: "بيفرلي إير تعيد تعريف الفخامة في الجزر الخاصة. الاهتمام بالتفاصيل في كل فيلا ومرافق لا مثيل له. هذا ليس مجرد منتجع - إنه جنة شخصية بالكامل.",
+                    testimonial_author: "- جيمس ويلسون، خبير السفر الفاخر",
+                    cta_title: "تجربة الخصوصية المطلقة",
+                    cta_description: "احجز ملاذك الخاص في الجزيرة اليوم",
+                    cta_brochure: "طلب كتيب",
+                    cta_visit: "جدولة زيارة",
+                    footer_address: "العنوان",
+                    quick_links: "روابط سريعة",
+                    footer_contact: "اتصل بنا",
+                    footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة.",
+                    footer_logo_alt: "شعار مجموعة ويش في التذييل",
+                    headquarters_address: "خليج الأعمال",
+                    headquarters_country: "دبي، الإمارات العربية المتحدة"
+                },
+                fr: {
+                    page_title: "Beverley Air - Station balnéaire privée",
+                    scroll_to_top: "Faire défiler vers le haut",
+                    menu_home: "Accueil",
+                    menu_about: "À propos de nous",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projets",
+                    menu_countries: "Pays",
+                    menu_news: "Actualités",
+                    menu_policies: "Nos politiques",
+                    menu_career: "Carrière",
+                    menu_contact: "Contactez-nous",
+                    menu_tickets_1: "Billets Style 1",
+                    menu_tickets_2: "Billets Style 2",
+                    menu_news_single: "Actualité Unique",
+                    logo_alt: "Logo du Groupe Wish",
+                    hero_title: "Beverley Air – Expérience ultime sur une île privée",
+                    hero_description: "Station balnéaire de luxe exclusive avec des commodités de classe mondiale",
+                    hero_label: "Paradis Privé",
+                    intro_title: "Votre sanctuaire insulaire privé",
+                    intro_description: "Une retraite exclusive où le luxe rencontre la beauté naturelle intacte",
+                    intro_image_alt: "Vue aérienne de Beverley Air",
+                    gallery_title: "Points forts de l'île",
+                    gallery_description: "Découvrez la beauté inégalée de Beverley Air",
+                    gallery_villa_alt: "Villa de luxe",
+                    gallery_villa_caption: "Villas en bord de mer",
+                    gallery_golf_alt: "Terrain de golf",
+                    gallery_golf_caption: "Golf de championnat",
+                    gallery_spa_alt: "Spa",
+                    gallery_spa_caption: "Retraite spa de luxe",
+                    gallery_dining_alt: "Restauration raffinée",
+                    gallery_dining_caption: "Expériences gastronomiques",
+                    gallery_pool_alt: "Piscine à débordement",
+                    gallery_pool_caption: "Piscine à débordement avec vue sur l'océan",
+                    gallery_beach_alt: "Plage privée",
+                    gallery_beach_caption: "Plages isolées",
+                    facilities_title: "Installations de l'île",
+                    facilities_description: "Commodités exclusives conçues pour les résidents exigeants",
+                    facility_golf_title: "Terrain de golf de 18 trous",
+                    facility_golf_description: "Terrain de championnat d'un acre avec des vues imprenables sur l'océan",
+                    facility_spa_title: "Spa Ayurveda-International",
+                    facility_spa_description: "Sanctuaire de bien-être de 500 à 800 m² avec des thérapies traditionnelles",
+                    facility_dining_title: "Restauration raffinée signature",
+                    facility_dining_description: "Restaurant de 450 m² avec cave à vin premium",
+                    facility_cinema_title: "Cinéma privé",
+                    facility_cinema_description: "Cinéma de 400 m² avec des sièges de luxe",
+                    facility_gallery_title: "Galerie d'art",
+                    facility_gallery_description: "Espace de 300 m² présentant des peintures et sculptures",
+                    facility_pool_title: "Piscine à débordement naturelle",
+                    facility_pool_description: "Expérience de baignade à couper le souffle au bord de l'océan",
+                    resort_title: "Harmonie architecturale avec la nature",
+                    resort_description: "Notre philosophie de conception allie luxe et beauté naturelle de l'île, créant des espaces de vie intérieurs-extérieurs fluides",
+                    resort_image_alt: "Vue d'ensemble de la station balnéaire Beverley Air",
+                    services_title: "Services premium",
+                    services_description: "Hospitalité exceptionnelle pour nos résidents",
+                    resident_services_title: "Services aux résidents",
+                    resident_service_1: "Contrôle d'accès 24/7 et navette insulaire",
+                    resident_service_2: "Services de conciergerie dédiés",
+                    resident_service_3: "Coffre-fort sécurisé dans chaque villa",
+                    resident_service_4: "Services de chef privé et majordome",
+                    resident_service_5: "Shopper personnel et baby-sitter",
+                    exclusive_services_title: "Expériences exclusives",
+                    exclusive_service_1: "Services de location de jets et de yachts",
+                    exclusive_service_2: "Spectacles culturels et dîners à thème",
+                    exclusive_service_3: "Soirées DJ et événements privés",
+                    exclusive_service_4: "Transferts en hélicoptère",
+                    exclusive_service_5: "Accès à un salon de jeux privé",
+                    villas_title: "Hébergements de luxe",
+                    villas_description: "Villas privées exclusives avec des commodités premium",
+                    land_villas_title: "Villas terrestres",
+                    land_villa_6bhk_units: "3 unités disponibles",
+                    land_villa_6bhk_size: "750 m² chacune",
+                    land_villa_4bhk_units: "6 unités disponibles",
+                    land_villa_4bhk_size: "550 m² chacune",
+                    land_villa_3bhk_units: "6 unités disponibles",
+                    land_villa_3bhk_size: "450 m² chacune",
+                    land_villa_2bhk_units: "5 unités disponibles",
+                    land_villa_2bhk_size: "350 m² chacune",
+                    floating_villas_title: "Villas flottantes",
+                    floating_villa_6bhk_units: "3 unités disponibles",
+                    floating_villa_6bhk_size: "850 m² chacune",
+                    floating_villa_4bhk_units: "7 unités disponibles",
+                    floating_villa_4bhk_size: "550 m² chacune",
+                    floating_villa_3bhk_units: "10 unités disponibles",
+                    floating_villa_3bhk_size: "350 m² chacune",
+                    land_villas_image_alt: "Villas terrestres",
+                    floating_villas_image_alt: "Villas flottantes",
+                    testimonial_text: "Beverley Air redéfinit le luxe des îles privées. L'attention portée aux détails dans chaque villa et installation est sans égal. Ce n'est pas seulement une station balnéaire - c'est un paradis totalement personnalisé.",
+                    testimonial_author: "- James Wilson, Connaisseur de voyages de luxe",
+                    cta_title: "Vivez une confidentialité ultime",
+                    cta_description: "Réservez votre retraite insulaire exclusive aujourd'hui",
+                    cta_brochure: "Demander une brochure",
+                    cta_visit: "Planifier une visite",
+                    footer_address: "Adresse",
+                    quick_links: "Liens rapides",
+                    footer_contact: "Contactez-nous",
+                    footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés.",
+                    footer_logo_alt: "Logo du Groupe Wish dans le pied de page",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubaï, Émirats Arabes Unis"
+                },
+                si: {
+                    page_title: "බිවර්ලි එයාර් - පුද්ගලික දූපත් නිවාඩු නිකේතනය",
+                    scroll_to_top: "ඉහළට ගමන් කරන්න",
+                    menu_home: "මුල් පිටුව",
+                    menu_about: "අප ගැන",
+                    menu_divisions: "අංශ",
+                    menu_projects: "ව්‍යාපෘති",
+                    menu_countries: "රටවල්",
+                    menu_news: "පුවත්",
+                    menu_policies: "අපගේ ප්‍රතිපත්ති",
+                    menu_career: "වෘත්තිය",
+                    menu_contact: "අප හා සම්බන්ධ වන්න",
+                    menu_tickets_1: "ටිකට් විලාසිතා 1",
+                    menu_tickets_2: "ටිකට් විලාසිතා 2",
+                    menu_news_single: "තනි පුවත",
+                    logo_alt: "විෂ් ගෲප් ලෝගෝ",
+                    hero_title: "බිවර්ලි එයාර් – අනුපම පුද්ගලික දූපත් අත්දැකීම",
+                    hero_description: "ලෝක මට්ටමේ පහසුකම් සහිත විශේෂිත සුඛෝපභෝගී නිවාඩු නිකේතනය",
+                    hero_label: "පුද්ගලික ස්වර්ගය",
+                    intro_title: "ඔබේ පුද්ගලික දූපත් සරණාගතය",
+                    intro_description: "සුඛෝපභෝගීත්වය සහ නිර්මල ස්වභාවික ලස්සන එකිනෙක බැඳුණු විශේෂිත රැකවරණයක්",
+                    intro_image_alt: "බිවර්ලි එයාර් ගුවන් දසුන",
+                    gallery_title: "දූපත් හි විශේෂාංග",
+                    gallery_description: "බිවර්ලි එයාර් හි අනුපම ලස්සන ගවේෂණය කරන්න",
+                    gallery_villa_alt: "සුඛෝපභෝගී විලා",
+                    gallery_villa_caption: "සාගරයට මුහුණලා ඇති විලා",
+                    gallery_golf_alt: "ගොල්ෆ් පිටිය",
+                    gallery_golf_caption: "ශූරතා ගොල්ෆ්",
+                    gallery_spa_alt: "ස්පා",
+                    gallery_spa_caption: "සුඛෝපභෝගී ස්පා රැකවරණය",
+                    gallery_dining_alt: "සුඛෝපභෝගී භෝජන",
+                    gallery_dining_caption: "ගුර්මේ අත්දැකීම්",
+                    gallery_pool_alt: "අනන්ත පිහිනුම් තටාකය",
+                    gallery_pool_caption: "සාගර දර්ශන සහිත අනන්ත තටාකය",
+                    gallery_beach_alt: "පුද්ගලික වෙරළ",
+                    gallery_beach_caption: "විවික්ත වෙරළ තීරයන්",
+                    facilities_title: "දූපත් පහසුකම්",
+                    facilities_description: "විචක්ෂණ පදිංචිකරුවන් සඳහා නිර්මාණය කළ විශේෂිත පහසුකම්",
+                    facility_golf_title: "හෝල් 18 ගොල්ෆ් පිටිය",
+                    facility_golf_description: "විශ්මිත සාගර දර්ශන සහිත ඒකර 1 ශූරතා පිටිය",
+                    facility_spa_title: "ආයුර්වේද-ජාත්‍යන්තර ස්පා",
+                    facility_spa_description: "සම්ප්‍රදායික ප්‍රතිකාර සහිත වර්ග මීටර් 500-800 යෝග්‍යතා සරණාගතය",
+                    facility_dining_title: "විශේෂිත සුඛෝපභෝගී භෝජන",
+                    facility_dining_description: "වර්ග මීටර් 450 අංගනය සහිත උසස් වයින් ගබඩාව",
+                    facility_cinema_title: "පුද්ගලික චිත්‍රපට ශාලාව",
+                    facility_cinema_description: "වර්ග මීටර් 400 සුඛෝපභෝගී ආසන සහිත සිනමා ශාලාව",
+                    facility_gallery_title: "කලාගාරය",
+                    facility_gallery_description: "වර්ග මීටර් 300 කින් යුත් චිත්‍ර හා ප්‍රතිමා ප්‍රදර්ශනය",
+                    facility_pool_title: "ස්වභාවික අනන්ත තටාකය",
+                    facility_pool_description: "සාගරයේ ඉවුරේ ඇති විශ්මිත පිහිනුම් අත්දැකීම",
+                    resort_title: "ස්වභාවය සමඟ ගෘහනිර්මාණ සමගිය",
+                    resort_description: "අපගේ නිර්මාණ දර්ශනය සුඛෝපභෝගීත්වය දූපතේ ස්වභාවික ලස්සන සමඟ ඒකාබද්ධ කරමින්, ගෘහස්ථ-බාහිර ජීවන අවකාශයන් නිර්මාණය කරයි",
+                    resort_image_alt: "බිවර්ලි එයාර් නිවාඩු නිකේතන දළ විශ්ලේෂණය",
+                    services_title: "උසස් සේවාවන්",
+                    services_description: "අපගේ පදිංචිකරුවන් සඳහා සුවිශේෂී ආගන්තුක සත්කාරය",
+                    resident_services_title: "පදිංචිකරුවන්ගේ සේවාවන්",
+                    resident_service_1: "පැය 24 පුරා ප්‍රවේශ පාලනය සහ දූපත් ගමන්",
+                    resident_service_2: "විශේෂිත කොන්සියර්ජ් සේවාවන්",
+                    resident_service_3: "විලා එකකට ආරක්ෂිත ගබඩාව",
+                    resident_service_4: "පුද්ගලික අරක්ෂක සහ බට්ලර් සේවාවන්",
+                    resident_service_5: "පුද්ගලික ගනුදෙනුකරු සහ ළමා රැකබලා ගැනීම",
+                    exclusive_services_title: "විශේෂිත අත්දැකීම්",
+                    exclusive_service_1: "ජෙට් චාර්ටර් සහ යාත්‍රා සේවාවන්",
+                    exclusive_service_2: "සංස්කෘතික ප්‍රදර්ශන සහ තේමා රාත්‍රී භෝජන",
+                    exclusive_service_3: "ඩීජේ රාත්‍රීන් සහ පුද්ගලික උත්සව",
+                    exclusive_service_4: "හෙලිකොප්ටර් ප්‍රවාහන",
+                    exclusive_service_5: "පුද්ගලික ක්‍රීඩා ලෝලීන්ගේ ලොබි ප්‍රවේශය",
+                    villas_title: "සුඛෝපභෝගී නවාතැන්",
+                    villas_description: "උසස් පහසුකම් සහිත විශේෂිත පුද්ගලික විලා",
+                    land_villas_title: "භූමි විලා",
+                    land_villa_6bhk_units: "විලා 3ක් ඇත",
+                    land_villa_6bhk_size: "එකක් වර්ග මීටර් 750",
+                    land_villa_4bhk_units: "විලා 6ක් ඇත",
+                    land_villa_4bhk_size: "එකක් වර්ග මීටර් 550",
+                    land_villa_3bhk_units: "විලා 6ක් ඇත",
+                    land_villa_3bhk_size: "එකක් වර්ග මීටර් 450",
+                    land_villa_2bhk_units: "විලා 5ක් ඇත",
+                    land_villa_2bhk_size: "එකක් වර්ග මීටර් 350",
+                    floating_villas_title: "පාවෙන විලා",
+                    floating_villa_6bhk_units: "විලා 3ක් ඇත",
+                    floating_villa_6bhk_size: "එකක් වර්ග මීටර් 850",
+                    floating_villa_4bhk_units: "විලා 7ක් ඇත",
+                    floating_villa_4bhk_size: "එකක් වර්ග මීටර් 550",
+                    floating_villa_3bhk_units: "විලා 10ක් ඇත",
+                    floating_villa_3bhk_size: "එකක් වර්ග මීටර් 350",
+                    land_villas_image_alt: "භූමි විලා",
+                    floating_villas_image_alt: "පාවෙන විලා",
+                    testimonial_text: "බිවර්ලි එයාර් පුද්ගලික දූපත් සුඛෝපභෝගීත්වය නැවත අර්ථ දක්වයි. සෑම විලාවකම සහ පහසුකම්වල තොරතුරුවලට ලබා දෙන අවධානය අනුපම වේ. මෙය හුදු නිවාඩු නිකේතනයක් නොවේ - එය සම්පූර්ණයෙන්ම පුද්ගලික ස්වර්ගයකි.",
+                    testimonial_author: "- ජේම්ස් විල්සන්, සුඛෝපභෝගී ගමන් බිමන් ලෝලියා",
+                    cta_title: "අනුපම රහස්‍යභාවය අත්විඳින්න",
+                    cta_description: "අදම ඔබේ විශේෂිත දූපත් රැකවරණය වෙන් කරවා ගන්න",
+                    cta_brochure: "බ්‍රෝෂරය ඉල්ලන්න",
+                    cta_visit: "පැමිණීමක් උපලේඛනය කරන්න",
+                    footer_address: "ලිපිනය",
+                    quick_links: "ඉක්මන් සබැඳි",
+                    footer_contact: "අප හා සම්බන්ධ වන්න",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ගෲප්. සියලු හිමිකම් ඇවිරිණි.",
+                    footer_logo_alt: "විෂ් ගෲප් පාදක ලෝගෝ",
+                    headquarters_address: "බිස්නස් බේ",
+                    headquarters_country: "ඩුබායි, එක්සත් අරාබි එමිරේට්ස්"
+                },
+               dv: {
+    page_title: "ބިވަރލީ އެއަރ - ޕްރައިވެޓް އައިލެންޑް ރިސޯޓް",
+    scroll_to_top: "މަތިއަށް ސްކްރޯލް ކުރަން",
+    menu_home: "މަންދު",
+    menu_about: "އަލިފަން",
+    menu_divisions: "ބައިތައް",
+    menu_projects: "ޕްރޮޖެކްޓްތައް",
+    menu_countries: "ޤައުމުތައް",
+    menu_news: "ޚަބަރު",
+    menu_policies: "އަމިއްލަ ސިޔާސަތުތައް",
+    menu_career: "ކެރިއަރ",
+    menu_contact: "ކޮންޓެކްޓް އަސް",
+    menu_tickets_1: "ޓިކެޓް ސްޓައިލް 1",
+    menu_tickets_2: "ޓިކެޓް ސްޓައިލް 2",
+    menu_news_single: "އެކެއް ޚަބަރު",
+    logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+    hero_title: "ބިވަރލީ އެއަރ – އަންތިމަ ޕްރައިވެޓް އައިލެންޑް އެކްސްޕިރިއަންސް",
+    hero_description: "ވާލްޑް-ކްލާސް އެމެނިޓީސް އެކު އެކްސްކްލޫސިވް ލަކްޝަރީ ރިސޯޓް",
+    hero_label: "ޕްރައިވެޓް ޕެރަޑައިސް",
+    intro_title: "ތިޔަބައިގެ ޕްރައިވެޓް އައިލެންޑް ސެންޗުއަރީ",
+    intro_description: "ލަކްޝަރީ އަދި އޮރިޖިނަލް ނެޗުރަލް ބިއުޓީ އެކު އެކްސްކްލޫސިވް ރިޓްރީޓް",
+    intro_image_alt: "ބިވަރލީ އެއަރ އެއާރިއަލް ވިޔު",
+    gallery_title: "އައިލެންޑްގެ ހައިލައިޓްސް",
+    gallery_description: "ބިވަރލީ އެއަރގެ އަންމެޗްމަތި ބިއުޓީ ޑިސްކަވަރ ކުރަން",
+    gallery_villa_alt: "ލަކްޝަރީ ވިލާ",
+    gallery_villa_caption: "އޯޝަންފްރޮންޓް ވިލާތައް",
+    gallery_golf_alt: "ގޮލްފް ކޯސް",
+    gallery_golf_caption: "ޗެމްޕިއަންޝިޕް ގޮލްފް",
+    gallery_spa_alt: "ސްޕާ",
+    gallery_spa_caption: "ލަކްޝަރީ ސްޕާ ރިޓްރީޓް",
+    gallery_dining_alt: "ފައިން ޑައިނިން",
+    gallery_dining_caption: "ގޯމެ އެކްސްޕިރިއަންސް",
+    gallery_pool_alt: "އިންފިނިޓީ ޕޫލް",
+    gallery_pool_caption: "އޯޝަންވިޔު އިންފިނިޓީ ޕޫލް",
+    gallery_beach_alt: "ޕްރައިވެޓް ބީޗް",
+    gallery_beach_caption: "ސީކްލޫޑެޑް ބީޗެސް",
+    facilities_title: "އައިލެންޑް ފެސިލިޓީސް",
+    facilities_description: "ޑިސާރނިން ރެސިޑެންޓްސްަށް ޑިޒައިން ކުރެވިފައިވާ އެކްސްކްލޫސިވް އެމެނިޓީސް",
+    facility_golf_title: "18-ހޯލް ގޮލްފް ކޯސް",
+    facility_golf_description: "އެކްރެ 1 ޗެމްޕިއަންޝިޕް ކޯސް އެކު ސްޓަނިން އޯޝަން ވިޔުތައް",
+    facility_spa_title: "އަޔުރވެޑަ-އިންޓަރނެޝަނަލް ސްޕާ",
+    facility_spa_description: "500-800 ޗަންޑްރެ މީޓަރ ވެލްނެސް ސެންޗުއަރީ އެކު ޓްރެޑިޝަނަލް ތެރަޕީސް",
+    facility_dining_title: "ސިގްނެޗަރ ފައިން ޑައިނިން",
+    facility_dining_description: "450 ޗަންޑްރެ މީޓަރ ރެސްޓޮރަންޓް އެކު ޕްރީމިއަމް ވައިން ސެލާ",
+    facility_cinema_title: "ޕްރައިވެޓް މޫވީ ތިއެޓަރ",
+    facility_cinema_description: "400 ޗަންޑްރެ މީޓަރ ސިނަމާ އެކު ލަކްޝަރީ ސީޓިން",
+    facility_gallery_title: "އާޓް ގެލަރީ",
+    facility_gallery_description: "300 ޗަންޑްރެ މީޓަރ ސްޕެއިސް ޝޯކެސިން ޕެއިންޓިންގސް އަދި ސްކަލްޕްޗަރސް",
+    facility_pool_title: "ނެޗުރަލް އިންފިނިޓީ ޕޫލް",
+    facility_pool_description: "އޯޝަން އެޖް އަށް ބްރެތްޓެއިކިން ސުވިމިން އެކްސްޕިރިއަންސް",
+    resort_title: "އާކިޓެކްޗަރަލް ހާމަނީ އެކު ނެޗަރ",
+    resort_description: "އަމުގެ ޑިޒައިން ފިލޯސަފީ ލަކްޝަރީ އެކު އައިލެންޑްގެ ނެޗުރަލް ބިއުޓީ އެކު ބްލެންޑް ކުރަން، އިންޑޯ-އައުޓްޑޯ ލިވިން ސްޕެއިސެސް ހަދަން",
+    resort_image_alt: "ބިވަރލީ އެއަރ ރިސޯޓް އޯވަރވިޔު",
+    services_title: "ޕްރީމިއަމް ސަރވިސްތައް",
+    services_description: "އަމުގެ ރެސިޑެންޓްސްަށް އެކްސެޕްޝަނަލް ހޮސްޕިޓަލިޓީ",
+    resident_services_title: "ރެސިޑެންޓް ސަރވިސްތައް",
+    resident_service_1: "24/7 އެކްސެސް ކޮންޓްރޯލް އަދި އައިލެންޑް ކޮމިއުޓް",
+    resident_service_2: "ޑެޑިކެއިޓެޑް ކޮންސިއަރޖް ސަރވިސްތައް",
+    resident_service_3: "ކޮންމެ ވިލާއަށް އިން-ހައުސް ސިކިއޮރ ސެފް",
+    resident_service_4: "ޕްރައިވެޓް ޝެފް އަދި ބަލްލަރ ސަރވިސްތައް",
+    resident_service_5: "ޕާސަނަލް ޝޮޕަރ އަދި ބޭބީސިޓަރ",
+    exclusive_services_title: "އެކްސްކްލޫސިވް އެކްސްޕިރިއަންސް",
+    exclusive_service_1: "ޖެޓް ޗާޓަރ އަދި ޔާޓް ސަރވިސްތައް",
+    exclusive_service_2: "ކަލްޗަރަލް ޝޯތައް އަދި ތީމްޑް ޑިނަރސް",
+    exclusive_service_3: "ޑީޖެ ނައިޓްސް އަދި ޕްރައިވެޓް އިވެންޓްސް",
+    exclusive_service_4: "ހެލިކޮޕްޓަރ ޓްރާންސްފަރސް",
+    exclusive_service_5: "ޕްރައިވެޓް ގެމިން ލައުންޖް އެކްސެސް",
+    villas_title: "ލަކްޝަރީ އެކޮމޮޑެޝަންސް",
+    villas_description: "ޕްރީމިއަމް އެމެނިޓީސް އެކު އެކްސްކްލޫސިވް ޕްރައިވެޓް ވިލާތައް",
+    land_villas_title: "ލެންޑް ވިލާތައް",
+    land_villa_6bhk_units: "3 ޔުނިޓްތައް އެވެއިލަބަލް",
+    land_villa_6bhk_size: "ކޮންމެ އެއްޗެއް 750 ޗަންޑްރެ މީޓަރ",
+    land_villa_4bhk_units: "6 ޔުނިޓްތައް އެވެއިލަބަލް",
+    land_villa_4bhk_size: "ކޮންމެ އެއްޗެއް 550 ޗަންޑްރެ މީޓަރ",
+    land_villa_3bhk_units: "6 ޔުނިޓްތައް އެވެއިލަބަލް",
+    land_villa_3bhk_size: "ކޮންމެ އެއްޗެއް 450 ޗަންޑްރެ މީޓަރ",
+    land_villa_2bhk_units: "5 ޔުނިޓްތައް އެވެއިލަބަލް",
+    land_villa_2bhk_size: "ކޮންމެ އެއްޗެއް 350 ޗަންޑްރެ މީޓަރ",
+    floating_villas_title: "ފްލޯޓިން ވިލާތައް",
+    floating_villa_6bhk_units: "3 ޔުނިޓްތައް އެވެއިލަބަލް",
+    floating_villa_6bhk_size: "ކޮންމެ އެއްޗެއް 850 ޗަންޑްރެ މީޓަރ",
+    floating_villa_4bhk_units: "7 ޔުނިޓްތައް އެވެއިލަބަލް",
+    floating_villa_4bhk_size: "ކޮންމެ އެއްޗެއް 550 ޗަންޑްރެ މީޓަރ",
+    floating_villa_3bhk_units: "10 ޔުނިޓްތައް އެވެއިލަބަލް",
+    floating_villa_3bhk_size: "ކޮންމެ އެއްޗެއް 350 ޗަންޑްރެ މީޓަރ",
+    land_villas_image_alt: "ލެންޑް ވިލާތައް",
+    floating_villas_image_alt: "ފްލޯޓިން ވިލާތައް",
+    testimonial_text: "ބިވަރލީ އެއަރ ޕްރައިވެޓް އައިލެންޑް ލަކްޝަރީ ރީޑިފައިން ކުރަން. ކޮންމެ ވިލާއަކާ އަދި ފެސިލިޓީއަކާ އެޓެންޝަން ދެވޭ ޑިޓެއިލް އަންމެޗްމަތި. މިއީ ރިސޯޓެއް ނޫން - މިއީ ފުރިހަމަ ޕާސަނަލައިޒް ކުރެވިފައިވާ ޕެރަޑައިސް.",
+    testimonial_author: "- ޖޭމްސް ވިލްސަން، ލަކްޝަރީ ޓްރެވަލް ކޮނިސޯ",
+    cta_title: "އަންތިމަ ޕްރައިވެސީ އެކްސްޕިރިއަންސް",
+    cta_description: "އަދި ތިޔަބައިގެ އެކްސްކްލޫސިވް އައިލެންޑް ރިޓްރީޓް ރިޒާވް ކުރަން",
+    cta_brochure: "ބްރޯޝަރ ރިކްވެސްޓް ކުރަން",
+    cta_visit: "ވިސިޓް ޝެޑިއުލް ކުރަން",
+    footer_address: "އެޑްރެސް",
+    quick_links: "ކުއިކް ލިންކްސް",
+    footer_contact: "ކޮންޓެކްޓް އަސް",
+    footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ރައިޓްސް ރިޒާވް.",
+    footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ",
+    headquarters_address: "ބިޒްނަސް ބޭ",
+    headquarters_country: "ޑުބައި، ޔުނައިޓެޑް އަރަބް އެމިރެޓްސް"
+}}
+  function changeLanguage(lang) {
+                document.getElementById('currentLang').textContent = lang.toUpperCase();
+                document.querySelectorAll('[data-lang-key]').forEach(element => {
+                    const key = element.getAttribute('data-lang-key');
+                    if (translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                    }
+                });
+                document.querySelectorAll('[data-lang-alt]').forEach(element => {
+                    const key = element.getAttribute('data-lang-alt');
+                    if (translations[lang][key]) {
+                        element.alt = translations[lang][key];
+                    }
+                });
+                document.querySelector('html').lang = lang;
+                if (lang === 'ar' || lang === 'dv') {
+                    document.querySelector('html').dir = 'rtl';
+                    document.querySelector('body').style.textAlign = 'right';
+                } else {
+                    document.querySelector('html').dir = 'ltr';
+                    document.querySelector('body').style.textAlign = 'left';
+                }
+                document.querySelector('title').textContent = translations[lang].page_title;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            // Initialize language
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+                changeLanguage(savedLang);
+            });
+</script></body>
 </html>
