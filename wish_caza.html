@@ -26,8 +26,7 @@
         <!-- page preloader begin -->
         <div id="de-loader"></div>
         <!-- page preloader close -->
-
-        <header class="transparent">
+  <header class="transparent">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -36,46 +35,51 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
                             </div>
 
                             <div class="de-flex-col">
-                                <div class="de-flex-col header-col-mid">
+                           <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html" data-translate="menu_home">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html" data-translate="menu_about">About Us</a></li>
-                                        <li><a class="menu-item" href="" data-translate="menu_divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="" data-translate="menu_projects">Projects</a></li>
-                                        <li><a class="menu-item" href="" data-translate="menu_countries">Countries</a></li>
-                                        <li><a class="menu-item" href="" data-translate="menu_news">News</a></li>
-                                        <li><a class="menu-item" href="" data-translate="menu_policies">Our Policies</a></li>
-                                        <li><a class="menu-item" href="" data-translate="menu_carrier">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html" data-translate="menu_contact">Contact Us</a>
-                                            <ul>
-                                                <li><a class="menu-item" href="tickets.html" data-translate="menu_contact_tickets1">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html" data-translate="menu_contact_tickets2">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html" data-translate="menu_contact_news">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html" data-translate="menu_contact_news_single">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html" data-translate="menu_contact_contact">Contact</a></li>
+                                        <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                                        <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                                        <li><a class="menu-item active" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                          <ul>
+                                               <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
+    <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
+    <li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
+    <li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
                                             </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
+                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
+                                        <li>
+                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
+                                          
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
-                               <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select Language">
-    <option value="en">English</option>
-    <option value="si">Sinhala</option>
-    <option value="dv">Dhivehi</option>
-    <option value="ar">Arabic</option>
-    <option value="fr">French</option>
-</select>
+                                <div class="lang-switcher">
+                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                                    </ul>
+                                </div>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -85,7 +89,6 @@
                 </div>
             </div>
         </header>
-
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
             <img src="images/wishgroup/header.png" class="jarallax-img" alt="" data-translate="hero_alt">
             <div class="gradient-edge-bottom h-50"></div>

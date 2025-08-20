@@ -1,566 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Wish Group - Careers</title>
+    <title data-translate="page_title">Wish Group - Careers</title>
     <link rel="icon" href="images/wishgroup/logo.jpeg" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Wish Group Careers" name="description">
-    <meta content="" name="keywords">
-    <meta content="" name="author">
+    <meta content="Wish Group Careers" name="description" data-translate="meta_description">
+    <meta content="Wish Group, Careers, Jobs, Employment, Opportunities" name="keywords" data-translate="meta_keywords">
+    <meta content="Wish Group" name="author" data-translate="meta_author">
     <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/carrier.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
-<style>
-    /* Enhanced Dark Red Color Scheme */
-    :root {
-        --primary: #d1000f;
-        --primary-dark: #9a0007;
-        --primary-light: #ff4d4d;
-        --dark-bg: #0a0a0a;
-        --darker-bg: #050505;
-        --card-bg: #121212;
-        --card-border: #2a2a2a;
-        --text-light: #f8f9fa;
-        --text-muted: #adb5bd;
-        --gradient-red: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-        --glow-red: 0 0 15px rgba(209, 0, 15, 0.7);
-    }
-
-    /* Particle Background for Hero */
-    .particle-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        opacity: 0.3;
-    }
-
-    /* Enhanced Hero Section with Animation */
-    .career-hero {
-        background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(30,30,30,0.95) 100%), 
-                    url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-        background-size: cover;
-        background-position: center;
-        padding: 180px 0 120px;
-        color: var(--text-light);
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .career-hero:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 75% 30%, rgba(209,0,15,0.2) 0%, transparent 50%);
-        z-index: 1;
-        animation: pulse 8s infinite alternate;
-    }
-    
-    .career-hero .container {
-        position: relative;
-        z-index: 2;
-    }
-    
-    .career-hero h1 {
-        font-size: 4rem;
-        font-weight: 800;
-        margin-bottom: 25px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        background: linear-gradient(to right, #ffffff, #f8f9fa);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: fadeInUp 1s ease-out;
-    }
-    
-    .career-hero p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: 0 auto 40px;
-        opacity: 0;
-        animation: fadeInUp 1s ease-out 0.3s forwards;
-    }
-
-    /* Enhanced Buttons with Hover Animation */
-    .btn-career {
-        background: var(--gradient-red);
-        color: white;
-        padding: 16px 40px;
-        border-radius: 30px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: none;
-        box-shadow: 0 4px 15px rgba(209, 0, 15, 0.4);
-        position: relative;
-        overflow: hidden;
-        transform: translateY(20px);
-        opacity: 0;
-        animation: fadeInUp 1s ease-out 0.6s forwards;
-    }
-    
-    .btn-career:hover {
-        background: linear-gradient(135deg, var(--primary-dark) 0%, #6e0004 100%);
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 10px 25px rgba(209, 0, 15, 0.5);
-    }
-    
-    .btn-career:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-        transition: 0.5s;
-    }
-    
-    .btn-career:hover:after {
-        left: 100%;
-    }
-
-    /* Section Titles */
-    .section-title {
-        text-align: center;
-        margin-bottom: 60px;
-        position: relative;
-    }
-    
-    .section-title h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-        position: relative;
-        display: inline-block;
-        padding-bottom: 15px;
-    }
-    
-    .section-title h2:after {
-        content: "";
-        position: absolute;
-        width: 80px;
-        height: 4px;
-        background: var(--gradient-red);
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-    }
-    
-    .section-title p {
-        font-size: 1.1rem;
-        color: var(--text-muted);
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    /* Enhanced Cards with 3D Effect */
-    .program-card {
-        background: var(--card-bg);
-        border-radius: 12px;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        margin-bottom: 30px;
-        border-left: 4px solid var(--primary);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        border: 1px solid var(--card-border);
-        transform-style: preserve-3d;
-        transform: perspective(1000px);
-    }
-    
-    .program-card:hover {
-        transform: translateY(-10px) scale(1.02) rotateX(5deg) rotateY(5deg);
-        box-shadow: 0 15px 40px rgba(209, 0, 15, 0.3), var(--glow-red);
-        border-color: rgba(209, 0, 15, 0.7);
-    }
-    
-    .program-header {
-        background: var(--gradient-red);
-        color: white;
-        padding: 30px;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .program-header:before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 100%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
-        transform: rotate(30deg);
-        animation: shine 3s infinite;
-    }
-    
-    .program-header h3 {
-        position: relative;
-        z-index: 1;
-        font-size: 1.5rem;
-    }
-    
-    .program-body {
-        padding: 30px;
-    }
-    
-    .program-body p {
-        color: var(--text-muted);
-        margin-bottom: 20px;
-    }
-    
-    .program-body ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    
-    .program-body ul li {
-        position: relative;
-        padding-left: 25px;
-        margin-bottom: 10px;
-        transition: all 0.3s;
-    }
-    
-    .program-body ul li:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 8px;
-        width: 10px;
-        height: 10px;
-        background: var(--primary);
-        border-radius: 50%;
-    }
-    
-    .program-body ul li:hover {
-        color: var(--text-light);
-        transform: translateX(5px);
-    }
-
-    /* Animated Stats Section */
-    .stats-section {
-        background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-        padding: 80px 0;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .stats-section:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://www.transparenttextures.com/patterns/dark-stripes.png');
-        opacity: 0.1;
-    }
-    
-    .stats-item {
-        text-align: center;
-        padding: 50px 30px;
-        background: linear-gradient(135deg, rgba(18,18,18,0.8) 0%, rgba(30,30,30,0.8) 100%);
-        border-radius: 12px;
-        margin-bottom: 30px;
-        border: 1px solid var(--card-border);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .stats-item:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: var(--gradient-red);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s ease-out;
-    }
-    
-    .stats-item:hover:after {
-        transform: scaleX(1);
-    }
-    
-    .stats-item h3 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        background: var(--gradient-red);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 15px;
-    }
-    
-    .stats-item p {
-        font-size: 1.1rem;
-        color: var(--text-muted);
-    }
-
-    /* Enhanced Benefits with Flip Animation */
-    .benefit-item {
-        text-align: center;
-        padding: 40px 25px;
-        background: var(--card-bg);
-        border-radius: 12px;
-        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        margin-bottom: 30px;
-        border-bottom: 3px solid var(--primary);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        border: 1px solid var(--card-border);
-        perspective: 1000px;
-        transform-style: preserve-3d;
-        min-height: 300px;
-    }
-    
-    .benefit-item:hover {
-        transform: translateY(-10px) rotateX(5deg) rotateY(5deg) scale(1.03);
-        box-shadow: 0 15px 35px rgba(209, 0, 15, 0.25), var(--glow-red);
-        background: linear-gradient(135deg, #151515 0%, #1a1a1a 100%);
-    }
-
-    /* Enhanced Icon Boxes with Animation */
-    .icon-box {
-        width: 80px;
-        height: 80px;
-        background: linear-gradient(135deg, rgba(209,0,15,0.1) 0%, rgba(154,0,7,0.1) 100%);
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 25px;
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        position: relative;
-    }
-    
-    .icon-box:before {
-        content: "";
-        position: absolute;
-        inset: -5px;
-        border-radius: 25px;
-        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.4s;
-    }
-    
-    .benefit-item:hover .icon-box {
-        transform: rotate(15deg) scale(1.1);
-        background: transparent;
-    }
-    
-    .benefit-item:hover .icon-box:before {
-        opacity: 1;
-    }
-    
-    .icon-box i {
-        color: var(--primary);
-        font-size: 32px;
-        transition: all 0.3s;
-    }
-    
-    .benefit-item:hover .icon-box i {
-        color: white;
-        transform: scale(1.2);
-    }
-    
-    .benefit-item h4 {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-        transition: all 0.3s;
-    }
-    
-    .benefit-item:hover h4 {
-        color: var(--primary-light);
-    }
-    
-    .benefit-item p {
-        color: var(--text-muted);
-        transition: all 0.3s;
-    }
-    
-    .benefit-item:hover p {
-        color: var(--text-light);
-    }
-
-    /* Enhanced Application Section with Floating Elements */
-    .application-section {
-        background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%), 
-                    url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-        background-size: cover;
-        background-position: center;
-        padding: 120px 0;
-        color: var(--text-light);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .application-section:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 25% 70%, rgba(209,0,15,0.15) 0%, transparent 50%);
-        animation: pulse 8s infinite alternate-reverse;
-    }
-    
-    .application-form {
-        background: rgba(18, 18, 18, 0.95);
-        padding: 50px;
-        border-radius: 12px;
-        border-top: 5px solid var(--primary);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-        border: 1px solid var(--card-border);
-        transform: translateY(20px);
-        opacity: 0;
-        animation: fadeInUp 1s ease-out 0.3s forwards;
-    }
-    
-    .application-form h3 {
-        position: relative;
-        padding-bottom: 15px;
-        margin-bottom: 30px;
-        font-size: 1.8rem;
-    }
-    
-    .application-form h3:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 3px;
-        background: var(--gradient-red);
-    }
-
-    /* Enhanced Form Elements */
-    .form-control {
-        background: rgba(30, 30, 30, 0.7);
-        border: 1px solid var(--card-border);
-        color: var(--text-light);
-        padding: 12px 20px;
-        margin-bottom: 20px;
-        transition: all 0.3s;
-    }
-    
-    .form-control:focus {
-        border-color: var(--primary);
-        box-shadow: 0 0 0 0.25rem rgba(209, 0, 15, 0.25);
-        background: rgba(40, 40, 40, 0.7);
-    }
-    
-    .form-control::placeholder {
-        color: var(--text-muted);
-    }
-    
-    select.form-control {
-        appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d1000f' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 15px center;
-        background-size: 12px;
-    }
-
-    /* Animation Keyframes */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    @keyframes pulse {
-        0% {
-            opacity: 0.3;
-        }
-        100% {
-            opacity: 0.7;
-        }
-    }
-    
-    @keyframes shine {
-        from {
-            transform: translateX(-100%) rotate(30deg);
-        }
-        to {
-            transform: translateX(100%) rotate(30deg);
-        }
-    }
-    
-    @keyframes float {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 992px) {
-        .career-hero h1 {
-            font-size: 3rem;
-        }
-        
-        .stats-item {
-            padding: 30px 20px;
-        }
-        
-        .application-form {
-            padding: 30px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .career-hero {
-            padding: 120px 0 80px;
-        }
-        
-        .career-hero h1 {
-            font-size: 2.5rem;
-        }
-        
-        .benefit-item {
-            min-height: auto;
-        }
-        
-        .section-title h2 {
-            font-size: 2rem;
-        }
-    }
-</style>
 </head>
-
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
@@ -581,45 +39,49 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="">
-                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="">
-                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="">
+                                        <img class="logo-main" src="images/wishgroup/logo.jpeg" alt="" data-translate="logo_alt">
+                                        <img class="logo-scroll" src="images/wishgroup/logo.jpeg" alt="" data-translate="logo_alt">
+                                        <img class="logo-mobile" src="images/wishgroup/logo.jpeg" alt="" data-translate="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
                             </div>
 
                             <div class="de-flex-col">
-                                <div class="de-flex-col header-col-mid">
+                           <div class="de-flex-col">
+                               <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html" data-translate="home">Home</a></li>
-                                        <li><a class="menu-item" href="about.html" data-translate="about_us">About Us</a></li>
-                                        <li><a class="menu-item" href="" data-translate="divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="" data-translate="projects">Projects</a></li>
-                                        <li><a class="menu-item" href="" data-translate="countries">Countries</a></li>
-                                        <li><a class="menu-item" href="" data-translate="news">News</a></li>
-                                        <li><a class="menu-item" href="" data-translate="our_policies">Our Policies</a></li>
-                                        <li><a class="menu-item active" href="career.html" data-translate="career">Career</a></li>
-                                        <li><a class="menu-item" href="news.html" data-translate="contact_us">Contact Us</a>
-                                            <ul>
-                                                <li><a class="menu-item" href="tickets.html" data-translate="tickets_style_1">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html" data-translate="tickets_style_2">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html" data-translate="news">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html" data-translate="news_single">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html" data-translate="contact">Contact</a></li>
+                                        <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                                        <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                          <ul>
+                                               <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
+    <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
+    <li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
+    <li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
                                             </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
+                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
+                                        <li><a class="menu-item active" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
+                                        <li>
+                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
+                                          
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+                            </div>
 
                             <div class="de-flex-col">
-                                <select id="language-switcher" onchange="setLanguage(this.value)">
-                                    <option value="en">EN</option>
-                                    <option value="ar">AR</option>
-                                    <option value="fr">FR</option>
-                                    <option value="si">SI</option>
-                                    <option value="dv">DV</option>
+                                <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select Language">
+                                    <option value="en">English</option>
+                                    <option value="si">Sinhala</option>
+                                    <option value="dv">Dhivehi</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="fr">French</option>
                                 </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
@@ -683,7 +145,6 @@
                 <h2 data-translate="wishfriends_title">WishFriends - Career & Growth</h2>
                 <p data-translate="wishfriends_subtitle">Comprehensive programs designed to accelerate your professional development</p>
             </div>
-            
             <div class="row">
                 <div class="col-lg-6">
                     <div class="program-card">
@@ -702,7 +163,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <div class="program-card">
                         <div class="program-header">
@@ -720,7 +180,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <div class="program-card">
                         <div class="program-header">
@@ -738,7 +197,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <div class="program-card">
                         <div class="program-header">
@@ -765,7 +223,6 @@
                 <h2 data-translate="benefits_title">Why Join Wish Group?</h2>
                 <p data-translate="benefits_subtitle">We invest in your growth and wellbeing with industry-leading benefits</p>
             </div>
-            
             <div class="row">
                 <div class="col-md-4">
                     <div class="benefit-item">
@@ -776,7 +233,6 @@
                         <p data-translate="benefit_global_text">Work with international teams across 15+ countries with relocation opportunities</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="benefit-item">
                         <div class="icon-box">
@@ -786,7 +242,6 @@
                         <p data-translate="benefit_learning_text">$2,000 annual training budget plus access to our Wish Academy programs</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="benefit-item">
                         <div class="icon-box">
@@ -796,7 +251,6 @@
                         <p data-translate="benefit_innovation_text">Pitch and implement new solutions with our innovation fund support</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="benefit-item">
                         <div class="icon-box">
@@ -806,7 +260,6 @@
                         <p data-translate="benefit_health_text">Comprehensive medical coverage plus mental health and fitness programs</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="benefit-item">
                         <div class="icon-box">
@@ -816,7 +269,6 @@
                         <p data-translate="benefit_career_text">Customize your career path with multiple growth tracks and role variations</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="benefit-item">
                         <div class="icon-box">
@@ -835,7 +287,6 @@
                 <h2 data-translate="wishhands_title">WishHands - Entrepreneurial Support</h2>
                 <p data-translate="wishhands_subtitle">Turn your ideas into reality with our startup incubation programs</p>
             </div>
-            
             <div class="row">
                 <div class="col-lg-6">
                     <div class="program-card">
@@ -854,7 +305,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <div class="program-card">
                         <div class="program-header">
@@ -881,7 +331,6 @@
                 <h2 data-translate="wishsprite_title">WishSprite - Talent Discovery</h2>
                 <p data-translate="wishsprite_subtitle">Showcase your unique talents beyond your professional role</p>
             </div>
-            
             <div class="row">
                 <div class="col-md-4">
                     <div class="program-card">
@@ -900,7 +349,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="program-card">
                         <div class="program-header">
@@ -918,7 +366,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="program-card">
                         <div class="program-header">
@@ -939,9 +386,6 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-     
-
         <!-- Application Section -->
         <section class="application-section" id="apply-now">
             <div class="container">
@@ -949,57 +393,51 @@
                     <div class="col-lg-6">
                         <h2 class="mb-4" data-translate="apply_title">Ready to Join Wish Group?</h2>
                         <p class="lead" data-translate="apply_text">Submit your application and our HR team will review it within 7 business days. Shortlisted candidates will be contacted for interviews.</p>
-                        
                         <div class="mt-5">
                             <h4 data-translate="contact_hr_title">Contact HR</h4>
                             <p class="mb-1"><i class="fas fa-envelope me-2"></i> <a href="mailto:careers@wishgroup.com" class="text-light">careers@wishgroup.com</a></p>
                             <p class="mb-1"><i class="fas fa-phone me-2"></i> <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
                             <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i> <span data-translate="hr_address">HR Department, Wish Group HQ, Dubai, UAE</span></p>
                         </div>
-                        
                         <div class="mt-5">
                             <h4 data-translate="diversity_title">Diversity & Inclusion</h4>
                             <p data-translate="diversity_text">Wish Group promotes diversity and equal opportunity across all roles. We welcome applicants from all backgrounds. Internship and leadership tracks available throughout the year.</p>
                         </div>
                     </div>
-                    
                     <div class="col-lg-6">
                         <div class="application-form">
                             <h3 data-translate="application_form_title">Application Form</h3>
-                            <form>
+                            <form id="application-form" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Full Name" data-translate="name_placeholder" required>
+                                    <input type="text" id="applicantName" name="applicantName" class="form-control" placeholder="Full Name" data-translate="name_placeholder" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email Address" data-translate="email_placeholder" required>
+                                    <input type="email" id="applicantEmail" name="applicantEmail" class="form-control" placeholder="Email Address" data-translate="email_placeholder" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Phone Number" data-translate="phone_placeholder" required>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number" data-translate="phone_placeholder">
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control" required>
+                                    <select id="position" name="position" class="form-control" required>
                                         <option value="" data-translate="position_select">Select Position</option>
-                                        <option value="intern" data-translate="intern_option">Internship</option>
-                                        <option value="entry" data-translate="entry_option">Entry Level</option>
-                                        <option value="manager" data-translate="manager_option">Manager</option>
-                                        <option value="director" data-translate="director_option">Director</option>
-                                        <option value="executive" data-translate="executive_option">Executive</option>
-                                        <option value="other" data-translate="other_option">Other</option>
+                                        <!-- Options will be populated dynamically via JavaScript -->
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="4" placeholder="Cover Letter" data-translate="cover_letter_placeholder" required></textarea>
+                                    <textarea id="coverLetter" name="coverLetter" class="form-control" rows="4" placeholder="Cover Letter" data-translate="cover_letter_placeholder" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="text-muted mb-2" data-translate="resume_label">Upload Resume</label>
-                                    <input type="file" class="form-control" required>
+                                    <input type="file" id="resume" name="resume" class="form-control" accept=".pdf,.doc,.docx" required>
                                     <small class="text-muted" data-translate="resume_hint">PDF, DOC, or DOCX files only (Max 5MB)</small>
                                 </div>
                                 <div class="form-group form-check mb-4">
-                                    <input type="checkbox" class="form-check-input" id="consent" required>
+                                    <input type="checkbox" id="consent" name="consent" class="form-check-input" required>
                                     <label class="form-check-label" for="consent" data-translate="consent_text">I consent to Wish Group processing my data for recruitment purposes</label>
                                 </div>
                                 <button type="submit" class="btn btn-career w-100" data-translate="submit_application">Submit Application</button>
+                                <div id="success-message" class="alert alert-success mt-3" style="display: none;" data-translate="success_message">Application submitted successfully! Our HR team will contact you within 7 business days.</div>
+                                <div id="error-message" class="alert alert-danger mt-3" style="display: none;" data-translate="error_message">Error submitting application. Please try again or contact HR.</div>
                             </form>
                         </div>
                     </div>
@@ -1007,11 +445,12 @@
             </div>
         </section>
 
+        <!-- Footer -->
         <footer class="text-light section-dark pt-5">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="" data-translate="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -1019,13 +458,11 @@
                             <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
-
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
                         <p class="mb-0" data-translate="address_line_1">121 AI Blvd, San Francisco</p>
                         <p data-translate="address_line_2">BCA 94107</p>
                     </div>
-
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
@@ -1036,21 +473,21 @@
                             <li><a href="#" class="text-light" data-translate="contact_us">Contact Us</a></li>
                         </ul>
                     </div>
-
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="contact_us">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light" data-translate="phone_1">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light" data-translate="phone_2">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light" data-translate="email_1">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light" data-translate="email_2">info@wishgroup.world</a></p>
+                        <p class="mb-1" data-translate="phone_1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1" data-translate="phone_2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0" data-translate="email_1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0" data-translate="email_2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
-
             <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 text-center" data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</div>
+                        <div class="col-md-12 text-center">
+                            <span data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1063,70 +500,810 @@
         <script src="js/custom-marquee.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-        <script src="js/translationsAbout.js"></script>
         <script>
-            // Initialize particle.js background
-            document.addEventListener('DOMContentLoaded', function() {
-                if (typeof particlesJS !== 'undefined') {
-                    particlesJS('particles-js', {
-                        particles: {
-                            number: { value: 80, density: { enable: true, value_area: 800 } },
-                            color: { value: "#d1000f" },
-                            shape: { type: "circle" },
-                            opacity: { value: 0.5, random: true },
-                            size: { value: 3, random: true },
-                            line_linked: { enable: true, distance: 150, color: "#9a0007", opacity: 0.4, width: 1 },
-                            move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
-                        },
-                        interactivity: {
-                            detect_on: "canvas",
-                            events: {
-                                onhover: { enable: true, mode: "repulse" },
-                                onclick: { enable: true, mode: "push" }
-                            }
-                        }
-                    });
+            // Translations object
+            const translations = {
+                en: {
+                    // Meta Tags
+                    page_title: "Wish Group - Careers",
+                    meta_description: "Wish Group Careers",
+                    meta_keywords: "Wish Group, Careers, Jobs, Employment, Opportunities",
+                    meta_author: "Wish Group",
+                    logo_alt: "Wish Group Logo",
+                    footer_logo_alt: "Wish Group Footer Logo",
+                    // Header Menu
+                    home: "Home",
+                    about_us: "About Us",
+                    divisions: "Divisions",
+                    projects: "Projects",
+                    countries: "Countries",
+                    news: "News",
+                    our_policies: "Our Policies",
+                    career: "Career",
+                    contact_us: "Contact Us",
+                    tickets_style_1: "Tickets Style 1",
+                    tickets_style_2: "Tickets Style 2",
+                    news_single: "News Single",
+                    contact: "Contact",
+                    scroll_to_top: "Scroll to top",
+                    // Career Hero Section
+                    career_hero_title: "Shape Your Future With Wish Group",
+                    career_hero_text: "At Wish Group, we don't just offer jobs - we build careers. Join our global family and unlock your potential with our comprehensive growth programs, international opportunities, and entrepreneurial support.",
+                    apply_now: "Begin Your Journey",
+                    // Stats Section
+                    global_presence: "Our Global Presence",
+                    stats_subtitle: "Numbers that define our worldwide impact",
+                    stats_countries: "Countries",
+                    stats_employees: "Employees",
+                    stats_projects: "Projects",
+                    stats_years: "Years",
+                    // WishFriends Program Section
+                    wishfriends_title: "WishFriends - Career & Growth",
+                    wishfriends_subtitle: "Comprehensive programs designed to accelerate your professional development",
+                    career_growth_title: "Career Growth Roadmap",
+                    career_growth_text: "From internship to director track, we provide clear pathways for your professional development with measurable milestones.",
+                    career_growth_point1: "Structured promotion tracks with transparent criteria",
+                    career_growth_point2: "Quarterly performance reviews with growth planning",
+                    career_growth_point3: "Leadership development programs for high-potential employees",
+                    career_growth_point4: "Cross-functional rotation opportunities",
+                    career_growth_point5: "Personalized career coaching sessions",
+                    wish_academy_title: "Wish Academy",
+                    wish_academy_text: "Our state-of-the-art learning platform with customized development paths for every role.",
+                    wish_academy_point1: "Monthly workshops on technical and soft skills",
+                    wish_academy_point2: "Certification programs with leading institutions",
+                    wish_academy_point3: "E-learning platform with 500+ courses",
+                    wish_academy_point4: "Language training for international assignments",
+                    wish_academy_point5: "Executive education partnerships",
+                    global_opportunities_title: "Global Opportunities",
+                    global_opportunities_text: "Expand your horizons with our international assignment programs across 15+ countries.",
+                    global_opportunities_point1: "Internal applications for jobs in other group countries",
+                    global_opportunities_point2: "Short-term project assignments abroad (3-6 months)",
+                    global_opportunities_point3: "Cultural preparation training for international moves",
+                    global_opportunities_point4: "Full relocation support for you and your family",
+                    global_opportunities_point5: "Global leadership immersion programs",
+                    mentorship_title: "Mentorship Program",
+                    mentorship_text: "Accelerate your growth through our structured mentorship ecosystem.",
+                    mentorship_point1: "Senior leaders mentor juniors quarterly",
+                    mentorship_point2: "Reverse mentoring opportunities",
+                    mentorship_point3: "Personalized career coaching sessions",
+                    mentorship_point4: "Exclusive networking events with industry leaders",
+                    mentorship_point5: "Mentor-matching algorithm based on goals",
+                    // Benefits Section
+                    benefits_title: "Why Join Wish Group?",
+                    benefits_subtitle: "We invest in your growth and wellbeing with industry-leading benefits",
+                    benefit_global_title: "Global Exposure",
+                    benefit_global_text: "Work with international teams across 15+ countries with relocation opportunities",
+                    benefit_learning_title: "Continuous Learning",
+                    benefit_learning_text: "$2,000 annual training budget plus access to our Wish Academy programs",
+                    benefit_innovation_title: "Innovation Culture",
+                    benefit_innovation_text: "Pitch and implement new solutions with our innovation fund support",
+                    benefit_health_title: "Health & Wellness",
+                    benefit_health_text: "Comprehensive medical coverage plus mental health and fitness programs",
+                    benefit_career_title: "Career Flexibility",
+                    benefit_career_text: "Customize your career path with multiple growth tracks and role variations",
+                    benefit_rewards_title: "Competitive Rewards",
+                    benefit_rewards_text: "Attractive compensation with performance bonuses and profit sharing",
+                    // WishHands Section
+                    wishhands_title: "WishHands - Entrepreneurial Support",
+                    wishhands_subtitle: "Turn your ideas into reality with our startup incubation programs",
+                    startup_pitch_title: "Startup Pitch Day",
+                    startup_pitch_text: "Quarterly events where employees pitch ideas to our executive panel and investors.",
+                    startup_pitch_point1: "Executive panel with venture capitalists",
+                    startup_pitch_point2: "Detailed feedback on business models",
+                    startup_pitch_point3: "Prototyping lab access for winning ideas",
+                    startup_pitch_point4: "Full access to Wish Group's network",
+                    startup_pitch_point5: "Legal and IP support",
+                    seed_fund_title: "Seed Fund Grants",
+                    seed_fund_text: "Financial support to validate and launch your entrepreneurial ideas.",
+                    seed_fund_point1: "Up to $5,000 per venture after review",
+                    seed_fund_point2: "Milestone-based funding structure",
+                    seed_fund_point3: "Equity-free investment for employees",
+                    seed_fund_point4: "Follow-on funding opportunities",
+                    seed_fund_point5: "Accounting and legal support",
+                    // WishSprite Section
+                    wishsprite_title: "WishSprite - Talent Discovery",
+                    wishsprite_subtitle: "Showcase your unique talents beyond your professional role",
+                    talent_fest_title: "Annual Talent Fest",
+                    talent_fest_text: "Our flagship event celebrating diverse talents across the Wish Group family.",
+                    talent_fest_point1: "Music, dance, poetry competitions",
+                    talent_fest_point2: "Tech invention showcases",
+                    talent_fest_point3: "Creative writing exhibitions",
+                    talent_fest_point4: "Judges from creative industries",
+                    talent_fest_point5: "Substantial cash prizes",
+                    sprite_month_title: "Sprite of the Month",
+                    sprite_month_text: "Recognizing exceptional employees who go beyond their job descriptions.",
+                    sprite_month_point1: "Peer-nominated recognition",
+                    sprite_month_point2: "Featured on company platforms",
+                    sprite_month_point3: "Special privileges and rewards",
+                    sprite_month_point4: "Year-end grand prize",
+                    sprite_month_point5: "Executive mentorship",
+                    talent_exchange_title: "Talent Exchange",
+                    talent_exchange_text: "Cross-border creative collaborations between our global offices.",
+                    talent_exchange_point1: "Maldives artists in UAE events",
+                    talent_exchange_point2: "Cross-border creative projects",
+                    talent_exchange_point3: "Cultural exchange programs",
+                    talent_exchange_point4: "Global talent showcase",
+                    talent_exchange_point5: "Skill-sharing workshops",
+                    // Application Section
+                    apply_title: "Ready to Join Wish Group?",
+                    apply_text: "Submit your application and our HR team will review it within 7 business days. Shortlisted candidates will be contacted for interviews.",
+                    contact_hr_title: "Contact HR",
+                    hr_address: "HR Department, Wish Group HQ, Dubai, UAE",
+                    diversity_title: "Diversity & Inclusion",
+                    diversity_text: "Wish Group promotes diversity and equal opportunity across all roles. We welcome applicants from all backgrounds. Internship and leadership tracks available throughout the year.",
+                    application_form_title: "Application Form",
+                    name_placeholder: "Full Name",
+                    email_placeholder: "Email Address",
+                    phone_placeholder: "Phone Number",
+                    position_select: "Select Position",
+                    cover_letter_placeholder: "Cover Letter",
+                    resume_label: "Upload Resume",
+                    resume_hint: "PDF, DOC, or DOCX files only (Max 5MB)",
+                    consent_text: "I consent to Wish Group processing my data for recruitment purposes",
+                    submit_application: "Submit Application",
+                    success_message: "Application submitted successfully! Our HR team will contact you within 7 business days.",
+                    error_message: "Error submitting application. Please try again or contact HR.",
+                    // Footer
+                    address: "Address",
+                    address_line_1: "121 AI Blvd, San Francisco",
+                    address_line_2: "BCA 94107",
+                    quick_links: "Quick Links",
+                    phone_1: "T. +971 4259 7167",
+                    phone_2: "M. +971 4259 4795",
+                    email_1: "E. info@wishgroup.ae",
+                    email_2: "E. info@wishgroup.world",
+                    footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+                },
+                si: {
+                    // Meta Tags
+                    page_title: "විෂ් සමූහය - වෘත්තීන්",
+                    meta_description: "විෂ් සමූහයේ වෘත්තීන්",
+                    meta_keywords: "විෂ් සමූහය, වෘත්තීන්, රැකියා, රැකියා අවස්ථා",
+                    meta_author: "විෂ් සමූහය",
+                    logo_alt: "විෂ් සමූහ ලාංඡනය",
+                    footer_logo_alt: "විෂ් සමූහ පාදක ලාංඡනය",
+                    // Header Menu
+                    home: "මුල් පිටුව",
+                    about_us: "අප ගැන",
+                    divisions: "අංශ",
+                    projects: "ව්‍යාපෘති",
+                    countries: "රටවල්",
+                    news: "පුවත්",
+                    our_policies: "අපගේ ප්‍රතිපත්ති",
+                    career: "වෘත්තිය",
+                    contact_us: "සම්බන්ධ වන්න",
+                    tickets_style_1: "ටිකට් විලාසිතා 1",
+                    tickets_style_2: "ටිකට් විලාසිතා 2",
+                    news_single: "පුවත් තනි",
+                    contact: "සම්බන්ධ වන්න",
+                    scroll_to_top: "ඉහළට ලිස්සා යන්න",
+                    // Career Hero Section
+                    career_hero_title: "විෂ් සමූහය සමඟ ඔබේ අනාගතය හැඩගස්වන්න",
+                    career_hero_text: "විෂ් සමූහයේදී, අපි රැකියා පමණක් ලබා නොදෙන්නෙමු - අපි වෘත්තීන් ගොඩනඟන්නෙමු. අපගේ ගෝලීය පවුලට එක්වන්න සහ අපගේ සම්පූර්ණ වර්ධන වැඩසටහන්, ජාත්‍යන්තර අවස්ථා, සහ ව්‍යවසායක සහාය සමඟ ඔබේ හැකියාවන් විවෘත කරන්න.",
+                    apply_now: "ඔබේ ගමන ආරම්භ කරන්න",
+                    // Stats Section
+                    global_presence: "අපගේ ගෝලීය පැවැත්ම",
+                    stats_subtitle: "අපගේ ගෝලීය බලපෑම නිර්වචනය කරන ඉලක්කම්",
+                    stats_countries: "රටවල්",
+                    stats_employees: "සේවකයින්",
+                    stats_projects: "ව්‍යාපෘති",
+                    stats_years: "වසර",
+                    // WishFriends Program Section
+                    wishfriends_title: "විෂ් ෆ්‍රෙන්ඩ්ස් - වෘත්තිය සහ වර්ධනය",
+                    wishfriends_subtitle: "ඔබේ වෘත්තීය දියුණුව වේගවත් කිරීමට නිර්මාණය කර ඇති සම්පූර්ණ වැඩසටහන්",
+                    career_growth_title: "වෘත්තීය වර්ධන මාර්ග සිතියම",
+                    career_growth_text: "පුහුණුකරුවන්ගේ සිට අධ්‍යක්ෂක මට්ටම දක්වා, අපි ඔබේ වෘත්තීය දියුණුව සඳහා පැහැදිලි මාර්ග සපයන්නෙමු.",
+                    career_growth_point1: "පාරදෘෂ්‍යික මානදණ්ඩ සහිත ව්‍යුහගත උසස්වීම් මාර්ග",
+                    career_growth_point2: "තුන්මසකට වරක් කාර්ය සාධන සමාලෝචන සහ වර්ධන සැලසුම්",
+                    career_growth_point3: "ඉහළ හැකියාවන් ඇති සේවකයින් සඳහා නායකත්ව දියුණු වැඩසටහන්",
+                    career_growth_point4: "විවිධ ක්ෂේත්‍රවල භ්‍රමණ අවස්ථා",
+                    career_growth_point5: "පුද්ගලික වෘත්තීය උපදේශන සැසි",
+                    wish_academy_title: "විෂ් ඇකඩමි",
+                    wish_academy_text: "සෑම භූමිකාවකටම අභිරුචිකරණය කළ දියුණු මාර්ග සහිත අපගේ නවීනතම ඉගෙනුම් වේදිකාව.",
+                    wish_academy_point1: "තාක්ෂණික සහ මෘදු කුසලතා පිළිබඳ මාසික වැඩමුළු",
+                    wish_academy_point2: "ප්‍රමුඛ ආයතන සමඟ සහතික වැඩසටහන්",
+                    wish_academy_point3: "පාඨමාලා 500කට වඩා ඇති ඉ-ලර්නිං වේදිකාව",
+                    wish_academy_point4: "ජාත්‍යන්තර පැවරුම් සඳහා භාෂා පුහුණුව",
+                    wish_academy_point5: "විධායක අධ්‍යාපන හවුල්කාරිත්ව",
+                    global_opportunities_title: "ගෝලීය අවස්ථා",
+                    global_opportunities_text: "රටවල් 15කට වැඩි ගණනක ජාත්‍යන්තර පැවරුම් වැඩසටහන් සමඟ ඔබේ අවකාශය පුළුල් කරන්න.",
+                    global_opportunities_point1: "සමූහයේ අනෙකුත් රටවල රැකියා සඳහා අභ්‍යන්තර ඉල්ලුම්",
+                    global_opportunities_point2: "විදේශයන්හි කෙටිකාලීන ව්‍යාපෘති පැවරුම් (මාස 3-6)",
+                    global_opportunities_point3: "ජාත්‍යන්තර චලනයන් සඳහා සංස්කෘතික සූදානම් පුහුණුව",
+                    global_opportunities_point4: "ඔබට සහ ඔබේ පවුලට සම්පූර්ණ පදිංචි සහාය",
+                    global_opportunities_point5: "ගෝලීය නායකත්ව ගිල්වීමේ වැඩසටහන්",
+                    mentorship_title: "උපදේශන වැඩසටහන",
+                    mentorship_text: "අපගේ ව්‍යුහගත උපදේශන පරිසර පද්ධතිය හරහා ඔබේ වර්ධනය වේගවත් කරන්න.",
+                    mentorship_point1: "ජ්‍යෙෂ්ඨ නායකයින් තුන්මසකට වරක් ජූනියර්වරුන්ට උපදෙස් දෙති",
+                    mentorship_point2: "ප්‍රතිලෝම උපදේශන අවස්ථා",
+                    mentorship_point3: "පුද්ගලික වෘත්තීය උපදේශන සැසි",
+                    mentorship_point4: "කර්මාන්ත නායකයින් සමඟ සුවිශේෂ ජාලකරණ උත්සව",
+                    mentorship_point5: "ඉලක්ක මත පදනම් වූ උපදේශක ගැලපුම් ඇල්ගොරිතම",
+                    // Benefits Section
+                    benefits_title: "විෂ් සමූහයට එක්වන්නේ ඇයි?",
+                    benefits_subtitle: "අපි කර්මාන්ත-ප්‍රමුඛ ප්‍රතිලාභ සමඟ ඔබේ වර්ධනය සහ යහපැවැත්මට ආයෝජනය කරන්නෙමු",
+                    benefit_global_title: "ගෝලීය නිරාවරණය",
+                    benefit_global_text: "පදිංචි අවස්ථා සමඟ රටවල් 15කට වඩා වැඩි ගණනක ජාත්‍යන්තර කණ්ඩායම් සමඟ වැඩ කරන්න",
+                    benefit_learning_title: "අඛණ්ඩ ඉගෙනුම",
+                    benefit_learning_text: "වාර්ෂික පුහුණු අයවැය ඩොලර් 2,000ක් සහ අපගේ විෂ් ඇකඩමි වැඩසටහන් වලට ප්‍රවේශය",
+                    benefit_innovation_title: "නවෝත්පාදන සංස්කෘතිය",
+                    benefit_innovation_text: "අපගේ නවෝත්පාදන අරමුදලේ සහාය ඇතිව නව විසඳුම් ඉදිරිපත් කර ක්‍රියාත්මක කරන්න",
+                    benefit_health_title: "සෞඛ්‍ය සහ යහපැවැත්ම",
+                    benefit_health_text: "සම්පූර්ණ වෛද්‍ය ආවරණය සහ මානසික සෞඛ්‍ය සහ යෝග්‍යතා වැඩසටහන්",
+                    benefit_career_title: "වෘත්තීය නම්‍යශීලිත්වය",
+                    benefit_career_text: "බහුවිධ වර්ධන මාර්ග සහ භූමිකා විචලන සමඟ ඔබේ වෘත්තීය මාර්ගය අභිරුචිකරණය කරන්න",
+                    benefit_rewards_title: "තරඟකාරී විපාක",
+                    benefit_rewards_text: "කාර්ය සාධන බෝනස් සහ ලාභ බෙදාගැනීම සමඟ ආකර්ෂණීය වන්දි",
+                    // WishHands Section
+                    wishhands_title: "විෂ් හෑන්ඩ්ස් - ව්‍යවසායක සහාය",
+                    wishhands_subtitle: "අපගේ ආරම්භක ඉන්කියුබේෂන් වැඩසටහන් සමඟ ඔබේ අදහස් යථාර්ථයක් කරන්න",
+                    startup_pitch_title: "ආරම්භක පිච් දිනය",
+                    startup_pitch_text: "සේවකයින් අපගේ විධායක මණ්ඩලයට සහ ආයෝජකයින්ට අදහස් ඉදිරිපත් කරන තුන්මසකට වරක් උත්සව.",
+                    startup_pitch_point1: "ව්‍යවසායක ප්‍රාග්ධනකරුවන් සමඟ විධායක මණ්ඩලය",
+                    startup_pitch_point2: "ව්‍යාපාරික ආකෘති පිළිබඳ විස්තරාත්මක ප්‍රතිපෝෂණ",
+                    startup_pitch_point3: "ජයග්‍රාහී අදහස් සඳහා ප්‍රෝටෝටයිපිං රසායනාගාර ප්‍රවේශය",
+                    startup_pitch_point4: "විෂ් සමූහයේ ජාලයට සම්පූර්ණ ප්‍රවේශය",
+                    startup_pitch_point5: "නීතිමය සහ බුද්ධිමය දේපළ සහාය",
+                    seed_fund_title: "බීජ අරමුදල් ප්‍රදාන",
+                    seed_fund_text: "ඔබේ ව්‍යවසායක අදහස් වලංගු කිරීමට සහ දියත් කිරීමට මූල්‍ය සහාය.",
+                    seed_fund_point1: "සමාලෝචනයෙන් පසු ව්‍යාපාරයකට ඩොලර් 5,000 දක්වා",
+                    seed_fund_point2: "මායිම් මත පදනම් වූ අරමුදල් ව්‍යුහය",
+                    seed_fund_point3: "සේවකයින් සඳහා කොටස්-නිදහස් ආයෝජන",
+                    seed_fund_point4: "පසු-අරමුදල් අවස්ථා",
+                    seed_fund_point5: "ගිණුම්කරණ සහ නීතිමය සහාය",
+                    // WishSprite Section
+                    wishsprite_title: "විෂ් ස්ප්‍රයිට් - ටැලන්ට් ඩිස්කවරි",
+                    wishsprite_subtitle: "ඔබේ වෘත්තීය භූමිකාව ඉක්මවා ඔබේ අනන්‍ය හැකියාවන් ප්‍රදර්ශනය කරන්න",
+                    talent_fest_title: "වාර්ෂික ටැලන්ට් ෆෙස්ට්",
+                    talent_fest_text: "විෂ් සමූහ පවුල හරහා විවිධ හැකියාවන් සැමරීමේ අපගේ ප්‍රමුඛ උත්සවය.",
+                    talent_fest_point1: "සංගීතය, නැටුම්, කවි තරඟ",
+                    talent_fest_point2: "තාක්ෂණික නව නිපැයුම් ප්‍රදර්ශන",
+                    talent_fest_point3: "නිර්මාණාත්මක ලිවීමේ ප්‍රදර්ශන",
+                    talent_fest_point4: "නිර්මාණාත්මක කර්මාන්තවලින් විනිසුරුවන්",
+                    talent_fest_point5: "සැලකිය යුතු මුදල් ත්‍යාග",
+                    sprite_month_title: "මාසයේ ස්ප්‍රයිට්",
+                    sprite_month_text: "ඔවුන්ගේ රැකියා විස්තර ඉක්මවා යන සුවිශේෂී සේවකයින් හඳුනා ගැනීම.",
+                    sprite_month_point1: "සම වයසේ යෝජනා කිරීමේ පිළිගැනීම",
+                    sprite_month_point2: "සමාගම් වේදිකාවල ඉස්මතු කිරීම",
+                    sprite_month_point3: "විශේෂ වරප්‍රසාද සහ ත්‍යාග",
+                    sprite_month_point4: "වසර අවසානයේ මහා ත්‍යාගය",
+                    sprite_month_point5: "විධායක උපදේශනය",
+                    talent_exchange_title: "ටැලන්ට් එක්ස්චේන්ජ්",
+                    talent_exchange_text: "අපගේ ගෝලීය කාර්යාල අතර හරස්-දේශසීමා නිර්මාණාත්මක සහයෝගීතා.",
+                    talent_exchange_point1: "එක්සත් අරාබි එමීර් උත්සවවල මාලදිවයින් කලාකරුවන්",
+                    talent_exchange_point2: "හරස්-දේශසීමා නිර්මාණාත්මක ව්‍යාපෘති",
+                    talent_exchange_point3: "සංස්කෘතික හුවමාරු වැඩසටහන්",
+                    talent_exchange_point4: "ගෝලීය හැකියාවන් ප්‍රදර්ශනය",
+                    talent_exchange_point5: "කුසලතා-බෙදාගැනීමේ වැඩමුළු",
+                    // Application Section
+                    apply_title: "විෂ් සමූහයට එක්වීමට සූදානම්ද?",
+                    apply_text: "ඔබේ ඉල්ලුම්පත ඉදිරිපත් කරන්න, අපගේ මානව සම්පත් කණ්ඩායම එය ව්‍යාපාරික දින 7ක් ඇතුළත සමාලෝචනය කරනු ඇත. තෝරාගත් අපේක්ෂකයින් සම්මුඛ පරීක්ෂණ සඳහා සම්බන්ධ කර ගනු ඇත.",
+                    contact_hr_title: "මානව සම්පත් සම්බන්ධ කරන්න",
+                    hr_address: "මානව සම්පත් දෙපාර්තමේන්තුව, විෂ් සමූහ මූලස්ථානය, ඩුබායි, එක්සත් අරාබි එමීර්",
+                    diversity_title: "විවිධත්වය සහ ඇතුළත් කිරීම",
+                    diversity_text: "විෂ් සමූහය සියලුම භූමිකා හරහා විවිධත්වය සහ සමාන අවස්ථා ප්‍රවර්ධනය කරයි. අපි සියලුම පසුබිම්වලින් ඉල්ලුම්කරුවන් පිළිගනිමු. වසර පුරා පුහුණුකරු සහ නායකත්ව මාර්ග තිබේ.",
+                    application_form_title: "ඉල්ලුම්පත්‍රය",
+                    name_placeholder: "සම්පූර්ණ නම",
+                    email_placeholder: "විද්‍යුත් තැපැල් ලිපිනය",
+                    phone_placeholder: "දුරකථන අංකය",
+                    position_select: "තනතුර තෝරන්න",
+                    cover_letter_placeholder: "කවර ලිපිය",
+                    resume_label: "බයෝඩේටා උඩුගත කරන්න",
+                    resume_hint: "PDF, DOC, හෝ DOCX ගොනු පමණි (උපරිම 5MB)",
+                    consent_text: "බඳවා ගැනීමේ අරමුණු සඳහා මගේ දත්ත සැකසීමට විෂ් සමූහයට මම එකඟ වෙමි",
+                    submit_application: "ඉල්ලුම්පත ඉදිරිපත් කරන්න",
+                    success_message: "ඉල්ලුම්පත සාර්ථකව ඉදිරිපත් කරන ලදි! අපගේ මානව සම්පත් කණ්ඩායම ව්‍යාපාරික දින 7ක් ඇතුළත ඔබව සම්බන්ධ කර ගනු ඇත.",
+                    error_message: "ඉල්ලුම්පත ඉදිරිපත් කිරීමේ දෝෂයකි. කරුණාකර නැවත උත්සාහ කරන්න හෝ මානව සම්පත් අමතන්න.",
+                    // Footer
+                    address: "ලිපිනය",
+                    address_line_1: "121 AI Blvd, සැන් ෆ්‍රැන්සිස්කෝ",
+                    address_line_2: "BCA 94107",
+                    quick_links: "ඉක්මන් සබැඳි",
+                    phone_1: "දුරකථන: +971 4259 7167",
+                    phone_2: "ජංගම: +971 4259 4795",
+                    email_1: "විද්‍යුත් තැපෑල: info@wishgroup.ae",
+                    email_2: "විද්‍යුත් තැපෑල: info@wishgroup.world",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් සමූහය. සියලුම හිමිකම් ඇවිරිණි."
+                },
+            
+  ar: {
+    // Meta Tags
+    page_title: "مجموعة ويش - الوظائف",
+    meta_description: "وظائف مجموعة ويش",
+    meta_keywords: "مجموعة ويش، وظائف، فرص عمل، توظيف، فرص",
+    meta_author: "مجموعة ويش",
+    logo_alt: "شعار مجموعة ويش",
+    footer_logo_alt: "شعار تذييل مجموعة ويش",
+    // Header Menu
+    home: "الرئيسية",
+    about_us: "معلومات عنا",
+    divisions: "الأقسام",
+    projects: "المشاريع",
+    countries: "الدول",
+    news: "الأخبار",
+    our_policies: "سياساتنا",
+    career: "الوظائف",
+    contact_us: "تواصل معنا",
+    tickets_style_1: "تذكرة النمط 1",
+    tickets_style_2: "تذكرة النمط 2",
+    news_single: "خبر واحد",
+    contact: "اتصل بنا",
+    scroll_to_top: "التمرير إلى الأعلى",
+    // Career Hero Section
+    career_hero_title: "صيغ مستقبلك مع مجموعة ويش",
+    career_hero_text: "في مجموعة ويش، لا نقدم وظائف فقط - بل نبني مسارات مهنية. انضم إلى عائلتنا العالمية وأطلق العنان لإمكانياتك من خلال برامج النمو الشاملة، الفرص الدولية، والدعم الريادي.",
+    apply_now: "ابدأ رحلتك",
+    // Stats Section
+    global_presence: "تواجدنا العالمي",
+    stats_subtitle: "الأرقام التي تحدد تأثيرنا العالمي",
+    stats_countries: "دول",
+    stats_employees: "موظفين",
+    stats_projects: "مشاريع",
+    stats_years: "سنوات",
+    // WishFriends Program Section
+    wishfriends_title: "ويش فريندز - الوظائف والنمو",
+    wishfriends_subtitle: "برامج شاملة مصممة لتسريع تطورك المهني",
+    career_growth_title: "خارطة طريق النمو الوظيفي",
+    career_growth_text: "من التدريب إلى مسار المدير، نحن نقدم مسارات واضحة لتطورك المهني مع معالم قابلة للقياس.",
+    career_growth_point1: "مسارات ترقية منظمة بمعايير شفافة",
+    career_growth_point2: "مراجعات الأداء ربع السنوية مع التخطيط للنمو",
+    career_growth_point3: "برامج تطوير القيادة للموظفين ذوي الإمكانيات العالية",
+    career_growth_point4: "فرص التناوب عبر الوظائف",
+    career_growth_point5: "جلسات تدريب مهني شخصية",
+    wish_academy_title: "أكاديمية ويش",
+    wish_academy_text: "منصتنا التعليمية المتطورة مع مسارات تطوير مخصصة لكل دور.",
+    wish_academy_point1: "ورش عمل شهرية حول المهارات التقنية والشخصية",
+    wish_academy_point2: "برامج شهادات مع مؤسسات رائدة",
+    wish_academy_point3: "منصة تعليم إلكتروني تضم أكثر من 500 دورة",
+    wish_academy_point4: "تدريب لغوي للمهام الدولية",
+    wish_academy_point5: "شراكات تعليم تنفيذي",
+    global_opportunities_title: "الفرص العالمية",
+    global_opportunities_text: "وسّع آفاقك مع برامج المهام الدولية عبر أكثر من 15 دولة.",
+    global_opportunities_point1: "طلبات داخلية لوظائف في دول المجموعة الأخرى",
+    global_opportunities_point2: "مهام مشاريع قصيرة الأمد في الخارج (3-6 أشهر)",
+    global_opportunities_point3: "تدريب الإعداد الثقافي للانتقالات الدولية",
+    global_opportunities_point4: "دعم كامل للانتقال لك ولعائلتك",
+    global_opportunities_point5: "برامج الانغماس في القيادة العالمية",
+    mentorship_title: "برنامج الإرشاد",
+    mentorship_text: "سرّع نموك من خلال نظامنا الإرشادي المنظم.",
+    mentorship_point1: "قادة كبار يرشدون المبتدئين ربع السنوي",
+    mentorship_point2: "فرص الإرشاد العكسي",
+    mentorship_point3: "جلسات تدريب مهني شخصية",
+    mentorship_point4: "فعاليات تواصل حصرية مع قادة الصناعة",
+    mentorship_point5: "خوارزمية مطابقة المرشدين بناءً على الأهداف",
+    // Benefits Section
+    benefits_title: "لماذا تنضم إلى مجموعة ويش؟",
+    benefits_subtitle: "نستثمر في نموك ورفاهيتك مع مزايا رائدة في الصناعة",
+    benefit_global_title: "التعرض العالمي",
+    benefit_global_text: "اعمل مع فرق دولية عبر أكثر من 15 دولة مع فرص الانتقال",
+    benefit_learning_title: "التعلم المستمر",
+    benefit_learning_text: "ميزانية تدريب سنوية بقيمة 2000 دولار بالإضافة إلى الوصول إلى برامج أكاديمية ويش",
+    benefit_innovation_title: "ثقافة الابتكار",
+    benefit_innovation_text: "قدّم حلولاً جديدة ونفذها بدعم من صندوق الابتكار لدينا",
+    benefit_health_title: "الصحة والعافية",
+    benefit_health_text: "تغطية طبية شاملة بالإضافة إلى برامج الصحة النفسية واللياقة البدنية",
+    benefit_career_title: "المرونة الوظيفية",
+    benefit_career_text: "خصص مسارك المهني مع مسارات نمو متعددة وتغييرات في الأدوار",
+    benefit_rewards_title: "مكافآت تنافسية",
+    benefit_rewards_text: "تعويضات جذابة مع مكافآت الأداء ومشاركة الأرباح",
+    // WishHands Section
+    wishhands_title: "ويش هاندز - الدعم الريادي",
+    wishhands_subtitle: "حوّل أفكارك إلى واقع مع برامجنا لتفريخ الشركات الناشئة",
+    startup_pitch_title: "يوم عرض المشاريع الناشئة",
+    startup_pitch_text: "فعاليات ربع سنوية حيث يقدم الموظفون أفكارهم إلى لجنة تنفيذية ومستثمرين.",
+    startup_pitch_point1: "لجنة تنفيذية مع مستثمري رأس المال الجريء",
+    startup_pitch_point2: "تعليقات مفصلة على نماذج الأعمال",
+    startup_pitch_point3: "الوصول إلى مختبر النماذج الأولية للأفكار الفائزة",
+    startup_pitch_point4: "الوصول الكامل إلى شبكة مجموعة ويش",
+    startup_pitch_point5: "الدعم القانوني وحقوق الملكية الفكرية",
+    seed_fund_title: "منح صندوق البذور",
+    seed_fund_text: "دعم مالي للتحقق من أفكارك الريادية وإطلاقها.",
+    seed_fund_point1: "ما يصل إلى 5000 دولار لكل مشروع بعد المراجعة",
+    seed_fund_point2: "هيكل تمويل قائم على المعالم",
+    seed_fund_point3: "استثمار خالٍ من الأسهم للموظفين",
+    seed_fund_point4: "فرص تمويل لاحقة",
+    seed_fund_point5: "الدعم المحاسبي والقانوني",
+    // WishSprite Section
+    wishsprite_title: "ويش سبرايت - اكتشاف المواهب",
+    wishsprite_subtitle: "اعرض مواهبك الفريدة خارج دورك المهني",
+    talent_fest_title: "مهرجان المواهب السنوي",
+    talent_fest_text: "حدثنا الرئيسي الذي يحتفل بالمواهب المتنوعة عبر عائلة مجموعة ويش.",
+    talent_fest_point1: "مسابقات الموسيقى والرقص والشعر",
+    talent_fest_point2: "عروض اختراعات التكنولوجيا",
+    talent_fest_point3: "معارض الكتابة الإبداعية",
+    talent_fest_point4: "حكام من الصناعات الإبداعية",
+    talent_fest_point5: "جوائز نقدية كبيرة",
+    sprite_month_title: "سبرايت الشهر",
+    sprite_month_text: "تكريم الموظفين الاستثنائيين الذين يتجاوزون أوصاف وظائفهم.",
+    sprite_month_point1: "تكريم بناءً على ترشيح الأقران",
+    sprite_month_point2: "الظهور على منصات الشركة",
+    sprite_month_point3: "امتيازات ومكافآت خاصة",
+    sprite_month_point4: "جائزة كبرى في نهاية العام",
+    sprite_month_point5: "إرشاد تنفيذي",
+    talent_exchange_title: "تبادل المواهب",
+    talent_exchange_text: "التعاونات الإبداعية عبر الحدود بين مكاتبنا العالمية.",
+    talent_exchange_point1: "فنانو المالديف في فعاليات الإمارات",
+    talent_exchange_point2: "مشاريع إبداعية عابرة للحدود",
+    talent_exchange_point3: "برامج التبادل الثقافي",
+    talent_exchange_point4: "عرض المواهب العالمية",
+    talent_exchange_point5: "ورش عمل مشاركة المهارات",
+    // Application Section
+    apply_title: "هل أنت جاهز للانضمام إلى مجموعة ويش؟",
+    apply_text: "قدّم طلبك وسيقوم فريق الموارد البشرية لدينا بمراجعته خلال 7 أيام عمل. سيتم التواصل مع المرشحين المختارين لإجراء المقابلات.",
+    contact_hr_title: "تواصل مع الموارد البشرية",
+    hr_address: "قسم الموارد البشرية، مقر مجموعة ويش، دبي، الإمارات العربية المتحدة",
+    diversity_title: "التنوع والشمول",
+    diversity_text: "تعزز مجموعة ويش التنوع وتكافؤ الفرص عبر جميع الأدوار. نرحب بالمتقدمين من جميع الخلفيات. مسارات التدريب والقيادة متاحة طوال العام.",
+    application_form_title: "نموذج التقديم",
+    name_placeholder: "الاسم الكامل",
+    email_placeholder: "عنوان البريد الإلكتروني",
+    phone_placeholder: "رقم الهاتف",
+    position_select: "اختر الوظيفة",
+    cover_letter_placeholder: "رسالة تقديم",
+    resume_label: "رفع السيرة الذاتية",
+    resume_hint: "ملفات PDF، DOC، أو DOCX فقط (بحد أقصى 5 ميغابايت)",
+    consent_text: "أوافق على معالجة مجموعة ويش لبياناتي لأغراض التوظيف",
+    submit_application: "إرسال الطلب",
+    success_message: "تم تقديم الطلب بنجاح! سيقوم فريق الموارد البشرية بالتواصل معك خلال 7 أيام عمل.",
+    error_message: "خطأ في تقديم الطلب. يرجى المحاولة مرة أخرى أو التواصل مع الموارد البشرية.",
+    // Footer
+    address: "العنوان",
+    address_line_1: "121 شارع الذكاء الاصطناعي، سان فرانسيسكو",
+    address_line_2: "BCA 94107",
+    quick_links: "روابط سريعة",
+    phone_1: "هاتف: +971 4259 7167",
+    phone_2: "جوال: +971 4259 4795",
+    email_1: "بريد إلكتروني: info@wishgroup.ae",
+    email_2: "بريد إلكتروني: info@wishgroup.world",
+    footer_copyright: "حقوق الطبع والنشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
+  },
+  dv: {
+    // Meta Tags
+    page_title: "ވިޝް ގްރޫޕް - ކެރިއަރ",
+    meta_description: "ވިޝް ގްރޫޕް ކެރިއަރ",
+    meta_keywords: "ވިޝް ގްރޫޕް، ކެރިއަރ، ޖޮބްސް، އެމްޕްލޮޔްމަންޓް، އޮޕޮރޓިއުނިޓީސް",
+    meta_author: "ވިޝް ގްރޫޕް",
+    logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+    footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ",
+    // Header Menu
+    home: "މުހިން",
+    about_us: "ތިމަން ގެ ގޮތުން",
+    divisions: "ޑިވިޝަންތައް",
+    projects: "ޕްރޮޖެކްޓްތައް",
+    countries: "ރަށްތައް",
+    news: "ޚަބަރު",
+    our_policies: "ތިމަންގެ ޕޮލިސީތައް",
+    career: "ކެރިއަރ",
+    contact_us: "ކޮންޓެކްޓް",
+    tickets_style_1: "ޓިކެޓް ސްޓައިލް 1",
+    tickets_style_2: "ޓިކެޓް ސްޓައިލް 2",
+    news_single: "ޚަބަރު ސިންގަލް",
+    contact: "ކޮންޓެކްޓް",
+    scroll_to_top: "މަތިލަށް ސްކްރޯލް ކުރަން",
+    // Career Hero Section
+    career_hero_title: "ވިޝް ގްރޫޕް އެކު ތިޔަ މިނިވަންކަމަށް ފޯމެއް ކުރަން",
+    career_hero_text: "ވިޝް ގްރޫޕްގައި، ތިމަން ޖޮބް އޮފަރ ކުރާތީ އެއްކޮށް ނޫން - ތިމަން ކެރިއަރ ބިލްޑް ކުރަން. ތިމަންގެ ގޯލްބަލް ފެމިލީއަށް ޖޮއިން ކުރުމަށްފަހު، ތިމަންގެ ކޮމްޕްރިހެންސިވް ގްރޯތް ޕްރޮގްރަމްތަކާ، އިންޓަރނެޝަނަލް އޮޕޮރޓިއުނިޓީތަކާ، އަދި އެންޓްރަޕްރެނޭއަރިއަލް ސަޕޯރޓް އެކު ތިޔަ ޕޮޓެންޝަލް އަންލޮކް ކުރަން.",
+    apply_now: "ތިޔަ ޖާނީ ބެގިން ކުރަން",
+    // Stats Section
+    global_presence: "ތިމަންގެ ގޯލްބަލް ޕްރެސެންސް",
+    stats_subtitle: "ތިމަންގެ ދުނިޔޭގެ އިމްޕެކްޓް ޑިފައިން ކުރާ ނަމްބަރުތައް",
+    stats_countries: "ރަށްތައް",
+    stats_employees: "އެމްޕްލޮޔީތައް",
+    stats_projects: "ޕްރޮޖެކްޓްތައް",
+    stats_years: "އަހަރު",
+    // WishFriends Program Section
+    wishfriends_title: "ވިޝްފްރެންޑްސް - ކެރިއަރ އަދި ގްރޯތް",
+    wishfriends_subtitle: "ތިޔަ ޕްރޮފެޝަނަލް ޑިވެލޮޕްމަންޓް އެކްސެލަރޭޓް ކުރުމަށް ޑިޒައިން ކުރެވިފައި އޮން ކޮމްޕްރިހެންސިވް ޕްރޮގްރަމްތައް",
+    career_growth_title: "ކެރިއަރ ގްރޯތް ރޯޑްމެޕް",
+    career_growth_text: "އިންޓަރންޝިޕްއިން ޑައިރެކްޓަރ ޓްރެކްއަށް، ތިމަން ތިޔަ ޕްރޮފެޝަނަލް ޑިވެލޮޕްމަންޓްއަށް މިންތަ މިލްސްޓޯންތަކާ އެކު ކްލިއަރ ޕެތްވެސް ސަޕޯރޓް ކުރަން.",
+    career_growth_point1: "ޓްރަންސްޕެރަންޓް ކްރައިޓީރިއާ އެކު ސްޓްރަކްޗަރޑް ޕްރޮމޯޝަން ޓްރެކްތައް",
+    career_growth_point2: "ކޯޓަރލީ ޕަރފޯމަންސް ރިވިއުތަކާ ގްރޯތް ޕްލެނިން",
+    career_growth_point3: "ހައި-ޕޮޓެންޝަލް އެމްޕްލޮޔީތަކަށް ލީޑަރޝިޕް ޑިވެލޮޕްމަންޓް ޕްރޮގްރަމް",
+    career_growth_point4: "ކްރޮސް-ފަންކްޝަނަލް ރޮޓޭޝަން އޮޕޮރޓިއުނިޓީތައް",
+    career_growth_point5: "ޕަރސަނަލައިޒްޑް ކެރިއަރ ކޯޗިން ސެޝަންތައް",
+    wish_academy_title: "ވިޝް އެކެޑެމީ",
+    wish_academy_text: "ކޮންމެ ރޯލަށް ކަސްޓަމައިޒް ކުރެވިފައި އޮން ސްޓޭޓް-އޮފް-ދަ-އާޓް ލަރނިން ޕްލެޓްފޯމް.",
+    wish_academy_point1: "މަސްތަކު ޓެކްނިކަލް އަދި ސޮފްޓް ސްކިލްތަކުގެ ވޮރކްޝޮޕްތައް",
+    wish_academy_point2: "ލީޑިން އިންސްޓިޓިއުޝަންތަކާ އެކު ސަރޓިފިކޭޝަން ޕްރޮގްރަމް",
+    wish_academy_point3: "ކޯސް 500އިން ވުރެ އި-ލަރނިން ޕްލެޓްފޯމް",
+    wish_academy_point4: "އިންޓަރނެޝަނަލް އެސައިންމަންޓްތަކަށް ލެންގުއެޖް ޓްރެއިނިން",
+    wish_academy_point5: "އެގްޒެކިއުޓިވް އެޑިއުކޭޝަން ޕާޓްނަރޝިޕް",
+    global_opportunities_title: "ގޯލްބަލް އޮޕޮރޓިއުނިޓީތައް",
+    global_opportunities_text: "ރަށްތައް 15އިން ވުރެ ގިނައިން އިންޓަރނެޝަނަލް އެސައިންމަންޓް ޕްރޮގްރަމްތަކާ އެކު ތިޔަ ހޮރައިޒަން އެކްސްޕެންޑް ކުރަން.",
+    global_opportunities_point1: "ގްރޫޕްގެ އެހެން ރަށްތަކުގެ ޖޮބްތަކަށް އިންޓަރނަލް އެޕްލިކޭޝަން",
+    global_opportunities_point2: "ބޭރު ރަށްތަކަށް ކުޑަ-ކާލު ޕްރޮޖެކްޓް އެސައިންމަންޓް (3-6 މަސް)",
+    global_opportunities_point3: "އިންޓަރނެޝަނަލް މޫވްތަކަށް ކަލްޗަރަލް ޕްރިޕަރޭޝަން ޓްރެއިނިން",
+    global_opportunities_point4: "ތިޔަޔާ ތިޔަ ފެމިލީއަށް ފުލް ރިލޮކޭޝަން ސަޕޯރޓް",
+    global_opportunities_point5: "ގޯލްބަލް ލީޑަރޝިޕް އިމަރޝަން ޕްރޮގްރަމް",
+    mentorship_title: "މެންޓޯޝިޕް ޕްރޮގްރަމް",
+    mentorship_text: "ތިމަންގެ ސްޓްރަކްޗަރޑް މެންޓޯޝިޕް އެކޮސިސްޓަމް އެކު ތިޔަ ގްރޯތް އެކްސެލަރޭޓް ކުރަން.",
+    mentorship_point1: "ސީނިއަރ ލީޑަރސް ކޯޓަރލީ ޖޫނިއަރތަކަށް މެންޓޯ ކުރަން",
+    mentorship_point2: "ރިވަރސް މެންޓޯރިން އޮޕޮރޓިއުނިޓީތައް",
+    mentorship_point3: "ޕަރސަނަލައިޒްޑް ކެރިއަރ ކޯޗިން ސެޝަންތައް",
+    mentorship_point4: "އިންޑަސްޓްރީ ލީޑަރސްތަކާ އެކްސްކްލޫސިވް ނެޓްވާރކިން އިވެންޓްތައް",
+    mentorship_point5: "ގޯލްތަކުގެ ބޭސް މެންޓޯ-މެޗިން އެލްގޮރިދަމް",
+    // Benefits Section
+    benefits_title: "ވިޝް ގްރޫޕްއަށް ޖޮއިން ކުރަން ކީކެއް؟",
+    benefits_subtitle: "ތިމަން އިންޑަސްޓްރީ-ލީޑިން ބެނެފިޓްތަކާ އެކު ތިޔަ ގްރޯތް އަދި ވެލްބިއިން އަށް އިންވެސްޓް ކުރަން",
+    benefit_global_title: "ގޯލްބަލް އެކްސްޕޯޒަރ",
+    benefit_global_text: "ރަށްތައް 15އިން ވުރެ ގިނައިން އިންޓަރނެޝަނަލް ޓީމްތަކާ އެކު ވަރަކަށް ރިލޮކޭޝަން އޮޕޮރޓިއުނިޓީތަކާ އެކު ވާކް ކުރަން",
+    benefit_learning_title: "ކަންޓިނިއުސް ލަރނިން",
+    benefit_learning_text: "އެނިއުއަލް ޓްރެއިނިން ބަޖެޓް ޑޮލަރ 2,000 އަދި ވިޝް އެކެޑެމީ ޕްރޮގްރަމްތަކަށް އެކްސެސް",
+    benefit_innovation_title: "އިނޮވޭޝަން ކަލްޗަރ",
+    benefit_innovation_text: "ތިމަންގެ އިނޮވޭޝަން ފަންޑް ސަޕޯރޓް އެކު ނިއު ސޮލިއުޝަންތައް ޕިޗް ކުރުމަށްފަހު އިމްޕްލިމެންޓް ކުރަން",
+    benefit_health_title: "ހެލްތް އަދި ވެލްނެސް",
+    benefit_health_text: "ކޮމްޕްރިހެންސިވް މެޑިކަލް ކަވަރޭޖް އަދި މެންޓަލް ހެލްތް އަދި ފިޓްނެސް ޕްރޮގްރަމް",
+    benefit_career_title: "ކެރިއަރ ފްލެކްސިބިލިޓީ",
+    benefit_career_text: "މަލްޓިޕަލް ގްރޯތް ޓްރެކްތަކާ އަދި ރޯލް ވެރިއޭޝަންތަކާ އެކު ތިޔަ ކެރިއަރ ޕެތް ކަސްޓަމައިޒް ކުރަން",
+    benefit_rewards_title: "ކޮމްޕެޓިޓިވް ރިވޯޑްސް",
+    benefit_rewards_text: "ޕަރފޯމަންސް ބޯނަސް އަދި ޕްރޮފިޓް ޝެއަރ އެކު އެޓްރެކްޓިވް ކޮމްޕެންސޭޝަން",
+    // WishHands Section
+    wishhands_title: "ވިޝްހެންޑްސް - އެންޓްރަޕްރެނޭއަރިއަލް ސަޕޯރޓް",
+    wishhands_subtitle: "ތިމަންގެ ސްޓާޓްއަޕް އިންކިއުބޭޝަން ޕްރޮގްރަމްތަކާ އެކު ތިޔަ އައިޑިއާތައް ރިއަލިޓީއަށް ބަދަލު ކުރަން",
+    startup_pitch_title: "ސްޓާޓްއަޕް ޕިޗް ޑޭ",
+    startup_pitch_text: "އެމްޕްލޮޔީތައް ތިމަންގެ އެގްޒެކިއުޓިވް ޕެނަލް އަދި އިންވެސްޓަރުތަކަށް އައިޑިއާ ޕިޗް ކުރާ ކޯޓަރލީ އިވެންޓްތައް.",
+    startup_pitch_point1: "ވެންޗަރ ކެޕިޓަލިސްޓްތަކާ އެކު އެގްޒެކިއުޓިވް ޕެނަލް",
+    startup_pitch_point2: "ބިޒްނެސް މޮޑެލްތަކުގެ މައްޗަށް ޑިޓެއިލް ފީޑްބެކް",
+    startup_pitch_point3: "ޖަޔަގްރާހީ އައިޑިއާތަކަށް ޕްރޮޓޯޓައިޕިން ލެބް އެކްސެސް",
+    startup_pitch_point4: "ވިޝް ގްރޫޕްގެ ނެޓްވާރކަށް ފުލް އެކްސެސް",
+    startup_pitch_point5: "ލީގަލް އަދި އައި ޕީ ސަޕޯރޓް",
+    seed_fund_title: "ސީޑް ފަންޑް ގްރާންޓްތައް",
+    seed_fund_text: "ތިޔަ އެންޓްރަޕްރެނޭއަރިއަލް އައިޑިއާތައް ވެލިޑޭޓް ކުރުމަށްފަހު ލޯންޗް ކުރުމަށް ފައިނެންޝަލް ސަޕޯރޓް.",
+    seed_fund_point1: "ރިވިއު ފަހު ކޮންމެ ވެންޗަރަށް ޑޮލަރ 5,000 އަށް",
+    seed_fund_point2: "މިލްސްޓޯން-ބޭސް ފަންޑިން ސްޓްރަކްޗަރ",
+    seed_fund_point3: "އެމްޕްލޮޔީތަކަށް އެކްވިޓީ-ފްރީ އިންވެސްޓްމަންޓް",
+    seed_fund_point4: "ފޮލޯ-އޮން ފަންޑިން އޮޕޮރޓިއުނިޓީތައް",
+    seed_fund_point5: "އެކައުންޓިން އަދި ލީގަލް ސަޕޯރޓް",
+    // WishSprite Section
+    wishsprite_title: "ވިޝްސްޕްރައިޓް - ޓެލެންޓް ޑިސްކަވަރީ",
+    wishsprite_subtitle: "ތިޔަ ޕްރޮފެޝަނަލް ރޯލް އެއްކޮށް ތިޔަ ޔުނިކް ޓެލެންޓްތައް ޝޯކޭސް ކުރަން",
+    talent_fest_title: "އެނިއުއަލް ޓެލެންޓް ފެސްޓް",
+    talent_fest_text: "ވިޝް ގްރޫޕް ފެމިލީ އެއްކޮށް ޑައިވަރސް ޓެލެންޓްތައް ސެލެބްރޭޓް ކުރާ ތިމަންގެ ފްލެގްޝިޕް އިވެންޓް.",
+    talent_fest_point1: "މިއުޒިކް، ޑާންސް، ޕޮއެޓްރީ ކޮމްޕިޓިޝަން",
+    talent_fest_point2: "ޓެކް އިންވެންޝަން ޝޯކޭސް",
+    talent_fest_point3: "ކްރިއޭޓިވް ރައިޓިން އެކްޒިބިޝަން",
+    talent_fest_point4: "ކްރިއޭޓިވް އިންޑަސްޓްރީތަކުން ޖަޖެސް",
+    talent_fest_point5: "ސަބްސްޓަންޝަލް ކެޝް ޕްރައިޒެސް",
+    sprite_month_title: "މަސްތަކުގެ ސްޕްރައިޓް",
+    sprite_month_text: "އެމްޕްލޮޔީތަކުގެ ޖޮބް ޑިސްކްރިޕްޝަން އެއްކޮށް އެކްސެޕްޝަނަލް އެމްޕްލޮޔީތައް ރެކޮގްނައިޒް ކުރުން.",
+    sprite_month_point1: "ޕިއަރ-ނޮމިނޭޓް ރެކޮގްނިޝަން",
+    sprite_month_point2: "ކޮމްޕަނީ ޕްލެޓްފޯމްތަކުގައި ފީޗަރ ކުރެވޭ",
+    sprite_month_point3: "ސްޕެޝަލް ޕްރިވިލެޖެސް އަދި ރިވޯޑްސް",
+    sprite_month_point4: "އަހަރު އެންޑް ގްރެންޑް ޕްރައިޒް",
+    sprite_month_point5: "އެގްޒެކިއުޓިވް މެންޓޯޝިޕް",
+    talent_exchange_title: "ޓެލެންޓް އެކްސްޗެންޖް",
+    talent_exchange_text: "ތިމަންގެ ގޯލްބަލް އޮފިސްތަކުގެ ބީޗް ކްރޮސް-ބޯޑަރ ކްރިއޭޓިވް ކޮލެބޮރޭޝަން.",
+    talent_exchange_point1: "އިމާރާތުގެ އިވެންޓްތަކުގައި މާލެއިން އާޓިސްޓްތައް",
+    talent_exchange_point2: "ކްރޮސް-ބޯޑަރ ކްރިއޭޓިވް ޕްރޮޖެކްޓްތައް",
+    talent_exchange_point3: "ކަލްޗަރަލް އެކްސްޗެންޖް ޕްރޮގްރަމް",
+    talent_exchange_point4: "ގޯލްބަލް ޓެލެންޓް ޝޯކޭސް",
+    talent_exchange_point5: "ސްކިލް-ޝެއަރިން ވޮރކްޝޮޕް",
+    // Application Section
+    apply_title: "ވިޝް ގްރޫޕްއަށް ޖޮއިން ކުރުމަށް ރެޑީ؟",
+    apply_text: "ތިޔަ އެޕްލިކޭޝަން ސަބްމިޓް ކުރުމަށްފަހު، ތިމަންގެ އެޗް އާރ ޓީމް ބިޒްނެސް ޑޭ 7 އެއްކޮށް ރިވިއު ކުރަން. ޝޯރްޓްލިސްޓް ކުރެވިފައި އޮން ކެންޑިޑޭޓްތަކަށް އިންޓަވިއު ކޮށް ކޮންޓެކްޓް ކުރަން.",
+    contact_hr_title: "އެޗް އާރ ކޮންޓެކްޓް ކުރަން",
+    hr_address: "އެޗް އާރ ޑިޕާޓްމަންޓް، ވިޝް ގްރޫޕް އެޗް ކިއު، ޑުބައި، ޔޫ އޭ އީ",
+    diversity_title: "ޑައިވަރސިޓީ އަދި އިންކްލޫޝަން",
+    diversity_text: "ވިޝް ގްރޫޕް ކޮންމެ ރޯލަށް ޑައިވަރސިޓީ އަދި އީކްވަލް އޮޕޮރޓިއުނިޓީ ޕްރޮމޯޓް ކުރަން. ތިމަން ކޮންމެ ބެކްގްރައުންޑަކުން އެޕްލިކަންޓްތައް ވެލްކަމް ކުރަން. އަހަރު މުދައިން އިންޓަރންޝިޕް އަދި ލީޑަރޝިޕް ޓްރެކްތައް އެވެއިލަބަލް.",
+    application_form_title: "އެޕްލިކޭޝަން ފޯމް",
+    name_placeholder: "ފުލް ނޭމް",
+    email_placeholder: "އީމެއިލް އެޑްރެސް",
+    phone_placeholder: "ފޯން ނަމްބަރ",
+    position_select: "ޕޮޒިޝަން ސިލެކްޓް ކުރަން",
+    cover_letter_placeholder: "ކަވަރ ލެޓަރ",
+    resume_label: "ރެޒިއުމީ އަޕްލޮޑް ކުރަން",
+    resume_hint: "ޕީ ޑީ އެފް، ޑޮކް، އެންޑް ޑޮކްސް ފައިލްތައް އެކްތަ (މެކްސިމަމް 5 އެމް ބީ)",
+    consent_text: "ބަންޑަވާ ގަނޑުގެ މަޖުޒު އަށް ތިމަންގެ ޑޭޓާ ޕްރޮސެސް ކުރުމަށް ވިޝް ގްރޫޕްއަށް އަން ކޮންސެންޓް ކުރަން",
+    submit_application: "އެޕްލިކޭޝަން ސަބްމިޓް ކުރަން",
+    success_message: "އެޕްލިކޭޝަން ސަފްލި ސަބްމިޓް ކުރެވިއްޖެ! ތިމަންގެ އެޗް އާރ ޓީމް ބިޒްނެސް ޑޭ 7 އެއްކޮށް ތިޔަ ކޮންޓެކްޓް ކުރަން.",
+    error_message: "އެޕްލިކޭޝަން ސަބްމިޓް ކުރުމުގައި އެރަރ. ޕްލީޒް އެގެއިން ޓްރައި ކުރުމަށްފަހު އެޗް އާރ ކޮންޓެކްޓް ކުރަން.",
+    // Footer
+    address: "އެޑްރެސް",
+    address_line_1: "121 އޭ އައި ބުލިވާޑް، ސެން ފްރެންސިސްކޯ",
+    address_line_2: "ބީ ސީ އޭ 94107",
+    quick_links: "ކުއިކް ލިންކްތައް",
+    phone_1: "ޓެލިފޯން: +971 4259 7167",
+    phone_2: "މޮބައިލް: +971 4259 4795",
+    email_1: "އީމެއިލް: info@wishgroup.ae",
+    email_2: "އީމެއިލް: info@wishgroup.world",
+    footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ރައިޓްތައް ރިޒާވް."
+  },
+
+  fr: {
+    // Meta Tags
+    page_title: "Groupe Wish - Carrières",
+    meta_description: "Carrières du Groupe Wish",
+    meta_keywords: "Groupe Wish, Carrières, Emplois, Opportunités, Recrutement",
+    meta_author: "Groupe Wish",
+    logo_alt: "Logo du Groupe Wish",
+    footer_logo_alt: "Logo de pied de page du Groupe Wish",
+    // Header Menu
+    home: "Accueil",
+    about_us: "À propos",
+    divisions: "Divisions",
+    projects: "Projets",
+    countries: "Pays",
+    news: "Actualités",
+    our_policies: "Nos politiques",
+    career: "Carrières",
+    contact_us: "Contactez-nous",
+    tickets_style_1: "Style de billet 1",
+    tickets_style_2: "Style de billet 2",
+    news_single: "Actualité unique",
+    contact: "Contact",
+    scroll_to_top: "Retour en haut",
+    // Career Hero Section
+    career_hero_title: "Façonnez votre avenir avec le Groupe Wish",
+    career_hero_text: "Au Groupe Wish, nous ne proposons pas seulement des emplois - nous construisons des carrières. Rejoignez notre famille mondiale et libérez votre potentiel grâce à nos programmes de croissance complets, nos opportunités internationales et notre soutien entrepreneurial.",
+    apply_now: "Commencez votre parcours",
+    // Stats Section
+    global_presence: "Notre présence mondiale",
+    stats_subtitle: "Les chiffres qui définissent notre impact mondial",
+    stats_countries: "Pays",
+    stats_employees: "Employés",
+    stats_projects: "Projets",
+    stats_years: "Années",
+    // WishFriends Program Section
+    wishfriends_title: "WishFriends - Carrière & Croissance",
+    wishfriends_subtitle: "Programmes complets conçus pour accélérer votre développement professionnel",
+    career_growth_title: "Feuille de route de la croissance professionnelle",
+    career_growth_text: "Du stage au poste de directeur, nous offrons des parcours clairs pour votre développement professionnel avec des jalons mesurables.",
+    career_growth_point1: "Parcours de promotion structurés avec des critères transparents",
+    career_growth_point2: "Évaluations trimestrielles des performances avec planification de croissance",
+    career_growth_point3: "Programmes de développement du leadership pour les employés à fort potentiel",
+    career_growth_point4: "Opportunités de rotation interfonctionnelle",
+    career_growth_point5: "Sessions de coaching de carrière personnalisées",
+    wish_academy_title: "Académie Wish",
+    wish_academy_text: "Notre plateforme d'apprentissage de pointe avec des parcours de développement personnalisés pour chaque rôle.",
+    wish_academy_point1: "Ateliers mensuels sur les compétences techniques et relationnelles",
+    wish_academy_point2: "Programmes de certification avec des institutions de premier plan",
+    wish_academy_point3: "Plateforme d'apprentissage en ligne avec plus de 500 cours",
+    wish_academy_point4: "Formation linguistique pour les missions internationales",
+    wish_academy_point5: "Partenariats avec des programmes d'éducation exécutive",
+    global_opportunities_title: "Opportunités internationales",
+    global_opportunities_text: "Élargissez vos horizons avec nos programmes de missions internationales dans plus de 15 pays.",
+    global_opportunities_point1: "Candidatures internes pour des postes dans d'autres pays du groupe",
+    global_opportunities_point2: "Missions de projets à court terme à l'étranger (3 à 6 mois)",
+    global_opportunities_point3: "Formation à la préparation culturelle pour les déplacements internationaux",
+    global_opportunities_point4: "Soutien complet à la relocalisation pour vous et votre famille",
+    global_opportunities_point5: "Programmes d'immersion en leadership mondial",
+    mentorship_title: "Programme de mentorat",
+    mentorship_text: "Accélérez votre croissance grâce à notre système de mentorat structuré.",
+    mentorship_point1: "Mentorat trimestriel par des dirigeants seniors",
+    mentorship_point2: "Opportunités de mentorat inversé",
+    mentorship_point3: "Sessions de coaching de carrière personnalisées",
+    mentorship_point4: "Événements de réseautage exclusifs avec des leaders de l'industrie",
+    mentorship_point5: "Algorithme de mise en relation des mentors basé sur les objectifs",
+    // Benefits Section
+    benefits_title: "Pourquoi rejoindre le Groupe Wish ?",
+    benefits_subtitle: "Nous investissons dans votre croissance et votre bien-être avec des avantages de pointe dans l'industrie",
+    benefit_global_title: "Exposition internationale",
+    benefit_global_text: "Travaillez avec des équipes internationales dans plus de 15 pays avec des opportunités de relocalisation",
+    benefit_learning_title: "Apprentissage continu",
+    benefit_learning_text: "Budget annuel de formation de 2 000 $ plus accès aux programmes de l'Académie Wish",
+    benefit_innovation_title: "Culture de l'innovation",
+    benefit_innovation_text: "Proposez et mettez en œuvre de nouvelles solutions avec le soutien de notre fonds d'innovation",
+    benefit_health_title: "Santé et bien-être",
+    benefit_health_text: "Couverture médicale complète plus des programmes de santé mentale et de fitness",
+    benefit_career_title: "Flexibilité de carrière",
+    benefit_career_text: "Personnalisez votre parcours professionnel avec des trajectoires de croissance multiples et des changements de rôle",
+    benefit_rewards_title: "Récompenses compétitives",
+    benefit_rewards_text: "Rémunération attractive avec des bonus de performance et un partage des bénéfices",
+    // WishHands Section
+    wishhands_title: "WishHands - Soutien entrepreneurial",
+    wishhands_subtitle: "Transformez vos idées en réalité avec nos programmes d'incubation de startups",
+    startup_pitch_title: "Journée de présentation des startups",
+    startup_pitch_text: "Événements trimestriels où les employés présentent leurs idées à un comité exécutif et à des investisseurs.",
+    startup_pitch_point1: "Comité exécutif avec des investisseurs en capital-risque",
+    startup_pitch_point2: "Commentaires détaillés sur les modèles d'affaires",
+    startup_pitch_point3: "Accès au laboratoire de prototypage pour les idées gagnantes",
+    startup_pitch_point4: "Accès complet au réseau du Groupe Wish",
+    startup_pitch_point5: "Soutien juridique et en propriété intellectuelle",
+    seed_fund_title: "Subventions du fonds de démarrage",
+    seed_fund_text: "Soutien financier pour valider et lancer vos idées entrepreneuriales.",
+    seed_fund_point1: "Jusqu'à 5 000 $ par projet après évaluation",
+    seed_fund_point2: "Structure de financement basée sur les jalons",
+    seed_fund_point3: "Investissement sans prise de participation pour les employés",
+    seed_fund_point4: "Opportunités de financement ultérieur",
+    seed_fund_point5: "Soutien comptable et juridique",
+    // WishSprite Section
+    wishsprite_title: "WishSprite - Découverte des talents",
+    wishsprite_subtitle: "Mettez en avant vos talents uniques en dehors de votre rôle professionnel",
+    talent_fest_title: "Festival annuel des talents",
+    talent_fest_text: "Notre événement phare célébrant les talents divers au sein de la famille du Groupe Wish.",
+    talent_fest_point1: "Concours de musique, danse et poésie",
+    talent_fest_point2: "Présentations d'inventions technologiques",
+    talent_fest_point3: "Expositions d'écriture créative",
+    talent_fest_point4: "Juges issus des industries créatives",
+    talent_fest_point5: "Prix en argent substantiels",
+    sprite_month_title: "Sprite du mois",
+    sprite_month_text: "Reconnaissance des employés exceptionnels qui dépassent leurs descriptions de poste.",
+    sprite_month_point1: "Reconnaissance basée sur les nominations des pairs",
+    sprite_month_point2: "Mise en avant sur les plateformes de l'entreprise",
+    sprite_month_point3: "Privilèges et récompenses spéciaux",
+    sprite_month_point4: "Grand prix de fin d'année",
+    sprite_month_point5: "Mentorat exécutif",
+    talent_exchange_title: "Échange de talents",
+    talent_exchange_text: "Collaborations créatives transfrontalières entre nos bureaux mondiaux.",
+    talent_exchange_point1: "Artistes des Maldives lors d'événements aux Émirats",
+    talent_exchange_point2: "Projets créatifs transfrontaliers",
+    talent_exchange_point3: "Programmes d'échange culturel",
+    talent_exchange_point4: "Présentation des talents mondiaux",
+    talent_exchange_point5: "Ateliers de partage de compétences",
+    // Application Section
+    apply_title: "Prêt à rejoindre le Groupe Wish ?",
+    apply_text: "Soumettez votre candidature et notre équipe des ressources humaines l'examinera dans un délai de 7 jours ouvrables. Les candidats présélectionnés seront contactés pour des entretiens.",
+    contact_hr_title: "Contacter les ressources humaines",
+    hr_address: "Département des ressources humaines, Siège du Groupe Wish, Dubaï, Émirats Arabes Unis",
+    diversity_title: "Diversité et inclusion",
+    diversity_text: "Le Groupe Wish promeut la diversité et l'égalité des chances dans tous les rôles. Nous accueillons les candidats de tous horizons. Des programmes de stages et de leadership sont disponibles toute l'année.",
+    application_form_title: "Formulaire de candidature",
+    name_placeholder: "Nom complet",
+    email_placeholder: "Adresse e-mail",
+    phone_placeholder: "Numéro de téléphone",
+    position_select: "Choisir le poste",
+    cover_letter_placeholder: "Lettre de motivation",
+    resume_label: "Télécharger le CV",
+    resume_hint: "Fichiers PDF, DOC ou DOCX uniquement (max. 5 Mo)",
+    consent_text: "J'accepte que le Groupe Wish traite mes données à des fins de recrutement",
+    submit_application: "Soumettre la candidature",
+    success_message: "Candidature soumise avec succès ! Notre équipe des ressources humaines vous contactera dans les 7 jours ouvrables.",
+    error_message: "Erreur lors de la soumission de la candidature. Veuillez réessayer ou contacter les ressources humaines.",
+    // Footer
+    address: "Adresse",
+    address_line_1: "121 AI Boulevard, San Francisco",
+    address_line_2: "BCA 94107",
+    quick_links: "Liens rapides",
+    phone_1: "Téléphone : +971 4259 7167",
+    phone_2: "Mobile : +971 4259 4795",
+    email_1: "E-mail : info@wishgroup.ae",
+    email_2: "E-mail : info@wishgroup.world",
+    footer_copyright: "Droits d'auteur 2025 - Groupe Wish. Tous droits réservés."
+  }
+}
+      function setLanguage(lang) {
+                // Check if the language exists in translations
+                if (!translations[lang]) {
+                    console.error(`Language ${lang} not found in translations`);
+                    return;
                 }
 
-                // Add animation to cards on scroll
-                VanillaTilt.init(document.querySelectorAll(".program-card, .benefit-item"), {
-                    max: 5,
-                    speed: 400,
-                    glare: true,
-                    "max-glare": 0.2,
-                });
-                
-                // Smooth scroll for apply button
-                document.querySelector('.btn-career[href="#apply-now"]').addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-
-                // Animate elements when they come into view
-                const animateOnScroll = function() {
-                    const elements = document.querySelectorAll('.program-card, .benefit-item, .stats-item');
-                    elements.forEach(element => {
-                        const elementPosition = element.getBoundingClientRect().top;
-                        const screenPosition = window.innerHeight / 1.2;
-                        
-                        if (elementPosition < screenPosition) {
-                            element.style.opacity = '1';
-                            element.style.transform = 'translateY(0)';
+                // Update text content and alt attributes
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[lang][key]) {
+                        if (element.tagName === 'IMG') {
+                            element.alt = translations[lang][key];
+                        } else if (element.tagName === 'TITLE') {
+                            element.textContent = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
                         }
-                    });
-                };
-
-                // Set initial state
-                document.querySelectorAll('.program-card, .benefit-item, .stats-item').forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(20px)';
-                    el.style.transition = 'all 0.6s ease-out';
+                    }
                 });
 
-                window.addEventListener('scroll', animateOnScroll);
-                animateOnScroll(); // Run once on load
+                // Update HTML lang and direction
+                document.querySelector('html').lang = lang;
+                if (lang === 'ar' || lang === 'dv') {
+                    document.querySelector('html').dir = 'rtl';
+                    document.querySelector('body').style.textAlign = 'right';
+                } else {
+                    document.querySelector('html').dir = 'ltr';
+                    document.querySelector('body').style.textAlign = 'left';
+                }
+
+                // Update page title
+                document.querySelector('title').textContent = translations[lang].page_title;
+
+                // Save selected language to localStorage
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            // Initialize language on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+                document.getElementById('language-switcher').value = savedLang;
+                setLanguage(savedLang);
             });
         </script>
     </div>

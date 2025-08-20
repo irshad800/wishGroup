@@ -13916,3 +13916,89 @@ header .btn-main {
   background: #b00;
   color: #0a0a0a;
 }
+
+
+.legacy-title {
+        background: linear-gradient(90deg, #fff, #7cc3ff 30%, #a58bff 60%, #ffd38b 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: .2px;
+    }
+
+    .legacy-underline {
+        width: 120px;
+        height: 3px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #7cc3ff, #a58bff, #ffd38b);
+    }
+
+    .glass {
+        background: rgba(255, 255, 255, .04);
+        border: 1px solid rgba(255, 255, 255, .08);
+        border-radius: 16px;
+        padding: 24px 22px;
+        backdrop-filter: blur(6px);
+    }
+
+    .legacy-stat {
+        text-align: center;
+        background: rgba(255, 255, 255, .03);
+        border: 1px solid rgba(255, 255, 255, .08);
+        border-radius: 16px;
+        padding: 18px 14px;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .legacy-stat:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
+    }
+
+    .legacy-num {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    .legacy-label {
+        opacity: .85;
+        margin-top: 6px;
+    }
+
+    .legacy-list .ul-check li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .legacy-icon {
+        display: inline-flex;
+        margin-top: 2px;
+        opacity: .9;
+    }
+
+    .legacy-glow {
+        position: absolute;
+        filter: blur(70px);
+        opacity: .25;
+        z-index: 0;
+    }
+
+    .legacy-glow-1 {
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, #7cc3ff, transparent 70%);
+        top: -80px;
+        left: -60px;
+    }
+
+    .legacy-glow-2 {
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, #a58bff, transparent 70%);
+        bottom: -100px;
+        right: -40px;
+    }
