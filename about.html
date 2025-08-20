@@ -47,24 +47,26 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <div class="de-flex-col header-col-mid">
+                               <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html" data-translate="home">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html" data-translate="about_us">About Us</a></li>
-                                        <li><a class="menu-item" href="" data-translate="divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="" data-translate="projects">Projects</a></li>
-                                        <li><a class="menu-item" href="" data-translate="countries">Countries</a></li>
-                                        <li><a class="menu-item" href="" data-translate="news">News</a></li>
-                                        <li><a class="menu-item" href="" data-translate="our_policies">Our Policies</a></li>
-                                        <li><a class="menu-item" href="" data-translate="career">Career</a></li>
-                                        <li><a class="menu-item" href="news.html" data-translate="contact_us">Contact Us</a>
-                                            <ul>
-                                                <li><a class="menu-item" href="tickets.html" data-translate="tickets_style_1">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html" data-translate="tickets_style_2">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html" data-translate="news">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html" data-translate="news_single">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html" data-translate="contact">Contact</a></li>
+                                        <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                          <ul>
+                                               <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
+    <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
+    <li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
+    <li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
                                             </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
+                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
+                                        <li>
+                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
+                                          
                                         </li>
                                     </ul>
                                 </div>
@@ -676,126 +678,54 @@
             </div>
         </footer>
 
-        <style>
-            .legacy-title {
-                background: linear-gradient(90deg, #fff, #7cc3ff 30%, #a58bff 60%, #ffd38b 90%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                letter-spacing: .2px;
-            }
+     <style>
+    
+#language-switcher {
+    background: linear-gradient(90deg, #e10600, #00000000); /* Transparent end color */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
 
-            .legacy-underline {
-                width: 120px;
-                height: 3px;
-                border-radius: 999px;
-                background: linear-gradient(90deg, #7cc3ff, #a58bff, #ffd38b);
-            }
+/* Style for the dropdown options */
+#language-switcher option {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for options */
+    color: #fff; /* Ensure text is readable */
+}
 
-            .glass {
-                background: rgba(255, 255, 255, .04);
-                border: 1px solid rgba(255, 255, 255, .08);
-                border-radius: 16px;
-                padding: 24px 22px;
-                backdrop-filter: blur(6px);
-            }
+/* Optional: Adjust on hover for better visibility */
+#language-switcher option:hover {
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
+}
 
-            .legacy-stat {
-                text-align: center;
-                background: rgba(255, 255, 255, .03);
-                border: 1px solid rgba(255, 255, 255, .08);
-                border-radius: 16px;
-                padding: 18px 14px;
-                transition: transform .25s ease, box-shadow .25s ease;
-            }
+    /* Arabic RTL support */
+    body[lang="ar"] {
+        direction: rtl;
+        text-align: right;
+    }
 
-            .legacy-stat:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
-            }
+    body[lang="ar"] .text-center {
+        text-align: center !important;
+    }
 
-            .legacy-num {
-                font-size: 32px;
-                font-weight: 800;
-                line-height: 1;
-            }
+    body[lang="ar"] .de-flex-col.header-col-mid {
+        direction: ltr;
+    }
 
-            .legacy-label {
-                opacity: .85;
-                margin-top: 6px;
-            }
+    body[lang="ar"] #mainmenu {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 
-            .legacy-list .ul-check li {
-                display: flex;
-                gap: 10px;
-                align-items: flex-start;
-            }
-
-            .legacy-icon {
-                display: inline-flex;
-                margin-top: 2px;
-                opacity: .9;
-            }
-
-            .legacy-glow {
-                position: absolute;
-                filter: blur(70px);
-                opacity: .25;
-                z-index: 0;
-            }
-
-            .legacy-glow-1 {
-                width: 340px;
-                height: 340px;
-                border-radius: 50%;
-                background: radial-gradient(closest-side, #7cc3ff, transparent 70%);
-                top: -80px;
-                left: -60px;
-            }
-
-            .legacy-glow-2 {
-                width: 360px;
-                height: 360px;
-                border-radius: 50%;
-                background: radial-gradient(closest-side, #a58bff, transparent 70%);
-                bottom: -100px;
-                right: -40px;
-            }
-
-            #language-switcher {
-                background: #fff;
-                color: #000;
-                border: none;
-                padding: 8px 12px;
-                border-radius: 4px;
-                cursor: pointer;
-                font-size: 14px;
-                margin-right: 10px;
-            }
-
-            /* Arabic RTL support */
-            body[lang="ar"] {
-                direction: rtl;
-                text-align: right;
-            }
-
-            body[lang="ar"] .text-center {
-                text-align: center !important;
-            }
-
-            body[lang="ar"] .de-flex-col.header-col-mid {
-                direction: ltr;
-            }
-
-            body[lang="ar"] #mainmenu {
-                display: flex;
-                flex-direction: row-reverse;
-            }
-
-            body[lang="ar"] #mainmenu ul {
-                direction: ltr;
-            }
-        </style>
+    body[lang="ar"] #mainmenu ul {
+        direction: ltr;
+    }
+</style>
 
         <!-- Javascript Files -->
         <script src="js/vendors.js"></script>

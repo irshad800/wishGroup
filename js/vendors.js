@@ -167,3 +167,80 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+// Fetch jobs and populate position dropdown
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('http://localhost:4000/api/jobs');
+        const jobs = await response.json();
+        const positionSelect = document.getElementById('position');
+        
+        if (response.ok && jobs.length > 0) {
+            jobs.forEach(job => {
+                const option = document.createElement('option');
+                option.value = job._id; // Use job._id as value for jobId
+                option.textContent = job.title; // Display job title
+                option.setAttribute('data-translate', `job_${job._id}`); // Optional for translation
+                positionSelect.appendChild(option);
+            });
+        } else {
+            // Fallback options if no jobs are available
+            const fallbackOptions = [
+                { value: 'internship-001', text: 'Internship', translate: 'intern_option' },
+                { value: 'entry-001', text: 'Entry Level', translate: 'entry_option' },
+                { value: 'manager-001', text: 'Manager', translate: 'manager_option' },
+                { value: 'director-001', text: 'Director', translate: 'director_option' },
+                { value: 'executive-001', text: 'Executive', translate: 'executive_option' },
+                { value: 'other-001', text: 'Other', translate: 'other_option' }
+            ];
+            fallbackOptions.forEach(opt => {
+                const option = document.createElement('option');
+                option.value = opt.value;
+                option.textContent = opt.text;
+                option.setAttribute('data-translate', opt.translate);
+                positionSelect.appendChild(option);
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching jobs:', error);
+        // Handle error (e.g., show fallback options or error message)
+    }
+});
+
+// Form submission handler
+document.getElementById('application-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+
+    const form = e.target;
+    const formData = new FormData();
+    formData.append('applicantName', form.applicantName.value);
+    formData.append('applicantEmail', form.applicantEmail.value);
+    formData.append('coverLetter', form.coverLetter.value);
+    formData.append('resume', form.resume.files[0]);
+
+    const jobId = form.position.value; // Use selected jobId from dropdown
+
+    try {
+        const response = await fetch(`http://localhost:4000/api/applications/${jobId}`, {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            successMessage.style.display = 'block';
+            form.reset();
+        } else {
+            throw new Error(result.message || `HTTP ${response.status}: Failed to submit application`);
+        }
+    } catch (error) {
+        console.error('Submission Error:', error);
+        errorMessage.textContent = `Error: ${error.message}. Please try again or contact HR.`;
+        errorMessage.style.display = 'block';
+    }
+});

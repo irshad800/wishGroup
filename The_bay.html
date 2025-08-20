@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title data-translate="page_title">The Tie Bay | Exclusive Lagoon Activities</title>
+    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description" data-translate="meta_description">
+    <meta content="" name="keywords" data-translate="meta_keywords">
+    <meta content="Wish Group" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Custom Styles */
+        .activity-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .activity-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .activity-card:hover .activity-image {
+            transform: scale(1.05);
+        }
+        .activity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+        }
+        .full-width-lagoon {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .experience-section {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        .icon-feature {
+            font-size: 36px;
+            color: var(--color);
+            margin-bottom: 15px;
+        }
+        .activity-icon {
+            font-size: 48px;
+            color: var(--color);
+            margin-bottom: 20px;
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--color);
+            position: absolute;
+            left: 0;
+        }
+        #language-switcher {
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+         <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                    </a>
+                                </div>
+                                <!-- logo close -->
+                            </div>
+
+                            <div class="de-flex-col">
+                           <div class="de-flex-col header-col-mid">
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                                        <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                                        <li><a class="menu-item active" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                          <ul>
+                                               <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
+    <li><a class="menu-item " href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
+    <li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
+    <li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
+                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
+                                        <li>
+                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="lang-switcher">
+                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+            <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="jarallax-img" alt="" data-translate="hero_alt">
+            <div class="gradient-edge-bottom h-50"></div>
+            <div class="sw-overlay op-5"></div>
+            <div class="abs bottom-10 z-2 w-100">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-8">
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-translate="hero_title">
+                                The Tie Bay – Lagoon Experiences
+                            </h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-translate="hero_description">Unique floating activities in the heart of the Maldives</p>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="relative text-lg-end">
+                                <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
+                                    <span class="fs-20 fw-600" data-translate="hero_label">Aquatic Paradise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Lagoon Overview -->
+                        <div class="intro-section mb-5">
+                            <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                 alt="" class="full-width-lagoon" data-translate="intro_image_alt">
+                            <div class="text-center mt-4">
+                                <h2 class="fs-36 mb-3" data-translate="intro_title">Crystal Lagoon Experiences</h2>
+                                <p class="lead fs-20" data-translate="intro_description">Where the ocean meets luxury in perfect harmony</p>
+                            </div>
+                        </div>
+
+                        <!-- Activities Grid -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30" data-translate="activities_title">Signature Lagoon Activities</h2>
+                            <p class="lead" data-translate="activities_description">Exclusive water experiences designed for unforgettable moments</p>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="activity_1_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="activity_1_title">Floating Breakfast/Lunch</h3>
+                                        <p class="mb-0" data-translate="activity_1_description">Dine on a private floating platform</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="activity_2_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="activity_2_title">Floating Sea Bathing Canopy</h3>
+                                        <p class="mb-0" data-translate="activity_2_description">Private ocean relaxation platform</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="activity_3_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="activity_3_title">Floating Yoga & Meditation</h3>
+                                        <p class="mb-0" data-translate="activity_3_description">Serene practice on the water</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1560279966-48a6ea0a9521?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="activity_4_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="activity_4_title">Underwater Museum</h3>
+                                        <p class="mb-0" data-translate="activity_4_description">Art beneath the waves</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="activity_5_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="activity_5_title">Floating Event Deck</h3>
+                                        <p class="mb-0" data-translate="activity_5_description">Private functions on the water</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="activity_6_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="activity_6_title">Canoe Picnics</h3>
+                                        <p class="mb-0" data-translate="activity_6_description">Dining adventure on the lagoon</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unique Features Section -->
+                        <div class="experience-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                         alt="" class="w-100 rounded-1" data-translate="features_image_alt">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="ps-lg-4">
+                                        <h3 class="fs-24 mb-3" data-translate="features_title">Unique Lagoon Features</h3>
+                                        <ul class="feature-list">
+                                            <li data-translate="feature_1">Traditional Dhoni boat rides through the lagoon</li>
+                                            <li data-translate="feature_2">Exclusive floating villas with panoramic views</li>
+                                            <li data-translate="feature_3">Underwater villas with marine life viewing</li>
+                                            <li data-translate="feature_4">Private helipad for VIP arrivals</li>
+                                            <li data-translate="feature_5">Dedicated jetty for seamless transfers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accommodation Highlights -->
+                        <div class="section-header text-center mb-4">
+                            <h2 class="fs-30" data-translate="accommodations_title">Lagoon Accommodations</h2>
+                            <p class="lead" data-translate="accommodations_description">Stay surrounded by the beauty of the water</p>
+                        </div>
+                        
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="accommodation_1_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="accommodation_1_title">Floating Villas</h3>
+                                        <p class="mb-0" data-translate="accommodation_1_description">Luxury on the water's surface</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="activity-card">
+                                    <img src="https://images.unsplash.com/photo-1560279966-48a6ea0a9521?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                                         alt="" class="activity-image" data-translate="accommodation_2_alt">
+                                    <div class="activity-overlay">
+                                        <h3 class="fs-20 mb-1" data-translate="accommodation_2_title">Underwater Villas</h3>
+                                        <p class="mb-0" data-translate="accommodation_2_description">Sleep surrounded by marine life</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="cta-section text-center pt-4 pb-5">
+                            <h3 class="fs-28 mb-3" data-translate="cta_title">Ready for Your Lagoon Adventure?</h3>
+                            <p class="mb-4" data-translate="cta_description">Book your exclusive water experiences today</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a class="btn-main fx-slide" href="contact.html"><span data-translate="cta_contact">Contact Us</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-translate="cta_packages">View Packages</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer begin -->
+        <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Logo & Social -->
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="" data-translate="footer_logo_alt">
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">Address</h3>
+                        <p class="mb-0" data-translate="footer_address">Business Bay, Dubai</p>
+                        <p data-translate="footer_country">United Arab Emirates</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="footer_links_title">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" class="text-light" data-translate="menu_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="menu_about">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us with Email -->
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_phone_1">T. +971 4259 7167</p>
+                        <p class="mb-1" data-translate="footer_phone_2">M. +971 4259 4795</p>
+                        <p class="mb-0" data-translate="footer_email_1">E. info@wishgroup.ae</p>
+                        <p class="mb-0" data-translate="footer_email_2">E. info@wishgroup.world</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Subfooter -->
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center" data-translate="footer_copyright">
+                            Copyright 2025 - Wish Group. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <!-- Javascript Files -->
+        <script src="js/vendors.js"></script>
+        <script src="js/designesia.js"></script>
+        <script src="js/countdown-custom.js"></script>
+        <script src="js/custom-marquee.js"></script>
+        <script src="js/translations.js"></script>
+    </div>
+
+
+    <script>const translations = {
+    en: {
+        page_title: "The Tie Bay | Exclusive Lagoon Activities",
+        meta_description: "The Tie Bay Lagoon Activities - Unique floating experiences in the Maldives",
+        meta_keywords: "Lagoon Activities, Floating Villas, Underwater Museum, Maldives, Luxury Experiences",
+        scroll_to_top: "Scroll to top",
+        menu_home: "Home",
+        menu_about: "About Us",
+        menu_divisions: "Divisions",
+        menu_projects: "Projects",
+        menu_countries: "Countries",
+        menu_news: "News",
+        menu_policies: "Our Policies",
+        menu_career: "Career",
+        menu_contact: "Contact Us",
+        menu_tickets_1: "Tickets Style 1",
+        menu_tickets_2: "Tickets Style 2",
+        menu_news_single: "News Single",
+        logo_alt: "Wish Group Logo",
+        hero_title: "The Tie Bay – Lagoon Experiences",
+        hero_description: "Unique floating activities in the heart of the Maldives",
+        hero_label: "Aquatic Paradise",
+        hero_alt: "The Tie Bay Lagoon Background",
+        intro_title: "Crystal Lagoon Experiences",
+        intro_description: "Where the ocean meets luxury in perfect harmony",
+        intro_image_alt: "The Tie Bay Lagoon",
+        activities_title: "Signature Lagoon Activities",
+        activities_description: "Exclusive water experiences designed for unforgettable moments",
+        activity_1_title: "Floating Breakfast/Lunch",
+        activity_1_description: "Dine on a private floating platform",
+        activity_1_alt: "Floating Breakfast",
+        activity_2_title: "Floating Sea Bathing Canopy",
+        activity_2_description: "Private ocean relaxation platform",
+        activity_2_alt: "Sea Bathing Canopy",
+        activity_3_title: "Floating Yoga & Meditation",
+        activity_3_description: "Serene practice on the water",
+        activity_3_alt: "Lagoon Yoga",
+        activity_4_title: "Underwater Museum",
+        activity_4_description: "Art beneath the waves",
+        activity_4_alt: "Underwater Museum",
+        activity_5_title: "Floating Event Deck",
+        activity_5_description: "Private functions on the water",
+        activity_5_alt: "Floating Deck",
+        activity_6_title: "Canoe Picnics",
+        activity_6_description: "Dining adventure on the lagoon",
+        activity_6_alt: "Canoe Picnics",
+        features_title: "Unique Lagoon Features",
+        feature_1: "Traditional Dhoni boat rides through the lagoon",
+        feature_2: "Exclusive floating villas with panoramic views",
+        feature_3: "Underwater villas with marine life viewing",
+        feature_4: "Private helipad for VIP arrivals",
+        feature_5: "Dedicated jetty for seamless transfers",
+        features_image_alt: "Lagoon Features",
+        accommodations_title: "Lagoon Accommodations",
+        accommodations_description: "Stay surrounded by the beauty of the water",
+        accommodation_1_title: "Floating Villas",
+        accommodation_1_description: "Luxury on the water's surface",
+        accommodation_1_alt: "Floating Villas",
+        accommodation_2_title: "Underwater Villas",
+        accommodation_2_description: "Sleep surrounded by marine life",
+        accommodation_2_alt: "Underwater Villas",
+        cta_title: "Ready for Your Lagoon Adventure?",
+        cta_description: "Book your exclusive water experiences today",
+        cta_contact: "Contact Us",
+        cta_packages: "View Packages",
+        footer_address_title: "Address",
+        footer_address: "Business Bay, Dubai",
+        footer_country: "United Arab Emirates",
+        footer_links_title: "Quick Links",
+        footer_contact_title: "Contact Us",
+        footer_phone_1: "T. +971 4259 7167",
+        footer_phone_2: "M. +971 4259 4795",
+        footer_email_1: "E. info@wishgroup.ae",
+        footer_email_2: "E. info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - Wish Group. All rights reserved.",
+        footer_logo_alt: "Wish Group Footer Logo"
+    },
+    ar: {
+        page_title: "ذا تاي باي | أنشطة البحيرة الحصرية",
+        meta_description: "أنشطة ذا تاي باي البحيرة - تجارب عائمة فريدة في قلب جزر المالديف",
+        meta_keywords: "أنشطة البحيرة، الفيلات العائمة، المتحف تحت الماء، المالديف، تجارب فاخرة",
+        scroll_to_top: "التمرير إلى الأعلى",
+        menu_home: "الرئيسية",
+        menu_about: "معلومات عنا",
+        menu_divisions: "الأقسام",
+        menu_projects: "المشاريع",
+        menu_countries: "الدول",
+        menu_news: "الأخبار",
+        menu_policies: "سياساتنا",
+        menu_career: "وظائف",
+        menu_contact: "اتصل بنا",
+        menu_tickets_1: "تذكرة النمط 1",
+        menu_tickets_2: "تذكرة النمط 2",
+        menu_news_single: "خبر واحد",
+        logo_alt: "شعار مجموعة ويش",
+        hero_title: "ذا تاي باي - تجارب البحيرة",
+        hero_description: "أنشطة عائمة فريدة في قلب جزر المالديف",
+        hero_label: "الجنة المائية",
+        hero_alt: "خلفية بحيرة ذا تاي باي",
+        intro_title: "تجارب البحيرة الكريستالية",
+        intro_description: "حيث يلتقي المحيط بالفخامة في تناغم مثالي",
+        intro_image_alt: "بحيرة ذا تاي باي",
+        activities_title: "أنشطة البحيرة المميزة",
+        activities_description: "تجارب مائية حصرية مصممة للحظات لا تُنسى",
+        activity_1_title: "الإفطار/الغداء العائم",
+        activity_1_description: "تناول الطعام على منصة عائمة خاصة",
+        activity_1_alt: "الإفطار العائم",
+        activity_2_title: "مظلة الاستحمام البحري العائمة",
+        activity_2_description: "منصة استرخاء خاصة في المحيط",
+        activity_2_alt: "مظلة الاستحمام البحري",
+        activity_3_title: "اليوغا والتأمل العائم",
+        activity_3_description: "ممارسة هادئة على الماء",
+        activity_3_alt: "يوغا البحيرة",
+        activity_4_title: "المتحف تحت الماء",
+        activity_4_description: "فن تحت الأمواج",
+        activity_4_alt: "المتحف تحت الماء",
+        activity_5_title: "سطح الفعاليات العائم",
+        activity_5_description: "وظائف خاصة على الماء",
+        activity_5_alt: "سطح عائم",
+        activity_6_title: "نزهات القوارب",
+        activity_6_description: "مغامرة تناول الطعام في البحيرة",
+        activity_6_alt: "نزهات القوارب",
+        features_title: "ميزات البحيرة الفريدة",
+        feature_1: "رحلات قوارب الدوني التقليدية عبر البحيرة",
+        feature_2: "فيلات عائمة حصرية مع إطلالات بانورامية",
+        feature_3: "فيلات تحت الماء مع مشاهدة الحياة البحرية",
+        feature_4: "مهبط طائرات خاص للوافدين المهمين",
+        feature_5: "رصيف مخصص لنقل سلس",
+        features_image_alt: "ميزات البحيرة",
+        accommodations_title: "إقامات البحيرة",
+        accommodations_description: "الإقامة محاطة بجمال الماء",
+        accommodation_1_title: "الفيلات العائمة",
+        accommodation_1_description: "الفخامة على سطح الماء",
+        accommodation_1_alt: "الفيلات العائمة",
+        accommodation_2_title: "الفيلات تحت الماء",
+        accommodation_2_description: "النوم محاطًا بالحياة البحرية",
+        accommodation_2_alt: "الفيلات تحت الماء",
+        cta_title: "هل أنت جاهز لمغامرة البحيرة؟",
+        cta_description: "احجز تجاربك المائية الحصرية اليوم",
+        cta_contact: "اتصل بنا",
+        cta_packages: "عرض الباقات",
+        footer_address_title: "العنوان",
+        footer_address: "خليج الأعمال، دبي",
+        footer_country: "الإمارات العربية المتحدة",
+        footer_links_title: "روابط سريعة",
+        footer_contact_title: "اتصل بنا",
+        footer_phone_1: "هاتف: +971 4259 7167",
+        footer_phone_2: "جوال: +971 4259 4795",
+        footer_email_1: "بريد إلكتروني: info@wishgroup.ae",
+        footer_email_2: "بريد إلكتروني: info@wishgroup.world",
+        footer_copyright: "حقوق الطبع والنشر 2025 - مجموعة ويش. جميع الحقوق محفوظة.",
+        footer_logo_alt: "شعار مجموعة ويش للتذييل"
+    },
+    fr: {
+        page_title: "The Tie Bay | Activités exclusives en lagon",
+        meta_description: "Activités du lagon The Tie Bay - Expériences flottantes uniques au cœur des Maldives",
+        meta_keywords: "Activités en lagon, Villas flottantes, Musée sous-marin, Maldives, Expériences de luxe",
+        scroll_to_top: "Faire défiler vers le haut",
+        menu_home: "Accueil",
+        menu_about: "À propos",
+        menu_divisions: "Divisions",
+        menu_projects: "Projets",
+        menu_countries: "Pays",
+        menu_news: "Actualités",
+        menu_policies: "Nos politiques",
+        menu_career: "Carrière",
+        menu_contact: "Contactez-nous",
+        menu_tickets_1: "Billets Style 1",
+        menu_tickets_2: "Billets Style 2",
+        menu_news_single: "Actualité unique",
+        logo_alt: "Logo du groupe Wish",
+        hero_title: "The Tie Bay - Expériences en lagon",
+        hero_description: "Activités flottantes uniques au cœur des Maldives",
+        hero_label: "Paradis aquatique",
+        hero_alt: "Fond de lagon The Tie Bay",
+        intro_title: "Expériences en lagon cristallin",
+        intro_description: "Là où l'océan rencontre le luxe en parfaite harmonie",
+        intro_image_alt: "Lagon The Tie Bay",
+        activities_title: "Activités emblématiques du lagon",
+        activities_description: "Expériences aquatiques exclusives conçues pour des moments inoubliables",
+        activity_1_title: "Petit-déjeuner/Déjeuner flottant",
+        activity_1_description: "Dînez sur une plateforme flottante privée",
+        activity_1_alt: "Petit-déjeuner flottant",
+        activity_2_title: "Baldaquin de baignade en mer flottant",
+        activity_2_description: "Plateforme de relaxation privée dans l'océan",
+        activity_2_alt: "Baldaquin de baignade en mer",
+        activity_3_title: "Yoga et méditation flottants",
+        activity_3_description: "Pratique sereine sur l'eau",
+        activity_3_alt: "Yoga en lagon",
+        activity_4_title: "Musée sous-marin",
+        activity_4_description: "Art sous les vagues",
+        activity_4_alt: "Musée sous-marin",
+        activity_5_title: "Pont d'événements flottant",
+        activity_5_description: "Événements privés sur l'eau",
+        activity_5_alt: "Pont flottant",
+        activity_6_title: "Pique-niques en canoë",
+        activity_6_description: "Aventure culinaire sur le lagon",
+        activity_6_alt: "Pique-niques en canoë",
+        features_title: "Caractéristiques uniques du lagon",
+        feature_1: "Balades en bateau Dhoni traditionnel à travers le lagon",
+        feature_2: "Villas flottantes exclusives avec vues panoramiques",
+        feature_3: "Villas sous-marines avec observation de la vie marine",
+        feature_4: "Héliport privé pour les arrivées VIP",
+        feature_5: "Jetée dédiée pour des transferts fluides",
+        features_image_alt: "Caractéristiques du lagon",
+        accommodations_title: "Hébergements en lagon",
+        accommodations_description: "Séjour entouré par la beauté de l'eau",
+        accommodation_1_title: "Villas flottantes",
+        accommodation_1_description: "Luxe à la surface de l'eau",
+        accommodation_1_alt: "Villas flottantes",
+        accommodation_2_title: "Villas sous-marines",
+        accommodation_2_description: "Dormir entouré par la vie marine",
+        accommodation_2_alt: "Villas sous-marines",
+        cta_title: "Prêt pour votre aventure en lagon ?",
+        cta_description: "Réservez vos expériences aquatiques exclusives aujourd'hui",
+        cta_contact: "Contactez-nous",
+        cta_packages: "Voir les forfaits",
+        footer_address_title: "Adresse",
+        footer_address: "Business Bay, Dubaï",
+        footer_country: "Émirats arabes unis",
+        footer_links_title: "Liens rapides",
+        footer_contact_title: "Contactez-nous",
+        footer_phone_1: "Tél. : +971 4259 7167",
+        footer_phone_2: "Mobile : +971 4259 4795",
+        footer_email_1: "Email : info@wishgroup.ae",
+        footer_email_2: "Email : info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés.",
+        footer_logo_alt: "Logo du groupe Wish pour le pied de page"
+    },
+    si: {
+        page_title: "ද ටයි බේ | සුවිශේෂී ලැගුන් ක්‍රියාකාරකම්",
+        meta_description: "ද ටයි බේ ලැගුන් ක්‍රියාකාරකම් - මාලදිවයිනේ හදවතේ සුවිශේෂී පාවෙන අත්දැකීම්",
+        meta_keywords: "ලැගුන් ක්‍රියාකාරකම්, පාවෙන විලාස්, ජලය යටි කෞතුකාගාරය, මාලදිවයින්, සුඛෝපභෝගී අත්දැකීම්",
+        scroll_to_top: "ඉහළට ලිස්සා යන්න",
+        menu_home: "මුල් පිටුව",
+        menu_about: "අප ගැන",
+        menu_divisions: "අංශ",
+        menu_projects: "ව්‍යාපෘති",
+        menu_countries: "රටවල්",
+        menu_news: "පුවත්",
+        menu_policies: "අපගේ ප්‍රතිපත්ති",
+        menu_career: "වෘත්තිය",
+        menu_contact: "අප හා සම්බන්ධ වන්න",
+        menu_tickets_1: "ටිකට් විලාසය 1",
+        menu_tickets_2: "ටිකට් විලාසය 2",
+        menu_news_single: "තනි පුවත",
+        logo_alt: "විෂ් සමූහ ලාංඡනය",
+        hero_title: "ද ටයි බේ - ලැගුන් අත්දැකීම්",
+        hero_description: "මාලදිවයිනේ හදවතේ සුවිශේෂී පාවෙන ක්‍රියාකාරකම්",
+        hero_label: "ජල තලයේ උත්තම භූමිය",
+        hero_alt: "ද ටයි බේ ලැගුන් පසුබිම",
+        intro_title: "ක්‍රිස්ටල් ලැගුන් අත්දැකීම්",
+        intro_description: "සාගරය සුඛෝපභෝගීත්වය සමඟ පරිපූර්ණ සමගියකින් එක්වන ස්ථානය",
+        intro_image_alt: "ද ටයි බේ ලැගුන්",
+        activities_title: "ලැගුන්හි සුවිශේෂී ක්‍රියාකාරකම්",
+        activities_description: "අමතක නොවන මොහොතන් සඳහා නිර්මාණය කරන ලද සුවිශේෂී ජල අත්දැකීම්",
+        activity_1_title: "පාවෙන උදෑසන ආහාරය/දිවා ආහාරය",
+        activity_1_description: "පුද්ගලික පාවෙන වේදිකාවක ආහාර ගැනීම",
+        activity_1_alt: "පාවෙන උදෑසන ආහාරය",
+        activity_2_title: "පාවෙන මුහුදු ස්නාන රවුම",
+        activity_2_description: "පුද්ගලික මුහුදු ලිහිල් කිරීමේ වේදිකාව",
+        activity_2_alt: "මුහුදු ස්නාන රවුම",
+        activity_3_title: "පාවෙන යෝග සහ භාවනා",
+        activity_3_description: "ජලය මත සන්සුන් පුහුණුව",
+        activity_3_alt: "ලැගුන් යෝග",
+        activity_4_title: "ජලය යටි කෞතුකාගාරය",
+        activity_4_description: "අලුත් රැලි යටින් ඇති කලාව",
+        activity_4_alt: "ජලය යටි කෞතුකාගාරය",
+        activity_5_title: "පාවෙන උත්සව තට්ටුව",
+        activity_5_description: "ජලය මත පුද්ගලික උත්සව",
+        activity_5_alt: "පාවෙන තට්ටුව",
+        activity_6_title: "කැනෝ පික්නික්",
+        activity_6_description: "ලැගුන්හි ආහාර ගැනීමේ ගමන",
+        activity_6_alt: "කැනෝ පික්නික්",
+        features_title: "ලැගුන්හි සුවිශේෂී ලක්ෂණ",
+        feature_1: "ලැගුන් හරහා ධෝනි බෝට්ටු ගමන්",
+        feature_2: "පරිපූර්ණ දර්ශන සහිත සුවිශේෂී පාවෙන විලාස්",
+        feature_3: "සමුද්‍ර ජීවිත නැරඹීමේ ජලය යටි විලාස්",
+        feature_4: "විශේෂ පුද්ගලික ආගමන සඳහා පුද්ගලික හෙලිපෑඩ්",
+        feature_5: "සුමට මාරුවීම් සඳහා විශේෂිත ජැටිය",
+        features_image_alt: "ලැගුන් ලක්ෂණ",
+        accommodations_title: "ලැගුන් ඉඳුම්හිටුම්",
+        accommodations_description: "ජලයේ ලස්සනින් වටවුණු ඉඳුම්හිටුම්",
+        accommodation_1_title: "පාවෙන විලාස්",
+        accommodation_1_description: "ජල මතුපිට සුඛෝපභෝගීත්වය",
+        accommodation_1_alt: "පාවෙන විලාස්",
+        accommodation_2_title: "ජලය යටි විලාස්",
+        accommodation_2_description: "සමුද්‍ර ජීවිතයෙන් වටවුණු නින්ද",
+        accommodation_2_alt: "ජලය යටි විලාස්",
+        cta_title: "ඔබේ ලැගුන් ගමනට සූදානම්ද?",
+        cta_description: "අදම ඔබේ සුවිශේෂී ජල අත්දැකීම් වෙන් කරගන්න",
+        cta_contact: "අප හා සම්බන්ධ වන්න",
+        cta_packages: "පැකේජ බලන්න",
+        footer_address_title: "ලිපිනය",
+        footer_address: "බිස්නස් බේ, ඩුබායි",
+        footer_country: "එක්සත් අරාබි එමිරේට්ස්",
+        footer_links_title: "ඉක්මන් ලින්ක්",
+        footer_contact_title: "අප හා සම්බන්ධ වන්න",
+        footer_phone_1: "දු.ක: +971 4259 7167",
+        footer_phone_2: "ජංගම: +971 4259 4795",
+        footer_email_1: "වි.තැ: info@wishgroup.ae",
+        footer_email_2: "වි.තැ: info@wishgroup.world",
+        footer_copyright: "පිටපත් 2025 - විෂ් සමූහය. සියලු හිමිකම් ඇවිරිණි.",
+        footer_logo_alt: "විෂ් සමූහ පාදක ලාංඡනය"
+    },
+    dv: {
+        page_title: "ދަ ޓައި ބޭ | ހާސް ލެގޫން އެކްޓިވިޓީސް",
+        meta_description: "ދަ ޓައި ބޭ ލެގޫން އެކްޓިވިޓީސް - މާލެޑިވްސް ގެ ހިދުވަތުގައި ހާސް ފްލޯޓިން އެކްސްޕިއަރިއަންސް",
+        meta_keywords: "ލެގޫން އެކްޓިވިޓީސް، ފްލޯޓިން ވިލާސް، އަންޑަރވޯޓަރ މިއުޒިއަމް، މާލެޑިވްސް، ލަގްޒަރީ އެކްސްޕިއަރިއަންސް",
+        scroll_to_top: "މަތިއަށް ސްކްރޯލް ކުރަން",
+        menu_home: "މަންދު",
+        menu_about: "އަލިފަން",
+        menu_divisions: "ބައިތައް",
+        menu_projects: "ޕްރޮޖެކްޓްތައް",
+        menu_countries: "ޤައުމުތައް",
+        menu_news: "ޚަބަރު",
+        menu_policies: "އަމިއްލަ ސިޔާސަތުތައް",
+        menu_career: "ކެރިއަރ",
+        menu_contact: "ކޮންޓެކްޓް އަސް",
+        menu_tickets_1: "ޓިކެޓް ސްޓައިލް 1",
+        menu_tickets_2: "ޓިކެޓް ސްޓައިލް 2",
+        menu_news_single: "އެކެއް ޚަބަރު",
+        logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+        hero_title: "ދަ ޓައި ބޭ - ލެގޫން އެކްސްޕިއަރިއަންސް",
+        hero_description: "މާލެޑިވްސް ގެ ހިދުވަތުގައި ހާސް ފްލޯޓިން އެކްޓިވިޓީސް",
+        hero_label: "އެކްވެޓިކް ޕެރަޑައިސް",
+        hero_alt: "ދަ ޓައި ބޭ ލެގޫން ބެކްގްރައުންޑް",
+        intro_title: "ކްރިސްޓަލް ލެގޫން އެކްސްޕިއަރިއަންސް",
+        intro_description: "ފެން ލަގްޒަރީ އާއި ޕަފެކްޓް ހާމަނީގައި ގުޅުން",
+        intro_image_alt: "ދަ ޓައި ބޭ ލެގޫން",
+        activities_title: "ލެގޫން އެކްޓިވިޓީސް",
+        activities_description: "އަމިއްލަ ފެން އެކްސްޕިއަރިއަންސް އެންމެ ހަތްޕުޅު މުހިންމު މޮމެންޓްތަކަށް",
+        activity_1_title: "ފްލޯޓިން ބްރެކްފަސްޓް/ލަންޗް",
+        activity_1_description: "އަމިއްލަ ފްލޯޓިން ޕްލެޓްފޯމް އަށް ކާން",
+        activity_1_alt: "ފްލޯޓިން ބްރެކްފަސްޓް",
+        activity_2_title: "ފްލޯޓިން ސީ ބޭދިން ކެނަޕީ",
+        activity_2_description: "އަމިއްލަ އޯޝަން ރިލެކްސޭޝަން ޕްލެޓްފޯމް",
+        activity_2_alt: "ސީ ބޭދިން ކެނަޕީ",
+        activity_3_title: "ފްލޯޓިން ޔޯގާ އަދި މެޑިޓޭޝަން",
+        activity_3_description: "ފެނުގައި ސަންސުން ޕްރެކްޓިސް",
+        activity_3_alt: "ލެގޫން ޔޯގާ",
+        activity_4_title: "އަންޑަރވޯޓަރ މިއުޒިއަމް",
+        activity_4_description: "ރައްލުތަކުގެ ދަށުން އާޓް",
+        activity_4_alt: "އަންޑަރވޯޓަރ މިއުޒިއަމް",
+        activity_5_title: "ފްލޯޓިން އިވެންޓް ޑެކް",
+        activity_5_description: "ފެނުގައި އަމިއްލަ ފަންކްޝަންސް",
+        activity_5_alt: "ފްލޯޓިން ޑެކް",
+        activity_6_title: "ކެނޯ ޕިކްނިކްސް",
+        activity_6_description: "ލެގޫން އަށް ކާންކުރުމުގެ އެޑްވެންޗަރ",
+        activity_6_alt: "ކެނޯ ޕިކްނިކްސް",
+        features_title: "ލެގޫންގެ ހާސް ފީޗަރސް",
+        feature_1: "ލެގޫން އަށް ޓްރެޑިޝަނަލް ދޯނި ބޯޓް ރައިޑް",
+        feature_2: "ޕެނަރޯމިކް ވިޔު އާއި ހާސް ފްލޯޓިން ވިލާސް",
+        feature_3: "މެރިން ލައިފް ވިޔު އާއި އަންޑަރވޯޓަރ ވިލާސް",
+        feature_4: "ވީއައިޕީ އެރައިވަލްސް އަށް އަމިއްލަ ހެލިޕެޑް",
+        feature_5: "ސީމްލެސް ޓްރޭންސްފަރ އަށް ޑެޑިކޭޓް ޖެޓީ",
+        features_image_alt: "ލެގޫން ފީޗަރސް",
+        accommodations_title: "ލެގޫން އެކޮމަޑޭޝަންސް",
+        accommodations_description: "ފެނުގެ ރާނގިރި އެކޮމަޑޭޝަން",
+        accommodation_1_title: "ފްލޯޓިން ވިލާސް",
+        accommodation_1_description: "ފެނުގެ މަތީ ލަގްޒަރީ",
+        accommodation_1_alt: "ފްލޯޓިން ވިލާސް",
+        accommodation_2_title: "އަންޑަރވޯޓަރ ވިލާސް",
+        accommodation_2_description: "މެރިން ލައިފް ވަށައި ނިދުން",
+        accommodation_2_alt: "އަންޑަރވޯޓަރ ވިލާސް",
+        cta_title: "ލެގޫން އެޑްވެންޗަރ އަށް ތައްޔާރުން؟",
+        cta_description: "އަދު އަމިއްލަ ފެން އެކްސްޕިއަރިއަންސް ބުކް ކުރަން",
+        cta_contact: "ކޮންޓެކްޓް އަސް",
+        cta_packages: "ޕެކޭޖު ބަލާ",
+        footer_address_title: "އެޑްރެސް",
+        footer_address: "ބިޒިނަސް ބޭ، ދުބައި",
+        footer_country: "ޔުނައިޓެޑް އަރަބް އިމިރޭޓްސް",
+        footer_links_title: "ކުއިކް ލިންކްސް",
+        footer_contact_title: "ކޮންޓެކްޓް އަސް",
+        footer_phone_1: "ޓެލިފޯން: +971 4259 7167",
+        footer_phone_2: "މޮބައިލް: +971 4259 4795",
+        footer_email_1: "އީމެއިލް: info@wishgroup.ae",
+        footer_email_2: "އީމެއިލް: info@wishgroup.world",
+        footer_copyright: "ކޮޕިރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ރައިޓްސް ރިޒާވް.",
+        footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ"
+    }
+};
+
+// Function to set the language
+function setLanguage(lang) {
+    // Update all elements with data-translate attribute
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Update meta tags
+    document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].meta_description || '');
+    document.querySelector('meta[name="keywords"]').setAttribute('content', translations[lang].meta_keywords || '');
+    document.title = translations[lang].page_title || 'The Tie Bay | Exclusive Lagoon Activities';
+
+    // Update image alt attributes
+    document.querySelectorAll('img[data-translate]').forEach(img => {
+        const key = img.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            img.setAttribute('alt', translations[lang][key]);
+        }
+    });
+
+    // Save selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+// Initialize language
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('language-switcher').value = savedLang;
+    setLanguage(savedLang);
+});</script>
+</body>
+</html>
