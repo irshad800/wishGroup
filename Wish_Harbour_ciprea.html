@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>CIPREA - Premium Tuna Products</title>
+    <title data-translate="page_title">CIPREA - Premium Tuna Products</title>
     <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="CIPREA Tuna Portfolio" name="description">
-    <meta content="Yellowfin Tuna, Skipjack Tuna, Maldives, Fresh, Frozen, Seafood" name="keywords">
-    <meta content="CIPREA" name="author">
+    <meta content="CIPREA Tuna Portfolio" name="description" data-translate="meta_description">
+    <meta content="Yellowfin Tuna, Skipjack Tuna, Maldives, Fresh, Frozen, Seafood" name="keywords" data-translate="meta_keywords">
+    <meta content="CIPREA" name="author" data-translate="meta_author">
     <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
@@ -18,11 +17,10 @@
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 </head>
-
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -39,9 +37,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remoc:\Users\ahmed\Downloads\yellofin tuna (3).jpgve.png" alt="">
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" data-translate="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -50,21 +48,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-translate="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_carrier">Carrier</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="menu_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-translate="menu_contact_tickets1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-translate="menu_contact_tickets2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-translate="menu_contact_news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-translate="menu_contact_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-translate="menu_contact_contact">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -72,7 +70,13 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select Language">
+                                    <option value="en">English</option>
+                                    <option value="si">Sinhala</option>
+                                    <option value="dv">Dhivehi</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="fr">French</option>
+                                </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -84,22 +88,20 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="images\wishholdingsImages\main.jpeg" class="jarallax-img" alt="">
+            <img src="images/wishholdingsImages/main.jpeg" class="jarallax-img" alt="" data-translate="hero_alt">
             <div class="gradient-edge-bottom h-50"></div>
             <div class="sw-overlay op-5"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
-                                CIPREA – Premium Tuna from the Maldives
-                            </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">Sustainable, high-quality Yellowfin & Skipjack Tuna processed at our state-of-the-art facility in Himmafushi Island</p>
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-translate="hero_title">CIPREA – Premium Tuna from the Maldives</h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-translate="hero_description">Sustainable, high-quality Yellowfin & Skipjack Tuna processed at our state-of-the-art facility in Himmafushi Island</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">HACCP & ISO Certified</span>
+                                    <span class="fs-20 fw-600" data-translate="hero_label">HACCP & ISO Certified</span>
                                 </div>
                             </div>
                         </div>
@@ -113,30 +115,30 @@
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-10">
                         <div class="text-center mb-5">
-                            <h2 class="fs-36 mb-3">Our Premium Tuna Products</h2>
-                            <p class="lead">Processed with care in the pristine waters of the Maldives</p>
+                            <h2 class="fs-36 mb-3" data-translate="products_title">Our Premium Tuna Products</h2>
+                            <p class="lead" data-translate="products_description">Processed with care in the pristine waters of the Maldives</p>
                         </div>
                         
                         <div class="row align-items-center mb-5">
                             <div class="col-lg-6">
-                                <img src="images\wishholdingsImages\about.jpeg" class="w-100 rounded-1 shadow-lg" alt="CIPREA Tuna Processing">
+                                <img src="images/wishholdingsImages/about.jpeg" class="w-100 rounded-1 shadow-lg" alt="" data-translate="image_alt_facility">
                             </div>
                             <div class="col-lg-6">
                                 <div class="ps-lg-4">
-                                    <h3 class="fs-24 mb-3">About Our Facility</h3>
-                                    <p>CIPREA's Fresh & Frozen Tuna Portfolio, located on Himmafushi Island, Kaafu Atoll, Maldives, represents our commitment to delivering exceptional seafood products globally. This state-of-the-art facility specializes in processing premium Yellowfin and Skipjack Tuna.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="about_title">About Our Facility</h3>
+                                    <p data-translate="about_description">CIPREA's Fresh & Frozen Tuna Portfolio, located on Himmafushi Island, Kaafu Atoll, Maldives, represents our commitment to delivering exceptional seafood products globally. This state-of-the-art facility specializes in processing premium Yellowfin and Skipjack Tuna.</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <div class="me-4">
-                                            <div class="fs-36 fw-700 text-color">100%</div>
-                                            <div class="fs-14">Quality Guarantee</div>
+                                            <div class="fs-36 fw-700 text-color" data-translate="quality_guarantee_value">100%</div>
+                                            <div class="fs-14" data-translate="quality_guarantee_label">Quality Guarantee</div>
                                         </div>
                                         <div class="me-4">
-                                            <div class="fs-36 fw-700 text-color">HACCP</div>
-                                            <div class="fs-14">Certified</div>
+                                            <div class="fs-36 fw-700 text-color" data-translate="haccp_label">HACCP</div>
+                                            <div class="fs-14" data-translate="certified_label">Certified</div>
                                         </div>
                                         <div>
-                                            <div class="fs-36 fw-700 text-color">ISO</div>
-                                            <div class="fs-14">Certified</div>
+                                            <div class="fs-36 fw-700 text-color" data-translate="iso_label">ISO</div>
+                                            <div class="fs-14" data-translate="certified_label">Certified</div>
                                         </div>
                                     </div>
                                 </div>
@@ -149,30 +151,30 @@
                                     <div class="p-4 rounded-1 bg-dark-2 h-100">
                                         <div class="d-flex align-items-center mb-3">
                                             <div class="me-3">
-                                <img src="images\wishholdingsImages\yellofin tuna.jpg" class="w-100 rounded-1 shadow-lg" alt="CIPREA Tuna Processing">
+                                                <img src="images/wishholdingsImages/yellofin tuna.jpg" class="w-100 rounded-1 shadow-lg" alt="" data-translate="image_alt_yellowfin">
                                             </div>
                                             <div>
-                                                <h4 class="fs-20 mb-0">Yellowfin Tuna</h4>
-                                                <span class="text-muted">Thunnus albacares</span>
+                                                <h4 class="fs-20 mb-0" data-translate="yellowfin_title">Yellowfin Tuna</h4>
+                                                <span class="text-muted" data-translate="yellowfin_scientific">Thunnus albacares</span>
                                             </div>
                                         </div>
-                                        <p>Perfect for sushi, grilling, poke bowls, and gourmet dishes. Processed with care to maintain freshness and quality.</p>
+                                        <p data-translate="yellowfin_description">Perfect for sushi, grilling, poke bowls, and gourmet dishes. Processed with care to maintain freshness and quality.</p>
                                         <div class="product-pricing mt-3">
                                             <div class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                                <span>Loins</span>
-                                                <span class="fw-600">$7.50/kg</span>
+                                                <span data-translate="yellowfin_loins">Loins</span>
+                                                <span class="fw-600" data-translate="yellowfin_loins_price">$7.50/kg</span>
                                             </div>
                                             <div class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                                <span>Steaks</span> 
-                                                <span class="fw-600">$8.00/kg</span>
+                                                <span data-translate="yellowfin_steaks">Steaks</span> 
+                                                <span class="fw-600" data-translate="yellowfin_steaks_price">$8.00/kg</span>
                                             </div>
                                             <div class="d-flex justify-content-between py-2 border-bottom border-dark">
-                                                <span>Cubes</span>
-                                                <span class="fw-600">$7.00/kg</span>
+                                                <span data-translate="yellowfin_cubes">Cubes</span>
+                                                <span class="fw-600" data-translate="yellowfin_cubes_price">$7.00/kg</span>
                                             </div>
                                             <div class="d-flex justify-content-between py-2">
-                                                <span>Saku Blocks</span>
-                                                <span class="fw-600">$8.00/kg</span>
+                                                <span data-translate="yellowfin_saku">Saku Blocks</span>
+                                                <span class="fw-600" data-translate="yellowfin_saku_price">$8.00/kg</span>
                                             </div>
                                         </div>
                                     </div>
@@ -181,26 +183,26 @@
                                     <div class="p-4 rounded-1 bg-dark-2 h-100">
                                         <div class="d-flex align-items-center mb-3">
                                             <div class="me-3">
-                                <img src="images\wishholdingsImages\skipjacktuna.png" class="w-100 rounded-1 shadow-lg" alt="CIPREA Tuna Processing">
+                                                <img src="images/wishholdingsImages/skipjacktuna.png" class="w-100 rounded-1 shadow-lg" alt="" data-translate="image_alt_skipjack">
                                             </div>
                                             <div>
-                                                <h4 class="fs-20 mb-0">Skipjack Tuna</h4>
-                                                <span class="text-muted">Katsuwonus pelamis</span>
+                                                <h4 class="fs-20 mb-0" data-translate="skipjack_title">Skipjack Tuna</h4>
+                                                <span class="text-muted" data-translate="skipjack_scientific">Katsuwonus pelamis</span>
                                             </div>
                                         </div>
-                                        <p>Ideal for mass processing and foodservice applications. Blast frozen at sea to preserve freshness.</p>
+                                        <p data-translate="skipjack_description">Ideal for mass processing and foodservice applications. Blast frozen at sea to preserve freshness.</p>
                                         <div class="product-pricing mt-3">
                                             <div class="d-flex justify-content-between py-2">
-                                                <span>Frozen Whole Round (20kg/carton)</span>
-                                                <span class="fw-600">$4.80/kg</span>
+                                                <span data-translate="skipjack_whole">Frozen Whole Round (20kg/carton)</span>
+                                                <span class="fw-600" data-translate="skipjack_whole_price">$4.80/kg</span>
                                             </div>
                                         </div>
                                         <div class="mt-4 pt-3 border-top border-dark">
-                                            <h5 class="fs-16">Packaging Options</h5>
+                                            <h5 class="fs-16" data-translate="packaging_title">Packaging Options</h5>
                                             <ul class="list-unstyled">
-                                                <li class="mb-1"><i class="fa fa-check text-color me-2"></i> Custom packaging available</li>
-                                                <li class="mb-1"><i class="fa fa-check text-color me-2"></i> Bulk container shipments</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Retail-ready packaging</li>
+                                                <li class="mb-1"><i class="fa fa-check text-color me-2"></i><span data-translate="packaging_option_1">Custom packaging available</span></li>
+                                                <li class="mb-1"><i class="fa fa-check text-color me-2"></i><span data-translate="packaging_option_2">Bulk container shipments</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="packaging_option_3">Retail-ready packaging</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -211,41 +213,41 @@
                         <div class="certification-section mb-5">
                             <div class="row g-4 align-items-center">
                                 <div class="col-lg-6 order-lg-2">
-                                <img src="images\wishholdingsImages\image.png" class="w-100 rounded-1 shadow-lg" alt="CIPREA Tuna Processing">
+                                    <img src="images/wishholdingsImages/image.png" class="w-100 rounded-1 shadow-lg" alt="" data-translate="image_alt_quality">
                                 </div>
                                 <div class="col-lg-6 order-lg-1">
                                     <div class="pe-lg-4">
-                                        <h3 class="fs-24 mb-3">Quality Assurance</h3>
-                                        <p>Our facility is HACCP and ISO certified, ensuring the highest standards of food safety and quality. All products are blast frozen at sea to preserve freshness and are export-ready for global markets.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="quality_title">Quality Assurance</h3>
+                                        <p data-translate="quality_description">Our facility is HACCP and ISO certified, ensuring the highest standards of food safety and quality. All products are blast frozen at sea to preserve freshness and are export-ready for global markets.</p>
                                         
                                         <div class="quality-features mt-4">
                                             <div class="row g-3">
                                                 <div class="col-6">
                                                     <div class="p-3 bg-dark-2 rounded-1 h-100">
                                                         <i class="fa fa-thermometer-full fs-24 text-color mb-2"></i>
-                                                        <h5 class="fs-16 mb-1">Temperature Control</h5>
-                                                        <p class="fs-14 mb-0">Maintained at optimal levels throughout processing</p>
+                                                        <h5 class="fs-16 mb-1" data-translate="feature_temperature_title">Temperature Control</h5>
+                                                        <p class="fs-14 mb-0" data-translate="feature_temperature_description">Maintained at optimal levels throughout processing</p>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="p-3 bg-dark-2 rounded-1 h-100">
                                                         <i class="fa fa-shield-alt fs-24 text-color mb-2"></i>
-                                                        <h5 class="fs-16 mb-1">Food Safety</h5>
-                                                        <p class="fs-14 mb-0">Rigorous quality control measures</p>
+                                                        <h5 class="fs-16 mb-1" data-translate="feature_safety_title">Food Safety</h5>
+                                                        <p class="fs-14 mb-0" data-translate="feature_safety_description">Rigorous quality control measures</p>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="p-3 bg-dark-2 rounded-1 h-100">
                                                         <i class="fa fa-leaf fs-24 text-color mb-2"></i>
-                                                        <h5 class="fs-16 mb-1">Sustainability</h5>
-                                                        <p class="fs-14 mb-0">Responsible fishing practices</p>
+                                                        <h5 class="fs-16 mb-1" data-translate="feature_sustainability_title">Sustainability</h5>
+                                                        <p class="fs-14 mb-0" data-translate="feature_sustainability_description">Responsible fishing practices</p>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="p-3 bg-dark-2 rounded-1 h-100">
                                                         <i class="fa fa-globe fs-24 text-color mb-2"></i>
-                                                        <h5 class="fs-16 mb-1">Global Reach</h5>
-                                                        <p class="fs-14 mb-0">Export to markets worldwide</p>
+                                                        <h5 class="fs-16 mb-1" data-translate="feature_global_title">Global Reach</h5>
+                                                        <p class="fs-14 mb-0" data-translate="feature_global_description">Export to markets worldwide</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -256,11 +258,11 @@
                         </div>
 
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Ready to Order Our Premium Tuna?</h3>
-                            <p class="mb-4">Contact us today to discuss your requirements and place an order</p>
+                            <h3 class="fs-28 mb-3" data-translate="cta_title">Ready to Order Our Premium Tuna?</h3>
+                            <p class="mb-4" data-translate="cta_description">Contact us today to discuss your requirements and place an order</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="https://wishholdings.co/"><span>Visit Main Website</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Contact Sales</span></a>
+                                <a class="btn-main fx-slide" href="https://wishholdings.co/"><span data-translate="cta_visit">Visit Main Website</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-translate="cta_contact">Contact Sales</span></a>
                             </div>
                         </div>
                     </div>
@@ -274,7 +276,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="" data-translate="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -284,28 +286,28 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">Address</h3>
+                        <p class="mb-0" data-translate="footer_address_line1">121 AI Blvd, San Francisco</p>
+                        <p data-translate="footer_address_line2">BCA 94107</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-translate="footer_links_title">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="footer_link_about">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_phone_1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1" data-translate="footer_phone_2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0" data-translate="footer_email_1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0" data-translate="footer_email_2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
@@ -314,7 +316,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -322,12 +324,491 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
+        <script src="js/translations.js"></script>
     </div>
+
+
+    <script>
+        const translations = {
+    en: {
+        page_title: "CIPREA - Premium Tuna Products",
+        meta_description: "CIPREA Tuna Portfolio",
+        meta_keywords: "Yellowfin Tuna, Skipjack Tuna, Maldives, Fresh, Frozen, Seafood",
+        meta_author: "CIPREA",
+        scroll_to_top: "Scroll to top",
+        menu_home: "Home",
+        menu_about: "About Us",
+        menu_divisions: "Divisions",
+        menu_projects: "Projects",
+        menu_countries: "Countries",
+        menu_news: "News",
+        menu_policies: "Our Policies",
+        menu_carrier: "Carrier",
+        menu_contact: "Contact Us",
+        menu_contact_tickets1: "Tickets Style 1",
+        menu_contact_tickets2: "Tickets Style 2",
+        menu_contact_news: "News",
+        menu_contact_news_single: "News Single",
+        menu_contact_contact: "Contact",
+        logo_alt: "CIPREA Logo",
+        hero_title: "CIPREA – Premium Tuna from the Maldives",
+        hero_description: "Sustainable, high-quality Yellowfin & Skipjack Tuna processed at our state-of-the-art facility in Himmafushi Island",
+        hero_label: "HACCP & ISO Certified",
+        hero_alt: "CIPREA Header Image",
+        products_title: "Our Premium Tuna Products",
+        products_description: "Processed with care in the pristine waters of the Maldives",
+        image_alt_facility: "CIPREA Tuna Processing",
+        about_title: "About Our Facility",
+        about_description: "CIPREA's Fresh & Frozen Tuna Portfolio, located on Himmafushi Island, Kaafu Atoll, Maldives, represents our commitment to delivering exceptional seafood products globally. This state-of-the-art facility specializes in processing premium Yellowfin and Skipjack Tuna.",
+        quality_guarantee_value: "100%",
+        quality_guarantee_label: "Quality Guarantee",
+        haccp_label: "HACCP",
+        iso_label: "ISO",
+        certified_label: "Certified",
+        yellowfin_title: "Yellowfin Tuna",
+        yellowfin_scientific: "Thunnus albacares",
+        yellowfin_description: "Perfect for sushi, grilling, poke bowls, and gourmet dishes. Processed with care to maintain freshness and quality.",
+        yellowfin_loins: "Loins",
+        yellowfin_loins_price: "$7.50/kg",
+        yellowfin_steaks: "Steaks",
+        yellowfin_steaks_price: "$8.00/kg",
+        yellowfin_cubes: "Cubes",
+        yellowfin_cubes_price: "$7.00/kg",
+        yellowfin_saku: "Saku Blocks",
+        yellowfin_saku_price: "$8.00/kg",
+        skipjack_title: "Skipjack Tuna",
+        skipjack_scientific: "Katsuwonus pelamis",
+        skipjack_description: "Ideal for mass processing and foodservice applications. Blast frozen at sea to preserve freshness.",
+        skipjack_whole: "Frozen Whole Round (20kg/carton)",
+        skipjack_whole_price: "$4.80/kg",
+        packaging_title: "Packaging Options",
+        packaging_option_1: "Custom packaging available",
+        packaging_option_2: "Bulk container shipments",
+        packaging_option_3: "Retail-ready packaging",
+        quality_title: "Quality Assurance",
+        quality_description: "Our facility is HACCP and ISO certified, ensuring the highest standards of food safety and quality. All products are blast frozen at sea to preserve freshness and are export-ready for global markets.",
+        image_alt_quality: "CIPREA Quality Assurance",
+        feature_temperature_title: "Temperature Control",
+        feature_temperature_description: "Maintained at optimal levels throughout processing",
+        feature_safety_title: "Food Safety",
+        feature_safety_description: "Rigorous quality control measures",
+        feature_sustainability_title: "Sustainability",
+        feature_sustainability_description: "Responsible fishing practices",
+        feature_global_title: "Global Reach",
+        feature_global_description: "Export to markets worldwide",
+        cta_title: "Ready to Order Our Premium Tuna?",
+        cta_description: "Contact us today to discuss your requirements and place an order",
+        cta_visit: "Visit Main Website",
+        cta_contact: "Contact Sales",
+        footer_logo_alt: "CIPREA Footer Logo",
+        footer_address_title: "Address",
+        footer_address_line1: "121 AI Blvd, San Francisco",
+        footer_address_line2: "BCA 94107",
+        footer_links_title: "Quick Links",
+        footer_link_home: "Home",
+        footer_link_about: "About Us",
+        footer_link_divisions: "Divisions",
+        footer_link_projects: "Projects",
+        footer_link_contact: "Contact Us",
+        footer_contact_title: "Contact Us",
+        footer_phone_1: "T. +971 4259 7167",
+        footer_phone_2: "M. +971 4259 4795",
+        footer_email_1: "E. info@wishgroup.ae",
+        footer_email_2: "E. info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+    },
+    si: {
+        page_title: "CIPREA - ප්‍රිමියම් ටූනා නිෂ්පාදන",
+        meta_description: "CIPREA ටූනා පෝට්ෆෝලියෝ",
+        meta_keywords: "යෙලෝෆින් ටූනා, ස්කිප්ජැක් ටූනා, මාලදිවයින, නැවුම්, ශීතකරණය, මුහුදු ආහාර",
+        meta_author: "CIPREA",
+        scroll_to_top: "ඉහළට ලිස්සා යන්න",
+        menu_home: "මුල් පිටුව",
+        menu_about: "අප ගැන",
+        menu_divisions: "අංශ",
+        menu_projects: "ව්‍යාපෘති",
+        menu_countries: "රටවල්",
+        menu_news: "පුවත්",
+        menu_policies: "අපගේ ප්‍රතිපත්ති",
+        menu_carrier: "වෘත්තිය",
+        menu_contact: "සම්බන්ධ වන්න",
+        menu_contact_tickets1: "ටිකට් විලාසිතා 1",
+        menu_contact_tickets2: "ටිකට් විලාසිතා 2",
+        menu_contact_news: "පුවත්",
+        menu_contact_news_single: "පුවත් තනි",
+        menu_contact_contact: "සම්බන්ධ වන්න",
+        logo_alt: "CIPREA ලාංඡනය",
+        hero_title: "CIPREA – මාලදිවයිනෙන් ප්‍රිමියම් ටූනා",
+        hero_description: "හිම්මාෆුෂි දිවයිනේ අපගේ නවීනතම පහසුකම්වල සැකසූ තිරසාර, උසස් යෙලෝෆින් සහ ස්කිප්ජැක් ටූනා",
+        hero_label: "HACCP සහ ISO සහතික කර ඇත",
+        hero_alt: "CIPREA ශීර්ෂ රූපය",
+        products_title: "අපගේ ප්‍රිමියම් ටූනා නිෂ්පාදන",
+        products_description: "මාලදිවයිනේ පිරිසිදු ජලය තුළ රැකවරණයෙන් සැකසේ",
+        image_alt_facility: "CIPREA ටූනා සැකසුම",
+        about_title: "අපගේ පහසුකම ගැන",
+        about_description: "මාලදිවයිනේ, කාෆු අටෝල්හි හිම්මාෆුෂි දිවයිනේ පිහිටි CIPREA හි නැවුම් සහ ශීතකරණ ටූනා පෝට්ෆෝලියෝ, ගෝලීය වශයෙන් විශිෂ්ට මුහුදු ආහාර නිෂ්පාදන ලබා දීමට අපගේ කැපවීම නියෝජනය කරයි. මෙම නවීනතම පහසුකම ප්‍රිමියම් යෙලෝෆින් සහ ස්කිප්ජැක් ටූනා සැකසීමට විශේෂිත වේ.",
+        quality_guarantee_value: "100%",
+        quality_guarantee_label: "ගුණාත්මක සහතිකය",
+        haccp_label: "HACCP",
+        iso_label: "ISO",
+        certified_label: "සහතික කර ඇත",
+        yellowfin_title: "යෙලෝෆින් ටූනා",
+        yellowfin_scientific: "Thunnus albacares",
+        yellowfin_description: "සුෂි, ග්‍රිල් කිරීම, පෝක් බෝල්, සහ ගුර්මේ ආහාර සඳහා පරිපූර්ණයි. නැවුම් බව සහ ගුණාත්මකභාවය පවත්වා ගැනීමට රැකවරණයෙන් සැකසේ.",
+        yellowfin_loins: "ලෝයින්",
+        yellowfin_loins_price: "$7.50/kg",
+        yellowfin_steaks: "ස්ටේක්",
+        yellowfin_steaks_price: "$8.00/kg",
+        yellowfin_cubes: "කැට",
+        yellowfin_cubes_price: "$7.00/kg",
+        yellowfin_saku: "සකු බ්ලොක්",
+        yellowfin_saku_price: "$8.00/kg",
+        skipjack_title: "ස්කිප්ජැක් ටූනා",
+        skipjack_scientific: "Katsuwonus pelamis",
+        skipjack_description: "මහා පරිමාණ සැකසුම් සහ ආහාර සේවා යෙදුම් සඳහා ඉතා සුදුසුයි. නැවුම් බව ආරක්ෂා කිරීමට මුහුදේදී බ්ලාස්ට් ශීතකරණය කර ඇත.",
+        skipjack_whole: "ශීතකරණ රවුන්ඩ් (20kg/කාටුන්)",
+        skipjack_whole_price: "$4.80/kg",
+        packaging_title: "ඇසුරුම් විකල්ප",
+        packaging_option_1: "අභිරුචි ඇසුරුම් ලබා ගත හැක",
+        packaging_option_2: "බහාලුම් නැව්ගත කිරීම",
+        packaging_option_3: "සිල්ලර සඳහා සූදානම් ඇසුරුම්",
+        quality_title: "ගුණාත්මක සහතිකය",
+        quality_description: "අපගේ පහසුකම HACCP සහ ISO සහතික කර ඇති අතර, ආහාර ආරක්ෂාව සහ ගුණාත්මකභාවයේ ඉහළම ප්‍රමිතීන් සහතික කරයි. සියලුම නිෂ්පාදන නැවුම් බව ආරක්ෂා කිරීමට මුහුදේදී බ්ලාස්ට් ශීතකරණය කර ඇති අතර ගෝලීය වෙළඳපොළවලට අපනයනය සඳහා සූදානම්ය.",
+        image_alt_quality: "CIPREA ගුණාත්මක සහතිකය",
+        feature_temperature_title: "උෂ්ණත්ව පාලනය",
+        feature_temperature_description: "සැකසුම් කිරීම තුළදී උපරිම මට්ටමක පවත්වා ගනී",
+        feature_safety_title: "ආහාර ආරක්ෂාව",
+        feature_safety_description: "දැඩි ගුණාත්මක පාලන පියවර",
+        feature_sustainability_title: "තිරසාරභාවය",
+        feature_sustainability_description: "වගකිවයුතු ධීවර ක්‍රම",
+        feature_global_title: "ගෝලීය ප්‍රවේශය",
+        feature_global_description: "ලොව පුරා වෙළඳපොළවලට අපනයනය",
+        cta_title: "අපගේ ප්‍රිමියම් ටූනා ඇණවුම් කිරීමට සූදානම්ද?",
+        cta_description: "ඔබේ අවශ්‍යතා සාකච්ඡා කිරීමට සහ ඇණවුමක් ලබා දීමට අදම අප හා සම්බන්ධ වන්න",
+        cta_visit: "ප්‍රධාන වෙබ් අඩවියට පිවිසෙන්න",
+        cta_contact: "විකුණුම් අංශය අමතන්න",
+        footer_logo_alt: "CIPREA පාදක ලාංඡනය",
+        footer_address_title: "ලිපිනය",
+        footer_address_line1: "121 AI Blvd, සැන් ෆ්‍රැන්සිස්කෝ",
+        footer_address_line2: "BCA 94107",
+        footer_links_title: "ඉක්මන් සබැඳි",
+        footer_link_home: "මුල් පිටුව",
+        footer_link_about: "අප ගැන",
+        footer_link_divisions: "අංශ",
+        footer_link_projects: "ව්‍යාපෘති",
+        footer_link_contact: "සම්බන්ධ වන්න",
+        footer_contact_title: "අප හා සම්බන්ධ වන්න",
+        footer_phone_1: "දුරකථන: +971 4259 7167",
+        footer_phone_2: "ජංගම: +971 4259 4795",
+        footer_email_1: "විද්‍යුත් තැපෑල: info@wishgroup.ae",
+        footer_email_2: "විද්‍යුත් තැපෑල: info@wishgroup.world",
+        footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් සමූහය. සියලුම හිමිකම් ඇවිරිණි."
+    },
+    dv: {
+        page_title: "CIPREA - ޕްރިމިއަމް ޓޫނާ ޕްރޮޑަކްޓްތައް",
+        meta_description: "CIPREA ޓޫނާ ޕޯޓްފޯލިއޯ",
+        meta_keywords: "ޔެލޯފިން ޓޫނާ، ސްކިޕްޖެކް ޓޫނާ، މާލެ، ފްރެޝް، ފްރޯޒަން، ސީފޫޑް",
+        meta_author: "CIPREA",
+        scroll_to_top: "މަތިލަށް ސްކްރޯލް ކުރަން",
+        menu_home: "މުހިން",
+        menu_about: "ތިމަން ގެ ގޮތުން",
+        menu_divisions: "ޑިވިޝަންތައް",
+        menu_projects: "ޕްރޮޖެކްޓްތައް",
+        menu_countries: "ރަށްތައް",
+        menu_news: "ޚަބަރު",
+        menu_policies: "ތިމަންގެ ޕޮލިސީތައް",
+        menu_carrier: "ކެރިއަރ",
+        menu_contact: "ކޮންޓެކްޓް",
+        menu_contact_tickets1: "ޓިކެޓް ސްޓައިލް 1",
+        menu_contact_tickets2: "ޓިކެޓް ސްޓައިލް 2",
+        menu_contact_news: "ޚަބަރު",
+        menu_contact_news_single: "ޚަބަރު ސިންގަލް",
+        menu_contact_contact: "ކޮންޓެކްޓް",
+        logo_alt: "CIPREA ލޯގޯ",
+        hero_title: "CIPREA – މާލެއިން ޕްރިމިއަމް ޓޫނާ",
+        hero_description: "ހިއްމާފުޝި ޖަޒީރާގައި ތިމަންގެ ސްޓޭޓް-އޮފް-ދަ-އާޓް ފެސިލިޓީގައި ޕްރޮސެސް ކުރެވުނު ސަސްޓެއިނަބަލް، ހައި-ކޮލިޓީ ޔެލޯފިން އަދި ސްކިޕްޖެކް ޓޫނާ",
+        hero_label: "HACCP އަދި ISO ސަރޓިފައި",
+        hero_alt: "CIPREA ހެޑަރ އިމޭޖް",
+        products_title: "ތިމަންގެ ޕްރިމިއަމް ޓޫނާ ޕްރޮޑަކްޓްތައް",
+        products_description: "މާލެގެ ޕިރިސިދު ވޯޓަރގައި ރަނގަޅަށް ޕްރޮސެސް ކުރެވުނު",
+        image_alt_facility: "CIPREA ޓޫނާ ޕްރޮސެސިން",
+        about_title: "ތިމަންގެ ފެސިލިޓީ ގެ ގޮތުން",
+        about_description: "މާލެ، ކާފު އެޓޮލްގައި ހިއްމާފުޝި ޖަޒީރާގައި ޕިހިޓާފައިވާ CIPREA ގެ ފްރެޝް އަދި ފްރޯޒަން ޓޫނާ ޕޯޓްފޯލިއޯ، ގޯލްބަލް ވަށައިން އެކްސެޕްޝަނަލް ސީފޫޑް ޕްރޮޑަކްޓްތައް ދެވުމަށް ތިމަންގެ ކޮމިޓްމަންޓް ރިޕްރިޒެންޓް ކުރަން. މި ސްޓޭޓް-އޮފް-ދަ-އާޓް ފެސިލިޓީ ޕްރިމިއަމް ޔެލޯފިން އަދި ސްކިޕްޖެކް ޓޫނާ ޕްރޮސެސިން ގައި ވިސްނަމުން މަސައްކަތް ކުރަން.",
+        quality_guarantee_value: "100%",
+        quality_guarantee_label: "ކޮލިޓީ ގެރަންޓީ",
+        haccp_label: "HACCP",
+        iso_label: "ISO",
+        certified_label: "ސަރޓިފައި",
+        yellowfin_title: "ޔެލޯފިން ޓޫނާ",
+        yellowfin_scientific: "Thunnus albacares",
+        yellowfin_description: "ސޫޝި، ގްރިލިން، ޕޯކް ބޯލްސް، އަދި ގޯމެ ޑިޝެސް އަށް ޕަފެކްޓް. ފްރެޝްނަސް އަދި ކޮލިޓީ މެއިންޓޭން ކުރުމަށް ރަނގަޅަށް ޕްރޮސެސް ކުރެވުނު.",
+        yellowfin_loins: "ލޮއިންސް",
+        yellowfin_loins_price: "$7.50/kg",
+        yellowfin_steaks: "ސްޓޭކްސް",
+        yellowfin_steaks_price: "$8.00/kg",
+        yellowfin_cubes: "ކިއުބްސް",
+        yellowfin_cubes_price: "$7.00/kg",
+        yellowfin_saku: "ސަކު ބްލޮކްސް",
+        yellowfin_saku_price: "$8.00/kg",
+        skipjack_title: "ސްކިޕްޖެކް ޓޫނާ",
+        skipjack_scientific: "Katsuwonus pelamis",
+        skipjack_description: "މަސް ޕްރޮސެސިން އަދި ފޫޑްސަރވިސް އެޕްލިކޭޝަންތަކަށް އައިޑިއަލް. ފްރެޝްނަސް ޕްރިޒަރވް ކުރުމަށް ސީގައި ބްލާސްޓް ފްރޯޒަން.",
+        skipjack_whole: "ފްރޯޒަން ވޯލް ރައުންޑް (20kg/ކާޓަން)",
+        skipjack_whole_price: "$4.80/kg",
+        packaging_title: "ޕެކޭޖިން އޮޕްޝަންތައް",
+        packaging_option_1: "ކަސްޓަމް ޕެކޭޖިން ލަބެން އެއް",
+        packaging_option_2: "ބަލްކް ކޮންޓެއިނަރ ޝިޕްމަންޓްތައް",
+        packaging_option_3: "ރިޓެއިލް-ރެޑީ ޕެކޭޖިން",
+        quality_title: "ކޮލިޓީ އެޝޯރަންސް",
+        quality_description: "ތިމަންގެ ފެސިލިޓީ HACCP އަދި ISO ސަރޓިފައި، ފޫޑް ސޭފްޓީ އަދި ކޮލިޓީގެ އެންމެ މަތި ސްޓޭންޑަރޑްތައް ސަލާމަތް ކުރަން. ހުރިހާ ޕްރޮޑަކްޓްތަކަށް ފްރެޝްނަސް ޕްރިޒަރވް ކުރުމަށް ސީގައި ބްލާސްޓް ފްރޯޒަން ކުރެވި އަދި ގޯލްބަލް މާކެޓްތަކަށް އެކްސްޕޯރޓް-ރެޑީ.",
+        image_alt_quality: "CIPREA ކޮލިޓީ އެޝޯރަންސް",
+        feature_temperature_title: "ޓެމްޕަރެޗަރ ކޮންޓްރޯލް",
+        feature_temperature_description: "ޕްރޮސެސިން ހުރިހާ ތަނުގައި އޮޕްޓިމަލް ލެވަލްތަކުގައި މެއިންޓޭން ކުރެވުނު",
+        feature_safety_title: "ފޫޑް ސޭފްޓީ",
+        feature_safety_description: "ރިގްރަސް ކޮލިޓީ ކޮންޓްރޯލް މެޝަރސް",
+        feature_sustainability_title: "ސަސްޓެއިނަބިލިޓީ",
+        feature_sustainability_description: "ރިސްޕޮންސިބަލް ފިޝިން ޕްރެކްޓިސެސް",
+        feature_global_title: "ގޯލްބަލް ރީޗް",
+        feature_global_description: "ދުނިޔޭގެ މާކެޓްތަކަށް އެކްސްޕޯރޓް",
+        cta_title: "ތިމަންގެ ޕްރިމިއަމް ޓޫނާ އޯޑަރ ކުރުމަށް ރެޑީ ތަ؟",
+        cta_description: "ތިޔަ ރިކްވައިރމަންޓްތައް ޑިސްކަސް ކުރުމަށް އަދި އޯޑަރ އެއް ލަބާލަން އަދި ތިމަންނަށް ކޮންޓެކްޓް ކުރަން",
+        cta_visit: "މެއިން ވެބްސައިޓަށް ވިސިޓް ކުރަން",
+        cta_contact: "ސޭލްސް ކޮންޓެކްޓް ކުރަން",
+        footer_logo_alt: "CIPREA ފޫޓަރ ލޯގޯ",
+        footer_address_title: "އެޑްރެސް",
+        footer_address_line1: "121 AI Blvd, ސޭން ފްރެންސިސްކޯ",
+        footer_address_line2: "BCA 94107",
+        footer_links_title: "ކުއިކް ލިންކްތައް",
+        footer_link_home: "މުހިން",
+        footer_link_about: "ތިމަން ގެ ގޮތުން",
+        footer_link_divisions: "ޑިވިޝަންތައް",
+        footer_link_projects: "ޕްރޮޖެކްޓްތައް",
+        footer_link_contact: "ކޮންޓެކްޓް",
+        footer_contact_title: "ތިމަންގެ ކޮންޓެކްޓް",
+        footer_phone_1: "ޓެލިފޯން: +971 4259 7167",
+        footer_phone_2: "މޮބައިލް: +971 4259 4795",
+        footer_email_1: "އީމެއިލް: info@wishgroup.ae",
+        footer_email_2: "އީމެއިލް: info@wishgroup.world",
+        footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ރައިޓްތައް ރިޒަރވް ކޮށްފައި."
+    },
+    ar: {
+        page_title: "CIPREA - منتجات التونة المميزة",
+        meta_description: "محفظة تونة CIPREA",
+        meta_keywords: "تونة يلوفين، تونة سكيب جاك، المالديف، طازجة، مجمدة، مأكولات بحرية",
+        meta_author: "CIPREA",
+        scroll_to_top: "التمرير إلى الأعلى",
+        menu_home: "الرئيسية",
+        menu_about: "معلومات عنا",
+        menu_divisions: "الأقسام",
+        menu_projects: "المشاريع",
+        menu_countries: "الدول",
+        menu_news: "الأخبار",
+        menu_policies: "سياساتنا",
+        menu_carrier: "الوظائف",
+        menu_contact: "تواصل معنا",
+        menu_contact_tickets1: "تذكرة النمط 1",
+        menu_contact_tickets2: "تذكرة النمط 2",
+        menu_contact_news: "الأخبار",
+        menu_contact_news_single: "خبر واحد",
+        menu_contact_contact: "التواصل",
+        logo_alt: "شعار CIPREA",
+        hero_title: "CIPREA – تونة مميزة من المالديف",
+        hero_description: "تونة يلوفين وسكيب جاك عالية الجودة ومستدامة تتم معالجتها في منشأتنا الحديثة في جزيرة هيمافوشي",
+        hero_label: "معتمدة من HACCP وISO",
+        hero_alt: "صورة رأس CIPREA",
+        products_title: "منتجات التونة المميزة لدينا",
+        products_description: "تتم معالجتها بعناية في المياه النقية لجزر المالديف",
+        image_alt_facility: "معالجة تونة CIPREA",
+        about_title: "حول منشأتنا",
+        about_description: "تمثل محفظة تونة CIPREA الطازجة والمجمدة، الواقعة في جزيرة هيمافوشي، كافو أتول، المالديف، التزامنا بتقديم منتجات مأكولات بحرية استثنائية على مستوى العالم. تتخصص هذه المنشأة الحديثة في معالجة تونة يلوفين وسكيب جاك المميزة.",
+        quality_guarantee_value: "100%",
+        quality_guarantee_label: "ضمان الجودة",
+        haccp_label: "HACCP",
+        iso_label: "ISO",
+        certified_label: "معتمد",
+        yellowfin_title: "تونة يلوفين",
+        yellowfin_scientific: "Thunnus albacares",
+        yellowfin_description: "مثالية للسوشي، الشواء، أطباق البوكي، والأطباق الفاخرة. تتم معالجتها بعناية للحفاظ على النضارة والجودة.",
+        yellowfin_loins: "شرائح",
+        yellowfin_loins_price: "$7.50/كجم",
+        yellowfin_steaks: "ستيك",
+        yellowfin_steaks_price: "$8.00/كجم",
+        yellowfin_cubes: "مكعبات",
+        yellowfin_cubes_price: "$7.00/كجم",
+        yellowfin_saku: "كتل ساكو",
+        yellowfin_saku_price: "$8.00/كجم",
+        skipjack_title: "تونة سكيب جاك",
+        skipjack_scientific: "Katsuwonus pelamis",
+        skipjack_description: "مثالية للمعالجة الكبيرة وتطبيقات خدمات الطعام. مجمدة بسرعة في البحر للحفاظ على النضارة.",
+        skipjack_whole: "كاملة مجمدة (20 كجم/كرتون)",
+        skipjack_whole_price: "$4.80/كجم",
+        packaging_title: "خيارات التغليف",
+        packaging_option_1: "تغليف مخصص متاح",
+        packaging_option_2: "شحنات حاويات بالجملة",
+        packaging_option_3: "تغليف جاهز للبيع بالتجزئة",
+        quality_title: "ضمان الجودة",
+        quality_description: "منشأتنا معتمدة من HACCP وISO، مما يضمن أعلى معايير سلامة الغذاء والجودة. جميع المنتجات مجمدة بسرعة في البحر للحفاظ على النضارة وجاهزة للتصدير إلى الأسواق العالمية.",
+        image_alt_quality: "ضمان جودة CIPREA",
+        feature_temperature_title: "التحكم في درجة الحرارة",
+        feature_temperature_description: "يتم الحفاظ عليها في المستويات المثلى طوال المعالجة",
+        feature_safety_title: "سلامة الغذاء",
+        feature_safety_description: "تدابير صارمة لمراقبة الجودة",
+        feature_sustainability_title: "الاستدامة",
+        feature_sustainability_description: "ممارسات صيد مسؤولة",
+        feature_global_title: "الوصول العالمي",
+        feature_global_description: "التصدير إلى الأسواق العالمية",
+        cta_title: "هل أنت جاهز لطلب تونة مميزة؟",
+        cta_description: "تواصل معنا اليوم لمناقشة متطلباتك وتقديم طلب",
+        cta_visit: "زيارة الموقع الرئيسي",
+        cta_contact: "تواصل مع المبيعات",
+        footer_logo_alt: "شعار تذييل CIPREA",
+        footer_address_title: "العنوان",
+        footer_address_line1: "121 شارع AI، سان فرانسيسكو",
+        footer_address_line2: "BCA 94107",
+        footer_links_title: "روابط سريعة",
+        footer_link_home: "الرئيسية",
+        footer_link_about: "معلومات عنا",
+        footer_link_divisions: "الأقسام",
+        footer_link_projects: "المشاريع",
+        footer_link_contact: "تواصل معنا",
+        footer_contact_title: "تواصل معنا",
+        footer_phone_1: "هاتف: +971 4259 7167",
+        footer_phone_2: "جوال: +971 4259 4795",
+        footer_email_1: "بريد إلكتروني: info@wishgroup.ae",
+        footer_email_2: "بريد إلكتروني: info@wishgroup.world",
+        footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
+    },
+    fr: {
+    page_title: "CIPREA - Produits de thon premium",
+    meta_description: "Portefeuille de thon CIPREA",
+    meta_keywords: "Thon albacore, Thon listao, Maldives, Frais, Surgelé, Fruits de mer",
+    meta_author: "CIPREA",
+    scroll_to_top: "Retour en haut",
+    menu_home: "Accueil",
+    menu_about: "À propos",
+    menu_divisions: "Divisions",
+    menu_projects: "Projets",
+    menu_countries: "Pays",
+    menu_news: "Actualités",
+    menu_policies: "Nos politiques",
+    menu_carrier: "Carrières",
+    menu_contact: "Nous contacter",
+    menu_contact_tickets1: "Billets Style 1",
+    menu_contact_tickets2: "Billets Style 2",
+    menu_contact_news: "Actualités",
+    menu_contact_news_single: "Actualité unique",
+    menu_contact_contact: "Contact",
+    logo_alt: "Logo CIPREA",
+    hero_title: "CIPREA – Thon premium des Maldives",
+    hero_description: "Thon albacore et listao de haute qualité et durable, transformé dans notre usine de pointe à l'île de Himmafushi",
+    hero_label: "Certifié HACCP et ISO",
+    hero_alt: "Image d'en-tête CIPREA",
+    products_title: "Nos produits de thon premium",
+    products_description: "Transformés avec soin dans les eaux pures des Maldives",
+    image_alt_facility: "Transformation de thon CIPREA",
+    about_title: "À propos de notre usine",
+    about_description: "Le portefeuille de thon frais et surgelé de CIPREA, situé sur l'île de Himmafushi, atoll de Kaafu, Maldives, représente notre engagement à fournir des produits de fruits de mer exceptionnels à l'échelle mondiale. Cette usine de pointe est spécialisée dans la transformation de thon albacore et listao premium.",
+    quality_guarantee_value: "100%",
+    quality_guarantee_label: "Garantie de qualité",
+    haccp_label: "HACCP",
+    iso_label: "ISO",
+    certified_label: "Certifié",
+    yellowfin_title: "Thon albacore",
+    yellowfin_scientific: "Thunnus albacares",
+    yellowfin_description: "Parfait pour les sushis, les grillades, les poke bowls et les plats gastronomiques. Transformé avec soin pour préserver la fraîcheur et la qualité.",
+    yellowfin_loins: "Longes",
+    yellowfin_loins_price: "$7.50/kg",
+    yellowfin_steaks: "Steaks",
+    yellowfin_steaks_price: "$8.00/kg",
+    yellowfin_cubes: "Cubes",
+    yellowfin_cubes_price: "$7.00/kg",
+    yellowfin_saku: "Blocs Saku",
+    yellowfin_saku_price: "$8.00/kg",
+    skipjack_title: "Thon listao",
+    skipjack_scientific: "Katsuwonus pelamis",
+    skipjack_description: "Idéal pour la transformation à grande échelle et les applications de restauration. Surgelé rapidement en mer pour préserver la fraîcheur.",
+    skipjack_whole: "Entier surgelé (20 kg/carton)",
+    skipjack_whole_price: "$4.80/kg",
+    packaging_title: "Options d'emballage",
+    packaging_option_1: "Emballage personnalisé disponible",
+    packaging_option_2: "Expéditions en conteneurs en vrac",
+    packaging_option_3: "Emballage prêt pour la vente au détail",
+    quality_title: "Assurance qualité",
+    quality_description: "Notre usine est certifiée HACCP et ISO, garantissant les normes les plus élevées en matière de sécurité alimentaire et de qualité. Tous les produits sont surgelés rapidement en mer pour préserver la fraîcheur et sont prêts à l'exportation vers les marchés mondiaux.",
+    image_alt_quality: "Assurance qualité CIPREA",
+    feature_temperature_title: "Contrôle de la température",
+    feature_temperature_description: "Maintenu à des niveaux optimaux tout au long de la transformation",
+    feature_safety_title: "Sécurité alimentaire",
+    feature_safety_description: "Mesures rigoureuses de contrôle de la qualité",
+    feature_sustainability_title: "Durabilité",
+    feature_sustainability_description: "Pratiques de pêche responsables",
+    feature_global_title: "Portée mondiale",
+    feature_global_description: "Exportation vers les marchés mondiaux",
+    cta_title: "Prêt à commander notre thon premium ?",
+    cta_description: "Contactez-nous aujourd'hui pour discuter de vos besoins et passer une commande",
+    cta_visit: "Visiter le site principal",
+    cta_contact: "Contacter les ventes",
+    footer_logo_alt: "Logo de pied de page CIPREA",
+    footer_address_title: "Adresse",
+    footer_address_line1: "121 AI Blvd, San Francisco",
+    footer_address_line2: "BCA 94107",
+    footer_links_title: "Liens rapides",
+    footer_link_home: "Accueil",
+    footer_link_about: "À propos",
+    footer_link_divisions: "Divisions",
+    footer_link_projects: "Projets",
+    footer_link_contact: "Nous contacter",
+    footer_contact_title: "Nous contacter",
+    footer_phone_1: "Tél. : +971 4259 7167",
+    footer_phone_2: "Mobile : +971 4259 4795",
+    footer_email_1: "E-mail : info@wishgroup.ae",
+    footer_email_2: "E-mail : info@wishgroup.world",
+    footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
+}}
+// Function to change language
+function setLanguage(lang) { // Changed function name to match onchange attribute
+    // Update text content and alt attributes
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'IMG') {
+                element.alt = translations[lang][key];
+            } else if (element.tagName === 'TITLE') {
+                element.textContent = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+
+    // Update HTML lang and direction
+    document.querySelector('html').lang = lang;
+    if (lang === 'ar' || lang === 'dv') {
+        document.querySelector('html').dir = 'rtl';
+        document.querySelector('body').style.textAlign = 'right';
+    } else {
+        document.querySelector('html').dir = 'ltr';
+        document.querySelector('body').style.textAlign = 'left';
+    }
+
+    // Update page title
+    document.querySelector('title').textContent = translations[lang].page_title;
+
+    // Save selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('language-switcher').value = savedLang; // Set dropdown to saved language
+    setLanguage(savedLang); // Call the renamed function
+});
+    </script>
 </body>
 </html>

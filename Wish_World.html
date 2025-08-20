@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Wish World | Premier Entertainment & Theme Park</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <title data-translate="page_title">Wish World | Premier Entertainment & Theme Park</title>
+    <link rel="icon" href="/images/wishgroup/logo_remove.png" type="image/png" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Wish World - A revolutionary entertainment complex with themed zones offering unique experiences for all ages" name="description">
-    <meta content="Theme Park, Entertainment Complex, Family Fun, Adventure Park, VR Experiences, Water Park" name="keywords">
-    <meta content="Wish Group" name="author">
+    <meta content="Wish World - A revolutionary entertainment complex with themed zones offering unique experiences for all ages" name="description" data-translate="meta_description">
+    <meta content="Theme Park, Entertainment Complex, Family Fun, Adventure Park, VR Experiences, Water Park" name="keywords" data-translate="meta_keywords">
+    <meta content="Wish Group" name="author" data-translate="meta_author">
     <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
@@ -143,7 +143,7 @@
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -160,9 +160,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -171,21 +171,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-translate="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_career">Career</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="menu_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-translate="menu_tickets_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-translate="menu_tickets_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-translate="menu_news_sub">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-translate="menu_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-translate="menu_contact_sub">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -193,7 +193,13 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select Language">
+                                    <option value="en">English</option>
+                                    <option value="si">Sinhala</option>
+                                    <option value="dv">Dhivehi</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="fr">French</option>
+                                </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -205,22 +211,20 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="/images/wishgroup/header2.jpg" class="jarallax-img" alt="">
+            <img src="/images/wishgroup/header2.jpg" class="jarallax-img" alt="" data-translate="hero_alt">
             <div class="gradient-edge-bottom h-50"></div>
             <div class="sw-overlay op-5"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
-                                Wish World – Ultimate Entertainment Experience
-                            </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">A revolutionary theme park with immersive zones for all ages</p>
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-translate="hero_title">Wish World – Ultimate Entertainment Experience</h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-translate="hero_description">A revolutionary theme park with immersive zones for all ages</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">Coming Soon</span>
+                                    <span class="fs-20 fw-600" data-translate="hero_label">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
@@ -235,45 +239,43 @@
                     <div class="col-lg-10">
                         <!-- Park Introduction with Full-width Image -->
                         <div class="intro-section mb-5">
-                            <img src="/images/wishgroup/track.jpeg" 
-                                 alt="Wish World Aerial View" 
-                                 class="full-width-image">
+                            <img src="/images/wishgroup/track.jpeg" alt="" class="full-width-image" data-translate="intro_alt">
                             <div class="text-center mt-4">
-                                <h2 class="fs-36 mb-3">Your Gateway to Extraordinary Experiences</h2>
-                                <p class="lead fs-20">Six uniquely themed zones blending entertainment, education, and adventure</p>
+                                <h2 class="fs-36 mb-3" data-translate="intro_title">Your Gateway to Extraordinary Experiences</h2>
+                                <p class="lead fs-20" data-translate="intro_description">Six uniquely themed zones blending entertainment, education, and adventure</p>
                             </div>
                         </div>
 
                         <!-- Image Gallery Section -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Park Highlights</h2>
-                            <p class="lead">Discover the unparalleled experiences at Wish World</p>
+                            <h2 class="fs-30" data-translate="gallery_title">Park Highlights</h2>
+                            <p class="lead" data-translate="gallery_description">Discover the unparalleled experiences at Wish World</p>
                         </div>
                         
                         <div class="image-gallery mb-5">
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/earth.jpg" alt="Earth Zone">
-                                <div class="gallery-caption">The Earth Zone</div>
+                                <img src="/images/wishgroup/earth.jpg" alt="" data-translate="gallery_earth_alt">
+                                <div class="gallery-caption" data-translate="gallery_earth_caption">The Earth Zone</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/spirit.jpg" alt="Spirit Zone">
-                                <div class="gallery-caption">The Spirit Zone</div>
+                                <img src="/images/wishgroup/spirit.jpg" alt="" data-translate="gallery_spirit_alt">
+                                <div class="gallery-caption" data-translate="gallery_spirit_caption">The Spirit Zone</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/mind.jpg" alt="Mind Zone">
-                                <div class="gallery-caption">The Mind Zone</div>
+                                <img src="/images/wishgroup/mind.jpg" alt="" data-translate="gallery_mind_alt">
+                                <div class="gallery-caption" data-translate="gallery_mind_caption">The Mind Zone</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/heart.jpg" alt="Heart Zone">
-                                <div class="gallery-caption">The Heart Zone</div>
+                                <img src="/images/wishgroup/heart.jpg" alt="" data-translate="gallery_heart_alt">
+                                <div class="gallery-caption" data-translate="gallery_heart_caption">The Heart Zone</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/unity.jpg" alt="Unity Zone">
-                                <div class="gallery-caption">The Unity Zone</div>
+                                <img src="/images/wishgroup/unity.jpg" alt="" data-translate="gallery_unity_alt">
+                                <div class="gallery-caption" data-translate="gallery_unity_caption">The Unity Zone</div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/wishgroup/joy.jpg" alt="Joy Zone">
-                                <div class="gallery-caption">The Joy Zone</div>
+                                <img src="/images/wishgroup/joy.jpg" alt="" data-translate="gallery_joy_alt">
+                                <div class="gallery-caption" data-translate="gallery_joy_caption">The Joy Zone</div>
                             </div>
                         </div>
 
@@ -281,8 +283,8 @@
                         <div class="zone-section mb-5">
                             <div class="zone-header">
                                 <div class="zone-color" style="background-color: #4CAF50;"></div>
-                                <h2 class="fs-30">Terragrove - The Earth Zone (5 acres)</h2>
-                                <p class="lead">Theme: Sustainability, Calm & Reflection</p>
+                                <h2 class="fs-30" data-translate="earth_title">Terragrove - The Earth Zone (5 acres)</h2>
+                                <p class="lead" data-translate="earth_description">Theme: Sustainability, Calm & Reflection</p>
                             </div>
                             
                             <div class="row g-4">
@@ -291,8 +293,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-leaf"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Botanical Gardens</h3>
-                                        <p>Immerse yourself in our curated collection of native and exotic plants, showcasing sustainable gardening practices and biodiversity conservation.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="earth_gardens_title">Botanical Gardens</h3>
+                                        <p data-translate="earth_gardens_description">Immerse yourself in our curated collection of native and exotic plants, showcasing sustainable gardening practices and biodiversity conservation.</p>
                                     </div>
                                 </div>
                                 
@@ -301,8 +303,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-tree"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Eco-Pathways & Landscaping Exhibits</h3>
-                                        <p>Walk through interactive exhibits demonstrating sustainable landscaping techniques, water conservation, and permaculture principles.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="earth_pathways_title">Eco-Pathways & Landscaping Exhibits</h3>
+                                        <p data-translate="earth_pathways_description">Walk through interactive exhibits demonstrating sustainable landscaping techniques, water conservation, and permaculture principles.</p>
                                     </div>
                                 </div>
                                 
@@ -311,8 +313,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-tractor"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Agriculture Learning Hub</h3>
-                                        <p>Hands-on experiences with urban farming techniques, hydroponics, and organic gardening for all ages.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="earth_hub_title">Agriculture Learning Hub</h3>
+                                        <p data-translate="earth_hub_description">Hands-on experiences with urban farming techniques, hydroponics, and organic gardening for all ages.</p>
                                     </div>
                                 </div>
                                 
@@ -321,8 +323,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-recycle"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Sustainability Workshops</h3>
-                                        <p>Daily workshops on composting, renewable energy, and sustainable living practices for the whole family.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="earth_workshops_title">Sustainability Workshops</h3>
+                                        <p data-translate="earth_workshops_description">Daily workshops on composting, renewable energy, and sustainable living practices for the whole family.</p>
                                     </div>
                                 </div>
                             </div>
@@ -332,8 +334,8 @@
                         <div class="zone-section mb-5">
                             <div class="zone-header">
                                 <div class="zone-color" style="background-color: #9C27B0;"></div>
-                                <h2 class="fs-30">Lumara Trails - The Spirit Zone (2 acres)</h2>
-                                <p class="lead">Theme: Nature, Grace, and Spiritual Reflection</p>
+                                <h2 class="fs-30" data-translate="spirit_title">Lumara Trails - The Spirit Zone (2 acres)</h2>
+                                <p class="lead" data-translate="spirit_description">Theme: Nature, Grace, and Spiritual Reflection</p>
                             </div>
                             
                             <div class="row g-4">
@@ -342,8 +344,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-horse"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Horse Riding Arena</h3>
-                                        <p>Professional equestrian facilities offering lessons and guided experiences for all skill levels in a serene natural setting.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="spirit_arena_title">Horse Riding Arena</h3>
+                                        <p data-translate="spirit_arena_description">Professional equestrian facilities offering lessons and guided experiences for all skill levels in a serene natural setting.</p>
                                     </div>
                                 </div>
                                 
@@ -352,8 +354,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-road"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Trail Riding</h3>
-                                        <p>Scenic trails through natural landscapes designed for peaceful horseback excursions and connection with nature.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="spirit_trails_title">Trail Riding</h3>
+                                        <p data-translate="spirit_trails_description">Scenic trails through natural landscapes designed for peaceful horseback excursions and connection with nature.</p>
                                     </div>
                                 </div>
                                 
@@ -362,8 +364,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-spa"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Equine Therapy</h3>
-                                        <p>Specialized programs using horse interaction to promote emotional growth and personal development.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="spirit_therapy_title">Equine Therapy</h3>
+                                        <p data-translate="spirit_therapy_description">Specialized programs using horse interaction to promote emotional growth and personal development.</p>
                                     </div>
                                 </div>
                                 
@@ -372,8 +374,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-mountain"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Meditation Gardens</h3>
-                                        <p>Tranquil spaces designed for reflection and mindfulness, featuring water elements and native flora.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="spirit_gardens_title">Meditation Gardens</h3>
+                                        <p data-translate="spirit_gardens_description">Tranquil spaces designed for reflection and mindfulness, featuring water elements and native flora.</p>
                                     </div>
                                 </div>
                             </div>
@@ -383,43 +385,43 @@
                         <div class="zone-section mb-5">
                             <div class="zone-header">
                                 <div class="zone-color" style="background-color: #2196F3;"></div>
-                                <h2 class="fs-30">Aquanova Haven - The Mind Zone (1 acre)</h2>
-                                <p class="lead">Theme: Aquatic Mindfulness & Sensory Rejuvenation</p>
+                                <h2 class="fs-30" data-translate="mind_title">Aquanova Haven - The Mind Zone (1 acre)</h2>
+                                <p class="lead" data-translate="mind_description">Theme: Aquatic Mindfulness & Sensory Rejuvenation</p>
                             </div>
                             
                             <div class="row g-4">
                                 <div class="col-md-4">
                                     <div class="zone-card">
-                                        <h3 class="fs-20 mb-2">Water Features</h3>
+                                        <h3 class="fs-20 mb-2" data-translate="mind_features_title">Water Features</h3>
                                         <ul class="activity-list">
-                                            <li>Floating Hammocks & Lounging Pods</li>
-                                            <li>Aqua Therapy Pools</li>
-                                            <li>Water Labyrinth & Mist Garden</li>
-                                            <li>Interactive Water Wall</li>
+                                            <li data-translate="mind_features_hammocks">Floating Hammocks & Lounging Pods</li>
+                                            <li data-translate="mind_features_pools">Aqua Therapy Pools</li>
+                                            <li data-translate="mind_features_labyrinth">Water Labyrinth & Mist Garden</li>
+                                            <li data-translate="mind_features_wall">Interactive Water Wall</li>
                                         </ul>
                                     </div>
                                 </div>
                                 
                                 <div class="col-md-4">
                                     <div class="zone-card">
-                                        <h3 class="fs-20 mb-2">Activities</h3>
+                                        <h3 class="fs-20 mb-2" data-translate="mind_activities_title">Activities</h3>
                                         <ul class="activity-list">
-                                            <li>Paddle Boats & Pedal Kayaks</li>
-                                            <li>Underwater Meditation Dome</li>
-                                            <li>Digital Rain Room</li>
-                                            <li>Mini Splash Therapy Zone (for Kids & Families)</li>
+                                            <li data-translate="mind_activities_boats">Paddle Boats & Pedal Kayaks</li>
+                                            <li data-translate="mind_activities_dome">Underwater Meditation Dome</li>
+                                            <li data-translate="mind_activities_rain">Digital Rain Room</li>
+                                            <li data-translate="mind_activities_splash">Mini Splash Therapy Zone (for Kids & Families)</li>
                                         </ul>
                                     </div>
                                 </div>
                                 
                                 <div class="col-md-4">
                                     <div class="zone-card">
-                                        <h3 class="fs-20 mb-2">Wellness</h3>
+                                        <h3 class="fs-20 mb-2" data-translate="mind_wellness_title">Wellness</h3>
                                         <ul class="activity-list">
-                                            <li>Hydrotherapy Sessions</li>
-                                            <li>Sound Bath Experiences</li>
-                                            <li>Guided Aquatic Meditation</li>
-                                            <li>Sensory Deprivation Tanks</li>
+                                            <li data-translate="mind_wellness_hydro">Hydrotherapy Sessions</li>
+                                            <li data-translate="mind_wellness_sound">Sound Bath Experiences</li>
+                                            <li data-translate="mind_wellness_meditation">Guided Aquatic Meditation</li>
+                                            <li data-translate="mind_wellness_tanks">Sensory Deprivation Tanks</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -430,40 +432,38 @@
                         <div class="zone-section mb-5">
                             <div class="zone-header">
                                 <div class="zone-color" style="background-color: #F44336;"></div>
-                                <h2 class="fs-30">Viva Coredome - The Heart Zone (5 acres)</h2>
-                                <p class="lead">Theme: Energy, Play & Bonding</p>
+                                <h2 class="fs-30" data-translate="heart_title">Viva Coredome - The Heart Zone (5 acres)</h2>
+                                <p class="lead" data-translate="heart_description">Theme: Energy, Play & Bonding</p>
                             </div>
                             
                             <div class="row g-4">
                                 <div class="col-md-6">
-                                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8de0e2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                                         alt="Heart Zone Activities" 
-                                         class="w-100 rounded-1 shadow-lg">
+                                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8de0e2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="w-100 rounded-1 shadow-lg" data-translate="heart_alt">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="zone-card h-100">
-                                        <h3 class="fs-24 mb-3">Indoor Recreational Hub</h3>
-                                        <p>200,000 square feet of climate-controlled entertainment space featuring:</p>
+                                        <h3 class="fs-24 mb-3" data-translate="heart_hub_title">Indoor Recreational Hub</h3>
+                                        <p data-translate="heart_hub_description">200,000 square feet of climate-controlled entertainment space featuring:</p>
                                         
                                         <div class="row mt-4">
                                             <div class="col-md-6">
-                                                <h4 class="fs-18">Adventure & Sports</h4>
+                                                <h4 class="fs-18" data-translate="heart_adventure_title">Adventure & Sports</h4>
                                                 <ul class="activity-list">
-                                                    <li>Trampoline Park</li>
-                                                    <li>Multi-Sport Courts</li>
-                                                    <li>Ninja Warrior Course</li>
-                                                    <li>Climbing Wall</li>
-                                                    <li>Bowling</li>
-                                                    <li>Mini Golf</li>
+                                                    <li data-translate="heart_adventure_trampoline">Trampoline Park</li>
+                                                    <li data-translate="heart_adventure_courts">Multi-Sport Courts</li>
+                                                    <li data-translate="heart_adventure_ninja">Ninja Warrior Course</li>
+                                                    <li data-translate="heart_adventure_climbing">Climbing Wall</li>
+                                                    <li data-translate="heart_adventure_bowling">Bowling</li>
+                                                    <li data-translate="heart_adventure_golf">Mini Golf</li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-6">
-                                                <h4 class="fs-18">Digital Gaming</h4>
+                                                <h4 class="fs-18" data-translate="heart_gaming_title">Digital Gaming</h4>
                                                 <ul class="activity-list">
-                                                    <li>VR Zones</li>
-                                                    <li>E-Sports Arena</li>
-                                                    <li>Simulators</li>
-                                                    <li>Gaming Lounge</li>
+                                                    <li data-translate="heart_gaming_vr">VR Zones</li>
+                                                    <li data-translate="heart_gaming_esports">E-Sports Arena</li>
+                                                    <li data-translate="heart_gaming_simulators">Simulators</li>
+                                                    <li data-translate="heart_gaming_lounge">Gaming Lounge</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -472,27 +472,27 @@
                                 
                                 <div class="col-md-6">
                                     <div class="zone-card">
-                                        <h3 class="fs-20 mb-2">Kids & Family (25,000 Sqft)</h3>
+                                        <h3 class="fs-20 mb-2" data-translate="heart_kids_title">Kids & Family (25,000 Sqft)</h3>
                                         <ul class="activity-list">
-                                            <li>Soft Play Areas</li>
-                                            <li>Jungle Gym</li>
-                                            <li>Interactive Ball Pits</li>
-                                            <li>Educational Games</li>
-                                            <li>Parent-Child Bonding Activities</li>
+                                            <li data-translate="heart_kids_play">Soft Play Areas</li>
+                                            <li data-translate="heart_kids_gym">Jungle Gym</li>
+                                            <li data-translate="heart_kids_pits">Interactive Ball Pits</li>
+                                            <li data-translate="heart_kids_games">Educational Games</li>
+                                            <li data-translate="heart_kids_bonding">Parent-Child Bonding Activities</li>
                                         </ul>
                                     </div>
                                 </div>
                                 
                                 <div class="col-md-6">
                                     <div class="zone-card">
-                                        <h3 class="fs-20 mb-2">Recreation & Wellness (20,000 Sqft)</h3>
+                                        <h3 class="fs-20 mb-2" data-translate="heart_recreation_title">Recreation & Wellness (20,000 Sqft)</h3>
                                         <ul class="activity-list">
-                                            <li>Karaoke Rooms</li>
-                                            <li>Escape Rooms</li>
-                                            <li>Mini Theatre</li>
-                                            <li>Spa Pods</li>
-                                            <li>DIY Arts & Crafts</li>
-                                            <li>Dance Studio</li>
+                                            <li data-translate="heart_recreation_karaoke">Karaoke Rooms</li>
+                                            <li data-translate="heart_recreation_escape">Escape Rooms</li>
+                                            <li data-translate="heart_recreation_theatre">Mini Theatre</li>
+                                            <li data-translate="heart_recreation_spa">Spa Pods</li>
+                                            <li data-translate="heart_recreation_crafts">DIY Arts & Crafts</li>
+                                            <li data-translate="heart_recreation_dance">Dance Studio</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -503,8 +503,8 @@
                         <div class="zone-section mb-5">
                             <div class="zone-header">
                                 <div class="zone-color" style="background-color: #FF9800;"></div>
-                                <h2 class="fs-30">Harmonia House - The Unity Zone (2.5 acres)</h2>
-                                <p class="lead">Theme: Hospitality & Celebration</p>
+                                <h2 class="fs-30" data-translate="unity_title">Harmonia House - The Unity Zone (2.5 acres)</h2>
+                                <p class="lead" data-translate="unity_description">Theme: Hospitality & Celebration</p>
                             </div>
                             
                             <div class="row g-4">
@@ -513,13 +513,13 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-hotel"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">3 Storey Boutique Hotel Cluster (1.5 acres)</h3>
+                                        <h3 class="fs-24 mb-3" data-translate="unity_hotel_title">3 Storey Boutique Hotel Cluster (1.5 acres)</h3>
                                         <ul class="activity-list">
-                                            <li>40 Double Bedroom Units</li>
-                                            <li>30 Triple Bedroom Units</li>
-                                            <li>State-of-the-art Gym Facilities</li>
-                                            <li>Luxury Spa & Wellness Center</li>
-                                            <li>Rooftop Pool with Park Views</li>
+                                            <li data-translate="unity_hotel_double">40 Double Bedroom Units</li>
+                                            <li data-translate="unity_hotel_triple">30 Triple Bedroom Units</li>
+                                            <li data-translate="unity_hotel_gym">State-of-the-art Gym Facilities</li>
+                                            <li data-translate="unity_hotel_spa">Luxury Spa & Wellness Center</li>
+                                            <li data-translate="unity_hotel_pool">Rooftop Pool with Park Views</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -529,14 +529,14 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-utensils"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Dining & Retail (25,000 Sqft)</h3>
+                                        <h3 class="fs-24 mb-3" data-translate="unity_dining_title">Dining & Retail (25,000 Sqft)</h3>
                                         <ul class="activity-list">
-                                            <li>Themed Food Court</li>
-                                            <li>Gourmet Snack Zones</li>
-                                            <li>Signature Restaurants</li>
-                                            <li>Bars & Cafes</li>
-                                            <li>Retail Merchandise Shops</li>
-                                            <li>Souvenir & Gift Stores</li>
+                                            <li data-translate="unity_dining_foodcourt">Themed Food Court</li>
+                                            <li data-translate="unity_dining_snacks">Gourmet Snack Zones</li>
+                                            <li data-translate="unity_dining_restaurants">Signature Restaurants</li>
+                                            <li data-translate="unity_dining_bars">Bars & Cafes</li>
+                                            <li data-translate="unity_dining_retail">Retail Merchandise Shops</li>
+                                            <li data-translate="unity_dining_souvenirs">Souvenir & Gift Stores</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -547,8 +547,8 @@
                         <div class="zone-section mb-5">
                             <div class="zone-header">
                                 <div class="zone-color" style="background-color: #FFEB3B;"></div>
-                                <h2 class="fs-30">Solara Circuit - The Joy Zone (1 km Distance track)</h2>
-                                <p class="lead">Theme: Energy & Excitement</p>
+                                <h2 class="fs-30" data-translate="joy_title">Solara Circuit - The Joy Zone (1 km Distance track)</h2>
+                                <p class="lead" data-translate="joy_description">Theme: Energy & Excitement</p>
                             </div>
                             
                             <div class="row g-4">
@@ -557,8 +557,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-flag-checkered"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Mini Formula Track</h3>
-                                        <p>Professional-grade karting track with electric karts for all ages and skill levels, featuring timing systems and safety barriers.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="joy_track_title">Mini Formula Track</h3>
+                                        <p data-translate="joy_track_description">Professional-grade karting track with electric karts for all ages and skill levels, featuring timing systems and safety barriers.</p>
                                     </div>
                                 </div>
                                 
@@ -567,8 +567,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-trophy"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Podium Celebration Area</h3>
-                                        <p>Victory podium for race winners with photo opportunities and celebration packages available.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="joy_podium_title">Podium Celebration Area</h3>
+                                        <p data-translate="joy_podium_description">Victory podium for race winners with photo opportunities and celebration packages available.</p>
                                     </div>
                                 </div>
                                 
@@ -577,8 +577,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-graduation-cap"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Driving Academy</h3>
-                                        <p>Professional instruction for young drivers with safety-focused curriculum and skill development.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="joy_academy_title">Driving Academy</h3>
+                                        <p data-translate="joy_academy_description">Professional instruction for young drivers with safety-focused curriculum and skill development.</p>
                                     </div>
                                 </div>
                                 
@@ -587,8 +587,8 @@
                                         <div class="facility-icon">
                                             <i class="fa fa-calendar-alt"></i>
                                         </div>
-                                        <h3 class="fs-24 mb-3">Race Events</h3>
-                                        <p>Regularly scheduled race days, family challenges, and corporate team-building competitions.</p>
+                                        <h3 class="fs-24 mb-3" data-translate="joy_events_title">Race Events</h3>
+                                        <p data-translate="joy_events_description">Regularly scheduled race days, family challenges, and corporate team-building competitions.</p>
                                     </div>
                                 </div>
                             </div>
@@ -601,8 +601,8 @@
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8 text-center text-light">
                                         <i class="fa fa-quote-left fs-48 mb-4 text-color"></i>
-                                        <p class="fs-24 mb-4">Wish World redefines family entertainment. The variety of zones means there's something for everyone - from thrilling adventures to peaceful retreats. Our kids loved the Heart Zone activities while we appreciated the Mind Zone's tranquility.</p>
-                                        <h4 class="fs-20">- Sarah Johnson, Family Travel Blogger</h4>
+                                        <p class="fs-24 mb-4" data-translate="testimonial_quote">Wish World redefines family entertainment. The variety of zones means there's something for everyone - from thrilling adventures to peaceful retreats. Our kids loved the Heart Zone activities while we appreciated the Mind Zone's tranquility.</p>
+                                        <h4 class="fs-20" data-translate="testimonial_author">- Sarah Johnson, Family Travel Blogger</h4>
                                     </div>
                                 </div>
                             </div>
@@ -610,11 +610,11 @@
 
                         <!-- Enhanced CTA Section -->
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Experience the Magic of Wish World</h3>
-                            <p class="mb-4">Be among the first to visit our revolutionary entertainment complex</p>
+                            <h3 class="fs-28 mb-3" data-translate="cta_title">Experience the Magic of Wish World</h3>
+                            <p class="mb-4" data-translate="cta_description">Be among the first to visit our revolutionary entertainment complex</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="contact.html"><span>Pre-Book Tickets</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Group Inquiries</span></a>
+                                <a class="btn-main fx-slide" href="contact.html"><span data-translate="cta_book">Pre-Book Tickets</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-translate="cta_inquiries">Group Inquiries</span></a>
                             </div>
                         </div>
                     </div>
@@ -628,7 +628,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="" data-translate="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -638,28 +638,28 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">Address</h3>
+                        <p class="mb-0" data-translate="footer_address_line1">121 AI Blvd, San Francisco</p>
+                        <p data-translate="footer_address_line2">BCA 94107</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-translate="footer_links_title">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="footer_link_about">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_phone_1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1" data-translate="footer_phone_2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0" data-translate="footer_email_1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0" data-translate="footer_email_2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
@@ -668,7 +668,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -676,12 +676,322 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
-    </div>
-</body>
-</html>
+        <script>
+            const translations = {
+                en: {
+                    page_title: "Wish World | Premier Entertainment & Theme Park",
+                    meta_description: "Wish World - A revolutionary entertainment complex with themed zones offering unique experiences for all ages",
+                    meta_keywords: "Theme Park, Entertainment Complex, Family Fun, Adventure Park, VR Experiences, Water Park",
+                    meta_author: "Wish Group",
+                    scroll_to_top: "Scroll to top",
+                    menu_home: "Home",
+                    menu_about: "About Us",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projects",
+                    menu_countries: "Countries",
+                    menu_news: "News",
+                    menu_policies: "Our Policies",
+                    menu_career: "Career",
+                    menu_contact: "Contact Us",
+                    menu_tickets_1: "Tickets Style 1",
+                    menu_tickets_2: "Tickets Style 2",
+                    menu_news_sub: "News",
+                    menu_news_single: "News Single",
+                    menu_contact_sub: "Contact",
+                    logo_alt: "Wish Group Logo",
+                    hero_title: "Wish World – Ultimate Entertainment Experience",
+                    hero_description: "A revolutionary theme park with immersive zones for all ages",
+                    hero_label: "Coming Soon",
+                    hero_alt: "Wish World Theme Park",
+                    intro_title: "Your Gateway to Extraordinary Experiences",
+                    intro_description: "Six uniquely themed zones blending entertainment, education, and adventure",
+                    intro_alt: "Wish World Aerial View",
+                    gallery_title: "Park Highlights",
+                    gallery_description: "Discover the unparalleled experiences at Wish World",
+                    gallery_earth_alt: "Earth Zone",
+                    gallery_earth_caption: "The Earth Zone",
+                    gallery_spirit_alt: "Spirit Zone",
+                    gallery_spirit_caption: "The Spirit Zone",
+                    gallery_mind_alt: "Mind Zone",
+                    gallery_mind_caption: "The Mind Zone",
+                    gallery_heart_alt: "Heart Zone",
+                    gallery_heart_caption: "The Heart Zone",
+                    gallery_unity_alt: "Unity Zone",
+                    gallery_unity_caption: "The Unity Zone",
+                    gallery_joy_alt: "Joy Zone",
+                    gallery_joy_caption: "The Joy Zone",
+                    earth_title: "Terragrove - The Earth Zone (5 acres)",
+                    earth_description: "Theme: Sustainability, Calm & Reflection",
+                    earth_gardens_title: "Botanical Gardens",
+                    earth_gardens_description: "Immerse yourself in our curated collection of native and exotic plants, showcasing sustainable gardening practices and biodiversity conservation.",
+                    earth_pathways_title: "Eco-Pathways & Landscaping Exhibits",
+                    earth_pathways_description: "Walk through interactive exhibits demonstrating sustainable landscaping techniques, water conservation, and permaculture principles.",
+                    earth_hub_title: "Agriculture Learning Hub",
+                    earth_hub_description: "Hands-on experiences with urban farming techniques, hydroponics, and organic gardening for all ages.",
+                    earth_workshops_title: "Sustainability Workshops",
+                    earth_workshops_description: "Daily workshops on composting, renewable energy, and sustainable living practices for the whole family.",
+                    spirit_title: "Lumara Trails - The Spirit Zone (2 acres)",
+                    spirit_description: "Theme: Nature, Grace, and Spiritual Reflection",
+                    spirit_arena_title: "Horse Riding Arena",
+                    spirit_arena_description: "Professional equestrian facilities offering lessons and guided experiences for all skill levels in a serene natural setting.",
+                    spirit_trails_title: "Trail Riding",
+                    spirit_trails_description: "Scenic trails through natural landscapes designed for peaceful horseback excursions and connection with nature.",
+                    spirit_therapy_title: "Equine Therapy",
+                    spirit_therapy_description: "Specialized programs using horse interaction to promote emotional growth and personal development.",
+                    spirit_gardens_title: "Meditation Gardens",
+                    spirit_gardens_description: "Tranquil spaces designed for reflection and mindfulness, featuring water elements and native flora.",
+                    mind_title: "Aquanova Haven - The Mind Zone (1 acre)",
+                    mind_description: "Theme: Aquatic Mindfulness & Sensory Rejuvenation",
+                    mind_features_title: "Water Features",
+                    mind_features_hammocks: "Floating Hammocks & Lounging Pods",
+                    mind_features_pools: "Aqua Therapy Pools",
+                    mind_features_labyrinth: "Water Labyrinth & Mist Garden",
+                    mind_features_wall: "Interactive Water Wall",
+                    mind_activities_title: "Activities",
+                    mind_activities_boats: "Paddle Boats & Pedal Kayaks",
+                    mind_activities_dome: "Underwater Meditation Dome",
+                    mind_activities_rain: "Digital Rain Room",
+                    mind_activities_splash: "Mini Splash Therapy Zone (for Kids & Families)",
+                    mind_wellness_title: "Wellness",
+                    mind_wellness_hydro: "Hydrotherapy Sessions",
+                    mind_wellness_sound: "Sound Bath Experiences",
+                    mind_wellness_meditation: "Guided Aquatic Meditation",
+                    mind_wellness_tanks: "Sensory Deprivation Tanks",
+                    heart_title: "Viva Coredome - The Heart Zone (5 acres)",
+                    heart_description: "Theme: Energy, Play & Bonding",
+                    heart_hub_title: "Indoor Recreational Hub",
+                    heart_hub_description: "200,000 square feet of climate-controlled entertainment space featuring:",
+                    heart_adventure_title: "Adventure & Sports",
+                    heart_adventure_trampoline: "Trampoline Park",
+                    heart_adventure_courts: "Multi-Sport Courts",
+                    heart_adventure_ninja: "Ninja Warrior Course",
+                    heart_adventure_climbing: "Climbing Wall",
+                    heart_adventure_bowling: "Bowling",
+                    heart_adventure_golf: "Mini Golf",
+                    heart_gaming_title: "Digital Gaming",
+                    heart_gaming_vr: "VR Zones",
+                    heart_gaming_esports: "E-Sports Arena",
+                    heart_gaming_simulators: "Simulators",
+                    heart_gaming_lounge: "Gaming Lounge",
+                    heart_kids_title: "Kids & Family (25,000 Sqft)",
+                    heart_kids_play: "Soft Play Areas",
+                    heart_kids_gym: "Jungle Gym",
+                    heart_kids_pits: "Interactive Ball Pits",
+                    heart_kids_games: "Educational Games",
+                    heart_kids_bonding: "Parent-Child Bonding Activities",
+                    heart_recreation_title: "Recreation & Wellness (20,000 Sqft)",
+                    heart_recreation_karaoke: "Karaoke Rooms",
+                    heart_recreation_escape: "Escape Rooms",
+                    heart_recreation_theatre: "Mini Theatre",
+                    heart_recreation_spa: "Spa Pods",
+                    heart_recreation_crafts: "DIY Arts & Crafts",
+                    heart_recreation_dance: "Dance Studio",
+                    unity_title: "Harmonia House - The Unity Zone (2.5 acres)",
+                    unity_description: "Theme: Hospitality & Celebration",
+                    unity_hotel_title: "3 Storey Boutique Hotel Cluster (1.5 acres)",
+                    unity_hotel_double: "40 Double Bedroom Units",
+                    unity_hotel_triple: "30 Triple Bedroom Units",
+                    unity_hotel_gym: "State-of-the-art Gym Facilities",
+                    unity_hotel_spa: "Luxury Spa & Wellness Center",
+                    unity_hotel_pool: "Rooftop Pool with Park Views",
+                    unity_dining_title: "Dining & Retail (25,000 Sqft)",
+                    unity_dining_foodcourt: "Themed Food Court",
+                    unity_dining_snacks: "Gourmet Snack Zones",
+                    unity_dining_restaurants: "Signature Restaurants",
+                    unity_dining_bars: "Bars & Cafes",
+                    unity_dining_retail: "Retail Merchandise Shops",
+                    unity_dining_souvenirs: "Souvenir & Gift Stores",
+                    joy_title: "Solara Circuit - The Joy Zone (1 km Distance track)",
+                    joy_description: "Theme: Energy & Excitement",
+                    joy_track_title: "Mini Formula Track",
+                    joy_track_description: "Professional-grade karting track with electric karts for all ages and skill levels, featuring timing systems and safety barriers.",
+                    joy_podium_title: "Podium Celebration Area",
+                    joy_podium_description: "Victory podium for race winners with photo opportunities and celebration packages available.",
+                    joy_academy_title: "Driving Academy",
+                    joy_academy_description: "Professional instruction for young drivers with safety-focused curriculum and skill development.",
+                    joy_events_title: "Race Events",
+                    joy_events_description: "Regularly scheduled race days, family challenges, and corporate team-building competitions.",
+                    testimonial_quote: "Wish World redefines family entertainment. The variety of zones means there's something for everyone - from thrilling adventures to peaceful retreats. Our kids loved the Heart Zone activities while we appreciated the Mind Zone's tranquility.",
+                    testimonial_author: "- Sarah Johnson, Family Travel Blogger",
+                    cta_title: "Experience the Magic of Wish World",
+                    cta_description: "Be among the first to visit our revolutionary entertainment complex",
+                    cta_book: "Pre-Book Tickets",
+                    cta_inquiries: "Group Inquiries",
+                    footer_logo_alt: "Wish Group Footer Logo",
+                    footer_address_title: "Address",
+                    footer_address_line1: "121 AI Blvd, San Francisco",
+                    footer_address_line2: "BCA 94107",
+                    footer_links_title: "Quick Links",
+                    footer_link_home: "Home",
+                    footer_link_about: "About Us",
+                    footer_link_divisions: "Divisions",
+                    footer_link_projects: "Projects",
+                    footer_link_contact: "Contact Us",
+                    footer_contact_title: "Contact Us",
+                    footer_phone_1: "T. +971 4259 7167",
+                    footer_phone_2: "M. +971 4259 4795",
+                    footer_email_1: "E. info@wishgroup.ae",
+                    footer_email_2: "E. info@wishgroup.world",
+                    footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+                },
+                si: {
+                    page_title: "විෂ් වර්ල්ඩ් | ප්‍රමුඛ විනෝදාස්වාදය සහ තේමා උද්‍යානය",
+                    meta_description: "විෂ් වර්ල්ඩ් - සියලු වයස්වල පුද්ගලයින් සඳහා අද්විතීය අත්දැකීම් ලබා දෙන තේමා කලාප සහිත විප්ලවීය විනෝදාස්වාද සංකීර්ණයක්",
+                    meta_keywords: "තේමා උද්‍යානය, විනෝදාස්වාද සංකීර්ණය, පවුලේ විනෝදය, වික්‍රමාන්විත උද්‍යානය, VR අත්දැකීම්, ජල උද්‍යානය",
+                    meta_author: "විෂ් සමූහය",
+                    scroll_to_top: "ඉහළට ලිස්සා යන්න",
+                    menu_home: "මුල් පිටුව",
+                    menu_about: "අප ගැන",
+                    menu_divisions: "අංශ",
+                    menu_projects: "ව්‍යාපෘති",
+                    menu_countries: "රටවල්",
+                    menu_news: "පුවත්",
+                    menu_policies: "අපගේ ප්‍රතිපත්ති",
+                    menu_career: "වෘත්තිය",
+                    menu_contact: "සම්බන්ධ වන්න",
+                    menu_tickets_1: "ටිකට්පත් විලාසිතා 1",
+                    menu_tickets_2: "ටිකට්පත් විලාසිතා 2",
+                    menu_news_sub: "පුවත්",
+                    menu_news_single: "තනි පුවත",
+                    menu_contact_sub: "සම්බන්ධ වන්න",
+                    logo_alt: "විෂ් සමූහ ලාංඡනය",
+                    hero_title: "විෂ් වර්ල්ඩ් – අනුපම විනෝදාස්වාද අත්දැකීම",
+                    hero_description: "සියලු වයස්වලට ගැලපෙන තේමා කලාප සහිත විප්ලවීය තේමා උද්‍යානයක්",
+                    hero_label: "ඉක්මනින් පැමිණේ",
+                    hero_alt: "විෂ් වර්ල්ඩ් තේමා උද්‍යානය",
+                    intro_title: "අසාමාන්‍ය අත්දැකීම්වලට ඔබේ දොරටුව",
+                    intro_description: "විනෝදාස්වාදය, අධ්‍යාපනය සහ වික්‍රමය ඒකාබද්ධ කරන අද්විතීය තේමා කලාප හයක්",
+                    intro_alt: "විෂ් වර්ල්ඩ් ගුවන් දසුන",
+                    gallery_title: "උද්‍යානයේ ඉස්මතු කිරීම්",
+                    gallery_description: "විෂ් වර්ල්ඩ් හි අසමසම අත්දැකීම් සොයා ගන්න",
+                    gallery_earth_alt: "පෘථිවි කලාපය",
+                    gallery_earth_caption: "පෘථිවි කලාපය",
+                    gallery_spirit_alt: "ආත්ම කලාපය",
+                    gallery_spirit_caption: "ආත්ම කලාපය",
+                    gallery_mind_alt: "මනස කලාපය",
+                    gallery_mind_caption: "මනස කලාපය",
+                    gallery_heart_alt: "හදවත් කලාපය",
+                    gallery_heart_caption: "හදවත් කලාපය",
+                    gallery_unity_alt: "එක්සත් කලාපය",
+                    gallery_unity_caption: "එක්සත් කලාපය",
+                    gallery_joy_alt: "ප්‍රීති කලාපය",
+                    gallery_joy_caption: "ප්‍රීති කලාපය",
+                    earth_title: "ටෙරාග්‍රෝව් - පෘථිවි කලාපය (අක්කර 5)",
+                    earth_description: "තේමාව: තිරසාරභාවය, සන්සුන්කම සහ සිතුවිලි",
+                    earth_gardens_title: "බොටැනිකල් උද්‍යාන",
+                    earth_gardens_description: "තිරසාර උද්‍යාන පිළිවෙත් සහ ජෛව විවිධත්ව සංරක්ෂණය ප්‍රදර්ශනය කරමින්, දේශීය හා විදේශීය ශාක එකතුවකට ඔබව ගිල්වන්න.",
+                    earth_pathways_title: "පරිසර මාර්ග සහ භූමි අලංකරණ ප්‍රදර්ශන",
+                    earth_pathways_description: "තිරසාර භූමි අලංකරණ තාක්ෂණ, ජල සංරක්ෂණය සහ පර්මකල්චර් මූලධර්ම ප්‍රදර්ශනය කරන අන්තර්ක්‍රියාකාරී ප්‍රදර්ශන හරහා ඇවිදින්න.",
+                    earth_hub_title: "කෘෂිකාර්මික ඉගෙනුම් මධ්‍යස්ථානය",
+                    earth_hub_description: "නාගරික ගොවිතැන් තාක්ෂණ, හයිඩ්‍රොපොනික්ස්, සහ සියලු වයස්වලට ගැලපෙන කාබනික ගොවිතැන් සමඟ අත්දැකීම්.",
+                    earth_workshops_title: "තිරසාරභාවය පිළිබඳ වැඩමුළු",
+                    earth_workshops_description: "පවුලේ සියලු දෙනාට ගැලපෙන පිළිස්සීම, පුනර්ජනනීය බලශක්තිය, සහ තිරසාර ජීවන පිළිවෙත් පිළිබඳ දෛනික වැඩමුළු.",
+                    spirit_title: "ලුමාරා ට්‍රේල්ස් - ආත්ම කලාපය (අක්කර 2)",
+                    spirit_description: "තේමාව: සොබාදහම, කරුණාව, සහ ආත්මික සිතුවිලි",
+                    spirit_arena_title: "අශ්ව ධාවන ක්‍රීඩාංගනය",
+                    spirit_arena_description: "සියලුම කුසලතා මට්ටම්වලට ගැලපෙන පාඩම් සහ මඟපෙන්වන අත්දැකීම් ලබා දෙන වෘත්තීය අශ්වාරෝහක පහසුකම්, සන්සුන් ස්වභාවික පරිසරයක.",
+                    spirit_trails_title: "මංපෙත් ධාවනය",
+                    spirit_trails_description: "සොබාදහම සමඟ සම්බන්ධ වීමට සහ සාමකාමී අශ්ව ගමන් සඳහා සැලසුම් කර ඇති ස්වභාවික භූමි දර්ශන හරහා මනරම් මංපෙත්.",
+                    spirit_therapy_title: "අශ්ව චිකිත්සාව",
+                    spirit_therapy_description: "අශ්වයින් සමඟ අන්තර්ක්‍රියා භාවිතා කරමින් චිත්තවේගීය වර්ධනය සහ පුද්ගලික සංවර්ධනය ප්‍රවර්ධනය කිරීමට විශේෂිත වැඩසටහන්.",
+                    spirit_gardens_title: "භාවනා උද්‍යාන",
+                    spirit_gardens_description: "ජල මූලිකාංග සහ දේශීය ශාක ඇතුළත්, සිතුවිලි සහ සිහිනැලිකම සඳහා සැලසුම් කර ඇති සන්සුන් අවකාශ.",
+                    mind_title: "අක්වානෝවා හේවන් - මනස කලාපය (අක්කර 1)",
+                    mind_description: "තේමාව: ජලීය සිහිනැලිකම සහ සංවේදී පුනර්ජනනය",
+                    mind_features_title: "ජලීය විශේෂාංග",
+                    mind_features_hammocks: "පාවෙන හැමොක් සහ විවේක කුටි",
+                    mind_features_pools: "ජල චිකිත්සක තටාක",
+                    mind_features_labyrinth: "ජල ලැබිරින්ත් සහ මීදුම උද්‍යානය",
+                    mind_features_wall: "අන්තර්ක්‍රියාකාරී ජල බිත්ති",
+                    mind_activities_title: "ක්‍රියාකාරකම්",
+                    mind_activities_boats: "පැඩල් බෝට්ටු සහ පැඩල් කයාක්",
+                    mind_activities_dome: "දිය යට භාවනා ඩෝම්",
+                    mind_activities_rain: "ඩිජිටල් වැසි කාමරය",
+                    mind_activities_splash: "කුඩා ජල චිකිත්සක කලාපය (දරුවන් සහ පවුල් සඳහා)",
+                    mind_wellness_title: "සුවතාව",
+                    mind_wellness_hydro: "හයිඩ්‍රොතෙරපි සැසි",
+                    mind_wellness_sound: "ශබ්ද නාන අත්දැකීම්",
+                    mind_wellness_meditation: "මඟ පෙන්වන ජලීය භාවනා",
+                    mind_wellness_tanks: "සංවේදී හිඟතා ටැංකි",
+                    heart_title: "විවා කෝර්ඩෝම් - හදවත් කලාපය (අක්කර 5)",
+                    heart_description: "තේමාව: බලශක්තිය, ක්‍රීඩා සහ බැඳීම",
+                    heart_hub_title: "ගෘහස්ථ විනෝද මධ්‍යස්ථානය",
+                    heart_hub_description: "විනෝදාස්වාද අවකාශයේ වර්ග අඩි 200,000ක්, උෂ්ණත්ව පාලනය යටතේ, ඇතුළත්:",
+                    heart_adventure_title: "වික්‍රමය සහ ක්‍රීඩා",
+                    heart_adventure_trampoline: "ට්‍රැම්පෝලින් උද්‍යානය",
+                    heart_adventure_courts: "බහු-ක්‍රීඩා ගුවන් මාර්ග",
+                    heart_adventure_ninja: "නින්ජා වෝරියර් කෝර්ස්",
+                    heart_adventure_climbing: "නගින බිත්ති",
+                    heart_adventure_bowling: "බෝලිං",
+                    heart_adventure_golf: "මිනි ගොල්ෆ්",
+                    heart_gaming_title: "ඩිජිටල් ගේමිං",
+                    heart_gaming_vr: "VR කලාප",
+                    heart_gaming_esports: "ඊ-ස්පෝර්ට්ස් ආරිනා",
+                    heart_gaming_simulators: "සිමියුලේටර්",
+                    heart_gaming_lounge: "ගේමිං ලවුන්ජ්",
+                    heart_kids_title: "දරුවන් සහ පවුල (වර්ග අඩි 25,000)",
+                    heart_kids_play: "මෘදු ක්‍රීඩා බිම්",
+                    heart_kids_gym: "ජංගල් ජිම්",
+                    heart_kids_pits: "අන්තර්ක්‍රියාකාරී බෝල් පිට්",
+                    heart_kids_games: "අධ්‍යාපනික ක්‍රීඩා",
+                    heart_kids_bonding: "දෙමාපිය-ළමා බැඳීමේ ක්‍රියාකාරකම්",
+                    heart_recreation_title: "විනෝදය සහ සුවතාව (වර්ග අඩි 20,000)",
+                    heart_recreation_karaoke: "කැරෝකේ කාමර",
+                    heart_recreation_escape: "එස්කේප් රූම්",
+                    heart_recreation_theatre: "මිනි තියටර්",
+                    heart_recreation_spa: "ස්පා පොඩ්ස්",
+                    heart_recreation_crafts: "DIY කලා සහ ශිල්ප",
+                    heart_recreation_dance: "නැටුම් ස්ටුඩියෝ",
+                    unity_title: "හාර්මෝනියා හවුස් - එක්සත් කලාපය (අක්කර 2.5)",
+                    unity_description: "තේමාව: ආගන්තුක සත්කාරය සහ සැමරුම",
+                    unity_hotel_title: "තුන්මහල් බුටික් හෝටල් සමූහය (අක්කර 1.5)",
+                    unity_hotel_double: "ද්විත්ව නිදන කාමර ඒකක 40",
+                    unity_hotel_triple: "ත්‍රිත්ව නිදන කාමර ඒකක 30",
+                    unity_hotel_gym: "නවීනතම ජිම් පහසුකම්",
+                    unity_hotel_spa: "සුඛෝපභෝගී ස්පා සහ සුවතා මධ්‍යස්ථානය",
+                    unity_hotel_pool: "උද්‍යාන දසුන් සහිත ගුවන් තටාකය",
+                    unity_dining_title: "ආහාර සහ සිල්ලර (වර්ග අඩි 25,000)",
+                    unity_dining_foodcourt: "තේමා ආහාර අංගනය",
+                    unity_dining_snacks: "ගෝමට් ස්නැක් කලාප",
+                    unity_dining_restaurants: "සිග්නිචර් රෙස්ටුරන්ට්",
+                    unity_dining_bars: "බාර් සහ කැෆේ",
+                    unity_dining_retail: "සිල්ලර වෙළඳ භාණ්ඩ සාප්පු",
+                    unity_dining_souvenirs: "සිහිවටන සහ තෑගි සාප්පු",
+                    joy_title: "සෝලාරා සර්කිට් - ප්‍රීති කලාපය (කිලෝමීටර 1 දුර පිටිය)",
+                    joy_description: "තේමාව: බලශක්තිය සහ උද්දීපනය",
+                    joy_track_title: "මිනි ෆෝමියුලා ට්‍රැක්",
+                    joy_track_description: "සියලු වයස්වලට සහ කුසලතා මට්ටම්වලට ගැලපෙන විදුලි කාර්ට් සහිත වෘත්තීය මට්ටමේ කාර්ටිං ධාවන පථය, ටයිමිං පද්ධති සහ ආරක්ෂණ බාධක ඇතුළත්.",
+                    joy_podium_title: "විජය පෝඩියම් ඒරියා",
+                    joy_podium_description: "ජයග්‍රාහකයින් සඳහා ජයග්‍රාහී පෝඩියම්, ඡායාරූප අවස්ථා සහ සැමරුම් පැකේජ ඇතුළත්.",
+                    joy_academy_title: "ඩ්‍රයිවින් ඇකඩමි",
+                    joy_academy_description: "ආරක්ෂණ-අවධානය යොමු කරන ලද පාඨමාලා සහ කුසලතා සංවර්ධනය සමඟ තරුණ රියදුරන් සඳහා වෘත්තීය උපදෙස්.",
+                    joy_events_title: "රේස් ඉවෙන්ට්",
+                    joy_events_description: "නිතිපතා සැලසුම් කර ඇති ධාවන දින, පවුලේ අභියෝග, සහ ආයතනික කණ්ඩායම්-ගොඩනැගීමේ තරඟ.",
+                    testimonial_quote: "විෂ් වර්ල්ඩ් පවුලේ විනෝදාස්වාදය නැවත අර්ථ දක්වයි. කලාපවල විවිධත්වය නිසා සෑම කෙනෙකුටම යමක් තිබේ - ත්‍රාසජනක වික්‍රමයේ සිට සාමකාමී විවේකය දක්වා. අපගේ දරුවන් හදවත් කලාපයේ ක්‍රියාකාරකම්වලට ආදරය කළ අතර, අපි මනස කලාපයේ සන්සුන්කම අගය කළෙමු.",
+                    testimonial_author: "- සාරා ජොන්සන්, පවුලේ ගමන් බ්ලොග්කරු",
+                    cta_title: "විෂ් වර්ල්ඩ්හි ඉන්ද්‍රජාලිකත්වය අත්විඳින්න",
+                    cta_description: "අපගේ විප්ලවීය විනෝදාස්වාද සංකීර්ණයට පිවිසෙන පළමු අය අතර වන්න",
+                    cta_book: "ටිකට්පත් පෙර-වෙන් කරන්න",
+                    cta_inquiries: "කණ්ඩායම් විමසීම්",
+                    footer_logo_alt: "විෂ් සමූහ පාදක ලාංඡනය",
+                    footer_address_title: "ලිපිනය",
+                    footer_address_line1: "121 AI Blvd, සැන් ෆ්‍රැන්සිස්කෝ",
+                    footer_address_line2: "BCA 94107",
+                    footer_links_title: "ඉක්මන් සබැඳි",
+                    footer_link_home: "මුල් පිටුව",
+                    footer_link_about: "අප ගැන",
+                    footer_link_divisions: "අංශ",
+                    footer_link_projects: "ව්‍යාපෘති",
+                    footer_link_contact: "සම්බන්ධ වන්න",
+                    footer_contact_title: "අප හා සම්බන්ධ වන්න",
+                    footer_phone_1: "දුරකථන: +971 4259 7167",
+                    footer_phone_2: "ජංගම: +971 4259 4795",
+                    footer_email_1: "විද්‍යුත් තැපෑල: info@wishgroup.ae",
+                    footer_email_2: "විද්‍යුත් තැපෑල: info@wishgroup.world",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් සමූහය. සියලුම හිමිකම් ඇවිරිණි."
+                },

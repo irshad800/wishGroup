@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Wish Brands | Premium Food Manufacturing Division</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <title data-translate="page_title">Wish Brands | Premium Food Manufacturing Division</title>
+    <link rel="icon" href="/images/wishgroup/logo_remove.png" type="image/png" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Wish Brands - Food manufacturing and trading division of Wish Group specializing in biscuits and beverages" name="description">
-    <meta content="Wish Brands, Wish Casa, Biscuit Manufacturing, Beverage Production, Food Export" name="keywords">
-    <meta content="Wish Group" name="author">
+    <meta content="Wish Brands - Food manufacturing and trading division of Wish Group specializing in biscuits and beverages" name="description" data-translate="meta_description">
+    <meta content="Wish Brands, Wish Casa, Biscuit Manufacturing, Beverage Production, Food Export" name="keywords" data-translate="meta_keywords">
+    <meta content="Wish Group" name="author" data-translate="meta_author">
     <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!-- color scheme -->
     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 </head>
-
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -39,9 +36,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -50,21 +47,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-translate="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_carrier">Carrier</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="menu_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-translate="menu_contact_tickets1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-translate="menu_contact_tickets2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-translate="menu_contact_news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-translate="menu_contact_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-translate="menu_contact_contact">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -72,7 +69,13 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                               <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select Language">
+    <option value="en">English</option>
+    <option value="si">Sinhala</option>
+    <option value="dv">Dhivehi</option>
+    <option value="ar">Arabic</option>
+    <option value="fr">French</option>
+</select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -84,22 +87,20 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="images/wishgroup/header.png" class="jarallax-img" alt="">
+            <img src="images/wishgroup/header.png" class="jarallax-img" alt="" data-translate="hero_alt">
             <div class="gradient-edge-bottom h-50"></div>
             <div class="sw-overlay op-5"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
-                                Wish Brands – Global Food Excellence
-                            </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">Premium food manufacturing and trading across international markets</p>
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-translate="hero_title">Wish Brands – Global Food Excellence</h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-translate="hero_description">Premium food manufacturing and trading across international markets</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">Wish Group Subsidiary</span>
+                                    <span class="fs-20 fw-600" data-translate="hero_label">Wish Group Subsidiary</span>
                                 </div>
                             </div>
                         </div>
@@ -113,46 +114,46 @@
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-10">
                         <div class="text-center mb-5">
-                            <h2 class="fs-36 mb-3">Global Food Manufacturing Network</h2>
-                            <p class="lead">Operating across Sri Lanka, UAE, UK, Malaysia, Maldives, and Singapore</p>
+                            <h2 class="fs-36 mb-3" data-translate="global_network_title">Global Food Manufacturing Network</h2>
+                            <p class="lead" data-translate="global_network_description">Operating across Sri Lanka, UAE, UK, Malaysia, Maldives, and Singapore</p>
                         </div>
                         
                         <div class="row align-items-center mb-5">
                             <div class="col-lg-6">
-                                <img src="images/wishgroup/wishcasa.png" class="w-100 rounded-1 shadow-lg" alt="Wish Brands Global Operations">
+                                <img src="images/wishgroup/wishcasa.png" class="w-100 rounded-1 shadow-lg" alt="" data-translate="image_alt_wishcasa">
                             </div>
                             <div class="col-lg-6">
                                 <div class="ps-lg-4">
-                                    <h3 class="fs-24 mb-3">About Wish Brands</h3>
-                                    <p>Wish Brands is a dynamic member of the global Wish Group, specializing in food manufacturing, trading, and export. We deliver premium products that align with modern health, sustainability, and taste standards to markets worldwide.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="about_title">About Wish Brands</h3>
+                                    <p data-translate="about_description">Wish Brands is a dynamic member of the global Wish Group, specializing in food manufacturing, trading, and export. We deliver premium products that align with modern health, sustainability, and taste standards to markets worldwide.</p>
                                     
                                     <div class="row mt-4">
                                         <div class="col-6 mb-3">
                                             <div class="feature-box">
                                                 <i class="fa fa-globe fs-24 text-color mb-2"></i>
-                                                <h5 class="fs-16 mb-1">Global Presence</h5>
-                                                <p class="fs-14">Operations in 6 countries</p>
+                                                <h5 class="fs-16 mb-1" data-translate="feature_global_title">Global Presence</h5>
+                                                <p class="fs-14" data-translate="feature_global_description">Operations in 6 countries</p>
                                             </div>
                                         </div>
                                         <div class="col-6 mb-3">
                                             <div class="feature-box">
                                                 <i class="fa fa-industry fs-24 text-color mb-2"></i>
-                                                <h5 class="fs-16 mb-1">Manufacturing</h5>
-                                                <p class="fs-14">State-of-the-art facilities</p>
+                                                <h5 class="fs-16 mb-1" data-translate="feature_manufacturing_title">Manufacturing</h5>
+                                                <p class="fs-14" data-translate="feature_manufacturing_description">State-of-the-art facilities</p>
                                             </div>
                                         </div>
                                         <div class="col-6 mb-3">
                                             <div class="feature-box">
                                                 <i class="fa fa-leaf fs-24 text-color mb-2"></i>
-                                                <h5 class="fs-16 mb-1">Sustainability</h5>
-                                                <p class="fs-14">Eco-conscious production</p>
+                                                <h5 class="fs-16 mb-1" data-translate="feature_sustainability_title">Sustainability</h5>
+                                                <p class="fs-14" data-translate="feature_sustainability_description">Eco-conscious production</p>
                                             </div>
                                         </div>
                                         <div class="col-6 mb-3">
                                             <div class="feature-box">
                                                 <i class="fa fa-certificate fs-24 text-color mb-2"></i>
-                                                <h5 class="fs-16 mb-1">Quality</h5>
-                                                <p class="fs-14">International standards</p>
+                                                <h5 class="fs-16 mb-1" data-translate="feature_quality_title">Quality</h5>
+                                                <p class="fs-14" data-translate="feature_quality_description">International standards</p>
                                             </div>
                                         </div>
                                     </div>
@@ -162,8 +163,8 @@
 
                         <div class="wish-casa-section mb-5">
                             <div class="section-header text-center mb-4">
-                                <h2 class="fs-30">Wish Casa Manufacturing Division</h2>
-                                <p class="lead">Our state-of-the-art food production facility in Puttalam, Sri Lanka</p>
+                                <h2 class="fs-30" data-translate="wish_casa_title">Wish Casa Manufacturing Division</h2>
+                                <p class="lead" data-translate="wish_casa_description">Our state-of-the-art food production facility in Puttalam, Sri Lanka</p>
                             </div>
                             
                             <div class="row g-4">
@@ -171,16 +172,16 @@
                                     <div class="production-card">
                                         <div class="production-header">
                                             <i class="fa fa-cookie-bite fs-48 text-color mb-3"></i>
-                                            <h3 class="fs-24 mb-3">Biscuit Manufacturing</h3>
+                                            <h3 class="fs-24 mb-3" data-translate="biscuit_title">Biscuit Manufacturing</h3>
                                         </div>
                                         <div class="production-body">
-                                            <p>Wish Casa produces a diverse range of biscuits through advanced automated production lines:</p>
+                                            <p data-translate="biscuit_description">Wish Casa produces a diverse range of biscuits through advanced automated production lines:</p>
                                             <ul class="production-list">
-                                                <li><i class="fa fa-check text-color me-2"></i> Hard Biscuits</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Soft Biscuits</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Cream-Filled Sandwich Biscuits</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Cookies</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Wafers</li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="biscuit_item_1">Hard Biscuits</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="biscuit_item_2">Soft Biscuits</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="biscuit_item_3">Cream-Filled Sandwich Biscuits</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="biscuit_item_4">Cookies</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="biscuit_item_5">Wafers</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -190,15 +191,15 @@
                                     <div class="production-card">
                                         <div class="production-header">
                                             <i class="fa fa-glass-whiskey fs-48 text-color mb-3"></i>
-                                            <h3 class="fs-24 mb-3">Juice & Beverage Manufacturing</h3>
+                                            <h3 class="fs-24 mb-3" data-translate="beverage_title">Juice & Beverage Manufacturing</h3>
                                         </div>
                                         <div class="production-body">
-                                            <p>Our facility manufactures a wide range of health-focused drinks:</p>
+                                            <p data-translate="beverage_description">Our facility manufactures a wide range of health-focused drinks:</p>
                                             <ul class="production-list">
-                                                <li><i class="fa fa-check text-color me-2"></i> Juice Drinks</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Carbonated Beverages</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Energy Drinks</li>
-                                                <li><i class="fa fa-check text-color me-2"></i> Sparkling & Spring Water</li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="beverage_item_1">Juice Drinks</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="beverage_item_2">Carbonated Beverages</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="beverage_item_3">Energy Drinks</span></li>
+                                                <li><i class="fa fa-check text-color me-2"></i><span data-translate="beverage_item_4">Sparkling & Spring Water</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -212,10 +213,10 @@
                                     <div class="mv-card h-100">
                                         <div class="mv-header">
                                             <i class="fa fa-eye fs-48 text-color mb-3"></i>
-                                            <h3 class="fs-24 mb-3">Our Vision</h3>
+                                            <h3 class="fs-24 mb-3" data-translate="vision_title">Our Vision</h3>
                                         </div>
                                         <div class="mv-body">
-                                            <p>To become a globally respected brand that offers sustainable, affordable, and high-quality food through modern innovation, environmental responsibility, and ethical manufacturing.</p>
+                                            <p data-translate="vision_description">To become a globally respected brand that offers sustainable, affordable, and high-quality food through modern innovation, environmental responsibility, and ethical manufacturing.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -224,10 +225,10 @@
                                     <div class="mv-card h-100">
                                         <div class="mv-header">
                                             <i class="fa fa-bullseye fs-48 text-color mb-3"></i>
-                                            <h3 class="fs-24 mb-3">Our Mission</h3>
+                                            <h3 class="fs-24 mb-3" data-translate="mission_title">Our Mission</h3>
                                         </div>
                                         <div class="mv-body">
-                                            <p>To establish a fully integrated food production facility for biscuits and juices, ensuring world-class standards in hygiene, automation, and environmental responsibility.</p>
+                                            <p data-translate="mission_description">To establish a fully integrated food production facility for biscuits and juices, ensuring world-class standards in hygiene, automation, and environmental responsibility.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -236,8 +237,8 @@
 
                         <div class="facility-features mb-5">
                             <div class="section-header text-center mb-4">
-                                <h2 class="fs-30">World-Class Manufacturing Facility</h2>
-                                <p class="lead">Designed for quality, efficiency, and sustainability</p>
+                                <h2 class="fs-30" data-translate="facility_title">World-Class Manufacturing Facility</h2>
+                                <p class="lead" data-translate="facility_description">Designed for quality, efficiency, and sustainability</p>
                             </div>
                             
                             <div class="row g-4">
@@ -246,8 +247,8 @@
                                         <div class="feature-icon">
                                             <i class="fa fa-shield-alt fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Food Safety</h3>
-                                        <p>Stringent hygiene protocols and international food safety standards at every production stage.</p>
+                                        <h3 class="fs-20 mb-2" data-translate="feature_safety_title">Food Safety</h3>
+                                        <p data-translate="feature_safety_description">Stringent hygiene protocols and international food safety standards at every production stage.</p>
                                     </div>
                                 </div>
                                 
@@ -256,8 +257,8 @@
                                         <div class="feature-icon">
                                             <i class="fa fa-robot fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Automation</h3>
-                                        <p>Advanced automated production lines ensuring consistent quality and efficiency.</p>
+                                        <h3 class="fs-20 mb-2" data-translate="feature_automation_title">Automation</h3>
+                                        <p data-translate="feature_automation_description">Advanced automated production lines ensuring consistent quality and efficiency.</p>
                                     </div>
                                 </div>
                                 
@@ -266,19 +267,19 @@
                                         <div class="feature-icon">
                                             <i class="fa fa-recycle fs-36 text-color"></i>
                                         </div>
-                                        <h3 class="fs-20 mb-2">Sustainability</h3>
-                                        <p>Eco-conscious manufacturing processes that minimize environmental impact.</p>
+                                        <h3 class="fs-20 mb-2" data-translate="feature_sustainability2_title">Sustainability</h3>
+                                        <p data-translate="feature_sustainability2_description">Eco-conscious manufacturing processes that minimize environmental impact.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Partner With Wish Brands</h3>
-                            <p class="mb-4">Explore opportunities with our global food manufacturing network</p>
+                            <h3 class="fs-28 mb-3" data-translate="cta_title">Partner With Wish Brands</h3>
+                            <p class="mb-4" data-translate="cta_description">Explore opportunities with our global food manufacturing network</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="https://wishgroup.co/"><span>Visit Parent Company</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Contact Our Team</span></a>
+                                <a class="btn-main fx-slide" href="https://wishgroup.co/"><span data-translate="cta_visit">Visit Parent Company</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-translate="cta_contact">Contact Our Team</span></a>
                             </div>
                         </div>
                     </div>
@@ -292,7 +293,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="" data-translate="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -302,28 +303,28 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">Address</h3>
+                        <p class="mb-0" data-translate="footer_address_line1">121 AI Blvd, San Francisco</p>
+                        <p data-translate="footer_address_line2">BCA 94107</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-translate="footer_links_title">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="footer_link_about">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_phone_1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1" data-translate="footer_phone_2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0" data-translate="footer_email_1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0" data-translate="footer_email_2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
@@ -332,7 +333,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-translate="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -340,12 +341,490 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
+        <script src="js/translations.js"></script>
     </div>
+
+    <script>
+        const translations = {
+    en: {
+        page_title: "Wish Brands | Premium Food Manufacturing Division",
+        meta_description: "Wish Brands - Food manufacturing and trading division of Wish Group specializing in biscuits and beverages",
+        meta_keywords: "Wish Brands, Wish Casa, Biscuit Manufacturing, Beverage Production, Food Export",
+        meta_author: "Wish Group",
+        scroll_to_top: "Scroll to top",
+        menu_home: "Home",
+        menu_about: "About Us",
+        menu_divisions: "Divisions",
+        menu_projects: "Projects",
+        menu_countries: "Countries",
+        menu_news: "News",
+        menu_policies: "Our Policies",
+        menu_carrier: "Carrier",
+        menu_contact: "Contact Us",
+        menu_contact_tickets1: "Tickets Style 1",
+        menu_contact_tickets2: "Tickets Style 2",
+        menu_contact_news: "News",
+        menu_contact_news_single: "News Single",
+        menu_contact_contact: "Contact",
+        logo_alt: "Wish Group Logo",
+        hero_title: "Wish Brands – Global Food Excellence",
+        hero_description: "Premium food manufacturing and trading across international markets",
+        hero_label: "Wish Group Subsidiary",
+        hero_alt: "Wish Brands Header Image",
+        global_network_title: "Global Food Manufacturing Network",
+        global_network_description: "Operating across Sri Lanka, UAE, UK, Malaysia, Maldives, and Singapore",
+        image_alt_wishcasa: "Wish Brands Global Operations",
+        about_title: "About Wish Brands",
+        about_description: "Wish Brands is a dynamic member of the global Wish Group, specializing in food manufacturing, trading, and export. We deliver premium products that align with modern health, sustainability, and taste standards to markets worldwide.",
+        feature_global_title: "Global Presence",
+        feature_global_description: "Operations in 6 countries",
+        feature_manufacturing_title: "Manufacturing",
+        feature_manufacturing_description: "State-of-the-art facilities",
+        feature_sustainability_title: "Sustainability",
+        feature_sustainability_description: "Eco-conscious production",
+        feature_quality_title: "Quality",
+        feature_quality_description: "International standards",
+        wish_casa_title: "Wish Casa Manufacturing Division",
+        wish_casa_description: "Our state-of-the-art food production facility in Puttalam, Sri Lanka",
+        biscuit_title: "Biscuit Manufacturing",
+        biscuit_description: "Wish Casa produces a diverse range of biscuits through advanced automated production lines:",
+        biscuit_item_1: "Hard Biscuits",
+        biscuit_item_2: "Soft Biscuits",
+        biscuit_item_3: "Cream-Filled Sandwich Biscuits",
+        biscuit_item_4: "Cookies",
+        biscuit_item_5: "Wafers",
+        beverage_title: "Juice & Beverage Manufacturing",
+        beverage_description: "Our facility manufactures a wide range of health-focused drinks:",
+        beverage_item_1: "Juice Drinks",
+        beverage_item_2: "Carbonated Beverages",
+        beverage_item_3: "Energy Drinks",
+        beverage_item_4: "Sparkling & Spring Water",
+        vision_title: "Our Vision",
+        vision_description: "To become a globally respected brand that offers sustainable, affordable, and high-quality food through modern innovation, environmental responsibility, and ethical manufacturing.",
+        mission_title: "Our Mission",
+        mission_description: "To establish a fully integrated food production facility for biscuits and juices, ensuring world-class standards in hygiene, automation, and environmental responsibility.",
+        facility_title: "World-Class Manufacturing Facility",
+        facility_description: "Designed for quality, efficiency, and sustainability",
+        feature_safety_title: "Food Safety",
+        feature_safety_description: "Stringent hygiene protocols and international food safety standards at every production stage.",
+        feature_automation_title: "Automation",
+        feature_automation_description: "Advanced automated production lines ensuring consistent quality and efficiency.",
+        feature_sustainability2_title: "Sustainability",
+        feature_sustainability2_description: "Eco-conscious manufacturing processes that minimize environmental impact.",
+        cta_title: "Partner With Wish Brands",
+        cta_description: "Explore opportunities with our global food manufacturing network",
+        cta_visit: "Visit Parent Company",
+        cta_contact: "Contact Our Team",
+        footer_logo_alt: "Wish Group Footer Logo",
+        footer_address_title: "Address",
+        footer_address_line1: "121 AI Blvd, San Francisco",
+        footer_address_line2: "BCA 94107",
+        footer_links_title: "Quick Links",
+        footer_link_home: "Home",
+        footer_link_about: "About Us",
+        footer_link_divisions: "Divisions",
+        footer_link_projects: "Projects",
+        footer_link_contact: "Contact Us",
+        footer_contact_title: "Contact Us",
+        footer_phone_1: "T. +971 4259 7167",
+        footer_phone_2: "M. +971 4259 4795",
+        footer_email_1: "E. info@wishgroup.ae",
+        footer_email_2: "E. info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+    },
+    si: {
+        page_title: "විෂ් බ්‍රෑන්ඩ්ස් | ප්‍රිමියම් ආහාර නිෂ්පාදන අංශය",
+        meta_description: "විෂ් බ්‍රෑන්ඩ්ස් - විෂ් සමූහයේ ආහාර නිෂ්පාදන හා වෙළඳාම් අංශය, බිස්කට් හා පාන වර්ගවල විශේෂඥතාව",
+        meta_keywords: "විෂ් බ්‍රෑන්ඩ්ස්, විෂ් කාසා, බිස්කට් නිෂ්පාදනය, පාන නිෂ්පාදනය, ආහාර අපනයනය",
+        meta_author: "විෂ් සමූහය",
+        scroll_to_top: "ඉහළට ලිස්සා යන්න",
+        menu_home: "මුල් පිටුව",
+        menu_about: "අප ගැන",
+        menu_divisions: "අංශ",
+        menu_projects: "ව්‍යාපෘති",
+        menu_countries: "රටවල්",
+        menu_news: "පුවත්",
+        menu_policies: "අපගේ ප්‍රතිපත්ති",
+        menu_carrier: "වෘත්තිය",
+        menu_contact: "සම්බන්ධ වන්න",
+        menu_contact_tickets1: "ටිකට් විලාසිතා 1",
+        menu_contact_tickets2: "ටිකට් විලාසිතා 2",
+        menu_contact_news: "පුවත්",
+        menu_contact_news_single: "පුවත් තනි",
+        menu_contact_contact: "සම්බන්ධ වන්න",
+        logo_alt: "විෂ් සමූහ ලාංඡනය",
+        hero_title: "විෂ් බ්‍රෑන්ඩ්ස් – ගෝලීය ආහාර විශිෂ්ටත්වය",
+        hero_description: "ජාත්‍යන්තර වෙළඳපොළවල් හරහා ප්‍රිමියම් ආහාර නිෂ්පාදනය හා වෙළඳාම",
+        hero_label: "විෂ් සමූහ අනුබද්ධිත ආයතනය",
+        hero_alt: "විෂ් බ්‍රෑන්ඩ්ස් ශීර්ෂ රූපය",
+        global_network_title: "ගෝලීය ආහාර නිෂ්පාදන ජාලය",
+        global_network_description: "ශ්‍රී ලංකාව, එක්සත් අරාබි එමීර්, එක්සත් රාජධානිය, මැලේසියාව, මාලදිවයින, සහ සිංගප්පූරුව හරහා ක්‍රියාත්මක වේ",
+        image_alt_wishcasa: "විෂ් බ්‍රෑන්ඩ්ස් ගෝලීය ක්‍රියාකාරකම්",
+        about_title: "විෂ් බ්‍රෑන්ඩ්ස් ගැන",
+        about_description: "විෂ් බ්‍රෑන්ඩ්ස් යනු ගෝලීය විෂ් සමූහයේ ගතික සාමාජිකයෙකි, ආහාර නිෂ්පාදනය, වෙළඳාම, සහ අපනයනය පිළිබඳ විශේෂඥතාවක් ඇත. අපි නවීන සෞඛ්‍ය, තිරසාරභාවය, සහ රස ප්‍රමිතීන්ට අනුකූල වූ ප්‍රිමියම් නිෂ්පාදන ලොව පුරා වෙළඳපොළවලට ලබා දෙන්නෙමු.",
+        feature_global_title: "ගෝලීය පැවැත්ම",
+        feature_global_description: "රටවල් 6ක ක්‍රියාකාරකම්",
+        feature_manufacturing_title: "නිෂ්පාදනය",
+        feature_manufacturing_description: "නවීනතම පහසුකම්",
+        feature_sustainability_title: "තිරසාරභාවය",
+        feature_sustainability_description: "පරිසර හිතකාමී නිෂ්පාදනය",
+        feature_quality_title: "ගුණාත්මකභාවය",
+        feature_quality_description: "ජාත්‍යන්තර ප්‍රමිතීන්",
+        wish_casa_title: "විෂ් කාසා නිෂ්පාදන අංශය",
+        wish_casa_description: "ශ්‍රී ලංකාවේ පුත්තලමේ පිහිටි අපගේ නවීනතම ආහාර නිෂ්පාදන පහසුකම",
+        biscuit_title: "බිස්කට් නිෂ්පාදනය",
+        biscuit_description: "විෂ් කාසා උසස් ස්වයංක්‍රීය නිෂ්පාදන රේඛා හරහා විවිධ බිස්කට් නිපදවයි:",
+        biscuit_item_1: "දෘඩ බිස්කට්",
+        biscuit_item_2: "මෘදු බිස්කට්",
+        biscuit_item_3: "ක්‍රීම් පිරවූ සැන්ඩ්විච් බිස්කට්",
+        biscuit_item_4: "කුකීස්",
+        biscuit_item_5: "වේෆර්ස්",
+        beverage_title: "ජූස් හා පාන නිෂ්පාදනය",
+        beverage_description: "අපගේ පහසුකම සෞඛ්‍ය-කේන්ද්‍රීය පාන විශාල පරාසයක් නිෂ්පාදනය කරයි:",
+        beverage_item_1: "ජූස් පාන",
+        beverage_item_2: "කාබනේටඩ් පාන",
+        beverage_item_3: "බලශක්ති පාන",
+        beverage_item_4: "ස්පාර්කිලිං හා උල්පත් ජලය",
+        vision_title: "අපගේ දැක්ම",
+        vision_description: "නවීන නවෝත්පාදනය, පරිසර වගකීම, සහ ආචාරධර්මී නිෂ්පාදනය හරහා තිරසාර, දැරිය හැකි, සහ උසස් ආහාර ලබා දෙන ගෝලීය වශයෙන් ගෞරවනීය වෙළඳ නාමයක් වීම.",
+        mission_title: "අපගේ මෙහෙවර",
+        mission_description: "බිස්කට් සහ ජූස් සඳහා සම්පූර්ණයෙන් ඒකාබද්ධ ආහාර නිෂ්පාදන පහසුකමක් ස්ථාපනය කිරීම, සනීපාරක්ෂක, ස්වයංක්‍රීයකරණ, සහ පරිසර වගකීමෙහි ලෝක මට්ටමේ ප්‍රමිතීන් සහතික කිරීම.",
+        facility_title: "ලෝක මට්ටමේ නිෂ්පාදන පහසුකම",
+        facility_description: "ගුණාත්මකභාවය, කාර්යක්ෂමතාව, සහ තිරසාරභාවය සඳහා නිර්මාණය කර ඇත",
+        feature_safety_title: "ආහාර ආරක්ෂාව",
+        feature_safety_description: "සෑම නිෂ්පාදන අදියරකදීම දැඩි සනීපාරක්ෂක ප්‍රොටෝකෝල සහ ජාත්‍යන්තර ආහාර ආරක්ෂණ ප්‍රමිතීන්.",
+        feature_automation_title: "ස්වයංක්‍රීයකරණය",
+        feature_automation_description: "ස්ථාවර ගුණාත්මකභාවය සහ කාර්යක්ෂමතාව සහතික කරන උසස් ස්වයංක්‍රීය නිෂ්පාදන රේඛා.",
+        feature_sustainability2_title: "තිරසාරභාවය",
+        feature_sustainability2_description: "පරිසර බලපෑම අවම කරන පරිසර හිතකාමී නිෂ්පාදන ක්‍රියාවලි.",
+        cta_title: "විෂ් බ්‍රෑන්ඩ්ස් සමඟ හවුල් වන්න",
+        cta_description: "අපගේ ගෝලීය ආහාර නිෂ්පාදන ජාලය සමඟ අවස්ථා ගවේෂණය කරන්න",
+        cta_visit: "මව් සමාගමට පිවිසෙන්න",
+        cta_contact: "අපගේ කණ්ඩායම අමතන්න",
+        footer_logo_alt: "විෂ් සමූහ පාදක ලාංඡනය",
+        footer_address_title: "ලිපිනය",
+        footer_address_line1: "121 AI Blvd, සැන් ෆ්‍රැන්සිස්කෝ",
+        footer_address_line2: "BCA 94107",
+        footer_links_title: "ඉක්මන් සබැඳි",
+        footer_link_home: "මුල් පිටුව",
+        footer_link_about: "අප ගැන",
+        footer_link_divisions: "අංශ",
+        footer_link_projects: "ව්‍යාපෘති",
+        footer_link_contact: "සම්බන්ධ වන්න",
+        footer_contact_title: "අප හා සම්බන්ධ වන්න",
+        footer_phone_1: "දුරකථන: +971 4259 7167",
+        footer_phone_2: "ජංගම: +971 4259 4795",
+        footer_email_1: "විද්‍යුත් තැපෑල: info@wishgroup.ae",
+        footer_email_2: "විද්‍යුත් තැපෑල: info@wishgroup.world",
+        footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් සමූහය. සියලුම හිමිකම් ඇවිරිණි."
+    },
+    dv: {
+        page_title: "ވިޝް ބްރޭންޑްސް | ޕްރިމިއަމް ފޫޑް މެނުފެކްޗަރިން ޑިވިޝަން",
+        meta_description: "ވިޝް ބްރޭންޑްސް - ވިޝް ގްރޫޕްގެ ފޫޑް މެނުފެކްޗަރިން އަދި ޓްރޭޑިން ޑިވިޝަން، ބިސްކިޓް އަދި ބެވަރިޖް ގައި ވިސްނަމުން މަސައްކަތް ކުރަން",
+        meta_keywords: "ވިޝް ބްރޭންޑްސް، ވިޝް ކާސާ، ބިސްކިޓް މެނުފެކްޗަރިން، ބެވަރިޖް ޕްރޮޑަކްޝަން، ފޫޑް އެކްސްޕޯރޓް",
+        meta_author: "ވިޝް ގްރޫޕް",
+        scroll_to_top: "މަތިލަށް ސްކްރޯލް ކުރަން",
+        menu_home: "މުހިން",
+        menu_about: "ތިމަން ގެ ގޮތުން",
+        menu_divisions: "ޑިވިޝަންތައް",
+        menu_projects: "ޕްރޮޖެކްޓްތައް",
+        menu_countries: "ރަށްތައް",
+        menu_news: "ޚަބަރު",
+        menu_policies: "ތިމަންގެ ޕޮލިސީތައް",
+        menu_carrier: "ކެރިއަރ",
+        menu_contact: "ކޮންޓެކްޓް",
+        menu_contact_tickets1: "ޓިކެޓް ސްޓައިލް 1",
+        menu_contact_tickets2: "ޓިކެޓް ސްޓައިލް 2",
+        menu_contact_news: "ޚަބަރު",
+        menu_contact_news_single: "ޚަބަރު ސިންގަލް",
+        menu_contact_contact: "ކޮންޓެކްޓް",
+        logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+        hero_title: "ވިޝް ބްރޭންޑްސް – ގޯލްބަލް ފޫޑް އެކްސެލެންސް",
+        hero_description: "އިންޓަރނެޝަނަލް މާކެޓްތަކުގައި ޕްރިމިއަމް ފޫޑް މެނުފެކްޗަރިން އަދި ޓްރޭޑިން",
+        hero_label: "ވިޝް ގްރޫޕް ސަބްސިޑިއަރީ",
+        hero_alt: "ވިޝް ބްރޭންޑްސް ހެޑަރ އިމޭޖް",
+        global_network_title: "ގޯލްބަލް ފޫޑް މެނުފެކްޗަރިން ނެޓްވަރކް",
+        global_network_description: "ސްރީލަންކާ، ޔޫއޭއީ، ޔޫކޭ، މަލޭޝިޔާ، މާލެ، އަދި ސިންގަޕޫރ ހަރަހަ އޮޕަރޭޓް ކުރަން",
+        image_alt_wishcasa: "ވިޝް ބްރޭންޑްސް ގޯލްބަލް އޮޕަރޭޝަންތައް",
+        about_title: "ވިޝް ބްރޭންޑްސް ގެ ގޮތުން",
+        about_description: "ވިޝް ބްރޭންޑްސް އަކީ ގޯލްބަލް ވިޝް ގްރޫޕްގެ ޑައިނަމިކް މެމްބަރެއް، ފޫޑް މެނުފެކްޗަރިން، ޓްރޭޑިން، އަދި އެކްސްޕޯރޓް ގައި ވިސްނަމުން މަސައްކަތް ކުރުން. ތިމަން ނަވީން ހެލްތް، ސަސްޓެއިނަބިލިޓީ، އަދި ރަސް ސްޓޭންޑަރޑްތަކަށް އެއްގޮތް ވާ ޕްރިމިއަމް ޕްރޮޑަކްޓްތައް ދުނިޔޭގެ މާކެޓްތަކަށް ދެންނެވަން.",
+        feature_global_title: "ގޯލްބަލް ޕްރެސެންސް",
+        feature_global_description: "6 ރަށްތަކުގައި އޮޕަރޭޝަން",
+        feature_manufacturing_title: "މެނުފެކްޗަރިން",
+        feature_manufacturing_description: "ސްޓޭޓް-އޮފް-ދަ-އާޓް ފެސިލިޓީތައް",
+        feature_sustainability_title: "ސަސްޓެއިނަބިލިޓީ",
+        feature_sustainability_description: "އިކޮ-ކޮންޝަސް ޕްރޮޑަކްޝަން",
+        feature_quality_title: "ކޮލިޓީ",
+        feature_quality_description: "އިންޓަރނެޝަނަލް ސްޓޭންޑަރޑްތައް",
+        wish_casa_title: "ވިޝް ކާސާ މެނުފެކްޗަރިން ޑިވިޝަން",
+        wish_casa_description: "ސްރީލަންކާގެ ޕުއްތަލަމްގައި ތިމަންގެ ސްޓޭޓް-އޮފް-ދަ-އާޓް ފޫޑް ޕްރޮޑަކްޝަން ފެސިލިޓީ",
+        biscuit_title: "ބިސްކިޓް މެނުފެކްޗަރިން",
+        biscuit_description: "ވިޝް ކާސާ އެޑްވާންސް އޮޓޮމޭޓެޑް ޕްރޮޑަކްޝަން ލައިންތަކުގައި އެކި ބިސްކިޓް ޕްރޮޑިއުސް ކުރަން:",
+        biscuit_item_1: "ހާރޑް ބިސްކިޓް",
+        biscuit_item_2: "ސޮފްޓް ބިސްކިޓް",
+        biscuit_item_3: "ކްރީމް-ފިލްޑް ސޭންޑްވިޗް ބިސްކިޓް",
+        biscuit_item_4: "ކުކީސް",
+        biscuit_item_5: "ވޭފަރސް",
+        beverage_title: "ޖޫސް އަދި ބެވަރިޖް މެނުފެކްޗަރިން",
+        beverage_description: "ތިމަންގެ ފެސިލިޓީ ހެލްތް-ފޯކަސް ޑްރިންކްތަކުގެ ވައިޑް ރޭންޖެއް މެނުފެކްޗަރ ކުރަން:",
+        beverage_item_1: "ޖޫސް ޑްރިންކްސް",
+        beverage_item_2: "ކާބަނޭޓެޑް ބެވަރިޖެސް",
+        beverage_item_3: "އެނަޖީ ޑްރިންކްސް",
+        beverage_item_4: "ސްޕާކިލިން އަދި ސްޕްރިން ވޯޓަރ",
+        vision_title: "ތިމަންގެ ވިޝަން",
+        vision_description: "ނަވީން އިނޮވޭޝަން، އެންވައިރަންމަންޓަލް ރިސްޕޮންސިބިލިޓީ، އަދި އެތިކަލް މެނުފެކްޗަރިން ތެރޭގައި ސަސްޓެއިނަބަލް، އެފޯޑަބަލް، އަދި ހައި-ކޮލިޓީ ފޫޑް އޮފަރ ކުރާ ގޯލްބަލް ރިސްޕެކްޓެޑް ބްރޭންޑެއް ވުމަށް.",
+        mission_title: "ތިމަންގެ މިޝަން",
+        mission_description: "ބިސްކިޓް އަދި ޖޫސް އަށް ފުލްއި އިންޓިގްރޭޓެޑް ފޫޑް ޕްރޮޑަކްޝަން ފެސިލިޓީއެއް ސްޓެބްލިޝް ކުރުމަށް، ހައިޖީން، އޮޓޮމޭޝަން، އަދި އެންވައިރަންމަންޓަލް ރިސްޕޮންސިބިލިޓީގައި ދުނިޔޭ މަތިކުޅަ ސްޓޭންޑަރޑްތައް ސަލާމަތް ކުރުން.",
+        facility_title: "ދުނިޔޭ މަތިކުޅަ މެނުފެކްޗަރިން ފެސިލިޓީ",
+        facility_description: "ކޮލިޓީ، އެފިޝަންސީ، އަދި ސަސްޓެއިނަބިލިޓީ އަށް ޑިޒައިން ކުރެވިފައި",
+        feature_safety_title: "ފޫޑް ސޭފްޓީ",
+        feature_safety_description: "ކޮންމެ ޕްރޮޑަކްޝަން ސްޓޭޖެއްގައި ސްޓްރިންޖަންޓް ހައިޖީން ޕްރޮޓޮކޯލްތަކާ އިންޓަރނެޝަނަލް ފޫޑް ސޭފްޓީ ސްޓޭންޑަރޑްތައް.",
+        feature_automation_title: "އޮޓޮމޭޝަން",
+        feature_automation_description: "ސްޓެޑި ކޮލިޓީ އަދި އެފިޝަންސީ ސަލާމަތް ކުރާ އެޑްވާންސް އޮޓޮމޭޓެޑް ޕްރޮޑަކްޝަން ލައިންތައް.",
+        feature_sustainability2_title: "ސަސްޓެއިނަބިލިޓީ",
+        feature_sustainability2_description: "އެންވައިރަންމަންޓަލް އިމްޕެކްޓް މިނިމައިޒް ކުރާ އިކޮ-ކޮންޝަސް މެނުފެކްޗަރިން ޕްރޮސެސްތައް.",
+        cta_title: "ވިޝް ބްރޭންޑްސް އެކު ޕާޓްނަރ ކުރަން",
+        cta_description: "ތިމަންގެ ގޯލްބަލް ފޫޑް މެނުފެކްޗަރިން ނެޓްވަރކް އެކު އޮޕޮރޓިއުނިޓީތައް އެކްސްޕްލޯރ ކުރަން",
+        cta_visit: "ޕެރެންޓް ކޮމްޕަނީއަށް ވިސިޓް ކުރަން",
+        cta_contact: "ތިމަންގެ ޓީމަށް ކޮންޓެކްޓް ކުރަން",
+        footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ",
+        footer_address_title: "އެޑްރެސް",
+        footer_address_line1: "121 AI Blvd, ސޭން ފްރެންސިސްކޯ",
+        footer_address_line2: "BCA 94107",
+        footer_links_title: "ކުއިކް ލިންކްތައް",
+        footer_link_home: "މުހިން",
+        footer_link_about: "ތިމަން ގެ ގޮތުން",
+        footer_link_divisions: "ޑިވިޝަންތައް",
+        footer_link_projects: "ޕްރޮޖެކްޓްތައް",
+        footer_link_contact: "ކޮންޓެކްޓް",
+        footer_contact_title: "ތިމަންނަށް ކޮންޓެކްޓް ކުރަން",
+        footer_phone_1: "ޓެލިފޯން: +971 4259 7167",
+        footer_phone_2: "މޮބައިލް: +971 4259 4795",
+        footer_email_1: "އީމެއިލް: info@wishgroup.ae",
+        footer_email_2: "އީމެއިލް: info@wishgroup.world",
+        footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ރައިޓްތައް ރިޒަރވް ކޮށްފައި."
+    },
+   ar: {
+    page_title: "ويش براندز | قسم تصنيع الأغذية المميزة",
+    meta_description: "ويش براندز - قسم تصنيع الأغذية والتجارة التابع لمجموعة ويش، متخصص في البسكويت والمشروبات",
+    meta_keywords: "ويش براندز، ويش كاسا، تصنيع البسكويت، إنتاج المشروبات، تصدير الأغذية",
+    meta_author: "مجموعة ويش",
+    scroll_to_top: "التمرير إلى الأعلى",
+    menu_home: "الرئيسية",
+    menu_about: "معلومات عنا",
+    menu_divisions: "الأقسام",
+    menu_projects: "المشاريع",
+    menu_countries: "الدول",
+    menu_news: "الأخبار",
+    menu_policies: "سياساتنا",
+    menu_carrier: "الوظائف",
+    menu_contact: "تواصل معنا",
+    menu_contact_tickets1: "تذكرة النمط 1",
+    menu_contact_tickets2: "تذكرة النمط 2",
+    menu_contact_news: "الأخبار",
+    menu_contact_news_single: "خبر واحد",
+    menu_contact_contact: "التواصل",
+    logo_alt: "شعار مجموعة ويش",
+    hero_title: "ويش براندز – التميز العالمي في الأغذية",
+    hero_description: "تصنيع وتجارة الأغذية المميزة عبر الأسواق العالمية",
+    hero_label: "شركة تابعة لمجموعة ويش",
+    hero_alt: "صورة رأس ويش براندز",
+    global_network_title: "شبكة تصنيع الأغذية العالمية",
+    global_network_description: "تعمل عبر سريلانكا، الإمارات العربية المتحدة، المملكة المتحدة، ماليزيا، جزر المالديف، وسنغافورة",
+    image_alt_wishcasa: "عمليات ويش براندز العالمية",
+    about_title: "حول ويش براندز",
+    about_description: "ويش براندز هي عضو ديناميكي في مجموعة ويش العالمية، متخصصة في تصنيع الأغذية، التجارة، والتصدير. نحن نقدم منتجات مميزة تتماشى مع معايير الصحة الحديثة، الاستدامة، والذوق للأسواق العالمية.",
+    feature_global_title: "التواجد العالمي",
+    feature_global_description: "عمليات في 6 دول",
+    feature_manufacturing_title: "التصنيع",
+    feature_manufacturing_description: "مرافق حديثة",
+    feature_sustainability_title: "الاستدامة",
+    feature_sustainability_description: "إنتاج صديق للبيئة",
+    feature_quality_title: "الجودة",
+    feature_quality_description: "معايير دولية",
+    wish_casa_title: "قسم تصنيع ويش كاسا",
+    wish_casa_description: "منشأتنا الحديثة لإنتاج الأغذية في بوتالام، سريلانكا",
+    biscuit_title: "تصنيع البسكويت",
+    biscuit_description: "تنتج ويش كاسا مجموعة متنوعة من البسكويت من خلال خطوط إنتاج آلية متقدمة:",
+    biscuit_item_1: "بسكويت صلب",
+    biscuit_item_2: "بسكويت ناعم",
+    biscuit_item_3: "بسكويت محشو بالكريمة",
+    biscuit_item_4: "كوكيز",
+    biscuit_item_5: "ويفر",
+    beverage_title: "تصنيع العصائر والمشروبات",
+    beverage_description: "تنتج منشأتنا مجموعة واسعة من المشروبات الصحية:",
+    beverage_item_1: "مشروبات العصير",
+    beverage_item_2: "مشروبات غازية",
+    beverage_item_3: "مشروبات الطاقة",
+    beverage_item_4: "مياه فوارة ونقية",
+    vision_title: "رؤيتنا",
+    vision_description: "أن نصبح علامة تجارية محترمة عالميًا تقدم أغذية مستدامة، بأسعار معقولة، وعالية الجودة من خلال الابتكار الحديث، المسؤولية البيئية، والتصنيع الأخلاقي.",
+    mission_title: "مهمتنا",
+    mission_description: "إنشاء منشأة إنتاج أغذية مدمجة بالكامل للبسكويت والعصائر، مع ضمان معايير عالمية في النظافة، الأتمتة، والمسؤولية البيئية.",
+    facility_title: "منشأة تصنيع عالمية المستوى",
+    facility_description: "مصممة للجودة، الكفاءة، والاستدامة",
+    feature_safety_title: "سلامة الأغذية",
+    feature_safety_description: "بروتوكولات نظافة صارمة ومعايير سلامة غذائية دولية في كل مرحلة من مراحل الإنتاج.",
+    feature_automation_title: "الأتمتة",
+    feature_automation_description: "خطوط إنتاج آلية متقدمة تضمن جودة وكفاءة متسقة.",
+    feature_sustainability2_title: "الاستدامة",
+    feature_sustainability2_description: "عمليات تصنيع صديقة للبيئة تقلل من التأثير البيئي.",
+    cta_title: "الشراكة مع ويش براندز",
+    cta_description: "استكشف الفرص مع شبكتنا العالمية لتصنيع الأغذية",
+    cta_visit: "زيارة الشركة الأم",
+    cta_contact: "تواصل مع فريقنا",
+    footer_logo_alt: "شعار ويش براندز في التذييل",
+    footer_address_title: "العنوان",
+    footer_address_line1: "121 شارع AI، سان فرانسيسكو",
+    footer_address_line2: "BCA 94107",
+    footer_links_title: "روابط سريعة",
+    footer_link_home: "الرئيسية",
+    footer_link_about: "معلومات عنا",
+    footer_link_divisions: "الأقسام",
+    footer_link_projects: "المشاريع",
+    footer_link_contact: "تواصل معنا",
+    footer_contact_title: "تواصل معنا",
+    footer_phone_1: "هاتف: +971 4259 7167",
+    footer_phone_2: "جوال: +971 4259 4795",
+    footer_email_1: "بريد إلكتروني: info@wishgroup.ae",
+    footer_email_2: "بريد إلكتروني: info@wishgroup.world",
+    footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
+},
+fr: {
+    page_title: "Wish Brands | Division de fabrication alimentaire premium",
+    meta_description: "Wish Brands - Division de fabrication et de commerce alimentaire du groupe Wish, spécialisée dans les biscuits et les boissons",
+    meta_keywords: "Wish Brands, Wish Casa, Fabrication de biscuits, Production de boissons, Exportation alimentaire",
+    meta_author: "Groupe Wish",
+    scroll_to_top: "Retour en haut",
+    menu_home: "Accueil",
+    menu_about: "À propos",
+    menu_divisions: "Divisions",
+    menu_projects: "Projets",
+    menu_countries: "Pays",
+    menu_news: "Actualités",
+    menu_policies: "Nos politiques",
+    menu_carrier: "Carrières",
+    menu_contact: "Nous contacter",
+    menu_contact_tickets1: "Billets Style 1",
+    menu_contact_tickets2: "Billets Style 2",
+    menu_contact_news: "Actualités",
+    menu_contact_news_single: "Actualité unique",
+    menu_contact_contact: "Contact",
+    logo_alt: "Logo du groupe Wish",
+    hero_title: "Wish Brands – Excellence alimentaire mondiale",
+    hero_description: "Fabrication et commerce de produits alimentaires premium sur les marchés internationaux",
+    hero_label: "Filiale du groupe Wish",
+    hero_alt: "Image d'en-tête Wish Brands",
+    global_network_title: "Réseau mondial de fabrication alimentaire",
+    global_network_description: "Opérations à travers le Sri Lanka, les Émirats arabes unis, le Royaume-Uni, la Malaisie, les Maldives et Singapour",
+    image_alt_wishcasa: "Opérations mondiales de Wish Brands",
+    about_title: "À propos de Wish Brands",
+    about_description: "Wish Brands est un membre dynamique du groupe Wish mondial, spécialisé dans la fabrication, le commerce et l'exportation alimentaire. Nous proposons des produits premium conformes aux normes modernes de santé, de durabilité et de goût pour les marchés mondiaux.",
+    feature_global_title: "Présence mondiale",
+    feature_global_description: "Opérations dans 6 pays",
+    feature_manufacturing_title: "Fabrication",
+    feature_manufacturing_description: "Installations de pointe",
+    feature_sustainability_title: "Durabilité",
+    feature_sustainability_description: "Production respectueuse de l'environnement",
+    feature_quality_title: "Qualité",
+    feature_quality_description: "Normes internationales",
+    wish_casa_title: "Division de fabrication Wish Casa",
+    wish_casa_description: "Notre usine de production alimentaire de pointe à Puttalam, Sri Lanka",
+    biscuit_title: "Fabrication de biscuits",
+    biscuit_description: "Wish Casa produit une gamme variée de biscuits grâce à des lignes de production automatisées avancées :",
+    biscuit_item_1: "Biscuits durs",
+    biscuit_item_2: "Biscuits mous",
+    biscuit_item_3: "Biscuits fourrés à la crème",
+    biscuit_item_4: "Cookies",
+    biscuit_item_5: "Gaufrettes",
+    beverage_title: "Fabrication de jus et boissons",
+    beverage_description: "Notre usine produit une large gamme de boissons axées sur la santé :",
+    beverage_item_1: "Boissons aux jus",
+    beverage_item_2: "Boissons gazeuses",
+    beverage_item_3: "Boissons énergétiques",
+    beverage_item_4: "Eau pétillante et de source",
+    vision_title: "Notre vision",
+    vision_description: "Devenir une marque mondialement respectée qui propose des aliments durables, abordables et de haute qualité grâce à l'innovation moderne, la responsabilité environnementale et une fabrication éthique.",
+    mission_title: "Notre mission",
+    mission_description: "Établir une usine de production alimentaire entièrement intégrée pour les biscuits et les jus, garantissant des normes mondiales en matière d'hygiène, d'automatisation et de responsabilité environnementale.",
+    facility_title: "Usine de fabrication de classe mondiale",
+    facility_description: "Conçue pour la qualité, l'efficacité et la durabilité",
+    feature_safety_title: "Sécurité alimentaire",
+    feature_safety_description: "Protocoles d'hygiène stricts et normes internationales de sécurité alimentaire à chaque étape de la production.",
+    feature_automation_title: "Automatisation",
+    feature_automation_description: "Lignes de production automatisées avancées garantissant une qualité et une efficacité constantes.",
+    feature_sustainability2_title: "Durabilité",
+    feature_sustainability2_description: "Processus de fabrication respectueux de l'environnement qui minimisent l'impact écologique.",
+    cta_title: "Associez-vous à Wish Brands",
+    cta_description: "Explorez les opportunités avec notre réseau mondial de fabrication alimentaire",
+    cta_visit: "Visiter la société mère",
+    cta_contact: "Contacter notre équipe",
+    footer_logo_alt: "Logo du groupe Wish en pied de page",
+    footer_address_title: "Adresse",
+    footer_address_line1: "121 AI Blvd, San Francisco",
+    footer_address_line2: "BCA 94107",
+    footer_links_title: "Liens rapides",
+    footer_link_home: "Accueil",
+    footer_link_about: "À propos",
+    footer_link_divisions: "Divisions",
+    footer_link_projects: "Projets",
+    footer_link_contact: "Nous contacter",
+    footer_contact_title: "Nous contacter",
+    footer_phone_1: "Tél. : +971 4259 7167",
+    footer_phone_2: "Mobile : +971 4259 4795",
+    footer_email_1: "E-mail : info@wishgroup.ae",
+    footer_email_2: "E-mail : info@wishgroup.world",
+    footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
+}}
+
+
+
+
+// Function to change language
+function setLanguage(lang) { // Changed function name to match onchange attribute
+    // Update text content and alt attributes
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'IMG') {
+                element.alt = translations[lang][key];
+            } else if (element.tagName === 'TITLE') {
+                element.textContent = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+
+    // Update HTML lang and direction
+    document.querySelector('html').lang = lang;
+    if (lang === 'ar' || lang === 'dv') {
+        document.querySelector('html').dir = 'rtl';
+        document.querySelector('body').style.textAlign = 'right';
+    } else {
+        document.querySelector('html').dir = 'ltr';
+        document.querySelector('body').style.textAlign = 'left';
+    }
+
+    // Update page title
+    document.querySelector('title').textContent = translations[lang].page_title;
+
+    // Save selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('language-switcher').value = savedLang; // Set dropdown to saved language
+    setLanguage(savedLang); // Call the renamed function
+});
+        </script>
 </body>
+
 </html>
