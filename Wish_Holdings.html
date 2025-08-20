@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Wish Holdings | Sustainable Development in Maldives</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <title data-translate="page_title">Wish Holdings | Sustainable Development in Maldives</title>
+    <link rel="icon" href="/images/wishgroup/logo_remove.png" type="image/png" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Wish Holdings Pvt Ltd - Maldivian company leading sustainable seafood production and eco-development" name="description">
-    <meta content="Maldives, Sustainable Development, Tuna Export, Eco-Tourism, Wish Group" name="keywords">
-    <meta content="Wish Group" name="author">
+    <meta content="Wish Holdings Pvt Ltd - Maldivian company leading sustainable seafood production and eco-development" name="description" data-translate="meta_description">
+    <meta content="Maldives, Sustainable Development, Tuna Export, Eco-Tourism, Wish Group" name="keywords" data-translate="meta_keywords">
+    <meta content="Wish Group" name="author" data-translate="meta_author">
     <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
@@ -74,7 +74,7 @@
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -91,9 +91,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="" data-translate="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -102,18 +102,24 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Products</a></li>
-                                        <li><a class="menu-item" href="">Sustainability</a></li>
-                                        <li><a class="menu-item" href="">Contact Us</a></li>
+                                        <li><a class="menu-item" href="index.html" data-translate="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_products">Products</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_sustainability">Sustainability</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_contact">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select Language">
+                                    <option value="en">English</option>
+                                    <option value="si">Sinhala</option>
+                                    <option value="dv">Dhivehi</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="fr">French</option>
+                                </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -125,22 +131,20 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="/images/wishgroup/tuna.jpeg" class="jarallax-img" alt="">
+            <img src="/images/wishgroup/tuna.jpeg" class="jarallax-img" alt="" data-translate="hero_alt">
             <div class="hero-overlay"></div>
             <div class="gradient-edge-bottom h-50"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
-                                Wish Holdings Pvt Ltd
-                            </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">Sustainable Development & Premium Seafood from the Maldives</p>
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-translate="hero_title">Wish Holdings Pvt Ltd</h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-translate="hero_description">Sustainable Development & Premium Seafood from the Maldives</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">"Voyage with confidence"</span>
+                                    <span class="fs-20 fw-600" data-translate="hero_label">"Voyage with confidence"</span>
                                 </div>
                             </div>
                         </div>
@@ -155,26 +159,26 @@
                     <div class="col-lg-10">
                         <!-- Company Introduction -->
                         <div class="intro-section mb-5 text-center">
-                            <h2 class="fs-36 mb-3">Leading Sustainable Development in the Maldives</h2>
-                            <p class="lead fs-20">A Maldivian-based company operating under the global umbrella of Wish Group UAE, committed to sustainability, innovation, and community development.</p>
+                            <h2 class="fs-36 mb-3" data-translate="intro_title">Leading Sustainable Development in the Maldives</h2>
+                            <p class="lead fs-20" data-translate="intro_description">A Maldivian-based company operating under the global umbrella of Wish Group UAE, committed to sustainability, innovation, and community development.</p>
                         </div>
 
                         <!-- Vision & Mission -->
                         <div class="row g-4 mb-5">
                             <div class="col-md-6">
                                 <div class="mission-card">
-                                    <h3 class="fs-24 mb-3 text-color">Our Vision</h3>
-                                    <p>To lead the Indian Ocean region in sustainable, ocean-driven innovations by transforming the Maldives into a global hub for premium seafood, eco-tourism, and ethical investment.</p>
+                                    <h3 class="fs-24 mb-3 text-color" data-translate="vision_title">Our Vision</h3>
+                                    <p data-translate="vision_description">To lead the Indian Ocean region in sustainable, ocean-driven innovations by transforming the Maldives into a global hub for premium seafood, eco-tourism, and ethical investment.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mission-card">
-                                    <h3 class="fs-24 mb-3 text-color">Our Mission</h3>
+                                    <h3 class="fs-24 mb-3 text-color" data-translate="mission_title">Our Mission</h3>
                                     <ul>
-                                        <li>Develop world-class eco-conscious infrastructure</li>
-                                        <li>Operate cutting-edge seafood production</li>
-                                        <li>Build global trust through transparent partnerships</li>
-                                        <li>Integrate sustainability into every venture</li>
+                                        <li data-translate="mission_item_1">Develop world-class eco-conscious infrastructure</li>
+                                        <li data-translate="mission_item_2">Operate cutting-edge seafood production</li>
+                                        <li data-translate="mission_item_3">Build global trust through transparent partnerships</li>
+                                        <li data-translate="mission_item_4">Integrate sustainability into every venture</li>
                                     </ul>
                                 </div>
                             </div>
@@ -182,25 +186,25 @@
 
                         <!-- Ongoing Projects Header -->
                         <div class="section-header text-center mb-5">
-                            <h2 class="fs-30">Ongoing Projects</h2>
-                            <p class="lead">Current initiatives driving sustainable development</p>
+                            <h2 class="fs-30" data-translate="projects_title">Ongoing Projects</h2>
+                            <p class="lead" data-translate="projects_description">Current initiatives driving sustainable development</p>
                         </div>
 
                         <!-- Fresh & Frozen Tuna Portfolio -->
                         <div class="project-section mb-5">
                             <div class="row g-4 align-items-center mb-4">
                                 <div class="col-md-6">
-                                    <h3 class="fs-28 mb-3">Fresh & Frozen Tuna Portfolio</h3>
-                                    <p class="lead">Exporting the Best of Maldivian Seafood</p>
+                                    <h3 class="fs-28 mb-3" data-translate="tuna_title">Fresh & Frozen Tuna Portfolio</h3>
+                                    <p class="lead" data-translate="tuna_description">Exporting the Best of Maldivian Seafood</p>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="location-card">
-                                        <h4 class="fs-18 mb-2 text-color">Location</h4>
-                                        <p>Himmafushi Island, Kaafu Atoll, Maldives</p>
+                                        <h4 class="fs-18 mb-2 text-color" data-translate="location_title">Location</h4>
+                                        <p data-translate="location_description">Himmafushi Island, Kaafu Atoll, Maldives</p>
                                         <div class="d-flex gap-3 mt-2">
-                                            <span class="badge bg-success">HACCP Certified</span>
-                                            <span class="badge bg-primary">ISO Certified</span>
-                                            <span class="badge bg-info">Blast Frozen at Sea</span>
+                                            <span class="badge bg-success" data-translate="badge_haccp">HACCP Certified</span>
+                                            <span class="badge bg-primary" data-translate="badge_iso">ISO Certified</span>
+                                            <span class="badge bg-info" data-translate="badge_frozen">Blast Frozen at Sea</span>
                                         </div>
                                     </div>
                                 </div>
@@ -210,37 +214,35 @@
                                 <!-- Yellowfin Tuna -->
                                 <div class="col-md-6">
                                     <div class="product-card bg-dark">
-                                        <div class="product-badge">Yellowfin Tuna</div>
-                                        <img src="images/wishgroup/tuna2.JPG" 
-                                             alt="Yellowfin Tuna" 
-                                             class="w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="product-badge" data-translate="yellowfin_badge">Yellowfin Tuna</div>
+                                        <img src="images/wishgroup/tuna2.JPG" alt="" class="w-100" style="height: 250px; object-fit: cover;" data-translate="yellowfin_alt">
                                         <div class="p-4">
-                                            <h4 class="fs-20 mb-3">Thunnus albacares</h4>
+                                            <h4 class="fs-20 mb-3" data-translate="yellowfin_title">Thunnus albacares</h4>
                                             <div class="tuna-feature">
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Loins</span>
+                                                    <span data-translate="yellowfin_loins">Loins</span>
                                                     <span class="fw-bold">$7.50/kg</span>
                                                 </div>
                                             </div>
                                             <div class="tuna-feature">
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Steaks</span>
+                                                    <span data-translate="yellowfin_steaks">Steaks</span>
                                                     <span class="fw-bold">$8.00/kg</span>
                                                 </div>
                                             </div>
                                             <div class="tuna-feature">
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Cubes</span>
+                                                    <span data-translate="yellowfin_cubes">Cubes</span>
                                                     <span class="fw-bold">$7.00/kg</span>
                                                 </div>
                                             </div>
                                             <div class="tuna-feature">
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Saku Blocks</span>
+                                                    <span data-translate="yellowfin_saku">Saku Blocks</span>
                                                     <span class="fw-bold">$8.00/kg</span>
                                                 </div>
                                             </div>
-                                            <p class="mt-3">Perfect for sushi, grilling, poke bowls, and gourmet dishes.</p>
+                                            <p class="mt-3" data-translate="yellowfin_description">Perfect for sushi, grilling, poke bowls, and gourmet dishes.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -248,25 +250,23 @@
                                 <!-- Skipjack Tuna -->
                                 <div class="col-md-6">
                                     <div class="product-card bg-dark">
-                                        <div class="product-badge">Skipjack Tuna</div>
-                                        <img src="/images/wishgroup/cube.jpeg" 
-                                             alt="Skipjack Tuna" 
-                                             class="w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="product-badge" data-translate="skipjack_badge">Skipjack Tuna</div>
+                                        <img src="/images/wishgroup/cube.jpeg" alt="" class="w-100" style="height: 250px; object-fit: cover;" data-translate="skipjack_alt">
                                         <div class="p-4">
-                                            <h4 class="fs-20 mb-3">Katsuwonus pelamis</h4>
+                                            <h4 class="fs-20 mb-3" data-translate="skipjack_title">Katsuwonus pelamis</h4>
                                             <div class="tuna-feature">
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Frozen Whole Round</span>
+                                                    <span data-translate="skipjack_whole">Frozen Whole Round</span>
                                                     <span class="fw-bold">$4.80/kg (20kg/carton)</span>
                                                 </div>
                                             </div>
-                                            <p class="mt-3">Used in mass processing and foodservice applications.</p>
+                                            <p class="mt-3" data-translate="skipjack_description">Used in mass processing and foodservice applications.</p>
                                             <div class="mt-4 pt-3 border-top">
-                                                <h5 class="fs-16 mb-2">Certifications:</h5>
+                                                <h5 class="fs-16 mb-2" data-translate="certifications_title">Certifications:</h5>
                                                 <div class="d-flex flex-wrap gap-2">
-                                                    <span class="badge bg-success">HACCP</span>
-                                                    <span class="badge bg-primary">ISO</span>
-                                                    <span class="badge bg-info">Export-Ready</span>
+                                                    <span class="badge bg-success" data-translate="badge_haccp">HACCP</span>
+                                                    <span class="badge bg-primary" data-translate="badge_iso">ISO</span>
+                                                    <span class="badge bg-info" data-translate="badge_export">Export-Ready</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -277,11 +277,11 @@
 
                         <!-- CTA Section -->
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Partner With Us</h3>
-                            <p class="mb-4">Join our mission to transform the Maldivian seafood industry sustainably</p>
+                            <h3 class="fs-28 mb-3" data-translate="cta_title">Partner With Us</h3>
+                            <p class="mb-4" data-translate="cta_description">Join our mission to transform the Maldivian seafood industry sustainably</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="https://wishholdings.co/"><span>View Main Website</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Learn More</span></a>
+                                <a class="btn-main fx-slide" href="https://wishholdings.co/"><span data-translate="cta_visit">View Main Website</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-translate="cta_learn">Learn More</span></a>
                             </div>
                         </div>
                     </div>
@@ -295,7 +295,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="" data-translate="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -305,28 +305,28 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Wish Holdings Pvt Ltd</h3>
-                        <p class="mb-0">Maldives</p>
-                        <p>Under Wish Group UAE</p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">Wish Holdings Pvt Ltd</h3>
+                        <p class="mb-0" data-translate="footer_address_line1">Maldives</p>
+                        <p data-translate="footer_address_line2">Under Wish Group UAE</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-translate="footer_links_title">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Products</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="footer_link_about">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_products">Products</a></li>
+                            <li><a href="#" class="text-light" data-translate="footer_link_contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_phone_1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1" data-translate="footer_phone_2">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0" data-translate="footer_email_1">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0" data-translate="footer_email_2">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
                 </div>
             </div>
@@ -335,7 +335,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Holdings Pvt Ltd. All rights reserved.
+                            <span data-translate="footer_copyright">Copyright 2025 - Wish Holdings Pvt Ltd. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -343,10 +343,414 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
+        <script>
+            const translations = {
+                en: {
+                    page_title: "Wish Holdings | Sustainable Development in Maldives",
+                    meta_description: "Wish Holdings Pvt Ltd - Maldivian company leading sustainable seafood production and eco-development",
+                    meta_keywords: "Maldives, Sustainable Development, Tuna Export, Eco-Tourism, Wish Group",
+                    meta_author: "Wish Group",
+                    scroll_to_top: "Scroll to top",
+                    menu_home: "Home",
+                    menu_about: "About Us",
+                    menu_projects: "Projects",
+                    menu_products: "Products",
+                    menu_sustainability: "Sustainability",
+                    menu_contact: "Contact Us",
+                    logo_alt: "Wish Group Logo",
+                    hero_title: "Wish Holdings Pvt Ltd",
+                    hero_description: "Sustainable Development & Premium Seafood from the Maldives",
+                    hero_label: "\"Voyage with confidence\"",
+                    hero_alt: "Tuna Fishing in Maldives",
+                    intro_title: "Leading Sustainable Development in the Maldives",
+                    intro_description: "A Maldivian-based company operating under the global umbrella of Wish Group UAE, committed to sustainability, innovation, and community development.",
+                    vision_title: "Our Vision",
+                    vision_description: "To lead the Indian Ocean region in sustainable, ocean-driven innovations by transforming the Maldives into a global hub for premium seafood, eco-tourism, and ethical investment.",
+                    mission_title: "Our Mission",
+                    mission_item_1: "Develop world-class eco-conscious infrastructure",
+                    mission_item_2: "Operate cutting-edge seafood production",
+                    mission_item_3: "Build global trust through transparent partnerships",
+                    mission_item_4: "Integrate sustainability into every venture",
+                    projects_title: "Ongoing Projects",
+                    projects_description: "Current initiatives driving sustainable development",
+                    tuna_title: "Fresh & Frozen Tuna Portfolio",
+                    tuna_description: "Exporting the Best of Maldivian Seafood",
+                    location_title: "Location",
+                    location_description: "Himmafushi Island, Kaafu Atoll, Maldives",
+                    badge_haccp: "HACCP Certified",
+                    badge_iso: "ISO Certified",
+                    badge_frozen: "Blast Frozen at Sea",
+                    yellowfin_badge: "Yellowfin Tuna",
+                    yellowfin_alt: "Yellowfin Tuna",
+                    yellowfin_title: "Thunnus albacares",
+                    yellowfin_loins: "Loins",
+                    yellowfin_steaks: "Steaks",
+                    yellowfin_cubes: "Cubes",
+                    yellowfin_saku: "Saku Blocks",
+                    yellowfin_description: "Perfect for sushi, grilling, poke bowls, and gourmet dishes.",
+                    skipjack_badge: "Skipjack Tuna",
+                    skipjack_alt: "Skipjack Tuna",
+                    skipjack_title: "Katsuwonus pelamis",
+                    skipjack_whole: "Frozen Whole Round",
+                    skipjack_description: "Used in mass processing and foodservice applications.",
+                    certifications_title: "Certifications:",
+                    badge_export: "Export-Ready",
+                    cta_title: "Partner With Us",
+                    cta_description: "Join our mission to transform the Maldivian seafood industry sustainably",
+                    cta_visit: "View Main Website",
+                    cta_learn: "Learn More",
+                    footer_logo_alt: "Wish Group Footer Logo",
+                    footer_address_title: "Wish Holdings Pvt Ltd",
+                    footer_address_line1: "Maldives",
+                    footer_address_line2: "Under Wish Group UAE",
+                    footer_links_title: "Quick Links",
+                    footer_link_home: "Home",
+                    footer_link_about: "About Us",
+                    footer_link_projects: "Projects",
+                    footer_link_products: "Products",
+                    footer_link_contact: "Contact Us",
+                    footer_contact_title: "Contact Us",
+                    footer_phone_1: "T. +971 4259 7167",
+                    footer_phone_2: "M. +971 4259 4795",
+                    footer_email_1: "E. info@wishgroup.ae",
+                    footer_email_2: "E. info@wishgroup.world",
+                    footer_copyright: "Copyright 2025 - Wish Holdings Pvt Ltd. All rights reserved."
+                },
+                si: {
+                    page_title: "විෂ් හෝල්ඩින්ග්ස් | මාලදිවයිනේ තිරසාර සංවර්ධනය",
+                    meta_description: "විෂ් හෝල්ඩින්ග්ස් පුද්ගලික සමාගම - තිරසාර මුහුදු ආහාර නිෂ්පාදනය සහ පරිසර සංවර්ධනය පිළිබඳ ප්‍රමුඛ මාලදිවයින් සමාගම",
+                    meta_keywords: "මාලදිවයින, තිරසාර සංවර්ධනය, ටූනා අපනයනය, පරිසර සංචාරක ව්‍යාපාරය, විෂ් සමූහය",
+                    meta_author: "විෂ් සමූහය",
+                    scroll_to_top: "ඉහළට ලිස්සා යන්න",
+                    menu_home: "මුල් පිටුව",
+                    menu_about: "අප ගැන",
+                    menu_projects: "ව්‍යාපෘති",
+                    menu_products: "නිෂ්පාදන",
+                    menu_sustainability: "තිරසාරභාවය",
+                    menu_contact: "සම්බන්ධ වන්න",
+                    logo_alt: "විෂ් සමූහ ලාංඡනය",
+                    hero_title: "විෂ් හෝල්ඩින්ග්ස් පුද්ගලික සමාගම",
+                    hero_description: "මාලදිවයිනෙන් තිරසාර සංවර්ධනය සහ උසස් මුහුදු ආහාර",
+                    hero_label: "\"විශ්වාසයෙන් යාත්‍රා කරන්න\"",
+                    hero_alt: "මාලදිවයිනේ ටූනා ධීවර කර්මාන්තය",
+                    intro_title: "මාලදිවයිනේ තිරසාර සංවර්ධනයේ ප්‍රමුඛයා",
+                    intro_description: "එක්සත් අරාබි එමීර්හි විෂ් සමූහය යටතේ ක්‍රියාත්මක වන මාලදිවයින් පදනම් කරගත් සමාගමක්, තිරසාරභාවය, නවෝත්පාදනය, සහ ප්‍රජා සංවර්ධනය සඳහා කැපවී ඇත.",
+                    vision_title: "අපගේ දැක්ම",
+                    vision_description: "මාලදිවයින උසස් මුහුදු ආහාර, පරිසර සංචාරක ව්‍යාපාරය, සහ ආචාරධර්මී ආයෝජනය සඳහා ගෝලීය කේන්ද්‍රස්ථානයක් බවට පත් කරමින්, ඉන්දියන් සාගර කලාපයේ තිරසාර, සාගර-පදනම් නවෝත්පාදනයන්හි ප්‍රමුඛයා වීම.",
+                    mission_title: "අපගේ මෙහෙවර",
+                    mission_item_1: "ලෝක මට්ටමේ පරිසර හිතකාමී යටිතල පහසුකම් සංවර්ධනය කිරීම",
+                    mission_item_2: "නවීනතම මුහුදු ආහාර නිෂ්පාදනය ක්‍රියාත්මක කිරීම",
+                    mission_item_3: "විනිවිද පෙනෙන හවුල්කාරිත්වයන් හරහා ගෝලීය විශ්වාසය ගොඩනැගීම",
+                    mission_item_4: "සෑම ව්‍යාපාරයකටම තිරසාරභාවය ඒකාබද්ධ කිරීම",
+                    projects_title: "වත්මන් ව්‍යාපෘති",
+                    projects_description: "තිරසාර සංවර්ධනය පිළිබඳ වත්මන් මුලපිරීම්",
+                    tuna_title: "නැවුම් සහ ශීතකළ ටූනා බඩු ලැයිස්තුව",
+                    tuna_description: "මාලදිවයින් මුහුදු ආහාරවල හොඳම දේ අපනයනය කිරීම",
+                    location_title: "ස්ථානය",
+                    location_description: "හිම්මෆුෂි දූපත, කාෆු ඇටෝල්, මාලදිවයින",
+                    badge_haccp: "HACCP සහතික කර ඇත",
+                    badge_iso: "ISO සහතික කර ඇත",
+                    badge_frozen: "මුහුදේදී ශීතකරණය කර ඇත",
+                    yellowfin_badge: "යෙලෝෆින් ටූනා",
+                    yellowfin_alt: "යෙලෝෆින් ටූනා",
+                    yellowfin_title: "Thunnus albacares",
+                    yellowfin_loins: "ලෝයින්",
+                    yellowfin_steaks: "ස්ටේක්",
+                    yellowfin_cubes: "කැට",
+                    yellowfin_saku: "සකු බ්ලොක්",
+                    yellowfin_description: "සුෂි, ග්‍රිල් කිරීම, පෝක් බෝල්, සහ ගෝමට් ආහාර සඳහා වඩාත් සුදුසුය.",
+                    skipjack_badge: "ස්කිප්ජැක් ටූනා",
+                    skipjack_alt: "ස්කිප්ජැක් ටූනා",
+                    skipjack_title: "Katsuwonus pelamis",
+                    skipjack_whole: "ශීතකළ සම්පූර්ණ රවුම",
+                    skipjack_description: "මහා පරිමාණ සැකසුම් සහ ආහාර සේවා යෙදුම් සඳහා භාවිතා වේ.",
+                    certifications_title: "සහතික:",
+                    badge_export: "අපනයනයට සූදානම්",
+                    cta_title: "අප සමඟ හවුල් වන්න",
+                    cta_description: "මාලදිවයින් මුහුදු ආහාර කර්මාන්තය තිරසාරව පරිවර්තනය කිරීමේ අපගේ මෙහෙවරට එක්වන්න",
+                    cta_visit: "ප්‍රධාන වෙබ් අඩවිය බලන්න",
+                    cta_learn: "වැඩිදුර ඉගෙන ගන්න",
+                    footer_logo_alt: "විෂ් සමූහ පාදක ලාංඡනය",
+                    footer_address_title: "විෂ් හෝල්ඩින්ග්ස් පුද්ගලික සමාගම",
+                    footer_address_line1: "මාලදිවයින",
+                    footer_address_line2: "එක්සත් අරාබි එමීර් විෂ් සමූහය යටතේ",
+                    footer_links_title: "ඉක්මන් සබැඳි",
+                    footer_link_home: "මුල් පිටුව",
+                    footer_link_about: "අප ගැන",
+                    footer_link_projects: "ව්‍යාපෘති",
+                    footer_link_products: "නිෂ්පාදන",
+                    footer_link_contact: "සම්බන්ධ වන්න",
+                    footer_contact_title: "අප හා සම්බන්ධ වන්න",
+                    footer_phone_1: "දුරකථන: +971 4259 7167",
+                    footer_phone_2: "ජංගම: +971 4259 4795",
+                    footer_email_1: "විද්‍යුත් තැපෑල: info@wishgroup.ae",
+                    footer_email_2: "විද්‍යුත් තැපෑල: info@wishgroup.world",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් හෝල්ඩින්ග්ස් පුද්ගලික සමාගම. සියලුම හිමිකම් ඇවිරිණි."
+                },
+                dv: {
+                    page_title: "ވިޝް ހޯލްޑިންގްސް | މާލެގައި ސަސްޓެއިނަބަލް ޑިވެލޮޕްމަންޓް",
+                    meta_description: "ވިޝް ހޯލްޑިންގްސް ޕްރައިވެޓް ލިމިޓެޑް - ސަސްޓެއިނަބަލް ސީފޫޑް ޕްރޮޑަކްޝަން އަދި އިކޮ-ޑިވެލޮޕްމަންޓްގައި ލީޑް ކުރާ މާލެ ކޮމްޕަނީ",
+                    meta_keywords: "މާލެ، ސަސްޓެއިނަބަލް ޑިވެލޮޕްމަންޓް، ޓޫނާ އެކްސްޕޯރޓް، އިކޮ-ޓޫރިޒަމް، ވިޝް ގްރޫޕް",
+                    meta_author: "ވިޝް ގްރޫޕް",
+                    scroll_to_top: "މަތިލަށް ސްކްރޯލް ކުރަން",
+                    menu_home: "މުހިން",
+                    menu_about: "ތިމަން ގެ ގޮތުން",
+                    menu_projects: "ޕްރޮޖެކްޓްތައް",
+                    menu_products: "ޕްރޮޑަކްޓްތައް",
+                    menu_sustainability: "ސަސްޓެއިނަބިލިޓީ",
+                    menu_contact: "ކޮންޓެކްޓް",
+                    logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+                    hero_title: "ވިޝް ހޯލްޑިންގްސް ޕްރައިވެޓް ލިމިޓެޑް",
+                    hero_description: "މާލެއިން ސަސްޓެއިނަބަލް ޑިވެލޮޕްމަންޓް އަދި ޕްރިމިއަމް ސީފޫޑް",
+                    hero_label: "\"ކޮންފިޑެންސް އެކު ވެޔާޖް ކުރަން\"",
+                    hero_alt: "މާލެގައި ޓޫނާ ފިޝިން",
+                    intro_title: "މާލެގައި ސަސްޓެއިނަބަލް ޑިވެލޮޕްމަންޓްގައި ލީޑް ކުރުން",
+                    intro_description: "ޔޫއޭއީ ވިޝް ގްރޫޕްގެ ގޯލްބަލް އަމްބްރެލާ އަށް އޮޕަރޭޓް ކުރާ މާލެ ބޭސްޑް ކޮމްޕަނީ، ސަސްޓެއިނަބިލިޓީ، އިނޮވޭޝަން، އަދި ކޮމިއުނިޓީ ޑިވެލޮޕްމަންޓް އަށް ކޮމިޓް ކުރެވިފައި.",
+                    vision_title: "ތިމަންގެ ވިޝަން",
+                    vision_description: "މާލެ ޕްރިމިއަމް ސީފޫޑް، އިކޮ-ޓޫރިޒަމް، އަދި އެތިކަލް އިންވެސްޓްމަންޓް އަށް ގޯލްބަލް ހަބެއް ކުރުމަށް މާލެ ޓްރާންސްފޯމް ކުރުމުން، އިންޑިއަން އޯޝަން ރީޖަންގައި ސަސްޓެއިނަބަލް، އޯޝަން-ޑްރިވަން އިނޮވޭޝަންތަކުގައި ލީޑް ކުރުން.",
+                    mission_title: "ތިމަންގެ މިޝަން",
+                    mission_item_1: "ދުނިޔޭ މަތިކުޅަ އިކޮ-ކޮންޝަސް އިންފްރަސްޓްރަކްޗަރ ޑިވެލޮޕް ކުރުން",
+                    mission_item_2: "ކަޓިން-އެޖް ސީފޫޑް ޕްރޮޑަކްޝަން އޮޕަރޭޓް ކުރުން",
+                    mission_item_3: "ޓްރާންސްޕެއަރަންޓް ޕާޓްނަރޝިޕްތަކުގެ ތެރޭގައި ގޯލްބަލް ޓްރަސްޓް ބިލްޑް ކުރުން",
+                    mission_item_4: "ކޮންމެ ވެންޗަރެއްގައި ސަސްޓެއިނަބިލިޓީ އިންޓިގްރޭޓް ކުރުން",
+                    projects_title: "ވަންތަ ޕްރޮޖެކްޓްތައް",
+                    projects_description: "ސަސްޓެއިނަބަލް ޑިވެލޮޕްމަންޓް ޑްރައިވް ކުރާ މިނިސްޓްރީތައް",
+                    tuna_title: "ފްރެޝް އަދި ފްރޯޒަން ޓޫނާ ޕޯރޓްފޯލިއޯ",
+                    tuna_description: "މާލެ ސީފޫޑްގެ އެންމެ ހެޔޮ އެކްސްޕޯރޓް ކުރުން",
+                    location_title: "ލޮކޭޝަން",
+                    location_description: "ހިއްމަފުޝި ޖަޒީރު، ކާފު އެޓޯލް، މާލެ",
+                    badge_haccp: "HACCP ސަރޓިފިކެޓް",
+                    badge_iso: "ISO ސަރޓިފިކެޓް",
+                    badge_frozen: "ސީގައި ބްލާސްޓް ފްރޯޒަން",
+                    yellowfin_badge: "ޔެލޯފިން ޓޫނާ",
+                    yellowfin_alt: "ޔެލޯފިން ޓޫނާ",
+                    yellowfin_title: "Thunnus albacares",
+                    yellowfin_loins: "ލޮއިންސް",
+                    yellowfin_steaks: "ސްޓޭކްސް",
+                    yellowfin_cubes: "ކިއުބްސް",
+                    yellowfin_saku: "ސަކު ބްލޮކްސް",
+                    yellowfin_description: "ސުޝި، ގްރިލިން، ޕޯކް ބޯލްސް، އަދި ގޯމެޓް ޑިޝެސް އަށް އެންމެ ހެޔޮ.",
+                    skipjack_badge: "ސްކިޕްޖެކް ޓޫނާ",
+                    skipjack_alt: "ސްކިޕްޖެކް ޓޫނާ",
+                    skipjack_title: "Katsuwonus pelamis",
+                    skipjack_whole: "ފްރޯޒަން ވޯލް ރައުންޑް",
+                    skipjack_description: "މަސް ޕްރޮސެސިން އަދި ފޫޑްސަރވިސް އެޕްލިކޭޝަންތަކަށް ބޭނުން ކުރެވެން.",
+                    certifications_title: "ސަރޓިފިކެޝަން:",
+                    badge_export: "އެކްސްޕޯރޓް-ރެޑީ",
+                    cta_title: "ތިމަން އެކު ޕާޓްނަރ ކުރަން",
+                    cta_description: "މާލެ ސީފޫޑް އިންޑަސްޓްރީ ސަސްޓެއިނަބަލް ޓްރާންސްފޯމް ކުރުމުގެ ތިމަންގެ މިޝަން އަށް ޖޮއިން ކުރަން",
+                    cta_visit: "މެއިން ވެބްސައިޓް ބަލާ",
+                    cta_learn: "އިތުރަށް އިގެން ދަންނަވަން",
+                    footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ",
+                    footer_address_title: "ވިޝް ހޯލްޑިންގްސް ޕްރައިވެޓް ލިމިޓެޑް",
+                    footer_address_line1: "މާލެ",
+                    footer_address_line2: "ޔޫއޭއީ ވިޝް ގްރޫޕް އަށް",
+                    footer_links_title: "ކުއިކް ލިންކްތައް",
+                    footer_link_home: "މުހިން",
+                    footer_link_about: "ތިމަން ގެ ގޮތުން",
+                    footer_link_projects: "ޕްރޮޖެކްޓްތައް",
+                    footer_link_products: "ޕްރޮޑަކްޓްތައް",
+                    footer_link_contact: "ކޮންޓެކްޓް",
+                    footer_contact_title: "ތިމަންނަށް ކޮންޓެކްޓް ކުރަން",
+                    footer_phone_1: "ޓެލިފޯން: +971 4259 7167",
+                    footer_phone_2: "މޮބައިލް: +971 4259 4795",
+                    footer_email_1: "އީމެއިލް: info@wishgroup.ae",
+                    footer_email_2: "އީމެއިލް: info@wishgroup.world",
+                    footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ހޯލްޑިންގްސް ޕްރައިވެޓް ލިމިޓެޑް. ހުރިހާ ރައިޓްތައް ރިޒަރވް ކޮށްފައި."
+                },
+                ar: {
+                    page_title: "ويش هولدينغز | التنمية المستدامة في المالديف",
+                    meta_description: "ويش هولدينغز الخاصة المحدودة - شركة مالديفية رائدة في إنتاج المأكولات البحرية المستدامة والتطوير البيئي",
+                    meta_keywords: "المالديف، التنمية المستدامة، تصدير التونة، السياحة البيئية، مجموعة ويش",
+                    meta_author: "مجموعة ويش",
+                    scroll_to_top: "التمرير إلى الأعلى",
+                    menu_home: "الرئيسية",
+                    menu_about: "معلومات عنا",
+                    menu_projects: "المشاريع",
+                    menu_products: "المنتجات",
+                    menu_sustainability: "الاستدامة",
+                    menu_contact: "تواصل معنا",
+                    logo_alt: "شعار مجموعة ويش",
+                    hero_title: "ويش هولدينغز الخاصة المحدودة",
+                    hero_description: "التنمية المستدامة والمأكولات البحرية المميزة من المالديف",
+                    hero_label: "\"سافر بثقة\"",
+                    hero_alt: "صيد التونة في المالديف",
+                    intro_title: "الريادة في التنمية المستدامة في المالديف",
+                    intro_description: "شركة مقرها المالديف تعمل تحت مظلة مجموعة ويش الإمارات العربية المتحدة، ملتزمة بالاستدامة، الابتكار، وتنمية المجتمع.",
+                    vision_title: "رؤيتنا",
+                    vision_description: "قيادة منطقة المحيط الهندي في الابتكارات المستدامة القائمة على المحيط من خلال تحويل المالديف إلى مركز عالمي للمأكولات البحرية المميزة، السياحة البيئية، والاستثمار الأخلاقي.",
+                    mission_title: "مهمتنا",
+                    mission_item_1: "تطوير بنية تحتية عالمية المستوى صديقة للبيئة",
+                    mission_item_2: "تشغيل إنتاج مأكولات بحرية متطور",
+                    mission_item_3: "بناء الثقة العالمية من خلال شراكات شفافة",
+                    mission_item_4: "دمج الاستدامة في كل مشروع",
+                    projects_title: "المشاريع الجارية",
+                    projects_description: "المبادرات الحالية التي تدفع التنمية المستدامة",
+                    tuna_title: "محفظة التونة الطازجة والمجمدة",
+                    tuna_description: "تصدير أفضل المأكولات البحرية المالديفية",
+                    location_title: "الموقع",
+                    location_description: "جزيرة هيمافوشي، كافو أتول، المالديف",
+                    badge_haccp: "معتمد من HACCP",
+                    badge_iso: "معتمد من ISO",
+                    badge_frozen: "مجمد بالتفجير في البحر",
+                    yellowfin_badge: "تونة زعنفة صفراء",
+                    yellowfin_alt: "تونة زعنفة صفراء",
+                    yellowfin_title: "Thunnus albacares",
+                    yellowfin_loins: "شرائح",
+                    yellowfin_steaks: "ستيك",
+                    yellowfin_cubes: "مكعبات",
+                    yellowfin_saku: "كتل ساكو",
+                    yellowfin_description: "مثالية للسوشي، الشواء، أطباق البوكي، والأطباق الفاخرة.",
+                    skipjack_badge: "تونة إسكيب جاك",
+                    skipjack_alt: "تونة إسكيب جاك",
+                    skipjack_title: "Katsuwonus pelamis",
+                    skipjack_whole: "كاملة مجمدة",
+                    skipjack_description: "تستخدم في المعالجة الجماعية وتطبيقات خدمات الطعام.",
+                    certifications_title: "الشهادات:",
+                    badge_export: "جاهز للتصدير",
+                    cta_title: "شارك معنا",
+                    cta_description: "انضم إلى مهمتنا لتحويل صناعة المأكولات البحرية المالديفية بشكل مستدام",
+                    cta_visit: "عرض الموقع الرئيسي",
+                    cta_learn: "تعرف على المزيد",
+                    footer_logo_alt: "شعار مجموعة ويش في التذييل",
+                    footer_address_title: "ويش هولدينغز الخاصة المحدودة",
+                    footer_address_line1: "المالديف",
+                    footer_address_line2: "تحت مجموعة ويش الإمارات",
+                    footer_links_title: "روابط سريعة",
+                    footer_link_home: "الرئيسية",
+                    footer_link_about: "معلومات عنا",
+                    footer_link_projects: "المشاريع",
+                    footer_link_products: "المنتجات",
+                    footer_link_contact: "تواصل معنا",
+                    footer_contact_title: "تواصل معنا",
+                    footer_phone_1: "هاتف: +971 4259 7167",
+                    footer_phone_2: "جوال: +971 4259 4795",
+                    footer_email_1: "بريد إلكتروني: info@wishgroup.ae",
+                    footer_email_2: "بريد إلكتروني: info@wishgroup.world",
+                    footer_copyright: "حقوق النشر 2025 - ويش هولدينغز الخاصة المحدودة. جميع الحقوق محفوظة."
+                },
+                fr: {
+                    page_title: "Wish Holdings | Développement durable aux Maldives",
+                    meta_description: "Wish Holdings Pvt Ltd - Entreprise maldivienne leader dans la production durable de fruits de mer et le développement écologique",
+                    meta_keywords: "Maldives, Développement durable, Exportation de thon, Écotourisme, Groupe Wish",
+                    meta_author: "Groupe Wish",
+                    scroll_to_top: "Retour en haut",
+                    menu_home: "Accueil",
+                    menu_about: "À propos",
+                    menu_projects: "Projets",
+                    menu_products: "Produits",
+                    menu_sustainability: "Durabilité",
+                    menu_contact: "Nous contacter",
+                    logo_alt: "Logo du groupe Wish",
+                    hero_title: "Wish Holdings Pvt Ltd",
+                    hero_description: "Développement durable et fruits de mer premium des Maldives",
+                    hero_label: "\"Voyagez avec confiance\"",
+                    hero_alt: "Pêche au thon aux Maldives",
+                    intro_title: "Leader du développement durable aux Maldives",
+                    intro_description: "Une entreprise basée aux Maldives opérant sous l'égide mondiale du groupe Wish UAE, engagée dans la durabilité, l'innovation et le développement communautaire.",
+                    vision_title: "Notre vision",
+                    vision_description: "Diriger la région de l'océan Indien dans les innovations durables axées sur l'océan en transformant les Maldives en un centre mondial pour les fruits de mer premium, l'écotourisme et l'investissement éthique.",
+                    mission_title: "Notre mission",
+                    mission_item_1: "Développer une infrastructure écoresponsable de classe mondiale",
+                    mission_item_2: "Exploiter une production de fruits de mer de pointe",
+                    mission_item_3: "Construire une confiance mondiale grâce à des partenariats transparents",
+                    mission_item_4: "Intégrer la durabilité dans chaque entreprise",
+                    projects_title: "Projets en cours",
+                    projects_description: "Initiatives actuelles favorisant le développement durable",
+                    tuna_title: "Portefeuille de thon frais et surgelé",
+                    tuna_description: "Exportation des meilleurs fruits de mer maldiviens",
+                    location_title: "Emplacement",
+                    location_description: "Île de Himmafushi, Atoll de Kaafu, Maldives~~~~Maldives",
+                    badge_haccp: "Certifié HACCP",
+                    badge_iso: "Certifié ISO",
+                    badge_frozen: "Surgelé à bord",
+                    yellowfin_badge: "Thon à nageoires jaunes",
+                    yellowfin_alt: "Thon à nageoires jaunes",
+                    yellowfin_title: "Thunnus albacares",
+                    yellowfin_loins: "Filets",
+                    yellowfin_steaks: "Steaks",
+                    yellowfin_cubes: "Cubes",
+                    yellowfin_saku: "Blocs Saku",
+                    yellowfin_description: "Parfait pour les sushis, les grillades, les bols de poke et les plats gastronomiques.",
+                    skipjack_badge: "Thon listao",
+                    skipjack_alt: "Thon listao",
+                    skipjack_title: "Katsuwonus pelamis",
+                    skipjack_whole: "Entier surgelé",
+                    skipjack_description: "Utilisé dans le traitement de masse et les applications de restauration.",
+                    certifications_title: "Certifications :",
+                    badge_export: "Prêt à l'exportation",
+                    cta_title: "Associez-vous à nous",
+                    cta_description: "Rejoignez notre mission pour transformer l'industrie des fruits de mer maldivienne de manière durable",
+                    cta_visit: "Voir le site principal",
+                    cta_learn: "En savoir plus",
+                    footer_logo_alt: "Logo du groupe Wish en pied de page",
+                    footer_address_title: "Wish Holdings Pvt Ltd",
+                    footer_address_line1: "Maldives",
+                    footer_address_line2: "Sous le groupe Wish UAE",
+                    footer_links_title: "Liens rapides",
+                    footer_link_home: "Accueil",
+                    footer_link_about: "À propos",
+                    footer_link_projects: "Projets",
+                    footer_link_products: "Produits",
+                    footer_link_contact: "Nous contacter",
+                    footer_contact_title: "Nous contacter",
+                    footer_phone_1: "Tél. : +971 4259 7167",
+                    footer_phone_2: "Mobile : +971 4259 4795",
+                    footer_email_1: "E-mail : info@wishgroup.ae",
+                    footer_email_2: "E-mail : info@wishgroup.world",
+                    footer_copyright: "Copyright 2025 - Wish Holdings Pvt Ltd. Tous droits réservés."
+                }
+            };
+
+            // Function to change language
+            function setLanguage(lang) {
+                // Check if the language exists in translations
+                if (!translations[lang]) {
+                    console.error(`Language ${lang} not found in translations`);
+                    return;
+                }
+
+                // Update text content and alt attributes
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[lang][key]) {
+                        if (element.tagName === 'IMG') {
+                            element.alt = translations[lang][key];
+                        } else if (element.tagName === 'TITLE') {
+                            element.textContent = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                });
+
+                // Update HTML lang and direction
+                document.querySelector('html').lang = lang;
+                if (lang === 'ar' || lang === 'dv') {
+                    document.querySelector('html').dir = 'rtl';
+                    document.querySelector('body').style.textAlign = 'right';
+                } else {
+                    document.querySelector('html').dir = 'ltr';
+                    document.querySelector('body').style.textAlign = 'left';
+                }
+
+                // Update page title
+                document.querySelector('title').textContent = translations[lang].page_title;
+
+                // Save selected language to localStorage
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            // Initialize language on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+                document.getElementById('language-switcher').value = savedLang;
+                setLanguage(savedLang);
+            });
+        </script>
     </div>
 </body>
 </html>

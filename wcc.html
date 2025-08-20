@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>World Capital Centre | Colombo's Iconic Development</title>
+    <title data-translate="page_title">World Capital Centre | Colombo's Iconic Development</title>
     <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="World Capital Centre Limited - Developing Asia's tallest tower in Colombo, Sri Lanka" name="description">
-    <meta content="Colombo, Sri Lanka, Skyscraper, Mixed-Use Development, WCC, World Capital Centre" name="keywords">
+    <meta content="" name="description" data-translate="meta_description">
+    <meta content="" name="keywords" data-translate="meta_keywords">
     <meta content="Wish Group" name="author">
     <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
@@ -105,13 +105,23 @@
         .project-image:hover img {
             transform: scale(1.05);
         }
+        #language-switcher {
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-translate="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -128,9 +138,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="" data-translate="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="" data-translate="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -139,18 +149,24 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Investments</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Contact</a></li>
+                                        <li><a class="menu-item" href="index.html" data-translate="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="menu_about">About</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_investments">Investments</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="menu_contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select language">
+                                    <option value="en">EN</option>
+                                    <option value="ar">AR</option>
+                                    <option value="fr">FR</option>
+                                    <option value="si">SI</option>
+                                    <option value="dv">DV</option>
+                                </select>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -162,22 +178,22 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="jarallax-img" alt="">
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="jarallax-img" alt="" data-translate="hero_alt">
             <div class="hero-overlay"></div>
             <div class="gradient-edge-bottom h-50"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-translate="hero_title">
                                 World Capital Centre 
                             </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">Asia's tallest tower in the heart of Sri Lanka</p>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-translate="hero_description">Asia's tallest tower in the heart of Sri Lanka</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">$2.5B Project</span>
+                                    <span class="fs-20 fw-600" data-translate="hero_label">$2.5B Project</span>
                                 </div>
                             </div>
                         </div>
@@ -192,61 +208,61 @@
                     <div class="col-lg-10">
                         <!-- Company Introduction -->
                         <div class="intro-section mb-5 text-center">
-                            <h2 class="fs-36 mb-3">World Capital Centre Limited</h2>
-                            <p class="lead fs-20">A diversified group with an international network, specializing in investments, projects, and trading on a global platform</p>
+                            <h2 class="fs-36 mb-3" data-translate="intro_title">World Capital Centre Limited</h2>
+                            <p class="lead fs-20" data-translate="intro_description">A diversified group with an international network, specializing in investments, projects, and trading on a global platform</p>
                         </div>
 
                         <!-- Vision & Mission -->
                         <div class="row g-4 mb-5">
                             <div class="col-md-6">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Our Vision</h3>
-                                    <p>To create a world capital market inspired through humanity, transforming Colombo into a global destination with iconic architecture and sustainable development.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="vision_title">Our Vision</h3>
+                                    <p data-translate="vision_description">To create a world capital market inspired through humanity, transforming Colombo into a global destination with iconic architecture and sustainable development.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Our Mission</h3>
-                                    <p>To coordinate with world-class architects and engineers in developing structural designs that push boundaries, while maintaining a focus on innovation, humanity, and exceptional project execution.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="mission_title">Our Mission</h3>
+                                    <p data-translate="mission_description">To coordinate with world-class architects and engineers in developing structural designs that push boundaries, while maintaining a focus on innovation, humanity, and exceptional project execution.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Project Status -->
                         <div class="section-header text-center mb-5">
-                            <h2 class="fs-30">Current Project Status</h2>
-                            <p class="lead">World Capital Centre Colombo development progress</p>
+                            <h2 class="fs-30" data-translate="status_title">Current Project Status</h2>
+                            <p class="lead" data-translate="status_description">World Capital Centre Colombo development progress</p>
                         </div>
 
                         <div class="row g-4 mb-5">
                             <div class="col-md-4">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Engineering & Design</h3>
+                                    <h3 class="fs-24 mb-3" data-translate="status_engineering_title">Engineering & Design</h3>
                                     <ul>
-                                        <li>RSP appointed as lead architect</li>
-                                        <li>Structural engineering commencing soon</li>
-                                        <li>MEP design companies under evaluation</li>
-                                        <li>Q-Pro Services handling quantity surveying</li>
+                                        <li data-translate="status_engineering_1">RSP appointed as lead architect</li>
+                                        <li data-translate="status_engineering_2">Structural engineering commencing soon</li>
+                                        <li data-translate="status_engineering_3">MEP design companies under evaluation</li>
+                                        <li data-translate="status_engineering_4">Q-Pro Services handling quantity surveying</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Investments</h3>
+                                    <h3 class="fs-24 mb-3" data-translate="status_investments_title">Investments</h3>
                                     <ul>
-                                        <li>Partial land payment completed</li>
-                                        <li>BOI direct investment agreement signed</li>
-                                        <li>Prime Colombo location secured</li>
+                                        <li data-translate="status_investments_1">Partial land payment completed</li>
+                                        <li data-translate="status_investments_2">BOI direct investment agreement signed</li>
+                                        <li data-translate="status_investments_3">Prime Colombo location secured</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Approvals</h3>
+                                    <h3 class="fs-24 mb-3" data-translate="status_approvals_title">Approvals</h3>
                                     <ul>
-                                        <li>Urban Development Authority approval</li>
-                                        <li>Board of Investment agreement in place</li>
-                                        <li>All necessary permits progressing</li>
+                                        <li data-translate="status_approvals_1">Urban Development Authority approval</li>
+                                        <li data-translate="status_approvals_2">Board of Investment agreement in place</li>
+                                        <li data-translate="status_approvals_3">All necessary permits progressing</li>
                                     </ul>
                                 </div>
                             </div>
@@ -254,133 +270,133 @@
 
                         <!-- Why Invest Section -->
                         <div class="section-header text-center mb-5">
-                            <h2 class="fs-30">Why Invest in WCC Colombo</h2>
-                            <p class="lead">Key benefits of this transformative project</p>
+                            <h2 class="fs-30" data-translate="invest_title">Why Invest in WCC Colombo</h2>
+                            <p class="lead" data-translate="invest_description">Key benefits of this transformative project</p>
                         </div>
 
                         <div class="row g-4 mb-5">
                             <div class="col-md-6">
                                 <div class="project-image">
-                                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Iconic Architecture">
+                                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" data-translate="invest_image_1_alt">
                                 </div>
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Iconic Structure</h3>
-                                    <p>A state-of-the-art tower in the heart of Colombo, set to be Asia's tallest with unique and groundbreaking architecture that will redefine the city skyline.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="invest_structure_title">Iconic Structure</h3>
+                                    <p data-translate="invest_structure_description">A state-of-the-art tower in the heart of Colombo, set to be Asia's tallest with unique and groundbreaking architecture that will redefine the city skyline.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="project-image">
-                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Economic Impact">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" data-translate="invest_economic_title">
                                 </div>
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Economic Impact</h3>
-                                    <p>Attracts local and international businesses, creating thousands of jobs for both locals and foreigners while supporting nearby businesses and services.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="invest_economic_description">Economic Impact</h3>
+                                    <p data-translate="invest_economic_description">Attracts local and international businesses, creating thousands of jobs for both locals and foreigners while supporting nearby businesses and services.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="project-image">
-                                    <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sustainability">
+                                    <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" data-translate="invest_sustainability_alt">
                                 </div>
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Sustainability</h3>
-                                    <p>Incorporates cutting-edge green building techniques and sustainable practices to minimize environmental impact while maximizing efficiency.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="invest_sustainability_title">Sustainability</h3>
+                                    <p data-translate="invest_sustainability_description">Incorporates cutting-edge green building techniques and sustainable practices to minimize environmental impact while maximizing efficiency.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="project-image">
-                                    <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Destination Appeal">
+                                    <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" data-translate="invest_destination_alt">
                                 </div>
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Destination Appeal</h3>
-                                    <p>Mixed-use development with recreational facilities that will attract tourists, non-residents, and locals, positioning Colombo as an international destination.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="invest_destination_title">Destination Appeal</h3>
+                                    <p data-translate="invest_destination_description">Mixed-use development with recreational facilities that will attract tourists, non-residents, and locals, positioning Colombo as an international destination.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Project Specifications -->
                         <div class="section-header text-center mb-5">
-                            <h2 class="fs-30">Project Specifications</h2>
-                            <p class="lead">The scale and scope of World Capital Centre Colombo</p>
+                            <h2 class="fs-30" data-translate="specifications_title">Project Specifications</h2>
+                            <p class="lead" data-translate="specifications_description">The scale and scope of World Capital Centre Colombo</p>
                         </div>
 
                         <div class="row g-4 mb-5">
                             <div class="col-md-4">
                                 <div class="spec-item">
-                                    <h3 class="fs-24 mb-3 text-color">Total Area</h3>
-                                    <p class="fs-36 fw-bold">800,000 sqm</p>
+                                    <h3 class="fs-24 mb-3 text-color" data-translate="spec_area_title">Total Area</h3>
+                                    <p class="fs-36 fw-bold" data-translate="spec_area_value">800,000 sqm</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="spec-item">
-                                    <h3 class="fs-24 mb-3 text-color">Apartments</h3>
-                                    <p class="fs-36 fw-bold">1,200 Units</p>
+                                    <h3 class="fs-24 mb-3 text-color" data-translate="spec_apartments_title">Apartments</h3>
+                                    <p class="fs-36 fw-bold" data-translate="spec_apartments_value">1,200 Units</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="spec-item">
-                                    <h3 class="fs-24 mb-3 text-color">Retail Outlets</h3>
-                                    <p class="fs-36 fw-bold">3,000 Spaces</p>
+                                    <h3 class="fs-24 mb-3 text-color" data-translate="spec_retail_title">Retail Outlets</h3>
+                                    <p class="fs-36 fw-bold" data-translate="spec_retail_value">3,000 Spaces</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="spec-item">
-                                    <h3 class="fs-24 mb-3 text-color">Hotel Rooms</h3>
-                                    <p class="fs-36 fw-bold">2,000 Rooms</p>
+                                    <h3 class="fs-24 mb-3 text-color" data-translate="spec_hotel_title">Hotel Rooms</h3>
+                                    <p class="fs-36 fw-bold" data-translate="spec_hotel_value">2,000 Rooms</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="spec-item">
-                                    <h3 class="fs-24 mb-3 text-color">Total Project Cost</h3>
-                                    <p class="fs-36 fw-bold">$2.5 Billion</p>
+                                    <h3 class="fs-24 mb-3 text-color" data-translate="spec_cost_title">Total Project Cost</h3>
+                                    <p class="fs-36 fw-bold" data-translate="spec_cost_value">$2.5 Billion</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Cost Breakdown -->
                         <div class="section-header text-center mb-5">
-                            <h2 class="fs-30">Construction Cost Breakdown</h2>
-                            <p class="lead">Detailed investment allocation</p>
+                            <h2 class="fs-30" data-translate="cost_title">Construction Cost Breakdown</h2>
+                            <p class="lead" data-translate="cost_description">Detailed investment allocation</p>
                         </div>
 
                         <div class="mb-5">
                             <table class="cost-table">
                                 <thead>
                                     <tr>
-                                        <th>Description</th>
-                                        <th>Cost</th>
+                                        <th data-translate="cost_table_description">Description</th>
+                                        <th data-translate="cost_table_cost">Cost</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Land Cost</td>
+                                        <td data-translate="cost_land">Land Cost</td>
                                         <td>$300,000,000</td>
                                     </tr>
                                     <tr>
-                                        <td>All Consultant Cost</td>
+                                        <td data-translate="cost_consultant">All Consultant Cost</td>
                                         <td>$150,000,000</td>
                                     </tr>
                                     <tr>
-                                        <td>Main Works (800,000 sqm x $200/sqm)</td>
+                                        <td data-translate="cost_main_works">Main Works (800,000 sqm x $200/sqm)</td>
                                         <td>$1,600,000,000</td>
                                     </tr>
                                     <tr>
-                                        <td>Access Connection, Roads, Flyover, etc.</td>
+                                        <td data-translate="cost_access">Access Connection, Roads, Flyover, etc.</td>
                                         <td>$150,000,000</td>
                                     </tr>
                                     <tr>
-                                        <td>Advertising, Sales & Marketing</td>
+                                        <td data-translate="cost_marketing">Advertising, Sales & Marketing</td>
                                         <td>$60,000,000</td>
                                     </tr>
                                     <tr>
-                                        <td>Special Finishes, Common Area Decoration, Fitted Furniture & Equipment</td>
+                                        <td data-translate="cost_finishes">Special Finishes, Common Area Decoration, Fitted Furniture & Equipment</td>
                                         <td>$90,000,000</td>
                                     </tr>
                                     <tr>
-                                        <td>Contingency</td>
+                                        <td data-translate="cost_contingency">Contingency</td>
                                         <td>$100,000,000</td>
                                     </tr>
                                     <tr>
-                                        <td>Total</td>
+                                        <td data-translate="cost_total">Total</td>
                                         <td>$2,450,000,000</td>
                                     </tr>
                                 </tbody>
@@ -389,73 +405,73 @@
 
                         <!-- Project Timeline -->
                         <div class="section-header text-center mb-5">
-                            <h2 class="fs-30">Project Timeline</h2>
-                            <p class="lead">Key phases of development</p>
+                            <h2 class="fs-30" data-translate="timeline_title">Project Timeline</h2>
+                            <p class="lead" data-translate="timeline_description">Key phases of development</p>
                         </div>
 
                         <div class="row g-4 mb-5">
                             <div class="col-md-6">
                                 <div class="timeline-item">
-                                    <h3 class="fs-20 mb-2">2019-2020</h3>
-                                    <p>Planning and design phase with RSP architects. Initial land acquisition and approvals secured.</p>
+                                    <h3 class="fs-20 mb-2" data-translate="timeline_2019_title">2019-2020</h3>
+                                    <p data-translate="timeline_2019_description">Planning and design phase with RSP architects. Initial land acquisition and approvals secured.</p>
                                 </div>
                                 <div class="timeline-item">
-                                    <h3 class="fs-20 mb-2">2020</h3>
-                                    <p>Estimated annual investment: $445 million. Commencement of foundation work and initial construction.</p>
+                                    <h3 class="fs-20 mb-2" data-translate="timeline_2020_title">2020</h3>
+                                    <p data-translate="timeline_2020_description">Estimated annual investment: $445 million. Commencement of foundation work and initial construction.</p>
                                 </div>
                                 <div class="timeline-item">
-                                    <h3 class="fs-20 mb-2">2021</h3>
-                                    <p>Estimated annual investment: $450 million. Vertical construction begins with core structure development.</p>
+                                    <h3 class="fs-20 mb-2" data-translate="timeline_2021_title">2021</h3>
+                                    <p data-translate="timeline_2021_description">Estimated annual investment: $450 million. Vertical construction begins with core structure development.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="timeline-item">
-                                    <h3 class="fs-20 mb-2">2022</h3>
-                                    <p>Estimated annual investment: $838 million. Major construction milestones achieved with tower reaching significant height.</p>
+                                    <h3 class="fs-20 mb-2" data-translate="timeline_2022_title">2022</h3>
+                                    <p data-translate="timeline_2022_description">Estimated annual investment: $838 million. Major construction milestones achieved with tower reaching significant height.</p>
                                 </div>
                                 <div class="timeline-item">
-                                    <h3 class="fs-20 mb-2">2023</h3>
-                                    <p>Final construction phase with interior fit-outs and systems commissioning. Preparation for grand opening.</p>
+                                    <h3 class="fs-20 mb-2" data-translate="timeline_2023_title">2023</h3>
+                                    <p data-translate="timeline_2023_description">Final construction phase with interior fit-outs and systems commissioning. Preparation for grand opening.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Revenue Projections -->
                         <div class="section-header text-center mb-5">
-                            <h2 class="fs-30">Revenue Projections</h2>
-                            <p class="lead">Financial outlook for World Capital Centre</p>
+                            <h2 class="fs-30" data-translate="revenue_title">Revenue Projections</h2>
+                            <p class="lead" data-translate="revenue_description">Financial outlook for World Capital Centre</p>
                         </div>
 
                         <div class="row g-4 mb-5">
                             <div class="col-md-6">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Sale Revenue</h3>
-                                    <p class="fs-36 fw-bold mb-3">$2.33 Billion</p>
-                                    <p>Projected from residential and commercial unit sales during development phase.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="revenue_sale_title">Sale Revenue</h3>
+                                    <p class="fs-36 fw-bold mb-3" data-translate="revenue_sale_value">$2.33 Billion</p>
+                                    <p data-translate="revenue_sale_description">Projected from residential and commercial unit sales during development phase.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Annual Lease Revenue</h3>
-                                    <p class="fs-36 fw-bold mb-3">$500 Million</p>
-                                    <p>Expected recurring revenue from retail, office, and hospitality operations post-completion.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="revenue_lease_title">Annual Lease Revenue</h3>
+                                    <p class="fs-36 fw-bold mb-3" data-translate="revenue_lease_value">$500 Million</p>
+                                    <p data-translate="revenue_lease_description">Expected recurring revenue from retail, office, and hospitality operations post-completion.</p>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="feature-card">
-                                    <h3 class="fs-24 mb-3">Post-Sales Assets</h3>
-                                    <p>World Capital Centre will retain $1.5 billion in premium assets while generating $500 million in annual revenue from ongoing operations.</p>
+                                    <h3 class="fs-24 mb-3" data-translate="revenue_assets_title">Post-Sales Assets</h3>
+                                    <p data-translate="revenue_assets_description">World Capital Centre will retain $1.5 billion in premium assets while generating $500 million in annual revenue from ongoing operations.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- CTA Section -->
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Join This Transformational Project</h3>
-                            <p class="mb-4">Investment opportunities available in Asia's next iconic landmark</p>
+                            <h3 class="fs-28 mb-3" data-translate="cta_title">Join This Transformational Project</h3>
+                            <p class="mb-4" data-translate="cta_description">Investment opportunities available in Asia's next iconic landmark</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="contact.html"><span>Investment Inquiries</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Request Brochure</span></a>
+                                <a class="btn-main fx-slide" href="contact.html"><span data-translate="cta_investment">Investment Inquiries</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-translate="cta_brochure">Request Brochure</span></a>
                             </div>
                         </div>
                     </div>
@@ -469,7 +485,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="" data-translate="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -479,28 +495,28 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">World Capital Centre Limited</h3>
-                        <p class="mb-0">Colombo, Sri Lanka</p>
-                        <p>International Network</p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_address_title">World Capital Centre Limited</h3>
+                        <p class="mb-0" data-translate="footer_address">Colombo, Sri Lanka</p>
+                        <p data-translate="footer_network">International Network</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-translate="footer_links_title">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Investments</a></li>
-                            <li><a href="#" class="text-light">Contact</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="menu_about">About</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_investments">Investments</a></li>
+                            <li><a href="#" class="text-light" data-translate="menu_contact">Contact</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                        <h3 class="fs-20 mb-3" data-translate="footer_contact_title">Contact Us</h3>
+                        <p class="mb-1" data-translate="footer_phone_1">T. +971 4259 7167</p>
+                        <p class="mb-1" data-translate="footer_phone_2">M. +971 4259 4795</p>
+                        <p class="mb-0" data-translate="footer_email_1">E. info@wishgroup.ae</p>
+                        <p class="mb-0" data-translate="footer_email_2">E. info@wishgroup.world</p>
                     </div>
                 </div>
             </div>
@@ -508,7 +524,7 @@
             <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 text-center">
+                        <div class="col-md-12 text-center" data-translate="footer_copyright">
                             Copyright 2025 - World Capital Centre Limited. All rights reserved.
                         </div>
                     </div>
@@ -517,10 +533,604 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
+        <script src="js/translations.js"></script>
     </div>
+<script>
+    const translations = {
+    en: {
+        page_title: "World Capital Centre | Colombo's Iconic Development",
+        meta_description: "World Capital Centre Limited - Developing Asia's tallest tower in Colombo, Sri Lanka",
+        meta_keywords: "Colombo, Sri Lanka, Skyscraper, Mixed-Use Development, WCC, World Capital Centre",
+        scroll_to_top: "Scroll to top",
+        menu_home: "Home",
+        menu_about: "About",
+        menu_projects: "Projects",
+        menu_investments: "Investments",
+        menu_news: "News",
+        menu_contact: "Contact",
+        logo_alt: "Wish Group Logo",
+        hero_title: "World Capital Centre",
+        hero_description: "Asia's tallest tower in the heart of Sri Lanka",
+        hero_label: "$2.5B Project",
+        hero_alt: "World Capital Centre Background",
+        intro_title: "World Capital Centre Limited",
+        intro_description: "A diversified group with an international network, specializing in investments, projects, and trading on a global platform",
+        vision_title: "Our Vision",
+        vision_description: "To create a world capital market inspired through humanity, transforming Colombo into a global destination with iconic architecture and sustainable development.",
+        mission_title: "Our Mission",
+        mission_description: "To coordinate with world-class architects and engineers in developing structural designs that push boundaries, while maintaining a focus on innovation, humanity, and exceptional project execution.",
+        status_title: "Current Project Status",
+        status_description: "World Capital Centre Colombo development progress",
+        status_engineering_title: "Engineering & Design",
+        status_engineering_1: "RSP appointed as lead architect",
+        status_engineering_2: "Structural engineering commencing soon",
+        status_engineering_3: "MEP design companies under evaluation",
+        status_engineering_4: "Q-Pro Services handling quantity surveying",
+        status_investments_title: "Investments",
+        status_investments_1: "Partial land payment completed",
+        status_investments_2: "BOI direct investment agreement signed",
+        status_investments_3: "Prime Colombo location secured",
+        status_approvals_title: "Approvals",
+        status_approvals_1: "Urban Development Authority approval",
+        status_approvals_2: "Board of Investment agreement in place",
+        status_approvals_3: "All necessary permits progressing",
+        invest_title: "Why Invest in WCC Colombo",
+        invest_description: "Key benefits of this transformative project",
+        invest_structure_title: "Iconic Structure",
+        invest_structure_description: "A state-of-the-art tower in the heart of Colombo, set to be Asia's tallest with unique and groundbreaking architecture that will redefine the city skyline.",
+        invest_structure_alt: "Iconic Architecture",
+        invest_economic_title: "Economic Impact",
+        invest_economic_description: "Attracts local and international businesses, creating thousands of jobs for both locals and foreigners while supporting nearby businesses and services.",
+        invest_economic_alt: "Economic Impact",
+        invest_sustainability_title: "Sustainability",
+        invest_sustainability_description: "Incorporates cutting-edge green building techniques and sustainable practices to minimize environmental impact while maximizing efficiency.",
+        invest_sustainability_alt: "Sustainability",
+        invest_destination_title: "Destination Appeal",
+        invest_destination_description: "Mixed-use development with recreational facilities that will attract tourists, non-residents, and locals, positioning Colombo as an international destination.",
+        invest_destination_alt: "Destination Appeal",
+        specifications_title: "Project Specifications",
+        specifications_description: "The scale and scope of World Capital Centre Colombo",
+        spec_area_title: "Total Area",
+        spec_area_value: "800,000 sqm",
+        spec_apartments_title: "Apartments",
+        spec_apartments_value: "1,200 Units",
+        spec_retail_title: "Retail Outlets",
+        spec_retail_value: "3,000 Spaces",
+        spec_hotel_title: "Hotel Rooms",
+        spec_hotel_value: "2,000 Rooms",
+        spec_cost_title: "Total Project Cost",
+        spec_cost_value: "$2.5 Billion",
+        cost_title: "Construction Cost Breakdown",
+        cost_description: "Detailed investment allocation",
+        cost_table_description: "Description",
+        cost_table_cost: "Cost",
+        cost_land: "Land Cost",
+        cost_consultant: "All Consultant Cost",
+        cost_main_works: "Main Works (800,000 sqm x $200/sqm)",
+        cost_access: "Access Connection, Roads, Flyover, etc.",
+        cost_marketing: "Advertising, Sales & Marketing",
+        cost_finishes: "Special Finishes, Common Area Decoration, Fitted Furniture & Equipment",
+        cost_contingency: "Contingency",
+        cost_total: "Total",
+        timeline_title: "Project Timeline",
+        timeline_description: "Key phases of development",
+        timeline_2019_title: "2019-2020",
+        timeline_2019_description: "Planning and design phase with RSP architects. Initial land acquisition and approvals secured.",
+        timeline_2020_title: "2020",
+        timeline_2020_description: "Estimated annual investment: $445 million. Commencement of foundation work and initial construction.",
+        timeline_2021_title: "2021",
+        timeline_2021_description: "Estimated annual investment: $450 million. Vertical construction begins with core structure development.",
+        timeline_2022_title: "2022",
+        timeline_2022_description: "Estimated annual investment: $838 million. Major construction milestones achieved with tower reaching significant height.",
+        timeline_2023_title: "2023",
+        timeline_2023_description: "Final construction phase with interior fit-outs and systems commissioning. Preparation for grand opening.",
+        revenue_title: "Revenue Projections",
+        revenue_description: "Financial outlook for World Capital Centre",
+        revenue_sale_title: "Sale Revenue",
+        revenue_sale_value: "$2.33 Billion",
+        revenue_sale_description: "Projected from residential and commercial unit sales during development phase.",
+        revenue_lease_title: "Annual Lease Revenue",
+        revenue_lease_value: "$500 Million",
+        revenue_lease_description: "Expected recurring revenue from retail, office, and hospitality operations post-completion.",
+        revenue_assets_title: "Post-Sales Assets",
+        revenue_assets_description: "World Capital Centre will retain $1.5 billion in premium assets while generating $500 million in annual revenue from ongoing operations.",
+        cta_title: "Join This Transformational Project",
+        cta_description: "Investment opportunities available in Asia's next iconic landmark",
+        cta_investment: "Investment Inquiries",
+        cta_brochure: "Request Brochure",
+        footer_address_title: "World Capital Centre Limited",
+        footer_address: "Colombo, Sri Lanka",
+        footer_network: "International Network",
+        footer_links_title: "Quick Links",
+        footer_contact_title: "Contact Us",
+        footer_phone_1: "T. +971 4259 7167",
+        footer_phone_2: "M. +971 4259 4795",
+        footer_email_1: "E. info@wishgroup.ae",
+        footer_email_2: "E. info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - World Capital Centre Limited. All rights reserved.",
+        footer_logo_alt: "Wish Group Footer Logo"
+    },
+    ar: {
+        page_title: "مركز العاصمة العالمي | التطوير الأيقوني في كولومبو",
+        meta_description: "مركز العاصمة العالمي المحدود - تطوير أطول برج في آسيا في كولومبو، سريلانكا",
+        meta_keywords: "كولومبو، سريلانكا، ناطحة سحاب، تطوير متعدد الاستخدامات، WCC، مركز العاصمة العالمي",
+        scroll_to_top: "التمرير إلى الأعلى",
+        menu_home: "الرئيسية",
+        menu_about: "حول",
+        menu_projects: "المشاريع",
+        menu_investments: "الاستثمارات",
+        menu_news: "الأخبار",
+        menu_contact: "اتصل",
+        logo_alt: "شعار مجموعة ويش",
+        hero_title: "مركز العاصمة العالمي",
+        hero_description: "أطول برج في آسيا في قلب سريلانكا",
+        hero_label: "مشروع بقيمة 2.5 مليار دولار",
+        hero_alt: "خلفية مركز العاصمة العالمي",
+        intro_title: "مركز العاصمة العالمي المحدود",
+        intro_description: "مجموعة متنوعة مع شبكة دولية، متخصصة في الاستثمارات والمشاريع والتجارة على منصة عالمية",
+        vision_title: "رؤيتنا",
+        vision_description: "خلق سوق رأس مال عالمي مستوحى من الإنسانية، وتحويل كولومبو إلى وجهة عالمية بمعمار أيقوني وتطوير مستدام.",
+        mission_title: "مهمتنا",
+        mission_description: "التنسيق مع المهندسين المعماريين والمهندسين من الطراز العالمي لتطوير تصاميم هيكلية تدفع الحدود، مع التركيز على الابتكار والإنسانية وتنفيذ المشاريع الاستثنائي.",
+        status_title: "حالة المشروع الحالية",
+        status_description: "تقدم تطوير مركز العاصمة العالمي كولومبو",
+        status_engineering_title: "الهندسة والتصميم",
+        status_engineering_1: "تم تعيين RSP كمهندس معماري رئيسي",
+        status_engineering_2: "الهندسة الهيكلية ستبدأ قريبًا",
+        status_engineering_3: "شركات تصميم MEP تحت التقييم",
+        status_engineering_4: "Q-Pro Services تتولى مسح الكميات",
+        status_investments_title: "الاستثمارات",
+        status_investments_1: "تم دفع جزء من تكلفة الأرض",
+        status_investments_2: "تم توقيع اتفاقية استثمار مباشر مع BOI",
+        status_investments_3: "تم تأمين موقع رئيسي في كولومبو",
+        status_approvals_title: "الموافقات",
+        status_approvals_1: "موافقة هيئة التنمية الحضرية",
+        status_approvals_2: "اتفاقية مجلس الاستثمار قائمة",
+        status_approvals_3: "جميع التصاريح اللازمة تتقدم",
+        invest_title: "لماذا تستثمر في WCC كولومبو",
+        invest_description: "الفوائد الرئيسية لهذا المشروع التحويلي",
+        invest_structure_title: "هيكل أيقوني",
+        invest_structure_description: "برج متطور في قلب كولومبو، سيصبح الأطول في آسيا بمعمار فريد ومبتكر سيُعيد تعريف أفق المدينة.",
+        invest_structure_alt: "معمار أيقوني",
+        invest_economic_title: "الأثر الاقتصادي",
+        invest_economic_description: "يجذب الأعمال المحلية والدولية، ويخلق آلاف الوظائف للمحليين والأجانب مع دعم الأعمال والخدمات القريبة.",
+        invest_economic_alt: "الأثر الاقتصادي",
+        invest_sustainability_title: "الاستدامة",
+        invest_sustainability_description: "يدمج تقنيات بناء خضراء متطورة وممارسات مستدامة لتقليل التأثير البيئي مع تعظيم الكفاءة.",
+        invest_sustainability_alt: "الاستدامة",
+        invest_destination_title: "جاذبية الوجهة",
+        invest_destination_description: "تطوير متعدد الاستخدامات مع مرافق ترفيهية ستجذب السياح وغير المقيمين والمحليين، مما يضع كولومبو كوجهة دولية.",
+        invest_destination_alt: "جاذبية الوجهة",
+        specifications_title: "مواصفات المشروع",
+        specifications_description: "حجم ونطاق مركز العاصمة العالمي كولومبو",
+        spec_area_title: "المساحة الإجمالية",
+        spec_area_value: "800,000 متر مربع",
+        spec_apartments_title: "الشقق",
+        spec_apartments_value: "1,200 وحدة",
+        spec_retail_title: "منافذ البيع بالتجزئة",
+        spec_retail_value: "3,000 مساحة",
+        spec_hotel_title: "غرف الفندق",
+        spec_hotel_value: "2,000 غرفة",
+        spec_cost_title: "تكلفة المشروع الإجمالية",
+        spec_cost_value: "2.5 مليار دولار",
+        cost_title: "تفاصيل تكلفة البناء",
+        cost_description: "تخصيص الاستثمار التفصيلي",
+        cost_table_description: "الوصف",
+        cost_table_cost: "التكلفة",
+        cost_land: "تكلفة الأرض",
+        cost_consultant: "جميع تكاليف الاستشاريين",
+        cost_main_works: "الأعمال الرئيسية (800,000 متر مربع × 200 دولار/متر مربع)",
+        cost_access: "الاتصال بالطرق، الجسور العلوية، إلخ.",
+        cost_marketing: "الإعلانات، المبيعات والتسويق",
+        cost_finishes: "التشطيبات الخاصة، ديكور المناطق العامة، الأثاث والمعدات المجهزة",
+        cost_contingency: "الطوارئ",
+        cost_total: "الإجمالي",
+        timeline_title: "الجدول الزمني للمشروع",
+        timeline_description: "مراحل التطوير الرئيسية",
+        timeline_2019_title: "2019-2020",
+        timeline_2019_description: "مرحلة التخطيط والتصميم مع مهندسي RSP. تم تأمين شراء الأرض الأولية والموافقات.",
+        timeline_2020_title: "2020",
+        timeline_2020_description: "الاستثمار السنوي المقدر: 445 مليون دولار. بدء أعمال الأساس والبناء الأولي.",
+        timeline_2021_title: "2021",
+        timeline_2021_description: "الاستثمار السنوي المقدر: 450 مليون دولار. بدء البناء العمودي مع تطوير الهيكل الأساسي.",
+        timeline_2022_title: "2022",
+        timeline_2022_description: "الاستثمار السنوي المقدر: 838 مليون دولار. تحقيق معالم بناء رئيسية مع وصول البرج إلى ارتفاع كبير.",
+        timeline_2023_title: "2023",
+        timeline_2023_description: "مرحلة البناء النهائية مع التشطيبات الداخلية وتشغيل الأنظمة. التحضير للافتتاح الكبير.",
+        revenue_title: "توقعات الإيرادات",
+        revenue_description: "التوقعات المالية لمركز العاصمة العالمي",
+        revenue_sale_title: "إيرادات البيع",
+        revenue_sale_value: "2.33 مليار دولار",
+        revenue_sale_description: "متوقع من مبيعات الوحدات السكنية والتجارية خلال مرحلة التطوير.",
+        revenue_lease_title: "إيرادات الإيجار السنوية",
+        revenue_lease_value: "500 مليون دولار",
+        revenue_lease_description: "الإيرادات المتكررة المتوقعة من عمليات التجزئة والمكاتب والضيافة بعد الاكتمال.",
+        revenue_assets_title: "الأصول بعد البيع",
+        revenue_assets_description: "سيحتفظ مركز العاصمة العالمي بأصول متميزة بقيمة 1.5 مليار دولار مع توليد 500 مليون دولار من الإيرادات السنوية من العمليات المستمرة.",
+        cta_title: "انضم إلى هذا المشروع التحويلي",
+        cta_description: "فرص استثمارية متاحة في المعلم الأيقوني القادم في آسيا",
+        cta_investment: "استفسارات الاستثمار",
+        cta_brochure: "طلب الكتيب",
+        footer_address_title: "مركز العاصمة العالمي المحدود",
+        footer_address: "كولومبو، سريلانكا",
+        footer_network: "شبكة دولية",
+        footer_links_title: "روابط سريعة",
+        footer_contact_title: "اتصل بنا",
+        footer_phone_1: "هاتف: +971 4259 7167",
+        footer_phone_2: "جوال: +971 4259 4795",
+        footer_email_1: "بريد إلكتروني: info@wishgroup.ae",
+        footer_email_2: "بريد إلكتروني: info@wishgroup.world",
+        footer_copyright: "حقوق الطبع والنشر 2025 - مركز العاصمة العالمي المحدود. جميع الحقوق محفوظة.",
+        footer_logo_alt: "شعار مجموعة ويش للتذييل"
+    },
+    fr: {
+        page_title: "Centre Capital Mondial | Développement emblématique de Colombo",
+        meta_description: "Centre Capital Mondial Limitée - Développement de la tour la plus haute d'Asie à Colombo, Sri Lanka",
+        meta_keywords: "Colombo, Sri Lanka, Gratte-ciel, Développement à usage mixte, WCC, Centre Capital Mondial",
+        scroll_to_top: "Faire défiler vers le haut",
+        menu_home: "Accueil",
+        menu_about: "À propos",
+        menu_projects: "Projets",
+        menu_investments: "Investissements",
+        menu_news: "Actualités",
+        menu_contact: "Contact",
+        logo_alt: "Logo du groupe Wish",
+        hero_title: "Centre Capital Mondial",
+        hero_description: "La tour la plus haute d'Asie au cœur du Sri Lanka",
+        hero_label: "Projet de 2,5 milliards de dollars",
+        hero_alt: "Fond du Centre Capital Mondial",
+        intro_title: "Centre Capital Mondial Limitée",
+        intro_description: "Un groupe diversifié avec un réseau international, spécialisé dans les investissements, les projets et le commerce sur une plateforme mondiale",
+        vision_title: "Notre vision",
+        vision_description: "Créer un marché de capitaux mondial inspiré par l'humanité, transformant Colombo en une destination mondiale avec une architecture emblématique et un développement durable.",
+        mission_title: "Notre mission",
+        mission_description: "Coordonner avec des architectes et ingénieurs de classe mondiale pour développer des conceptions structurelles qui repoussent les limites, tout en maintenant un accent sur l'innovation, l'humanité et une exécution de projet exceptionnelle.",
+        status_title: "État actuel du projet",
+        status_description: "Progrès du développement du Centre Capital Mondial Colombo",
+        status_engineering_title: "Ingénierie et conception",
+        status_engineering_1: "RSP nommé architecte principal",
+        status_engineering_2: "L'ingénierie structurelle débutera bientôt",
+        status_engineering_3: "Entreprises de conception MEP en cours d'évaluation",
+        status_engineering_4: "Q-Pro Services gère l'arpentage des quantités",
+        status_investments_title: "Investissements",
+        status_investments_1: "Paiement partiel du terrain effectué",
+        status_investments_2: "Accord d'investissement direct avec BOI signé",
+        status_investments_3: "Emplacement privilégié à Colombo sécurisé",
+        status_approvals_title: "Approbations",
+        status_approvals_1: "Approbation de l'Autorité de développement urbain",
+        status_approvals_2: "Accord du Conseil d'investissement en place",
+        status_approvals_3: "Tous les permis nécessaires en cours",
+        invest_title: "Pourquoi investir dans le WCC Colombo",
+        invest_description: "Avantages clés de ce projet transformateur",
+        invest_structure_title: "Structure emblématique",
+        invest_structure_description: "Une tour ultramoderne au cœur de Colombo, destinée à être la plus haute d'Asie avec une architecture unique et innovante qui redéfinira l'horizon de la ville.",
+        invest_structure_alt: "Architecture emblématique",
+        invest_economic_title: "Impact économique",
+        invest_economic_description: "Attire les entreprises locales et internationales, créant des milliers d'emplois pour les locaux et les étrangers tout en soutenant les entreprises et services à proximité.",
+        invest_economic_alt: "Impact économique",
+        invest_sustainability_title: "Durabilité",
+        invest_sustainability_description: "Intègre des techniques de construction verte de pointe et des pratiques durables pour minimiser l'impact environnemental tout en maximisant l'efficacité.",
+        invest_sustainability_alt: "Durabilité",
+        invest_destination_title: "Attrait de la destination",
+        invest_destination_description: "Développement à usage mixte avec des installations récréatives qui attireront les touristes, les non-résidents et les locaux, positionnant Colombo comme une destination internationale.",
+        invest_destination_alt: "Attrait de la destination",
+        specifications_title: "Spécifications du projet",
+        specifications_description: "L'échelle et la portée du Centre Capital Mondial Colombo",
+        spec_area_title: "Surface totale",
+        spec_area_value: "800 000 m²",
+        spec_apartments_title: "Appartements",
+        spec_apartments_value: "1 200 unités",
+        spec_retail_title: "Points de vente",
+        spec_retail_value: "3 000 espaces",
+        spec_hotel_title: "Chambres d'hôtel",
+        spec_hotel_value: "2 000 chambres",
+        spec_cost_title: "Coût total du projet",
+        spec_cost_value: "2,5 milliards de dollars",
+        cost_title: "Répartition des coûts de construction",
+        cost_description: "Allocation d'investissement détaillée",
+        cost_table_description: "Description",
+        cost_table_cost: "Coût",
+        cost_land: "Coût du terrain",
+        cost_consultant: "Coût total des consultants",
+        cost_main_works: "Travaux principaux (800 000 m² × 200 $/m²)",
+        cost_access: "Connexion d'accès, routes, viaduc, etc.",
+        cost_marketing: "Publicité, ventes et marketing",
+        cost_finishes: "Finitions spéciales, décoration des zones communes, meubles et équipements installés",
+        cost_contingency: "Contingence",
+        cost_total: "Total",
+        timeline_title: "Chronologie du projet",
+        timeline_description: "Phases clés du développement",
+        timeline_2019_title: "2019-2020",
+        timeline_2019_description: "Phase de planification et de conception avec les architectes RSP. Acquisition initiale du terrain et approbations sécurisées.",
+        timeline_2020_title: "2020",
+        timeline_2020_description: "Investissement annuel estimé : 445 millions de dollars. Début des travaux de fondation et de construction initiale.",
+        timeline_2021_title: "2021",
+        timeline_2021_description: "Investissement annuel estimé : 450 millions de dollars. Début de la construction verticale avec développement de la structure de base.",
+        timeline_2022_title: "2022",
+        timeline_2022_description: "Investissement annuel estimé : 838 millions de dollars. Réalisation de jalons de construction majeurs avec la tour atteignant une hauteur significative.",
+        timeline_2023_title: "2023",
+        timeline_2023_description: "Phase de construction finale avec aménagements intérieurs et mise en service des systèmes. Préparation pour l'ouverture officielle.",
+        revenue_title: "Projections de revenus",
+        revenue_description: "Perspectives financières pour le Centre Capital Mondial",
+        revenue_sale_title: "Revenus des ventes",
+        revenue_sale_value: "2,33 milliards de dollars",
+        revenue_sale_description: "Projeté à partir des ventes d'unités résidentielles et commerciales pendant la phase de développement.",
+        revenue_lease_title: "Revenus annuels de location",
+        revenue_lease_value: "500 millions de dollars",
+        revenue_lease_description: "Revenus récurrents attendus des opérations de commerce de détail, de bureaux et d'hospitalité après achèvement.",
+        revenue_assets_title: "Actifs post-vente",
+        revenue_assets_description: "Le Centre Capital Mondial conservera 1,5 milliard de dollars en actifs premium tout en générant 500 millions de dollars de revenus annuels à partir des opérations en cours.",
+        cta_title: "Rejoignez ce projet transformateur",
+        cta_description: "Opportunités d'investissement disponibles dans le prochain monument emblématique d'Asie",
+        cta_investment: "Demandes d'investissement",
+        cta_brochure: "Demander une brochure",
+        footer_address_title: "Centre Capital Mondial Limitée",
+        footer_address: "Colombo, Sri Lanka",
+        footer_network: "Réseau international",
+        footer_links_title: "Liens rapides",
+        footer_contact_title: "Contactez-nous",
+        footer_phone_1: "Tél. : +971 4259 7167",
+        footer_phone_2: "Mobile : +971 4259 4795",
+        footer_email_1: "Email : info@wishgroup.ae",
+        footer_email_2: "Email : info@wishgroup.world",
+        footer_copyright: "Copyright 2025 - Centre Capital Mondial Limitée. Tous droits réservés.",
+        footer_logo_alt: "Logo du groupe Wish pour le pied de page"
+    },    si: {
+        page_title: "ලෝක රාජධානි මධ්‍යස්ථානය | කොළඹේ අයිකනික් සංවර්ධනය",
+        meta_description: "ලෝක රාජධානි මධ්‍යස්ථාන සීමිත - ශ්‍රී ලංකාවේ කොළඹ ආසියාවේ උසම කුළුණ සංවර්ධනය කිරීම",
+        meta_keywords: "කොළඹ, ශ්‍රී ලංකාව, අහස උසට ගොඩනැඟිල්ල, මිශ්‍ර භාවිත සංවර්ධනය, WCC, ලෝක රාජධානි මධ්‍යස්ථානය",
+        scroll_to_top: "ඉහළට ලිස්සා යන්න",
+        menu_home: "මුල් පිටුව",
+        menu_about: "අප ගැන",
+        menu_projects: "ව්‍යාපෘති",
+        menu_investments: "ආයෝජන",
+        menu_news: "පුවත්",
+        menu_contact: "සම්බන්ධ වන්න",
+        logo_alt: "විෂ් සමූහ ලාංඡනය",
+        hero_title: "ලෝක රාජධානි මධ්‍යස්ථානය",
+        hero_description: "ශ්‍රී ලංකාවේ හදවතේ ආසියාවේ උසම කුළුණ",
+        hero_label: "ඩොලර් බිලියන 2.5 ව්‍යාපෘතිය",
+        hero_alt: "ලෝක රාජධානි මධ්‍යස්ථාන පසුබිම",
+        intro_title: "ලෝක රාජධානි මධ්‍යස්ථාන සීමිත",
+        intro_description: "ආයෝජන, ව්‍යාපෘති, සහ ගෝලීය වේදිකාවක වෙළඳාම පිළිබඳ විශේෂිත වූ ජාත්‍යන්තර ජාලයක් සහිත විවිධත්වයක් ඇති සමූහයකි",
+        vision_title: "අපගේ දැක්ම",
+        vision_description: "මානවත්වයෙන් ආනුශාසිත ලෝක රාජධානි වෙළඳපොළක් නිර්මාණය කිරීම, අයිකනික් ගෘහනිර්මාණ ශිල්පය සහ තිරසාර සංවර්ධනය සමඟ කොළඹ ගෝලීය ගමනාන්තයක් බවට පරිවර්තනය කිරීම.",
+        mission_title: "අපගේ මෙහෙවර",
+        mission_description: "ලෝක මට්ටමේ ගෘහනිර්මාණ ශිල්පීන් සහ ඉංජිනේරුවන් සමඟ සම්බන්ධීකරණය කරමින්, නවෝත්පාදනය, මානවත්වය, සහ විශිෂ්ට ව්‍යාපෘති ක්‍රියාත්මක කිරීම කෙරෙහි අවධානය යොමු කරමින්, සීමාවන් තල්ලු කරන ව්‍යුහාත්මක නිර්මාණ සංවර්ධනය කිරීම.",
+        status_title: "වත්මන් ව්‍යාපෘති තත්ත්වය",
+        status_description: "ලෝක රාජධානි මධ්‍යස්ථාන කොළඹ සංවර්ධන ප්‍රගතිය",
+        status_engineering_title: "ඉංජිනේරු හා නිර්මාණ",
+        status_engineering_1: "RSP ප්‍රධාන ගෘහනිර්මාණ ශිල්පියා ලෙස පත් කර ඇත",
+        status_engineering_2: "ව්‍යුහාත්මක ඉංජිනේරු විද්‍යාව ඉක්මනින් ආරම්භ වේ",
+        status_engineering_3: "MEP නිර්මාණ සමාගම් ඇගයීමට ලක්ව ඇත",
+        status_engineering_4: "Q-Pro Services ප්‍රමාණ සමීක්ෂණය හසුරුවයි",
+        status_investments_title: "ආයෝජන",
+        status_investments_1: "භූමි ගෙවීම් ආරම්භ කර ඇත",
+        status_investments_2: "BOI සෘජු ආයෝජන ගිවිසුම අත්සන් කර ඇත",
+        status_investments_3: "කොළඹේ ප්‍රධාන ස්ථානය ආරක්ෂා කර ඇත",
+        status_approvals_title: "අනුමැතිය",
+        status_approvals_1: "නාගරික සංවර්ධන අධිකාරියේ අනුමැතිය",
+        status_approvals_2: "ආයෝජන මණ්ඩල ගිවිසුම ස්ථාපිතයි",
+        status_approvals_3: "සියලුම අවශ්‍ය බලපත්‍ර ප්‍රගතියේ",
+        invest_title: "WCC කොළඹට ආයෝජනය කරන්නේ ඇයි?",
+        invest_description: "මෙම පරිවර්තනීය ව්‍යාපෘතියේ ප්‍රධාන ප්‍රතිලාභ",
+        invest_structure_title: "අයිකනික් ව්‍යුහය",
+        invest_structure_description: "කොළඹේ හදවතේ අති නවීන කුළුණක්, ආසියාවේ උසම ලෙස සැලකිලිමත් වන, නගර අහස රේඛාව නැවත අර්ථකථනය කරන අද්විතීය හා නව්‍ය ගෘහනිර්මාණ ශිල්පය සමඟ.",
+        invest_structure_alt: "අයිකනික් ගෘහනිර්මාණ ශිල්පය",
+        invest_economic_title: "ආර්ථික බලපෑම",
+        invest_economic_description: "දේශීය හා ජාත්‍යන්තර ව්‍යාපාර ආකර්ෂණය කරයි, දේශීය හා විදේශීය පුද්ගලයින් සඳහා දහස් ගණනක් රැකියා බිහිකරමින්, අසල්වැසි ව්‍යාපාර හා සේවාවන්ට සහාය වේ.",
+        invest_economic_alt: "ආර්ථික බලපෑම",
+        invest_sustainability_title: "තිරසාරබව",
+        invest_sustainability_description: "පරිසර බලපෑම අවම කරමින් කාර්යක්ෂමතාව උපරිම කිරීමට අති නවීන හරිත ගොඩනැඟිලි තාක්ෂණයන් හා තිරසාර පිළිවෙත් ඇතුළත් කරයි.",
+        invest_sustainability_alt: "තිරසාරබව",
+        invest_destination_title: "ගමනාන්ත ආකර්ෂණය",
+        invest_destination_description: "විනෝදාත්මක පහසුකම් සහිත මිශ්‍ර භාවිත සංවර්ධනය, සංචාරකයින්, විදේශිකයින්, සහ දේශීය ජනතාව ආකර්ෂණය කරමින්, කොළඹ ජාත්‍යන්තර ගමනාන්තයක් ලෙස ස්ථානගත කරයි.",
+        invest_destination_alt: "ගමනාන්ත ආකර්ෂණය",
+        specifications_title: "ව්‍යාපෘති විශේෂාංග",
+        specifications_description: "ලෝක රාජධානි මධ්‍යස්ථාන කොළඹේ පරිමාණය සහ විෂය පථය",
+        spec_area_title: "මුළු භූමි ප්‍රමාණය",
+        spec_area_value: "වර්ග මීටර් 800,000",
+        spec_apartments_title: "නිවාස",
+        spec_apartments_value: "ඒකක 1,200",
+        spec_retail_title: "සිල්ලර වෙළඳසැල්",
+        spec_retail_value: "අවකාශ 3,000",
+        spec_hotel_title: "හෝටල් කාමර",
+        spec_hotel_value: "කාමර 2,000",
+        spec_cost_title: "මුළු ව්‍යාපෘති පිරිවැය",
+        spec_cost_value: "ඩොලර් බිලියන 2.5",
+        cost_title: "ඉදිකිරීම් පිරිවැය බිඳවැටීම",
+        cost_description: "විස්තරාත්මක ආයෝජන වෙන් කිරීම",
+        cost_table_description: "විස්තරය",
+        cost_table_cost: "පිරිවැය",
+        cost_land: "භූමි පිරිවැය",
+        cost_consultant: "සියලුම උපදේශක පිරිවැය",
+        cost_main_works: "ප්‍රධාන වැඩ (වර්ග මීටර් 800,000 × ඩොලර් 200/වර්ග මීටර්)",
+        cost_access: "ප්‍රවේශ සම්බන්ධතා, මාර්ග, උඩු මාර්ග, ආදිය",
+        cost_marketing: "වෙළඳ ප්‍රචාරණ, විකුණුම් සහ අලෙවිකරණය",
+        cost_finishes: "විශේෂ ආලේපන, පොදු ප්‍රදේශ සැරසිලි, සවිකළ ගෘහ භාණ්ඩ සහ උපකරණ",
+        cost_contingency: "අනපේක්ෂිත",
+        cost_total: "මුළු",
+        timeline_title: "ව්‍යාපෘති කාලරාමුව",
+        timeline_description: "සංවර්ධනයේ ප්‍රධාන අදියර",
+        timeline_2019_title: "2019-2020",
+        timeline_2019_description: "RSP ගෘහනිර්මාණ ශිල්පීන් සමඟ සැලසුම් හා නිර්මාණ අදියර. ආරම්භක භූමි අත්පත් කර ගැනීම සහ අනුමැතිය ලබා ගැනීම.",
+        timeline_2020_title: "2020",
+        timeline_2020_description: "ආසන්න වාර්ෂික ආයෝජනය: ඩොලර් මිලියන 445. අත්තිවාරම් වැඩ ආරම්භය සහ ආරම්භක ඉදිකිරීම.",
+        timeline_2021_title: "2021",
+        timeline_2021_description: "ආසන්න වාර්ෂික ආයෝජනය: ඩොලර් මිලියන 450. මූලික ව්‍යුහය සංවර්ධනය සමඟ සිරස් ඉදිකිරීම ආරම්ත වේ.",
+        timeline_2022_title: "2022",
+        timeline_2022_description: "ආසන්න වාර්ෂික ආයෝජනය: ඩොලර් මිලියන 838. කුළුණ සැලකිය යුතු උසකට ළඟා වීමත් සමඟ ප්‍රධාන ඉදිකිරීම් සන්ධිස්ථාන ලබා ගැනීම.",
+        timeline_2023_title: "2023",
+        timeline_2023_description: "අභ්‍යන්තර ආලේපන සහ පද්ධති ක්‍රියාත්මක කිරීම සමඟ අවසාන ඉදිකිරීම් අදියර. උත්කර්ෂවත් ආරම්භය සඳහා සූදානම් වීම.",
+        revenue_title: "ආදායම් පුරෝකථන",
+        revenue_description: "ලෝක රාජධානි මධ්‍යස්ථානයේ මූල්‍ය ඉදිරිදර්ශන",
+        revenue_sale_title: "විකුණුම් ආදායම",
+        revenue_sale_value: "ඩොලර් බිලියන 2.33",
+        revenue_sale_description: "සංවර්ධන අදියරේදී නේවාසික හා වාණිජ ඒකක විකිණීමෙන් පුරෝකථනය කර ඇත.",
+        revenue_lease_title: "වාර්ෂික කුලී ආදායම",
+        revenue_lease_value: "ඩොලර් මිලියන 500",
+        revenue_lease_description: "අවසන් වූ පසු සිල්ලර, කාර්යාල, සහ ආගන්තුක සත්කාරක ක්‍රියාකාරකම්වලින් බලාපොරොත්තු වන පුනරාවර්තන ආදායම.",
+        revenue_assets_title: "විකුණුම් පසු ධනය",
+        revenue_assets_description: "ලෝක රාජධානි මධ්‍යස්ථානය ඩොලර් බිලියන 1.5ක උසස් ධනය රඳවා ගනිමින්, ලබා ගන්නා ක්‍රියාකාරකම්වලින් වාර්ෂිකව ඩොලර් මිලියන 500ක ආදායමක් උපයයි.",
+        cta_title: "මෙම පරිවර්තනීය ව්‍යාපෘතියට එක්වන්න",
+        cta_description: "ආසියාවේ ඊළඟ අයිකනික් බිම් සලකුණේ ආයෝජන අවස්ථා ඇත",
+        cta_investment: "ආයෝජන විමසීම්",
+        cta_brochure: "බ්‍රෝෂරය ඉල්ලන්න",
+        footer_address_title: "ලෝක රාජධානි මධ්‍යස්ථාන සීමිත",
+        footer_address: "කොළඹ, ශ්‍රී ලංකාව",
+        footer_network: "ජාත්‍යන්තර ජාලය",
+        footer_links_title: "ඉක්මන් සබැඳි",
+        footer_contact_title: "අප හා සම්බන්ධ වන්න",
+        footer_phone_1: "දුරකථන: +971 4259 7167",
+        footer_phone_2: "ජංගම: +971 4259 4795",
+        footer_email_1: "විද්‍යුත් තැපෑල: info@wishgroup.ae",
+        footer_email_2: "විද්‍යුත් තැපෑල: info@wishgroup.world",
+        footer_copyright: "පිටපත් අයිතිය 2025 - ලෝක රාජධානි මධ්‍යස්ථාන සීමිත. සියලුම හිමිකම් ඇවිරිණි.",
+        footer_logo_alt: "විෂ් සමූහ පාදක ලාංඡනය"
+    },
+    dv: {
+        page_title: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު | ކޮޅަނބުގެ ސަމާން ތަރައްޤީ",
+        meta_description: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު ލިމިޓެޑް - ސްރީލަންކާގެ ކޮޅަނބުގައި އޭޝިޔާގެ އެންމެ ދަށް ޓަވަރ ތަރައްޤީ ކުރުން",
+        meta_keywords: "ކޮޅަނބު, ސްރީލަންކާ, ސްކައިސްކްރޭޕަރ, މިކްސް-ޔޫސް ޑިވެލޮޕްމަންޓް, WCC, ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު",
+        scroll_to_top: "މަތިލަށް ސްކްރޯލް ކުރަން",
+        menu_home: "މުހިން",
+        menu_about: "ތިމަން ގެ ގޮތުން",
+        menu_projects: "ޕްރޮޖެކްޓްތައް",
+        menu_investments: "އިންވެސްޓްމަންޓް",
+        menu_news: "ޚަބަރު",
+        menu_contact: "ކޮންޓެކްޓް",
+        logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+        hero_title: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު",
+        hero_description: "ސްރީލަންކާގެ ހިތުގައި އޭޝިޔާގެ އެންމެ ދަށް ޓަވަރ",
+        hero_label: "$2.5 ބިލިއަން ޕްރޮޖެކްޓް",
+        hero_alt: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު ބެކްގްރައުންޑް",
+        intro_title: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު ލިމިޓެޑް",
+        intro_description: "އިންވެސްޓްމަންޓް، ޕްރޮޖެކްޓްތައް، އަދި ގޯލްބަލް ޕްލެޓްފޯމެއްގައި ވިޔަފާރި ކުރުމަށް ވިސްނަމުން މަސައްކަތް ކުރާ އެކި ޖެހުންތަކުގެ ގްރޫޕެއް، އިންޓަރނެޝަނަލް ނެޓްވަރކެއް އެކު",
+        vision_title: "ތިމަންގެ ވިޝަން",
+        vision_description: "އިންސާނުން އިންސްޕަޔަރ ކޮށް ދުނިޔޭގެ ރައްޓަށް މާރކެޓެއް ހެދުމަށް، ސަމާން އެކިޓެކްޗަރ އަދި ސަސްޓެއިނަބަލް ޑިވެލޮޕްމަންޓް އެކު ކޮޅަނބު ގޯލްބަލް ޑެސްޓިނޭޝަނަކަށް ބަދަލު ކުރުން.",
+        mission_title: "ތިމަންގެ މިޝަން",
+        mission_description: "ދުނިޔޭގެ މަތިކުޅަ އެކިޓެކްޓުތަކާއި އިންޖިނިއަރުތަކާ އެކު ކޮއޯޑިނޭޓް ކޮށް، އިނޮވޭޝަން، އިންސާނި ގޮތް، އަދި މޮޅު ޕްރޮޖެކްޓް އެކްސެކިއުޝަން އަށް ބަލައި ހިފަތެއް ދިނުމަށް، ސީމާތައް ދަމައިދިއުން ސްޓްރަކްޗަރަލް ޑިޒައިންތައް ތަރައްޤީ ކުރުން.",
+        status_title: "މިހާރުގެ ޕްރޮޖެކްޓް ސްޓޭޓަސް",
+        status_description: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު ކޮޅަނބު ތަރައްޤީ ޕްރޮގްރެސް",
+        status_engineering_title: "އިންޖިނިއަރިން އަދި ޑިޒައިން",
+        status_engineering_1: "RSP ލީޑް އެކިޓެކްޓަކަށް ނަންދެވިފައި",
+        status_engineering_2: "ސްޓްރަކްޗަރަލް އިންޖިނިއަރިން ވަގުތު ފެށިގެން",
+        status_engineering_3: "MEP ޑިޒައިން ކުންފުނިތައް އިވެލުއޭޝަން ކުރެވެން އޮތް",
+        status_engineering_4: "Q-Pro Services ކޮންޓިޓީ ސަރވެއިން ހެންޑަލް ކުރަން",
+        status_investments_title: "އިންވެސްޓްމަންޓް",
+        status_investments_1: "ބިމުގެ ޕޭމަންޓް ކޮށްފައި",
+        status_investments_2: "BOI ޑައިރެކްޓް އިންވެސްޓްމަންޓް އެގްރީމަންޓް ސައިން ކޮށްފައި",
+        status_investments_3: "ކޮޅަނބުގެ ޕްރައިމް ލޮކޭޝަން ސިކިއޮރ ކޮށްފައި",
+        status_approvals_title: "އެޕްރޫވަލްތައް",
+        status_approvals_1: "އަރބަން ޑިވެލޮޕްމަންޓް އޮތޮރިޓީ އެޕްރޫވަލް",
+        status_approvals_2: "ބޯޑް އޮފް އިންވެސްޓްމަންޓް އެގްރީމަންޓް ތިބެ",
+        status_approvals_3: "ބޭނުންވާ ހުރިހާ ޕަރމިޓްތައް ޕްރޮގްރެސް ކުރެވެން",
+        invest_title: "WCC ކޮޅަނބުގައި އިންވެސްޓް ކުރުމުގެ ސަބަބު",
+        invest_description: "މި ޓްރާންސްފޮމޭޓިވް ޕްރޮޖެކްޓްގެ މުހިންމު ފައިދާތައް",
+        invest_structure_title: "ސަމާން ސްޓްރަކްޗަރ",
+        invest_structure_description: "ކޮޅަނބުގެ ހިތުގައި ސްޓޭޓް-އޮފް-ދަ-އާޓް ޓަވަރެއް، އޭޝިޔާގެ އެންމެ ދަށް ޓަވަރ ކަމަށް ވާ، ނަގަރުގެ ސްކައިލައިން ރީޑިފައިން ކުރާ އަދިވަންތަ އަދި އިނޮވޭޓިވް އެކިޓެކްޗަރ އެކު.",
+        invest_structure_alt: "ސަމާން އެކިޓެކްޗަރ",
+        invest_economic_title: "އިކޮނޮމިކް އިމްޕެކްޓް",
+        invest_economic_description: "ލޯކަލް އަދި އިންޓަރނެޝަނަލް ބިޒިނެސްތައް ޖަލްބު ކުރަން، ލޯކަލް އަދި ވިދޭޝީ މީހުންނަށް ހާސިލް ކުރާ ޖޮބް ތަކާ އެކު އަރުގައި ބިޒިނެސް އަދި ސަރވިސްތަކަށް ސަޕޯރޓް ކުރަން.",
+        invest_economic_alt: "އިކޮނޮމިކް އިމްޕެކްޓް",
+        invest_sustainability_title: "ސަސްޓެއިނަބިލިޓީ",
+        invest_sustainability_description: "މިނިމައިޒް ކުރުމަށް ކަށަވަރު އެންވައިރަންމަންޓަލް އިމްޕެކްޓް އަދި މެކްސިމައިޒް ކުރުމަށް ކަށަވަރު ކައިން ބިލްޑިން ޓެކްނިކްތަކާ ސަސްޓެއިނަބަލް ޕްރެކްޓިސްތައް އިންކޮޕަރެޓް ކުރަން.",
+        invest_sustainability_alt: "ސަސްޓެއިނަބިލިޓީ",
+        invest_destination_title: "ޑެސްޓިނޭޝަން އެޕީލް",
+        invest_destination_description: "ރިކްރިއޭޝަނަލް ފެސިލިޓީތަކާ އެކު މިކްސް-ޔޫސް ޑިވެލޮޕްމަންޓް، ޓޫރިސްޓުތަކާ، ނޮން-ރެސިޑަންޓުތަކާ، ލޯކަލް މީހުން ޖަލްބު ކުރަން، ކޮޅަނބު އިންޓަރނެޝަނަލް ޑެސްޓިނޭޝަނަކަށް ޕޮޒިޝަން ކުރަން.",
+        invest_destination_alt: "ޑެސްޓިނޭޝަން އެޕީލް",
+        specifications_title: "ޕްރޮޖެކްޓް ސްޕެސިފިކޭޝަންތައް",
+        specifications_description: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު ކޮޅަނބުގެ ސްކޭލާ އަދި ސްކޯޕް",
+        spec_area_title: "ޖުމްލަ އޭރިއާ",
+        spec_area_value: "800,000 ސްކޮފިޓް",
+        spec_apartments_title: "އެޕާޓްމަންޓް",
+        spec_apartments_value: "1,200 ޔުނިޓް",
+        spec_retail_title: "ރިޓެއިލް އައުޓްލެޓްތައް",
+        spec_retail_value: "3,000 ސްޕޭސް",
+        spec_hotel_title: "ހޮޓަލް ރޫމްތައް",
+        spec_hotel_value: "2,000 ރޫމް",
+        spec_cost_title: "ޖުމްލަ ޕްރޮޖެކްޓް ކޮސްޓް",
+        spec_cost_value: "$2.5 ބިލިއަން",
+        cost_title: "ކަންސްޓްރަކްޝަން ކޮސްޓް ބްރޭކްޑައުން",
+        cost_description: "ޑިޓެއިލް އިންވެސްޓްމަންޓް އެލޮކޭޝަން",
+        cost_table_description: "ޑިސްކްރިޕްޝަން",
+        cost_table_cost: "ކޮސްޓް",
+        cost_land: "ބިމުގެ ކޮސްޓް",
+        cost_consultant: "ހުރިހާ ކޮންސަލްޓަންޓް ކޮސްޓް",
+        cost_main_works: "މެއިން ވާރކްތައް (800,000 ސްކޮފިޓް × $200/ސްކޮފިޓް)",
+        cost_access: "އެކްސެސް ކޮނެކްޝަން، ރޯޑުތައް، ފްލައިއޮވަރ، އެއްޗެޓެރަ",
+        cost_marketing: "އެޑްވަޓައިސިން، ސަލެސް އަދި މާކެޓިން",
+        cost_finishes: "ސްޕެޝަލް ފިނިޝް، ކޮމަން އޭރިއާ ޑެކޮރޭޝަން، ފިޓެޑް ފަރނިޗަރ އަދި އިކްވިޕްމަންޓް",
+        cost_contingency: "ކޮންޓިންޖެންސީ",
+        cost_total: "ޖުމްލަ",
+        timeline_title: "ޕްރޮޖެކްޓް ޓައިމްލައިން",
+        timeline_description: "ތަރައްޤީގެ މުހިންމު ފޭސްތައް",
+        timeline_2019_title: "2019-2020",
+        timeline_2019_description: "RSP އެކިޓެކްތަކާ އެކު ޕްލޭނިން އަދި ޑިޒައިން ފޭސް. އިނިޝަލް ބިމު އެކްވިޒިޝަން އަދި އެޕްރޫވަލް ސިކިއޮރ ކޮށްފައި.",
+        timeline_2020_title: "2020",
+        timeline_2020_description: "އެސްޓިމޭޓް ކޮށްފައިވާ އޭނުއަލް އިންވެސްޓްމަންޓް: $445 މިލިއަން. ފައުންޑޭޝަން ވާރކް އަދި އިނިޝަލް ކަންސްޓްރަކްޝަން ފެށުން.",
+        timeline_2021_title: "2021",
+        timeline_2021_description: "އެސްޓިމޭޓް ކޮށްފައިވާ އޭނުއަލް އިންވެސްޓްމަންޓް: $450 މިލިއަން. ކޯރ ސްޓްރަކްޗަރ ތަރައްޤީ އެކު ވަރޓިކަލް ކަންސްޓްރަކްޝަން ފެށުން.",
+        timeline_2022_title: "2022",
+        timeline_2022_description: "އެސްޓިމޭޓް ކޮށްފައިވާ އޭނުއަލް އިންވެސްޓްމަންޓް: $838 މިލިއަން. ޓަވަރ މިނިގަނޑަށް ފަހަތަށް ވާލައި، މެޖަރ ކަންސްޓްރަކްޝަން މައިލްސްޓޯންތައް ހާސިލް ކުރެވިފައި.",
+        timeline_2023_title: "2023",
+        timeline_2023_description: "އިންޓީރިއަރ ފިޓް-އައުޓްތަކާ ސިސްޓަމް ކޮމިޝަނިން އެކު ފައިނަލް ކަންސްޓްރަކްޝަން ފޭސް. ގްރޭންޑް އޯޕަނިންގަށް ތައަޔާރު ކުރުން.",
+        revenue_title: "ރެވެނިއު ޕްރޮޖެކްޝަންތައް",
+        revenue_description: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒުގެ ފައިނޭންޝަލް އައުޓްލުކް",
+        revenue_sale_title: "ސަލެ ރެވެނިއު",
+        revenue_sale_value: "$2.33 ބިލިއަން",
+        revenue_sale_description: "ތަރައްޤީ ފޭސްގައި ރެސިޑެންޝަލް އަދި ކޮމާޝަލް ޔުނިޓް ވިއްކުމުން ޕްރޮޖެކްޓް ކުރެވިފައި.",
+        revenue_lease_title: "އޭނުއަލް ލީސް ރެވެނިއު",
+        revenue_lease_value: "$500 މިލިއަން",
+        revenue_lease_description: "ފަސިލައިފައިފި ފަހު ރިޓެއިލް، އޮފިސް، އަދި ހޮސްޕިޓަލިޓީ އޮޕަރޭޝަންތަކުން ބަލާޕޮރޮއްޓު ކުރެވެން ރިކަރިންގ ރެވެނިއު.",
+        revenue_assets_title: "ސަލެ ފަހު އެސެޓްތައް",
+        revenue_assets_description: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު $1.5 ބިލިއަން ޕްރީމިއަމް އެސެޓްތައް ރިޓެއިން ކުރާނެ، އަދި އޮންގޯއިން އޮޕަރޭޝަންތަކުން އޭނުއަލް $500 މިލިއަން ރެވެނިއު ޖެނަރޭޓް ކުރާނެ.",
+        cta_title: "މި ޓްރާންސްފޮމޭޓިވް ޕްރޮޖެކްޓަށް ޖޮއިން ކުރަން",
+        cta_description: "އޭޝިޔާގެ އެންމެ ފަހު ސަމާން ލޭންޑްމާކަށް އިންވެސްޓްމަންޓް އޮޕޮރޓިއުނިޓީތައް އެވެ",
+        cta_investment: "އިންވެސްޓްމަންޓް އިންކުއައިރީތައް",
+        cta_brochure: "ބްރޮޝަރ ރިކުއެސްޓް ކުރަން",
+        footer_address_title: "ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު ލިމިޓެޑް",
+        footer_address: "ކޮޅަނބު، ސްރީލަންކާ",
+        footer_network: "އިންޓަރނެޝަނަލް ނެޓްވަރކް",
+        footer_links_title: "ކުއިކް ލިންކްތައް",
+        footer_contact_title: "ތިމަންނަށް ކޮންޓެކްޓް ކުރަން",
+        footer_phone_1: "ޓެލިފޯން: +971 4259 7167",
+        footer_phone_2: "މޮބައިލް: +971 4259 4795",
+        footer_email_1: "އީމެއިލް: info@wishgroup.ae",
+        footer_email_2: "އީމެއިލް: info@wishgroup.world",
+        footer_copyright: "ކޮޕީރައިޓް 2025 - ދުނިޔޭގެ ރައްޓަށް މަރުކަޒު ލިމިޓެޑް. ހުރިހާ ރައިޓްތައް ރިޒަރވް ކޮށްފައި.",
+        footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ"
+    }
+};
+
+function setLanguage(lang) {
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'META') {
+                element.setAttribute('content', translations[lang][key]);
+            } else if (element.tagName === 'IMG') {
+                element.setAttribute('alt', translations[lang][key]);
+            } else if (element.tagName === 'TITLE') {
+                document.title = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('language', lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language') || 'en';
+    document.getElementById('language-switcher').value = savedLang;
+    setLanguage(savedLang);
+});
+
+</script>
 </body>
 </html>
