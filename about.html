@@ -47,39 +47,42 @@
                             </div>
 
                             <div class="de-flex-col">
-                               <div class="de-flex-col header-col-mid">
+                                <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
-                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
-                                          <ul>
-                                               <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
-    <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
-    <li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
-    <li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
+                                        <li><a class="menu-item" href="index.html" data-translate="home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-translate="about_us">About Us</a></li>
+                                        <li><a class="menu-item" href="" data-translate="divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="" data-translate="projects">Projects</a></li>
+                                        <li><a class="menu-item" href="" data-translate="countries">Countries</a></li>
+                                        <li><a class="menu-item" href="" data-translate="news">News</a></li>
+                                        <li><a class="menu-item" href="" data-translate="our_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="" data-translate="career">Career</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="contact_us">Contact Us</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="tickets.html" data-translate="tickets_style_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-translate="tickets_style_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-translate="news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-translate="news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-translate="contact">Contact</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
-                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
-                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
-                                        <li><a class="menu-item" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
-                                        <li>
-                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
-                                          
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
-                                <select id="language-switcher" onchange="setLanguage(this.value)">
-                                    <option value="en">EN</option>
-                                    <option value="ar">AR</option>
-                                    <option value="fr">FR</option>
-                                    <option value="si">SI</option>
-                                    <option value="dv">DV</option>
-                                </select>
+                <div class="de-flex-col">
+    <select id="language-switcher" onchange="setLanguage(this.value)">
+        <option value="en" selected>EN</option>
+        <option value="ar">AR</option>
+        <option value="fr">FR</option>
+        <option value="si">SI</option>
+        <option value="dv">DV</option>
+    </select>
+    <div class="menu_side_area">
+        <span id="menu-btn"></span>
+    </div>
+</div>
+
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -180,62 +183,277 @@
             </div>
         </section>
 
-        <section id="section-speakers" class="bg-dark section-dark text-light">
-            <div class="container">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 relative z-3">
-                        <div class="text-center">
-                            <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="our_team">Our Team</div>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="meet_the_visionaries">Meet the Visionaries</h2>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask">
-                            <img src="images/team/1.webp" class="w-100 hover-scale-1-1" alt="">
-                            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                            <div class="abs w-100 start-0 bottom-0 z-3">
-                                <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                    <h3 class="mb-0" data-translate="team_member_1_name">Asaid Ahmed Arabi Moulana</h3>
-                                    <span data-translate="team_member_1_role">Group Chairman & Founder</span>
-                                </div>
-                                <div class="gradient-edge-bottom h-100 op-8"></div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const teamContainer = document.getElementById('teamContainer');
+        const replayButton = document.getElementById('replayButton');
+        const viewTeamButton = document.getElementById('viewTeamButton');
+        const notification = document.getElementById('notification');
+        
+        // Team member data
+        const teamMembers = [
+            {
+                name: "Asaid Ahmed",
+                role: "Chairman & Founder",
+                img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Fathih Afeef",
+                role: "Group CEO",
+                img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Afzal Khalid",
+                role: "Project Director",
+                img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Sarah Johnson",
+                role: "CMO",
+                img: "https://images.unsplash.com/photo-1580489944761-15a19a1a1a1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Michael Chen",
+                role: "Technical Director",
+                img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "David Wilson",
+                role: "Finance Director",
+                img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Emma Roberts",
+                role: "Design Lead",
+                img: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "James Miller",
+                role: "Operations Head",
+                img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db1604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Olivia Parker",
+                role: "HR Director",
+                img: "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Robert Taylor",
+                role: "Tech Lead",
+                img: "https://images.unsplash.com/photo-1590086782792-42dd2350140d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        // Show notification function
+        function showNotification(message) {
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Create team member elements
+        function createTeamMembers() {
+            teamContainer.innerHTML = '';
+            
+            teamMembers.forEach((member, index) => {
+                const memberElement = document.createElement('div');
+                memberElement.className = 'team-member';
+                memberElement.innerHTML = `
+                    <div class="member-img-container">
+                        <img src="${member.img}" class="member-img" alt="${member.name}">
+                        <div class="member-overlay">
+                            <h3 class="member-name">${member.name}</h3>
+                            <p class="member-role">${member.role}</p>
+                            <div class="member-social">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
+                `;
+                teamContainer.appendChild(memberElement);
+            });
+        }
 
-                    <div class="col-lg-4">
-                        <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask">
-                            <img src="images/team/2.webp" class="w-100 hover-scale-1-1" alt="">
-                            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                            <div class="abs w-100 start-0 bottom-0 z-3">
-                                <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                    <h3 class="mb-0" data-translate="team_member_2_name">Fathih Afeef</h3>
-                                    <span data-translate="team_member_2_role">Group CEO</span>
-                                </div>
-                                <div class="gradient-edge-bottom h-100 op-8"></div>
-                            </div>
-                        </div>
-                    </div>
+        // Initial random shuffle positions
+        function setRandomPositions() {
+            const members = document.querySelectorAll('.team-member');
+            const containerWidth = teamContainer.offsetWidth;
+            const containerHeight = teamContainer.offsetHeight;
+            
+            members.forEach(member => {
+                const randomX = Math.random() * (containerWidth - 200);
+                const randomY = Math.random() * (containerHeight - 250);
+                
+                member.style.left = `${randomX}px`;
+                member.style.top = `${randomY}px`;
+                member.style.opacity = '1';
+                member.classList.remove('center');
+            });
+        }
 
-                    <div class="col-lg-4">
-                        <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask">
-                            <img src="images/team/3.webp" class="w-100 hover-scale-1-1" alt="">
-                            <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                            <div class="abs w-100 start-0 bottom-0 z-3">
-                                <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                    <h3 class="mb-0" data-translate="team_member_3_name">Afzal Khalid</h3>
-                                    <span data-translate="team_member_3_role">Director – Project Development</span>
-                                </div>
-                                <div class="gradient-edge-bottom h-100 op-8"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // Arrange in circular formation
+        function arrangeInCircle() {
+            const members = document.querySelectorAll('.team-member');
+            const centerX = teamContainer.offsetWidth / 2;
+            const centerY = teamContainer.offsetHeight / 2;
+            const radius = Math.min(centerX, centerY) * 0.7;
+            
+            // Set center member
+            const centerMember = members[0];
+            centerMember.style.left = `${centerX - 100}px`;
+            centerMember.style.top = `${centerY - 125}px`;
+            centerMember.classList.add('center');
+            
+            // Arrange other members in a circle
+            for (let i = 1; i < members.length; i++) {
+                const angle = (2 * Math.PI * (i-1)) / (members.length - 1);
+                const x = centerX + radius * Math.cos(angle) - 100;
+                const y = centerY + radius * Math.sin(angle) - 125;
+                
+                members[i].style.left = `${x}px`;
+                members[i].style.top = `${y}px`;
+                members[i].classList.remove('center');
+            }
+            
+            // After circle animation, arrange in two rows
+            setTimeout(() => {
+                arrangeInTwoRows();
+                showNotification("Team members arranged in circle formation");
+            }, 4000);
+        }
+
+        // Arrange in two rows (5 images in each row)
+        function arrangeInTwoRows() {
+            const members = document.querySelectorAll('.team-member');
+            const containerWidth = teamContainer.offsetWidth;
+            const memberWidth = 200;
+            const memberHeight = 280;
+            const spacing = 20;
+            
+            // Calculate positions for two rows
+            const totalWidth = (memberWidth + spacing) * 5 - spacing;
+            const startX = (containerWidth - totalWidth) / 2;
+            
+            // First row (bottom row)
+            for (let i = 0; i < 5; i++) {
+                members[i].classList.remove('center');
+                members[i].style.left = `${startX + i * (memberWidth + spacing)}px`;
+                members[i].style.top = `${teamContainer.offsetHeight - memberHeight - 20}px`;
+            }
+            
+            // Second row (top row)
+            for (let i = 5; i < 10; i++) {
+                members[i].classList.remove('center');
+                members[i].style.left = `${startX + (i-5) * (memberWidth + spacing)}px`;
+                members[i].style.top = `${teamContainer.offsetHeight - (memberHeight * 2) - 40}px`;
+            }
+            
+            showNotification("Team members arranged in grid formation");
+        }
+
+        // Animate the transition
+        function animateTeam() {
+            createTeamMembers();
+            
+            // Initial state: random positions
+            setRandomPositions();
+            
+            // After a delay, arrange in circle
+            setTimeout(() => {
+                arrangeInCircle();
+            }, 2000);
+            
+            showNotification("Animation started");
+        }
+
+        // Initialize animation
+        animateTeam();
+        
+        // Replay animation on button click
+        replayButton.addEventListener('click', function() {
+            animateTeam();
+        });
+        
+        // View full team on button click
+        viewTeamButton.addEventListener('click', function() {
+            arrangeInTwoRows();
+        });
+        
+        // Add mouse move effect for shapes
+        const teamSection = document.querySelector('.team-section');
+        const shapes = document.querySelectorAll('.shape');
+        
+        teamSection.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            shapes.forEach(shape => {
+                const speed = parseFloat(shape.style.width) / 1000;
+                const moveX = (x - 0.5) * 20 * speed;
+                const moveY = (y - 0.5) * 20 * speed;
+                
+                shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+    });
+</script>
+
+
+
+ <section id="section-speakers" class="bg-dark section-dark text-light">    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="team-subtitle">CREATIVE MINDS</div>
+                <h1 class="team-title">Meet Our Visionaries</h1>
+                <p class="team-description">
+                    Our diverse team of innovators and strategists work together to transform ideas into reality. 
+                    With expertise across multiple disciplines, we're united by our passion for excellence and innovation.
+                </p>
             </div>
-        </section>
+        </div>
+        
+        <div class="team-container" id="teamContainer">
+            <!-- Team members will be positioned here by JavaScript -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
         <section id="section-tickets" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
             <img src="images/background/bfFullAllience.png" class="jarallax-img" alt="">
@@ -678,7 +896,7 @@
             </div>
         </footer>
 
-     <style>
+      <style>
     
 #language-switcher {
     background: linear-gradient(90deg, #e10600, #00000000); /* Transparent end color */
@@ -726,6 +944,7 @@
         direction: ltr;
     }
 </style>
+
 
         <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
@@ -1325,5 +1544,417 @@
         investment_and_finance_description: "ފަޔިނޭންސިއަލް އިންވެސްޓްމަންޓްތަކާއި އެކަށަވަރު ގުޅިފައިވާ ޚިދުމަތްތަކަށް ބަލައި، ސް"}
     }
         </script>
+
+
+
+
+
+
+
+
+<style>
+      
+        
+        .team-section {
+            padding: 80px 0;
+            position: relative;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 1400px;
+        }
+        
+        .team-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .team-subtitle {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+        }
+        
+        .team-description {
+            max-width: 700px;
+            margin: 0 auto 80px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ccc;
+        }
+        
+        .team-container {
+            position: relative;
+            min-height: 600px;
+            width: 100%;
+        }
+        
+        .team-member {
+            position: absolute;
+            width: 200px;
+            perspective: 1000px;
+            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            z-index: 1;
+            transform-origin: center;
+            opacity: 0;
+        }
+        
+        .member-img-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: all 0.6s ease;
+        }
+        
+        .team-member.center .member-img-container {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(78, 205, 196, 0.6), 0 0 60px rgba(78, 205, 196, 0.4);
+        }
+        
+        .member-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.8s ease;
+            filter: grayscale(30%);
+        }
+        
+        .team-member.center .member-img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        
+        .member-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 20px 15px 15px;
+            color: white;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        
+        .team-member:hover .member-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .member-role {
+            color: #4ecdc4;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .member-social {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: #4ecdc4;
+            transform: translateY(-3px);
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            top: -150px;
+            left: -150px;
+            animation: floatShape 15s ease-in-out infinite;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #45b7d1, #96ceb4);
+            bottom: -100px;
+            right: -100px;
+            animation: floatShape 18s ease-in-out infinite reverse;
+        }
+        
+        @keyframes floatShape {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, 30px) rotate(5deg); }
+            50% { transform: translate(0, 60px) rotate(0deg); }
+            75% { transform: translate(-20px, 30px) rotate(-5deg); }
+        }
+        
+        .team-cta {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(78, 205, 196, 0.4);
+        }
+        
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+        
+        .cta-button:hover:before {
+            left: 100%;
+        }
+        
+        .replay-button {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .replay-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Notification toast */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: #4ecdc4;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 1000;
+        }
+        
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .team-member {
+                width: 180px;
+            }
+            
+            .member-img {
+                height: 220px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .team-title {
+                font-size: 2.8rem;
+            }
+            
+            .team-member {
+                width: 160px;
+            }
+            
+            .member-img {
+                height: 200px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .replay-button {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .team-title {
+                font-size: 2.2rem;
+            }
+            
+            .team-subtitle {
+                font-size: 1rem;
+            }
+            
+            .team-description {
+                font-size: 1rem;
+                margin-bottom: 40px;
+            }
+            
+            .team-container {
+                min-height: 500px;
+            }
+            
+            .team-member {
+                width: 140px;
+            }
+            
+            .member-img {
+                height: 170px;
+            }
+            
+            .member-name {
+                font-size: 1rem;
+            }
+            
+            .member-role {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .team-container {
+                min-height: 400px;
+            }
+            
+            .team-member {
+                width: 120px;
+            }
+            
+            .member-img {
+                height: 150px;
+            }
+            
+            .member-overlay {
+                padding: 10px 8px 8px;
+            }
+            
+            .member-name {
+                font-size: 0.9rem;
+            }
+            
+            .member-role {
+                font-size: 0.7rem;
+            }
+            
+            .social-icon {
+                width: 25px;
+                height: 25px;
+                font-size: 0.7rem;
+            }
+            
+            .cta-button, .replay-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
