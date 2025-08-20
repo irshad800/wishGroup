@@ -382,7 +382,7 @@
     <script src="js/designesia.js"></script>
     <!-- Leaflet JS for map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script>
+    <script>	  
         // Translations object
         const translations = {
             en: {
@@ -642,58 +642,60 @@
         }
 
         // Initialize language
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-            changeLanguage(savedLang);
+    // Initialize language and form submission
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+  changeLanguage(savedLang);
 
-            // Initialize Leaflet Map
-            var map = L.map('headOfficeMap').setView([25.1865, 55.2793], 15);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            window.mapMarker = L.marker([25.1865, 55.2793]).addTo(map)
-                .bindPopup(translations[savedLang].map_popup)
-                .openPopup();
+  // Initialize Leaflet Map
+  var map = L.map('headOfficeMap').setView([25.1865, 55.2793], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  window.mapMarker = L.marker([25.1865, 55.2793]).addTo(map)
+    .bindPopup(translations[savedLang].map_popup)
+    .openPopup();
 
-            // Form submission
-            document.getElementById('contact_form').addEventListener('submit', async function(event) {
-                event.preventDefault();
-                const successMessage = document.getElementById('success_message');
-                const errorMessage = document.getElementById('error_message');
-                successMessage.style.display = 'none';
-                errorMessage.style.display = 'none';
+  // Form submission
+  document.getElementById('contact_form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const successMessage = document.getElementById('success_message');
+    const errorMessage = document.getElementById('error_message');
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
 
-                const formData = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    subject: document.getElementById('subject').value,
-                    phoneNumber: document.getElementById('phone').value,
-                    message: document.getElementById('message').value
-                };
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      phoneNumber: document.getElementById('phone').value,
+      message: document.getElementById('message').value
+    };
 
-                try {
-                    const response = await fetch('http://localhost:4000/api/enquiries', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    });
+try {
+  const apiUrl = 'http://localhost:4000/api/enquiries';
+  const response = await fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  });
 
-                    const result = await response.json();
-                    if (response.ok) {
-                        successMessage.style.display = 'block';
-                        document.getElementById('contact_form').reset();
-                    } else {
-                        errorMessage.textContent = translations[document.getElementById('currentLang').textContent.toLowerCase()].error_message;
-                        errorMessage.style.display = 'block';
-                    }
-                } catch (error) {
-                    errorMessage.textContent = translations[document.getElementById('currentLang').textContent.toLowerCase()].error_message;
-                    errorMessage.style.display = 'block';
-                }
-            });
-        });
+  const result = await response.json();
+  if (response.ok) {
+    successMessage.style.display = 'block';
+    document.getElementById('contact_form').reset();
+  } else {
+    throw new Error(result.error || 'Failed to submit enquiry');
+  }
+} catch (error) {
+  console.error('Form Submission Error:', error);
+  errorMessage.textContent = translations[document.getElementById('currentLang').textContent.toLowerCase()].error_message;
+  errorMessage.style.display = 'block';
+}
+  });
+});
     </script>
 </body>
 </html>
