@@ -13,6 +13,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         
         .team-section {
@@ -22,6 +27,8 @@
             overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 1400px;
         }
         
         .team-title {
@@ -48,110 +55,29 @@
             margin-bottom: 60px;
         }
         
+        .team-description {
+            max-width: 700px;
+            margin: 0 auto 80px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ccc;
+        }
+        
         .team-container {
             position: relative;
             min-height: 600px;
+            width: 100%;
         }
         
         .team-member {
             position: absolute;
-            width: 300px;
-            opacity: 0;
+            width: 200px;
             perspective: 1000px;
-        }
-        
-        .member-1 {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            animation: zoomIn 1.5s forwards 0.5s, float 6s ease-in-out infinite 2s;
-        }
-        
-        .member-2 {
-            top: 20%;
-            left: 20%;
-            animation: slideFromTopLeft 1.2s forwards 1s, float 7s ease-in-out infinite 2.2s;
-        }
-        
-        .member-3 {
-            top: 20%;
-            right: 20%;
-            animation: slideFromTopRight 1.2s forwards 1.5s, float 6.5s ease-in-out infinite 2.5s;
-        }
-        
-        .member-4 {
-            bottom: 20%;
-            left: 20%;
-            animation: slideFromBottomLeft 1.2s forwards 2s, float 7.5s ease-in-out infinite 3s;
-        }
-        
-        .member-5 {
-            bottom: 20%;
-            right: 20%;
-            animation: slideFromBottomRight 1.2s forwards 2.5s, float 6.8s ease-in-out infinite 3.5s;
-        }
-        
-        @keyframes zoomIn {
-            0% { 
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.5) rotateY(90deg);
-            }
-            100% { 
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1) rotateY(0);
-            }
-        }
-        
-        @keyframes slideFromTopLeft {
-            0% { 
-                opacity: 0;
-                transform: translate(-100vw, -100vh) rotate(-45deg);
-            }
-            100% { 
-                opacity: 1;
-                transform: translate(0) rotate(0);
-            }
-        }
-        
-        @keyframes slideFromTopRight {
-            0% { 
-                opacity: 0;
-                transform: translate(100vw, -100vh) rotate(45deg);
-            }
-            100% { 
-                opacity: 1;
-                transform: translate(0) rotate(0);
-            }
-        }
-        
-        @keyframes slideFromBottomLeft {
-            0% { 
-                opacity: 0;
-                transform: translate(-100vw, 100vh) rotate(45deg);
-            }
-            100% { 
-                opacity: 1;
-                transform: translate(0) rotate(0);
-            }
-        }
-        
-        @keyframes slideFromBottomRight {
-            0% { 
-                opacity: 0;
-                transform: translate(100vw, 100vh) rotate(-45deg);
-            }
-            100% { 
-                opacity: 1;
-                transform: translate(0) rotate(0);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0); }
-            25% { transform: translateY(-10px) rotate(1deg); }
-            50% { transform: translateY(0) rotate(0); }
-            75% { transform: translateY(10px) rotate(-1deg); }
+            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            z-index: 1;
+            transform-origin: center;
+            opacity: 0;
         }
         
         .member-img-container {
@@ -163,22 +89,22 @@
             transition: all 0.6s ease;
         }
         
-        .team-member:hover .member-img-container {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(78, 205, 196, 0.4);
+        .team-member.center .member-img-container {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(78, 205, 196, 0.6), 0 0 60px rgba(78, 205, 196, 0.4);
         }
         
         .member-img {
             width: 100%;
-            height: 350px;
+            height: 250px;
             object-fit: cover;
             transition: all 0.8s ease;
-            filter: grayscale(20%);
+            filter: grayscale(30%);
         }
         
-        .team-member:hover .member-img {
-            transform: scale(1.1);
+        .team-member.center .member-img {
             filter: grayscale(0%);
+            transform: scale(1.05);
         }
         
         .member-overlay {
@@ -187,7 +113,7 @@
             left: 0;
             right: 0;
             background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-            padding: 30px 20px 20px;
+            padding: 20px 15px 15px;
             color: white;
             transform: translateY(20px);
             opacity: 0;
@@ -200,25 +126,26 @@
         }
         
         .member-name {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 5px;
         }
         
         .member-role {
             color: #4ecdc4;
-            font-size: 1rem;
-            margin-bottom: 15px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
         }
         
         .member-social {
             display: flex;
-            gap: 15px;
+            gap: 10px;
+            justify-content: center;
         }
         
         .social-icon {
-            width: 36px;
-            height: 36px;
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -274,15 +201,6 @@
             75% { transform: translate(-20px, 30px) rotate(-5deg); }
         }
         
-        .team-description {
-            max-width: 700px;
-            margin: 0 auto 80px;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #ccc;
-        }
-        
         .team-cta {
             text-align: center;
             margin-top: 60px;
@@ -303,6 +221,7 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+            cursor: pointer;
         }
         
         .cta-button:hover {
@@ -326,32 +245,62 @@
             left: 100%;
         }
         
-        .group-circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            border: 2px dashed rgba(78, 205, 196, 0.3);
-            border-radius: 50%;
-            z-index: 0;
-            animation: pulse 4s ease-in-out infinite;
+        .replay-button {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            cursor: pointer;
         }
         
-        @keyframes pulse {
-            0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-            50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.05); }
+        .replay-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Notification toast */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: #4ecdc4;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 1000;
+        }
+        
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
         }
         
         /* Responsive adjustments */
         @media (max-width: 1200px) {
             .team-member {
-                width: 250px;
+                width: 180px;
             }
             
             .member-img {
-                height: 300px;
+                height: 220px;
             }
         }
         
@@ -361,16 +310,21 @@
             }
             
             .team-member {
-                width: 220px;
+                width: 160px;
             }
             
             .member-img {
-                height: 280px;
+                height: 200px;
             }
             
-            .group-circle {
-                width: 350px;
-                height: 350px;
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .replay-button {
+                margin-left: 0;
+                margin-top: 15px;
             }
         }
         
@@ -393,24 +347,19 @@
             }
             
             .team-member {
-                width: 200px;
+                width: 140px;
             }
             
             .member-img {
-                height: 250px;
+                height: 170px;
             }
             
-            .group-circle {
-                width: 300px;
-                height: 300px;
+            .member-name {
+                font-size: 1rem;
             }
             
-            .member-2, .member-3 {
-                top: 10%;
-            }
-            
-            .member-4, .member-5 {
-                bottom: 10%;
+            .member-role {
+                font-size: 0.8rem;
             }
         }
         
@@ -420,45 +369,35 @@
             }
             
             .team-member {
-                width: 160px;
-            position: relative;
-                margin: 20px auto;
-                opacity: 0;
+                width: 120px;
             }
             
             .member-img {
-                height: 220px;
+                height: 150px;
             }
             
-            .group-circle {
-                display: none;
+            .member-overlay {
+                padding: 10px 8px 8px;
             }
             
-            /* Override animations for mobile */
-            .member-1, .member-2, .member-3, .member-4, .member-5 {
-                animation: fadeInUp 1s forwards;
-                position: relative;
-                top: auto;
-                left: auto;
-                right: auto;
-                bottom: auto;
-                transform: none;
-                margin: 30px auto;
+            .member-name {
+                font-size: 0.9rem;
             }
             
-            @keyframes fadeInUp {
-                0% { 
-                    opacity: 0;
-                    transform: translateY(50px);
-                }
-                100% { 
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+            .member-role {
+                font-size: 0.7rem;
             }
             
-            .team-member:hover .member-img-container {
-                transform: scale(1.02);
+            .social-icon {
+                width: 25px;
+                height: 25px;
+                font-size: 0.7rem;
+            }
+            
+            .cta-button, .replay-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -483,103 +422,220 @@
             </div>
         </div>
         
-        <div class="team-container">
-            <div class="group-circle"></div>
-            
-            <!-- Team Member 1 - Center -->
-            <div class="team-member member-1">
-                <div class="member-img-container">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" class="member-img" alt="Team Member">
-                    <div class="member-overlay">
-                        <h3 class="member-name">Asaid Ahmed Arabi Moulana</h3>
-                        <p class="member-role">Group Chairman & Founder</p>
-                        <div class="member-social">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Member 2 - Top Left -->
-            <div class="team-member member-2">
-                <div class="member-img-container">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" class="member-img" alt="Team Member">
-                    <div class="member-overlay">
-                        <h3 class="member-name">Fathih Afeef</h3>
-                        <p class="member-role">Group CEO</p>
-                        <div class="member-social">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Member 3 - Top Right -->
-            <div class="team-member member-3">
-                <div class="member-img-container">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" class="member-img" alt="Team Member">
-                    <div class="member-overlay">
-                        <h3 class="member-name">Afzal Khalid</h3>
-                        <p class="member-role">Director – Project Development</p>
-                        <div class="member-social">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Member 4 - Bottom Left -->
-            <div class="team-member member-4">
-                <div class="member-img-container">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" class="member-img" alt="Team Member">
-                    <div class="member-overlay">
-                        <h3 class="member-name">Sarah Johnson</h3>
-                        <p class="member-role">Chief Marketing Officer</p>
-                        <div class="member-social">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Member 5 - Bottom Right -->
-            <div class="team-member member-5">
-                <div class="member-img-container">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" class="member-img" alt="Team Member">
-                    <div class="member-overlay">
-                        <h3 class="member-name">Michael Chen</h3>
-                        <p class="member-role">Technical Director</p>
-                        <div class="member-social">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="team-cta">
-            <a href="#" class="cta-button">View Full Team</a>
+        <div class="team-container" id="teamContainer">
+            <!-- Team members will be positioned here by JavaScript -->
         </div>
     </div>
 </section>
 
+<div class="notification" id="notification">Action completed successfully!</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Add some interactive effects
+        const teamContainer = document.getElementById('teamContainer');
+        const replayButton = document.getElementById('replayButton');
+        const viewTeamButton = document.getElementById('viewTeamButton');
+        const notification = document.getElementById('notification');
+        
+        // Team member data
+        const teamMembers = [
+            {
+                name: "Asaid Ahmed",
+                role: "Chairman & Founder",
+                img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Fathih Afeef",
+                role: "Group CEO",
+                img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Afzal Khalid",
+                role: "Project Director",
+                img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Sarah Johnson",
+                role: "CMO",
+                img: "https://images.unsplash.com/photo-1580489944761-15a19a1a1a1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Michael Chen",
+                role: "Technical Director",
+                img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "David Wilson",
+                role: "Finance Director",
+                img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Emma Roberts",
+                role: "Design Lead",
+                img: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "James Miller",
+                role: "Operations Head",
+                img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db1604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Olivia Parker",
+                role: "HR Director",
+                img: "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                name: "Robert Taylor",
+                role: "Tech Lead",
+                img: "https://images.unsplash.com/photo-1590086782792-42dd2350140d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        // Show notification function
+        function showNotification(message) {
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Create team member elements
+        function createTeamMembers() {
+            teamContainer.innerHTML = '';
+            
+            teamMembers.forEach((member, index) => {
+                const memberElement = document.createElement('div');
+                memberElement.className = 'team-member';
+                memberElement.innerHTML = `
+                    <div class="member-img-container">
+                        <img src="${member.img}" class="member-img" alt="${member.name}">
+                        <div class="member-overlay">
+                            <h3 class="member-name">${member.name}</h3>
+                            <p class="member-role">${member.role}</p>
+                            <div class="member-social">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                teamContainer.appendChild(memberElement);
+            });
+        }
+
+        // Initial random shuffle positions
+        function setRandomPositions() {
+            const members = document.querySelectorAll('.team-member');
+            const containerWidth = teamContainer.offsetWidth;
+            const containerHeight = teamContainer.offsetHeight;
+            
+            members.forEach(member => {
+                const randomX = Math.random() * (containerWidth - 200);
+                const randomY = Math.random() * (containerHeight - 250);
+                
+                member.style.left = `${randomX}px`;
+                member.style.top = `${randomY}px`;
+                member.style.opacity = '1';
+                member.classList.remove('center');
+            });
+        }
+
+        // Arrange in circular formation
+        function arrangeInCircle() {
+            const members = document.querySelectorAll('.team-member');
+            const centerX = teamContainer.offsetWidth / 2;
+            const centerY = teamContainer.offsetHeight / 2;
+            const radius = Math.min(centerX, centerY) * 0.7;
+            
+            // Set center member
+            const centerMember = members[0];
+            centerMember.style.left = `${centerX - 100}px`;
+            centerMember.style.top = `${centerY - 125}px`;
+            centerMember.classList.add('center');
+            
+            // Arrange other members in a circle
+            for (let i = 1; i < members.length; i++) {
+                const angle = (2 * Math.PI * (i-1)) / (members.length - 1);
+                const x = centerX + radius * Math.cos(angle) - 100;
+                const y = centerY + radius * Math.sin(angle) - 125;
+                
+                members[i].style.left = `${x}px`;
+                members[i].style.top = `${y}px`;
+                members[i].classList.remove('center');
+            }
+            
+            // After circle animation, arrange in two rows
+            setTimeout(() => {
+                arrangeInTwoRows();
+                showNotification("Team members arranged in circle formation");
+            }, 4000);
+        }
+
+        // Arrange in two rows (5 images in each row)
+        function arrangeInTwoRows() {
+            const members = document.querySelectorAll('.team-member');
+            const containerWidth = teamContainer.offsetWidth;
+            const memberWidth = 200;
+            const memberHeight = 280;
+            const spacing = 20;
+            
+            // Calculate positions for two rows
+            const totalWidth = (memberWidth + spacing) * 5 - spacing;
+            const startX = (containerWidth - totalWidth) / 2;
+            
+            // First row (bottom row)
+            for (let i = 0; i < 5; i++) {
+                members[i].classList.remove('center');
+                members[i].style.left = `${startX + i * (memberWidth + spacing)}px`;
+                members[i].style.top = `${teamContainer.offsetHeight - memberHeight - 20}px`;
+            }
+            
+            // Second row (top row)
+            for (let i = 5; i < 10; i++) {
+                members[i].classList.remove('center');
+                members[i].style.left = `${startX + (i-5) * (memberWidth + spacing)}px`;
+                members[i].style.top = `${teamContainer.offsetHeight - (memberHeight * 2) - 40}px`;
+            }
+            
+            showNotification("Team members arranged in grid formation");
+        }
+
+        // Animate the transition
+        function animateTeam() {
+            createTeamMembers();
+            
+            // Initial state: random positions
+            setRandomPositions();
+            
+            // After a delay, arrange in circle
+            setTimeout(() => {
+                arrangeInCircle();
+            }, 2000);
+            
+            showNotification("Animation started");
+        }
+
+        // Initialize animation
+        animateTeam();
+        
+        // Replay animation on button click
+        replayButton.addEventListener('click', function() {
+            animateTeam();
+        });
+        
+        // View full team on button click
+        viewTeamButton.addEventListener('click', function() {
+            arrangeInTwoRows();
+        });
+        
+        // Add mouse move effect for shapes
         const teamSection = document.querySelector('.team-section');
+        const shapes = document.querySelectorAll('.shape');
         
         teamSection.addEventListener('mousemove', (e) => {
-            const shapes = document.querySelectorAll('.shape');
             const x = e.clientX / window.innerWidth;
             const y = e.clientY / window.innerHeight;
             
@@ -589,31 +645,6 @@
                 const moveY = (y - 0.5) * 20 * speed;
                 
                 shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            });
-        });
-        
-        // Replay animation on click for demo purposes
-        const ctaButton = document.querySelector('.cta-button');
-        ctaButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const teamMembers = document.querySelectorAll('.team-member');
-            teamMembers.forEach(member => {
-                member.style.animation = 'none';
-                void member.offsetWidth; // Trigger reflow
-                
-                // Reapply animation with delays
-                if (member.classList.contains('member-1')) {
-                    member.style.animation = 'zoomIn 1.5s forwards, float 6s ease-in-out infinite';
-                } else if (member.classList.contains('member-2')) {
-                    member.style.animation = 'slideFromTopLeft 1.2s forwards, float 7s ease-in-out infinite';
-                } else if (member.classList.contains('member-3')) {
-                    member.style.animation = 'slideFromTopRight 1.2s forwards, float 6.5s ease-in-out infinite';
-                } else if (member.classList.contains('member-4')) {
-                    member.style.animation = 'slideFromBottomLeft 1.2s forwards, float 7.5s ease-in-out infinite';
-                } else if (member.classList.contains('member-5')) {
-                    member.style.animation = 'slideFromBottomRight 1.2s forwards, float 6.8s ease-in-out infinite';
-                }
             });
         });
     });
