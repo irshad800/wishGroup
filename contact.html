@@ -15,6 +15,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- Leaflet CSS for map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Google Fonts for Sinhala and Dhivehi -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
     <!-- color scheme -->
     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
@@ -75,6 +77,16 @@
         }
         .lang-switcher .dropdown-menu a:hover {
             background-color: #333;
+        }
+        /* Font styles for multilingual support */
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        html[lang="si"] body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        html[lang="dv"] body {
+            font-family: 'Noto Sans Thaana', sans-serif;
         }
     </style>
 </head>
@@ -413,7 +425,8 @@
                 footer_address: "Address",
                 quick_links: "Quick Links",
                 footer_contact: "Contact Us",
-                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved.",
+                map_popup: "Wish Group Headquarters<br>Business Bay, Dubai, United Arab Emirates"
             },
             ar: {
                 page_title: "مجموعة ويش - اتصل بنا",
@@ -455,7 +468,8 @@
                 footer_address: "العنوان",
                 quick_links: "روابط سريعة",
                 footer_contact: "اتصل بنا",
-                footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة."
+                footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة.",
+                map_popup: "مقر مجموعة ويش<br>خليج الأعمال، دبي، الإمارات العربية المتحدة"
             },
             fr: {
                 page_title: "Groupe Wish - Contactez-nous",
@@ -497,91 +511,94 @@
                 footer_address: "Adresse",
                 quick_links: "Liens rapides",
                 footer_contact: "Contactez-nous",
-                footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
+                footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés.",
+                map_popup: "Siège du Groupe Wish<br>Business Bay, Dubaï, Émirats Arabes Unis"
             },
             si: {
-                page_title: "Wish Group - Contact Us",
-                scroll_to_top: "Scroll to top",
-                menu_home: "Home",
-                menu_about: "About Us",
-                menu_divisions: "Divisions",
-                menu_projects: "Projects",
-                menu_countries: "Countries",
-                menu_news: "News",
-                menu_policies: "Our Policies",
-                menu_career: "Career",
-                menu_contact: "Contact Us",
-                contact_us_title: "Contact Us",
-                contact_us_description: "Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.",
-                our_location: "Our Location",
-                headquarters_title: "Wish Group Headquarters",
-                headquarters_address: "Business Bay, Dubai, United Arab Emirates",
-                headquarters_country: "Dubai, United Arab Emirates",
-                our_workplace: "Our Workplace",
-                gallery_title: "Head Office Gallery",
-                gallery_description: "Take a look at our professional work environment",
-                get_in_touch: "Get In Touch",
-                enquiry_title: "We'd love to hear from you",
-                enquiry_description: "Submit your inquiry and our team will get back to you shortly.",
-                head_office_location: "Head Office Location",
-                email_us: "Email Us",
-                call_us: "Call Us",
-                enquiry_form_title: "Enquiry Form",
-                enquiry_form_description: "Fill out the form below and we'll get back to you soon.",
-                full_name: "Full Name",
-                email_address: "Email Address",
-                phone_number: "Phone Number",
-                subject: "Subject",
-                your_message: "Your Message",
-                submit_inquiry: "Submit Inquiry",
-                success_message: "Your message has been sent successfully. Refresh this page if you want to send more messages.",
-                error_message: "Sorry, there was an error sending your form.",
-                footer_address: "Address",
-                quick_links: "Quick Links",
-                footer_contact: "Contact Us",
-                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+                page_title: "විෂ් ගෲප් - අප හා සම්බන්ධ වන්න",
+                scroll_to_top: "ඉහළට ගමන් කරන්න",
+                menu_home: "මුල් පිටුව",
+                menu_about: "අප ගැන",
+                menu_divisions: "අංශ",
+                menu_projects: "ව්‍යාපෘති",
+                menu_countries: "රටවල්",
+                menu_news: "පුවත්",
+                menu_policies: "අපගේ ප්‍රතිපත්ති",
+                menu_career: "වෘත්තිය",
+                menu_contact: "අප හා සම්බන්ධ වන්න",
+                contact_us_title: "අප හා සම්බන්ධ වන්න",
+                contact_us_description: "විෂ් ගෲප් සමඟ සම්බන්ධ වන්න. ඔබගේ ප්‍රශ්නවලට පිළිතුරු දීමට සහ අපට එකට වැඩ කළ හැකි ආකාරය ගැන සාකච්ඡා කිරීමට අපි මෙහි සිටිමු.",
+                our_location: "අපගේ ස්ථානය",
+                headquarters_title: "විෂ් ගෲප් මූලස්ථානය",
+                headquarters_address: "බිස්නස් බේ, ඩුබායි, එක්සත් අරාබි එමිරේට්ස්",
+                headquarters_country: "ඩුබායි, එක්සත් අරාබි එමිරේට්ස්",
+                our_workplace: "අපගේ වැඩබිම",
+                gallery_title: "මූලස්ථාන ගැලරිය",
+                gallery_description: "අපගේ වෘත්තීය වැඩබිම බලන්න",
+                get_in_touch: "සම්බන්ධ වන්න",
+                enquiry_title: "ඔබගෙන් ඇසීමට අපි කැමතියි",
+                enquiry_description: "ඔබගේ විමසීම ඉදිරිපත් කරන්න, අපගේ කණ්ඩායම ඉක්මනින් ඔබ වෙත පිළිතුරු දෙනු ඇත.",
+                head_office_location: "මූලස්ථාන ස්ථානය",
+                email_us: "අපට ඊමේල් කරන්න",
+                call_us: "අපට අමතන්න",
+                enquiry_form_title: "විමසුම් පෝරමය",
+                enquiry_form_description: "පහත පෝරමය පුරවන්න, අපි ඉක්මනින් ඔබ වෙත පිළිතුරු දෙන්නෙමු.",
+                full_name: "සම්පූර්ණ නම",
+                email_address: "ඊමේල් ලිපිනය",
+                phone_number: "දුරකථන අංකය",
+                subject: "විෂය",
+                your_message: "ඔබගේ පණිවිඩය",
+                submit_inquiry: "විමසුම ඉදිරිපත් කරන්න",
+                success_message: "ඔබගේ පණිවිඩය සාර්ථකව යවන ලදි. තවත් පණිවිඩ යැවීමට අවශ්‍ය නම් මෙම පිටුව නැවුම් කරන්න.",
+                error_message: "කණගාටුයි, ඔබගේ පෝරමය යැවීමේදී දෝෂයක් ඇති විය.",
+                footer_address: "ලිපිනය",
+                quick_links: "ඉක්මන් සබැඳි",
+                footer_contact: "අප හා සම්බන්ධ වන්න",
+                footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ගෲප්. සියලු හිමිකම් ඇවිරිණි.",
+                map_popup: "විෂ් ගෲප් මූලස්ථානය<br>බිස්නස් බේ, ඩුබායි, එක්සත් අරාබි එමිරේට්ස්"
             },
             dv: {
-                page_title: "Wish Group - Contact Us",
-                scroll_to_top: "Scroll to top",
-                menu_home: "Home",
-                menu_about: "About Us",
-                menu_divisions: "Divisions",
-                menu_projects: "Projects",
-                menu_countries: "Countries",
-                menu_news: "News",
-                menu_policies: "Our Policies",
-                menu_career: "Career",
-                menu_contact: "Contact Us",
-                contact_us_title: "Contact Us",
-                contact_us_description: "Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.",
-                our_location: "Our Location",
-                headquarters_title: "Wish Group Headquarters",
-                headquarters_address: "Business Bay, Dubai, United Arab Emirates",
-                headquarters_country: "Dubai, United Arab Emirates",
-                our_workplace: "Our Workplace",
-                gallery_title: "Head Office Gallery",
-                gallery_description: "Take a look at our professional work environment",
-                get_in_touch: "Get In Touch",
-                enquiry_title: "We'd love to hear from you",
-                enquiry_description: "Submit your inquiry and our team will get back to you shortly.",
-                head_office_location: "Head Office Location",
-                email_us: "Email Us",
-                call_us: "Call Us",
-                enquiry_form_title: "Enquiry Form",
-                enquiry_form_description: "Fill out the form below and we'll get back to you soon.",
-                full_name: "Full Name",
-                email_address: "Email Address",
-                phone_number: "Phone Number",
-                subject: "Subject",
-                your_message: "Your Message",
-                submit_inquiry: "Submit Inquiry",
-                success_message: "Your message has been sent successfully. Refresh this page if you want to send more messages.",
-                error_message: "Sorry, there was an error sending your form.",
-                footer_address: "Address",
-                quick_links: "Quick Links",
-                footer_contact: "Contact Us",
-                footer_copyright: "Copyright 2025 - Wish Group. All rights reserved."
+                page_title: "ވިޝް ގްރޫޕް - ކޮންޓެކްޓް އަސް",
+                scroll_to_top: "މަތިއަށް ސްކްރޯލް ކުރަން",
+                menu_home: "މަންދު",
+                menu_about: "އަލިފަން",
+                menu_divisions: "ބައިތައް",
+                menu_projects: "ޕްރޮޖެކްޓްތައް",
+                menu_countries: "ޤައުމުތައް",
+                menu_news: "ޚަބަރު",
+                menu_policies: "އަމިއްލަ ސިޔާސަތުތައް",
+                menu_career: "ކެރިއަރ",
+                menu_contact: "ކޮންޓެކްޓް އަސް",
+                contact_us_title: "ކޮންޓެކްޓް އަސް",
+                contact_us_description: "ވިޝް ގްރޫޕް އަށް ގުޅާލާށެވެ. ތިޔަބައިގެ ސުވާލުތަކަށް ޖަވާބު ދިނުމަށް އަދި އެކު މަސައްކަތް ކުރެވިދާނެ ގޮތް ޚިޔާލު ކުރުމަށް މިހާރު އަޅުގަނޑު ތައްޔާރުވެފައިވެއެވެ.",
+                our_location: "އަޅުގަނޑުގެ ތަން",
+                headquarters_title: "ވިޝް ގްރޫޕް މަޖިލީސް",
+                headquarters_address: "ބިޒްނަސް ބޭ، ދުބައި، ޔުނައިޓެޑް އަރަބް އިމިރޭޓްސް",
+                headquarters_country: "ދުބައި، ޔުނައިޓެޑް އަރަބް އިމިރޭޓްސް",
+                our_workplace: "އަޅުގަނޑުގެ މަސައްކަތްތަން",
+                gallery_title: "މަޖިލީސް ގެލަރީ",
+                gallery_description: "އަޅުގަނޑުގެ ޕްރޮފެޝަނަލް މަސައްކަތްތަން ބަލާލާށެވެ",
+                get_in_touch: "ގުޅާލާށެވެ",
+                enquiry_title: "ތިޔަބައިގެން އަހަންނަށް އަޑު އެހީވުން ބަޔަކު އެދެމުން",
+                enquiry_description: "ތިޔަބައިގެ ވިމަސިން އިންގަވާށެވެ، އަޅުގަނޑުގެ ޓީމް އިކްމަނުން ތިޔަބައިގެ އަށް ރިޕްލައި ކުރާނެއެވެ.",
+                head_office_location: "މަޖިލީސް ތަން",
+                email_us: "އަޅުގަނޑަށް އީމެއިލް ކުރަން",
+                call_us: "އަޅުގަނޑަށް ގުޅާލާ",
+                enquiry_form_title: "ވިމަސިން ފޯމް",
+                enquiry_form_description: "ތިރިގައި ފޯމް ފިލްކުރާށެވެ، އަޅުގަނޑު އިކްމަނުން ތިޔަބައިގެ އަށް ރިޕްލައި ކުރާނެއެވެ.",
+                full_name: "ފުރިހަމަ ނަން",
+                email_address: "އީމެއިލް އެޑްރެސް",
+                phone_number: "ފޯން ނަންބަރ",
+                subject: "ސަބްޖެކްޓް",
+                your_message: "ތިޔަބައިގެ މެސެޖް",
+                submit_inquiry: "ވިމަސިން ސަބްމިޓް ކުރަން",
+                success_message: "ތިޔަބައިގެ މެސެޖް ސަރަފުލްކޮށް ފޮނުވިއެވެ. އިތުރު މެސެޖް ފޮނުވަން ބޭނުންފުޅު ނަމަ މި ޕޭޖް ރިފްރެޝް ކުރަން.",
+                error_message: "ކަނޑައެޅި، ތިޔަބައިގެ ފޯމް ފޮނުވުމުގައި މައްސަލައެއް ޖެހިއެވެ.",
+                footer_address: "އެޑްރެސް",
+                quick_links: "އިކްމަނު ލިންކްތައް",
+                footer_contact: "ކޮންޓެކްޓް އަސް",
+                footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ހިމިން ރިޒަރވް.",
+                map_popup: "ވިޝް ގްރޫޕް މަޖިލީސް<br>ބިޒްނަސް ބޭ، ދުބައި، ޔުނައިޓެޑް އަރަބް އިމިރޭޓްސް"
             }
         };
 
@@ -607,7 +624,7 @@
                 }
             });
             document.querySelector('html').lang = lang;
-            if (lang === 'ar') {
+            if (lang === 'ar' || lang === 'dv') {
                 document.querySelector('html').dir = 'rtl';
                 document.querySelector('body').style.textAlign = 'right';
             } else {
@@ -615,6 +632,12 @@
                 document.querySelector('body').style.textAlign = 'left';
             }
             document.querySelector('title').textContent = translations[lang].page_title;
+
+            // Update Leaflet map popup
+            if (window.mapMarker) {
+                window.mapMarker.setPopupContent(translations[lang].map_popup);
+            }
+
             localStorage.setItem('selectedLanguage', lang);
         }
 
@@ -628,8 +651,8 @@
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
-            L.marker([25.1865, 55.2793]).addTo(map)
-                .bindPopup('Wish Group Headquarters<br>Business Bay, Dubai, United Arab Emirates')
+            window.mapMarker = L.marker([25.1865, 55.2793]).addTo(map)
+                .bindPopup(translations[savedLang].map_popup)
                 .openPopup();
 
             // Form submission

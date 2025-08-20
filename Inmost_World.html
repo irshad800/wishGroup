@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Inmost World | Luxury Deep Sea Activities</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.png" type="image/gif" sizes="16x16">
+    <title data-lang-key="page_title">Inmost World - Premium Deep Sea Adventures</title>
+    <link rel="icon" href="/images/wishgroup/logo_remove.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Inmost World - Premium deep sea adventures and water sports in exotic locations" name="description">
@@ -13,6 +13,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/vendors.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Google Fonts for Sinhala and Dhivehi -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
     <!-- color scheme -->
     <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
@@ -135,13 +137,44 @@
         .expert {
             background-color: #9C27B0;
         }
+        .lang-switcher {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switcher .btn-main {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .lang-switcher .dropdown-menu {
+            min-width: 60px;
+            background-color: #1a1a1a;
+            border: none;
+            border-radius: 4px;
+        }
+        .lang-switcher .dropdown-menu a {
+            color: #fff;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        .lang-switcher .dropdown-menu a:hover {
+            background-color: #333;
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        html[lang="si"] body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        html[lang="dv"] body {
+            font-family: 'Noto Sans Thaana', sans-serif;
+        }
     </style>
 </head>
 
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
+            <span><a href="#" data-lang-key="scroll_to_top">Scroll to top</a></span>
         </div>
         <div class="scrollbar-v show-on-scroll"></div>
 
@@ -158,9 +191,9 @@
                                 <!-- logo begin -->
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.png" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.png" alt="">
+                                        <img class="logo-main" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-scroll" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
+                                        <img class="logo-mobile" src="/images/wishgroup/logo_remove.png" alt="Wish Group Logo" data-lang-alt="logo_alt">
                                     </a>
                                 </div>
                                 <!-- logo close -->
@@ -169,21 +202,21 @@
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
                                     <ul id="mainmenu">
-                                        <li><a class="menu-item" href="index.html">Home</a></li>
-                                        <li><a class="menu-item active" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="">Divisions</a></li>
-                                        <li><a class="menu-item" href="">Projects</a></li>
-                                        <li><a class="menu-item" href="">Countries</a></li>
-                                        <li><a class="menu-item" href="">News</a></li>
-                                        <li><a class="menu-item" href="">Our Policies</a></li>
-                                        <li><a class="menu-item" href="">Carrier</a></li>
-                                        <li><a class="menu-item" href="news.html">Contact Us</a>
+                                        <li><a class="menu-item" href="index.html" data-lang-key="menu_home">Home</a></li>
+                                        <li><a class="menu-item active" href="about.html" data-lang-key="menu_about">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-lang-key="menu_divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="projects.html" data-lang-key="menu_projects">Projects</a></li>
+                                        <li><a class="menu-item" href="countries.html" data-lang-key="menu_countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                        <li><a class="menu-item" href="policies.html" data-lang-key="menu_policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="career.html" data-lang-key="menu_career">Career</a></li>
+                                        <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact Us</a>
                                             <ul>
-                                                <li><a class="menu-item" href="tickets.html">Tickets Style 1</a></li>
-                                                <li><a class="menu-item" href="tickets-2.html">Tickets Style 2</a></li>
-                                                <li><a class="menu-item" href="news.html">News</a></li>
-                                                <li><a class="menu-item" href="news-single.html">News Single</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="tickets.html" data-lang-key="menu_tickets_1">Tickets Style 1</a></li>
+                                                <li><a class="menu-item" href="tickets-2.html" data-lang-key="menu_tickets_2">Tickets Style 2</a></li>
+                                                <li><a class="menu-item" href="news.html" data-lang-key="menu_news">News</a></li>
+                                                <li><a class="menu-item" href="news-single.html" data-lang-key="menu_news_single">News Single</a></li>
+                                                <li><a class="menu-item" href="contact.html" data-lang-key="menu_contact">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -191,7 +224,16 @@
                             </div>
 
                             <div class="de-flex-col">
-                                <a class="btn-main fx-slide w-100" href=""><span>EN</span></a>
+                                <div class="lang-switcher">
+                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                                    </ul>
+                                </div>
                                 <div class="menu_side_area">
                                     <span id="menu-btn"></span>
                                 </div>
@@ -203,22 +245,20 @@
         </header>
 
         <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="/images/wishgroup/sea1`.jpg" class="jarallax-img" alt="">
+            <img src="/images/wishgroup/sea1.jpg" class="jarallax-img" alt="Inmost World" data-lang-alt="hero_alt">
             <div class="gradient-edge-bottom h-50"></div>
             <div class="sw-overlay op-5"></div>
             <div class="abs bottom-10 z-2 w-100">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
-                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s">
-                                Inmost World
-                            </h1>
-                            <p class="lead wow fadeIn" data-wow-delay=".8s">Premium Deep Sea Adventures & Water Sports</p>
+                            <h1 class="text-start fs-48 fs-sm-10vw wow fadeIn" data-wow-delay=".6s" data-lang-key="hero_title">Inmost World</h1>
+                            <p class="lead wow fadeIn" data-wow-delay=".8s" data-lang-key="hero_description">Premium Deep Sea Adventures & Water Sports</p>
                         </div>
                         <div class="col-lg-2">
                             <div class="relative text-lg-end">
                                 <div class="d-inline-block z-2 bg-color rounded-1 text-white p-4 text-center fw-600 wow fadeIn" data-wow-delay="1s">
-                                    <span class="fs-20 fw-600">PADI Certified</span>
+                                    <span class="fs-20 fw-600" data-lang-key="hero_label">PADI Certified</span>
                                 </div>
                             </div>
                         </div>
@@ -235,17 +275,17 @@
                         <div class="intro-section mb-5">
                             <img src="/images/wishgroup/ocean.jpg" 
                                  alt="Deep Sea Activities" 
-                                 class="full-width-ocean">
+                                 class="full-width-ocean" data-lang-alt="intro_image_alt">
                             <div class="text-center mt-4">
-                                <h2 class="fs-36 mb-3">Ocean Adventures Redefined</h2>
-                                <p class="lead fs-20">Where adrenaline meets the deep blue</p>
+                                <h2 class="fs-36 mb-3" data-lang-key="intro_title">Ocean Adventures Redefined</h2>
+                                <p class="lead fs-20" data-lang-key="intro_description">Where adrenaline meets the deep blue</p>
                             </div>
                         </div>
 
                         <!-- Key Activities Section -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Our Signature Activities</h2>
-                            <p class="lead">World-class water sports and deep sea experiences</p>
+                            <h2 class="fs-30" data-lang-key="activities_title">Our Signature Activities</h2>
+                            <p class="lead" data-lang-key="activities_description">World-class water sports and deep sea experiences</p>
                         </div>
                         
                         <div class="row g-4">
@@ -254,10 +294,10 @@
                                 <div class="activity-card">
                                     <img src="/images/wishgroup/deep.jpeg" 
                                          alt="Deep Sea Diving" 
-                                         class="activity-image">
+                                         class="activity-image" data-lang-alt="activity_diving_alt">
                                     <div class="activity-overlay">
-                                        <h3 class="fs-20 mb-1">Deep Sea Diving <span class="difficulty-level advanced">ADVANCED</span></h3>
-                                        <p class="mb-0">Certified scuba diving expeditions to 40m+</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="activity_diving_title">Deep Sea Diving <span class="difficulty-level advanced" data-lang-key="difficulty_advanced">ADVANCED</span></h3>
+                                        <p class="mb-0" data-lang-key="activity_diving_description">Certified scuba diving expeditions to 40m+</p>
                                     </div>
                                 </div>
                             </div>
@@ -267,10 +307,10 @@
                                 <div class="activity-card">
                                     <img src="/images/wishgroup/stand.jpg" 
                                          alt="Stand-up Paddleboarding" 
-                                         class="activity-image">
+                                         class="activity-image" data-lang-alt="activity_paddleboarding_alt">
                                     <div class="activity-overlay">
-                                        <h3 class="fs-20 mb-1">Stand-up Paddleboarding <span class="difficulty-level beginner">BEGINNER</span></h3>
-                                        <p class="mb-0">Guided tours along coastal waters</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="activity_paddleboarding_title">Stand-up Paddleboarding <span class="difficulty-level beginner" data-lang-key="difficulty_beginner">BEGINNER</span></h3>
+                                        <p class="mb-0" data-lang-key="activity_paddleboarding_description">Guided tours along coastal waters</p>
                                     </div>
                                 </div>
                             </div>
@@ -280,10 +320,10 @@
                                 <div class="activity-card">
                                     <img src="/images/wishgroup/bigname.jpg" 
                                          alt="Deep Sea Fishing" 
-                                         class="activity-image">
+                                         class="activity-image" data-lang-alt="activity_fishing_alt">
                                     <div class="activity-overlay">
-                                        <h3 class="fs-20 mb-1">Big Game Fishing <span class="difficulty-level intermediate">INTERMEDIATE</span></h3>
-                                        <p class="mb-0">Chase marlin, tuna and more</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="activity_fishing_title">Big Game Fishing <span class="difficulty-level intermediate" data-lang-key="difficulty_intermediate">INTERMEDIATE</span></h3>
+                                        <p class="mb-0" data-lang-key="activity_fishing_description">Chase marlin, tuna and more</p>
                                     </div>
                                 </div>
                             </div>
@@ -293,10 +333,10 @@
                                 <div class="activity-card">
                                     <img src="/images/wishgroup/boat.jpg" 
                                          alt="Kayaking" 
-                                         class="activity-image">
+                                         class="activity-image" data-lang-alt="activity_kayaking_alt">
                                     <div class="activity-overlay">
-                                        <h3 class="fs-20 mb-1">Ocean Kayaking <span class="difficulty-level beginner">BEGINNER</span></h3>
-                                        <p class="mb-0">Explore hidden coves and sea caves</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="activity_kayaking_title">Ocean Kayaking <span class="difficulty-level beginner" data-lang-key="difficulty_beginner">BEGINNER</span></h3>
+                                        <p class="mb-0" data-lang-key="activity_kayaking_description">Explore hidden coves and sea caves</p>
                                     </div>
                                 </div>
                             </div>
@@ -306,10 +346,10 @@
                                 <div class="activity-card">
                                     <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
                                          alt="Surfing" 
-                                         class="activity-image">
+                                         class="activity-image" data-lang-alt="activity_surfing_alt">
                                     <div class="activity-overlay">
-                                        <h3 class="fs-20 mb-1">Surfing <span class="difficulty-level intermediate">INTERMEDIATE</span></h3>
-                                        <p class="mb-0">World-class waves with instructors</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="activity_surfing_title">Surfing <span class="difficulty-level intermediate" data-lang-key="difficulty_intermediate">INTERMEDIATE</span></h3>
+                                        <p class="mb-0" data-lang-key="activity_surfing_description">World-class waves with instructors</p>
                                     </div>
                                 </div>
                             </div>
@@ -319,10 +359,10 @@
                                 <div class="activity-card">
                                     <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
                                          alt="Snorkeling" 
-                                         class="activity-image">
+                                         class="activity-image" data-lang-alt="activity_snorkeling_alt">
                                     <div class="activity-overlay">
-                                        <h3 class="fs-20 mb-1">Snorkeling <span class="difficulty-level beginner">BEGINNER</span></h3>
-                                        <p class="mb-0">Vibrant coral reefs teeming with life</p>
+                                        <h3 class="fs-20 mb-1" data-lang-key="activity_snorkeling_title">Snorkeling <span class="difficulty-level beginner" data-lang-key="difficulty_beginner">BEGINNER</span></h3>
+                                        <p class="mb-0" data-lang-key="activity_snorkeling_description">Vibrant coral reefs teeming with life</p>
                                     </div>
                                 </div>
                             </div>
@@ -334,18 +374,18 @@
                                 <div class="col-lg-6">
                                     <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
                                          alt="More Activities" 
-                                         class="w-100 rounded-1">
+                                         class="w-100 rounded-1" data-lang-alt="features_image_alt">
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="ps-lg-4">
-                                        <h3 class="fs-24 mb-3">More Thrilling Experiences</h3>
+                                        <h3 class="fs-24 mb-3" data-lang-key="features_title">More Thrilling Experiences</h3>
                                         <ul class="feature-list">
-                                            <li>Underwater Photography & Videography Tours (Capture your adventure)</li>
-                                            <li>Jet Skiing (High-speed ocean adventures)</li>
-                                            <li>Parasailing (Breathtaking aerial views)</li>
-                                            <li>Flyboarding (Defy gravity above the waves)</li>
-                                            <li>Speed Boat Rides (Coastal exploration at pace)</li>
-                                            <li>Luxury Deep-Sea Yacht Charters (With dive options available)</li>
+                                            <li data-lang-key="feature_photography">Underwater Photography & Videography Tours (Capture your adventure)</li>
+                                            <li data-lang-key="feature_jetski">Jet Skiing (High-speed ocean adventures)</li>
+                                            <li data-lang-key="feature_parasailing">Parasailing (Breathtaking aerial views)</li>
+                                            <li data-lang-key="feature_flyboarding">Flyboarding (Defy gravity above the waves)</li>
+                                            <li data-lang-key="feature_speedboat">Speed Boat Rides (Coastal exploration at pace)</li>
+                                            <li data-lang-key="feature_yacht">Luxury Deep-Sea Yacht Charters (With dive options available)</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -354,21 +394,21 @@
 
                         <!-- Special Packages -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Premium Packages</h2>
-                            <p class="lead">Tailored experiences for every adventurer</p>
+                            <h2 class="fs-30" data-lang-key="packages_title">Premium Packages</h2>
+                            <p class="lead" data-lang-key="packages_description">Tailored experiences for every adventurer</p>
                         </div>
                         
                         <div class="row g-4">
                             <!-- Beginner Package -->
                             <div class="col-md-4">
                                 <div class="activity-type">
-                                    <h3 class="fs-24 mb-3">Ocean Explorer</h3>
+                                    <h3 class="fs-24 mb-3" data-lang-key="package_explorer_title">Ocean Explorer</h3>
                                     <div class="activity-option">
                                         <div class="activity-badge">1D</div>
                                         <div class="activity-details">
-                                            <span>Perfect for beginners</span>
-                                            <span>Includes: Snorkeling, Kayaking, Paddleboarding</span>
-                                            <span>Duration: Full Day</span>
+                                            <span data-lang-key="package_explorer_level">Perfect for beginners</span>
+                                            <span data-lang-key="package_explorer_includes">Includes: Snorkeling, Kayaking, Paddleboarding</span>
+                                            <span data-lang-key="package_explorer_duration">Duration: Full Day</span>
                                         </div>
                                     </div>
                                 </div>
@@ -377,13 +417,13 @@
                             <!-- Intermediate Package -->
                             <div class="col-md-4">
                                 <div class="activity-type">
-                                    <h3 class="fs-24 mb-3">Adrenaline Seeker</h3>
+                                    <h3 class="fs-24 mb-3" data-lang-key="package_adrenaline_title">Adrenaline Seeker</h3>
                                     <div class="activity-option">
                                         <div class="activity-badge">2D</div>
                                         <div class="activity-details">
-                                            <span>For intermediate adventurers</span>
-                                            <span>Includes: Jet Skiing, Parasailing, Surfing</span>
-                                            <span>Duration: 2 Days</span>
+                                            <span data-lang-key="package_adrenaline_level">For intermediate adventurers</span>
+                                            <span data-lang-key="package_adrenaline_includes">Includes: Jet Skiing, Parasailing, Surfing</span>
+                                            <span data-lang-key="package_adrenaline_duration">Duration: 2 Days</span>
                                         </div>
                                     </div>
                                 </div>
@@ -392,13 +432,13 @@
                             <!-- Advanced Package -->
                             <div class="col-md-4">
                                 <div class="activity-type">
-                                    <h3 class="fs-24 mb-3">Deep Blue Challenge</h3>
+                                    <h3 class="fs-24 mb-3" data-lang-key="package_deepblue_title">Deep Blue Challenge</h3>
                                     <div class="activity-option">
                                         <div class="activity-badge">3D</div>
                                         <div class="activity-details">
-                                            <span>For certified divers</span>
-                                            <span>Includes: Deep Sea Diving, Underwater Photography, Big Game Fishing</span>
-                                            <span>Duration: 3 Days</span>
+                                            <span data-lang-key="package_deepblue_level">For certified divers</span>
+                                            <span data-lang-key="package_deepblue_includes">Includes: Deep Sea Diving, Underwater Photography, Big Game Fishing</span>
+                                            <span data-lang-key="package_deepblue_duration">Duration: 3 Days</span>
                                         </div>
                                     </div>
                                 </div>
@@ -407,15 +447,15 @@
 
                         <!-- Luxury Options -->
                         <div class="experience-section">
-                            <h3 class="fs-24 mb-3 text-center">Luxury Experiences</h3>
+                            <h3 class="fs-24 mb-3 text-center" data-lang-key="luxury_experiences_title">Luxury Experiences</h3>
                             <div class="row g-4">
                                 <div class="col-md-4">
                                     <div class="activity-option">
                                         <div class="activity-badge">VIP</div>
                                         <div class="activity-details">
-                                            <span>Glass Bottom Boat Tours</span>
-                                            <span>Private guided marine life viewing</span>
-                                            <span>Duration: 2-4 hours</span>
+                                            <span data-lang-key="luxury_glassboat_title">Glass Bottom Boat Tours</span>
+                                            <span data-lang-key="luxury_glassboat_description">Private guided marine life viewing</span>
+                                            <span data-lang-key="luxury_glassboat_duration">Duration: 2-4 hours</span>
                                         </div>
                                     </div>
                                 </div>
@@ -423,9 +463,9 @@
                                     <div class="activity-option">
                                         <div class="activity-badge">VIP</div>
                                         <div class="activity-details">
-                                            <span>Banana Boat Rides</span>
-                                            <span>Group fun activity</span>
-                                            <span>Duration: 30-60 minutes</span>
+                                            <span data-lang-key="luxury_banana_title">Banana Boat Rides</span>
+                                            <span data-lang-key="luxury_banana_description">Group fun activity</span>
+                                            <span data-lang-key="luxury_banana_duration">Duration: 30-60 minutes</span>
                                         </div>
                                     </div>
                                 </div>
@@ -433,9 +473,9 @@
                                     <div class="activity-option">
                                         <div class="activity-badge">ELITE</div>
                                         <div class="activity-details">
-                                            <span>Private Yacht Charter</span>
-                                            <span>Full-day deep sea experience with crew</span>
-                                            <span>Customizable itinerary</span>
+                                            <span data-lang-key="luxury_yacht_title">Private Yacht Charter</span>
+                                            <span data-lang-key="luxury_yacht_description">Full-day deep sea experience with crew</span>
+                                            <span data-lang-key="luxury_yacht_duration">Customizable itinerary</span>
                                         </div>
                                     </div>
                                 </div>
@@ -444,41 +484,41 @@
 
                         <!-- Safety & Certification -->
                         <div class="section-header text-center mb-4">
-                            <h2 class="fs-30">Safety & Certification</h2>
-                            <p class="lead">Your adventure is our priority</p>
+                            <h2 class="fs-30" data-lang-key="safety_title">Safety & Certification</h2>
+                            <p class="lead" data-lang-key="safety_description">Your adventure is our priority</p>
                         </div>
                         
                         <div class="row g-4 mb-5">
                             <div class="col-md-4">
                                 <div class="text-center p-4">
                                     <i class="fas fa-shield-alt activity-icon"></i>
-                                    <h4 class="fs-20">Certified Instructors</h4>
-                                    <p>All activities led by PADI/SSI certified professionals with 5+ years experience</p>
+                                    <h4 class="fs-20" data-lang-key="safety_instructors_title">Certified Instructors</h4>
+                                    <p data-lang-key="safety_instructors_description">All activities led by PADI/SSI certified professionals with 5+ years experience</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="text-center p-4">
                                     <i class="fas fa-first-aid activity-icon"></i>
-                                    <h4 class="fs-20">Medical Support</h4>
-                                    <p>On-site hyperbaric chamber and emergency oxygen available 24/7</p>
+                                    <h4 class="fs-20" data-lang-key="safety_medical_title">Medical Support</h4>
+                                    <p data-lang-key="safety_medical_description">On-site hyperbaric chamber and emergency oxygen available 24/7</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="text-center p-4">
                                     <i class="fas fa-life-ring activity-icon"></i>
-                                    <h4 class="fs-20">Equipment Quality</h4>
-                                    <p>Premium gear serviced weekly and replaced annually</p>
+                                    <h4 class="fs-20" data-lang-key="safety_equipment_title">Equipment Quality</h4>
+                                    <p data-lang-key="safety_equipment_description">Premium gear serviced weekly and replaced annually</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- CTA Section -->
                         <div class="cta-section text-center pt-4 pb-5">
-                            <h3 class="fs-28 mb-3">Dive Into Adventure</h3>
-                            <p class="mb-4">Book your deep sea experience with Inmost World today</p>
+                            <h3 class="fs-28 mb-3" data-lang-key="cta_title">Dive Into Adventure</h3>
+                            <p class="mb-4" data-lang-key="cta_description">Book your deep sea experience with Inmost World today</p>
                             <div class="d-flex justify-content-center gap-3">
-                                <a class="btn-main fx-slide" href="contact.html"><span>Check Availability</span></a>
-                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span>Get Certified</span></a>
+                                <a class="btn-main fx-slide" href="contact.html"><span data-lang-key="cta_availability">Check Availability</span></a>
+                                <a class="btn-main fx-slide btn-outline" href="contact.html"><span data-lang-key="cta_certified">Get Certified</span></a>
                             </div>
                         </div>
                     </div>
@@ -492,7 +532,7 @@
                 <div class="row g-4">
                     <!-- Logo & Social -->
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images/wishgroup/logo remove.png" class="w-150px mb-3" alt="">
+                        <img src="/images/wishgroup/logo_remove.png" class="w-150px mb-3" alt="Wish Group Footer Logo" data-lang-alt="footer_logo_alt">
                         <div class="social-icons mt-3">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -502,24 +542,24 @@
                     </div>
                     <!-- Address -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Address</h3>
-                        <p class="mb-0">121 AI Blvd, San Francisco</p>
-                        <p>BCA 94107</p>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_address">Address</h3>
+                        <p class="mb-0" data-lang-key="headquarters_address">Business Bay</p>
+                        <p data-lang-key="headquarters_country">Dubai, United Arab Emirates</p>
                     </div>
                     <!-- Quick Links -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Quick Links</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light">Home</a></li>
-                            <li><a href="about.html" class="text-light">About Us</a></li>
-                            <li><a href="#" class="text-light">Divisions</a></li>
-                            <li><a href="#" class="text-light">Projects</a></li>
-                            <li><a href="#" class="text-light">Contact Us</a></li>
+                            <li><a href="index.html" class="text-light" data-lang-key="menu_home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-lang-key="menu_about">About Us</a></li>
+                            <li><a href="division.html" class="text-light" data-lang-key="menu_divisions">Divisions</a></li>
+                            <li><a href="projects.html" class="text-light" data-lang-key="menu_projects">Projects</a></li>
+                            <li><a href="contact.html" class="text-light" data-lang-key="menu_contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Contact Us with Email -->
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3">Contact Us</h3>
+                        <h3 class="fs-20 mb-3" data-lang-key="footer_contact">Contact Us</h3>
                         <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
                         <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
                         <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
@@ -532,7 +572,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Copyright 2025 - Wish Group. All rights reserved.
+                            <span data-lang-key="footer_copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
@@ -540,12 +580,541 @@
         </footer>
         <!-- footer end -->
 
-        <!-- Javascript Files
-        ================================================== -->
+        <!-- Javascript Files -->
         <script src="js/vendors.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
-    </div>
+        <script>
+            // Translations object
+            const translations = {
+                en: {
+                    page_title: "Inmost World - Premium Deep Sea Adventures",
+                    scroll_to_top: "Scroll to top",
+                    menu_home: "Home",
+                    menu_about: "About Us",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projects",
+                    menu_countries: "Countries",
+                    menu_news: "News",
+                    menu_policies: "Our Policies",
+                    menu_career: "Career",
+                    menu_contact: "Contact Us",
+                    menu_tickets_1: "Tickets Style 1",
+                    menu_tickets_2: "Tickets Style 2",
+                    menu_news_single: "News Single",
+                    logo_alt: "Wish Group Logo",
+                    hero_title: "Inmost World",
+                    hero_description: "Premium Deep Sea Adventures & Water Sports",
+                    hero_label: "PADI Certified",
+                    hero_alt: "Inmost World",
+                    intro_title: "Ocean Adventures Redefined",
+                    intro_description: "Where adrenaline meets the deep blue",
+                    intro_image_alt: "Deep Sea Activities",
+                    activities_title: "Our Signature Activities",
+                    activities_description: "World-class water sports and deep sea experiences",
+                    activity_diving_title: "Deep Sea Diving",
+                    activity_diving_description: "Certified scuba diving expeditions to 40m+",
+                    activity_diving_alt: "Deep Sea Diving",
+                    activity_paddleboarding_title: "Stand-up Paddleboarding",
+                    activity_paddleboarding_description: "Guided tours along coastal waters",
+                    activity_paddleboarding_alt: "Stand-up Paddleboarding",
+                    activity_fishing_title: "Big Game Fishing",
+                    activity_fishing_description: "Chase marlin, tuna and more",
+                    activity_fishing_alt: "Deep Sea Fishing",
+                    activity_kayaking_title: "Ocean Kayaking",
+                    activity_kayaking_description: "Explore hidden coves and sea caves",
+                    activity_kayaking_alt: "Kayaking",
+                    activity_surfing_title: "Surfing",
+                    activity_surfing_description: "World-class waves with instructors",
+                    activity_surfing_alt: "Surfing",
+                    activity_snorkeling_title: "Snorkeling",
+                    activity_snorkeling_description: "Vibrant coral reefs teeming with life",
+                    activity_snorkeling_alt: "Snorkeling",
+                    difficulty_beginner: "BEGINNER",
+                    difficulty_intermediate: "INTERMEDIATE",
+                    difficulty_advanced: "ADVANCED",
+                    features_title: "More Thrilling Experiences",
+                    feature_photography: "Underwater Photography & Videography Tours (Capture your adventure)",
+                    feature_jetski: "Jet Skiing (High-speed ocean adventures)",
+                    feature_parasailing: "Parasailing (Breathtaking aerial views)",
+                    feature_flyboarding: "Flyboarding (Defy gravity above the waves)",
+                    feature_speedboat: "Speed Boat Rides (Coastal exploration at pace)",
+                    feature_yacht: "Luxury Deep-Sea Yacht Charters (With dive options available)",
+                    features_image_alt: "More Activities",
+                    packages_title: "Premium Packages",
+                    packages_description: "Tailored experiences for every adventurer",
+                    package_explorer_title: "Ocean Explorer",
+                    package_explorer_level: "Perfect for beginners",
+                    package_explorer_includes: "Includes: Snorkeling, Kayaking, Paddleboarding",
+                    package_explorer_duration: "Duration: Full Day",
+                    package_adrenaline_title: "Adrenaline Seeker",
+                    package_adrenaline_level: "For intermediate adventurers",
+                    package_adrenaline_includes: "Includes: Jet Skiing, Parasailing, Surfing",
+                    package_adrenaline_duration: "Duration: 2 Days",
+                    package_deepblue_title: "Deep Blue Challenge",
+                    package_deepblue_level: "For certified divers",
+                    package_deepblue_includes: "Includes: Deep Sea Diving, Underwater Photography, Big Game Fishing",
+                    package_deepblue_duration: "Duration: 3 Days",
+                    luxury_experiences_title: "Luxury Experiences",
+                    luxury_glassboat_title: "Glass Bottom Boat Tours",
+                    luxury_glassboat_description: "Private guided marine life viewing",
+                    luxury_glassboat_duration: "Duration: 2-4 hours",
+                    luxury_banana_title: "Banana Boat Rides",
+                    luxury_banana_description: "Group fun activity",
+                    luxury_banana_duration: "Duration: 30-60 minutes",
+                    luxury_yacht_title: "Private Yacht Charter",
+                    luxury_yacht_description: "Full-day deep sea experience with crew",
+                    luxury_yacht_duration: "Customizable itinerary",
+                    safety_title: "Safety & Certification",
+                    safety_description: "Your adventure is our priority",
+                    safety_instructors_title: "Certified Instructors",
+                    safety_instructors_description: "All activities led by PADI/SSI certified professionals with 5+ years experience",
+                    safety_medical_title: "Medical Support",
+                    safety_medical_description: "On-site hyperbaric chamber and emergency oxygen available 24/7",
+                    safety_equipment_title: "Equipment Quality",
+                    safety_equipment_description: "Premium gear serviced weekly and replaced annually",
+                    cta_title: "Dive Into Adventure",
+                    cta_description: "Book your deep sea experience with Inmost World today",
+                    cta_availability: "Check Availability",
+                    cta_certified: "Get Certified",
+                    footer_address: "Address",
+                    quick_links: "Quick Links",
+                    footer_contact: "Contact Us",
+                    footer_copyright: "Copyright 2025 - Wish Group. All rights reserved.",
+                    footer_logo_alt: "Wish Group Footer Logo",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubai, United Arab Emirates"
+                },
+                ar: {
+                    page_title: "إنموست وورلد - مغامرات البحر العميق المميزة",
+                    scroll_to_top: "التمرير إلى الأعلى",
+                    menu_home: "الرئيسية",
+                    menu_about: "معلومات عنا",
+                    menu_divisions: "الأقسام",
+                    menu_projects: "المشاريع",
+                    menu_countries: "الدول",
+                    menu_news: "الأخبار",
+                    menu_policies: "سياساتنا",
+                    menu_career: "الوظائف",
+                    menu_contact: "اتصل بنا",
+                    menu_tickets_1: "تذاكر النمط الأول",
+                    menu_tickets_2: "تذاكر النمط الثاني",
+                    menu_news_single: "خبر مفرد",
+                    logo_alt: "شعار مجموعة ويش",
+                    hero_title: "إنموست وورلد",
+                    hero_description: "مغامرات البحر العميق المميزة ورياضات الماء",
+                    hero_label: "معتمد من PADI",
+                    hero_alt: "إنموست وورلد",
+                    intro_title: "إعادة تعريف مغامرات المحيط",
+                    intro_description: "حيث يلتقي الأدرينالين بالأزرق العميق",
+                    intro_image_alt: "أنشطة البحر العميق",
+                    activities_title: "أنشطتنا المميزة",
+                    activities_description: "رياضات مائية عالمية المستوى وتجارب البحر العميق",
+                    activity_diving_title: "الغوص في أعماق البحر",
+                    activity_diving_description: "رحلات غوص معتمدة إلى أكثر من 40 مترًا",
+                    activity_diving_alt: "الغوص في أعماق البحر",
+                    activity_paddleboarding_title: "التجديف واقفًا",
+                    activity_paddleboarding_description: "جولات موجهة على طول المياه الساحلية",
+                    activity_paddleboarding_alt: "التجديف واقفًا",
+                    activity_fishing_title: "صيد الأسماك الكبيرة",
+                    activity_fishing_description: "مطاردة سمك المارلين والتونة وغيرها",
+                    activity_fishing_alt: "صيد الأسماك في أعماق البحر",
+                    activity_kayaking_title: "التجديف بالكاياك في المحيط",
+                    activity_kayaking_description: "استكشاف الخلجان المخفية وكهوف البحر",
+                    activity_kayaking_alt: "التجديف بالكاياك",
+                    activity_surfing_title: "ركوب الأمواج",
+                    activity_surfing_description: "أمواج عالمية المستوى مع مدربين",
+                    activity_surfing_alt: "ركوب الأمواج",
+                    activity_snorkeling_title: "الغطس السطحي",
+                    activity_snorkeling_description: "شعاب مرجانية نابضة بالحياة مليئة بالحياة",
+                    activity_snorkeling_alt: "الغطس السطحي",
+                    difficulty_beginner: "مبتدئ",
+                    difficulty_intermediate: "متوسط",
+                    difficulty_advanced: "متقدم",
+                    features_title: "تجارب مثيرة أخرى",
+                    feature_photography: "جولات التصوير الفوتوغرافي والفيديو تحت الماء (التقط مغامرتك)",
+                    feature_jetski: "التزلج على الماء (مغامرات بحرية عالية السرعة)",
+                    feature_parasailing: "الطيران المظلي (إطلالات جوية خلابة)",
+                    feature_flyboarding: "الطيران المائي (تحدي الجاذبية فوق الأمواج)",
+                    feature_speedboat: "رحلات القوارب السريعة (استكشاف الساحل بسرعة)",
+                    feature_yacht: "تأجير يخوت فاخرة لأعماق البحر (مع خيارات الغوص)",
+                    features_image_alt: "مزيد من الأنشطة",
+                    packages_title: "الباقات المميزة",
+                    packages_description: "تجارب مصممة لكل مغامر",
+                    package_explorer_title: "مستكشف المحيط",
+                    package_explorer_level: "مثالي للمبتدئين",
+                    package_explorer_includes: "يشمل: الغطس السطحي، التجديف بالكاياك، التجديف واقفًا",
+                    package_explorer_duration: "المدة: يوم كامل",
+                    package_adrenaline_title: "الباحث عن الأدرينالين",
+                    package_adrenaline_level: "للمغامرين المتوسطين",
+                    package_adrenaline_includes: "يشمل: التزلج على الماء، الطيران المظلي، ركوب الأمواج",
+                    package_adrenaline_duration: "المدة: يومين",
+                    package_deepblue_title: "تحدي الأزرق العميق",
+                    package_deepblue_level: "للغواصين المعتمدين",
+                    package_deepblue_includes: "يشمل: الغوص في أعماق البحر، التصوير تحت الماء، صيد الأسماك الكبيرة",
+                    package_deepblue_duration: "المدة: 3 أيام",
+                    luxury_experiences_title: "تجارب فاخرة",
+                    luxury_glassboat_title: "جولات القوارب ذات القاع الزجاجي",
+                    luxury_glassboat_description: "مشاهدة الحياة البحرية بمساعدة مرشد خاص",
+                    luxury_glassboat_duration: "المدة: 2-4 ساعات",
+                    luxury_banana_title: "رحلات قوارب الموز",
+                    luxury_banana_description: "نشاط ممتع للمجموعات",
+                    luxury_banana_duration: "المدة: 30-60 دقيقة",
+                    luxury_yacht_title: "تأجير يخت خاص",
+                    luxury_yacht_description: "تجربة بحرية عميقة ليوم كامل مع الطاقم",
+                    luxury_yacht_duration: "خط سير قابل للتخصيص",
+                    safety_title: "السلامة والتأهيل",
+                    safety_description: "مغامرتك هي أولويتنا",
+                    safety_instructors_title: "مدربون معتمدون",
+                    safety_instructors_description: "جميع الأنشطة بقيادة محترفين معتمدين من PADI/SSI بخبرة تزيد عن 5 سنوات",
+                    safety_medical_title: "الدعم الطبي",
+                    safety_medical_description: "غرفة ضغط عالي وأكسجين طارئ متاح 24/7",
+                    safety_equipment_title: "جودة المعدات",
+                    safety_equipment_description: "معدات متميزة يتم صيانتها أسبوعيًا واستبدالها سنويًا",
+                    cta_title: "انغمس في المغامرة",
+                    cta_description: "احجز تجربتك في أعماق البحر مع إنموست وورلد اليوم",
+                    cta_availability: "تحقق من التوفر",
+                    cta_certified: "احصل على الاعتماد",
+                    footer_address: "العنوان",
+                    quick_links: "روابط سريعة",
+                    footer_contact: "اتصل بنا",
+                    footer_copyright: "حقوق النشر 2025 - مجموعة ويش. جميع الحقوق محفوظة.",
+                    footer_logo_alt: "شعار مجموعة ويش في التذييل",
+                    headquarters_address: "خليج الأعمال",
+                    headquarters_country: "دبي، الإمارات العربية المتحدة"
+                },
+                fr: {
+                    page_title: "Inmost World - Aventures en haute mer de luxe",
+                    scroll_to_top: "Faire défiler vers le haut",
+                    menu_home: "Accueil",
+                    menu_about: "À propos de nous",
+                    menu_divisions: "Divisions",
+                    menu_projects: "Projets",
+                    menu_countries: "Pays",
+                    menu_news: "Actualités",
+                    menu_policies: "Nos politiques",
+                    menu_career: "Carrière",
+                    menu_contact: "Contactez-nous",
+                    menu_tickets_1: "Billets Style 1",
+                    menu_tickets_2: "Billets Style 2",
+                    menu_news_single: "Actualité Unique",
+                    logo_alt: "Logo du Groupe Wish",
+                    hero_title: "Inmost World",
+                    hero_description: "Aventures en haute mer et sports nautiques de luxe",
+                    hero_label: "Certifié PADI",
+                    hero_alt: "Inmost World",
+                    intro_title: "Les aventures océaniques redéfinies",
+                    intro_description: "Là où l'adrénaline rencontre le grand bleu",
+                    intro_image_alt: "Activités en haute mer",
+                    activities_title: "Nos activités phares",
+                    activities_description: "Sports nautiques et expériences en haute mer de classe mondiale",
+                    activity_diving_title: "Plongée en haute mer",
+                    activity_diving_description: "Expéditions de plongée certifiées à plus de 40 m",
+                    activity_diving_alt: "Plongée en haute mer",
+                    activity_paddleboarding_title: "Paddleboard debout",
+                    activity_paddleboarding_description: "Visites guidées le long des eaux côtières",
+                    activity_paddleboarding_alt: "Paddleboard debout",
+                    activity_fishing_title: "Pêche au gros",
+                    activity_fishing_description: "Chassez le marlin, le thon et plus encore",
+                    activity_fishing_alt: "Pêche en haute mer",
+                    activity_kayaking_title: "Kayak en mer",
+                    activity_kayaking_description: "Explorez les criques cachées et les grottes marines",
+                    activity_kayaking_alt: "Kayak",
+                    activity_surfing_title: "Surf",
+                    activity_surfing_description: "Vagues de classe mondiale avec instructeurs",
+                    activity_surfing_alt: "Surf",
+                    activity_snorkeling_title: "Snorkeling",
+                    activity_snorkeling_description: "Récifs coralliens vibrants grouillants de vie",
+                    activity_snorkeling_alt: "Snorkeling",
+                    difficulty_beginner: "DÉBUTANT",
+                    difficulty_intermediate: "INTERMÉDIAIRE",
+                    difficulty_advanced: "AVANCÉ",
+                    features_title: "Plus d'expériences palpitantes",
+                    feature_photography: "Tours de photographie et vidéographie sous-marine (Capturez votre aventure)",
+                    feature_jetski: "Jet ski (Aventures océaniques à haute vitesse)",
+                    feature_parasailing: "Parachute ascensionnel (Vues aériennes époustouflantes)",
+                    feature_flyboarding: "Flyboard (Défiez la gravité au-dessus des vagues)",
+                    feature_speedboat: "Balades en bateau rapide (Exploration côtière à vive allure)",
+                    feature_yacht: "Locations de yachts de luxe en haute mer (Avec options de plongée)",
+                    features_image_alt: "Plus d'activités",
+                    packages_title: "Forfaits Premium",
+                    packages_description: "Expériences sur mesure pour chaque aventurier",
+                    package_explorer_title: "Explorateur de l'océan",
+                    package_explorer_level: "Parfait pour les débutants",
+                    package_explorer_includes: "Inclut : Snorkeling, Kayak, Paddleboard",
+                    package_explorer_duration: "Durée : Journée complète",
+                    package_adrenaline_title: "Chercheur d'adrénaline",
+                    package_adrenaline_level: "Pour les aventuriers intermédiaires",
+                    package_adrenaline_includes: "Inclut : Jet ski, Parachute ascensionnel, Surf",
+                    package_adrenaline_duration: "Durée : 2 jours",
+                    package_deepblue_title: "Défi du grand bleu",
+                    package_deepblue_level: "Pour les plongeurs certifiés",
+                    package_deepblue_includes: "Inclut : Plongée en haute mer, Photographie sous-marine, Pêche au gros",
+                    package_deepblue_duration: "Durée : 3 jours",
+                    luxury_experiences_title: "Expériences de luxe",
+                    luxury_glassboat_title: "Tours en bateau à fond de verre",
+                    luxury_glassboat_description: "Observation guidée privée de la vie marine",
+                    luxury_glassboat_duration: "Durée : 2-4 heures",
+                    luxury_banana_title: "Balades en bateau banane",
+                    luxury_banana_description: "Activité amusante pour groupes",
+                    luxury_banana_duration: "Durée : 30-60 minutes",
+                    luxury_yacht_title: "Location de yacht privé",
+                    luxury_yacht_description: "Expérience en haute mer d'une journée complète avec équipage",
+                    luxury_yacht_duration: "Itinéraire personnalisable",
+                    safety_title: "Sécurité et certification",
+                    safety_description: "Votre aventure est notre priorité",
+                    safety_instructors_title: "Instructeurs certifiés",
+                    safety_instructors_description: "Toutes les activités sont dirigées par des professionnels certifiés PADI/SSI avec plus de 5 ans d'expérience",
+                    safety_medical_title: "Support médical",
+                    safety_medical_description: "Chambre hyperbare sur place et oxygène d'urgence disponible 24/7",
+                    safety_equipment_title: "Qualité des équipements",
+                    safety_equipment_description: "Équipements premium entretenus chaque semaine et remplacés annuellement",
+                    cta_title: "Plongez dans l'aventure",
+                    cta_description: "Réservez votre expérience en haute mer avec Inmost World aujourd'hui",
+                    cta_availability: "Vérifier la disponibilité",
+                    cta_certified: "Obtenir une certification",
+                    footer_address: "Adresse",
+                    quick_links: "Liens rapides",
+                    footer_contact: "Contactez-nous",
+                    footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés.",
+                    footer_logo_alt: "Logo du Groupe Wish dans le pied de page",
+                    headquarters_address: "Business Bay",
+                    headquarters_country: "Dubaï, Émirats Arabes Unis"
+                },
+                si: {
+                    page_title: "ඉන්මෝස්ට් වර්ල්ඩ් - සුඛෝපභෝගී ගැඹුරු මුහුදු වික්‍රමයන්",
+                    scroll_to_top: "ඉහළට ගමන් කරන්න",
+                    menu_home: "මුල් පිටුව",
+                    menu_about: "අප ගැන",
+                    menu_divisions: "අංශ",
+                    menu_projects: "ව්‍යාපෘති",
+                    menu_countries: "රටවල්",
+                    menu_news: "පුවත්",
+                    menu_policies: "අපගේ ප්‍රතිපත්ති",
+                    menu_career: "වෘත්තිය",
+                    menu_contact: "අප හා සම්බන්ධ වන්න",
+                    menu_tickets_1: "ටිකට් විලාසිතා 1",
+                    menu_tickets_2: "ටිකට් විලාසිතා 2",
+                    menu_news_single: "තනි පුවත",
+                    logo_alt: "විෂ් ගෲප් ලෝගෝ",
+                    hero_title: "ඉන්මෝස්ට් වර්ල්ඩ්",
+                    hero_description: "සුඛෝපභෝගී ගැඹුරු මුහුදු වික්‍රමයන් සහ ජල ක්‍රීඩා",
+                    hero_label: "PADI සහතික කර ඇත",
+                    hero_alt: "ඉන්මෝස්ට් වර්ල්ඩ්",
+                    intro_title: "සාගර වික්‍රමයන් නැවත අර්ථ දක්වයි",
+                    intro_description: "ඇඩ්‍රිනලින් ගැඹුරු නිල් පැහැය හමුවන තැන",
+                    intro_image_alt: "ගැඹුරු මුහුදු ක්‍රියාකාරකම්",
+                    activities_title: "අපගේ සුවිශේෂී ක්‍රියාකාරකම්",
+                    activities_description: "ලෝක මට්ටමේ ජල ක්‍රීඩා සහ ගැඹුරු මුහුදු අත්දැකීම්",
+                    activity_diving_title: "ගැඹුරු මුහුදු ගිල්වීම",
+                    activity_diving_description: "මීටර් 40+ දක්වා සහතික කළ ගිල්වීමේ ගවේෂණ",
+                    activity_diving_alt: "ගැඹුරු මුහුදු ගිල්වීම",
+                    activity_paddleboarding_title: "ස්ටෑන්ඩ්-අප් පැඩල්බෝඩිං",
+                    activity_paddleboarding_description: "වෙරළ තීරයේ ජලයේ මඟ පෙන්වන ලද චාරිකා",
+                    activity_paddleboarding_alt: "ස්ටෑන්ඩ්-අප් පැඩල්බෝඩිං",
+                    activity_fishing_title: "බිග් ගේම් මසුන් ඇල්ලීම",
+                    activity_fishing_description: "මාර්ලින්, ටූනා සහ තවත් මසුන් හඹා යන්න",
+                    activity_fishing_alt: "ගැඹුරු මුහුදු මසුන් ඇල්ලීම",
+                    activity_kayaking_title: "සාගර කයැකිං",
+                    activity_kayaking_description: "සැඟවුණු බොක්කු සහ මුහුදු ගුහා ගවේෂණය",
+                    activity_kayaking_alt: "කයැකිං",
+                    activity_surfing_title: "සර්ෆිං",
+                    activity_surfing_description: "ලෝක මට්ටමේ රළපිලි සමඟින් උපදේශකයින්",
+                    activity_surfing_alt: "සර්ෆිං",
+                    activity_snorkeling_title: "ස්නෝර්කෙලිං",
+                    activity_snorkeling_description: "ජීවයෙන් බබලන වර්ණවත් කොරල්පර",
+                    activity_snorkeling_alt: "ස්නෝර්කෙලිං",
+                    difficulty_beginner: "ආරම්භක",
+                    difficulty_intermediate: "මධ්‍යම",
+                    difficulty_advanced: "උසස්",
+                    features_title: "තවත් උද්වේගකර අත්දැකීම්",
+                    feature_photography: "දිය යට ඡායාරූපකරණය සහ වීඩියෝ චාරිකා (ඔබේ වික්‍රමය ග්‍රහණය කරන්න)",
+                    feature_jetski: "ජෙට් ස්කීං (අධිවේගී සාගර වික්‍රමයන්)",
+                    feature_parasailing: "පැරසේලිං (විශ්මයජනක ගුවන් දසුන්)",
+                    feature_flyboarding: "ෆ්ලයිබෝඩිං (රළ මත ගුරුත්වාකර්ෂණයට එරෙහිව)",
+                    feature_speedboat: "වේග බෝට්ටු චාරිකා (වෙරළ ගවේෂණය වේගයෙන්)",
+                    feature_yacht: "සුඛෝපභෝගී ගැඹුරු මුහුදු යාත්‍රා බදුකිරීම (ගිල්වීමේ විකල්ප සමඟ)",
+                    features_image_alt: "තවත් ක්‍රියාකාරකම්",
+                    packages_title: "සුඛෝපභෝගී පැකේජ",
+                    packages_description: "සෑම වික්‍රමකරුවෙකුටම ගැලපෙන අත්දැකීම්",
+                    package_explorer_title: "සාගර ගවේෂක",
+                    package_explorer_level: "ආරම්භකයින්ට පරිපූර්ණයි",
+                    package_explorer_includes: "ඇතුළත්: ස්නෝර්කෙලිං, කයැකිං, පැඩල්බෝඩිං",
+                    package_explorer_duration: "කාලය: සම්පූර්ණ දිනය",
+                    package_adrenaline_title: "ඇඩ්‍රිනලින් සොයන්නා",
+                    package_adrenaline_level: "මධ්‍යම වික්‍රමකරුවන් සඳහා",
+                    package_adrenaline_includes: "ඇතුළත්: ජෙට් ස්කීං, පැරසේලිං, සර්ෆිං",
+                    package_adrenaline_duration: "කාලය: දින 2",
+                    package_deepblue_title: "ගැඹුරු නිල් අභියෝගය",
+                    package_deepblue_level: "සහතිකලත් ගිල්වන්නන් සඳහා",
+                    package_deepblue_includes: "ඇතුළත්: ගැඹුරු මුහුදු ගිල්වීම, දිය යට ඡායාරූපකරණය, බිග් ගේම් මසුන් ඇල්ලීම",
+                    package_deepblue_duration: "කාලය: දින 3",
+                    luxury_experiences_title: "සුඛෝපභෝගී අත්දැකීම්",
+                    luxury_glassboat_title: "වීදුරු බිමැති බෝට්ටු චාරිකා",
+                    luxury_glassboat_description: "පුද්ගලිකව මඟ පෙන්වන සමුද්‍ර ජීවිත නැරඹීම",
+                    luxury_glassboat_duration: "කාලය: පැය 2-4",
+                    luxury_banana_title: "බනානා බෝට්ටු චාරිකා",
+                    luxury_banana_description: "කණ්ඩායම් විනෝද චාරිකා",
+                    luxury_banana_duration: "කාලය: මිනිත්තු 30-60",
+                    luxury_yacht_title: "පුද්ගලික යාත්‍රා බදුකිරීම",
+                    luxury_yacht_description: "කාර්ය මණ්ඩලය සමඟ සම්පූර්ණ දින ගැඹුරු මුහුදු අත්දැකීම",
+                    luxury_yacht_duration: "රිසිකරණය කළ හැකි ගමන් මාර්ගය",
+                    safety_title: "ආරක්ෂාව සහ සහතිකකරණය",
+                    safety_description: "ඔබේ වික්‍රමය අපගේ ප්‍රමුඛතාවයයි",
+                    safety_instructors_title: "සහතිකලත් උපදේශකයින්",
+                    safety_instructors_description: "සියලුම ක්‍රියාකාරකම් PADI/SSI සහතිකලත් වෘත්තිකයින් විසින් මෙහෙයවනු ලබන අතර, වසර 5කට වඩා අත්දැකීම් ඇත",
+                    safety_medical_title: "වෛද්‍ය සහාය",
+                    safety_medical_description: "පැය 24/7 ලබා ගත හැකි ස්ථානීය අධිපීඩන කුටිය සහ හදිසි ඔක්සිජන්",
+                    safety_equipment_title: "උපකරණවල ගුණාත්මකභාවය",
+                    safety_equipment_description: "සතිපතා නඩත්තු කරන ලද සහ වාර්ෂිකව ප්‍රතිස්ථාපනය කරන ලද උසස් උපකරණ",
+                    cta_title: "වික්‍රමයට ගිලෙන්න",
+                    cta_description: "අදම ඉන්මෝස්ට් වර්ල්ඩ් සමඟ ඔබේ ගැඹුරු මුහුදු අත්දැකීම වෙන් කරවා ගන්න",
+                    cta_availability: "ලබා ගත හැකි බව පරීක්ෂා කරන්න",
+                    cta_certified: "සහතිකය ලබා ගන්න",
+                    footer_address: "ලිපිනය",
+                    quick_links: "ඉක්මන් සබැඳි",
+                    footer_contact: "අප හා සම්බන්ධ වන්න",
+                    footer_copyright: "පිටපත් අයිතිය 2025 - විෂ් ගෲප්. සියලු හිමිකම් ඇවිරිණි.",
+                    footer_logo_alt: "විෂ් ගෲප් පාදක ලෝගෝ",
+                    headquarters_address: "බිස්නස් බේ",
+                    headquarters_country: "ඩුබායි, එක්සත් අරාබි එමිරේට්ස්"
+                },
+              dv: {
+    page_title: "އިންމޯސްޓް ވާލްޑް - ޕްރީމިއަމް ޑީޕް ސީ އެޑްވެންޗަރސް",
+    scroll_to_top: "މަތިއަށް ސްކްރޯލް ކުރަން",
+    menu_home: "މަންދު",
+    menu_about: "އަލިފަން",
+    menu_divisions: "ބައިތައް",
+    menu_projects: "ޕްރޮޖެކްޓްތައް",
+    menu_countries: "ޤައުމުތައް",
+    menu_news: "ޚަބަރު",
+    menu_policies: "އަމިއްލަ ސިޔާސަތުތައް",
+    menu_career: "ކެރިއަރ",
+    menu_contact: "ކޮންޓެކްޓް އަސް",
+    menu_tickets_1: "ޓިކެޓް ސްޓައިލް 1",
+    menu_tickets_2: "ޓިކެޓް ސްޓައިލް 2",
+    menu_news_single: "އެކެއް ޚަބަރު",
+    logo_alt: "ވިޝް ގްރޫޕް ލޯގޯ",
+    hero_title: "އިންމޯސްޓް ވާލްޑް",
+    hero_description: "ޕްރީމިއަމް ޑީޕް ސީ އެޑްވެންޗަރސް އަދި ވޯޓަރ ސްޕޯޓްސް",
+    hero_label: "PADI ސަރޓިފައިޑް",
+    hero_alt: "އިންމޯސްޓް ވާލްޑް",
+    intro_title: "އޯޝަން އެޑްވެންޗަރސް ރީޑިފައިން ކުރެވިފަ",
+    intro_description: "އެޑްރިނަލިން ޑީޕް ބްލޫ އެކު ބެހެއެވެ",
+    intro_image_alt: "ޑީޕް ސީ އެކްޓިވިޓީސް",
+    activities_title: "އަމިއްލަ ސިގްނެޗަރ އެކްޓިވިޓީސް",
+    activities_description: "ވާލްޑް-ކްލާސް ވޯޓަރ ސްޕޯޓްސް އަދި ޑީޕް ސީ އެކްސްޕިރިއަންސަސް",
+    activity_diving_title: "ޑީޕް ސީ ޑައިވިން",
+    activity_diving_description: "40 މީޓަރ+ އަށް ސަރޓިފައިޑް ސްކޫބާ ޑައިވިން އެކްސްޕެޑިޝަންސް",
+    activity_diving_alt: "ޑީޕް ސީ ޑައިވިން",
+    activity_paddleboarding_title: "ސްޓެންޑް-އަޕް ޕެޑަލްބޯޑިން",
+    activity_paddleboarding_description: "ކޮސްޓަލް ވޯޓަރ އެކު ގައިޑެޑް ޓޫރސް",
+    activity_paddleboarding_alt: "ސްޓެންޑް-އަޕް ޕެޑަލްބޯޑިން",
+    activity_fishing_title: "ބިގް ގޭމް ފިޝިން",
+    activity_fishing_description: "މާރލިން، ޓޫނާ އަދި އެނެތް މަސް ހަމްބަ ކުރަން",
+    activity_fishing_alt: "ޑީޕް ސީ ފިޝިން",
+    activity_kayaking_title: "އޯޝަން ކަޔާކިން",
+    activity_kayaking_description: "ސެގްވުން ކޯވްސް އަދި ސީ ކޭވްސް އެކްސްޕްލޯރ ކުރަން",
+    activity_kayaking_alt: "ކަޔާކިން",
+    activity_surfing_title: "ސަރފިން",
+    activity_surfing_description: "ވާލްޑް-ކްލާސް ވޭވްސް އިންސްޓްރަކްޓަރުން އެކު",
+    activity_surfing_alt: "ސަރފިން",
+    activity_snorkeling_title: "ސްނޯކެލިން",
+    activity_snorkeling_description: "ލަވިޔާނި ކޮރަލް ރީފްސް ލައިފް އެކު",
+    activity_snorkeling_alt: "ސްނޯކެލިން",
+    difficulty_beginner: "ބިގިނަރ",
+    difficulty_intermediate: "އިންޓަރމީޑިއެޓް",
+    difficulty_advanced: "އެޑްވާންސް",
+    features_title: "އެނެތް ތްރިލިން އެކްސްޕިރިއަންސަސް",
+    feature_photography: "އަންޑަރވޯޓަރ ފޮޓޮގްރަފީ އަދި ވިޑިޔޮގްރަފީ ޓޫރސް (ތިޔަ އެޑްވެންޗަރ ކެޕްޗަރ ކުރަން)",
+    feature_jetski: "ޖެޓް ސްކީއިން (ހައި-ސްޕީޑް އޯޝަން އެޑްވެންޗަރސް)",
+    feature_parasailing: "ޕެރަސެއިލިން (ބްރެތްޓެކިން އެއަރިއަލް ވިޔުސް)",
+    feature_flyboarding: "ފްލައިބޯޑިން (ވޭވްސް މަތިން ގްރެވިޓީ ޑިފައި ކުރަން)",
+    feature_speedboat: "ސްޕީޑް ބޯޓް ރައިޑްސް (ކޮސްޓަލް އެކްސްޕްލޯރޭޝަން އަށް ޕޭސް)",
+    feature_yacht: "ލަކްޝަރީ ޑީޕް-ސީ ޔާޗް ޗާޓަރސް (ޑައިވިން އޮޕްޝަންސް އެކު)",
+    features_image_alt: "އެނެތް އެކްޓިވިޓީސް",
+    packages_title: "ޕްރީމިއަމް ޕެކޭޖަސް",
+    packages_description: "ކޮންމެ އެޑްވެންޗަރަށް ޓެއިލަރ ކުރެވިފައިވާ އެކްސްޕިރިއަންސަސް",
+    package_explorer_title: "އޯޝަން އެކްސްޕްލޯރަރ",
+    package_explorer_level: "ބިގިނަރުންނަށް ޕަރފެކްޓް",
+    package_explorer_includes: "އިންކްލޫޑް: ސްނޯކެލިން، ކަޔާކިން، ޕެޑަލްބޯޑިން",
+    package_explorer_duration: "ޑިއުރޭޝަން: ފުލް ޑޭ",
+    package_adrenaline_title: "އެޑްރިނަލިން ސީކަރ",
+    package_adrenaline_level: "އިންޓަރމީޑިއެޓް އެޑްވެންޗަރަށް",
+    package_adrenaline_includes: "އިންކްލޫޑް: ޖެޓް ސްކީއިން، ޕެރަސެއިލިން، ސަރފިން",
+    package_adrenaline_duration: "ޑިއުރޭޝަން: 2 ދުވަސް",
+    package_deepblue_title: "ޑީޕް ބްލޫ ޗެލެންޖް",
+    package_deepblue_level: "ސަރޓިފައިޑް ޑައިވަރުންނަށް",
+    package_deepblue_includes: "އިންކްލޫޑް: ޑީޕް ސީ ޑައިވިން، އަންޑަރވޯޓަރ ފޮޓޮގްރަފީ، ބިގް ގޭމް ފިޝިން",
+    package_deepblue_duration: "ޑިއުރޭޝަން: 3 ދުވަސް",
+    luxury_experiences_title: "ލަކްޝަރީ އެކްސްޕިރިއަންސަސް",
+    luxury_glassboat_title: "ގްލާސް ބޮޓަމް ބޯޓް ޓޫރސް",
+    luxury_glassboat_description: "ޕްރައިވެޓް ގައިޑެޑް މެރިން ލައިފް ވިޔުއިން",
+    luxury_glassboat_duration: "ޑިއުރޭޝަން: 2-4 ގަޑިއިރު",
+    luxury_banana_title: "ބަނާނާ ބޯޓް ރައިޑްސް",
+    luxury_banana_description: "ގްރޫޕް ފަން އެކްޓިވިޓީ",
+    luxury_banana_duration: "ޑިއުރޭޝަން: 30-60 މިނިޓް",
+    luxury_yacht_title: "ޕްރައިވެޓް ޔާޗް ޗާޓަރ",
+    luxury_yacht_description: "ކްރޫ އެކު ފުލް-ޑޭ ޑީޕް ސީ އެކްސްޕިރިއަންސް",
+    luxury_yacht_duration: "ކަސްޓަމައިޒަބަލް އިޓިނަރަރީ",
+    safety_title: "ސޭފްޓީ އަދި ސަރޓިފިކޭޝަން",
+    safety_description: "ތިޔަ އެޑްވެންޗަރ އަމިއްލަ ޕްރަޔޮރިޓީ އެވެ",
+    safety_instructors_title: "ސަރޓިފައިޑް އިންސްޓްރަކްޓަރުން",
+    safety_instructors_description: "ހުރިހާ އެކްޓިވިޓީސް PADI/SSI ސަރޓިފައިޑް ޕްރޮފެޝަނަލްސް އެކު 5 އަހަރު+ އެކްސްޕިރިއަންސް",
+    safety_medical_title: "މެޑިކަލް ސަޕޯޓް",
+    safety_medical_description: "24/7 އެވެއިލަބަލް އޮން-ސައިޓް ހައިޕަރބަރިކް ޗޭމްބަރ އަދި އިމަރޖެންސީ އޮކްސިޖަން",
+    safety_equipment_title: "އިކްވިޕްމަންޓް ކޮލިޓީ",
+    safety_equipment_description: "ޕްރީމިއަމް ގިއަރ ސަތީގަ ސަރވިސް ކުރެވި އަދި އަހަރު ރިޕްލޭސް ކުރެވެ",
+    cta_title: "އެޑްވެންޗަރަށް ޑައިވް ކުރަން",
+    cta_description: "އަދި އިންމޯސްޓް ވާލްޑް އެކު ތިޔަ ޑީޕް ސީ އެކްސްޕިރިއަންސް ބުކް ކުރަން",
+    cta_availability: "އެވެއިލަބިލިޓީ ޗެކް ކުރަން",
+    cta_certified: "ސަރޓިފައި ކުރަން",
+    footer_address: "އެޑްރެސް",
+    quick_links: "ކުއިކް ލިންކްސް",
+    footer_contact: "ކޮންޓެކްޓް އަސް",
+    footer_copyright: "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ރައިޓްސް ރިޒާވް.",
+    footer_logo_alt: "ވިޝް ގްރޫޕް ފޫޓަރ ލޯގޯ",
+    headquarters_address: "ބިޒްނަސް ބޭ",
+    headquarters_country: "ޑުބައި، ޔުނައިޓެޑް އަރަބް އެމިރެޓްސް"
+}
+            }
+
+
+
+                       // Function to change language
+            function changeLanguage(lang) {
+                document.getElementById('currentLang').textContent = lang.toUpperCase();
+                document.querySelectorAll('[data-lang-key]').forEach(element => {
+                    const key = element.getAttribute('data-lang-key');
+                    if (translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                    }
+                });
+                document.querySelectorAll('[data-lang-alt]').forEach(element => {
+                    const key = element.getAttribute('data-lang-alt');
+                    if (translations[lang][key]) {
+                        element.alt = translations[lang][key];
+                    }
+                });
+                document.querySelector('html').lang = lang;
+                if (lang === 'ar' || lang === 'dv') {
+                    document.querySelector('html').dir = 'rtl';
+                    document.querySelector('body').style.textAlign = 'right';
+                } else {
+                    document.querySelector('html').dir = 'ltr';
+                    document.querySelector('body').style.textAlign = 'left';
+                }
+                document.querySelector('title').textContent = translations[lang].page_title;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            // Initialize language
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+                changeLanguage(savedLang);
+            });
+        </script>
 </body>
+
 </html>
