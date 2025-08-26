@@ -1,0 +1,12 @@
+/* Webfont: Marquez-Regular */@font-face {
+    font-family: 'Marquez';
+    src: url('Marquez.eot'); /* IE9 Compat Modes */
+    src: url('Marquez.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Marquez.woff') format('woff'), /* Modern Browsers */
+         url('Marquez.woff2') format('woff2'), /* Modern Browsers */
+         url('Marquez.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

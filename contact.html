@@ -88,6 +88,65 @@
         html[lang="dv"] body {
             font-family: 'Noto Sans Thaana', sans-serif;
         }
+    @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h1[data-lang-key="contact_us_title"] {
+  font-family: 'Marne', sans-serif;
+}
+    @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2[data-lang-key="enquiry_title"] {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h3[data-lang-key="enquiry_form_title"] {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2[data-lang-key="headquarters_title"] {
+  font-family: 'Marne', sans-serif;
+}
+/* Define Calben font */
+@font-face {
+  font-family: 'Calben';
+  src: url('fonts/Marne╠ü.ttf') format('truetype');
+}
+
+/* Define the Marquez font */
+@font-face {
+  font-family: 'Marquez';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Apply Marquez to the specified classes */
+.mb-0, .subtitle, .mb-4, .enquiry_form_description {
+  font-family: 'Marquez', Arial, sans-serif;
+}
+
+/* Apply Marquez to the data-lang-key attribute */
+[data-lang-key="enquiry_description"] {
+  font-family: 'Marquez', Arial, sans-serif;
+}
     </style>
 </head>
 
@@ -183,9 +242,9 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
-                            <p class="mb-0" data-lang-key="contact_us_description">Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.</p>
-                        </div>
+                       <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
+  <p class="mb-0" data-lang-key="contact_us_description" style="font-size: 20px;">Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.</p>
+</div>
                     </div>
                 </div>
             </div>
@@ -197,7 +256,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="subtitle" data-lang-key="our_location">Our Location</div>
-                        <h2 class="wow fadeInUp" data-lang-key="headquarters_title">Wish Group Headquarters</h2>
+                        <h2 class="wow fadeInUp" data-lang-key="headquarters_title">WISH GROUP HEADQUARTERS</h2>
                         <p class="mb-4" data-lang-key="headquarters_address">Business Bay, Dubai, United Arab Emirates</p>
                     </div>
                 </div>
@@ -245,7 +304,7 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6">
                         <div class="subtitle" data-lang-key="get_in_touch">Get In Touch</div>
-                        <h2 class="wow fadeInUp" data-lang-key="enquiry_title">We'd love to hear from you</h2>
+                        <h2 class="wow fadeInUp" data-lang-key="enquiry_title">WE'D LOVE TO HEAR FROM YOU</h2>
                         <p data-lang-key="enquiry_description">Submit your inquiry and our team will get back to you shortly.</p>
 
                         <div class="spacer-single"></div>
@@ -405,20 +464,20 @@
                 contact_us_title: "Contact Us",
                 contact_us_description: "Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.",
                 our_location: "Our Location",
-                headquarters_title: "Wish Group Headquarters",
+                headquarters_title: "WISH GROUP HEADQUARTERS",
                 headquarters_address: "Business Bay, Dubai, United Arab Emirates",
                 headquarters_country: "Dubai, United Arab Emirates",
                 our_workplace: "Our Workplace",
                 gallery_title: "Head Office Gallery",
                 gallery_description: "Take a look at our professional work environment",
                 get_in_touch: "Get In Touch",
-                enquiry_title: "We'd love to hear from you",
+                enquiry_title: "WE'D LOVE TO HEAR FROM YOU",
                 enquiry_description: "Submit your inquiry and our team will get back to you shortly.",
                 head_office_location: "Head Office Location",
                 email_us: "Email Us",
                 call_us: "Call Us",
                 enquiry_form_title: "Enquiry Form",
-                enquiry_form_description: "Fill out the form below and we'll get back to you soon.",
+               enquiry_form_description: "Fill out the form below and we'll get back to you soon.",
                 full_name: "Full Name",
                 email_address: "Email Address",
                 phone_number: "Phone Number",
@@ -431,7 +490,7 @@
                 quick_links: "Quick Links",
                 footer_contact: "Contact Us",
                 footer_copyright: "Copyright 2025 - Wish Group. All rights reserved.",
-                map_popup: "Wish Group Headquarters<br>Business Bay, Dubai, United Arab Emirates"
+                map_popup: "WISH GROUP HEADQUARTERS<br>Business Bay, Dubai, United Arab Emirates"
             },
             ar: {
                 page_title: "مجموعة ويش - اتصل بنا",
