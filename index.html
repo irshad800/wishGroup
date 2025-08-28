@@ -21,7 +21,227 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+<style>
+   /* General styles */
+.language-selector {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+}
 
+.language-selector .btn-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    min-width: 80px;
+    background: linear-gradient(90deg, #e10600, #000000);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.globe-container {
+    width: 100%;
+    height: 600px;
+    background: #000;
+    border-radius: 10px;
+    touch-action: manipulation;
+}
+
+.globe-container img[role="button"] {
+    pointer-events: auto;
+    touch-action: auto;
+    z-index: 1000;
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: linear-gradient(90deg, #e10600, #000000);
+    border: 1px solid #333;
+    border-radius: 5px;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    margin-top: 5px;
+    z-index: 1001;
+}
+
+.language-dropdown a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #333;
+}
+
+.language-dropdown a:hover {
+    background: #000;
+    color: #fff;
+}
+
+.language-selector:hover .language-dropdown,
+.language-selector:focus-within .language-dropdown {
+    display: block;
+}
+
+/* Marquee styles */
+.de-marquee-list-1, .de-marquee-list-2 {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee-ltr 20s linear infinite; /* Adjust duration as needed */
+}
+
+.de-marquee-list-1 span, .de-marquee-list-2 span {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Marquee animation for LTR */
+@keyframes marquee-ltr {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* RTL-specific styles */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .language-selector {
+    text-align: right;
+}
+
+[dir="rtl"] .language-dropdown {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .language-dropdown a {
+    text-align: right;
+    font-family: 'Amiri', 'Arial', sans-serif;
+}
+
+[dir="rtl"] .swiper-wrapper {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navbar-nav {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-item {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+[dir="rtl"] .float-left {
+    float: right !important;
+}
+
+[dir="rtl"] .float-right {
+    float: left !important;
+}
+
+[dir="rtl"] .ml-auto {
+    margin-right: auto !important;
+    margin-left: unset !important;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-left: auto !important;
+    margin-right: unset !important;
+}
+
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+[dir="rtl"] .footer .quick-links ul {
+    padding-right: 0;
+    text-align: right;
+}
+
+[dir="rtl"] .navbar-brand {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .icon-arrow-right {
+    transform: scaleX(-1);
+}
+
+/* RTL styles for marquee */
+[dir="rtl"] .de-marquee-list-1, [dir="rtl"] .de-marquee-list-2 {
+    animation: marquee-rtl 20s linear infinite; /* Reverse animation for RTL */
+}
+
+[dir="rtl"] .de-marquee-list-1 span, [dir="rtl"] .de-marquee-list-2 span {
+    font-family: 'Amiri', 'Arial', sans-serif;
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+@keyframes marquee-rtl {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .globe-container {
+        height: 300px;
+    }
+
+    .de-marquee-list-1 span, .de-marquee-list-2 span {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .language-selector .btn-main {
+        padding: 8px 15px;
+        min-width: 60px;
+        font-size: 12px;
+    }
+
+    .language-dropdown {
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        width: 150px;
+        display: none;
+    }
+
+    .language-selector.active .language-dropdown {
+        display: block;
+    }
+
+    header {
+        position: relative;
+        z-index: 1002;
+    }
+
+    [dir="rtl"] .language-dropdown {
+        right: auto;
+        left: 10px;
+    }
+
+    .de-marquee-list-1 span, .de-marquee-list-2 span {
+        font-size: 30px; /* Further reduce font size for very small screens */
+    }
+}
+</style>
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
@@ -46,7 +266,7 @@
                                         <img class="logo-mobile" src="images\background\logo.webp" alt="Wish Group Logo" width="160" height="auto">
                                     </a>
                                 </div>
-                            </div>
+                            </div>        
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
@@ -155,7 +375,7 @@
             </div>
             <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20">
                 <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
-                    <span class="fs-60 mx-3">Wish Islands</span>
+                    <span class="fs-60 mx-3">Wish Islands</span>   
                     <span class="fs-60 mx-3 op-2">/</span>
                     <span class="fs-60 mx-3">Wish Harbour</span>
                     <span class="fs-60 mx-3 op-2">/</span>
@@ -171,46 +391,50 @@
             </div>
         </section>
 
-             <section id="section-why-attend" class="section-dark text-light bg-dark py-5">
-            <div class="container text-center">
-                <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
-                <div class="swiper myProjectSlider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/wish islands.webp" class="img-fluid mb-3 rounded" alt="Wish Island">
-                                <h4>Wish Islands</h4>
-                                <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/wishcasafrnt.webp" class="img-fluid mb-3 rounded" alt="Wish Casa">
-                                <h4>Wish Casa</h4>
-                                <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
-                                <h4>Prime Wish</h4>
-                                <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/wish harbour.webp" class="img-fluid mb-3 rounded" alt="Wish Harbour">
-                                <h4>Wish Harbour</h4>
-                                <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
-                            </div>
-                        </div>
+  <section id="section-why-attend" class="section-dark text-light bg-dark py-5">
+    <div class="container text-center">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="latest_projects">Latest Projects</h2>
+        <div class="swiper myProjectSlider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images/wishgroup/wish islands.webp" class="img-fluid mb-3 rounded" alt="Wish Island">
+                        <h4>Wish Islands</h4>
+                        <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
+                        <a href="project.html" class="btn btn-link text-light">Read More</a>
                     </div>
-                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images\background\wishcazafro.png" class="img-fluid mb-3 rounded" alt="Wish Casa">
+                        <h4>Wish Casa</h4>
+                        <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
+                        <a href="project.html" class="btn btn-link text-light">Read More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
+                        <h4>Prime Wish</h4>
+                        <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
+                        <a href="project.html" class="btn btn-link text-light">Read More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images\background\wishHarbfro.png" class="img-fluid mb-3 rounded" alt="Wish Harbour">
+                        <h4>Wish Harbour</h4>
+                        <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
+                        <a href="project.html" class="btn btn-link text-light">Read More</a>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
 
-        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
+        <!-- <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
             <img src="images\background\bfFullAllience.webp" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
             <div class="gradient-edge-bottom"></div>
@@ -230,7 +454,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="section-speakers" class="bg-dark section-dark text-light py-5">
             <div class="container">
@@ -238,7 +462,7 @@
                     <div class="col-lg-6 relative z-3">
                         <div class="text-center">
                             <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="wish_group">Wish Group</div>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="management_team">GROUP MANAGEMENT TEAM</h2>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlights">GROUP MANAGEMENT TEAM</h2>
                         </div>
                     </div>
                 </div>
@@ -368,7 +592,7 @@
                 </div>
             </div>
         </section>
-        <style>
+<style>
         @font-face {
   font-family: 'Ashford Bold';
   src: url('fonts/ashford-bold-italic.otf') format('opentype');
@@ -418,7 +642,7 @@ h3 {
     /* Option 2: Using a custom font with @font-face */
    @font-face {
     font-family: 'CustomParagraphFont';
-    src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('truetype');
+    src: url('fonts/Marne╠ü.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
@@ -429,7 +653,7 @@ h3 {
   }
    @font-face {
     font-family: 'CustomParagraphFont';
-    src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('truetype');
+    src: url('fonts/Marne╠ü.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
@@ -477,24 +701,76 @@ h3 {
         </section>
      
 
-        <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
-            <div class="container relative z-2">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="wish_group">Wish Group</h2>
-                        <p class="lead wow fadeInUp" data-wow-delay=".6s" data-translate="about_text">Wish Group, founded in 2000 in the UAE, is a Dubai-based global conglomerate in 7+ countries, uniting real estate, hospitality, seafood, trading, and capital ventures under its vision “One Capital World” to connect capital with compassion and shape futures.</p>
-                    </div>
+    <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+    <div class="text-center">
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlight">Product Highlights</h2>
+                            </div>
+        <div class="container relative z-2">
+            
+            <div class="row g-4 flex-nowrap overflow-auto" id="scroller">
+                
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
-                <div class="row g-4">
-                    <div class="col-sm-6">
-                        <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                    </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
             </div>
-        </section>
+        </div>
+        <script>
+            const scroller = document.getElementById('scroller');
+            const content = scroller.innerHTML;
+            scroller.innerHTML = content + content; // Duplicate for infinite scroll
+            let isPaused = false;
+            let scrollPos = 0;
+            const speed = 2; // Adjust speed as needed
+            function scroll() {
+                if (!isPaused) {
+                    scrollPos += speed;
+                    if (scrollPos >= scroller.scrollWidth / 2) {
+                        scrollPos = 0;
+                    }
+                    scroller.scrollLeft = scrollPos;
+                }
+                requestAnimationFrame(scroll);
+            }
+            scroll();
+            scroller.addEventListener('mouseenter', () => isPaused = true);
+            scroller.addEventListener('mouseleave', () => isPaused = false);
+            scroller.addEventListener('touchstart', () => isPaused = true);
+            scroller.addEventListener('touchend', () => isPaused = false);
+        </script>
+    </section>
 
           <footer class="text-light section-dark pt-5">
             <div class="container">
@@ -555,110 +831,184 @@ h3 {
 
     <!-- Language Selector Styles -->
 <style>
-    .language-selector {
-        position: relative;
-        display: inline-block;
-        z-index: 1000;
-    }
-    .language-selector .btn-main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 20px;
-        min-width: 80px;
-        background: linear-gradient(90deg, #e10600, #000000);
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: all 0.3s ease;
-    }
+  /* General styles */
+.language-selector {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+}
 
+.language-selector .btn-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    min-width: 80px;
+    background: linear-gradient(90deg, #e10600, #000000);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.globe-container {
+    width: 100%;
+    height: 600px;
+    background: #000;
+    border-radius: 10px;
+    touch-action: manipulation;
+}
+
+.globe-container img[role="button"] {
+    pointer-events: auto;
+    touch-action: auto;
+    z-index: 1000;
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: linear-gradient(90deg, #e10600, #000000);
+    border: 1px solid #333;
+    border-radius: 5px;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    margin-top: 5px;
+    z-index: 1001;
+}
+
+.language-dropdown a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #333;
+}
+
+.language-dropdown a:hover {
+    background: #000;
+    color: #fff;
+}
+
+.language-selector:hover .language-dropdown,
+.language-selector:focus-within .language-dropdown {
+    display: block;
+}
+
+/* RTL-specific styles */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .language-selector {
+    text-align: right;
+}
+
+[dir="rtl"] .language-dropdown {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .language-dropdown a {
+    text-align: right;
+    font-family: 'Amiri', 'Arial', sans-serif; /* Use Amiri for Arabic/Dhivehi */
+}
+
+[dir="rtl"] .swiper-wrapper {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navbar-nav {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-item {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+[dir="rtl"] .float-left {
+    float: right !important;
+}
+
+[dir="rtl"] .float-right {
+    float: left !important;
+}
+
+[dir="rtl"] .ml-auto {
+    margin-right: auto !important;
+    margin-left: unset !important;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-left: auto !important;
+    margin-right: unset !important;
+}
+
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+[dir="rtl"] .footer .quick-links ul {
+    padding-right: 0;
+    text-align: right;
+}
+
+[dir="rtl"] .navbar-brand {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .icon-arrow-right {
+    transform: scaleX(-1); /* Flip arrows for RTL */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
     .globe-container {
-        width: 100%;
-        height: 600px;
-        background: #000;
-        border-radius: 10px;
-        touch-action: auto !important;
+        height: 300px;
     }
+}
 
-    @media (max-width: 768px) {
-        .globe-container {
-            height: 300px;
-        }
+@media (max-width: 576px) {
+    .language-selector .btn-main {
+        padding: 8px 15px;
+        min-width: 60px;
+        font-size: 12px;
     }
 
     .language-dropdown {
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        width: 150px;
         display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: linear-gradient(90deg, #e10600, #000000);
-        border: 1px solid #333;
-        border-radius: 5px;
-        min-width: 180px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-        overflow: hidden;
-        margin-top: 5px;
-        z-index: 1001; /* Ensure it stays above other content */
-    }
-    .language-dropdown a {
-        color: #fff;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        transition: all 0.3s ease;
-        text-align: left;
-        border-bottom: 1px solid #333;
-    }
-    .language-dropdown a:hover {
-        background: #000;
-        color: #fff;
-    }
-    .language-dropdown a[data-lang="ar"],
-    .language-dropdown a[data-lang="dv"] {
-        text-align: right;
-        font-family: 'Arial', sans-serif;
-    }
-    .language-selector:hover .language-dropdown,
-    .language-selector:focus-within .language-dropdown {
-        display: block;
-    }
-    [dir="rtl"] {
-        direction: rtl;
-        text-align: right;
-    }
-    [dir="rtl"] .language-dropdown {
-        right: auto;
-        left: 0;
-    }
-    [dir="rtl"] .swiper-wrapper {
-        flex-direction: row-reverse;
     }
 
-    /* Responsive adjustments for small screens */
-    @media (max-width: 576px) {
-        .language-selector .btn-main {
-            padding: 8px 15px;
-            min-width: 60px;
-            font-size: 12px;
-        }
-        .language-dropdown {
-            display: none !important; /* Hide dropdown on very small screens */
-            position: fixed;
-            top: 60px; /* Below header */
-            right: 10px;
-            width: 150px;
-        }
-        .language-selector.active .language-dropdown {
-            display: block !important;
-        }
-        header {
-            position: relative;
-            z-index: 1002; /* Ensure header stays above video */
-        }
+    .language-selector.active .language-dropdown {
+        display: block;
     }
+
+    header {
+        position: relative;
+        z-index: 1002;
+    }
+
+    [dir="rtl"] .language-dropdown {
+        right: auto;
+        left: 10px;
+    }
+}
 </style>
 
     <!-- Swiper Configuration and Language Selector Logic -->
@@ -692,11 +1042,12 @@ h3 {
                 "wish_island_desc": "Luxury, tranquility & natural beauty in the Maldives.",
                 "wish_casa_desc": "Premium biscuits & juices with global standards.",
                 "prime_wish_desc": "UAE-based food manufacturing & export company.",
-                "wish_harbour_desc": "We don't just chase dreams — we hold your wish and turn it into reality.",
+                "wish_harbour_desc": "we hold your wish and turn it into reality.",
                 
                 // Team
                 "management_team": "GROUP MANAGEMENT TEAM",
                 "secondary_team": "SECONDARY MANAGEMENT TEAM",
+                "highlight": "Product Highlights",
                 
                 // Footer
                 "address": "Address",
@@ -931,7 +1282,7 @@ function initSliders() {
 }
 
         // Globe Configuration
-     function initGlobe() {
+function initGlobe() {
     const globeContainer = document.getElementById('business-globe');
     if (!globeContainer) {
         console.error('Globe container #business-globe not found');
@@ -958,16 +1309,6 @@ function initSliders() {
         GBR: 'https://flagcdn.com/32x24/gb.webp'
     };
 
-    const countryPageMap = {
-        LKA: 'srilanka.html',
-        ARE: 'are.html',
-        MDV: 'mdv.html',
-        MYS: 'mys.html',
-        GHA: 'gha.html',
-        ZAF: 'zaf.html',
-        GBR: 'gbr.html'
-    };
-
     const globe = Globe()
         .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
         .backgroundColor('#000000')
@@ -977,7 +1318,7 @@ function initSliders() {
         .htmlLng('lng')
         .htmlElement(country => {
             const el = document.createElement('img');
-            el.src = flagUrls[country.code] || 'https://flagcdn.com/32x24/xx.jpg';
+            el.src = flagUrls[country.code] || 'https://flagcdn.com/32x24/xx.webp';
             el.alt = `Flag of ${country.name}`;
             el.style.width = '32px';
             el.style.height = '24px';
@@ -992,25 +1333,65 @@ function initSliders() {
                 console.warn(`Failed to load flag for ${country.name}`);
             };
 
+            // Click event for desktop
             el.addEventListener('click', e => {
                 e.stopPropagation();
-                const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
                 try {
-                    window.location.href = pageUrl;
+                    window.location.href = 'countries.html';
                 } catch (err) {
-                    console.error(`Navigation to ${pageUrl} failed: ${err.message}`);
+                    console.error(`Navigation to countries.html failed: ${err.message}`);
                 }
             });
 
-            el.tabIndex = 0;
+            // Keyboard event for accessibility
             el.addEventListener('keydown', e => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     e.stopPropagation();
-                    const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
-                    window.location.href = pageUrl;
+                    try {
+                        window.location.href = 'countries.html';
+                    } catch (err) {
+                        console.error(`Navigation to countries.html failed: ${err.message}`);
+                    }
                 }
             });
+
+            // Touch event for mobile with tap detection
+            let touchStartTime = 0;
+            let touchMoved = false;
+            const tapTimeThreshold = 300; // Max time (ms) for a valid tap
+            const tapMoveThreshold = 10; // Max movement (px) for a valid tap
+
+            el.addEventListener('touchstart', e => {
+                e.stopPropagation();
+                touchStartTime = Date.now();
+                touchMoved = false;
+                const touch = e.touches[0];
+                el.dataset.startX = touch.clientX;
+                el.dataset.startY = touch.clientY;
+            }, { passive: false });
+
+            el.addEventListener('touchmove', e => {
+                const touch = e.touches[0];
+                const deltaX = Math.abs(touch.clientX - el.dataset.startX);
+                const deltaY = Math.abs(touch.clientY - el.dataset.startY);
+                if (deltaX > tapMoveThreshold || deltaY > tapMoveThreshold) {
+                    touchMoved = true;
+                }
+            }, { passive: false });
+
+            el.addEventListener('touchend', e => {
+                e.stopPropagation();
+                e.preventDefault();
+                const touchDuration = Date.now() - touchStartTime;
+                if (!touchMoved && touchDuration < tapTimeThreshold) {
+                    try {
+                        window.location.href = 'countries.html';
+                    } catch (err) {
+                        console.error(`Navigation to countries.html failed: ${err.message}`);
+                    }
+                }
+            }, { passive: false });
 
             return el;
         })
@@ -1018,35 +1399,55 @@ function initSliders() {
 
     globe.controls().autoRotate = true;
     globe.controls().autoRotateSpeed = 1;
+    globe.controls().enableZoom = true; // Allow zooming
+    globe.controls().enableRotate = true; // Allow rotation
+
+    // Disable globe rotation when interacting with flags
+    globeContainer.addEventListener('touchstart', e => {
+        const target = e.target;
+        if (target.tagName === 'IMG' && target.getAttribute('role') === 'button') {
+            globe.controls().enableRotate = false;
+            globe.controls().enableZoom = false;
+        }
+    }, { passive: true });
+
+    globeContainer.addEventListener('touchend', () => {
+        globe.controls().enableRotate = true;
+        globe.controls().enableZoom = true;
+    }, { passive: true });
 
     globeContainer.addEventListener('mouseenter', () => {
         globe.controls().autoRotate = false;
     });
+
     globeContainer.addEventListener('mouseleave', () => {
         globe.controls().autoRotate = true;
     });
 
-    // Handle touch scrolling
+    // Handle touch scrolling for the page
     let touchStartY = 0;
     let touchStartTime = 0;
     const scrollThreshold = 20; // Pixels to determine if it's a scroll
-    const timeThreshold = 300;  // Milliseconds to differentiate tap vs scroll
+    const timeThreshold = 300; // Milliseconds to differentiate tap vs scroll
 
-    globeContainer.addEventListener('touchstart', (e) => {
+    globeContainer.addEventListener('touchstart', e => {
         touchStartY = e.touches[0].clientY;
         touchStartTime = Date.now();
     }, { passive: true });
 
-    globeContainer.addEventListener('touchmove', (e) => {
+    globeContainer.addEventListener('touchmove', e => {
         const touchY = e.touches[0].clientY;
         const deltaY = Math.abs(touchY - touchStartY);
         const timeElapsed = Date.now() - touchStartTime;
 
-        // If movement is significant and quick, allow scrolling
         if (deltaY > scrollThreshold && timeElapsed < timeThreshold) {
-            e.stopPropagation(); // Allow default scrolling
+            // Allow page scrolling
+            return;
         } else {
-            e.preventDefault(); // Prevent default to allow globe interaction
+            // Prevent scrolling to allow globe interaction, unless it's a flag
+            if (!e.target.classList.contains('globe-flag')) {
+                e.preventDefault();
+            }
         }
     }, { passive: false });
 
@@ -1063,7 +1464,7 @@ function initSliders() {
         const languageDropdown = document.querySelector('.language-dropdown');
         const languageSelector = document.querySelector('.language-selector');
 
-        if (!languageToggle || !languageDropdown) {
+        if (!languageToggle || !languageDropdown) {zz
             console.error('Language toggle or dropdown not found');
             return;
         }
