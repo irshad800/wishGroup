@@ -22,225 +22,230 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <style>
-   /* General styles */
-.language-selector {
-    position: relative;
-    display: inline-block;
-    z-index: 1000;
+       @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/ashford-bold-italic.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-.language-selector .btn-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    min-width: 80px;
-    background: linear-gradient(90deg, #e10600, #000000);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
+.fs-120 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'marquez';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-.globe-container {
-    width: 100%;
-    height: 600px;
-    background: #000;
-    border-radius: 10px;
-    touch-action: manipulation;
+.fs-60 {
+  font-family: 'marquez', sans-serif;
 }
 
-.globe-container img[role="button"] {
-    pointer-events: auto;
-    touch-action: auto;
-    z-index: 1000;
+     @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-.language-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: linear-gradient(90deg, #e10600, #000000);
-    border: 1px solid #333;
-    border-radius: 5px;
-    min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    margin-top: 5px;
-    z-index: 1001;
+.subtitle {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-.language-dropdown a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid #333;
+h1 {
+  font-family: 'Marne', sans-serif;
+}
+    @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.language-dropdown a:hover {
-    background: #000;
-    color: #fff;
+h4 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-.language-selector:hover .language-dropdown,
-.language-selector:focus-within .language-dropdown {
-    display: block;
+h5 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-/* Marquee styles */
-.de-marquee-list-1, .de-marquee-list-2 {
-    display: flex;
-    white-space: nowrap;
-    animation: marquee-ltr 20s linear infinite; /* Adjust duration as needed */
+h3 {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.de-marquee-list-1 span, .de-marquee-list-2 span {
-    font-family: 'Arial', sans-serif;
+.fs-14 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+.mb-0 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-/* Marquee animation for LTR */
-@keyframes marquee-ltr {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+.team-subtitle {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-/* RTL-specific styles */
-[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
+.team-title{
+  font-family: 'Ashford Bold', sans-serif;
+}
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .language-selector {
-    text-align: right;
+.team-description{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .language-dropdown {
-    right: auto;
-    left: 0;
+.subtitle.s2{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .language-dropdown a {
-    text-align: right;
-    font-family: 'Amiri', 'Arial', sans-serif;
+.fs-15{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .swiper-wrapper {
-    flex-direction: row-reverse;
+p{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .navbar-nav {
-    flex-direction: row-reverse;
+.legacy-label{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .nav-item {
-    margin-left: 0;
-    margin-right: 1rem;
+.global_presence{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .float-left {
-    float: right !important;
+.our_history{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .float-right {
-    float: left !important;
+.accordion-section-title{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .ml-auto {
-    margin-right: auto !important;
-    margin-left: unset !important;
+.accordion-section-content{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .mr-auto {
-    margin-left: auto !important;
-    margin-right: unset !important;
+strong[data-translate="history_closing"] {
+  font-family: 'Ashford Bold', sans-serif;
+  font-size: 15px; /* Optional, if you intended fs-15 */
+}
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-[dir="rtl"] .text-left {
-    text-align: right !important;
-}
-
-[dir="rtl"] .text-right {
-    text-align: left !important;
-}
-
-[dir="rtl"] .footer .quick-links ul {
-    padding-right: 0;
-    text-align: right;
-}
-
-[dir="rtl"] .navbar-brand {
-    margin-right: 0;
-    margin-left: 1rem;
-}
-
-[dir="rtl"] .icon-arrow-right {
-    transform: scaleX(-1);
-}
-
-/* RTL styles for marquee */
-[dir="rtl"] .de-marquee-list-1, [dir="rtl"] .de-marquee-list-2 {
-    animation: marquee-rtl 20s linear infinite; /* Reverse animation for RTL */
-}
-
-[dir="rtl"] .de-marquee-list-1 span, [dir="rtl"] .de-marquee-list-2 span {
-    font-family: 'Amiri', 'Arial', sans-serif;
-    margin-left: 1rem;
-    margin-right: 0;
-}
-
-@keyframes marquee-rtl {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .globe-container {
-        height: 300px;
-    }
-
-    .de-marquee-list-1 span, .de-marquee-list-2 span {
-        font-size: 40px; /* Adjust font size for smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .language-selector .btn-main {
-        padding: 8px 15px;
-        min-width: 60px;
-        font-size: 12px;
-    }
-
-    .language-dropdown {
-        position: fixed;
-        top: 60px;
-        right: 10px;
-        width: 150px;
-        display: none;
-    }
-
-    .language-selector.active .language-dropdown {
-        display: block;
-    }
-
-    header {
-        position: relative;
-        z-index: 1002;
-    }
-
-    [dir="rtl"] .language-dropdown {
-        right: auto;
-        left: 10px;
-    }
-
-    .de-marquee-list-1 span, .de-marquee-list-2 span {
-        font-size: 30px; /* Further reduce font size for very small screens */
-    }
-}
+.project-box h4{
+  font-family: 'Ashford Bold', sans-serif;
+} 
 </style>
 <body class="dark-scheme">
     <div id="wrapper">
@@ -266,7 +271,7 @@
                                         <img class="logo-mobile" src="images\background\logo.webp" alt="Wish Group Logo" width="160" height="auto">
                                     </a>
                                 </div>
-                            </div>        
+                            </div>
 
                             <div class="de-flex-col">
                                 <div class="de-flex-col header-col-mid">
@@ -327,7 +332,7 @@
                 <div class="container wow scaleIn" data-wow-duration="3s">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1" data-translate="make_your_wish">WE MAKE A WISH</h1>
+                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1" data-translate="make_your_wish"><b>WE MAKE A WISH</b></h1>
                             <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">Wish Group</h2>
                             <h4 class="mb-0" data-translate="since">Since 2000</h4>
                         </div>
@@ -375,7 +380,7 @@
             </div>
             <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20">
                 <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
-                    <span class="fs-60 mx-3">Wish Islands</span>   
+                    <span class="fs-60 mx-3">Wish Islands</span>
                     <span class="fs-60 mx-3 op-2">/</span>
                     <span class="fs-60 mx-3">Wish Harbour</span>
                     <span class="fs-60 mx-3 op-2">/</span>
@@ -391,50 +396,46 @@
             </div>
         </section>
 
-  <section id="section-why-attend" class="section-dark text-light bg-dark py-5">
-    <div class="container text-center">
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="latest_projects">Latest Projects</h2>
-        <div class="swiper myProjectSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images/wishgroup/wish islands.webp" class="img-fluid mb-3 rounded" alt="Wish Island">
-                        <h4>Wish Islands</h4>
-                        <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
-                        <a href="project.html" class="btn btn-link text-light">Read More</a>
+             <section id="section-why-attend" class="section-dark text-light bg-dark py-5">
+            <div class="container text-center">
+                <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
+                <div class="swiper myProjectSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="/images/wishgroup/wish islands.webp" class="img-fluid mb-3 rounded" alt="Wish Island">
+                                <h4>Wish Islands</h4>
+                                <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="/images/wishgroup/wishcasafrnt.webp" class="img-fluid mb-3 rounded" alt="Wish Casa">
+                                <h4>Wish Casa</h4>
+                                <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
+                                <h4>Prime Wish</h4>
+                                <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-box">
+                                <img src="/images/wishgroup/wish harbour.webp" class="img-fluid mb-3 rounded" alt="Wish Harbour">
+                                <h4>Wish Harbour</h4>
+                                <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images\background\wishcazafro.png" class="img-fluid mb-3 rounded" alt="Wish Casa">
-                        <h4>Wish Casa</h4>
-                        <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
-                        <a href="project.html" class="btn btn-link text-light">Read More</a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
-                        <h4>Prime Wish</h4>
-                        <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
-                        <a href="project.html" class="btn btn-link text-light">Read More</a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images\background\wishHarbfro.png" class="img-fluid mb-3 rounded" alt="Wish Harbour">
-                        <h4>Wish Harbour</h4>
-                        <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
-                        <a href="project.html" class="btn btn-link text-light">Read More</a>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</section>
+        </section>
 
-        <!-- <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
+        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
             <img src="images\background\bfFullAllience.webp" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
             <div class="gradient-edge-bottom"></div>
@@ -454,7 +455,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <section id="section-speakers" class="bg-dark section-dark text-light py-5">
             <div class="container">
@@ -462,7 +463,7 @@
                     <div class="col-lg-6 relative z-3">
                         <div class="text-center">
                             <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="wish_group">Wish Group</div>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlights">GROUP MANAGEMENT TEAM</h2>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="management_team">GROUP MANAGEMENT TEAM</h2>
                         </div>
                     </div>
                 </div>
@@ -592,87 +593,6 @@
                 </div>
             </div>
         </section>
-<style>
-        @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/ashford-bold-italic.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h1 {
-  font-family: 'Ashford Bold', sans-serif;
-}
- @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.mb-4 {
-  font-family: 'Ashford Bold', sans-serif;
-}
- @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h4 {
-  font-family: 'Ashford Bold', sans-serif;
-}
- @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h3 {
-  font-family: 'Ashford Bold', sans-serif;
-}
- 
-            /* Ensure all team member images look same size */
-            .wow.fadeInUp {
-      font-family: 'Lora', serif;
-    }
-
-    /* Option 2: Using a custom font with @font-face */
-   @font-face {
-    font-family: 'CustomParagraphFont';
-    src: url('fonts/Marne╠ü.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  /* Apply custom font to .fs-60 class */
-  .fs-60 {
-    font-family: 'CustomParagraphFont', sans-serif;
-  }
-   @font-face {
-    font-family: 'CustomParagraphFont';
-    src: url('fonts/Marne╠ü.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  /* Apply custom font to .fs-60 class */
-  .project-box {
-    font-family: 'CustomParagraphFont', sans-serif;
-  }
-
-
-  /* Styles for speaker section images */
-  #section-speakers .swiper-slide img {
-    width: 100%;
-    height: 350px; /* Fixed height for uniform size */
-    object-fit: cover; /* Crop image to fit without distortion */
-    border-radius: 10px; /* Optional: keep rounded corners */
-  }
-
-        </style>
  <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
             <img src="/images/wishgroup/background.webp" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
@@ -701,76 +621,24 @@ h3 {
         </section>
      
 
-    <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
-    <div class="text-center">
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlight">Product Highlights</h2>
-                            </div>
-        <div class="container relative z-2">
-            
-            <div class="row g-4 flex-nowrap overflow-auto" id="scroller">
-                
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+        <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+            <div class="container relative z-2">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="wish_group">Wish Group</h2>
+                        <p class="lead wow fadeInUp" data-wow-delay=".6s" data-translate="about_text">Wish Group, founded in 2000 in the UAE, is a Dubai-based global conglomerate in 7+ countries, uniting real estate, hospitality, seafood, trading, and capital ventures under its vision “One Capital World” to connect capital with compassion and shape futures.</p>
+                    </div>
                 </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                <div class="row g-4">
+                    <div class="col-sm-6">
+                        <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <script>
-            const scroller = document.getElementById('scroller');
-            const content = scroller.innerHTML;
-            scroller.innerHTML = content + content; // Duplicate for infinite scroll
-            let isPaused = false;
-            let scrollPos = 0;
-            const speed = 2; // Adjust speed as needed
-            function scroll() {
-                if (!isPaused) {
-                    scrollPos += speed;
-                    if (scrollPos >= scroller.scrollWidth / 2) {
-                        scrollPos = 0;
-                    }
-                    scroller.scrollLeft = scrollPos;
-                }
-                requestAnimationFrame(scroll);
-            }
-            scroll();
-            scroller.addEventListener('mouseenter', () => isPaused = true);
-            scroller.addEventListener('mouseleave', () => isPaused = false);
-            scroller.addEventListener('touchstart', () => isPaused = true);
-            scroller.addEventListener('touchend', () => isPaused = false);
-        </script>
-    </section>
+        </section>
 
           <footer class="text-light section-dark pt-5">
             <div class="container">
@@ -831,184 +699,110 @@ h3 {
 
     <!-- Language Selector Styles -->
 <style>
-  /* General styles */
-.language-selector {
-    position: relative;
-    display: inline-block;
-    z-index: 1000;
-}
-
-.language-selector .btn-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    min-width: 80px;
-    background: linear-gradient(90deg, #e10600, #000000);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.globe-container {
-    width: 100%;
-    height: 600px;
-    background: #000;
-    border-radius: 10px;
-    touch-action: manipulation;
-}
-
-.globe-container img[role="button"] {
-    pointer-events: auto;
-    touch-action: auto;
-    z-index: 1000;
-}
-
-.language-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: linear-gradient(90deg, #e10600, #000000);
-    border: 1px solid #333;
-    border-radius: 5px;
-    min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    margin-top: 5px;
-    z-index: 1001;
-}
-
-.language-dropdown a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid #333;
-}
-
-.language-dropdown a:hover {
-    background: #000;
-    color: #fff;
-}
-
-.language-selector:hover .language-dropdown,
-.language-selector:focus-within .language-dropdown {
-    display: block;
-}
-
-/* RTL-specific styles */
-[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-}
-
-[dir="rtl"] .language-selector {
-    text-align: right;
-}
-
-[dir="rtl"] .language-dropdown {
-    right: auto;
-    left: 0;
-}
-
-[dir="rtl"] .language-dropdown a {
-    text-align: right;
-    font-family: 'Amiri', 'Arial', sans-serif; /* Use Amiri for Arabic/Dhivehi */
-}
-
-[dir="rtl"] .swiper-wrapper {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .navbar-nav {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .nav-item {
-    margin-left: 0;
-    margin-right: 1rem;
-}
-
-[dir="rtl"] .float-left {
-    float: right !important;
-}
-
-[dir="rtl"] .float-right {
-    float: left !important;
-}
-
-[dir="rtl"] .ml-auto {
-    margin-right: auto !important;
-    margin-left: unset !important;
-}
-
-[dir="rtl"] .mr-auto {
-    margin-left: auto !important;
-    margin-right: unset !important;
-}
-
-[dir="rtl"] .text-left {
-    text-align: right !important;
-}
-
-[dir="rtl"] .text-right {
-    text-align: left !important;
-}
-
-[dir="rtl"] .footer .quick-links ul {
-    padding-right: 0;
-    text-align: right;
-}
-
-[dir="rtl"] .navbar-brand {
-    margin-right: 0;
-    margin-left: 1rem;
-}
-
-[dir="rtl"] .icon-arrow-right {
-    transform: scaleX(-1); /* Flip arrows for RTL */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .globe-container {
-        height: 300px;
+    .language-selector {
+        position: relative;
+        display: inline-block;
+        z-index: 1000;
     }
-}
-
-@media (max-width: 576px) {
     .language-selector .btn-main {
-        padding: 8px 15px;
-        min-width: 60px;
-        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        min-width: 80px;
+        background: linear-gradient(90deg, #e10600, #000000);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .globe-container {
+        width: 100%;
+        height: 600px;
+        background: #000;
+        border-radius: 10px;
+        touch-action: auto !important;
+    }
+
+    @media (max-width: 768px) {
+        .globe-container {
+            height: 300px;
+        }
     }
 
     .language-dropdown {
-        position: fixed;
-        top: 60px;
-        right: 10px;
-        width: 150px;
         display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: linear-gradient(90deg, #e10600, #000000);
+        border: 1px solid #333;
+        border-radius: 5px;
+        min-width: 180px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        overflow: hidden;
+        margin-top: 5px;
+        z-index: 1001; /* Ensure it stays above other content */
     }
-
-    .language-selector.active .language-dropdown {
+    .language-dropdown a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+        text-align: left;
+        border-bottom: 1px solid #333;
+    }
+    .language-dropdown a:hover {
+        background: #000;
+        color: #fff;
+    }
+    .language-dropdown a[data-lang="ar"],
+    .language-dropdown a[data-lang="dv"] {
+        text-align: right;
+        font-family: 'Arial', sans-serif;
+    }
+    .language-selector:hover .language-dropdown,
+    .language-selector:focus-within .language-dropdown {
         display: block;
     }
-
-    header {
-        position: relative;
-        z-index: 1002;
+    [dir="rtl"] {
+        direction: rtl;
+        text-align: right;
     }
-
     [dir="rtl"] .language-dropdown {
         right: auto;
-        left: 10px;
+        left: 0;
     }
-}
+    [dir="rtl"] .swiper-wrapper {
+        flex-direction: row-reverse;
+    }
+
+    /* Responsive adjustments for small screens */
+    @media (max-width: 576px) {
+        .language-selector .btn-main {
+            padding: 8px 15px;
+            min-width: 60px;
+            font-size: 12px;
+        }
+        .language-dropdown {
+            display: none !important; /* Hide dropdown on very small screens */
+            position: fixed;
+            top: 60px; /* Below header */
+            right: 10px;
+            width: 150px;
+        }
+        .language-selector.active .language-dropdown {
+            display: block !important;
+        }
+        header {
+            position: relative;
+            z-index: 1002; /* Ensure header stays above video */
+        }
+    }
 </style>
 
     <!-- Swiper Configuration and Language Selector Logic -->
@@ -1042,12 +836,11 @@ h3 {
                 "wish_island_desc": "Luxury, tranquility & natural beauty in the Maldives.",
                 "wish_casa_desc": "Premium biscuits & juices with global standards.",
                 "prime_wish_desc": "UAE-based food manufacturing & export company.",
-                "wish_harbour_desc": "we hold your wish and turn it into reality.",
+                "wish_harbour_desc": "We don't just chase dreams — we hold your wish and turn it into reality.",
                 
                 // Team
                 "management_team": "GROUP MANAGEMENT TEAM",
                 "secondary_team": "SECONDARY MANAGEMENT TEAM",
-                "highlight": "Product Highlights",
                 
                 // Footer
                 "address": "Address",
@@ -1282,7 +1075,7 @@ function initSliders() {
 }
 
         // Globe Configuration
-function initGlobe() {
+     function initGlobe() {
     const globeContainer = document.getElementById('business-globe');
     if (!globeContainer) {
         console.error('Globe container #business-globe not found');
@@ -1309,6 +1102,16 @@ function initGlobe() {
         GBR: 'https://flagcdn.com/32x24/gb.webp'
     };
 
+    const countryPageMap = {
+        LKA: 'srilanka.html',
+        ARE: 'are.html',
+        MDV: 'mdv.html',
+        MYS: 'mys.html',
+        GHA: 'gha.html',
+        ZAF: 'zaf.html',
+        GBR: 'gbr.html'
+    };
+
     const globe = Globe()
         .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
         .backgroundColor('#000000')
@@ -1318,7 +1121,7 @@ function initGlobe() {
         .htmlLng('lng')
         .htmlElement(country => {
             const el = document.createElement('img');
-            el.src = flagUrls[country.code] || 'https://flagcdn.com/32x24/xx.webp';
+            el.src = flagUrls[country.code] || 'https://flagcdn.com/32x24/xx.jpg';
             el.alt = `Flag of ${country.name}`;
             el.style.width = '32px';
             el.style.height = '24px';
@@ -1333,65 +1136,25 @@ function initGlobe() {
                 console.warn(`Failed to load flag for ${country.name}`);
             };
 
-            // Click event for desktop
             el.addEventListener('click', e => {
                 e.stopPropagation();
+                const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
                 try {
-                    window.location.href = 'countries.html';
+                    window.location.href = pageUrl;
                 } catch (err) {
-                    console.error(`Navigation to countries.html failed: ${err.message}`);
+                    console.error(`Navigation to ${pageUrl} failed: ${err.message}`);
                 }
             });
 
-            // Keyboard event for accessibility
+            el.tabIndex = 0;
             el.addEventListener('keydown', e => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     e.stopPropagation();
-                    try {
-                        window.location.href = 'countries.html';
-                    } catch (err) {
-                        console.error(`Navigation to countries.html failed: ${err.message}`);
-                    }
+                    const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
+                    window.location.href = pageUrl;
                 }
             });
-
-            // Touch event for mobile with tap detection
-            let touchStartTime = 0;
-            let touchMoved = false;
-            const tapTimeThreshold = 300; // Max time (ms) for a valid tap
-            const tapMoveThreshold = 10; // Max movement (px) for a valid tap
-
-            el.addEventListener('touchstart', e => {
-                e.stopPropagation();
-                touchStartTime = Date.now();
-                touchMoved = false;
-                const touch = e.touches[0];
-                el.dataset.startX = touch.clientX;
-                el.dataset.startY = touch.clientY;
-            }, { passive: false });
-
-            el.addEventListener('touchmove', e => {
-                const touch = e.touches[0];
-                const deltaX = Math.abs(touch.clientX - el.dataset.startX);
-                const deltaY = Math.abs(touch.clientY - el.dataset.startY);
-                if (deltaX > tapMoveThreshold || deltaY > tapMoveThreshold) {
-                    touchMoved = true;
-                }
-            }, { passive: false });
-
-            el.addEventListener('touchend', e => {
-                e.stopPropagation();
-                e.preventDefault();
-                const touchDuration = Date.now() - touchStartTime;
-                if (!touchMoved && touchDuration < tapTimeThreshold) {
-                    try {
-                        window.location.href = 'countries.html';
-                    } catch (err) {
-                        console.error(`Navigation to countries.html failed: ${err.message}`);
-                    }
-                }
-            }, { passive: false });
 
             return el;
         })
@@ -1399,55 +1162,35 @@ function initGlobe() {
 
     globe.controls().autoRotate = true;
     globe.controls().autoRotateSpeed = 1;
-    globe.controls().enableZoom = true; // Allow zooming
-    globe.controls().enableRotate = true; // Allow rotation
-
-    // Disable globe rotation when interacting with flags
-    globeContainer.addEventListener('touchstart', e => {
-        const target = e.target;
-        if (target.tagName === 'IMG' && target.getAttribute('role') === 'button') {
-            globe.controls().enableRotate = false;
-            globe.controls().enableZoom = false;
-        }
-    }, { passive: true });
-
-    globeContainer.addEventListener('touchend', () => {
-        globe.controls().enableRotate = true;
-        globe.controls().enableZoom = true;
-    }, { passive: true });
 
     globeContainer.addEventListener('mouseenter', () => {
         globe.controls().autoRotate = false;
     });
-
     globeContainer.addEventListener('mouseleave', () => {
         globe.controls().autoRotate = true;
     });
 
-    // Handle touch scrolling for the page
+    // Handle touch scrolling
     let touchStartY = 0;
     let touchStartTime = 0;
     const scrollThreshold = 20; // Pixels to determine if it's a scroll
-    const timeThreshold = 300; // Milliseconds to differentiate tap vs scroll
+    const timeThreshold = 300;  // Milliseconds to differentiate tap vs scroll
 
-    globeContainer.addEventListener('touchstart', e => {
+    globeContainer.addEventListener('touchstart', (e) => {
         touchStartY = e.touches[0].clientY;
         touchStartTime = Date.now();
     }, { passive: true });
 
-    globeContainer.addEventListener('touchmove', e => {
+    globeContainer.addEventListener('touchmove', (e) => {
         const touchY = e.touches[0].clientY;
         const deltaY = Math.abs(touchY - touchStartY);
         const timeElapsed = Date.now() - touchStartTime;
 
+        // If movement is significant and quick, allow scrolling
         if (deltaY > scrollThreshold && timeElapsed < timeThreshold) {
-            // Allow page scrolling
-            return;
+            e.stopPropagation(); // Allow default scrolling
         } else {
-            // Prevent scrolling to allow globe interaction, unless it's a flag
-            if (!e.target.classList.contains('globe-flag')) {
-                e.preventDefault();
-            }
+            e.preventDefault(); // Prevent default to allow globe interaction
         }
     }, { passive: false });
 
@@ -1464,7 +1207,7 @@ function initGlobe() {
         const languageDropdown = document.querySelector('.language-dropdown');
         const languageSelector = document.querySelector('.language-selector');
 
-        if (!languageToggle || !languageDropdown) {zz
+        if (!languageToggle || !languageDropdown) {
             console.error('Language toggle or dropdown not found');
             return;
         }
