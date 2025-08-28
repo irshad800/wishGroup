@@ -1,6 +1,5 @@
 /* ================================================== */
 
-
 /* AIvent
 /* created by designesia
 
@@ -42,34 +41,36 @@ Table of content:
 
 /* ================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-/* ================================================== */
-
-
 /* import fonts icon */
 
+@import url('../fonts/fontawesome4/css/font-awesome.css');
+@import url('../fonts/fontawesome6/css/fontawesome.css');
+@import url('../fonts/fontawesome6/css/brands.css');
+@import url('../fonts/fontawesome6/css/solid.css');
+@import url('../fonts/elegant_font/HTML_CSS/style.css');
+@import url('../fonts/et-line-font/style.css');
+@import url('../fonts/icofont/icofont.min.css');
+
+/* Custom font import */
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('../fonts/Marne.otf') format('opentype'),
+       url('../fonts/Marquez.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 /* ================================================== */
-
-@import url("../fonts/fontawesome4/css/font-awesome.css");
-@import url("../fonts/fontawesome6/css/fontawesome.css");
-@import url("../fonts/fontawesome6/css/brands.css");
-@import url("../fonts/fontawesome6/css/solid.css");
-@import url("../fonts/elegant_font/HTML_CSS/style.css");
-@import url("../fonts/et-line-font/style.css");
-@import url("../fonts/icofont/icofont.min.css");
 
 * {
   /* body font */
-  --body-font: "Manrope", Helvetica, Arial, sans-serif;
+  --body-font: "Ashford Bold", sans-serif;
   --body-font-size: 16px;
   --body-font-color: rgba(0, 0, 0, .6);
   --body-font-color-dark: rgba(255, 255, 255, .75);
   --body-font-weight: 500;
   /* heading font */
-  --heading-font: "Manrope", Helvetica, Arial, sans-serif;  
+  --heading-font: "Ashford Bold", sans-serif;  
   --heading-font-weight: bold;
   --heading-font-color: #000000;
   --heading-text-transform: none;
@@ -111,7 +112,7 @@ Table of content:
   --h6-line-height: 1.6em;
   --h6-margin-bottom: 10px;
   /* mainmenu */
-  --mainmenu-font: var(--body-font);
+  --mainmenu-font: "Ashford Bold", sans-serif;
   --mainmenu-font-size: 15px;
   --mainmenu-font-weight: 700;
   --mainmenu-letter-spacing: 0;
@@ -132,12 +133,12 @@ Table of content:
   --bg-gradient-1: 0deg, rgba(var(--primary-color-rgb), .1) 0%, rgba(var(--secondary-color-rgb), .2) 100%;
   --swiper-theme-color: var(--secondary-color);
   --rounded-1: 10px;
-  --border-color:#bbbbbb;
-  --container-max-width:1240px;
+  --border-color: #bbbbbb;
+  --container-max-width: 1240px;
   /* button */
   --btn-color: #fff;
   --btn-hover-bg: var(--bg-dark-1);
-  --btn-font-family: var(--body-font);
+  --btn-font-family: "Ashford Bold", sans-serif;
   --btn-font-size: 12px;
   --btn-font-weight: 800;
   --btn-letter-spacing: 2px;
@@ -145,7 +146,7 @@ Table of content:
   --btn-rounded: 6px;
   --btn-text-decoration: none;
   --btn-text-transform: uppercase;
-  --gradient-text: 0deg,#888888 0%, #ffffff 75%;
+  --gradient-text: 0deg, #888888 0%, #ffffff 75%;
 }
 
 /* base background color */
@@ -13916,7 +13917,13 @@ header .btn-main {
   background: #b00;
   color: #0a0a0a;
 }
-
+#scroller {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#scroller::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
+}
 
 .legacy-title {
         background: linear-gradient(90deg, #fff, #7cc3ff 30%, #a58bff 60%, #ffd38b 90%);
