@@ -471,7 +471,7 @@ strong[data-translate="history_closing"] {
                 <div class="container wow scaleIn" data-wow-duration="3s">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1" data-translate="make_your_wish"><b>WE MAKE A WISH</b></h1>
+                            <h1>WE MAKE A WISH</h1>
                             <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">Wish Group</h2>
                             <h4 class="mb-0" data-translate="since">Since 2000</h4>
                         </div>
@@ -536,25 +536,25 @@ strong[data-translate="history_closing"] {
     </div>
 </section>
 
-<section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
+    <section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
     <div class="container text-center">
         <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
         <div class="swiper myProjectSlider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="project-box">
-                        <img src="/images\demo\wishislands.png" class="img-fluid mb-3 rounded" alt="Wish Islands">
+                        <img src="/images/demo/wishislands.png" class="img-fluid mb-3 rounded" alt="Wish Islands">
                         <h4 data-translate="wish_islands_title">Wish Islands</h4>
                         <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
-                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Islands">Read More</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="project-box">
-                        <img src="/images\demo\WIshcaza.jpeg" class="img-fluid mb-3 rounded" alt="Wish Casa">
+                        <img src="/images/demo/WIshcaza.jpeg" class="img-fluid mb-3 rounded" alt="Wish Casa">
                         <h4 data-translate="wish_casa_title">Wish Casa</h4>
                         <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
-                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Casa">Read More</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -562,15 +562,15 @@ strong[data-translate="history_closing"] {
                         <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
                         <h4 data-translate="prime_wish_title">Prime Wish</h4>
                         <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
-                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Prime Wish">Read More</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="project-box">
-                        <img src="/images\demo\wishholdings.jpeg" class="img-fluid mb-3 rounded" alt="Wish Harbour">
+                        <img src="/images/demo/wishholdings.jpeg" class="img-fluid mb-3 rounded" alt="Wish Harbour">
                         <h4 data-translate="wish_harbour_title">Wish Harbour</h4>
                         <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
-                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Harbour">Read More</a>
                     </div>
                 </div>
             </div>
@@ -579,6 +579,17 @@ strong[data-translate="history_closing"] {
     </div>
 </section>
 
+<script>
+    // Force navigation for "Read More" links
+    document.querySelectorAll('.read-more-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default to avoid conflicts
+            e.stopPropagation(); // Stop Swiper or other scripts from intercepting
+            const href = link.getAttribute('href'); // Get the href value
+            window.location.href = href; // Force navigation to the specified page
+        });
+    });
+</script>
        
  <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
             <img src="/images\wishgroup\ChatGPT Image Aug 30, 2025, 12_07_10 PM.png" class="jarallax-img" alt="">

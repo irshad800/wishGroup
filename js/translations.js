@@ -511,13 +511,13 @@ function translatePage(lang) {
         };
 
         const countryPageMap = {
-            LKA: 'srilanka.html',
-            ARE: 'are.html',
-            MDV: 'mdv.html',
-            MYS: 'mys.html',
-            GHA: 'gha.html',
-            ZAF: 'zaf.html',
-            GBR: 'gbr.html'
+            LKA: 'countries.html',
+            ARE: 'countries.html',
+            MDV: 'countries.html',
+            MYS: 'countries.html',
+            GHA: 'countries.html',
+            ZAF: 'countries.html',
+            GBR: 'countries.html'
         };
 
         let globe = Globe()
