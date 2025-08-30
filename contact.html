@@ -22,6 +22,48 @@
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <style>
+/* Existing RTL styles */
+.rtl .row {
+    flex-direction: row-reverse;
+}
+.rtl .col-lg-6:first-child {
+    order: 2;
+}
+.rtl .col-lg-6:last-child {
+    order: 1;
+}
+
+/* Additional RTL adjustments */
+.rtl .ms-80px {
+    margin-left: 0;
+    margin-right: 80px; /* Mirror the margin for RTL */
+}
+
+.rtl .abs {
+    left: auto;
+    right: 0; /* Move absolute icons to the right */
+}
+
+.rtl [data-lang-key] {
+    text-align: right; /* Ensure text aligns right in RTL */
+}
+
+.rtl .form-underline {
+    text-align: right; /* Align form inputs to the right */
+}
+
+.rtl .btn-main {
+    text-align: right; /* Align buttons to the right */
+}
+
+.rtl #headOfficeMap {
+    direction: ltr; /* Keep map LTR to avoid coordinate issues */
+}
+
+/* Adjust footer columns for RTL */
+.rtl .col-sm-6.col-lg-3 {
+    text-align: right !important;
+}
         #headOfficeMap {
             height: 400px;
             width: 100%;
@@ -674,43 +716,38 @@ h2[data-lang-key="headquarters_title"] {
         };
 
         // Function to change language
-        function changeLanguage(lang) {
-            document.getElementById('currentLang').textContent = lang.toUpperCase();
-            document.querySelectorAll('[data-lang-key]').forEach(element => {
-                const key = element.getAttribute('data-lang-key');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-            document.querySelectorAll('[data-lang-placeholder]').forEach(element => {
-                const key = element.getAttribute('data-lang-placeholder');
-                if (translations[lang][key]) {
-                    element.placeholder = translations[lang][key];
-                }
-            });
-            document.querySelectorAll('[data-lang-value]').forEach(element => {
-                const key = element.getAttribute('data-lang-value');
-                if (translations[lang][key]) {
-                    element.value = translations[lang][key];
-                }
-            });
-            document.querySelector('html').lang = lang;
-            if (lang === 'ar' || lang === 'dv') {
-                document.querySelector('html').dir = 'rtl';
-                document.querySelector('body').style.textAlign = 'right';
-            } else {
-                document.querySelector('html').dir = 'ltr';
-                document.querySelector('body').style.textAlign = 'left';
-            }
-            document.querySelector('title').textContent = translations[lang].page_title;
-
-            // Update Leaflet map popup
-            if (window.mapMarker) {
-                window.mapMarker.setPopupContent(translations[lang].map_popup);
-            }
-
-            localStorage.setItem('selectedLanguage', lang);
+    function changeLanguage(lang) {
+    document.getElementById('currentLang').textContent = lang.toUpperCase();
+    document.querySelectorAll('[data-lang-key]').forEach(element => {
+        const key = element.getAttribute('data-lang-key');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
         }
+    });
+    document.querySelectorAll('[data-lang-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-lang-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+    document.querySelectorAll('[data-lang-value]').forEach(element => {
+        const key = element.getAttribute('data-lang-value');
+        if (translations[lang][key]) {
+            element.value = translations[lang][key];
+        }
+    });
+    document.querySelector('html').lang = lang;
+    document.querySelector('html').dir = lang === 'ar' || lang === 'dv' ? 'rtl' : 'ltr';
+    document.body.classList.toggle('rtl', lang === 'ar' || lang === 'dv'); // Toggle RTL class
+    document.querySelector('title').textContent = translations[lang].page_title;
+
+    // Update Leaflet map popup
+    if (window.mapMarker) {
+        window.mapMarker.setPopupContent(translations[lang].map_popup);
+    }
+
+    localStorage.setItem('selectedLanguage', lang);
+}
 
         // Initialize language
     // Initialize language and form submission
