@@ -472,7 +472,63 @@ strong[data-translate="history_closing"] {
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <h1>WE MAKE A WISH</h1>
-                            <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">Wish Group</h2>
+<style>
+  @font-face {
+    font-family: "WishDisplayLocal";
+    src: url("/fonts/stop.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  #wishGroupTitle{
+    font-family: "WishDisplayLocal", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans";
+    font-size: clamp(28px, 4vw, 64px);
+    letter-spacing: .04em;
+    margin: 0;
+    filter: drop-shadow(0 6px 24px rgba(0,0,0,.4));
+    will-change: background-position;
+  }
+
+  /* Base gradient/shimmer (kept in case you add other inline parts later) */
+  #wishGroupTitle,
+  #wishGroupTitle *{
+    background: linear-gradient(90deg, #B30000, black);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: wishGroupShine 6s linear infinite;
+  }
+
+  /* Per-word solid colors */
+  #wishGroupTitle .white{
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+  }
+  #wishGroupTitle .red{
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: #B30000 !important;
+    color: #B30000 !important;
+  }
+
+  @keyframes wishGroupShine{
+    0%{ background-position: 0% 50%; }
+    100%{ background-position: 200% 50%; }
+  }
+</style>
+
+<h2 id="wishGroupTitle" class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">
+  <span class="white">Wish</span> <span class="red">Group</span>
+</h2>
+
+
                             <h4 class="mb-0" data-translate="since">Since 2000</h4>
                         </div>
                     </div>
@@ -480,27 +536,45 @@ strong[data-translate="history_closing"] {
             </div>
         </section>
 
- <section id="section-about" class="bg-dark section-dark text-light">
-    <div class="container">
-        <div class="row gx-5 align-items-center justify-content-between">
-            <div class="col-lg-6">
-                <div class="me-lg-5 pe-lg-5 py-5 my-5">
-                    <h2 data-translate="wish_group">Wish Group</h2>
-                    <p data-translate="about_text">
-                        Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
-                    </p>
-                    <h3 data-translate="world_map">Wish Group Around the World</h3>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="wow scaleIn">
-                    <h3 class="d-lg-none" data-translate="world_map">Wish Group Around the World</h3>
-                    <div id="business-globe" class="globe-container"></div>
-                </div>
-            </div>
+<!-- load the font (once on the page is enough) -->
+<style>
+  @font-face {
+    font-family: "WishDisplayLocal";
+    src: url("/fonts/stop.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>
+
+<section id="section-about" class="bg-dark section-dark text-light">
+  <div class="container">
+    <div class="row gx-5 align-items-center justify-content-between">
+      <div class="col-lg-6">
+        <div class="me-lg-5 pe-lg-5 py-5 my-5">
+          <!-- only this element uses the custom font -->
+          <h2 data-translate="wish_group" style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans'">
+            Wish Group
+          </h2>
+
+          <p data-translate="about_text">
+            Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
+          </p>
+
+          <h3 data-translate="world_map">Wish Group Around the World</h3>
         </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="wow scaleIn">
+          <h3 class="d-lg-none" data-translate="world_map">Wish Group Around the World</h3>
+          <div id="business-globe" class="globe-container"></div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
+
 <section id="section-marquee" class="section-dark p-0" aria-label="section">
     <div class="bg-color text-light d-flex py-4 lh-1 rot-2" id="marquee-1">
         <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
@@ -628,55 +702,33 @@ strong[data-translate="history_closing"] {
             <div class="row g-4 flex-nowrap overflow-auto" id="scroller">
                 
                 <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                    <img src="images\highightsImages\dryfish.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
                 <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                    <img src="images\highightsImages\prawns.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
                 <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                    <img src="images\highightsImages\tunna.png" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+             
+                 <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images\highightsImages\WhatsApp Image 2025-08-30 at 1.46.12 PM.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
+               
             </div>
         </div>
  <script>
-    const scroller = document.getElementById('highlights-scroller');
+    document.addEventListener('DOMContentLoaded', () => {
+    const scroller = document.getElementById('scroller');
     const content = scroller.innerHTML;
     scroller.innerHTML = content + content; // Duplicate for infinite scroll
     let isPaused = false;
     let scrollPos = 0;
-    const speed = 2; // Adjust speed as needed
-    const isRtl = document.documentElement.dir === 'rtl';
+    const speed = 2;
+    let isRtl = document.documentElement.dir === 'rtl';
 
     function scroll() {
         if (!isPaused) {
-            // Adjust scroll direction based on RTL/LTR
             scrollPos += isRtl ? -speed : speed;
             if (isRtl) {
                 if (scrollPos <= -scroller.scrollWidth / 2) {
@@ -699,14 +751,14 @@ strong[data-translate="history_closing"] {
     scroller.addEventListener('touchstart', () => isPaused = true);
     scroller.addEventListener('touchend', () => isPaused = false);
 
-    // Update scroll direction when language changes
     document.addEventListener('languageChange', () => {
         const newIsRtl = document.documentElement.dir === 'rtl';
         if (newIsRtl !== isRtl) {
-            scrollPos = 0; // Reset position on direction change
+            scrollPos = 0;
             isRtl = newIsRtl;
         }
     });
+});
 </script>
     </section>
 
