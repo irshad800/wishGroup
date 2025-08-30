@@ -930,8 +930,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Subscription logic
-  const API_BASE = 'http://localhost:4000/api'; // Adjust if server is on different host/port
-  const REDIRECT_URL = 'https://wishgroup.ae';
+  const API_BASE = 'https://wishgroup.ae/api'; // Adjust if server is on different host/port
+  const REDIRECT_URL = '/index.html'; // Change to your desired redirect URL
 
   async function handleSubscribe(event, emailInputId, errorElementId) {
     event.preventDefault();

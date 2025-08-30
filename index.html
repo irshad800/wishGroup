@@ -22,11 +22,137 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <style>
-       @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/ashford-bold-italic.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
+/* General Swiper styling */
+.myProjectSlider {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-box {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-box h4 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.project-box p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.project-box button {
+    font-size: 0.9rem;
+    padding: 5px 15px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767.98px) {
+    .project-box h4 {
+        font-size: 1rem;
+    }
+
+    .project-box p {
+        font-size: 0.75rem;
+    }
+
+    .project-box button {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+
+    .swiper-slide {
+        width: 80%; /* Ensure slides fit on mobile */
+    }
+
+    .swiper-pagination {
+        bottom: 10px; /* Adjust pagination position */
+    }
+}
+/* Ensure project section text is centered without altering design */
+/* Ensure project section text is centered and adapts to direction */
+#section-why-attend .container {
+    text-align: center;
+    overflow: hidden; /* Prevent slides from spilling outside */
+}
+
+/* Center project box content and adapt to direction */
+.project-box {
+    text-align: center;
+    margin: 0 auto; /* Center each card */
+    max-width: 100%; /* Ensure card fits within slide */
+    padding: 20px; /* Match original padding */
+    background-color: #222; /* Preserve original design */
+    border-radius: 10px; /* Preserve original design */
+    height: 100%;
+    color: #fff;
+}
+
+/* Ensure Swiper slides adapt to page direction */
+.swiper {
+    width: 100%;
+    max-width: 1200px; /* Match the total width of all cards */
+    margin: 0 auto; /* Center the slider */
+}
+
+.swiper-slide {
+    display: inline-block;
+    vertical-align: top; /* Align slides at the top */
+    width: 25%; /* Ensure each slide takes equal space (4 cards) */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 10px; /* Match original spacing */
+}
+
+/* Preserve globe and its children in LTR layout */
+#business-globe,
+#business-globe * {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Ensure markers stack on top of the canvas */
+#business-globe canvas {
+        position: relative;
+        z-index: 1;
+    }
+/* Adjust marquee to respect direction */
+#section-marquee {
+    direction: inherit; /* Inherit from parent (html dir) */
+    text-align: inherit; /* Inherit text alignment */
+}
+#section-marquee .d-flex {
+    flex-direction: row; /* Default to row, will reverse in RTL */
+}
+[dir="rtl"] #section-marquee .d-flex {
+    flex-direction: row-reverse; /* Reverse for RTL */
+}
+
+/* Ensure language dropdown aligns correctly */
+.language-dropdown {
+    right: 0;
+}
+[dir="rtl"] .language-dropdown {
+    right: auto;
+    left: 0;
 }
 
 .fs-120 {
@@ -246,6 +372,19 @@ strong[data-translate="history_closing"] {
 .project-box h4{
   font-family: 'Ashford Bold', sans-serif;
 } 
+/* keep the globe and every child in LTR layout even when the page is RTL */
+#business-globe,
+    #business-globe * {
+        direction: ltr !important;
+        text-align: left !important;
+    }
+
+/* make sure the markers always stack on top of the canvas in every dir mode */
+#business-globe canvas {
+  position: relative;
+  z-index: 1;
+}
+
 </style>
 <body class="dark-scheme">
     <div id="wrapper">
@@ -341,13 +480,15 @@ strong[data-translate="history_closing"] {
             </div>
         </section>
 
-       <section id="section-about" class="bg-dark section-dark text-light">
+ <section id="section-about" class="bg-dark section-dark text-light">
     <div class="container">
         <div class="row gx-5 align-items-center justify-content-between">
             <div class="col-lg-6">
                 <div class="me-lg-5 pe-lg-5 py-5 my-5">
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">Wish Group</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s" data-translate="about_text">Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.</p>
+                    <h2 data-translate="wish_group">Wish Group</h2>
+                    <p data-translate="about_text">
+                        Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
+                    </p>
                     <h3 data-translate="world_map">Wish Group Around the World</h3>
                 </div>
             </div>
@@ -360,241 +501,87 @@ strong[data-translate="history_closing"] {
         </div>
     </div>
 </section>
+<section id="section-marquee" class="section-dark p-0" aria-label="section">
+    <div class="bg-color text-light d-flex py-4 lh-1 rot-2" id="marquee-1">
+        <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
+            <span class="fs-60 mx-3" data-translate="marquee_wish_islands">Wish Islands</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_harbour">Wish Harbour</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_casa">Wish Casa</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_wish">Prime Wish</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_bond">Prime Bond Investment</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wcc">World Capital Centre (WCC)</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+        </div>
+    </div>
+    <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20" id="marquee-2">
+        <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
+            <span class="fs-60 mx-3" data-translate="marquee_wish_islands">Wish Islands</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_harbour">Wish Harbour</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_casa">Wish Casa</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_wish">Prime Wish</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_bond">Prime Bond Investment</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wcc">World Capital Centre (WCC)</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+        </div>
+    </div>
+</section>
 
-        <section class="section-dark p-0" aria-label="section">
-            <div class="bg-color text-light d-flex py-4 lh-1 rot-2">
-                <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
-                    <span class="fs-60 mx-3">Wish Islands</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Wish Harbour</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Wish Casa</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Prime Wish</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Prime Bond Investment</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">World Capital Centre (WCC)</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
+<section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
+    <div class="container text-center">
+        <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
+        <div class="swiper myProjectSlider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images\demo\wishislands.png" class="img-fluid mb-3 rounded" alt="Wish Islands">
+                        <h4 data-translate="wish_islands_title">Wish Islands</h4>
+                        <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
+                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images\demo\WIshcaza.jpeg" class="img-fluid mb-3 rounded" alt="Wish Casa">
+                        <h4 data-translate="wish_casa_title">Wish Casa</h4>
+                        <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
+                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
+                        <h4 data-translate="prime_wish_title">Prime Wish</h4>
+                        <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
+                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-box">
+                        <img src="/images\demo\wishholdings.jpeg" class="img-fluid mb-3 rounded" alt="Wish Harbour">
+                        <h4 data-translate="wish_harbour_title">Wish Harbour</h4>
+                        <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
+                        <a href="#" class="btn btn-outline-light mt-3" data-translate="read_more">Read More</a>
+                    </div>
                 </div>
             </div>
-            <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20">
-                <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
-                    <span class="fs-60 mx-3">Wish Islands</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Wish Harbour</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Wish Casa</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Prime Wish</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">Prime Bond Investment</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                    <span class="fs-60 mx-3">World Capital Centre (WCC)</span>
-                    <span class="fs-60 mx-3 op-2">/</span>
-                </div>
-            </div>
-        </section>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
 
-             <section id="section-why-attend" class="section-dark text-light bg-dark py-5">
-            <div class="container text-center">
-                <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
-                <div class="swiper myProjectSlider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/wish islands.webp" class="img-fluid mb-3 rounded" alt="Wish Island">
-                                <h4>Wish Islands</h4>
-                                <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/wishcasafrnt.webp" class="img-fluid mb-3 rounded" alt="Wish Casa">
-                                <h4>Wish Casa</h4>
-                                <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
-                                <h4>Prime Wish</h4>
-                                <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-box">
-                                <img src="/images/wishgroup/wish harbour.webp" class="img-fluid mb-3 rounded" alt="Wish Harbour">
-                                <h4>Wish Harbour</h4>
-                                <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
-            <img src="images\background\bfFullAllience.webp" class="jarallax-img" alt="">
-            <div class="gradient-edge-top"></div>
-            <div class="gradient-edge-bottom"></div>
-            <div class="sw-overlay op-8"></div>
-            <div class="container relative z-4">
-                <div class="row align-items-center g-5">
-                    <div class="col-md-4">
-                        <div class="relative w-100 d-inline-block pe-5">
-                            <div class="abs bg-color w-80px h-80px rounded-1 text-center end-0 z-2 wow scaleIn">
-                                <i class="icofont-quote-left text-white fs-40 d-block pt-3"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <h3 class="fs-32 mb-4 wow fadeInUp">“”</h3>
-                        <span>Asaid Ahmed Arabi Moulana</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="section-speakers" class="bg-dark section-dark text-light py-5">
-            <div class="container">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 relative z-3">
-                        <div class="text-center">
-                            <div class="subtitle wow fadeInUp" data-wow-delay=".0s" data-translate="wish_group">Wish Group</div>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="management_team">GROUP MANAGEMENT TEAM</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper mySwiper mt-5">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/1.webp" class="w-100 hover-scale-1-1" alt="Mashreq Bank">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/2.webp" class="w-100 hover-scale-1-1" alt="ADIB">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/3.webp" class="w-100 hover-scale-1-1" alt="Partner 4">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/4.webp" class="w-100 hover-scale-1-1" alt="Partner 5">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/5.webp" class="w-100 hover-scale-1-1" alt="Partner 7">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/6.webp" class="w-100 hover-scale-1-1" alt="Partner 8">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/7.webp" class="w-100 hover-scale-1-1" alt="Partner 9">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hover relative rounded-1 overflow-hidden">
-                                <img src="/images/company mem/8.webp" class="w-100 hover-scale-1-1" alt="Partner 10">
-                                <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                                <div class="abs w-100 start-0 bottom-0 z-3">
-                                    <div class="bg-blur p-4 m-4 rounded-1 text-light text-center relative z-2">
-                                        <h3 class="mb-0"></h3>
-                                        <span></span><br>
-                                        <span></span><br>
-                                        <span></span>
-                                    </div>
-                                    <div class="gradient-edge-bottom h-100 op-8"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
  <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
-            <img src="/images/wishgroup/background.webp" class="jarallax-img" alt="">
+            <img src="/images\wishgroup\ChatGPT Image Aug 30, 2025, 12_07_10 PM.png" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-8"></div>
@@ -602,18 +589,18 @@ strong[data-translate="history_closing"] {
                 <div class="row g-4">
                     <div class="col-md-12 wow fadeInUp">
                         <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.49.44 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.54.21 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.56.53 PM.webp" class="w-100 px-4" alt="">
+                            <!-- <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.49.44 PM.webp" class="w-100 px-4" alt=""> -->
+                            <!-- <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.54.21 PM.webp" class="w-100 px-4" alt=""> -->
+                            <img src="/images\background-remover\WhatsApp Image 2025-08-19 at 4.56.46 PM.webp" class="w-100 px-4" alt="">
                             <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.58.50 PM.webp" class="w-100 px-4" alt="">
                             <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.01.48 PM.webp" class="w-100 px-4" alt="">
                             <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.04.48 PM.webp" class="w-100 px-4" alt="">
                             <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.05.32 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.22.26 PM.webp" class="w-100 px-4" alt="">
+                            <img src="/images\wishgroup\wishhooo.png" class="w-100 px-4" alt="">
                             <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.27.23 PM.webp" class="w-100 px-4" alt="">
                             <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.28.57 PM.webp" class="w-100 px-4" alt="">
                              <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.31.09 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.42.26 PM.webp" class="w-100 px-4" alt="">
+                            <img src="/images\background-remover\WhatsApp Image 2025-08-19 at 4.47.58 PM.webp" class="w-100 px-4" alt="">
                         </div>
                     </div>
                 </div>
@@ -621,24 +608,96 @@ strong[data-translate="history_closing"] {
         </section>
      
 
-        <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
-            <div class="container relative z-2">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="wish_group">Wish Group</h2>
-                        <p class="lead wow fadeInUp" data-wow-delay=".6s" data-translate="about_text">Wish Group, founded in 2000 in the UAE, is a Dubai-based global conglomerate in 7+ countries, uniting real estate, hospitality, seafood, trading, and capital ventures under its vision “One Capital World” to connect capital with compassion and shape futures.</p>
-                    </div>
+         <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+    <div class="text-center">
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlight">Product Highlights</h2>
+                            </div>
+        <div class="container relative z-2">
+            
+            <div class="row g-4 flex-nowrap overflow-auto" id="scroller">
+                
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
-                <div class="row g-4">
-                    <div class="col-sm-6">
-                        <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                    </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l1.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images/misc/l2.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
                 </div>
             </div>
-        </section>
+        </div>
+ <script>
+    const scroller = document.getElementById('highlights-scroller');
+    const content = scroller.innerHTML;
+    scroller.innerHTML = content + content; // Duplicate for infinite scroll
+    let isPaused = false;
+    let scrollPos = 0;
+    const speed = 2; // Adjust speed as needed
+    const isRtl = document.documentElement.dir === 'rtl';
+
+    function scroll() {
+        if (!isPaused) {
+            // Adjust scroll direction based on RTL/LTR
+            scrollPos += isRtl ? -speed : speed;
+            if (isRtl) {
+                if (scrollPos <= -scroller.scrollWidth / 2) {
+                    scrollPos = 0;
+                }
+            } else {
+                if (scrollPos >= scroller.scrollWidth / 2) {
+                    scrollPos = 0;
+                }
+            }
+            scroller.scrollLeft = scrollPos;
+        }
+        requestAnimationFrame(scroll);
+    }
+
+    scroll();
+
+    scroller.addEventListener('mouseenter', () => isPaused = true);
+    scroller.addEventListener('mouseleave', () => isPaused = false);
+    scroller.addEventListener('touchstart', () => isPaused = true);
+    scroller.addEventListener('touchend', () => isPaused = false);
+
+    // Update scroll direction when language changes
+    document.addEventListener('languageChange', () => {
+        const newIsRtl = document.documentElement.dir === 'rtl';
+        if (newIsRtl !== isRtl) {
+            scrollPos = 0; // Reset position on direction change
+            isRtl = newIsRtl;
+        }
+    });
+</script>
+    </section>
 
           <footer class="text-light section-dark pt-5">
             <div class="container">
@@ -719,20 +778,34 @@ strong[data-translate="history_closing"] {
         transition: all 0.3s ease;
     }
 
-    .globe-container {
+.globe-container {
         width: 100%;
-        height: 600px;
+        height: 400px; /* Adjust height as needed */
         background: #000;
         border-radius: 10px;
-        touch-action: auto !important;
+        position: relative;
     }
-
-    @media (max-width: 768px) {
-        .globe-container {
-            height: 300px;
-        }
+[dir="rtl"] .globe-container {
+    direction: ltr !important; /* Explicitly enforce LTR in RTL mode */
+    text-align: left !important;; /* Prevent text direction interference */
+}
+.globe-container canvas {
+    position: relative;
+    z-index: 1; /* Ensure canvas is below flags */
+}
+.globe-container img {
+    pointer-events: auto !important; /* Ensure flags are clickable */
+    transform-origin: center; /* Center the transform origin */
+    position: absolute; /* Absolute positioning for flags */
+    z-index: 10 !important; /* Ensure flags are above canvas */
+    direction: ltr !important; /* Force LTR for flag images */
+    text-align: left !important;; /* Isolate flag text direction */
+}
+@media (max-width: 768px) {
+    .globe-container {
+        height: 300px;
     }
-
+}
     .language-dropdown {
         display: none;
         position: absolute;
@@ -806,499 +879,10 @@ strong[data-translate="history_closing"] {
 </style>
 
     <!-- Swiper Configuration and Language Selector Logic -->
-    <script>
-        // translations.js content inline for completeness
-        const translations = {
-            en: {
-                // Navigation
-                "home": "Home",
-                "about": "About Us",
-                "divisions": "Divisions",
-                "projects": "Projects",
-                "countries": "Countries",
-                "news": "News",
-                "policies": "Our Policies",
-                "career": "Career",
-                "contact": "Contact Us",
-                
-                // Hero Section
-                "decades": "Decades of Value and Victory",
-                "make_your_wish": "WE MAKE A WISH",
-                "since": "Since 2000",
-                
-                // About Section
-                "wish_group": "Wish Group",
-                "about_text": "Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai's Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of 'One Capital World,' Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.",
-                "world_map": "Wish Group Around the World",
-                
-                // Projects
-                "latest_projects": "Latest Projects",
-                "wish_island_desc": "Luxury, tranquility & natural beauty in the Maldives.",
-                "wish_casa_desc": "Premium biscuits & juices with global standards.",
-                "prime_wish_desc": "UAE-based food manufacturing & export company.",
-                "wish_harbour_desc": "We don't just chase dreams — we hold your wish and turn it into reality.",
-                
-                // Team
-                "management_team": "GROUP MANAGEMENT TEAM",
-                "secondary_team": "SECONDARY MANAGEMENT TEAM",
-                
-                // Footer
-                "address": "Address",
-                "quick_links": "Quick Links",
-                "contact_us": "Contact Us",
-                "copyright": "Copyright 2025 - Wish Group. All rights reserved."
-            },
-            ar: {
-                // Navigation
-                "home": "الرئيسية",
-                "about": "من نحن",
-                "divisions": "أقسامنا",
-                "projects": "المشاريع",
-                "countries": "الدول",
-                "news": "الأخبار",
-                "policies": "سياساتنا",
-                "career": "الوظائف",
-                "contact": "اتصل بنا",
-                
-                // Hero Section
-                "decades": "عقود من القيمة والانتصار",
-                "make_your_wish": "احلم بتحقيق أمنيتك",
-                "since": "منذ عام 2000",
-                
-                // About Section
-                "wish_group": "مجموعة وِش",
-                "about_text": "تأسست مجموعة وِش في عام 2000 في الإمارات العربية المتحدة، وهي تكتل عالمي يقع مقره الرئيسي في منطقة الخليج التجاري في دبي. تعمل المجموعة في أكثر من 7 دول وتشمل قطاعات مثل العقارات والضيافة والمأكولات البحرية والتجارة واستثمارات رأس المال. بتوجيه من رؤية 'عاصمة عالم واحدة'، تربط مجموعة وِش رأس المال بالتعاطف من خلال التنمية المستدامة والشاملة والمبتكرة. تتمثل مهمتها الأساسية في تمكين الأشخاص وتشكيل المستقبل من خلال توحيد الاستثمار مع التأثير.",
-                "world_map": "مجموعة وِش حول العالم",
-                
-                // Projects
-                "latest_projects": "أحدث المشاريع",
-                "wish_island_desc": "الفخامة والهدوء والجمال الطبيعي في جزر المالديف.",
-                "wish_casa_desc": "بسكويت وعصائر عالية الجودة بمعايير عالمية.",
-                "prime_wish_desc": "شركة تصنيع وتصدير أغذية مقرها الإمارات.",
-                "wish_harbour_desc": "نحن لا نطارد الأحلام فقط - نحن نحقق أمنياتك.",
-                
-                // Team
-                "management_team": "فريق الإدارة العليا",
-                "secondary_team": "فريق الإدارة الثانوي",
-                
-                // Footer
-                "address": "العنوان",
-                "quick_links": "روابط سريعة",
-                "contact_us": "اتصل بنا",
-                "copyright": "حقوق النشر 2025 - مجموعة وِش. جميع الحقوق محفوظة."
-            },
-            fr: {
-                // Navigation
-                "home": "Accueil",
-                "about": "À propos",
-                "divisions": "Divisions",
-                "projects": "Projets",
-                "countries": "Pays",
-                "news": "Actualités",
-                "policies": "Nos politiques",
-                "career": "Carrière",
-                "contact": "Contactez-nous",
-                
-                // Hero Section
-                "decades": "Des décennies de valeur et de victoire",
-                "make_your_wish": "Faites un Vœu",
-                "since": "Depuis 2000",
-                
-                // About Section
-                "wish_group": "Groupe Wish",
-                "about_text": "Fondé en 2000 aux Émirats Arabes Unis, Wish Group est un conglomérat mondial dont le siège est situé à Business Bay à Dubaï. Opérant dans plus de 7 pays, il couvre des secteurs tels que l'immobilier, l'hôtellerie, les produits de la mer, le commerce et les investissements en capital. Guidé par la vision 'One Capital World', Wish Group connecte le capital avec compassion grâce à un développement durable, inclusif et innovant. Sa mission principale est d'autonomiser les personnes et de façonner les avenirs en unissant investissement et impact.",
-                "world_map": "Wish Group dans le monde",
-                
-                // Projects
-                "latest_projects": "Derniers projets",
-                "wish_island_desc": "Luxe, tranquillité et beauté naturelle aux Maldives.",
-                "wish_casa_desc": "Biscuits et jus premium aux normes mondiales.",
-                "prime_wish_desc": "Société de fabrication et d'exportation alimentaire basée aux Émirats.",
-                "wish_harbour_desc": "Nous ne poursuivons pas seulement les rêves - nous réalisons vos souhaits.",
-                
-                // Team
-                "management_team": "ÉQUIPE DE DIRECTION",
-                "secondary_team": "ÉQUIPE DE DIRECTION SECONDAIRE",
-                
-                // Footer
-                "address": "Adresse",
-                "quick_links": "Liens rapides",
-                "contact_us": "Contactez-nous",
-                "copyright": "Droits d'auteur 2025 - Groupe Wish. Tous droits réservés."
-            },
-            si: {
-                // Navigation
-                "home": "මුල් පිටුව",
-                "about": "අපි ගැන",
-                "divisions": "අංශ",
-                "projects": "ව්‍යාපෘති",
-                "countries": "රටවල්",
-                "news": "පුවත්",
-                "policies": "අපගේ ප්‍රතිපත්ති",
-                "career": "වෘත්තිය",
-                "contact": "අප අමතන්න",
-                
-                // Hero Section
-                "decades": "වටිනාකම හා ජයග්‍රහණයේ දශක",
-                "make_your_wish": "ඔබේ ආශාව සාක්ෂාත් කර ගන්න",
-                "since": "2000 සිට",
-                
-                // About Section
-                "wish_group": "විෂ් ගෲප්",
-                "about_text": "2000 දී එක්සත් අරාබි එමීර් රාජ්‍යයේ පිහිටුවන ලද විෂ් ගෲප්, ඩුබායිහි බිසිනස් බේ හි ප්‍රධාන කාර්යාලයක් ඇති ගෝලීය සමූහයකි. රටවල් 7කට වැඩි ගණනක ක්‍රියාත්මක වන එය රියල් එස්ටේට්, සංචාරක, මුහුදු ආහාර, වෙළඳාම සහ ප්‍රාග්ධන ආයෝජන වැනි ක්ෂේත්‍ර ආවරණය කරයි. 'එක් ප්‍රාග්ධන ලෝකය' යන දැක්මෙන් මෙහෙයවෙන විෂ් ගෲප්, තිරසාර, සම්බන්ධිත හා නවෝත්පාදන සංවර්ධනය හරහා ප්‍රාග්ධනය සහචේතනාව සම්බන්ධ කරයි. ආයෝජනය සහ බලපෑම එක්සත් කිරීමෙන් පුද්ගලයන් බලගැන්වීම සහ අනාගතය හැඩගැස්වීම එහි මූලික අරමුණයි.",
-                "world_map": "ලොව පුරා විෂ් ගෲප්",
-                
-                // Projects
-                "latest_projects": "නවතම ව්‍යාපෘති",
-                "wish_island_desc": "මාලදිවයිනේ විලාසිතාව, සන්සුන්තාව සහ ස්වාභාවික අලංකාරය.",
-                "wish_casa_desc": "ගෝලීය ප්‍රමිති සහිත විශේෂ බිස්කට් සහ යුෂ.",
-                "prime_wish_desc": "එක්සත් අරාබි එමීර් රාජ්‍යයේ පදනම් වූ ආහාර නිෂ්පාදන හා අපනයන සමාගම.",
-                "wish_harbour_desc": "අපි සිහිසුන්ව සිටිමු - ඔබේ ආශාව අපි සැබෑ කරමු.",
-                
-                // Team
-                "management_team": "කළමනාකරණ කණ්ඩායම",
-                "secondary_team": "ද්විතීය කළමනාකරණ කණ්ඩායම",
-                
-                // Footer
-                "address": "ලිපිනය",
-                "quick_links": "ක්ෂණික සබැඳි",
-                "contact_us": "අප අමතන්න",
-                "copyright": "ප්‍රකාශන සියලුම හිමිකම් ඇත 2025 - විෂ් ගෲප්."
-            },
-            dv: {
-                // Navigation
-                "home": "މައި ސަފްހާ",
-                "about": "އަހަރެންގެ ވަނަ",
-                "divisions": "ބައްޓަން",
-                "projects": "ޕްރޮޖެކްޓްތައް",
-                "countries": "ދިވެހިރާއްޖެ",
-                "news": "ޙަބަރު",
-                "policies":"އަހަރެންގެ ސިޔާސަތްތައް",
-                "career": "ކަރިއަރ",
-                "contact": "އަޅުގަނޑުމެންނާ ގުޅިގެން",
-                
-                // Hero Section
-                "decades": "މިނިވަންތަކާއި ފާހަގަތަކުގެ ދިހައި",
-                "make_your_wish": "ތިބާގެ އަމަލު ހަދައިގަންނަވާ",
-                "since": "2000 ވަނަ",
-                
-                // About Section
-                "wish_group": "ވިޝް ގްރޫޕް",
-                "about_text": "2000 ވަނަ އެމިރޭޓްސްގެ ތެރޭގައި ޤާއިމުކުރެވިފައިވާ ވިޝް ގްރޫޕް، ޑުބައިގެ ބިޒިނަސް ބޭ އަށް މުޅިން ޤާއިމުކުރެވިފައިވާ ޤައުމީ ކޮމްޕެނީއެއްކަން ކަމުގައިވާ އެއްޗެކެވެ. ރަށް 7 އަށްވުރެ އެއްވަރަށް ކަނޑުމަތީގައި އެކުލަވާލަނީ ރީއަލް އިސްޓޭޓް، ހޮޓެލް، މަސް މަސްވެރިކަމާއި ވިޔަފާރި، އަދި ރަށްގެ މުދަލުގެ ވިޔަފާރި ފަދަ ގޮތްތަކަށެވެ. 'އެކު ރަށްގެ މުދަލު ދުނިޔެ' އެއްގޮތުން މަގުބައިކޮށް، ވިޝް ގްރޫޕް މުދަލާއި ރަހުމަތް އެކުވެރިކޮށް ތަންފީޒު ކުރަނީ ދަތުރުވެރި، އެކުވެރިވާ އަދި އެހީތެރި އުފެއްދުންތެރިކަމާއެކުވެވަޑައިގަންނަވަނީއެވެ. އެގެ މުހިއްމު މަސައްކަތަކީ މުދަލާއި ތަފާތު އެކުވެރިކޮށް މީހުންނަށް ބާރުދެއްވުމާއި ދެން ހަމަޖެހުމަށް ފުރުސަތު ދެވޭނެކަމަށެވެ.",
-                "world_map": "ދުނިޔެއިން ވިޝް ގްރޫޕް",
-                
-                // Projects
-                "latest_projects": "އާންމު ޕްރޮޖެކްޓްތައް",
-                "wish_island_desc": "މޯލްޑިވްސްގައި ލަގުވަތް، ހަމަކަށަވަރާއި ސުވަރުންގެ ޞަފާ.",
-                "wish_casa_desc": "ދުނިޔޭގެ މައިގަނޑުގައި ނަގައިގެން ދިޔަ ބިސްކެޓްތައް އަދި ޖޫސް.",
-                "prime_wish_desc": "އެމިރޭޓްސްގެ ތެރޭގައި ޤާއިމުކުރެވިފައިވާ ކަންފަތްތައް އަދި ވިޔަފާރި ކުރާ ކޮމްޕެނީ.",
-                "wish_harbour_desc": "އަހަރެން ހަމަޖެހުނީ ތިބާގެ އަމަލު ހަދައިގަންނަވާނެ ގޮތަށް.",
-                
-                // Team
-                "management_team": "މެނޭޖްމަންޓް ޓީމް",
-                "secondary_team": "ސެކަންޑަރީ މެނޭޖްމަންޓް ޓީމް",
-                
-                // Footer
-                "address": "ތަރުކީގައި",
-                "quick_links": "އަވަސް ލިންކްތައް",
-                "contact_us": "އަޅުގަނޑުމެންނާ ގުޅިގެން",
-                "copyright": "ކޮޕީރައިޓް 2025 - ވިޝް ގްރޫޕް. ހުރިހާ ޙައްޤު ދަންނަވާނެ."
-            }
-        };
-
-        let myProjectSlider, mySwiper, teamSwiper;
-
-function initSliders() {
-    myProjectSlider = new Swiper('.myProjectSlider', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        breakpoints: {
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 }
-        }
-    });
-
-    mySwiper = new Swiper(".mySwiper", {
-        loop: true,
-        autoplay: { delay: 3000, disableOnInteraction: false },
-        spaceBetween: 30,
-        slidesPerView: 1,
-        breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-        }
-    });
-
-    // Check if teamSwiper container exists before initializing
-    const teamSwiperContainer = document.querySelector('.teamSwiper');
-    if (teamSwiperContainer) {
-        teamSwiper = new Swiper('.teamSwiper', {
-            loop: true,
-            autoplay: { delay: 3000, disableOnInteraction: false },
-            spaceBetween: 20,
-            slidesPerView: 1,
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: { slidesPerView: 2, spaceBetween: 25 },
-                1024: { slidesPerView: 3, spaceBetween: 30 }
-            }
-        });
-
-        teamSwiperContainer.addEventListener('mouseenter', () => {
-            teamSwiper.autoplay.stop();
-        });
-        teamSwiperContainer.addEventListener('mouseleave', () => {
-            teamSwiper.autoplay.start();
-        });
-        teamSwiperContainer.addEventListener('touchstart', () => {
-            teamSwiper.autoplay.stop();
-        });
-        teamSwiperContainer.addEventListener('touchend', () => {
-            teamSwiper.autoplay.start();
-        });
-
-        VanillaTilt.init(document.querySelectorAll('.team-card'), {
-            max: 10,
-            speed: 400,
-            perspective: 1000,
-            glare: true,
-            'max-glare': 0.3
-        });
-    }
-}
-
-        // Globe Configuration
-     function initGlobe() {
-    const globeContainer = document.getElementById('business-globe');
-    if (!globeContainer) {
-        console.error('Globe container #business-globe not found');
-        return;
-    }
-
-    const countries = [
-        { code: 'ARE', name: 'United Arab Emirates', lat: 24.4539, lng: 54.3773 },
-        { code: 'LKA', name: 'Sri Lanka', lat: 7.8731, lng: 80.7718 },
-        { code: 'MDV', name: 'Maldives', lat: 3.2028, lng: 73.2207 },
-        { code: 'MYS', name: 'Malaysia', lat: 4.2105, lng: 101.9758 },
-        { code: 'GHA', name: 'Ghana', lat: 7.9465, lng: -1.0232 },
-        { code: 'ZAF', name: 'South Africa', lat: -30.5595, lng: 22.9375 },
-        { code: 'GBR', name: 'United Kingdom', lat: 55.3781, lng: -3.4360 }
-    ];
-
-    const flagUrls = {
-        ARE: 'https://flagcdn.com/32x24/ae.webp',
-        LKA: 'https://flagcdn.com/32x24/lk.webp',
-        MDV: 'https://flagcdn.com/32x24/mv.webp',
-        MYS: 'https://flagcdn.com/32x24/my.webp',
-        GHA: 'https://flagcdn.com/32x24/gh.webp',
-        ZAF: 'https://flagcdn.com/32x24/za.webp',
-        GBR: 'https://flagcdn.com/32x24/gb.webp'
-    };
-
-    const countryPageMap = {
-        LKA: 'srilanka.html',
-        ARE: 'are.html',
-        MDV: 'mdv.html',
-        MYS: 'mys.html',
-        GHA: 'gha.html',
-        ZAF: 'zaf.html',
-        GBR: 'gbr.html'
-    };
-
-    const globe = Globe()
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .backgroundColor('#000000')
-        .pointOfView({ lat: 0, lng: 0, altitude: 2.5 }, 0)
-        .htmlElementsData(countries)
-        .htmlLat('lat')
-        .htmlLng('lng')
-        .htmlElement(country => {
-            const el = document.createElement('img');
-            el.src = flagUrls[country.code] || 'https://flagcdn.com/32x24/xx.jpg';
-            el.alt = `Flag of ${country.name}`;
-            el.style.width = '32px';
-            el.style.height = '24px';
-            el.style.cursor = 'pointer';
-            el.style.transform = 'translate(-50%, -100%)';
-            el.title = country.name;
-            el.setAttribute('role', 'button');
-            el.setAttribute('aria-label', `Navigate to ${country.name} page`);
-
-            el.onerror = () => {
-                el.src = 'https://flagcdn.com/32x24/xx.webp';
-                console.warn(`Failed to load flag for ${country.name}`);
-            };
-
-            el.addEventListener('click', e => {
-                e.stopPropagation();
-                const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
-                try {
-                    window.location.href = pageUrl;
-                } catch (err) {
-                    console.error(`Navigation to ${pageUrl} failed: ${err.message}`);
-                }
-            });
-
-            el.tabIndex = 0;
-            el.addEventListener('keydown', e => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const pageUrl = countryPageMap[country.code] || `${country.code.toLowerCase()}.html`;
-                    window.location.href = pageUrl;
-                }
-            });
-
-            return el;
-        })
-        (globeContainer);
-
-    globe.controls().autoRotate = true;
-    globe.controls().autoRotateSpeed = 1;
-
-    globeContainer.addEventListener('mouseenter', () => {
-        globe.controls().autoRotate = false;
-    });
-    globeContainer.addEventListener('mouseleave', () => {
-        globe.controls().autoRotate = true;
-    });
-
-    // Handle touch scrolling
-    let touchStartY = 0;
-    let touchStartTime = 0;
-    const scrollThreshold = 20; // Pixels to determine if it's a scroll
-    const timeThreshold = 300;  // Milliseconds to differentiate tap vs scroll
-
-    globeContainer.addEventListener('touchstart', (e) => {
-        touchStartY = e.touches[0].clientY;
-        touchStartTime = Date.now();
-    }, { passive: true });
-
-    globeContainer.addEventListener('touchmove', (e) => {
-        const touchY = e.touches[0].clientY;
-        const deltaY = Math.abs(touchY - touchStartY);
-        const timeElapsed = Date.now() - touchStartTime;
-
-        // If movement is significant and quick, allow scrolling
-        if (deltaY > scrollThreshold && timeElapsed < timeThreshold) {
-            e.stopPropagation(); // Allow default scrolling
-        } else {
-            e.preventDefault(); // Prevent default to allow globe interaction
-        }
-    }, { passive: false });
-
-    function resizeGlobe() {
-        globe.width(globeContainer.offsetWidth);
-        globe.height(globeContainer.offsetHeight);
-    }
-    resizeGlobe();
-    window.addEventListener('resize', resizeGlobe);
-}
-        // Language Selector Logic
-      document.addEventListener('DOMContentLoaded', () => {
-        const languageToggle = document.getElementById('language-toggle');
-        const languageDropdown = document.querySelector('.language-dropdown');
-        const languageSelector = document.querySelector('.language-selector');
-
-        if (!languageToggle || !languageDropdown) {
-            console.error('Language toggle or dropdown not found');
-            return;
-        }
-
-        // Toggle dropdown on click
-        languageToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            languageSelector.classList.toggle('active');
-            languageDropdown.style.display = languageSelector.classList.contains('active') ? 'block' : 'none';
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
-                languageSelector.classList.remove('active');
-                languageDropdown.style.display = 'none';
-            }
-        });
-
-        // Language selection
-        document.querySelectorAll('.language-dropdown a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const lang = this.getAttribute('data-lang');
-                console.log(`Switching to language: ${lang}`);
-                setLanguage(lang);
-                languageSelector.classList.remove('active');
-                languageDropdown.style.display = 'none';
-            });
-        });
-
-        initSliders();
-        initGlobe();
-        initLanguage();
-    });
-
-        function translatePage(lang) {
-            if (!translations[lang]) {
-                console.error(`Language ${lang} not found in translations object`);
-                return;
-            }
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                } else {
-                    console.warn(`Translation key ${key} not found for language ${lang}`);
-                }
-            });
-
-            // Update RTL/LTR direction
-            const isRtl = (lang === 'ar' || lang === 'dv');
-            document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
-            if (isRtl) {
-                document.body.classList.add('rtl');
-            } else {
-                document.body.classList.remove('rtl');
-            }
-
-            // Update sliders for RTL
-            [myProjectSlider, mySwiper, teamSwiper].forEach(swiperInstance => {
-                if (swiperInstance) {
-                    swiperInstance.changeLanguageDirection(isRtl ? 'rtl' : 'ltr');
-                    swiperInstance.update();
-                }
-            });
-
-            // Update language toggle button
-            const langToggle = document.getElementById('language-toggle');
-            if (langToggle) {
-                langToggle.querySelector('span').textContent = lang.toUpperCase();
-            }
-        }
-
-        function initLanguage() {
-            let savedLang = 'en';
-            try {
-                savedLang = localStorage.getItem('selectedLanguage') || 'en';
-            } catch (e) {
-                console.warn('localStorage is not available, defaulting to English');
-            }
-            console.log(`Initializing with language: ${savedLang}`);
-            setLanguage(savedLang);
-        }
-
-        function setLanguage(lang) {
-            localStorage.setItem('selectedLanguage', lang);
-            translatePage(lang);
-        }
-    </script>
-
+ 
+<script>
+   
+</script>
     <!-- Custom Styles -->
     <style>
         .project-box {

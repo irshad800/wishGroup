@@ -1,0 +1,509 @@
+
+
+#section-why-attend, #section-why-attend * {
+    direction: ltr !important;
+    text-align: left !important;
+    flex-direction: row !important;
+}
+#section-why-attend .container {
+    text-align: left !important; /* Override text-center for container */
+}
+.myProjectSlider .swiper-wrapper {
+    flex-direction: row !important; /* Prevent slide reversal in RTL */
+}
+.project-box {
+    text-align: left !important; /* Ensure project boxes stay left-aligned */
+}
+.project-box h4,
+.project-box p {
+    font-family: 'Ashford Bold', 'Arial', sans-serif; /* Fallback for Arabic/Dhivehi */
+}
+
+#section-marquee, #section-marquee * {
+    direction: ltr !important;
+    text-align: left !important;
+    flex-direction: row !important; /* Ensure flex items maintain LTR order */
+}
+.de-marquee-list-1, .de-marquee-list-2 {
+    animation-direction: normal !important; /* Ensure animations move LTR */
+}
+       @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/ashford-bold-italic.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fs-120 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'marquez';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fs-60 {
+  font-family: 'marquez', sans-serif;
+}
+
+     @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.subtitle {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Marne', sans-serif;
+}
+    @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h4 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h5 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h3 {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fs-14 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+.mb-0 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-subtitle {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-title{
+  font-family: 'Ashford Bold', sans-serif;
+}
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-description{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.subtitle.s2{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fs-15{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+p{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.legacy-label{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.global_presence{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.our_history{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.accordion-section-title{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.accordion-section-content{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+strong[data-translate="history_closing"] {
+  font-family: 'Ashford Bold', sans-serif;
+  font-size: 15px; /* Optional, if you intended fs-15 */
+}
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.project-box h4{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+/* keep the globe and every child in LTR layout even when the page is RTL */
+#business-globe,
+#business-globe * {
+  direction: ltr !important;
+  text-align: left !important;;
+}
+
+/* make sure the markers always stack on top of the canvas in every dir mode */
+#business-globe canvas {
+  position: relative;
+  z-index: 1;
+}
+
+  .language-selector {
+        position: relative;
+        display: inline-block;
+        z-index: 1000;
+    }
+    .language-selector .btn-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        min-width: 80px;
+        background: linear-gradient(90deg, #e10600, #000000);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+.globe-container {
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        background: #000;
+        border-radius: 10px;
+        position: relative;
+    }
+[dir="rtl"] .globe-container {
+    direction: ltr !important; /* Explicitly enforce LTR in RTL mode */
+    text-align: left !important;; /* Prevent text direction interference */
+}
+.globe-container canvas {
+    position: relative;
+    z-index: 1; /* Ensure canvas is below flags */
+}
+.globe-container img {
+    pointer-events: auto !important; /* Ensure flags are clickable */
+    transform-origin: center; /* Center the transform origin */
+    position: absolute; /* Absolute positioning for flags */
+    z-index: 10 !important; /* Ensure flags are above canvas */
+    direction: ltr !important; /* Force LTR for flag images */
+    text-align: left !important;; /* Isolate flag text direction */
+}
+@media (max-width: 768px) {
+    .globe-container {
+        height: 300px;
+    }
+}
+    .language-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: linear-gradient(90deg, #e10600, #000000);
+        border: 1px solid #333;
+        border-radius: 5px;
+        min-width: 180px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        overflow: hidden;
+        margin-top: 5px;
+        z-index: 1001; /* Ensure it stays above other content */
+    }
+    .language-dropdown a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+        text-align: left;
+        border-bottom: 1px solid #333;
+    }
+    .language-dropdown a:hover {
+        background: #000;
+        color: #fff;
+    }
+    .language-dropdown a[data-lang="ar"],
+    .language-dropdown a[data-lang="dv"] {
+        text-align: right;
+        font-family: 'Arial', sans-serif;
+    }
+    .language-selector:hover .language-dropdown,
+    .language-selector:focus-within .language-dropdown {
+        display: block;
+    }
+    [dir="rtl"] {
+        direction: rtl;
+        text-align: right;
+    }
+    [dir="rtl"] .language-dropdown {
+        right: auto;
+        left: 0;
+    }
+    [dir="rtl"] .swiper-wrapper {
+        flex-direction: row-reverse;
+    }
+
+    /* Responsive adjustments for small screens */
+    @media (max-width: 576px) {
+        .language-selector .btn-main {
+            padding: 8px 15px;
+            min-width: 60px;
+            font-size: 12px;
+        }
+        .language-dropdown {
+            display: none !important; /* Hide dropdown on very small screens */
+            position: fixed;
+            top: 60px; /* Below header */
+            right: 10px;
+            width: 150px;
+        }
+        .language-selector.active .language-dropdown {
+            display: block !important;
+        }
+        header {
+            position: relative;
+            z-index: 1002; /* Ensure header stays above video */
+        }
+    }
+
+
+
+      .project-box {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            height: 100%;
+            color: #fff;
+            text-align: left;
+        }
+        .project-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .swiper-slide {
+            height: auto !important;
+        }
+        .teamSwiper {
+            padding-bottom: 60px;
+        }
+        .team-card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .team-img-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #B30000, #B30000);
+            padding: 3px;
+        }
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background: #2a2a2a;
+        }
+        .team-card h5 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .team-card .text-warning {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .team-card .small {
+            font-size: 0.85rem;
+            color: #cccccc;
+        }
+        .team-card a.btn {
+            font-size: 0.9rem;
+            border-radius: 25px;
+            padding: 0.4rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .team-card a.btn:hover {
+            background: #B30000;
+            color: #1a1a1a;
+            border-color: #B30000;
+            transform: translateY(-2px);
+        }
+        .team-card a.text-light:hover {
+            color: #B30000 !important;
+        }
+        .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            background: #B30000;
+            opacity: 1;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background: #B30000;
+            color: #1a1a1a;
+        }
+        @media (max-width: 768px) {
+            .team-img-wrapper {
+                width: 110px;
+                height: 110px;
+            }
+            .team-card h5 {
+                font-size: 1.15rem;
+            }
+            .team-card .text-warning {
+                font-size: 0.9rem;
+            }
+            .team-card .small {
+                font-size: 0.8rem;
+            }
+            .team-card a.btn {
+                font-size: 0.85rem;
+                padding: 0.3rem 1.2rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .teamSwiper {
+                padding-bottom: 50px;
+            }
+            .team-card {
+                padding: 1.5rem;
+            }
+        }
