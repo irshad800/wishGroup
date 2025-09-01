@@ -674,18 +674,48 @@ strong[data-translate="history_closing"] {
                 </div>
             </div>
             <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons if desired -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Include Swiper JS -->
 <script>
-    // Force navigation for "Read More" links
-    document.querySelectorAll('.read-more-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default to avoid conflicts
-            e.stopPropagation(); // Stop Swiper or other scripts from intercepting
-            const href = link.getAttribute('href'); // Get the href value
-            window.location.href = href; // Force navigation to the specified page
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".myProjectSlider", {
+            slidesPerView: 1, // Default to 1 slide on small screens
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                // When window width is >= 640px
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                // When window width is >= 768px
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                // When window width is >= 1024px
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+            autoplay: {
+                delay: 3000, // Auto-slide every 3 seconds
+                disableOnInteraction: false,
+            },
         });
     });
 </script>
