@@ -23,31 +23,20 @@
 </head>
 <style>
 /* General Swiper styling */
+/* Base styles for project slider */
 .myProjectSlider {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px 0;
 }
 
 .project-box {
-    text-align: center;
     padding: 15px;
-    background-color: #222;
-    border-radius: 10px;
+    text-align: center;
     height: 100%;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .project-box img {
-    max-width: 100%;
-    height: auto;
+    max-height: 200px;
+    object-fit: cover;
 }
 
 .project-box h4 {
@@ -57,36 +46,62 @@
 
 .project-box p {
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    color: #ccc;
 }
 
-.project-box button {
+.read-more-link {
     font-size: 0.9rem;
-    padding: 5px 15px;
 }
 
-/* Mobile-specific adjustments */
-@media (max-width: 767.98px) {
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .project-box img {
+        max-height: 150px;
+    }
+    .project-box h4 {
+        font-size: 1.1rem;
+    }
+    .project-box p {
+        font-size: 0.8rem;
+    }
+    .read-more-link {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .myProjectSlider .swiper-slide {
+        width: 80% !important;
+    }
+    .project-box img {
+        max-height: 120px;
+    }
     .project-box h4 {
         font-size: 1rem;
     }
-
     .project-box p {
         font-size: 0.75rem;
     }
-
-    .project-box button {
+    .read-more-link {
         font-size: 0.75rem;
-        padding: 3px 10px;
+        padding: 4px 8px;
     }
+}
 
-    .swiper-slide {
-        width: 80%; /* Ensure slides fit on mobile */
-    }
+/* Ensure swiper pagination is visible and styled */
+.swiper-pagination {
+    bottom: 10px;
+}
 
-    .swiper-pagination {
-        bottom: 10px; /* Adjust pagination position */
-    }
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #b30000;
 }
 /* Ensure project section text is centered without altering design */
 /* Ensure project section text is centered and adapts to direction */
@@ -395,7 +410,6 @@ strong[data-translate="history_closing"] {
     font-family: 'YourCustomFont', sans-serif;
     font-size: 80px;
   }
-
 </style>
 <body class="dark-scheme">
     <div id="wrapper">
@@ -564,14 +578,11 @@ strong[data-translate="history_closing"] {
       <div class="col-lg-6">
         <div class="me-lg-5 pe-lg-5 py-5 my-5">
           <!-- only this element uses the custom font -->
-          <h2 data-translate="wish_group" 
-    style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans';">
-  &nbsp;Wish Group
-</h2>
+          <h2 data-translate="wish_group" style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans'">
+            Wish Group
+          </h2>
 
-
-
-          <p data-translate="about_text"style="text-align: justify;">
+          <p data-translate="about_text">
             Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
           </p>
 
@@ -624,41 +635,41 @@ strong[data-translate="history_closing"] {
     </div>
 </section>
 
-    <section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
+<section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
     <div class="container text-center">
         <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
         <div class="swiper myProjectSlider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="project-box">
-                        <img src="/images/demo/wishislands.png" class="img-fluid mb-3 rounded" alt="Wish Islands">
+                        <img src="/images/demo/wishislands.png" class="img-fluid mb-3 rounded w-100" alt="Wish Islands">
                         <h4 data-translate="wish_islands_title">Wish Islands</h4>
-                        <p data-translate="wish_island_desc"style="text-align: justify;">Luxury, tranquility & natural beauty in the Maldives.</p>
-                        <a href="ongoingProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Islands">Read More</a>
+                        <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Islands">Read More</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="project-box">
-                        <img src="/images/demo/WIshcaza.jpeg" class="img-fluid mb-3 rounded" alt="Wish Casa">
+                        <img src="/images/demo/WIshcaza.jpeg" class="img-fluid mb-3 rounded w-100" alt="Wish Casa">
                         <h4 data-translate="wish_casa_title">Wish Casa</h4>
-                        <p data-translate="wish_casa_desc"style="text-align: justify;">Premium biscuits & juices with global standards.</p>
-                        <a href="wish_caza.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Casa">Read More</a>
+                        <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Casa">Read More</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="project-box">
-                        <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded" alt="Prime Wish">
+                        <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded w-100" alt="Prime Wish">
                         <h4 data-translate="prime_wish_title">Prime Wish</h4>
-                        <p data-translate="prime_wish_desc"style="text-align: justify;">UAE-based food manufacturing & export company.</p>
-                        <a href="Prime_wish.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Prime Wish">Read More</a>
+                        <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Prime Wish">Read More</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="project-box">
-                        <img src="/images/demo/wishholdings.jpeg" class="img-fluid mb-3 rounded" alt="Wish Harbour">
+                        <img src="/images/demo/wishholdings.jpeg" class="img-fluid mb-3 rounded w-100" alt="Wish Harbour">
                         <h4 data-translate="wish_harbour_title">Wish Harbour</h4>
-                        <p data-translate="wish_harbour_desc"style="text-align: justify;">We don't just chase dreams — we hold your wish and turn it into reality.</p>
-                        <a href="Wish_Holdings.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Harbour">Read More</a>
+                        <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
+                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Harbour">Read More</a>
                     </div>
                 </div>
             </div>
@@ -680,7 +691,7 @@ strong[data-translate="history_closing"] {
 </script>
        
  <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
-            <img src="/images\company mem\WhatsApp Image 2025-08-30 at 3.07.38 PM.jpeg" class="jarallax-img" alt="">
+            <img src="/images\highightsImages\ChatGPT Image Aug 30, 2025, 02_53_45 PM.png" class="jarallax-img" alt="">
             <div class="gradient-edge-top"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-8"></div>
@@ -796,11 +807,11 @@ strong[data-translate="history_closing"] {
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="/index.html" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
-                            <li><a href="/about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
-                            <li><a href="/division.html" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                            <li><a href="/countries.html" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Countries</a></li>
-                            <li><a href="/contact.html" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                            <li><a href="#" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                            <li><a href="#" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Projects</a></li>
+                            <li><a href="#" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">

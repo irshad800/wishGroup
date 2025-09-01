@@ -13877,7 +13877,7 @@ header .btn-main {
 .company-logo {
   width: 60px;
   height: 60px;
-  object-fit: contain;
+  object-fit: fill;
   border-radius: 8px;
   border: 1px solid #ddd;
   background: #f9f9f9;
