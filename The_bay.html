@@ -17,6 +17,19 @@
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <style>
+        .lang-switcher .dropdown-menu {
+  background-color: #1a1a1a; /* matches dark scheme */
+  border-color: rgba(255,255,255,0.08);
+}
+.lang-switcher .dropdown-item {
+  color: #fff;
+}
+.lang-switcher .dropdown-item:hover,
+.lang-switcher .dropdown-item:focus,
+.lang-switcher .dropdown-item.active {
+  background-color: rgba(255,255,255,0.08);
+  color: #fff;
+}
         /* Custom Styles */
         .activity-card {
             transition: all 0.3s ease;
@@ -569,10 +582,10 @@ strong[data-translate="history_closing"] {
                     <div class="col-sm-6 col-lg-3 text-center">
                         <img src="images\background\logo.webp" class="w-150px mb-3" alt="Wish Group Logo">
                         <div class="social-icons mt-3">
-                            <a href="#"><i class="fa-brands fa-facebook-f" aria-label="Visit our Facebook page"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram" aria-label="Visit our Instagram page"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter" aria-label="Visit our Twitter page"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
+                            <a href="https://www.facebook.com/share/1B4SSya66E/"><i class="fa-brands fa-facebook-f" aria-label="Visit our Facebook page"></i></a>
+                            <a href="https://www.instagram.com/wishgroupuae?igsh=MWE2eXRpemMzOG9qOA=="><i class="fa-brands fa-instagram" aria-label="Visit our Instagram page"></i></a>
+                            <a href="https://www.linkedin.com/company/wish-group"><i class="fa-brands fa-linkedin-in" aria-label="Visit our Twitter page"></i></a>
+                            <a href="https://www.youtube.com/@wishgroup-d4y"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
@@ -583,11 +596,11 @@ strong[data-translate="history_closing"] {
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
-                            <li><a href="about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
-                            <li><a href="#" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                            <li><a href="#" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Projects</a></li>
-                            <li><a href="#" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
+                             <li><a href="/index.html" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                            <li><a href="/about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                            <li><a href="/division.html" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                            <li><a href="/countries.html" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Countries</a></li>
+                            <li><a href="/contact.html" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
@@ -616,7 +629,7 @@ strong[data-translate="history_closing"] {
         <script src="js/designesia.js"></script>
         <script src="js/countdown-custom.js"></script>
         <script src="js/custom-marquee.js"></script>
-        <script src="js/translations.js"></script>
+       
     </div>
 
 
@@ -1036,5 +1049,84 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('language-switcher').value = savedLang;
     setLanguage(savedLang);
 });</script>
+<script>
+  // Use a single global, avoid "already declared" errors
+  window.translations = window.translations || {
+    /* your big translations object goes here exactly once */
+  };
+
+  // Map simple keys like "home" -> "menu_home"
+  const KEY_MAP_PREFIXES = ["menu_"];
+
+  function resolveKey(lang, key) {
+    const dict = window.translations[lang] || {};
+    if (dict[key]) return key;
+    for (const p of KEY_MAP_PREFIXES) {
+      const k = p + key;
+      if (dict[k]) return k;
+    }
+    return null;
+  }
+
+  function setLanguage(lang) {
+    const dict = window.translations[lang];
+    if (!dict) return console.error(`Language ${lang} not found`);
+
+    // Update all translatable elements
+    document.querySelectorAll("[data-translate]").forEach(el => {
+      const rawKey = el.getAttribute("data-translate");
+      const key = resolveKey(lang, rawKey);
+      if (!key) return;
+
+      const val = dict[key];
+      const tag = el.tagName;
+
+      if (tag === "META") {
+        el.setAttribute("content", val);
+      } else if (tag === "IMG") {
+        el.setAttribute("alt", val);
+      } else if (tag === "TITLE") {
+        el.textContent = val;
+      } else {
+        el.textContent = val; // switch to innerHTML if your strings contain markup
+      }
+    });
+
+    // Update any elements using data-lang-alt (your logos)
+    document.querySelectorAll("[data-lang-alt]").forEach(img => {
+      const key = img.getAttribute("data-lang-alt");
+      const val = dict[key];
+      if (val) img.setAttribute("alt", val);
+    });
+
+    // html lang/dir + simple RTL alignment
+    const rtl = (lang === "ar" || lang === "dv");
+    document.documentElement.lang = lang;
+    document.documentElement.dir = rtl ? "rtl" : "ltr";
+    document.body.style.textAlign = rtl ? "right" : "left";
+
+    // Ensure <title> is set (some browsers are picky)
+    const pageTitle = dict.page_title;
+    if (pageTitle) document.querySelector("title").textContent = pageTitle;
+
+    // Header badge
+    const currentLangEl = document.getElementById("currentLang");
+    if (currentLangEl) currentLangEl.textContent = lang.toUpperCase();
+
+    localStorage.setItem("selectedLanguage", lang);
+  }
+
+  function changeLanguage(lang, ev) {
+    if (ev && ev.preventDefault) ev.preventDefault();
+    setLanguage(lang);
+    return false;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("selectedLanguage") || "en";
+    setLanguage(saved);
+  });
+</script>
+
 </body>
 </html>
