@@ -13991,27 +13991,3 @@ header .btn-main {
         opacity: .9;
     }
 
-    .legacy-glow {
-        position: absolute;
-        filter: blur(70px);
-        opacity: .25;
-        z-index: 0;
-    }
-
-    .legacy-glow-1 {
-        width: 340px;
-        height: 340px;
-        border-radius: 50%;
-        background: radial-gradient(closest-side, #7cc3ff, transparent 70%);
-        top: -80px;
-        left: -60px;
-    }
-
-    .legacy-glow-2 {
-        width: 360px;
-        height: 360px;
-        border-radius: 50%;
-        background: radial-gradient(closest-side, #a58bff, transparent 70%);
-        bottom: -100px;
-        right: -40px;
-    }

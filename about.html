@@ -332,15 +332,15 @@ h2.display-5.fw-bold {
                           <p class="mb-0 fs-6" style="text-align: justify; font-size: 19px !important;" data-translate="vision_description">To create a unified future under <span class="fw-bold text-danger">‘One Capital World’</span> through humanity, sustainability, and inclusive growth.</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="who-pro-card pro-card-modern text-center h-100 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="who-pro-icon mx-auto mb-3 bg-gradient-black">
-                                <i class="fa fa-bullseye"></i>
-                            </div>
-                            <h4 class="mb-2" data-translate="mission"style="font-size: 24px;">MISSION</h4>
-                            <p class="mb-0 fs-6" style="text-align: justify; font-size: 19px !important;"data-translate="mission_description"style="text-align: justify;">We empower people to achieve their dreams through inclusive investments, responsible innovation, and global partnerships  working together to become the world’s number one capital company.</p>
-                        </div>
-                    </div>
+                   <div class="col-md-6">
+    <div class="who-pro-card pro-card-modern text-center h-100 wow fadeInUp" data-wow-delay=".2s">
+        <div class="who-pro-icon mx-auto mb-3 bg-gradient-white">
+            <i class="fa fa-bullseye" style="color: #b30000;"></i>
+        </div>
+        <h4 class="mb-2" data-translate="mission" style="font-size: 24px;">MISSION</h4>
+        <p class="mb-0 fs-6" style="text-align: justify; font-size: 19px !important;" data-translate="mission_description">We empower people to achieve their dreams through inclusive investments, responsible innovation, and global partnerships working together to become the <span class="fw-bold text-danger">world’s number one capital company</span>.</p>
+    </div>
+</div>
                 </div>
                 <!-- Core Values -->
                 <div class="row g-4 justify-content-center mt-4">
@@ -439,6 +439,7 @@ h2.display-5.fw-bold {
         role: "Business Development and Finance",
         img: "images/team/safwan.webp"
     },
+    
     {
         name: "Fasih Khawar",
         role: "Logistics Coordinator",
@@ -452,7 +453,7 @@ h2.display-5.fw-bold {
     {
         name: "Farzan Ali",
         role: "Office Assistant",
-        img: "images/team/ali.webp"
+        img: "images/team2/ali.webp"
     }
 ];
         // Show notification function
@@ -638,21 +639,22 @@ h2.display-5.fw-bold {
             <!-- Team members will be positioned here by JavaScript -->
         </div>
     </div>
-
-    <style>
+<style>
         /* Team container styling */
-        .team-container {
-            position: relative;
-            min-height: 600px;
-            margin: 40px 0;
-        }
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+    gap: 30px; /* space between boxes */
+    justify-items: center; /* center align inside grid */
+    margin: 20px auto;
+    max-width: 1400px; /* optional: limit container width */
+}
         
         /* Team member styling */
-  .team-member {
-    position: absolute;
-    width: 200px;
-    height: 280px;
-    border-radius: 10px;
+   .team-member {
+    width: 300px;   /* adjust size */
+    height: 450px;  /* adjust size */
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease-in-out;
@@ -673,14 +675,14 @@ h2.display-5.fw-bold {
         }
         
         /* Improved image styling for clarity */
-      .member-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    image-rendering: auto;
-    filter: brightness(0.95);
-}
+        .member-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            image-rendering: auto;
+            filter: brightness(0.95);
+        }
         
         .team-member:hover .member-img {
             transform: scale(1.05);
@@ -723,8 +725,8 @@ h2.display-5.fw-bold {
             }
             
             .team-member {
-                width: 150px;
-                height: 210px;
+                width: 180px; /* Adjusted for smaller screens */
+                height: 250px; /* Adjusted for smaller screens */
             }
             
             .member-name {
@@ -742,8 +744,8 @@ h2.display-5.fw-bold {
             }
             
             .team-member {
-                width: 130px;
-                height: 180px;
+                width: 150px; /* Adjusted for even smaller screens */
+                height: 200px; /* Adjusted for even smaller screens */
             }
         }
     </style>
@@ -780,7 +782,7 @@ h2.display-5.fw-bold {
                                 <div class="d-ticket">
                                     <img src="images/team/adib.webp" class="w-80px mb-4" alt="">
                                     <img src="" class="w-20 p-2 abs abs-middle end-0 me-2" alt="">
-                                    <h2 data-translate="ally_2_name">ABU DHABI ISLAMIC BANK</h2>
+                                    <h3 data-translate="ally_2_name">ABU DHABI ISLAMIC BANK</h3>
                                     <h4 class="mb-4" data-translate="ally_2_role">National Bankers</h4>
                                     <div class="fs-14" data-translate="ally_2_location">DUBAI, UAE</div>
                                 </div>
@@ -826,6 +828,11 @@ h2.display-5.fw-bold {
                         <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="our_businesses">OUR BUSINESSES</h2>
                     </div>
                 </div>
+                <style>
+                    .fs-40 {
+  font-size: 50px !important; /* increase from 40px to 70px */
+}
+                </style>
                 <div class="row g-4 gx-5 justify-content-center wow fadeInUp">
                     <div class="col-lg-12">
                         <div class="de-tab plain">
@@ -1111,16 +1118,54 @@ h2.display-5.fw-bold {
                 </div>
             </div>
         </section>
-    <footer class="text-light section-dark pt-5">
+        <style>
+        /* Ensure footer is not overlapped and links are clickable */
+        footer {
+            position: relative;
+            z-index: 1000; /* Prevent overlap by other elements */
+            color: #fff; /* text-light */
+            padding-top: 3rem;
+        }
+        footer a {
+            pointer-events: auto; /* Ensure links are clickable */
+            color: #fff; /* text-light */
+            text-decoration: none; /* Clean link appearance */
+        }
+        footer a:hover {
+            text-decoration: underline; /* Visual feedback on hover */
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem; /* Larger icons for visibility */
+        }
+        .w-150px {
+            width: 150px; /* Custom class for logo width */
+        }
+        /* Ensure responsiveness on mobile */
+        @media (max-width: 576px) {
+            footer {
+                z-index: 2000; /* Higher z-index for mobile */
+            }
+            .social-icons a {
+                font-size: 1.2rem; /* Adjust icon size for mobile */
+            }
+        }
+        /* Justified paragraph styling */
+        .justified-text {
+            text-align: justify;
+            font-size: 19px;
+        }
+    </style>
+        <footer class="text-light section-dark pt-5">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-sm-6 col-lg-3 text-center">
                         <img src="images\background\logo.webp" class="w-150px mb-3" alt="Wish Group Logo">
                         <div class="social-icons mt-3">
-                            <a href="#"><i class="fa-brands fa-facebook-f" aria-label="Visit our Facebook page"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram" aria-label="Visit our Instagram page"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter" aria-label="Visit our Twitter page"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
+                              <a href="https://www.facebook.com/share/1B4SSya66E/"><i class="fa-brands fa-facebook-f" aria-label="Visit our Facebook page"></i></a>
+                            <a href="https://www.instagram.com/wishgroupuae?igsh=MWE2eXRpemMzOG9qOA=="><i class="fa-brands fa-instagram" aria-label="Visit our Instagram page"></i></a>
+                            <a href="https://www.linkedin.com/company/wish-group"><i class="fa-brands fa-linkedin-in" aria-label="Visit our Twitter page"></i></a>
+                            <a href="https://www.youtube.com/@wishgroup-d4y"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
@@ -1131,11 +1176,11 @@ h2.display-5.fw-bold {
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
-                            <li><a href="about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
-                            <li><a href="#" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                            <li><a href="#" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Projects</a></li>
-                            <li><a href="#" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
+                            <li><a href="/index.html" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                            <li><a href="/about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                            <li><a href="/division.html" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                            <li><a href="/countries.html" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Countries</a></li>
+                            <li><a href="/contact.html" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
@@ -1157,7 +1202,6 @@ h2.display-5.fw-bold {
                 </div>
             </div>
         </footer>
-
       <style>
     
 #language-switcher {
@@ -1816,391 +1860,6 @@ h2.display-5.fw-bold {
 
 
 
-<style>
-      
-        
-        .team-section {
-            padding: 80px 0;
-            position: relative;
-            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
-            width: 100%;
-            max-width: 1400px;
-        }
-        
-        .team-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 300% 300%;
-            animation: gradient 8s ease infinite;
-        }
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .team-subtitle {
-            color: #a0a0a0;
-            font-size: 1.2rem;
-            margin-bottom: 60px;
-        }
-        
-        .team-description {
-            max-width: 700px;
-            margin: 0 auto 80px;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #ccc;
-        }
-        
-        .team-container {
-            position: relative;
-            min-height: 600px;
-            width: 100%;
-        }
-        
-        .team-member {
-            position: absolute;
-    width: 200px;
-    height: 280px;
-            perspective: 1000px;
-            z-index: 1;
-            transform-origin: center;
-            opacity: 0;
-        }
-        
-        .member-img-container {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            transform: scale(0.9);
-            transition: all 0.6s ease;
-        }
-        
-        .team-member.center .member-img-container {
-            transform: scale(1.1);
-            box-shadow: 0 20px 40px rgba(78, 205, 196, 0.6), 0 0 60px rgba(78, 205, 196, 0.4);
-        }
-        
-        .member-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    image-rendering: auto;
-    filter: brightness(0.95);
-}
-        
-        .team-member.center .member-img {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-        
-        .member-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-            padding: 20px 15px 15px;
-            color: white;
-            transform: translateY(20px);
-            opacity: 0;
-            transition: all 0.5s ease;
-        }
-        
-        .team-member:hover .member-overlay {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        .member-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        
-        .member-role {
-            color: #4ecdc4;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-        
-        .member-social {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-        
-        .social-icon {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            background: #4ecdc4;
-            transform: translateY(-3px);
-        }
-        
-        .floating-shapes {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-        
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.1;
-        }
-        
-        .shape-1 {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            top: -150px;
-            left: -150px;
-            animation: floatShape 15s ease-in-out infinite;
-        }
-        
-        .shape-2 {
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(45deg, #45b7d1, #96ceb4);
-            bottom: -100px;
-            right: -100px;
-            animation: floatShape 18s ease-in-out infinite reverse;
-        }
-        
-        @keyframes floatShape {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(20px, 30px) rotate(5deg); }
-            50% { transform: translate(0, 60px) rotate(0deg); }
-            75% { transform: translate(-20px, 30px) rotate(-5deg); }
-        }
-        
-        .team-cta {
-            text-align: center;
-            margin-top: 60px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            cursor: pointer;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(78, 205, 196, 0.4);
-        }
-        
-        .cta-button:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: all 0.6s ease;
-            z-index: -1;
-        }
-        
-        .cta-button:hover:before {
-            left: 100%;
-        }
-        
-        .replay-button {
-            display: inline-block;
-            margin-left: 20px;
-            padding: 15px 30px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
-        
-        .replay-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
-        
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        /* Notification toast */
-        .notification {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 15px 25px;
-            background: #4ecdc4;
-            color: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.5s ease;
-            z-index: 1000;
-        }
-        
-        .notification.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 1200px) {
-            .team-member {
-                width: 180px;
-            }
-            
-            .member-img {
-                height: 220px;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .team-title {
-                font-size: 2.8rem;
-            }
-            
-            .team-member {
-                width: 160px;
-            }
-            
-            .member-img {
-                height: 200px;
-            }
-            
-            .button-group {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .replay-button {
-                margin-left: 0;
-                margin-top: 15px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .team-title {
-                font-size: 2.2rem;
-            }
-            
-            .team-subtitle {
-                font-size: 1rem;
-            }
-            
-            .team-description {
-                font-size: 1rem;
-                margin-bottom: 40px;
-            }
-            
-            .team-container {
-                min-height: 500px;
-            }
-            
-            .team-member {
-                width: 140px;
-            }
-            
-            .member-img {
-                height: 170px;
-            }
-            
-            .member-name {
-                font-size: 1rem;
-            }
-            
-            .member-role {
-                font-size: 0.8rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .team-container {
-                min-height: 400px;
-            }
-            
-            .team-member {
-                width: 120px;
-            }
-            
-            .member-img {
-                height: 150px;
-            }
-            
-            .member-overlay {
-                padding: 10px 8px 8px;
-            }
-            
-            .member-name {
-                font-size: 0.9rem;
-            }
-            
-            .member-role {
-                font-size: 0.7rem;
-            }
-            
-            .social-icon {
-                width: 25px;
-                height: 25px;
-                font-size: 0.7rem;
-            }
-            
-            .cta-button, .replay-button {
-                padding: 12px 25px;
-                font-size: 1rem;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
 
 </body>
 </html>

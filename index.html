@@ -514,14 +514,13 @@ strong[data-translate="history_closing"] {
         <div class="me-lg-5 pe-lg-5 py-5 my-5">
           <!-- only this element uses the custom font -->
           <h2 data-translate="wish_group" style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans'">
-            Wish Group
+           &nbsp; Wish Group
           </h2>
 
-         <p data-translate="about_text" style="font-size: 19px;">
-<span style="color:#B30000;">Wish Group</span>, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
-          </p>
-
-          <h3 data-translate="world_map">Wish Group Around the World</h3>
+         <p data-translate="about_text" style="font-size: 19px; text-align: justify;line-height: 1.8;">
+    <span style="color:#B30000; font-size: 25px;">Wish Group</span>, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
+</p>
+         
         </div>
       </div>
 
@@ -571,7 +570,7 @@ strong[data-translate="history_closing"] {
 <section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
     <div class="container">
         <div class="section-header text-center mb-5">
-            <h2 class="display-4 fw-bold mb-3 text-gradient" data-translate="latest_projects">Latest Projects</h2>
+            <h2 class="display-4 fw-bold mb-3 text-gradient" data-translate="latest_projects">LATEST PROJECTS</h2>
             <div class="header-divider mx-auto my-4"></div>
         </div>
        
@@ -598,7 +597,7 @@ strong[data-translate="history_closing"] {
                 <div class="swiper-slide">
                     <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
                         <div class="project-image-container overflow-hidden position-relative">
-                            <img src="/images/demo/wishcaza.webp" class="img-fluid project-image swiper-lazy" alt="Wish Casa" loading="lazy">
+                            <img src="/images/demo/WIshcaza.webp" class="img-fluid project-image swiper-lazy" alt="Wish Casa" loading="lazy">
                             <div class="swiper-lazy-preloader"></div>
                             <div class="project-overlay d-flex align-items-center justify-content-center">
                                 <a href="completedProjects.html" class="btn btn-primary rounded-pill px-4" data-translate="read_more" aria-label="Read more about Wish Casa">View Project</a>
@@ -683,29 +682,38 @@ strong[data-translate="history_closing"] {
     height: 3px;
     background: linear-gradient(90deg, transparent, #fff, transparent);
 }
-.project-box {
+#section-latest-projects .project-box {
     transition: all 0.4s ease;
-    border-radius: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Increased to accommodate larger images */
 }
-.project-box:hover {
+#section-latest-projects .project-box:hover {
     transform: translateY(-10px);
 }
-.project-image-container {
+#section-latest-projects .project-image-container {
     border-radius: 12px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
 }
-.project-image {
+#section-latest-projects .project-image {
     border-radius: 12px;
     transition: all 0.5s ease;
-    height: 30vw;
-    max-height: 300px;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 700px !important; /* Increased max-height */
+    object-fit: cover !important;
+    object-position: center !important;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.project-overlay {
+#section-latest-projects .project-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -716,20 +724,20 @@ strong[data-translate="history_closing"] {
     transition: all 0.4s ease;
     border-radius: 12px;
 }
-.project-image-container:hover .project-overlay {
+#section-latest-projects .project-image-container:hover .project-overlay {
     opacity: 1;
 }
-.project-image-container:hover .project-image {
-    transform: scale(1.05); /* Reduced scale for less distortion */
+#section-latest-projects .project-image-container:hover .project-image {
+    transform: scale(1.05);
 }
-.swiper-lazy-preloader {
+#section-latest-projects .swiper-lazy-preloader {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
 }
-.swiper-pagination {
+#section-latest-projects .swiper-pagination {
     position: relative;
     bottom: 0;
     margin-top: 20px;
@@ -738,7 +746,7 @@ strong[data-translate="history_closing"] {
     justify-content: center;
     align-items: center;
 }
-.swiper-pagination-bullet {
+#section-latest-projects .swiper-pagination-bullet {
     background: rgba(255,255,255,0.5);
     opacity: 1;
     width: 10px;
@@ -746,34 +754,41 @@ strong[data-translate="history_closing"] {
     margin: 0 5px !important;
     transition: all 0.3s ease;
 }
-.swiper-pagination-bullet-active {
+#section-latest-projects .swiper-pagination-bullet-active {
     background: #fff;
     transform: scale(1.3);
 }
-.swiper-button-next, .swiper-button-prev {
+#section-latest-projects .swiper-button-next, 
+#section-latest-projects .swiper-button-prev {
     display: none !important;
 }
 @media (max-width: 991px) {
-    .project-image {
-        height: 25vw;
-        max-height: 250px;
+    #section-latest-projects .project-image {
+        max-height: 650px !important; /* Increased max-height */
     }
-    .swiper-pagination {
+    #section-latest-projects .project-box {
+        width: 100%;
+        max-width: 550px;
+    }
+    #section-latest-projects .swiper-pagination {
         margin-top: 15px;
     }
 }
 @media (max-width: 767px) {
-    .section-header h2 {
+    #section-latest-projects .section-header h2 {
         font-size: 2rem;
     }
-    .project-image {
-        height: 40vw;
-        max-height: 200px;
+    #section-latest-projects .project-image {
+        max-height: 600px !important; /* Increased max-height */
     }
-    .swiper-pagination {
+    #section-latest-projects .project-box {
+        width: 100%;
+        max-width: 500px;
+    }
+    #section-latest-projects .swiper-pagination {
         margin-top: 10px;
     }
-    .swiper-pagination-bullet {
+    #section-latest-projects .swiper-pagination-bullet {
         width: 8px;
         height: 8px;
         margin: 0 4px !important;
@@ -786,7 +801,7 @@ strong[data-translate="history_closing"] {
     document.addEventListener("DOMContentLoaded", function () {
         var swiper = new Swiper(".myProjectSlider", {
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 40, /* Increased to prevent overlap */
             centeredSlides: true,
             loop: true,
             autoplay: {
@@ -806,21 +821,21 @@ strong[data-translate="history_closing"] {
             breakpoints: {
                 640: {
                     slidesPerView: 1,
-                    spaceBetween: 20,
+                    spaceBetween: 30,
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 30,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 3,
                     spaceBetween: 40,
                     centeredSlides: false,
                 },
-                1200: {
-                    slidesPerView: 3,
+                1024: {
+                    slidesPerView: 2,
                     spaceBetween: 50,
+                    centeredSlides: false,
+                },
+                1200: {
+                    slidesPerView: 2,
+                    spaceBetween: 60, /* Increased for larger images */
                     centeredSlides: false,
                 },
             },
@@ -839,16 +854,16 @@ strong[data-translate="history_closing"] {
         <div class="row g-4">
             <div class="col-md-12 wow fadeInUp">
                 <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
-                    <img src="/images/background-remover/wish_group.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/alLincamo.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/roamer.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/oneAppareal.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/wb.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/wish_developers.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/wishcapital.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/wishholdings.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/WOrldCapitalCenter.webp" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
-                    <img src="/images/background-remover/worldinvestment.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/wish_group.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/alLincamo.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/roamer.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/oneAppareal.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wb.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wish_developers.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wishcapital.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wishholdings.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images\background-remover\WhatsApp_Image_2025-09-02_at_3.07.04_PM-removebg-preview (1).png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/worldinvestment.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
                 </div>
             </div>
         </div>
@@ -857,7 +872,7 @@ strong[data-translate="history_closing"] {
 
          <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
     <div class="text-center">
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlight">Product Highlights</h2>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlight">PRODUCT HIGHLIGHTS</h2>
                             </div>
         <div class="container relative z-2">
             
@@ -944,11 +959,11 @@ strong[data-translate="history_closing"] {
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                            <li><a href="index.html" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                             <li><a href="about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
-                            <li><a href="#" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                            <li><a href="#" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Projects</a></li>
-                            <li><a href="#" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
+                            <li><a href="division.html" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                            <li><a href="countries.html" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Countries</a></li>
+                            <li><a href="contact.html" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
@@ -1005,7 +1020,7 @@ strong[data-translate="history_closing"] {
 
 .globe-container {
         width: 100%;
-        height: 400px; /* Adjust height as needed */
+        height: 600px; /* Adjust height as needed */
         background: #000;
         border-radius: 10px;
         position: relative;
