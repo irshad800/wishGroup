@@ -22,72 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <style>
-/* General Swiper styling */
-/* Base styles for project slider */
-.myProjectSlider {
-    padding: 20px 0;
-}
 
-.project-box {
-    padding: 15px;
-    text-align: center;
-    height: 100%;
-}
-
-.project-box img {
-    max-height: 200px;
-    object-fit: cover;
-}
-
-.project-box h4 {
-    font-size: 1.25rem;
-    margin: 10px 0;
-}
-
-.project-box p {
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-.read-more-link {
-    font-size: 0.9rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 991px) {
-    .project-box img {
-        max-height: 150px;
-    }
-    .project-box h4 {
-        font-size: 1.1rem;
-    }
-    .project-box p {
-        font-size: 0.8rem;
-    }
-    .read-more-link {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-    }
-}
-
-@media (max-width: 767px) {
-    .myProjectSlider .swiper-slide {
-        width: 80% !important;
-    }
-    .project-box img {
-        max-height: 120px;
-    }
-    .project-box h4 {
-        font-size: 1rem;
-    }
-    .project-box p {
-        font-size: 0.75rem;
-    }
-    .read-more-link {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-    }
-}
 
 /* Ensure swiper pagination is visible and styled */
 .swiper-pagination {
@@ -578,9 +513,10 @@ strong[data-translate="history_closing"] {
       <div class="col-lg-6">
         <div class="me-lg-5 pe-lg-5 py-5 my-5">
           <!-- only this element uses the custom font -->
-          <h2 data-translate="wish_group" style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans'">
-            Wish Group
-          </h2>
+         <h2 data-translate="wish_group" style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans'">
+  &nbsp;Wish Group
+</h2>
+
 
           <p data-translate="about_text">
             Wish Group, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World,” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
@@ -634,119 +570,292 @@ strong[data-translate="history_closing"] {
         </div>
     </div>
 </section>
-
 <section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
-    <div class="container text-center">
-        <h2 class="mb-4" data-translate="latest_projects">Latest Projects</h2>
-        <div class="swiper myProjectSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images/demo/wishislands.png" class="img-fluid mb-3 rounded w-100" alt="Wish Islands">
-                        <h4 data-translate="wish_islands_title">Wish Islands</h4>
-                        <p data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
-                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Islands">Read More</a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images/demo/WIshcaza.jpeg" class="img-fluid mb-3 rounded w-100" alt="Wish Casa">
-                        <h4 data-translate="wish_casa_title">Wish Casa</h4>
-                        <p data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
-                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Casa">Read More</a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid mb-3 rounded w-100" alt="Prime Wish">
-                        <h4 data-translate="prime_wish_title">Prime Wish</h4>
-                        <p data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
-                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Prime Wish">Read More</a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-box">
-                        <img src="/images/demo/wishholdings.jpeg" class="img-fluid mb-3 rounded w-100" alt="Wish Harbour">
-                        <h4 data-translate="wish_harbour_title">Wish Harbour</h4>
-                        <p data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
-                        <a href="completedProjects.html" class="btn btn-outline-light mt-3 read-more-link" data-translate="read_more" aria-label="Read more about Wish Harbour">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <!-- Add navigation buttons if desired -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-4 fw-bold mb-3 text-gradient" data-translate="latest_projects">Latest Projects</h2>
+            <div class="header-divider mx-auto my-4"></div>
         </div>
-    </div>
-</section>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Include Swiper JS -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var swiper = new Swiper(".myProjectSlider", {
-            slidesPerView: 1, // Default to 1 slide on small screens
-            spaceBetween: 20,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                // When window width is >= 640px
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                // When window width is >= 768px
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                // When window width is >= 1024px
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-            },
-            autoplay: {
-                delay: 3000, // Auto-slide every 3 seconds
-                disableOnInteraction: false,
-            },
-        });
-    });
-</script>
        
- <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
-            <img src="/images\highightsImages\ChatGPT Image Aug 30, 2025, 02_53_45 PM.png" class="jarallax-img" alt="">
-            <div class="gradient-edge-top"></div>
-            <div class="gradient-edge-bottom"></div>
-            <div class="sw-overlay op-8"></div>
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-12 wow fadeInUp">
-                        <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
-                            <!-- <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.49.44 PM.webp" class="w-100 px-4" alt=""> -->
-                            <!-- <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.54.21 PM.webp" class="w-100 px-4" alt=""> -->
-                            <img src="/images\background-remover\WhatsApp Image 2025-08-19 at 4.56.46 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 3.58.50 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.01.48 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.04.48 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.05.32 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images\wishgroup\wishhooo.png" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.27.23 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.28.57 PM.webp" class="w-100 px-4" alt="">
-                             <img src="/images/background-remover/WhatsApp Image 2025-08-19 at 4.31.09 PM.webp" class="w-100 px-4" alt="">
-                            <img src="/images\background-remover\WhatsApp Image 2025-08-19 at 4.47.58 PM.webp" class="w-100 px-4" alt="">
+        <div class="swiper myProjectSlider position-relative">
+            <div class="swiper-wrapper">
+                <!-- Project 1 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/demo/wishislands.webp" class="img-fluid project-image swiper-lazy" alt="Wish Islands" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="completedProjects.html" class="btn btn-primary rounded-pill px-4" data-translate="read_more" aria-label="Read more about Wish Islands">View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="wish_islands_title">Wish Islands</h4>
+                            <p class="card-text text-muted mb-4" data-translate="wish_island_desc">Luxury, tranquility & natural beauty in the Maldives.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Project 2 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/demo/wishcaza.webp" class="img-fluid project-image swiper-lazy" alt="Wish Casa" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="completedProjects.html" class="btn btn-primary rounded-pill px-4" data-translate="read_more" aria-label="Read more about Wish Casa">View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="wish_casa_title">Wish Casa</h4>
+                            <p class="card-text text-muted mb-4" data-translate="wish_casa_desc">Premium biscuits & juices with global standards.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Project 3 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid project-image swiper-lazy" alt="Prime Wish" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="completedProjects.html" class="btn btn-primary rounded-pill px-4" data-translate="read_more" aria-label="Read more about Prime Wish">View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="prime_wish_title">Prime Wish</h4>
+                            <p class="card-text text-muted mb-4" data-translate="prime_wish_desc">UAE-based food manufacturing & export company.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Project 4 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/demo/wishholdings.webp" class="img-fluid project-image swiper-lazy" alt="Wish Harbour" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="completedProjects.html" class="btn btn-primary rounded-pill px-4" data-translate="read_more" aria-label="Read more about Wish Harbour">View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="wish_harbour_title">Wish Harbour</h4>
+                            <p class="card-text text-muted mb-4" data-translate="wish_harbour_desc">We don't just chase dreams — we hold your wish and turn it into reality.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-     
+           
+            <!-- Single pagination container below the slider -->
+            <div class="swiper-pagination mt-4 position-relative"></div>
+        </div>
+       
+        <div class="text-center mt-5">
+            <a href="completedProjects.html" class="btn btn-outline-light btn-lg rounded-pill px-5">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Custom styles for enhanced project section */
+#section-latest-projects {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+#section-latest-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+}
+.section-header .text-gradient {
+    background: linear-gradient(45deg, #fff, #a5a5a5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+}
+.project-box {
+    transition: all 0.4s ease;
+    border-radius: 15px;
+}
+.project-box:hover {
+    transform: translateY(-10px);
+}
+.project-image-container {
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+.project-image {
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    height: 30vw;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+.project-image-container:hover .project-overlay {
+    opacity: 1;
+}
+.project-image-container:hover .project-image {
+    transform: scale(1.05); /* Reduced scale for less distortion */
+}
+.swiper-lazy-preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.swiper-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-pagination-bullet {
+    background: rgba(255,255,255,0.5);
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px !important;
+    transition: all 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+    background: #fff;
+    transform: scale(1.3);
+}
+.swiper-button-next, .swiper-button-prev {
+    display: none !important;
+}
+@media (max-width: 991px) {
+    .project-image {
+        height: 25vw;
+        max-height: 250px;
+    }
+    .swiper-pagination {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    .project-image {
+        height: 40vw;
+        max-height: 200px;
+    }
+    .swiper-pagination {
+        margin-top: 10px;
+    }
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px !important;
+    }
+}
+</style>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".myProjectSlider", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 2,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                    centeredSlides: false,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                    centeredSlides: false,
+                },
+            },
+            effect: 'slide',
+            speed: 800,
+        });
+    });
+</script>
+       
+        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
+    <img src="/images\highightsImages\image.png" class="jarallax-img" alt="">
+    <div class="gradient-edge-top"></div>
+    <div class="gradient-edge-bottom"></div>
+    <div class="sw-overlay op-8"></div>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-12 wow fadeInUp">
+                <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
+                    <img src="/images/background-remover/wish_group.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/alLincamo.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/roamer.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/oneAppareal.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/wb.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/wish_developers.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/wishcapital.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/wishholdings.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/WOrldCapitalCenter.webp" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                    <img src="/images/background-remover/worldinvestment.png" class="px-4" style="width: 130px; height: 130px; object-fit: contain;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
          <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
     <div class="text-center">

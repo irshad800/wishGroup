@@ -7072,7 +7072,13 @@ footer .tiny-border span {
   position: relative;
   z-index: 1;
 }
-
+/* Uniform logo size for carousel */
+.logo-uniform {
+    width: 200px;
+    height: 200px;
+    object-fit: contain; /* Ensures logos scale proportionally without cropping */
+    display: block; /* Removes any unwanted spacing */
+}
 .de-step-s1 .d-number {
   font-size: 14px;
   text-transform: uppercase;

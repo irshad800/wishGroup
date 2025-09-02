@@ -222,6 +222,8 @@ h2.display-5.fw-bold {
     font-family: 'Montserrat', sans-serif;
 }
 </style>
+
+
 <body class="dark-scheme">
     <div id="wrapper">
         <div class="float-text show-on-scroll">
@@ -391,7 +393,7 @@ h2.display-5.fw-bold {
         const viewTeamButton = document.getElementById('viewTeamButton');
         const notification = document.getElementById('notification');
         
-        const teamMembers = [
+     const teamMembers = [
     {
         name: "Aman Fatima",
         role: "Secretary - Prime wish ",
@@ -443,18 +445,16 @@ h2.display-5.fw-bold {
         img: "images/team/fasi.webp"
     },
     {
-        name: "Havindu Wickramarathne",   // ✅ new
+        name: "Havindu Wickramarathne",
         role: "Project Manager",
         img: "images/team/havindhu.webp"
     },
     {
-        name: "Farzan Ali",   // ✅ new
+        name: "Farzan Ali",
         role: "Office Assistant",
         img: "images/team/ali.webp"
     }
-        ];
-        
-
+];
         // Show notification function
         function showNotification(message) {
             notification.textContent = message;
@@ -614,7 +614,8 @@ h2.display-5.fw-bold {
 
 
 
- <section id="section-speakers" class="bg-dark section-dark text-light">    <div class="floating-shapes">
+<section id="section-speakers" class="bg-dark section-dark text-light">
+    <div class="floating-shapes">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
     </div>
@@ -622,8 +623,8 @@ h2.display-5.fw-bold {
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 >Meet Our Visionaries</h1>
-                <p class="team-description"style="text-align: justify;">
+                <h1>Meet Our Visionaries</h1>
+                <p class="team-description" style="text-align: justify;">
                     Our diverse team of innovators and strategists work together to transform ideas into reality. 
                     With expertise across multiple disciplines, we're united by our passion for excellence and innovation.
                 </p>
@@ -634,6 +635,115 @@ h2.display-5.fw-bold {
             <!-- Team members will be positioned here by JavaScript -->
         </div>
     </div>
+
+    <style>
+        /* Team container styling */
+        .team-container {
+            position: relative;
+            min-height: 600px;
+            margin: 40px 0;
+        }
+        
+        /* Team member styling */
+        .team-member {
+    position: absolute;
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+        
+        .team-member.center {
+            z-index: 10;
+            transform: scale(1.1);
+        }
+        
+        .member-img-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Improved image styling for clarity */
+        .member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    image-rendering: auto;
+    filter: brightness(0.95);
+}
+        
+        .team-member:hover .member-img {
+            transform: scale(1.05);
+        }
+        
+        .member-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 20px 15px 15px;
+            color: white;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover .member-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .member-name {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .member-role {
+            font-size: 12px;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* Ensure responsiveness for smaller screens */
+        @media (max-width: 768px) {
+            .team-container {
+                min-height: 500px;
+            }
+            
+            .team-member {
+                width: 150px;
+                height: 210px;
+            }
+            
+            .member-name {
+                font-size: 14px;
+            }
+            
+            .member-role {
+                font-size: 11px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .team-container {
+                min-height: 400px;
+            }
+            
+            .team-member {
+                width: 130px;
+                height: 180px;
+            }
+        }
+    </style>
 </section>
         <section id="section-tickets" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
             <img src="images/background/bfFullAllience.webp" class="jarallax-img" alt="">
@@ -1719,6 +1829,8 @@ h2.display-5.fw-bold {
         investment_and_finance: "އިންވެސްޓްމަންޓް އަދި ފަޔިނޭންސް",
         investment_and_finance_description: "ފަޔިނޭންސިއަލް އިންވެސްޓްމަންޓްތަކާއި އެކަށަވަރު ގުޅިފައިވާ ޚިދުމަތްތަކަށް ބަލައި، ސް"}
     }
+
+    
         </script>
 
 
@@ -1783,9 +1895,9 @@ h2.display-5.fw-bold {
         
         .team-member {
             position: absolute;
-            width: 200px;
+    width: 200px;
+    height: 280px;
             perspective: 1000px;
-            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
             z-index: 1;
             transform-origin: center;
             opacity: 0;
@@ -1806,12 +1918,13 @@ h2.display-5.fw-bold {
         }
         
         .member-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: all 0.8s ease;
-            filter: grayscale(30%);
-        }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    image-rendering: auto;
+    filter: brightness(0.95);
+}
         
         .team-member.center .member-img {
             filter: grayscale(0%);
