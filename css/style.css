@@ -13943,7 +13943,7 @@ header .btn-main {
         width: 120px;
         height: 3px;
         border-radius: 999px;
-        background: linear-gradient(90deg, #7cc3ff, #a58bff, #ffd38b);
+        background: linear-gradient(90deg, #000, #B30000, #B30000);
     }
 
     .glass {
