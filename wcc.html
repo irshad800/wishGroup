@@ -380,20 +380,17 @@ strong[data-translate="history_closing"] {
                             </div>
 
                             <div class="de-flex-col">
-                                <div class="lang-switcher">
-                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
-                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
-                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
-                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
-                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
-                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
-                                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
-                                    </ul>
-                                </div>
-                                <div class="menu_side_area">
-                                    <span id="menu-btn"></span>
-                                </div>
-                            </div>
+    <select id="language-switcher" onchange="setLanguage(this.value)">
+        <option value="en" selected>EN</option>
+        <option value="ar">AR</option>
+        <option value="fr">FR</option>
+        <option value="si">SI</option>
+        <option value="dv">DV</option>
+    </select>
+    <div class="menu_side_area">
+        <span id="menu-btn"></span>
+    </div>
+</div>  
                         </div>
                     </div>
                 </div>
@@ -431,7 +428,7 @@ strong[data-translate="history_closing"] {
                     <div class="col-lg-10">
                         <!-- Company Introduction -->
                         <div class="intro-section mb-5 text-center">
-                            <h2 class="fs-36 mb-3" data-translate="intro_title">World Capital Centre Limited</h2>
+                            <h2 class="fs-36 mb-3" data-translate="intro_title">Al Aman World Capital Centre PVT LTD</h2>
                             <p class="lead fs-20" data-translate="intro_description"style="font-size: 19px;">A diversified group with an international network, specializing in investments, projects, and trading on a global platform</p>
                         </div>
 
@@ -697,11 +694,11 @@ strong[data-translate="history_closing"] {
         menu_news: "News",
         menu_contact: "Contact",
         logo_alt: "Wish Group Logo",
-        hero_title: "WORLD CAPITAL CENTER PVT LTD",
+        hero_title: "Al Aman World Capital Centre PVT LTD",
         hero_description: "Asia's tallest tower in the heart of Sri Lanka",
         hero_label: "$2.5B Project",
-        hero_alt: "World Capital Centre Background",
-        intro_title: "World Capital Centre PVT LTD",
+        hero_alt: "Al Aman World Capital Centre PVT LTD",
+        intro_title: "Al Aman World Capital Centre PVT LTD",
         intro_description: "A diversified group with an international network, specializing in investments, projects, and trading on a global platform",
         vision_title: "Our Vision",
         vision_description: "To create a world capital market inspired through humanity, transforming Colombo into a global destination with iconic architecture and sustainable development.",
