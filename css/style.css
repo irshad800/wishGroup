@@ -12038,6 +12038,44 @@ img {
     min-width: 95%;
   }
 }
+@media only screen and (max-width: 1199px) {
+  #mainmenu > ul {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #mainmenu li ul {
+    display: none !important;  /* Hide submenus initially */
+    position: relative;
+    width: 100%;
+    left: 0;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  #mainmenu li ul.open {
+    display: block !important;  /* Show when toggled */
+  }
+
+  #mainmenu li.has-child > a:after {
+    content: "\f078";  /* Font Awesome down chevron (closed) – ensure Font Awesome is loaded */
+    font-family: "Font Awesome 6 Free";
+    float: right;
+    margin-left: 10px;
+  }
+
+  #mainmenu li.has-child.open > a:after {
+    content: "\f077";  /* Up chevron (open) */
+  }
+}
 
 /* -------------------------------------------------- 
     design for 768px

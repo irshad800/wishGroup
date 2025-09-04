@@ -22,7 +22,77 @@
     <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <style>
-/* Existing RTL styles */
+        .mobile-lang-switcher {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .mobile-lang-switcher {
+        display: block;
+        position: fixed;
+        left: 150px;
+        top: 15px;
+right: 60px; /* Increased right margin to make space for menu button */        z-index: 1001;
+    }
+    .header {
+        position: relative;
+        z-index: 1000;
+    }
+    #section-hero .abs {
+        z-index: 900;
+    }
+    .desktop-lang-switcher {
+        display: none;
+    }
+    .mobile-lang-btn {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.3s ease;
+    }
+    .mobile-lang-btn:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+    .mobile-lang-switcher .dropdown-menu {
+        min-width: 80px;
+        background-color: #1a1a1a;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        margin-top: 5px;
+        right: 0;
+        left: auto;
+    }
+    .mobile-lang-switcher .dropdown-menu a {
+        color: #fff;
+        padding: 8px 15px;
+        text-align: center;
+        font-size: 13px;
+    }
+    .mobile-lang-switcher .dropdown-menu a:hover {
+        background-color: #333;
+    }
+}
+
+@media (max-width: 576px) {
+    .mobile-lang-switcher {
+        top: 10px;
+        right: 10px;
+    }
+    .mobile-lang-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .mobile-lang-switcher .dropdown-menu {
+        min-width: 70px;
+    }
+}
+
+/* RTL Styles */
 .rtl .row {
     flex-direction: row-reverse;
 }
@@ -32,303 +102,241 @@
 .rtl .col-lg-6:last-child {
     order: 1;
 }
-
-/* Additional RTL adjustments */
 .rtl .ms-80px {
     margin-left: 0;
-    margin-right: 80px; /* Mirror the margin for RTL */
+    margin-right: 80px;
 }
-
 .rtl .abs {
     left: auto;
-    right: 0; /* Move absolute icons to the right */
+    right: 0;
 }
-
 .rtl [data-lang-key] {
-    text-align: right; /* Ensure text aligns right in RTL */
+    text-align: right;
 }
-
 .rtl .form-underline {
-    text-align: right; /* Align form inputs to the right */
+    text-align: right;
 }
-
 .rtl .btn-main {
-    text-align: right; /* Align buttons to the right */
+    text-align: right;
 }
-
 .rtl #headOfficeMap {
-    direction: ltr; /* Keep map LTR to avoid coordinate issues */
+    direction: ltr;
+}
+.rtl .leaflet-popup-content {
+    text-align: right;
+    font-family: 'Noto Sans Thaana', sans-serif; /* For Dhivehi */
+}
+html[lang="ar"] .leaflet-popup-content {
+    font-family: 'Noto Sans', sans-serif; /* For Arabic */
 }
 
-/* Adjust footer columns for RTL */
-.rtl .col-sm-6.col-lg-3 {
-    text-align: right !important;
+/* Location Text Specific RTL */
+.rtl .headquarters-address,
+.rtl .footer-address,
+.rtl .ms-80px span[data-lang-key="headquarters_address"] {
+    text-align: right;
+    direction: rtl;
 }
-        #headOfficeMap {
-            height: 400px;
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
+
+/* Desktop Language Switcher */
+.lang-switcher .btn-main {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+.lang-switcher .dropdown-menu {
+    min-width: 80px;
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+.lang-switcher .dropdown-menu a {
+    color: #fff;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 13px;
+}
+.lang-switcher .dropdown-menu a:hover {
+    background-color: #333;
+}
+
+/* Map Styling */
+#headOfficeMap {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+        
         .gallery-item {
             margin-bottom: 30px;
             overflow: hidden;
             border-radius: 8px;
         }
+        
         .gallery-item img {
             transition: transform 0.3s ease;
             width: 100%;
             height: 250px;
             object-fit: cover;
         }
+        
         .gallery-item:hover img {
             transform: scale(1.05);
         }
+        
         #success_message, #error_message {
             display: none;
             margin-top: 20px;
             padding: 15px;
             border-radius: 5px;
         }
+        
         #success_message {
             background-color: #28a745;
             color: white;
         }
+        
         #error_message {
             background-color: #dc3545;
             color: white;
         }
+        
         .lang-switcher {
             position: relative;
             display: inline-block;
         }
+        
         .lang-switcher .btn-main {
             padding: 8px 15px;
             font-size: 14px;
         }
+        
         .lang-switcher .dropdown-menu {
             min-width: 60px;
             background-color: #1a1a1a;
             border: none;
             border-radius: 4px;
         }
+        
         .lang-switcher .dropdown-menu a {
             color: #fff;
             padding: 8px 15px;
             text-align: center;
         }
+        
         .lang-switcher .dropdown-menu a:hover {
             background-color: #333;
         }
+        
         /* Font styles for multilingual support */
         body {
             font-family: 'Noto Sans', sans-serif;
         }
+        
         html[lang="si"] body {
             font-family: 'Noto Sans Sinhala', sans-serif;
         }
+        
         html[lang="dv"] body {
             font-family: 'Noto Sans Thaana', sans-serif;
         }
 
-           /* Existing styles remain unchanged */
-   
+        /* Font face declarations */
+        @font-face {
+            font-family: 'Ashford Bold';
+            src: url('fonts/Marne╠ü.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .subtitle {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        @font-face {
+            font-family: 'Marne';
+            src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'Marne', sans-serif;
+        }
+
+        h2 {
+            font-family: 'Marne', sans-serif;
+        }
+
+        h3 {
+            font-family: 'Marne', sans-serif;
+        }
+
+        h4 {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        h5 {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .fs-14 {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+        
+        .mb-0 {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .team-subtitle {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .team-title {
+            font-family: 'Ashford Bold', sans-serif;
+        }
+
+        .team-description {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .subtitle.s2 {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .fs-15 {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        p {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .legacy-label {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .global_presence {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .our_history {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .accordion-section-title {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        .accordion-section-content {
+            font-family: 'Ashford Bold', sans-serif;
+        } 
+
+        strong[data-translate="history_closing"] {
+            font-family: 'Ashford Bold', sans-serif;
+            font-size: 15px; /* Optional, if you intended fs-15 */
+        }
     </style>
-    <style>
-     @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.subtitle {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h1 {
-  font-family: 'Marne', sans-serif;
-}
-    @font-face {
-  font-family: 'Marne';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-h2 {
-  font-family: 'Marne', sans-serif;
-}
- @font-face {
-  font-family: 'Marne';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-h4 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h5 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h3 {
-  font-family: 'Marne', sans-serif;
-}
- @font-face {
-  font-family: 'Marne';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.fs-14 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-.mb-0 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.team-subtitle {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.team-title{
-  font-family: 'Ashford Bold', sans-serif;
-}
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.team-description{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.subtitle.s2{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.fs-15{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-p{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.legacy-label{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.global_presence{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.our_history{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.accordion-section-title{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.accordion-section-content{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-strong[data-translate="history_closing"] {
-  font-family: 'Ashford Bold', sans-serif;
-  font-size: 15px; /* Optional, if you intended fs-15 */
-}
-</style>
 </head>
 
 <body class="dark-scheme">
@@ -345,6 +353,21 @@ strong[data-translate="history_closing"] {
         <!-- page preloader close -->
 
         <header class="transparent">
+            <!-- Mobile language switcher (visible on small screens) -->
+            <div class="mobile-lang-switcher">
+                <a class="mobile-lang-btn dropdown-toggle" href="#" id="mobileLangDropdown" 
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="mobileCurrentLang">EN</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="mobileLangDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">FR</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('si')">SI</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('dv')">DV</a></li>
+                </ul>
+            </div>
+            
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -381,15 +404,14 @@ strong[data-translate="history_closing"] {
                                         <li><a class="menu-item " href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
                                         <li>
                                             <a class="menu-item active" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
-                                          
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
+                            <div class="de-flex-col desktop-lang-switcher">
                                 <div class="lang-switcher">
-                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
+                                    <a class="btn-main fx-slade w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
                                     <ul class="dropdown-menu" aria-labelledby="langDropdown">
                                         <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
                                         <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">AR</a></li>
@@ -424,7 +446,7 @@ strong[data-translate="history_closing"] {
                         </div>
 
                        <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
-  <p class="mb-0" data-lang-key="contact_us_description"style="text-align: justify;font-size: 19px;">Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.</p>
+  <p class="mb-0" data-lang-key="contact_us_description" style="text-align: justify;font-size: 19px;">Get in touch with Wish Group. We're here to answer your questions and discuss how we can work together.</p>
 </div>
                     </div>
                 </div>
@@ -436,9 +458,9 @@ strong[data-translate="history_closing"] {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <div class="subtitle" data-lang-key="our_location"style="font-size: 24px;">Our Location</div>
+                        <div class="subtitle" data-lang-key="our_location" style="font-size: 24px;">Our Location</div>
                         <h2 class="wow fadeInUp" data-lang-key="headquarters_title">WISH GROUP HEADQUARTERS</h2>
-                        <p class="mb-4" data-lang-key="headquarters_address"style="font-size: 19px;">Business Bay, Dubai, United Arab Emirates</p>
+                        <p class="mb-4" data-lang-key="headquarters_address" style="font-size: 19px;">Business Bay, Dubai, United Arab Emirates</p>
                     </div>
                 </div>
                 <div class="row">
@@ -449,44 +471,14 @@ strong[data-translate="history_closing"] {
             </div>
         </section>
 
-        <!-- Head Office Gallery Section -->
-        <!-- <section class="section-dark relative pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="subtitle" data-lang-key="our_workplace">Our Workplace</div>
-                        <h2 class="wow fadeInUp" data-lang-key="gallery_title">Head Office Gallery</h2>
-                        <p class="mb-5" data-lang-key="gallery_description">Take a look at our professional work environment</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="gallery-item">
-                            <img src="images\headofficeGallery\DSC02615.webp" alt="Front View of Head Office" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item">
-                            <img src="images\headofficeGallery\DSC02612.webp" alt="Office Reception" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item">
-                            <img src="images\headofficeGallery\DSC02598.webp" alt="Board Room or Workspace Area" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <!-- Enquiry Form Section -->
         <section class="section-dark relative pt-5 pb-5">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6">
-                        <div class="subtitle" data-lang-key="get_in_touch"style="font-size: 24px;">Get In Touch</div>
+                        <div class="subtitle" data-lang-key="get_in_touch" style="font-size: 24px;">Get In Touch</div>
                         <h2 class="wow fadeInUp" data-lang-key="enquiry_title">WE'D LOVE TO HEAR FROM YOU</h2>
-                        <p data-lang-key="enquiry_description"style="font-size: 19px;">Submit your inquiry and our team will get back to you shortly.</p>
+                        <p data-lang-key="enquiry_description" style="font-size: 19px;">Submit your inquiry and our team will get back to you shortly.</p>
 
                         <div class="spacer-single"></div>
 
@@ -496,13 +488,13 @@ strong[data-translate="history_closing"] {
                                     <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-location-pin"></i>
                                     <div class="ms-80px">
                                         <h4 class="mb-0" data-lang-key="head_office_location">Head Office Location</h4>
-                                        <span data-lang-key="headquarters_address"style="font-size: 19px;">Business Bay, Dubai, United Arab Emirates</span>
+                                        <span data-lang-key="headquarters_address" style="font-size: 19px;">Business Bay, Dubai, United Arab Emirates</span>
                                     </div>
                                 </div>
 
                                 <div class="relative mb-4">
                                     <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-envelope"></i>
-                                    <div class="ms-80px"style="font-size: 19px;">
+                                    <div class="ms-80px" style="font-size: 19px;">
                                         <h4 class="mb-0" data-lang-key="email_us">Email Us</h4>
                                         info@wishgroup.ae<br>
                                         info@wishgroup.world
@@ -511,7 +503,7 @@ strong[data-translate="history_closing"] {
 
                                 <div class="relative mb-4">
                                     <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-phone"></i>
-                                    <div class="ms-80px"style="font-size: 19px;">
+                                    <div class="ms-80px" style="font-size: 19px;">
                                         <h4 class="mb-0" data-lang-key="call_us">Call Us</h4>
                                         +971 4259 7167<br>
                                         +971 4259 4795
@@ -582,7 +574,6 @@ strong[data-translate="history_closing"] {
 <a href="#"><i class="fa-brands fa-twitter" aria-label="Visit our Twitter page"></i></a>
 <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
 <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in" aria-label="Visit our LinkedIn page"></i></a>
-
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
@@ -590,7 +581,6 @@ strong[data-translate="history_closing"] {
                         <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
                         <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
                         <p>P.O.BOX: 417425</p>
-                       
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
@@ -605,9 +595,7 @@ strong[data-translate="history_closing"] {
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="contact_us">Contact Us</h3>
                         <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167 , +971 4259 4795</a></p>
-                        
-                      <p class="mb-1">M. <a href="tel:+971508009426" class="text-light">+971 508009426</a></p>
-
+                        <p class="mb-1">M. <a href="tel:+971508009426" class="text-light">+971 508009426</a></p>
                         <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
                         <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
                     </div>
@@ -629,6 +617,8 @@ strong[data-translate="history_closing"] {
     <script src="js/designesia.js"></script>
     <!-- Leaflet JS for map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
     <script>	  
         // Translations object
         const translations = {
@@ -939,5 +929,5 @@ try {
   });
 });
     </script>
-</body>
+    </body>
 </html>

@@ -246,7 +246,7 @@ strong[data-translate="history_closing"] {
                                         <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                                         <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
                                         <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item active" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                        <li><a class="menu-item" href="projects.html" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
                                           <ul>
                                                <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
     <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
@@ -965,44 +965,35 @@ strong[data-translate="history_closing"] {
     footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
 }}
 // Function to change language
-function setLanguage(lang) { // Changed function name to match onchange attribute
-    // Update text content and alt attributes
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
+
+    </script>
+      <script>function setLanguage(lang) {
+    if (!translations[lang]) {
+        console.error(`Language ${lang} not found in translations`);
+        return;
+    }
+
+    document.body.setAttribute('lang', lang);
+    if (lang === 'ar') {
+        document.body.classList.add('rtl');
+    } else {
+        document.body.classList.remove('rtl');
+    }
+
+    // Handle both data-translate and data-lang-key
+    const elements = document.querySelectorAll('[data-translate], [data-lang-key]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate') || element.getAttribute('data-lang-key');
         if (translations[lang][key]) {
-            if (element.tagName === 'IMG') {
-                element.alt = translations[lang][key];
-            } else if (element.tagName === 'TITLE') {
-                element.textContent = translations[lang][key];
+            if (element.innerHTML.includes('<span')) {
+                element.innerHTML = translations[lang][key];
             } else {
                 element.textContent = translations[lang][key];
             }
+        } else {
+            console.warn(`Translation key ${key} not found for language ${lang}`);
         }
     });
-
-    // Update HTML lang and direction
-    document.querySelector('html').lang = lang;
-    if (lang === 'ar' || lang === 'dv') {
-        document.querySelector('html').dir = 'rtl';
-        document.querySelector('body').style.textAlign = 'right';
-    } else {
-        document.querySelector('html').dir = 'ltr';
-        document.querySelector('body').style.textAlign = 'left';
-    }
-
-    // Update page title
-    document.querySelector('title').textContent = translations[lang].page_title;
-
-    // Save selected language to localStorage
-    localStorage.setItem('selectedLanguage', lang);
-}
-
-// Initialize language on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    document.getElementById('language-switcher').value = savedLang; // Set dropdown to saved language
-    setLanguage(savedLang); // Call the renamed function
-});
-    </script>
+}</script>
 </body>
 </html>
