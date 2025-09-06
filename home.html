@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title data-translate="wish_group">Wish Group</title>
+    <link rel="icon" href="images/background/logo.webp" type="image/png" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIvent">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <!-- Globe dependencies -->
+    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+
+
+/* Ensure swiper pagination is visible and styled */
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #b30000;
+}                                                                                                                                                                                                              
+
+#section-why-attend .container {
+    text-align: center;
+    overflow: hidden; /* Prevent slides from spilling outside */
+}
+
+
+
+
+
+.project-box {
+    text-align: center;
+    margin: 0 auto; /* Center each card */
+    max-width: 100%; /* Ensure card fits within slide */
+    padding: 20px; /* Match original padding */
+    background-color: #222; /* Preserve original design */
+    border-radius: 10px; /* Preserve original design */
+    height: 100%;
+    color: #fff;
+}
+
+/* Ensure Swiper slides adapt to page direction */
+.swiper {
+    width: 100%;
+    max-width: 1200px; /* Match the total width of all cards */
+    margin: 0 auto; /* Center the slider */
+}
+
+.swiper-slide {
+    display: inline-block;
+    vertical-align: top; /* Align slides at the top */
+    width: 25%; /* Ensure each slide takes equal space (4 cards) */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 10px; /* Match original spacing */
+}
+
+/* Preserve globe and its children in LTR layout */
+#business-globe,
+#business-globe * {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Ensure markers stack on top of the canvas */
+#business-globe canvas {
+        position: relative;
+        z-index: 1;
+    }
+/* Adjust marquee to respect direction */
+#section-marquee {
+    direction: inherit; /* Inherit from parent (html dir) */
+    text-align: inherit; /* Inherit text alignment */
+}
+#section-marquee .d-flex {
+    flex-direction: row; /* Default to row, will reverse in RTL */
+}
+[dir="rtl"] #section-marquee .d-flex {
+    flex-direction: row-reverse; /* Reverse for RTL */
+}
+
+/* Ensure language dropdown aligns correctly */
+.language-dropdown {
+    right: 0;
+}
+[dir="rtl"] .language-dropdown {
+    right: auto;
+    left: 0;
+}
+
+.fs-120 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'marquez';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fs-60 {
+  font-family: 'marquez', sans-serif;
+}
+
+     @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.subtitle {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Marne', sans-serif;
+}
+    @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h4 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h5 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h3 {
+  font-family: 'Marne', sans-serif;
+}
+ @font-face {
+  font-family: 'Marne';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fs-14 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+.mb-0 {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-subtitle {
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-title{
+  font-family: 'Ashford Bold', sans-serif;
+}
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-description{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+  @font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.subtitle.s2{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fs-15{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+p{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.legacy-label{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.global_presence{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.our_history{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/Marne╠ü.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.accordion-section-title{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.accordion-section-content{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+strong[data-translate="history_closing"] {
+  font-family: 'Ashford Bold', sans-serif;
+  font-size: 15px; /* Optional, if you intended fs-15 */
+}
+@font-face {
+  font-family: 'Ashford Bold';
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.project-box h4{
+  font-family: 'Ashford Bold', sans-serif;
+} 
+/* keep the globe and every child in LTR layout even when the page is RTL */
+#business-globe,
+    #business-globe * {
+        direction: ltr !important;
+        text-align: left !important;
+    }
+
+/* make sure the markers always stack on top of the canvas in every dir mode */
+#business-globe canvas {
+  position: relative;
+  z-index: 1;
+}
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('fonts/ashford-bold-italic.otf') format('woff');
+     font-weight: bold;
+  font-style: normal;
+  }
+
+  h1 {
+    font-family: 'YourCustomFont', sans-serif;
+    font-size: 80px;
+  }
+</style>
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- Page preloader -->
+        <div id="de-loader"></div>
+
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <!-- Logo -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="images\background\logo.webp" alt="Wish Group Logo" width="200" height="auto">
+                                        <img class="logo-scroll" src="images\background\logo.webp" alt="Wish Group Logo" width="200" height="auto">
+                                        <img class="logo-mobile" src="images\background\logo.webp" alt="Wish Group Logo" width="160" height="auto">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="de-flex-col">
+                                <div class="de-flex-col header-col-mid">
+                                    <ul id="mainmenu">
+                                        <li><a class="menu-item active" href="index.html" href="#section-hero" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                                        <li><a class="menu-item" href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                                        <li><a class="menu-item" href="projects.html" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                          <ul>
+<li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
+<li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
+<li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
+<li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
+                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
+                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
+                                        <li><a class="menu-item" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
+                                        <li>
+                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Language Selector -->
+                            <div class="de-flex-col">
+                                <div class="language-selector">
+                                    <button class="btn-main fx-slide w-100" id="language-toggle" aria-label="Toggle language selection">
+                                        <span>EN</span>
+                                        <i class="fa fa-chevron-down ms-2"></i>
+                                    </button>
+                                    <div class="language-dropdown">
+                                        <a href="#" data-lang="en" aria-label="Select English">English (EN)</a>
+                                        <a href="#" data-lang="ar" aria-label="Select Arabic">العربية (AR)</a>
+                                        <a href="#" data-lang="fr" aria-label="Select French">Français (FR)</a>
+                                        <a href="#" data-lang="si" aria-label="Select Sinhala">සිංහල (SIN)</a>
+                                        <a href="#" data-lang="dv" aria-label="Select Dhivehi">ދިވެހި (MDV)</a>
+                                    </div>
+                                </div>
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:video/2.mp4">
+            <div class="gradient-edge-top op-6 h-50 color"></div>
+            <div class="gradient-edge-bottom"></div>
+            <div class="sw-overlay op-8"></div>
+            <div class="abs abs-centered z-2 w-80">
+                <div class="container wow scaleIn" data-wow-duration="3s">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+<style>
+  @font-face {
+    font-family: "WishDisplayLocal";
+    src: url("/fonts/stop.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  #wishGroupTitle{
+    font-family: "WishDisplayLocal", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans";
+    font-size: clamp(28px, 4vw, 64px);
+    letter-spacing: .04em;
+    margin: 0;
+    filter: drop-shadow(0 6px 24px rgba(0,0,0,.4));
+    will-change: background-position;
+  }
+
+  /* Base gradient/shimmer (kept in case you add other inline parts later) */
+  #wishGroupTitle,
+  #wishGroupTitle *{
+    background: linear-gradient(90deg, #B30000, black);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: wishGroupShine 6s linear infinite;
+  }
+
+  /* Per-word solid colors */
+  #wishGroupTitle .white{
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+  }
+  #wishGroupTitle .red{
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: #B30000 !important;
+    color: #B30000 !important;
+  }
+
+  @keyframes wishGroupShine{
+    0%{ background-position: 0% 50%; }
+    100%{ background-position: 200% 50%; }
+  }
+</style>
+  <h1 data-translate="make_your_wish">WE MAKE A WISH</h1>
+<h2 id="wishGroupTitle" class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">
+  <span class="white">Wish</span> <span class="red">Group</span>
+</h2>
+                            <h4 class="mb-0" data-translate="since">Since 2000</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- load the font (once on the page is enough) -->
+<style>
+  @font-face {
+    font-family: "WishDisplayLocal";
+    src: url("/fonts/stop.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>
+
+<section id="section-about" class="bg-dark section-dark text-light">
+  <div class="container">
+    <div class="row gx-5 align-items-center justify-content-between">
+      <div class="col-lg-6">
+        <div class="me-lg-5 pe-lg-5 py-5 my-5">
+          <!-- only this element uses the custom font -->
+          <h2 data-translate="wish_group" style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans'">
+           &nbsp; Wish Group
+          </h2>
+
+         <p data-translate="about_text" style="font-size: 19px; text-align: justify;line-height: 1.8;">
+    <span style="color:#B30000; font-size: 25px;">Wish Group</span>, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
+</p>
+         
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="wow scaleIn">
+          <div id="business-globe" class="globe-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-marquee" class="section-dark p-0" aria-label="section">
+    <div class="bg-color text-light d-flex py-4 lh-1 rot-2" id="marquee-1">
+        <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
+            <span class="fs-60 mx-3" data-translate="marquee_wish_islands">Wish Islands</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_harbour">Wish Harbour</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_casa">Wish Casa</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_wish">Prime Wish</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_bond">Prime Bond Investment</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wcc">World Capital Centre (WCC)</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+        </div>
+    </div>
+    <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20" id="marquee-2">
+        <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
+            <span class="fs-60 mx-3" data-translate="marquee_wish_islands">Wish Islands</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_harbour">Wish Harbour</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wish_casa">Wish Casa</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_wish">Prime Wish</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_prime_bond">Prime Bond Investment</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+            <span class="fs-60 mx-3" data-translate="marquee_wcc">World Capital Centre (WCC)</span>
+            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
+        </div>
+    </div>
+</section>
+<section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-4 fw-bold mb-3 text-gradient" data-translate="latest_projects">LATEST PROJECTS</h2>
+            <div class="header-divider mx-auto my-4"></div>
+        </div>
+       
+        <div class="swiper myProjectSlider position-relative">
+            <div class="swiper-wrapper">
+                <!-- Project 1 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/demo/wishislands.webp" class="img-fluid project-image swiper-lazy" alt="Wish Islands" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="ongoingProjects.html" >View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="wish_islands_title">Wish Islands</h4>
+                          <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">Luxury, tranquility & natural beauty in the Maldives.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Project 2 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/demo/WIshcaza.webp" class="img-fluid project-image swiper-lazy" alt="Wish Casa" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="wish_caza.html" >View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="wish_casa_title">Wish Casa</h4>
+                            <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">Premium biscuits & juices with global standards.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Project 3 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid project-image swiper-lazy" alt="Prime Wish" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="Prime_wish.html" >View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="prime_wish_title">Prime Wish</h4>
+                            <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">UAE-based food manufacturing & export company.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Project 4 -->
+                <div class="swiper-slide">
+                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
+                        <div class="project-image-container overflow-hidden position-relative">
+                            <img src="/images/demo/wishholdings.webp" class="img-fluid project-image swiper-lazy" alt="Wish Harbour" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                            <a href="Wish_Holdings.html" >View Project</a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center px-0 pt-4">
+                            <h4 class="card-title fw-bold" data-translate="wish_harbour_title">Wish Harbour</h4>
+                            <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">We don't just chase dreams we hold your wish and turn it into reality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Single pagination container below the slider -->
+            <div class="swiper-pagination mt-4 position-relative"></div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Custom styles for enhanced project section */
+#section-latest-projects {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+#section-latest-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+}
+.section-header .text-gradient {
+    background: linear-gradient(45deg, #fff, #a5a5a5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+}
+#section-latest-projects .project-box {
+    transition: all 0.4s ease;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Increased to accommodate larger images */
+}
+#section-latest-projects .project-box:hover {
+    transform: translateY(-10px);
+}
+#section-latest-projects .project-image-container {
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
+}
+#section-latest-projects .project-image {
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 700px !important; /* Increased max-height */
+    object-fit: cover !important;
+    object-position: center !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#section-latest-projects .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+#section-latest-projects .project-image-container:hover .project-overlay {
+    opacity: 1;
+}
+#section-latest-projects .project-image-container:hover .project-image {
+    transform: scale(1.05);
+}
+#section-latest-projects .swiper-lazy-preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+#section-latest-projects .swiper-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section-latest-projects .swiper-pagination-bullet {
+    background: rgba(255,255,255,0.5);
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px !important;
+    transition: all 0.3s ease;
+}
+#section-latest-projects .swiper-pagination-bullet-active {
+    background: #fff;
+    transform: scale(1.3);
+}
+#section-latest-projects .swiper-button-next, 
+#section-latest-projects .swiper-button-prev {
+    display: none !important;
+}
+@media (max-width: 991px) {
+    #section-latest-projects .project-image {
+        max-height: 650px !important; /* Increased max-height */
+    }
+    #section-latest-projects .project-box {
+        width: 100%;
+        max-width: 550px;
+    }
+    #section-latest-projects .swiper-pagination {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 767px) {
+    #section-latest-projects .section-header h2 {
+        font-size: 2rem;
+    }
+    #section-latest-projects .project-image {
+        max-height: 600px !important; /* Increased max-height */
+    }
+    #section-latest-projects .project-box {
+        width: 100%;
+        max-width: 500px;
+    }
+    #section-latest-projects .swiper-pagination {
+        margin-top: 10px;
+    }
+    #section-latest-projects .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px !important;
+    }
+}
+</style>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".myProjectSlider", {
+            slidesPerView: 1,
+            spaceBetween: 40, /* Increased to prevent overlap */
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 2,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    centeredSlides: false,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                    centeredSlides: false,
+                },
+                1200: {
+                    slidesPerView: 2,
+                    spaceBetween: 60, /* Increased for larger images */
+                    centeredSlides: false,
+                },
+            },
+            effect: 'slide',
+            speed: 800,
+        });
+    });
+</script>
+       
+        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
+    <img src="/images\highightsImages\image.png" class="jarallax-img" alt="">
+    <div class="gradient-edge-top"></div>
+    <div class="gradient-edge-bottom"></div>
+    <div class="sw-overlay op-8"></div>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-12 wow fadeInUp">
+                <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
+<img src="/images/background-remover/alLincamo.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/roamer.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/oneAppareal.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wb.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wish_developers.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wishcapital.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/wishholdings.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images\background-remover\WhatsApp_Image_2025-09-02_at_3.07.04_PM-removebg-preview (1).png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+<img src="/images/background-remover/worldinvestment.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+         <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
+    <div class="text-center">
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlight">PRODUCT HIGHLIGHTS</h2>
+                            </div>
+        <div class="container relative z-2">
+            
+            <div class="row g-4 flex-nowrap overflow-auto" id="scroller">
+                
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images\highightsImages\dryfish.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images\highightsImages\prawns.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images\highightsImages\tunna.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+             
+                 <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
+                    <img src="images\highightsImages\WhatsApp Image 2025-08-30 at 1.46.12 PM.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
+                </div>
+               
+            </div>
+        </div>
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const scroller = document.getElementById('scroller');
+    const content = scroller.innerHTML;
+    scroller.innerHTML = content + content; // Duplicate for infinite scroll
+    let isPaused = false;
+    let scrollPos = 0;
+    const speed = 2;
+    let isRtl = document.documentElement.dir === 'rtl';
+
+    function scroll() {
+        if (!isPaused) {
+            scrollPos += isRtl ? -speed : speed;
+            if (isRtl) {
+                if (scrollPos <= -scroller.scrollWidth / 2) {
+                    scrollPos = 0;
+                }
+            } else {
+                if (scrollPos >= scroller.scrollWidth / 2) {
+                    scrollPos = 0;
+                }
+            }
+            scroller.scrollLeft = scrollPos;
+        }
+        requestAnimationFrame(scroll);
+    }
+
+    scroll();
+
+    scroller.addEventListener('mouseenter', () => isPaused = true);
+    scroller.addEventListener('mouseleave', () => isPaused = false);
+    scroller.addEventListener('touchstart', () => isPaused = true);
+    scroller.addEventListener('touchend', () => isPaused = false);
+
+    document.addEventListener('languageChange', () => {
+        const newIsRtl = document.documentElement.dir === 'rtl';
+        if (newIsRtl !== isRtl) {
+            scrollPos = 0;
+            isRtl = newIsRtl;
+        }
+    });
+});
+</script>
+    </section>
+
+          <footer class="text-light section-dark pt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <img src="images\background\logo.webp" class="w-150px mb-3" alt="Wish Group Logo">
+                        <div class="social-icons mt-3">
+                            <a href="https://www.facebook.com/share/1B4SSya66E/"><i class="fa-brands fa-facebook-f" aria-label="Visit our Facebook page"></i></a>
+                            <a href="https://www.instagram.com/wishgroupuae?igsh=MWE2eXRpemMzOG9qOA=="><i class="fa-brands fa-instagram" aria-label="Visit our Instagram page"></i></a>
+                            <a href="https://www.linkedin.com/company/wish-group"><i class="fa-brands fa-linkedin-in" aria-label="Visit our Twitter page"></i></a>
+                            <a href="https://www.youtube.com/@wishgroup-d4y"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
+                        <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
+                        <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
+                          <p>P.O.BOX: 417425 , Dubai UAE</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="index.html" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
+                            <li><a href="about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
+                            <li><a href="division.html" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
+                            <li><a href="countries.html" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Countries</a></li>
+                            <li><a href="contact.html" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
+                        <h3 class="fs-20 mb-3" data-translate="contact_us">Contact Us</h3>
+                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
+                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
+                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <span data-translate="copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="js/custom-marquee.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="js/translations.js"></script>
+
+    <!-- Language Selector Styles -->
+<style>
+    .language-selector {
+        position: relative;
+        display: inline-block;
+        z-index: 1000;
+    }
+    .language-selector .btn-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        min-width: 80px;
+        background: linear-gradient(90deg, #e10600, #000000);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+.globe-container {
+        width: 100%;
+        height: 600px; /* Adjust height as needed */
+        background: #000;
+        border-radius: 10px;
+        position: relative;
+    }
+[dir="rtl"] .globe-container {
+    direction: ltr !important; /* Explicitly enforce LTR in RTL mode */
+    text-align: left !important;; /* Prevent text direction interference */
+}
+.globe-container canvas {
+    position: relative;
+    z-index: 1; /* Ensure canvas is below flags */
+}
+.globe-container img {
+    pointer-events: auto !important; /* Ensure flags are clickable */
+    transform-origin: center; /* Center the transform origin */
+    position: absolute; /* Absolute positioning for flags */
+    z-index: 10 !important; /* Ensure flags are above canvas */
+    direction: ltr !important; /* Force LTR for flag images */
+    text-align: left !important;; /* Isolate flag text direction */
+}
+@media (max-width: 768px) {
+    .globe-container {
+        height: 300px;
+    }
+}
+    .language-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: linear-gradient(90deg, #e10600, #000000);
+        border: 1px solid #333;
+        border-radius: 5px;
+        min-width: 180px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        overflow: hidden;
+        margin-top: 5px;
+        z-index: 1001; /* Ensure it stays above other content */
+    }
+    .language-dropdown a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+        text-align: left;
+        border-bottom: 1px solid #333;
+    }
+    .language-dropdown a:hover {
+        background: #000;
+        color: #fff;
+    }
+    .language-dropdown a[data-lang="ar"],
+    .language-dropdown a[data-lang="dv"] {
+        text-align: right;
+        font-family: 'Arial', sans-serif;
+    }
+    .language-selector:hover .language-dropdown,
+    .language-selector:focus-within .language-dropdown {
+        display: block;
+    }
+    [dir="rtl"] {
+        direction: rtl;
+        text-align: right;
+    }
+    [dir="rtl"] .language-dropdown {
+        right: auto;
+        left: 0;
+    }
+    [dir="rtl"] .swiper-wrapper {
+        flex-direction: row-reverse;
+    }
+
+    /* Responsive adjustments for small screens */
+    @media (max-width: 576px) {
+        .language-selector .btn-main {
+            padding: 8px 15px;
+            min-width: 60px;
+            font-size: 12px;
+        }
+        .language-dropdown {
+            display: none !important; /* Hide dropdown on very small screens */
+            position: fixed;
+            top: 60px; /* Below header */
+            right: 10px;
+            width: 150px;
+        }
+        .language-selector.active .language-dropdown {
+            display: block !important;
+        }
+        header {
+            position: relative;
+            z-index: 1002; /* Ensure header stays above video */
+        }
+    }
+</style>
+
+    <!-- Swiper Configuration and Language Selector Logic -->
+ 
+<script>
+   
+</script>
+    <!-- Custom Styles -->
+    <style>
+        .project-box {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            height: 100%;
+            color: #fff;
+            text-align: left;
+        }
+        .project-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .swiper-slide {
+            height: auto !important;
+        }
+        .teamSwiper {
+            padding-bottom: 60px;
+        }
+        .team-card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .team-img-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #B30000, #B30000);
+            padding: 3px;
+        }
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background: #2a2a2a;
+        }
+        .team-card h5 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .team-card .text-warning {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .team-card .small {
+            font-size: 0.85rem;
+            color: #cccccc;
+        }
+        .team-card a.btn {
+            font-size: 0.9rem;
+            border-radius: 25px;
+            padding: 0.4rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .team-card a.btn:hover {
+            background: #B30000;
+            color: #1a1a1a;
+            border-color: #B30000;
+            transform: translateY(-2px);
+        }
+        .team-card a.text-light:hover {
+            color: #B30000 !important;
+        }
+        .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            background: #B30000;
+            opacity: 1;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background: #B30000;
+            color: #1a1a1a;
+        }
+        @media (max-width: 768px) {
+            .team-img-wrapper {
+                width: 110px;
+                height: 110px;
+            }
+            .team-card h5 {
+                font-size: 1.15rem;
+            }
+            .team-card .text-warning {
+                font-size: 0.9rem;
+            }
+            .team-card .small {
+                font-size: 0.8rem;
+            }
+            .team-card a.btn {
+                font-size: 0.85rem;
+                padding: 0.3rem 1.2rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .teamSwiper {
+                padding-bottom: 50px;
+            }
+            .team-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

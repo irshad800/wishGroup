@@ -507,7 +507,7 @@ h2.display-5.fw-bold {
             <button id="replayButton" class="btn-main">Replay Animation</button>
             <button id="viewTeamButton" class="btn-main">View Full Team</button>
         </div>
-        <div id="notification" class="notification">Animation started</div>
+        <div id="notification" class="notification"></div>
     </div>
 
     <style>
@@ -601,7 +601,7 @@ h2.display-5.fw-bold {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #28a745;
+        background: transparent;
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
@@ -808,7 +808,7 @@ h2.display-5.fw-bold {
                     member.style.opacity = '1';
                     member.classList.remove('center');
                 });
-                showNotification("Team members arranged in grid formation");
+                showNotification("");
             }
 
             // Animate the transition
@@ -818,7 +818,7 @@ h2.display-5.fw-bold {
                 setTimeout(() => {
                     arrangeInCircle();
                 }, 2000);
-                showNotification("Animation started");
+                showNotification("");
             }
 
             // Initialize animation
@@ -1336,9 +1336,9 @@ h2.display-5.fw-bold {
     color: #fff; /* Ensure text is readable */
 }
 
-/* Optional: Adjust on hover for better visibility */
+
 #language-switcher option:hover {
-    background: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
+    background: rgba(0, 0, 0, 0.7); 
 }
 
     /* Arabic RTL support */
