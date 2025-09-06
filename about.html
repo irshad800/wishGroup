@@ -18,6 +18,7 @@
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 </head>
 <style>
+    
      @font-face {
   font-family: 'Ashford Bold';
   src: url('fonts/Marne╠ü.otf') format('opentype');
@@ -385,235 +386,6 @@ h2.display-5.fw-bold {
                 </div>
             </div>
         </section>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const teamContainer = document.getElementById('teamContainer');
-        const replayButton = document.getElementById('replayButton');
-        const viewTeamButton = document.getElementById('viewTeamButton');
-        const notification = document.getElementById('notification');
-        
-     const teamMembers = [
-    {
-        name: "Aman Fatima",
-        role: "Secretary - Prime wish ",
-        img: "images/team/aman.webp"
-    },
-    {
-        name: "Sabeena Sadhique",
-        role: "Executive Secretary",
-        img: "images/team/sabeena.webp"
-    },
-    {
-        name: "Sahala Salim",
-        role: "Media Secretary",
-        img: "images/team/sahala.webp"
-    },
-    {
-        name: "Naifa Anwar",
-        role: "Secretary - Wish Holdings",
-        img: "images/team/naifa.webp"
-    },
-    {
-        name: "Manjima TV",
-        role: "Accountant - Prime wish",
-        img: "images/team/manjima.webp"
-    },
-    {
-        name: "Arya Biju",
-        role: "Accountant - WCC",
-        img: "images/team/arya.webp"
-    },
-    {
-        name: "Muhammed Irshad",
-        role: "Web Developer",
-        img: "images/team/irshad.webp"
-    },
-    {
-        name: "Salini Santhaja Kurup",
-        role: "Web Developer",
-        img: "images/team/salini.webp"
-    },
-    {
-        name: "Muhammed Safuwan",
-        role: "Business Development and Finance",
-        img: "images/team/safwan.webp"
-    },
-    
-    {
-        name: "Fasih Khawar",
-        role: "Logistics Coordinator",
-        img: "images/team/fasi.webp"
-    },
-    {
-        name: "Havindu Wickramarathne",
-        role: "Project Manager",
-        img: "images/team/havindhu.webp"
-    },
-    {
-        name: "Farzan Ali",
-        role: "Office Assistant",
-        img: "images/team2/ali.webp"
-    }
-];
-        // Show notification function
-        function showNotification(message) {
-            notification.textContent = message;
-            notification.classList.add('show');
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-        }
-
-        // Create team member elements
-        function createTeamMembers() {
-            teamContainer.innerHTML = '';
-            
-            teamMembers.forEach((member, index) => {
-                const memberElement = document.createElement('div');
-                memberElement.className = 'team-member';
-                memberElement.innerHTML = `
-                    <div class="member-img-container">
-                        <img src="${member.img}" class="member-img" alt="${member.name}">
-                        <div class="member-overlay">
-                            <h3 class="member-name">${member.name}</h3>
-                            <p class="member-role">${member.role}</p>
-                        </div>
-                    </div>
-                `;
-                teamContainer.appendChild(memberElement);
-            });
-        }
-
-        // Initial random shuffle positions
-        function setRandomPositions() {
-            const members = document.querySelectorAll('.team-member');
-            const containerWidth = teamContainer.offsetWidth;
-            const containerHeight = teamContainer.offsetHeight;
-            
-            members.forEach(member => {
-                const randomX = Math.random() * (containerWidth - 200);
-                const randomY = Math.random() * (containerHeight - 250);
-                
-                member.style.left = `${randomX}px`;
-                member.style.top = `${randomY}px`;
-                member.style.opacity = '1';
-                member.classList.remove('center');
-            });
-        }
-
-        // Arrange in circular formation
-        function arrangeInCircle() {
-            const members = document.querySelectorAll('.team-member');
-            const centerX = teamContainer.offsetWidth / 2;
-            const centerY = teamContainer.offsetHeight / 2;
-            const radius = Math.min(centerX, centerY) * 0.7;
-            
-            // Set center member
-            const centerMember = members[0];
-            centerMember.style.left = `${centerX - 100}px`;
-            centerMember.style.top = `${centerY - 125}px`;
-            centerMember.classList.add('center');
-            
-            // Arrange other members in a circle
-            for (let i = 1; i < members.length; i++) {
-                const angle = (2 * Math.PI * (i-1)) / (members.length - 1);
-                const x = centerX + radius * Math.cos(angle) - 100;
-                const y = centerY + radius * Math.sin(angle) - 125;
-                
-                members[i].style.left = `${x}px`;
-                members[i].style.top = `${y}px`;
-                members[i].classList.remove('center');
-            }
-            
-            // After circle animation, arrange in two rows
-            setTimeout(() => {
-                arrangeInTwoRows();
-                showNotification("Team members arranged in circle formation");
-            }, 4000);
-        }
-
-        // Arrange in two rows (5 images in each row)
-        function arrangeInTwoRows() {
-    const members = document.querySelectorAll('.team-member');
-    const containerWidth = teamContainer.offsetWidth;
-    const memberWidth = 200;
-    const memberHeight = 280;
-    const spacing = 20;
-
-    // ✅ Change here: allow up to 6 per row
-    const perRow = Math.ceil(members.length / 2);
-    const totalWidth = (memberWidth + spacing) * perRow - spacing;
-    const startX = (containerWidth - totalWidth) / 2;
-
-    // First row (bottom row)
-    for (let i = 0; i < perRow; i++) {
-        if (!members[i]) break;
-        members[i].classList.remove('center');
-        members[i].style.left = `${startX + i * (memberWidth + spacing)}px`;
-        members[i].style.top = `${teamContainer.offsetHeight - memberHeight - 20}px`;
-    }
-
-    // Second row (top row)
-    for (let i = perRow; i < members.length; i++) {
-        members[i].classList.remove('center');
-        members[i].style.left = `${startX + (i - perRow) * (memberWidth + spacing)}px`;
-        members[i].style.top = `${teamContainer.offsetHeight - (memberHeight * 2) - 40}px`;
-    }
-
-    showNotification("Team members arranged in grid formation");
-}
-
-
-        // Animate the transition
-        function animateTeam() {
-            createTeamMembers();
-            
-            // Initial state: random positions
-            setRandomPositions();
-            
-            // After a delay, arrange in circle
-            setTimeout(() => {
-                arrangeInCircle();
-            }, 2000);
-            
-            showNotification("Animation started");
-        }
-
-        // Initialize animation
-        animateTeam();
-        
-        // Replay animation on button click
-        replayButton.addEventListener('click', function() {
-            animateTeam();
-        });
-        
-        // View full team on button click
-        viewTeamButton.addEventListener('click', function() {
-            arrangeInTwoRows();
-        });
-        
-        // Add mouse move effect for shapes
-        const teamSection = document.querySelector('.team-section');
-        const shapes = document.querySelectorAll('.shape');
-        
-        teamSection.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            shapes.forEach(shape => {
-                const speed = parseFloat(shape.style.width) / 1000;
-                const moveX = (x - 0.5) * 20 * speed;
-                const moveY = (y - 0.5) * 20 * speed;
-                
-                shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            });
-        });
-    });
-</script>
-
-
-
 <section id="section-speakers" class="bg-dark section-dark text-light">
     <div class="floating-shapes">
         <div class="shape shape-1"></div>
@@ -623,11 +395,8 @@ h2.display-5.fw-bold {
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-
-         
-                <h1 >MEET OUR VISIONARIES</h1>
-                <p class="team-description"style="text-align: justify; font-size: 19px !important;">
-
+                <h1><span style="color: red;">MEET OUR</span> <span style="color: white;">VISIONARIES</span></h1>
+                <p class="team-description" style="text-align: justify; font-size: 19px !important;">
                     Our diverse team of innovators and strategists work together to transform ideas into reality. 
                     With expertise across multiple disciplines, we're united by our passion for excellence and innovation.
                 </p>
@@ -637,27 +406,42 @@ h2.display-5.fw-bold {
         <div class="team-container" id="teamContainer">
             <!-- Team members will be positioned here by JavaScript -->
         </div>
+        
+        <div class="text-center mt-4">
+            <button id="replayButton" class="btn-main">Replay Animation</button>
+            <button id="viewTeamButton" class="btn-main">View Full Team</button>
+        </div>
+        <div id="notification" class="notification">Animation started</div>
     </div>
-<style>
+
+    <style>
         /* Team container styling */
-.team-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
-    gap: 30px; /* space between boxes */
-    justify-items: center; /* center align inside grid */
-    margin: 20px auto;
-    max-width: 1400px; /* optional: limit container width */
-}
+        .team-container {
+            position: relative;
+            min-height: 600px;
+            width: 100%;
+            margin: 20px auto;
+            max-width: 1400px;
+        }
+        
+        /* Grid layout for final arrangement */
+        .team-container.grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            justify-items: center;
+        }
         
         /* Team member styling */
-   .team-member {
-    width: 300px;   /* adjust size */
-    height: 450px;  /* adjust size */
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out;
-}
+        .team-member {
+            position: absolute;
+            width: 300px;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: left 0.5s ease-in-out, top 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
         
         .team-member.center {
             z-index: 10;
@@ -673,7 +457,6 @@ h2.display-5.fw-bold {
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        /* Improved image styling for clarity */
         .member-img {
             width: 100%;
             height: 100%;
@@ -716,16 +499,38 @@ h2.display-5.fw-bold {
             opacity: 0.8;
             margin: 0;
         }
-
-        /* Ensure responsiveness for smaller screens */
+        
+        /* Notification styling */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .notification.show {
+            opacity: 1;
+        }
+        
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .team-container {
                 min-height: 500px;
             }
             
+            .team-container.grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
             .team-member {
-                width: 180px; /* Adjusted for smaller screens */
-                height: 250px; /* Adjusted for smaller screens */
+                width: 180px;
+                height: 250px;
             }
             
             .member-name {
@@ -742,12 +547,214 @@ h2.display-5.fw-bold {
                 min-height: 400px;
             }
             
+            .team-container.grid {
+                grid-template-columns: 1fr;
+            }
+            
             .team-member {
-                width: 150px; /* Adjusted for even smaller screens */
-                height: 200px; /* Adjusted for even smaller screens */
+                width: 150px;
+                height: 200px;
             }
         }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const teamContainer = document.getElementById('teamContainer');
+            const replayButton = document.getElementById('replayButton');
+            const viewTeamButton = document.getElementById('viewTeamButton');
+            const notification = document.getElementById('notification');
+            
+            const teamMembers = [
+                {
+                    name: "Aman Fatima",
+                    role: "Secretary - Prime wish",
+                    img: "images/team/aman.webp"
+                },
+                {
+                    name: "Sabeena Sadhique",
+                    role: "Executive Secretary",
+                    img: "images/team/sabeena.webp"
+                },
+                {
+                    name: "Sahala Salim",
+                    role: "Media Secretary",
+                    img: "images/team/sahala.webp"
+                },
+                {
+                    name: "Naifa Anwar",
+                    role: "Secretary - Wish Holdings",
+                    img: "images/team/naifa.webp"
+                },
+                {
+                    name: "Manjima TV",
+                    role: "Accountant - Prime wish",
+                    img: "images/team/manjima.webp"
+                },
+                {
+                    name: "Arya Biju",
+                    role: "Accountant - WCC",
+                    img: "images/team/arya.webp"
+                },
+                {
+                    name: "Muhammed Irshad",
+                    role: "Web Developer",
+                    img: "images/team/irshad.webp"
+                },
+                {
+                    name: "Salini Santhaja Kurup",
+                    role: "Web Developer",
+                    img: "images/team/salini.webp"
+                },
+                {
+                    name: "Muhammed Safuwan",
+                    role: "Business Development and Finance",
+                    img: "images/team/safwan.webp"
+                },
+                {
+                    name: "Fasih Khawar",
+                    role: "Logistics Coordinator",
+                    img: "images/team/fasi.webp"
+                },
+                {
+                    name: "Havindu Wickramarathne",
+                    role: "Project Manager",
+                    img: "images/team/havindhu.webp"
+                },
+                {
+                    name: "Farzan Ali",
+                    role: "Office Assistant",
+                    img: "images/team2/ali.webp"
+                }
+            ];
+
+            // Show notification function
+            function showNotification(message) {
+                notification.textContent = message;
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000);
+            }
+
+            // Create team member elements
+            function createTeamMembers() {
+                teamContainer.innerHTML = '';
+                teamContainer.classList.remove('grid'); // Remove grid for animations
+                teamMembers.forEach((member, index) => {
+                    const memberElement = document.createElement('div');
+                    memberElement.className = 'team-member';
+                    memberElement.innerHTML = `
+                        <div class="member-img-container">
+                            <img src="${member.img}" class="member-img" alt="${member.name}">
+                            <div class="member-overlay">
+                                <h3 class="member-name">${member.name}</h3>
+                                <p class="member-role">${member.role}</p>
+                            </div>
+                        </div>
+                    `;
+                    teamContainer.appendChild(memberElement);
+                });
+            }
+
+            // Initial random shuffle positions
+            function setRandomPositions() {
+                const members = document.querySelectorAll('.team-member');
+                const containerWidth = teamContainer.offsetWidth;
+                const containerHeight = teamContainer.offsetHeight;
+                
+                members.forEach(member => {
+                    const randomX = Math.random() * (containerWidth - 300);
+                    const randomY = Math.random() * (containerHeight - 450);
+                    member.style.left = `${randomX}px`;
+                    member.style.top = `${randomY}px`;
+                    member.style.opacity = '1';
+                    member.classList.remove('center');
+                });
+            }
+
+            // Arrange in circular formation
+            function arrangeInCircle() {
+                const members = document.querySelectorAll('.team-member');
+                const centerX = teamContainer.offsetWidth / 2;
+                const centerY = teamContainer.offsetHeight / 2;
+                const radius = Math.min(centerX, centerY) * 0.7;
+                
+                // Set center member
+                const centerMember = members[0];
+                centerMember.style.left = `${centerX - 150}px`;
+                centerMember.style.top = `${centerY - 225}px`;
+                centerMember.classList.add('center');
+                
+                // Arrange other members in a circle
+                for (let i = 1; i < members.length; i++) {
+                    const angle = (2 * Math.PI * (i-1)) / (members.length - 1);
+                    const x = centerX + radius * Math.cos(angle) - 150;
+                    const y = centerY + radius * Math.sin(angle) - 225;
+                    members[i].style.left = `${x}px`;
+                    members[i].style.top = `${y}px`;
+                    members[i].classList.remove('center');
+                }
+                
+                showNotification("Team members arranged in circle formation");
+                setTimeout(() => {
+                    arrangeInTwoRows();
+                }, 4000);
+            }
+
+            // Arrange in two rows
+            function arrangeInTwoRows() {
+                teamContainer.classList.add('grid'); // Apply grid layout
+                const members = document.querySelectorAll('.team-member');
+                members.forEach(member => {
+                    member.style.position = 'static'; // Remove absolute positioning
+                    member.style.left = 'auto';
+                    member.style.top = 'auto';
+                    member.style.opacity = '1';
+                    member.classList.remove('center');
+                });
+                showNotification("Team members arranged in grid formation");
+            }
+
+            // Animate the transition
+            function animateTeam() {
+                createTeamMembers();
+                setRandomPositions();
+                setTimeout(() => {
+                    arrangeInCircle();
+                }, 2000);
+                showNotification("Animation started");
+            }
+
+            // Initialize animation
+            animateTeam();
+            
+            // Replay animation on button click
+            replayButton.addEventListener('click', function() {
+                animateTeam();
+            });
+            
+            // View full team on button click
+            viewTeamButton.addEventListener('click', function() {
+                arrangeInTwoRows();
+            });
+            
+            // Add mouse move effect for shapes
+            const teamSection = document.querySelector('.team-section');
+            const shapes = document.querySelectorAll('.shape');
+            
+            teamSection.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                shapes.forEach(shape => {
+                    const speed = parseFloat(shape.style.width) / 1000;
+                    const moveX = (x - 0.5) * 20 * speed;
+                    const moveY = (y - 0.5) * 20 * speed;
+                    shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                });
+            });
+        });
+    </script>
 </section>
         <section id="section-tickets" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
             <img src="images/background/bfFullAllience.webp" class="jarallax-img" alt="">
@@ -1261,6 +1268,7 @@ h2.display-5.fw-bold {
     body[lang="ar"] #mainmenu ul {
         direction: ltr;
     }
+    
 </style>
 
 
