@@ -699,8 +699,8 @@ h1 {
   </div>
 
 <script>
-// Existing animation code (unchanged, kept for context)
 document.addEventListener('DOMContentLoaded', () => {
+  // Animation logic (unchanged)
   const logoContainer = document.getElementById('floating-logos');
   const particleContainer = document.getElementById('particles');
   const starburstContainer = document.getElementById('starbursts');
@@ -775,60 +775,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(createStarburstAuto, i * 100);
     }
   }, 5000);
-
-  const popupModal = document.getElementById('popup-modal');
-  const showPopupBtn = document.getElementById('show-popup');
-  const closePopupBtn = document.getElementById('close-popup');
-  const submitBtn = document.getElementById('submit-btn');
-  const emailInput = document.getElementById('email-input');
-  const popupEmailInput = document.getElementById('popup-email-input');
-  const popupMessage = document.getElementById('popup-message');
-  const popupSubmitBtn = document.getElementById('popup-submit-btn');
-
-  // Show popup (mouse)
-  if (showPopupBtn) {
-    showPopupBtn.addEventListener('click', () => {
-      popupModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-    showPopupBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        popupModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  }
-
-  // Close popup
-  if (closePopupBtn) {
-    closePopupBtn.addEventListener('click', () => {
-      popupModal.classList.remove('active');
-      document.body.style.overflow = '';
-      popupMessage.textContent = 'Enter your email to unlock the wonders of Wish Group!';
-      popupEmailInput.value = '';
-    });
-  }
-
-  if (popupModal) {
-    popupModal.addEventListener('click', (e) => {
-      if (e.target === popupModal) {
-        popupModal.classList.remove('active');
-        document.body.style.overflow = '';
-        popupMessage.textContent = 'Enter your email to unlock the wonders of Wish Group!';
-        popupEmailInput.value = '';
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && popupModal.classList.contains('active')) {
-      popupModal.classList.remove('active');
-      document.body.style.overflow = '';
-      popupMessage.textContent = 'Enter your email to unlock the wonders of Wish Group!';
-      popupEmailInput.value = '';
-    }
-  });
 
   // Animation-related event listeners (unchanged)
   document.addEventListener('mousemove', (e) => {
@@ -930,51 +876,107 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Subscription logic
-  const API_BASE = 'https://wishgroup.ae/api'; // Adjust if server is on different host/port
-  const REDIRECT_URL = '/index.html'; // Change to your desired redirect URL
+  const API_BASE = 'http://localhost:4000/api'; // Adjust if server is on different host/port
+  const REDIRECT_URL = '/index.html'; // Desired redirect URL
 
-  async function handleSubscribe(event, emailInputId, errorElementId) {
+  async function handleSubscribe(event) {
     event.preventDefault();
-    const emailInput = document.getElementById(emailInputId);
-    const errorElement = document.getElementById(errorElementId);
+    const emailInput = document.getElementById('emailInput');
+    const errorElement = document.getElementById('errorMessage');
     const email = emailInput.value.trim();
 
-    if (!email) {
-      errorElement.textContent = 'Please enter your email to proceed!';
-      errorElement.style.display = 'block';
+    // Client-side email validation
+    const emailRegex = /\S+@\S+\.\S+/;
+    if (!email || !emailRegex.test(email)) {
+      errorElement.textContent = 'Please enter a valid email.';
+      errorElement.classList.remove('hidden');
       return;
     }
 
+    errorElement.classList.add('hidden');
+
     try {
-      console.log(`Submitting email: ${email}`); // Debug log
+      console.log(`Submitting email: ${email}`);
       const res = await fetch(`${API_BASE}/subscribe`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
       const data = await res.json();
-      console.log('API Response:', data); // Debug log
+      console.log('API Response:', data);
 
-      if (res.ok) {
-        console.log('Subscription successful, redirecting...');
+      if (res.ok || data.error === 'Email already subscribed') {
+        console.log('Subscription successful or already subscribed, redirecting...');
         emailInput.value = ''; // Clear input
-        errorElement.style.display = 'none';
-        window.location.href = REDIRECT_URL; // Redirect on success
+        errorElement.classList.add('hidden');
+        document.getElementById('subscribeModal').classList.add('hidden'); // Close modal
+        document.body.style.overflow = ''; // Restore scroll
+        window.location.href = REDIRECT_URL; // Redirect to index.html
       } else {
-        errorElement.textContent = data.error || 'Subscription failed';
-        errorElement.style.display = 'block';
+        errorElement.textContent = data.error || 'Subscription failed. Please try again.';
+        errorElement.classList.remove('hidden');
         console.error('Subscription error:', data.error);
       }
     } catch (err) {
-      errorElement.textContent = 'Error connecting to server';
-      errorElement.style.display = 'block';
+      errorElement.textContent = 'Error connecting to server. Please try again later.';
+      errorElement.classList.remove('hidden');
       console.error('Fetch error:', err.message, err.stack);
     }
   }
 
-  // Attach event listeners
-  submitBtn.addEventListener('click', (e) => handleSubscribe(e, 'email-input', 'popup-message')); // Use popup-message for main form errors
-  popupSubmitBtn.addEventListener('click', (e) => handleSubscribe(e, 'popup-email-input', 'popup-message'));
+  // Attach event listener to form
+  const subscribeForm = document.getElementById('subscribeForm');
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', handleSubscribe);
+  }
+
+  // Modal show/close logic
+  const showPopupBtn = document.getElementById('showPopup');
+  const closePopupBtn = document.getElementById('closePopup');
+  const popupModal = document.getElementById('subscribeModal');
+
+  if (showPopupBtn) {
+    showPopupBtn.addEventListener('click', () => {
+      popupModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    showPopupBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        popupModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+
+  if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', () => {
+      popupModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      document.getElementById('emailInput').value = '';
+      document.getElementById('errorMessage').classList.add('hidden');
+    });
+  }
+
+  if (popupModal) {
+    popupModal.addEventListener('click', (e) => {
+      if (e.target === popupModal) {
+        popupModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.getElementById('emailInput').value = '';
+        document.getElementById('errorMessage').classList.add('hidden');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !popupModal.classList.contains('hidden')) {
+      popupModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      document.getElementById('emailInput').value = '';
+      document.getElementById('errorMessage').classList.add('hidden');
+    }
+  });
 });
 </script>
 </body>
