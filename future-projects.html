@@ -249,13 +249,13 @@ strong[data-translate="history_closing"] {
                                         <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                                         <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
                                         <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                        <li><a class="menu-item" href="projects.html" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
                                           <ul>
                                                <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
         <li><a class="menu-item " href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
 
     <li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
-    <li><a class="menu-item active" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
+    <li><a class="menu-item" href="projects.html" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
                                             </ul>
                                         </li>
                                         <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
@@ -283,23 +283,34 @@ strong[data-translate="history_closing"] {
             </div>
         </header>
 
-        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
-            <img src="/images/background-remover/proposed future.jpeg" class="jarallax-img" alt="">
-            <div class="gradient-edge-bottom h-50"></div>
-            <div class="sw-overlay op-5"></div>
-            <div class="abs w-80 bottom-10 z-2 w-100">
-                <div class="container">
-                    <div class="row align-items-center justify-content-between gx-5">
-                        <div class="col-lg-6">
-                            <div class="relative wow mask-right">
-                            </div>
-                        </div>
-
-                       
+   <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500">
+    <img src="/images/background-remover/proposed future.jpeg" class="jarallax-img" alt="" style="width: 100vw; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+    <div class="gradient-edge-bottom h-50"></div>
+    <div class="sw-overlay op-5"></div>
+    <div class="abs w-80 bottom-10 z-2 w-100">
+        <div class="container">
+            <div class="row align-items-center justify-content-between gx-5">
+                <div class="col-lg-6">
+                    <div class="relative wow mask-right">
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+<style>
+#section-hero {
+    position: relative;
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    #section-hero .jarallax-img {
+        width: 100vw !important;
+        height: 90% !important;
+        object-fit: fill !important;
+    }
+}
+</style>
 
         <section>
             <div class="container">
@@ -339,7 +350,6 @@ strong[data-translate="history_closing"] {
                         <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
                         <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
                         <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
-                          <p>P.O.BOX: 417425</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>

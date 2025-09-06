@@ -385,7 +385,7 @@ strong[data-translate="history_closing"] {
                                         <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                                         <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
                                         <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item active" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                        <li><a class="menu-item" href="projects.html" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
                                           <ul>
                                                <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
     <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
@@ -406,22 +406,19 @@ strong[data-translate="history_closing"] {
                             </div>
                             
 
-                              <div class="de-flex-col">
-                                <div class="lang-switcher">
-                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
-                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
-                                        <li><a class="dropdown-item" href="#" onclick="return changeLanguage('en', event)">EN</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('ar', event)">AR</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('fr', event)">FR</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('si', event)">SI</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('dv', event)">DV</a></li>
-
-                                    </ul>
-                                </div>
-                                <div class="menu_side_area">
-                                    <span id="menu-btn"></span>
-                                </div>
-                            </div>
+                                 <div class="de-flex-col">
+    <select id="language-switcher" onchange="setLanguage(this.value)">
+        <option value="en" selected>EN</option>
+        <option value="ar">AR</option>
+        <option value="fr">FR</option>
+        <option value="si">SI</option>
+        <option value="dv">DV</option>
+    </select>
+    <div class="menu_side_area">
+        <span id="menu-btn"></span>
+    </div>
+</div>    
+          
                         </div>
                     </div>
                 </div>
@@ -863,7 +860,7 @@ strong[data-translate="history_closing"] {
                         <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
                         <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
                         <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
-                          <p>P.O.BOX: 417425</p>
+                          <p>P.O.BOX: 417425 , Dubai UAE</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>

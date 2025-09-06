@@ -246,7 +246,7 @@ strong[data-translate="history_closing"] {
                                         <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                                         <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
                                         <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item active" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                        <li><a class="menu-item" href="projects.html" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
                                           <ul>
                                                <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
     <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
@@ -267,18 +267,18 @@ strong[data-translate="history_closing"] {
                             </div>
                         
 
-                            <div class="de-flex-col">
-                                <select id="language-switcher" onchange="setLanguage(this.value)" aria-label="Select Language">
-                                    <option value="en">English</option>
-                                    <option value="si">Sinhala</option>
-                                    <option value="dv">Dhivehi</option>
-                                    <option value="ar">Arabic</option>
-                                    <option value="fr">French</option>
-                                </select>
-                                <div class="menu_side_area">
-                                    <span id="menu-btn"></span>
-                                </div>
-                            </div>
+         <div class="de-flex-col">
+    <select id="language-switcher" onchange="changeLanguage(this.value)">
+        <option value="en" selected>EN</option>
+        <option value="ar">AR</option>
+        <option value="fr">FR</option>
+        <option value="si">SI</option>
+        <option value="dv">DV</option>
+    </select>
+    <div class="menu_side_area">
+        <span id="menu-btn"></span>
+    </div>
+</div>
                         </div>
                     </div>
                 </div>
@@ -492,7 +492,7 @@ strong[data-translate="history_closing"] {
                         <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
                         <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
                         <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
-                          <p>P.O.BOX: 417425</p>
+                          <p>P.O.BOX: 417425 , Dubai UAE</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
@@ -972,44 +972,52 @@ strong[data-translate="history_closing"] {
     footer_copyright: "Copyright 2025 - Groupe Wish. Tous droits réservés."
 }}
 // Function to change language
-function setLanguage(lang) { // Changed function name to match onchange attribute
-    // Update text content and alt attributes
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[lang][key]) {
-            if (element.tagName === 'IMG') {
-                element.alt = translations[lang][key];
-            } else if (element.tagName === 'TITLE') {
-                element.textContent = translations[lang][key];
-            } else {
-                element.textContent = translations[lang][key];
-            }
-        }
-    });
 
-    // Update HTML lang and direction
-    document.querySelector('html').lang = lang;
-    if (lang === 'ar' || lang === 'dv') {
-        document.querySelector('html').dir = 'rtl';
-        document.querySelector('body').style.textAlign = 'right';
-    } else {
-        document.querySelector('html').dir = 'ltr';
-        document.querySelector('body').style.textAlign = 'left';
+    </script>
+<script>
+function changeLanguage(lang) {
+    // Check if the language exists in translations
+    if (!translations[lang]) {
+        console.error(`Language ${lang} not found in translations`);
+        return;
     }
 
     // Update page title
-    document.querySelector('title').textContent = translations[lang].page_title;
+    document.title = translations[lang].page_title || translations['en'].page_title;
 
-    // Save selected language to localStorage
-    localStorage.setItem('selectedLanguage', lang);
+    // Set document language and direction
+    document.documentElement.setAttribute('lang', lang);
+    if (lang === 'ar') {
+        document.body.classList.add('rtl');
+        document.body.style.direction = 'rtl';
+    } else {
+        document.body.classList.remove('rtl');
+        document.body.style.direction = 'ltr';
+    }
+
+    // Update all elements with data-translate attribute
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            // Use textContent for simple text, innerHTML for elements with nested HTML
+            if (element.tagName === 'TITLE' || element.tagName === 'P' || element.tagName.match(/^H[1-6]$/) || element.classList.contains('fs-14') || element.classList.contains('mb-0')) {
+                element.textContent = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        } else {
+            // Fallback to English if translation is missing
+            console.warn(`Translation key ${key} not found for language ${lang}, falling back to English`);
+            element.textContent = translations['en'][key] || element.textContent;
+        }
+    });
 }
 
-// Initialize language on page load
+// Initialize with default language (English) on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    document.getElementById('language-switcher').value = savedLang; // Set dropdown to saved language
-    setLanguage(savedLang); // Call the renamed function
+    changeLanguage('en');
 });
-    </script>
+</script>
 </body>
 </html>

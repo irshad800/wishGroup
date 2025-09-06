@@ -3,7 +3,7 @@
 
 <head>
     <title data-translate="page_title">Wish Group</title>
-    <link rel="icon" href="/images/wishgroup/logo remove.webp" type="image/gif" sizes="16x16">
+    <link rel="icon" href="/images\background\logo.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Explore Wish Group's global presence across continents and industries" name="description">
@@ -26,10 +26,30 @@
   font-weight: bold;
   font-style: normal;
 }
+/* Target mobile devices (adjust max-width as needed) */
+/* Add to your stylesheet */
+@media only screen and (max-width: 768px) {
+  .countries-section {
+    margin-top: 0; /* Remove extra gap */
+  }
+}
+
+@media (max-width: 768px){
+  .leaflet-popup, .leaflet-tooltip { display: none !important; }
+  #world-map {
+    margin-top: 40px;   /* adjust the value as you like */
+  }
+  
+}
+
+#world-map {
+  height: 900px;
+  width: 100%;
+}
 
 @font-face {
   font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
+  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype')   ;
   font-weight: bold;
   font-style: normal;
 }
@@ -117,7 +137,7 @@ p {
 strong[data-translate="history_closing"] {
   font-family: 'Ashford Bold', sans-serif;
   font-size: 15px;
-}</style>>
+}</style>
     <style>
 .company-card:hover .company-logo {
     opacity: 1;
@@ -384,9 +404,9 @@ strong[data-translate="history_closing"] {
                             <div class="de-flex-col">
                                 <div id="logo">
                                     <a href="index.html">
-                                        <img class="logo-main" src="/images/wishgroup/logo remove.webp" alt="">
-                                        <img class="logo-scroll" src="/images/wishgroup/logo remove.webp" alt="">
-                                        <img class="logo-mobile" src="/images/wishgroup/logo remove.webp" alt="">
+                                        <img class="logo-main" src="/images\background\logo.webp" alt="">
+                                        <img class="logo-scroll" src="/images\background\logo.webp" alt="">
+                                        <img class="logo-mobile" src="/images\background\logo.webp" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -397,7 +417,7 @@ strong[data-translate="history_closing"] {
                                         <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                                         <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
                                         <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                        <li><a class="menu-item" href="projects.html" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
                                           <ul>
                                                <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
         <li><a class="menu-item " href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
@@ -863,7 +883,7 @@ strong[data-translate="history_closing"] {
                         <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
                         <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
                         <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
-                          <p>P.O.BOX: 417425</p>
+                          <p>P.O.BOX: 417425 , Dubai UAE</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
@@ -1413,5 +1433,52 @@ filterBtns.forEach(btn => {
 // Initialize with "all" filter
 applyFilter("all");
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  const map = L.map('world-map', {
+    worldCopyJump: true
+  }).setView([20, 0], isMobile ? 2 : 3); // temporary start; we'll fit later on mobile
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  function addMarker(lat, lng, html) {
+    const m = L.marker([lat, lng]).addTo(map);
+    if (!isMobile && html) m.bindPopup(html);
+    return m;
+  }
+
+  // --- 7 countries (coords can be tweaked if you prefer specific cities) ---
+  const points = [
+    { lat: 25.2048, lng: 55.2708, html: "<b>UAE</b> — Dubai" },               // UAE
+    { lat: 6.9271,  lng: 79.8612, html: "<b>Sri Lanka</b> — Colombo" },       // Sri Lanka
+    { lat: 4.1755,  lng: 73.5093, html: "<b>Maldives</b> — Malé" },           // Maldives
+    { lat: 3.1390,  lng: 101.6869, html: "<b>Malaysia</b> — Kuala Lumpur" },  // Malaysia
+    { lat: 5.6037,  lng: -0.1870, html: "<b>Ghana</b> — Accra" },             // Ghana
+    { lat: -26.2041, lng: 28.0473, html: "<b>South Africa</b> — Johannesburg" }, // South Africa
+    { lat: 51.5074, lng: -0.1278, html: "<b>UK</b> — London" }                // UK
+  ];
+
+  const markers = points.map(p => addMarker(p.lat, p.lng, p.html));
+  const group = L.featureGroup(markers);
+
+  // On mobile: fit the map to show ALL 7 markers by default
+  if (isMobile) {
+    map.fitBounds(group.getBounds(), {
+      padding: [20, 20],
+      maxZoom: 3 // prevent zooming too far in on tight clusters
+    });
+  } else {
+    // Desktop can also benefit from a sensible view; optional
+    map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 4 });
+  }
+});
+
+
+</script>
+
 </body>
 </html>

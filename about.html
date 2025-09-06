@@ -25,7 +25,81 @@
   font-weight: bold;
   font-style: normal;
 }
+  /* Improved Responsive CSS for Header Image Section */
+  .kf-started-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 
+  .kf-started-item .slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .kf-started-item .description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .kf-started-slider {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .kf-started-slider {
+      height: 60vh;
+    }
+    .kf-started-item .subtitles {
+      font-size: 1rem;
+    }
+    .kf-started-item .name {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .kf-started-slider {
+      height: 50vh;
+    }
+    .kf-started-item .subtitles {
+      font-size: 0.9rem;
+    }
+    .kf-started-item .name {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Ensure full width on all screens */
+  @media (max-width: 1024px) {
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 .subtitle {
   font-family: 'Ashford Bold', sans-serif;
 } 
@@ -222,6 +296,22 @@ strong[data-translate="history_closing"] {
 h2.display-5.fw-bold {
     font-family: 'Montserrat', sans-serif;
 }
+      @media (max-width: 768px) {
+            #section-hero {
+                /* Increased margin-top to push the image down further */
+                margin-top: 80px !important; /* Changed from 60px to 80px */
+                height: auto !important;
+                min-height: 0 !important;
+                margin-bottom: 20px !important;
+            }
+
+            #section-hero img {
+                object-fit: contain !important;
+                position: static !important;
+                height: auto !important;
+            }
+        }
+
 </style>
 
 
@@ -259,7 +349,7 @@ h2.display-5.fw-bold {
                                         <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                                         <li><a class="menu-item active" href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
                                         <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                        <li><a class="menu-item" href="projects.html" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
                                           <ul>
                                                <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
     <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
@@ -297,8 +387,8 @@ h2.display-5.fw-bold {
                 </div>
             </div>
         </header>
- <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800">
-    <img src="images/background-remover/about header.jpeg" alt="Background Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+<section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800">
+        <img src="images\background-remover\about header.jpeg" alt="Background Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
     <div class="gradient-edge-top op-6 h-50 color"></div>
     <div class="gradient-edge-bottom"></div>
     <div class="sw-overlay op-8"></div>
@@ -313,7 +403,7 @@ h2.display-5.fw-bold {
     </div>
 </section>
 
-        <section id="section-why-attend" class="bg-dark section-dark text-light py-5">
+          <section id="section-why-attend" class="bg-dark section-dark text-light py-5">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-lg-12 text-center">
@@ -386,6 +476,12 @@ h2.display-5.fw-bold {
                 </div>
             </div>
         </section>
+
+
+
+
+
+
 <section id="section-speakers" class="bg-dark section-dark text-light">
     <div class="floating-shapes">
         <div class="shape shape-1"></div>
@@ -411,153 +507,152 @@ h2.display-5.fw-bold {
             <button id="replayButton" class="btn-main">Replay Animation</button>
             <button id="viewTeamButton" class="btn-main">View Full Team</button>
         </div>
-        <div id="notification" class="notification">Animation started</div>
+        <div id="notification" class="notification"></div>
     </div>
 
     <style>
-        /* Team container styling */
+    /* Team container styling */
+    .team-container {
+        position: relative;
+        min-height: 600px;
+        width: 100%;
+        margin: 20px auto;
+        max-width: 1400px;
+    }
+    
+    /* Grid layout for final arrangement */
+    .team-container.grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        justify-items: center;
+    }
+    
+    /* Team member styling */
+    .team-member {
+        position: absolute;
+        width: 300px;
+        height: 450px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.5s ease-in-out, top 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    
+    .team-member.center {
+        z-index: 10;
+        transform: scale(1.1);
+    }
+    
+    .member-img-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .member-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        image-rendering: auto;
+        filter: brightness(0.95);
+    }
+    
+    .team-member:hover .member-img {
+        transform: scale(1.05);
+    }
+    
+    .member-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        padding: 20px 15px 15px;
+        color: white;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .team-member:hover .member-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .member-name {
+        font-size: 16px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .member-role {
+        font-size: 12px;
+        opacity: 0.8;
+        margin: 0;
+    }
+    
+    /* Notification styling */
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .notification.show {
+        opacity: 1;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
         .team-container {
-            position: relative;
-            min-height: 600px;
-            width: 100%;
-            margin: 20px auto;
-            max-width: 1400px;
+            min-height: 500px;
         }
         
-        /* Grid layout for final arrangement */
         .team-container.grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);
         }
         
-        /* Team member styling */
         .team-member {
-            position: absolute;
-            width: 300px;
-            height: 450px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: left 0.5s ease-in-out, top 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-        }
-        
-        .team-member.center {
-            z-index: 10;
-            transform: scale(1.1);
-        }
-        
-        .member-img-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        .member-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-            image-rendering: auto;
-            filter: brightness(0.95);
-        }
-        
-        .team-member:hover .member-img {
-            transform: scale(1.05);
-        }
-        
-        .member-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-            padding: 20px 15px 15px;
-            color: white;
-            transform: translateY(10px);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .team-member:hover .member-overlay {
-            opacity: 1;
-            transform: translateY(0);
+            width: 180px;
+            height: 250px;
         }
         
         .member-name {
-            font-size: 16px;
-            margin-bottom: 5px;
-            font-weight: 600;
+            font-size: 14px;
         }
         
         .member-role {
-            font-size: 12px;
-            opacity: 0.8;
-            margin: 0;
+            font-size: 11px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .team-container {
+            min-height: 400px;
         }
         
-        /* Notification styling */
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1000;
+        .team-container.grid {
+            grid-template-columns: repeat(2, 1fr); /* Two images per row */
         }
         
-        .notification.show {
-            opacity: 1;
+        .team-member {
+            width: 150px;
+            height: 200px;
         }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .team-container {
-                min-height: 500px;
-            }
-            
-            .team-container.grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .team-member {
-                width: 180px;
-                height: 250px;
-            }
-            
-            .member-name {
-                font-size: 14px;
-            }
-            
-            .member-role {
-                font-size: 11px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .team-container {
-                min-height: 400px;
-            }
-            
-            .team-container.grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .team-member {
-                width: 150px;
-                height: 200px;
-            }
-        }
-    </style>
-
+    }
+</style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const teamContainer = document.getElementById('teamContainer');
@@ -624,7 +719,7 @@ h2.display-5.fw-bold {
                 {
                     name: "Farzan Ali",
                     role: "Office Assistant",
-                    img: "images/team2/ali.webp"
+                    img: "images/team/ali.jpg"
                 }
             ];
 
@@ -713,7 +808,7 @@ h2.display-5.fw-bold {
                     member.style.opacity = '1';
                     member.classList.remove('center');
                 });
-                showNotification("Team members arranged in grid formation");
+                showNotification("");
             }
 
             // Animate the transition
@@ -723,7 +818,7 @@ h2.display-5.fw-bold {
                 setTimeout(() => {
                     arrangeInCircle();
                 }, 2000);
-                showNotification("Animation started");
+                showNotification("");
             }
 
             // Initialize animation
@@ -823,9 +918,10 @@ h2.display-5.fw-bold {
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
-        <section id="section-businesses" class="bg-dark section-dark text-light">
+         <section id="section-businesses" class="bg-dark section-dark text-light">
             <div class="container">
                 <div class="row g-4 gx-5 justify-content-center">
                     <div class="col-lg-6 text-center">
@@ -993,7 +1089,6 @@ h2.display-5.fw-bold {
                 </div>
             </div>
         </section>
-
         <section id="section-our-legacy" class="bg-dark text-light pt-80 relative overflow-hidden">
             <span class="legacy-glow legacy-glow-1"></span>
             <span class="legacy-glow legacy-glow-2"></span>
@@ -1081,7 +1176,7 @@ h2.display-5.fw-bold {
             </div>
         </section>
 
-        <section id="section-our-history" class="bg-dark section-dark text-light">
+         <section id="section-our-history" class="bg-dark section-dark text-light">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-5">
@@ -1190,7 +1285,7 @@ h2.display-5.fw-bold {
                         <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
                         <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
                         <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
-                          <p>P.O.BOX: 417425</p>
+                          <p>P.O.BOX: 417425 , Dubai UAE</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
@@ -1241,9 +1336,9 @@ h2.display-5.fw-bold {
     color: #fff; /* Ensure text is readable */
 }
 
-/* Optional: Adjust on hover for better visibility */
+
 #language-switcher option:hover {
-    background: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
+    background: rgba(0, 0, 0, 0.7); 
 }
 
     /* Arabic RTL support */
@@ -1874,7 +1969,18 @@ h2.display-5.fw-bold {
         </script>
 
 
-
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
 
 
 

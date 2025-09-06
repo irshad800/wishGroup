@@ -259,7 +259,7 @@ strong[data-translate="history_closing"] {
                                         <li><a class="menu-item " href="index.html" data-translate="home" aria-label="Navigate to Home">Home</a></li>
                                         <li><a class="menu-item " href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
                                         <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item active" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
+                                        <li><a class="menu-item" href="projects.html" href="" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
                                           <ul>
                                                <li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
     <li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
@@ -279,22 +279,18 @@ strong[data-translate="history_closing"] {
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
-                                <div class="lang-switcher">
-                                    <a class="btn-main fx-slide w-100 dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false"><span id="currentLang">EN</span></a>
-                                    <ul class="dropdown-menu" aria-labelledby="langDropdown">
-                                       <li><a class="dropdown-item" href="#" onclick="return changeLanguage('en', event)">EN</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('ar', event)">AR</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('fr', event)">FR</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('si', event)">SI</a></li>
-<li><a class="dropdown-item" href="#" onclick="return changeLanguage('dv', event)">DV</a></li>
-
-                                    </ul>
-                                </div>
-                                <div class="menu_side_area">
-                                    <span id="menu-btn"></span>
-                                </div>
-                            </div>
+                             <div class="de-flex-col">
+    <select id="language-switcher" onchange="setLanguage(this.value)">
+        <option value="en" selected>EN</option>
+        <option value="ar">AR</option>
+        <option value="fr">FR</option>
+        <option value="si">SI</option>
+        <option value="dv">DV</option>
+    </select>
+    <div class="menu_side_area">
+        <span id="menu-btn"></span>
+    </div>
+</div>  
                         </div>
                     </div>
                 </div>
@@ -523,7 +519,7 @@ strong[data-translate="history_closing"] {
                         <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
                         <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
                         <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
-                          <p>P.O.BOX: 417425</p>
+                          <p>P.O.BOX: 417425 , Dubai UAE</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center text-lg-start">
                         <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
@@ -1068,62 +1064,36 @@ fr: {
     return null;
   }
 
-  function setLanguage(lang) {
-    if (!translations[lang]) return console.error(`Language ${lang} not found`);
-
-    document.querySelectorAll("[data-translate]").forEach(el => {
-      const rawKey = el.getAttribute("data-translate");
-      const key = resolveKey(lang, rawKey);
-      if (!key) return;
-
-      const val = translations[lang][key];
-      const tag = el.tagName;
-
-      // Update content depending on element
-      if (tag === "META") {
-        el.setAttribute("content", val);
-      } else if (tag === "IMG") {
-        el.setAttribute("alt", val);
-      } else if (tag === "INPUT" || tag === "TEXTAREA") {
-        // if you ever use placeholders with data-translate
-        el.setAttribute("placeholder", val);
-      } else if (tag === "TITLE") {
-        el.textContent = val;
-      } else {
-        // If you need to preserve markup in translations, switch to innerHTML here.
-        el.textContent = val;
-      }
-    });
-
-    // html lang & dir
-    const html = document.documentElement;
-    html.lang = lang;
-    const rtl = (lang === "ar" || lang === "dv");
-    html.dir = rtl ? "rtl" : "ltr";
-    document.body.style.textAlign = rtl ? "right" : "left";
-
-    // Ensure <title> is set (some browsers ignore the head TITLE in querySelectorAll order)
-    document.querySelector("title").textContent = translations[lang].page_title;
-
-    // Header badge
-    const currentLangEl = document.getElementById("currentLang");
-    if (currentLangEl) currentLangEl.textContent = lang.toUpperCase();
-
-    localStorage.setItem("selectedLanguage", lang);
-  }
-
-  function changeLanguage(lang, ev) {
-    if (ev && ev.preventDefault) ev.preventDefault();
-    setLanguage(lang);
-    return false;
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const saved = localStorage.getItem("selectedLanguage") || "en";
-    setLanguage(saved);
-  });
+  
 </script>
+  <script>function setLanguage(lang) {
+    if (!translations[lang]) {
+        console.error(`Language ${lang} not found in translations`);
+        return;
+    }
 
+    document.body.setAttribute('lang', lang);
+    if (lang === 'ar') {
+        document.body.classList.add('rtl');
+    } else {
+        document.body.classList.remove('rtl');
+    }
+
+    // Handle both data-translate and data-lang-key
+    const elements = document.querySelectorAll('[data-translate], [data-lang-key]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate') || element.getAttribute('data-lang-key');
+        if (translations[lang][key]) {
+            if (element.innerHTML.includes('<span')) {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation key ${key} not found for language ${lang}`);
+        }
+    });
+}</script>
     </div>
 </body>
 </html>
