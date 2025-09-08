@@ -1,1246 +1,916 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title data-translate="wish_group">Wish Group</title>
-    <link rel="icon" href="images/background/logo.webp" type="image/png" sizes="16x16">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AIvent">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <!-- CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="css/vendors.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!-- Color scheme -->
-    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
-    <!-- Globe dependencies -->
-    <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
-    <script src="https://unpkg.com/globe.gl@2.29.0/dist/globe.gl.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wish Ripple Hero - Enhanced Animation</title>
+<script>
+  // EARLY GUARD — skip this page if already subscribed/seen
+  (function () {
+    const HOME_URL = 'home.html';          // adjust path if needed
+    const FLAG_KEY = 'wish_subscribed';    // localStorage flag
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-<style>
-
-
-/* Ensure swiper pagination is visible and styled */
-.swiper-pagination {
-    bottom: 10px;
-}
-
-.swiper-pagination-bullet {
-    background: #fff;
-    opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-    opacity: 1;
-    background: #b30000;
-}                                                                                                                                                                                                              
-
-#section-why-attend .container {
-    text-align: center;
-    overflow: hidden; /* Prevent slides from spilling outside */
-}
-
-
-
-
-
-.project-box {
-    text-align: center;
-    margin: 0 auto; /* Center each card */
-    max-width: 100%; /* Ensure card fits within slide */
-    padding: 20px; /* Match original padding */
-    background-color: #222; /* Preserve original design */
-    border-radius: 10px; /* Preserve original design */
-    height: 100%;
-    color: #fff;
-}
-
-/* Ensure Swiper slides adapt to page direction */
-.swiper {
-    width: 100%;
-    max-width: 1200px; /* Match the total width of all cards */
-    margin: 0 auto; /* Center the slider */
-}
-
-.swiper-slide {
-    display: inline-block;
-    vertical-align: top; /* Align slides at the top */
-    width: 25%; /* Ensure each slide takes equal space (4 cards) */
-    box-sizing: border-box; /* Include padding and border in width */
-    padding: 10px; /* Match original spacing */
-}
-
-/* Preserve globe and its children in LTR layout */
-#business-globe,
-#business-globe * {
-    direction: ltr !important;
-    text-align: left !important;
-}
-
-/* Ensure markers stack on top of the canvas */
-#business-globe canvas {
-        position: relative;
-        z-index: 1;
+    try {
+      if (localStorage.getItem(FLAG_KEY) === '1') {
+        location.replace(HOME_URL); // prevents going back to this page
+      }
+    } catch (e) {
+      console.warn('Storage unavailable:', e);
     }
-/* Adjust marquee to respect direction */
-#section-marquee {
-    direction: inherit; /* Inherit from parent (html dir) */
-    text-align: inherit; /* Inherit text alignment */
-}
-#section-marquee .d-flex {
-    flex-direction: row; /* Default to row, will reverse in RTL */
-}
-[dir="rtl"] #section-marquee .d-flex {
-    flex-direction: row-reverse; /* Reverse for RTL */
-}
+  })();
+</script>
 
-/* Ensure language dropdown aligns correctly */
-.language-dropdown {
-    right: 0;
-}
-[dir="rtl"] .language-dropdown {
-    right: auto;
-    left: 0;
-}
 
-.fs-120 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'marquez';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
 
-.fs-60 {
-  font-family: 'marquez', sans-serif;
-}
 
-     @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
 
-.subtitle {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
+  <style>
+    .error { color: red; display: none; margin-top: 10px; }
+    /* 🔁 Customize */
+    :root{
+      --bg-color: #000000;
+      --tint: rgba(0,0,0,0.8);
+      --accent: #b30000;
+      --accent-secondary: #f72585;
+      --wish-gold: #ffd700;
+      --wish-pink: #ff6b9d;
+      --text: #ffffff;
+      --muted: #c8d2db;
+    }
 
-h1 {
-  font-family: 'Marne', sans-serif;
-}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg-color); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .hero{
+      position:relative; min-height:100vh; overflow:hidden; isolation:isolate;
+      display:grid; place-items:center;
+      background: var(--bg-color);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(45deg, #b30000, transparent 30%, black 70%, transparent),
+                  radial-gradient(circle at 20% 20%, rgba(255,215,0,0.05) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255,107,157,0.05) 0%, transparent 50%);
+      z-index:0;
+      animation: waveBackground 10s linear infinite;
+    }
+
+    @keyframes waveBackground {
+      0% { background-position: 0 0, 0 0, 0 0; }
+      50% { background-position: 100px 100px, -50px -50px, 50px 50px; }
+      100% { background-position: 200px 200px, -100px -100px, 100px 100px; }
+    }
+
+    .ripple-mask{
+      position:absolute; inset:0; z-index:1;
+      background: radial-gradient(60% 60% at 50% 50%, rgba(76,201,240,.15), transparent 70%);
+    }
+
+    .ripple-hole{
+      position:absolute; inset:0;
+      clip-path: circle(50% at 50% 50%);
+      background: transparent;
+      animation: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .ring, .ring2, .ring3{
+      position:absolute; left:50%; top:50%;
+      width:20vmin; height:20vmin; border-radius:50%;
+      transform: translate(-50%,-50%) scale(0.1);
+      opacity:0;
+    }
+    .ring {
+      border: 2px solid rgba(255,255,255,.45);
+      box-shadow: 0 0 30px rgba(76,201,240,.35), inset 0 0 12px rgba(255,255,255,.25);
+      animation: ringOut 1.4s .05s ease-out forwards, pulseRing 3s 2s ease-in-out infinite;
+    }
+    .ring2 {
+      border: 2px solid rgba(76,201,240,.75);
+      box-shadow: 0 0 40px rgba(76,201,240,.5), inset 0 0 15px rgba(76,201,240,.3);
+      animation: ringOut 1.6s .15s ease-out forwards, pulseRing 3.2s 2.2s ease-in-out infinite;
+    }
+    .ring3 {
+      border: 1px solid #b30000;
+      box-shadow: 0 0 50px #b30000;
+      animation: ringOut 1.8s .25s ease-out forwards, pulseRing 3.4s 2.4s ease-in-out infinite;
+    }
+
+    @keyframes ringOut {
+      0%   { transform: translate(-50%,-50%) scale(.1); opacity:0; }
+      15%  { opacity:1; }
+      100% { transform: translate(-50%,-50%) scale(6); opacity:0; }
+    }
+    @keyframes pulseRing {
+      0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 0.3; }
+      50% { transform: translate(-50%,-50%) scale(1.2); opacity: 0.6; }
+    }
+    @keyframes subtleParallax {
+      0% { background-position: 0 0; }
+      100% { background-position: 100px 100px; }
+    }
+
+    .content{
+      position:relative; z-index:10;
+      text-align:center; max-width: 900px; padding: 0 6vw;
+      opacity:0; transform: translateY(16px);
+      animation: contentIn 1.2s .85s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+      margin-top: 0;
+    }
+    .logo1{
+      display:block;
+      margin: 0 auto;
+      position:relative;
+      top: 0;
+      z-index: 3;
+      width: 150px;
+      height: auto;
+      animation: scalePulse 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 15px rgba(76, 201, 240, 0.5));
+    }
+    h1{
+      margin:.2rem 0 .5rem; font-size:clamp(28px,6vw,60px); letter-spacing:-.02em; line-height:1.05;
+      text-shadow: 0 6px 30px rgba(0,0,0,.35);
+      opacity: 0;
+      transform: scale(0.8);
+      margin-top: 0;
+    }
+
+    .lead{
+      margin:0 auto 20px; color:var(--muted); font-size: clamp(14px,2.4vw,18px); line-height:1.6;
+      max-width: 720px;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUpIn 1s 1.6s ease-out forwards;
+    }
+    .cta{
+      display:inline-flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:center;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUpIn 1s 1.8s ease-out forwards;
+    }
+    .btn{
+      padding:12px 18px; border-radius:999px; border:1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.1); color:#fff; text-decoration:none; font-weight:700;
+      transition: transform .3s ease, box-shadow .3s ease, background .3s ease, filter .3s ease;
+      backdrop-filter: blur(6px);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn--primary{ 
+      background: var(--accent); 
+      color:#03161c; 
+      border-color: transparent; 
+      box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3);
+      animation: buttonGlow 2s ease-in-out infinite alternate;
+    }
+    .btn:hover{ 
+      transform: translateY(-3px); 
+      box-shadow: 0 12px 30px rgba(0,0,0,.4);
+      filter: brightness(1.1);
+    }
+    .btn--primary:hover {
+      box-shadow: 0 12px 30px rgba(76, 201, 240, 0.4);
+      animation: none;
+    }
+    .btn:active {
+      transform: translateY(0);
+      transition: transform 0.1s ease;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.1) 45%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.1) 55%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(30deg);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .btn:hover::after {
+      animation: shine 1.5s ease-out;
+    }
+
+    @keyframes shine {
+      0% { opacity: 0; transform: rotate(30deg) translate(0, -150%); }
+      20% { opacity: 1; }
+      70% { opacity: 0.5; }
+      100% { opacity: 0; transform: rotate(30deg) translate(0, 150%); }
+    }
+
+    @keyframes buttonGlow {
+      from { box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3), 0 0 10px rgba(76, 201, 240, 0.2); }
+      to { box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3), 0 0 20px rgba(76, 201, 240, 0.5); }
+    }
+
+    @keyframes contentIn { 
+      to{ opacity:1; transform:translateY(0) } 
+    }
+    
+    @keyframes fadeUpIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      70% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes scalePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .floating-logo-img {
+      position: absolute;
+      bottom: -100px;
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+      z-index: 2;
+      animation: waveDrift linear infinite;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: drop-shadow(0 0 12px rgba(76, 201, 240, 0.6));
+      pointer-events: none;
+    }
+    
+    .pulse-effect {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 10%, rgba(76, 201, 240, 0.1) 20%, transparent 30%);
+      opacity: 0;
+      z-index: 1;
+      animation: pulse 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.1); }
+    }
+    
+    @keyframes waveDrift {
+      0% { transform: translateY(0) translateX(0) scale(0.6) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.8; }
+      50% { transform: translateY(-50vh) translateX(calc(15vw * sin(1.5 * 3.14159))) scale(1.2) rotate(10deg); opacity: 0.9; }
+      90% { opacity: 0.5; }
+      100% { transform: translateY(-100vh) translateX(calc(20vw * sin(3 * 3.14159))) scale(0.8) rotate(20deg); opacity: 0; }
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, var(--accent) 10%, transparent 70%);
+      border-radius: 50%;
+      z-index: 1;
+      animation: floatParticle 10s linear infinite;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    @keyframes floatParticle {
+      0% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
+      50% { opacity: 0.7; transform: translate(calc(20vw * (sin(2 * 3.14159))), -50vh) scale(1); }
+      100% { transform: translate(calc(30vw * (sin(3 * 3.14159))), -100vh) scale(0.5); opacity: 0; }
+    }
+
+    .starburst {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: radial-gradient(circle, var(--wish-gold) 20%, transparent 70%);
+      border-radius: 50%;
+      z-index: 1;
+      animation: starburstExpand 1.5s ease-out forwards;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @keyframes starburstExpand {
+      0% { transform: scale(0) rotate(0deg); opacity: 0.8; }
+      50% { opacity: 1; transform: scale(2) rotate(180deg); }
+      100% { transform: scale(5) rotate(360deg); opacity: 0; }
+    }
+
+    .popup-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .popup-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .popup-content {
+      background: linear-gradient(145deg, rgba(20, 20, 30, 0.95), rgba(10, 10, 20, 0.95));
+      border: 1px solid rgba(76, 201, 240, 0.3);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(76, 201, 240, 0.3);
+      backdrop-filter: blur(10px);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    
+    .popup-modal.active .popup-content {
+      transform: scale(1);
+    }
+    
+    .popup-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 24px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .popup-close:hover {
+      color: var(--accent);
+    }
+    
+    .popup-title,
+    .popup-text,
+    .popup-input,
+    .popup-btn {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .popup-title {
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+    }
+    
+    .popup-text {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .popup-input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid rgba(76, 201, 240, 0.3);
+      background: rgba(10, 15, 20, 0.7);
+      color: white;
+      margin-bottom: 15px;
+      font-size: 16px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .popup-input::placeholder {
+      color: rgba(200, 210, 219, 0.6);
+      font-style: italic;
+    }
+    
+    .popup-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.2);
+    }
+    
+    .popup-btn {
+      padding: 12px 25px;
+      border-radius: 8px;
+      border: none;
+      background: var(--accent);
+      color: #03161c;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      width: 100%;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .popup-btn:hover {
+      background: #3ab4d9;
+      transform: translateY(-2px);
+    }
+
+    .clickable-text {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      color: var(--accent);
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    
+    .clickable-text:hover {
+      color: #fff;
+      text-shadow: 0 0 10px var(--accent);
+    }
+    
+    .clickable-text::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+    
+    .clickable-text:hover::after {
+      opacity: 1;
+    }
+
+    .email-input {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 999px;
+      min-width: 250px;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+    }
+    
+    .email-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.2);
+      background: rgba(255, 255, 255, 0.12);
+    }
+    
+    .email-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    @keyframes logoFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      33% { transform: translateY(-10px) rotate(2deg); }
+      66% { transform: translateY(5px) rotate(-2deg); }
+    }
+
+    .sparkle {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 5;
+      animation: sparkle 1s ease-out forwards;
+    }
+    
+    @keyframes sparkle {
+      0% { opacity: 1; transform: scale(0) translate(0, 0); }
+      100% { opacity: 0; transform: scale(1) translate(var(--tx), var(--ty)); }
+    }
+
+    .typing-text {
+      overflow: hidden;
+      border-right: 2px solid var(--accent);
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--accent) }
+    }
+
+    .glow-pulse {
+      animation: glowPulse 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glowPulse {
+      from { filter: drop-shadow(0 0 5px rgba(76, 201, 240, 0.5)); }
+      to { filter: drop-shadow(0 0 20px rgba(76, 201, 240, 0.8)); }
+    }
+
+    .ring, .ring2, .ring3 { pointer-events: none; }
+
+    @media (prefers-reduced-motion: reduce){
+      .ripple-hole, .ring, .ring2, .ring3 { animation: none !important; clip-path:none !important; }
+      .content, .logo1, h1, .lead, .cta { opacity:1; transform:none; animation:none; }
+      .floating-logo-img, .particle, .starburst { animation: none !important; display:none; }
+      .pulse-effect { animation: none !important; }
+      .btn::after { display: none; }
+      .popup-content { transform: none !important; transition: none; }
+      .logo1 { animation: none !important; }
+      .sparkle { display: none !important; }
+      .typing-text { animation: none !important; border-right: none !important; white-space: normal !important; }
+      .hero::before { animation: none !important; }
+    }
+
     @font-face {
-  font-family: 'Marne';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-h2 {
-  font-family: 'Marne', sans-serif;
-}
- @font-face {
-  font-family: 'Marne';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-h4 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h5 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-h3 {
-  font-family: 'Marne', sans-serif;
-}
- @font-face {
-  font-family: 'Marne';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/OpenType-TT/Marquez.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.fs-14 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-.mb-0 {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.team-subtitle {
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.team-title{
-  font-family: 'Ashford Bold', sans-serif;
-}
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.team-description{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-  @font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.subtitle.s2{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.fs-15{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-p{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.legacy-label{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.global_presence{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.our_history{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/Marne╠ü.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.accordion-section-title{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.accordion-section-content{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-strong[data-translate="history_closing"] {
-  font-family: 'Ashford Bold', sans-serif;
-  font-size: 15px; /* Optional, if you intended fs-15 */
-}
-@font-face {
-  font-family: 'Ashford Bold';
-  src: url('fonts/marquez-modern-elegant-luxury-sans-serif-2023-11-27-05-36-55-utc/__MACOSX/OpenType-TT/._Marquez.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.project-box h4{
-  font-family: 'Ashford Bold', sans-serif;
-} 
-/* keep the globe and every child in LTR layout even when the page is RTL */
-#business-globe,
-    #business-globe * {
-        direction: ltr !important;
-        text-align: left !important;
+      font-family: 'Ashford Bold';
+      src: url('fonts/ashford-bold-italic.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
     }
 
-/* make sure the markers always stack on top of the canvas in every dir mode */
-#business-globe canvas {
-  position: relative;
-  z-index: 1;
-}
-@font-face {
-    font-family: 'YourCustomFont';
-    src: url('fonts/ashford-bold-italic.otf') format('woff');
-     font-weight: bold;
-  font-style: normal;
-  }
-
-  h1 {
-    font-family: 'YourCustomFont', sans-serif;
-    font-size: 80px;
-  }
-</style>
-<body class="dark-scheme">
-    <div id="wrapper">
-        <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
-        </div>
-        <div class="scrollbar-v show-on-scroll"></div>
-
-        <!-- Page preloader -->
-        <div id="de-loader"></div>
-
-        <header class="transparent">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="de-flex">
-                            <div class="de-flex-col">
-                                <!-- Logo -->
-                                <div id="logo">
-                                    <a href="index.html">
-                                        <img class="logo-main" src="images\background\logo.webp" alt="Wish Group Logo" width="200" height="auto">
-                                        <img class="logo-scroll" src="images\background\logo.webp" alt="Wish Group Logo" width="200" height="auto">
-                                        <img class="logo-mobile" src="images\background\logo.webp" alt="Wish Group Logo" width="160" height="auto">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="de-flex-col">
-                                <div class="de-flex-col header-col-mid">
-                                    <ul id="mainmenu">
-                                        <li><a class="menu-item active" href="index.html" href="#section-hero" data-translate="home" aria-label="Navigate to Home">Home</a></li>
-                                        <li><a class="menu-item" href="about.html" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
-                                        <li><a class="menu-item" href="division.html" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                                        <li><a class="menu-item" href="projects.html" data-translate="projects" aria-label="Navigate to Projects">Projects</a>
-                                          <ul>
-<li><a class="menu-item" href="ongoingProjects.html" aria-label="Navigate to Ongoing Projects">Ongoing Projects</a></li>
-<li><a class="menu-item" href="completedProjects.html" aria-label="Navigate to Completed Projects">Completed Projects</a></li>
-<li><a class="menu-item" href="strategic-investments.html" aria-label="Navigate to Strategic Investment and Collaborations">Strategic Investment and Collaborations</a></li>
-<li><a class="menu-item" href="future-projects.html" aria-label="Navigate to Proposed Future Projects">Proposed Future Projects</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="menu-item" href="countries.html" data-translate="countries" aria-label="Navigate to Countries">Countries</a></li>
-                                        <li><a class="menu-item" href="news.html" data-translate="news" aria-label="Navigate to News">News</a></li>
-                                        <li><a class="menu-item" href="policy.html" data-translate="policies" aria-label="Navigate to Our Policies">Our Policies</a></li>
-                                        <li><a class="menu-item" href="carrier.html" data-translate="career" aria-label="Navigate to Career">Career</a></li>
-                                        <li>
-                                            <a class="menu-item" href="contact.html" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a>
-                                          
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Language Selector -->
-                            <div class="de-flex-col">
-                                <div class="language-selector">
-                                    <button class="btn-main fx-slide w-100" id="language-toggle" aria-label="Toggle language selection">
-                                        <span>EN</span>
-                                        <i class="fa fa-chevron-down ms-2"></i>
-                                    </button>
-                                    <div class="language-dropdown">
-                                        <a href="#" data-lang="en" aria-label="Select English">English (EN)</a>
-                                        <a href="#" data-lang="ar" aria-label="Select Arabic">العربية (AR)</a>
-                                        <a href="#" data-lang="fr" aria-label="Select French">Français (FR)</a>
-                                        <a href="#" data-lang="si" aria-label="Select Sinhala">සිංහල (SIN)</a>
-                                        <a href="#" data-lang="dv" aria-label="Select Dhivehi">ދިވެހި (MDV)</a>
-                                    </div>
-                                </div>
-                                <div class="menu_side_area">
-                                    <span id="menu-btn"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:video/2.mp4">
-            <div class="gradient-edge-top op-6 h-50 color"></div>
-            <div class="gradient-edge-bottom"></div>
-            <div class="sw-overlay op-8"></div>
-            <div class="abs abs-centered z-2 w-80">
-                <div class="container wow scaleIn" data-wow-duration="3s">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-<style>
-  @font-face {
-    font-family: "WishDisplayLocal";
-    src: url("/fonts/stop.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  #wishGroupTitle{
-    font-family: "WishDisplayLocal", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans";
-    font-size: clamp(28px, 4vw, 64px);
-    letter-spacing: .04em;
-    margin: 0;
-    filter: drop-shadow(0 6px 24px rgba(0,0,0,.4));
-    will-change: background-position;
-  }
-
-  /* Base gradient/shimmer (kept in case you add other inline parts later) */
-  #wishGroupTitle,
-  #wishGroupTitle *{
-    background: linear-gradient(90deg, #B30000, black);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    animation: wishGroupShine 6s linear infinite;
-  }
-
-  /* Per-word solid colors */
-  #wishGroupTitle .white{
-    background: none !important;
-    -webkit-background-clip: initial !important;
-    background-clip: initial !important;
-    -webkit-text-fill-color: #fff !important;
-    color: #fff !important;
-  }
-  #wishGroupTitle .red{
-    background: none !important;
-    -webkit-background-clip: initial !important;
-    background-clip: initial !important;
-    -webkit-text-fill-color: #B30000 !important;
-    color: #B30000 !important;
-  }
-
-  @keyframes wishGroupShine{
-    0%{ background-position: 0% 50%; }
-    100%{ background-position: 200% 50%; }
-  }
-</style>
-  <h1 data-translate="make_your_wish">WE MAKE A WISH</h1>
-<h2 id="wishGroupTitle" class="wow fadeInUp" data-wow-delay=".4s" data-translate="wish_group">
-  <span class="white">Wish</span> <span class="red">Group</span>
-</h2>
-                            <h4 class="mb-0" data-translate="since">Since 2000</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!-- load the font (once on the page is enough) -->
-<style>
-  @font-face {
-    font-family: "WishDisplayLocal";
-    src: url("/fonts/stop.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-</style>
-
-<section id="section-about" class="bg-dark section-dark text-light">
-  <div class="container">
-    <div class="row gx-5 align-items-center justify-content-between">
-      <div class="col-lg-6">
-        <div class="me-lg-5 pe-lg-5 py-5 my-5">
-          <!-- only this element uses the custom font -->
-          <h2 data-translate="wish_group" style="font-family: 'WishDisplayLocal', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Noto Sans'">
-           &nbsp; Wish Group
-          </h2>
-
-         <p data-translate="about_text" style="font-size: 19px; text-align: justify;line-height: 1.8;">
-    <span style="color:#B30000; font-size: 25px;">Wish Group</span>, founded in 2000 in the UAE, is a purpose-driven global conglomerate headquartered in Dubai’s Business Bay. Operating across 7+ countries, it spans sectors like real estate, hospitality, seafood, trading, and capital ventures. Guided by the vision of “One Capital World” Wish Group connects capital with compassion through sustainable, inclusive, and innovative development. Its core mission is to empower people and shape futures by uniting investment with impact.
-</p>
-         
+    h1 { font-family: 'Ashford Bold', sans-serif; }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="ripple-mask">
+      <div class="ripple-hole">
+        <div id="floating-logos"></div>
+        <div id="particles"></div>
+        <div id="starbursts"></div>
+        <div class="content">
+          <img
+            class="logo1 glow-pulse"
+            src="images/background/logo2.png"
+            alt="Wish Group"
+            width="150" height="80"
+          />
+          <h1>We make a WISH… and the magic unfolds.</h1>
+          <br/>
+          <h4 class="lead">
+            Enter your email to see how.
+            <span class="clickable-text" id="show-popup" role="button" tabindex="0">Click Here</span>
+          </h4>
+          <form id="hero-form" class="cta">
+            <input 
+              type="email" 
+              class="email-input" 
+              placeholder="Enter your email address"
+              required
+              id="email-input"
+            />
+            <span class="error" id="hero-error">Please enter a valid email.</span>
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </form>
         </div>
       </div>
+      <div class="ring"></div>
+      <div class="ring2"></div>
+      <div class="ring3"></div>
+    </div>
+    <div class="pulse-effect"></div>
+  </section>
 
-      <div class="col-lg-5">
-        <div class="wow scaleIn">
-          <div id="business-globe" class="globe-container"></div>
-        </div>
-      </div>
+  <div class="popup-modal" id="popup-modal">
+    <div class="popup-content">
+      <button class="popup-close" id="close-popup">&times;</button>
+      <h2 class="popup-title">Join the Magic</h2>
+      <p class="popup-text">Enter your email to unlock the wonders of Wish Group!</p>
+      <form id="modal-form">
+        <input 
+          type="email" 
+          class="popup-input" 
+          placeholder="Your email address" 
+          required 
+          id="popup-email-input"
+        >
+        <span class="error" id="modal-error">Please enter a valid email.</span>
+        <button class="popup-btn" type="submit">Submit</button>
+      </form>
     </div>
   </div>
-</section>
-<section id="section-marquee" class="section-dark p-0" aria-label="section">
-    <div class="bg-color text-light d-flex py-4 lh-1 rot-2" id="marquee-1">
-        <div class="de-marquee-list-1 wow fadeInLeft" data-wow-duration="3s">
-            <span class="fs-60 mx-3" data-translate="marquee_wish_islands">Wish Islands</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_wish_harbour">Wish Harbour</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_wish_casa">Wish Casa</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_prime_wish">Prime Wish</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_prime_bond">Prime Bond Investment</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_wcc">World Capital Centre (WCC)</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-        </div>
-    </div>
-    <div class="bg-color-2 text-light d-flex py-4 lh-1 rot-min-1 mt-min-20" id="marquee-2">
-        <div class="de-marquee-list-2 wow fadeInRight" data-wow-duration="3s">
-            <span class="fs-60 mx-3" data-translate="marquee_wish_islands">Wish Islands</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_wish_harbour">Wish Harbour</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_wish_casa">Wish Casa</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_prime_wish">Prime Wish</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_prime_bond">Prime Bond Investment</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-            <span class="fs-60 mx-3" data-translate="marquee_wcc">World Capital Centre (WCC)</span>
-            <span class="fs-60 mx-3 op-2" data-translate="marquee_separator">/</span>
-        </div>
-    </div>
-</section>
-<section id="section-latest-projects" class="section-dark text-light bg-dark py-5">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="display-4 fw-bold mb-3 text-gradient" data-translate="latest_projects">LATEST PROJECTS</h2>
-            <div class="header-divider mx-auto my-4"></div>
-        </div>
-       
-        <div class="swiper myProjectSlider position-relative">
-            <div class="swiper-wrapper">
-                <!-- Project 1 -->
-                <div class="swiper-slide">
-                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
-                        <div class="project-image-container overflow-hidden position-relative">
-                            <img src="/images/demo/wishislands.webp" class="img-fluid project-image swiper-lazy" alt="Wish Islands" loading="lazy">
-                            <div class="swiper-lazy-preloader"></div>
-                            <div class="project-overlay d-flex align-items-center justify-content-center">
-                                <a href="ongoingProjects.html" >View Project</a>
-                            </div>
-                        </div>
-                        <div class="card-body text-center px-0 pt-4">
-                            <h4 class="card-title fw-bold" data-translate="wish_islands_title">Wish Islands</h4>
-                          <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">Luxury, tranquility & natural beauty in the Maldives.</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <!-- Project 2 -->
-                <div class="swiper-slide">
-                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
-                        <div class="project-image-container overflow-hidden position-relative">
-                            <img src="/images/demo/WIshcaza.webp" class="img-fluid project-image swiper-lazy" alt="Wish Casa" loading="lazy">
-                            <div class="swiper-lazy-preloader"></div>
-                            <div class="project-overlay d-flex align-items-center justify-content-center">
-                                <a href="wish_caza.html" >View Project</a>
-                            </div>
-                        </div>
-                        <div class="card-body text-center px-0 pt-4">
-                            <h4 class="card-title fw-bold" data-translate="wish_casa_title">Wish Casa</h4>
-                            <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">Premium biscuits & juices with global standards.</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <!-- Project 3 -->
-                <div class="swiper-slide">
-                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
-                        <div class="project-image-container overflow-hidden position-relative">
-                            <img src="/images/wishgroup/primewishfrnt.webp" class="img-fluid project-image swiper-lazy" alt="Prime Wish" loading="lazy">
-                            <div class="swiper-lazy-preloader"></div>
-                            <div class="project-overlay d-flex align-items-center justify-content-center">
-                                <a href="Prime_wish.html" >View Project</a>
-                            </div>
-                        </div>
-                        <div class="card-body text-center px-0 pt-4">
-                            <h4 class="card-title fw-bold" data-translate="prime_wish_title">Prime Wish</h4>
-                            <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">UAE-based food manufacturing & export company.</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <!-- Project 4 -->
-                <div class="swiper-slide">
-                    <div class="project-box card h-100 border-0 overflow-hidden bg-transparent">
-                        <div class="project-image-container overflow-hidden position-relative">
-                            <img src="/images/demo/wishholdings.webp" class="img-fluid project-image swiper-lazy" alt="Wish Harbour" loading="lazy">
-                            <div class="swiper-lazy-preloader"></div>
-                            <div class="project-overlay d-flex align-items-center justify-content-center">
-                            <a href="Wish_Holdings.html" >View Project</a>
-                            </div>
-                        </div>
-                        <div class="card-body text-center px-0 pt-4">
-                            <h4 class="card-title fw-bold" data-translate="wish_harbour_title">Wish Harbour</h4>
-                            <p class="" data-translate="wish_harbour_desc"style="font-size: 19px;  color: white;">We don't just chase dreams we hold your wish and turn it into reality.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-            <!-- Single pagination container below the slider -->
-            <div class="swiper-pagination mt-4 position-relative"></div>
-        </div>
-    </div>
-</section>
 
-<style>
-/* Custom styles for enhanced project section */
-#section-latest-projects {
-    background: transparent;
-    position: relative;
-    overflow: hidden;
-}
-#section-latest-projects::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-}
-.section-header .text-gradient {
-    background: linear-gradient(45deg, #fff, #a5a5a5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.header-divider {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #fff, transparent);
-}
-#section-latest-projects .project-box {
-    transition: all 0.4s ease;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 600px; /* Increased to accommodate larger images */
-}
-#section-latest-projects .project-box:hover {
-    transform: translateY(-10px);
-}
-#section-latest-projects .project-image-container {
-    border-radius: 12px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    padding-top: 66.67%; /* 3:2 aspect ratio */
-}
-#section-latest-projects .project-image {
-    border-radius: 12px;
-    transition: all 0.5s ease;
-    width: 100% !important;
-    height: 100% !important;
-    max-height: 700px !important; /* Increased max-height */
-    object-fit: cover !important;
-    object-position: center !important;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-#section-latest-projects .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    opacity: 0;
-    transition: all 0.4s ease;
-    border-radius: 12px;
-}
-#section-latest-projects .project-image-container:hover .project-overlay {
-    opacity: 1;
-}
-#section-latest-projects .project-image-container:hover .project-image {
-    transform: scale(1.05);
-}
-#section-latest-projects .swiper-lazy-preloader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-#section-latest-projects .swiper-pagination {
-    position: relative;
-    bottom: 0;
-    margin-top: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#section-latest-projects .swiper-pagination-bullet {
-    background: rgba(255,255,255,0.5);
-    opacity: 1;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px !important;
-    transition: all 0.3s ease;
-}
-#section-latest-projects .swiper-pagination-bullet-active {
-    background: #fff;
-    transform: scale(1.3);
-}
-#section-latest-projects .swiper-button-next, 
-#section-latest-projects .swiper-button-prev {
-    display: none !important;
-}
-@media (max-width: 991px) {
-    #section-latest-projects .project-image {
-        max-height: 650px !important; /* Increased max-height */
-    }
-    #section-latest-projects .project-box {
-        width: 100%;
-        max-width: 550px;
-    }
-    #section-latest-projects .swiper-pagination {
-        margin-top: 15px;
-    }
-}
-@media (max-width: 767px) {
-    #section-latest-projects .section-header h2 {
-        font-size: 2rem;
-    }
-    #section-latest-projects .project-image {
-        max-height: 600px !important; /* Increased max-height */
-    }
-    #section-latest-projects .project-box {
-        width: 100%;
-        max-width: 500px;
-    }
-    #section-latest-projects .swiper-pagination {
-        margin-top: 10px;
-    }
-    #section-latest-projects .swiper-pagination-bullet {
-        width: 8px;
-        height: 8px;
-        margin: 0 4px !important;
-    }
-}
-</style>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var swiper = new Swiper(".myProjectSlider", {
-            slidesPerView: 1,
-            spaceBetween: 40, /* Increased to prevent overlap */
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                dynamicBullets: true,
-            },
-            lazy: {
-                loadPrevNext: true,
-                loadPrevNextAmount: 2,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 50,
-                    centeredSlides: false,
-                },
-                1200: {
-                    slidesPerView: 2,
-                    spaceBetween: 60, /* Increased for larger images */
-                    centeredSlides: false,
-                },
-            },
-            effect: 'slide',
-            speed: 800,
-        });
-    });
-</script>
-       
-        <section class="bg-dark section-dark pt-80 relative jarallax" aria-label="section">
-    <img src="/images\highightsImages\image.png" class="jarallax-img" alt="">
-    <div class="gradient-edge-top"></div>
-    <div class="gradient-edge-bottom"></div>
-    <div class="sw-overlay op-8"></div>
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-12 wow fadeInUp">
-                <div class="owl-6 no-alpha owl-carousel owl-theme wow mask-right">
-<img src="/images/background-remover/alLincamo.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images/background-remover/roamer.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images/background-remover/oneAppareal.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images/background-remover/wb.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images/background-remover/wish_developers.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images/background-remover/wishcapital.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images/background-remover/wishholdings.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images\background-remover\WhatsApp_Image_2025-09-02_at_3.07.04_PM-removebg-preview (1).png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-<img src="/images/background-remover/worldinvestment.png" class="px-4" style="width: 150px; height: 150px; object-fit: contain;" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-         <section id="section-venue" class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
-    <div class="text-center">
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s" data-translate="highlight">PRODUCT HIGHLIGHTS</h2>
-                            </div>
-        <div class="container relative z-2">
-            
-            <div class="row g-4 flex-nowrap overflow-auto" id="scroller">
-                
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images\highightsImages\dryfish.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images\highightsImages\prawns.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-                <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images\highightsImages\tunna.webp" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-             
-                 <div class="col-sm-3" style="min-width: 250px; flex-shrink: 0;">
-                    <img src="images\highightsImages\WhatsApp Image 2025-08-30 at 1.46.12 PM.jpeg" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                </div>
-               
-            </div>
-        </div>
- <script>
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
-    const scroller = document.getElementById('scroller');
-    const content = scroller.innerHTML;
-    scroller.innerHTML = content + content; // Duplicate for infinite scroll
-    let isPaused = false;
-    let scrollPos = 0;
-    const speed = 2;
-    let isRtl = document.documentElement.dir === 'rtl';
+      // Animation logic (unchanged)
+      const logoContainer = document.getElementById('floating-logos');
+      const particleContainer = document.getElementById('particles');
+      const starburstContainer = document.getElementById('starbursts');
+      const logoCount = 40;
+      const particleCount = 20;
+      const starburstCount = 10;
 
-    function scroll() {
-        if (!isPaused) {
-            scrollPos += isRtl ? -speed : speed;
-            if (isRtl) {
-                if (scrollPos <= -scroller.scrollWidth / 2) {
-                    scrollPos = 0;
-                }
-            } else {
-                if (scrollPos >= scroller.scrollWidth / 2) {
-                    scrollPos = 0;
-                }
-            }
-            scroller.scrollLeft = scrollPos;
+      function createLogo() {
+        const logo = document.createElement('div');
+        logo.className = 'floating-logo-img';
+        logo.style.backgroundImage = 'url("images/background/logoslide.png")';
+        const size = 40 + Math.random() * 80;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 5;
+        const duration = 15 + Math.random() * 20;
+        logo.style.width = `${size}px`;
+        logo.style.height = `${size}px`;
+        logo.style.left = `${left}%`;
+        logo.style.animationDelay = `${delay}s`;
+        logo.style.animationDuration = `${duration}s`;
+        logo.style.opacity = `${0.5 + Math.random() * 0.5}`;
+        logo.style.transform = `rotate(${Math.random() * 360}deg)`;
+        logoContainer.appendChild(logo);
+        setTimeout(() => {
+          logo.remove();
+          createLogo();
+        }, (duration + delay) * 1000);
+      }
+
+      function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const size = 6 + Math.random() * 6;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 5;
+        const duration = 10 + Math.random() * 10;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}%`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        particleContainer.appendChild(particle);
+        setTimeout(() => {
+          particle.remove();
+          createParticle();
+        }, (duration + delay) * 1000);
+      }
+
+      function createStarburstAuto() {
+        const star = document.createElement('div');
+        star.className = 'starburst';
+        const angle = Math.random() * 360;
+        const distance = Math.random() * 50;
+        const x = 50 + Math.cos(angle * Math.PI / 180) * distance;
+        const y = 50 + Math.sin(angle * Math.PI / 180) * distance;
+        star.style.left = `${x}%`;
+        star.style.top = `${y}%`;
+        starburstContainer.appendChild(star);
+        setTimeout(() => {
+          star.remove();
+        }, 1500);
+      }
+
+      for (let i = 0; i < logoCount; i++) {
+        setTimeout(createLogo, i * 300);
+      }
+      for (let i = 0; i < particleCount; i++) {
+        setTimeout(createParticle, i * 400);
+      }
+      setInterval(() => {
+        for (let i = 0; i < starburstCount; i++) {
+          setTimeout(createStarburstAuto, i * 100);
         }
-        requestAnimationFrame(scroll);
-    }
+      }, 5000);
 
-    scroll();
+      document.addEventListener('mousemove', (e) => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        const content = document.querySelector('.content');
+        content.style.transform = `translate(${(x - 0.5) * 10}px, ${(y - 0.5) * 10}px)`;
+        const rings = document.querySelectorAll('.ring, .ring2, .ring3');
+        rings.forEach(ring => {
+          ring.style.transform = `translate(calc(-50% + ${(x - 0.5) * 5}px), calc(-50% + ${(y - 0.5) * 5}px)) scale(0.1)`;
+        });
+        if (e.buttons === 1) createFloatingLogo(e.clientX, e.clientY);
+        if (Math.random() > 0.97) createSparkle(e.clientX, e.clientY);
+      });
 
-    scroller.addEventListener('mouseenter', () => isPaused = true);
-    scroller.addEventListener('mouseleave', () => isPaused = false);
-    scroller.addEventListener('touchstart', () => isPaused = true);
-    scroller.addEventListener('touchend', () => isPaused = false);
+      function createFloatingLogo(x, y) {
+        const logo = document.createElement('div');
+        logo.className = 'floating-logo-img';
+        logo.style.backgroundImage = 'url("images/background/logoslide.png")';
+        const size = 40 + Math.random() * 80;
+        logo.style.width = `${size}px`;
+        logo.style.height = `${size}px`;
+        logo.style.left = `${x}px`;
+        logo.style.top = `${y}px`;
+        logo.style.animationDuration = `${15 + Math.random() * 15}s`;
+        logoContainer.appendChild(logo);
+        setTimeout(() => {
+          logo.remove();
+          createLogo();
+        }, 30000);
+      }
 
-    document.addEventListener('languageChange', () => {
-        const newIsRtl = document.documentElement.dir === 'rtl';
-        if (newIsRtl !== isRtl) {
-            scrollPos = 0;
-            isRtl = newIsRtl;
+      function createSparkle(x, y) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        const size = Math.random() * 4 + 2;
+        sparkle.style.width = `${size}px`;
+        sparkle.style.height = `${size}px`;
+        sparkle.style.left = `${x}px`;
+        sparkle.style.top = `${y}px`;
+        const tx = (Math.random() - 0.5) * 100;
+        const ty = (Math.random() - 0.5) * 100;
+        sparkle.style.setProperty('--tx', `${tx}px`);
+        sparkle.style.setProperty('--ty', `${ty}px`);
+        document.body.appendChild(sparkle);
+        setTimeout(() => {
+          sparkle.remove();
+        }, 1000);
+      }
+
+      document.addEventListener('click', (e) => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        createFloatingLogo(e.clientX, e.clientY);
+        createSparkle(e.clientX, e.clientY);
+        for (let i = 0; i < 10; i++) {
+          setTimeout(() => createStarburstClick(e.clientX, e.clientY), i * 100);
         }
+      });
+
+      function createStarburstClick(x, y) {
+        const star = document.createElement('div');
+        star.className = 'starburst';
+        const angle = Math.random() * 360;
+        const distance = Math.random() * 50;
+        const offsetX = Math.cos(angle * Math.PI / 180) * distance;
+        const offsetY = Math.sin(angle * Math.PI / 180) * distance;
+        star.style.left = `${x + offsetX}px`;
+        star.style.top = `${y + offsetY}px`;
+        starburstContainer.appendChild(star);
+        setTimeout(() => {
+          star.remove();
+        }, 1500);
+      }
+
+      document.addEventListener('mouseleave', () => {
+        const content = document.querySelector('.content');
+        content.style.transform = '';
+        const rings = document.querySelectorAll('.ring, .ring2, .ring3');
+        rings.forEach(ring => {
+          ring.style.transform = '';
+        });
+      });
+
+      const heading = document.querySelector('h1');
+      if (heading) {
+        setTimeout(() => {
+          heading.style.opacity = '1';
+          heading.classList.add('typing-text');
+          const text = heading.textContent;
+          heading.textContent = '';
+          heading.style.width = '0';
+          setTimeout(() => {
+            heading.textContent = text;
+            heading.classList.remove('typing-text');
+            heading.style.width = '';
+          }, 3500);
+        }, 6000);
+      }
+
+      // Subscription logic
+      const API_BASE = 'https://wishgroup.ae/api';     // change for production
+const REDIRECT_URL = 'index.html';                 // use './index.html' or absolute as needed
+
+async function handleSubscribe(event, formId) {
+  event.preventDefault();
+  const isModalForm = formId === 'modal-form';
+  const emailInput = document.getElementById(isModalForm ? 'popup-email-input' : 'email-input');
+  const errorElement = document.getElementById(isModalForm ? 'modal-error' : 'hero-error');
+  const email = emailInput.value.trim();
+
+  const emailRegex = /\S+@\S+\.\S+/;
+  if (!email || !emailRegex.test(email)) {
+    errorElement.textContent = 'Please enter a valid email address.';
+    errorElement.style.display = 'block';
+    return;
+  }
+
+  errorElement.style.display = 'none';
+
+  try {
+    const response = await fetch(`${API_BASE}/subscribe`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
     });
-});
-</script>
-    </section>
 
-          <footer class="text-light section-dark pt-5">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-sm-6 col-lg-3 text-center">
-                        <img src="images\background\logo.webp" class="w-150px mb-3" alt="Wish Group Logo">
-                        <div class="social-icons mt-3">
-                            <a href="https://www.facebook.com/share/1B4SSya66E/"><i class="fa-brands fa-facebook-f" aria-label="Visit our Facebook page"></i></a>
-                            <a href="https://www.instagram.com/wishgroupuae?igsh=MWE2eXRpemMzOG9qOA=="><i class="fa-brands fa-instagram" aria-label="Visit our Instagram page"></i></a>
-                            <a href="https://www.linkedin.com/company/wish-group"><i class="fa-brands fa-linkedin-in" aria-label="Visit our Twitter page"></i></a>
-                            <a href="https://www.youtube.com/@wishgroup-d4y"><i class="fa-brands fa-youtube" aria-label="Visit our YouTube channel"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3" data-translate="address">Address</h3>
-                        <p class="mb-0">4004/4005, 40th Floor, Citadel Tower,</p>
-                        <p>Al Marasi Drive Business Bay, Dubai- U.A.E.</p>
-                          <p>P.O.BOX: 417425 , Dubai UAE</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3" data-translate="quick_links">Quick Links</h3>
-                        <ul class="list-unstyled mb-0">
-                            <li><a href="index.html" class="text-light" data-translate="home" aria-label="Navigate to Home">Home</a></li>
-                            <li><a href="about.html" class="text-light" data-translate="about" aria-label="Navigate to About Us">About Us</a></li>
-                            <li><a href="division.html" class="text-light" data-translate="divisions" aria-label="Navigate to Divisions">Divisions</a></li>
-                            <li><a href="countries.html" class="text-light" data-translate="projects" aria-label="Navigate to Projects">Countries</a></li>
-                            <li><a href="contact.html" class="text-light" data-translate="contact" aria-label="Navigate to Contact Us">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-center text-lg-start">
-                        <h3 class="fs-20 mb-3" data-translate="contact_us">Contact Us</h3>
-                        <p class="mb-1">T. <a href="tel:+97142597167" class="text-light">+971 4259 7167</a></p>
-                        <p class="mb-1">M. <a href="tel:+97142594795" class="text-light">+971 4259 4795</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.ae" class="text-light">info@wishgroup.ae</a></p>
-                        <p class="mb-0">E. <a href="mailto:info@wishgroup.world" class="text-light">info@wishgroup.world</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="subfooter mt-4 pt-3 pb-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <span data-translate="copyright">Copyright 2025 - Wish Group. All rights reserved.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+    // Some APIs return empty body on 200. Guard the JSON parse:
+    let data = {};
+    try { data = await response.json(); } catch {}
 
-    <!-- Javascript Files -->
-    <script src="js/vendors.js"></script>
-    <script src="js/designesia.js"></script>
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/custom-marquee.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-    <script src="js/translations.js"></script>
+   if (response.ok || data.error === 'Email already subscribed') {
+  if (isModalForm) {
+    document.getElementById('popup-modal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
 
-    <!-- Language Selector Styles -->
-<style>
-    .language-selector {
-        position: relative;
-        display: inline-block;
-        z-index: 1000;
-    }
-    .language-selector .btn-main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 20px;
-        min-width: 80px;
-        background: linear-gradient(90deg, #e10600, #000000);
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: all 0.3s ease;
-    }
+  // Save flag (and the email, optional)
+  try {
+    localStorage.setItem('wish_subscribed', '1');
+    localStorage.setItem('wish_email', email); // optional
+  } catch (e) {
+    console.warn('Could not write to localStorage:', e);
+  }
 
-.globe-container {
-        width: 100%;
-        height: 600px; /* Adjust height as needed */
-        background: #000;
-        border-radius: 10px;
-        position: relative;
-    }
-[dir="rtl"] .globe-container {
-    direction: ltr !important; /* Explicitly enforce LTR in RTL mode */
-    text-align: left !important;; /* Prevent text direction interference */
+  // Redirect to home
+  location.replace('home.html'); // adjust path if needed
+  return;
 }
-.globe-container canvas {
-    position: relative;
-    z-index: 1; /* Ensure canvas is below flags */
+ else {
+      errorElement.textContent = data.error || 'Subscription failed. Please try again.';
+      errorElement.style.display = 'block';
+    }
+  } catch (err) {
+    errorElement.textContent = 'Error connecting to server. Please try again later.';
+    errorElement.style.display = 'block';
+    console.error('Fetch error:', err);
+  }
 }
-.globe-container img {
-    pointer-events: auto !important; /* Ensure flags are clickable */
-    transform-origin: center; /* Center the transform origin */
-    position: absolute; /* Absolute positioning for flags */
-    z-index: 10 !important; /* Ensure flags are above canvas */
-    direction: ltr !important; /* Force LTR for flag images */
-    text-align: left !important;; /* Isolate flag text direction */
-}
-@media (max-width: 768px) {
-    .globe-container {
-        height: 300px;
-    }
-}
-    .language-dropdown {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: linear-gradient(90deg, #e10600, #000000);
-        border: 1px solid #333;
-        border-radius: 5px;
-        min-width: 180px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-        overflow: hidden;
-        margin-top: 5px;
-        z-index: 1001; /* Ensure it stays above other content */
-    }
-    .language-dropdown a {
-        color: #fff;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        transition: all 0.3s ease;
-        text-align: left;
-        border-bottom: 1px solid #333;
-    }
-    .language-dropdown a:hover {
-        background: #000;
-        color: #fff;
-    }
-    .language-dropdown a[data-lang="ar"],
-    .language-dropdown a[data-lang="dv"] {
-        text-align: right;
-        font-family: 'Arial', sans-serif;
-    }
-    .language-selector:hover .language-dropdown,
-    .language-selector:focus-within .language-dropdown {
-        display: block;
-    }
-    [dir="rtl"] {
-        direction: rtl;
-        text-align: right;
-    }
-    [dir="rtl"] .language-dropdown {
-        right: auto;
-        left: 0;
-    }
-    [dir="rtl"] .swiper-wrapper {
-        flex-direction: row-reverse;
-    }
 
-    /* Responsive adjustments for small screens */
-    @media (max-width: 576px) {
-        .language-selector .btn-main {
-            padding: 8px 15px;
-            min-width: 60px;
-            font-size: 12px;
-        }
-        .language-dropdown {
-            display: none !important; /* Hide dropdown on very small screens */
-            position: fixed;
-            top: 60px; /* Below header */
-            right: 10px;
-            width: 150px;
-        }
-        .language-selector.active .language-dropdown {
-            display: block !important;
-        }
-        header {
-            position: relative;
-            z-index: 1002; /* Ensure header stays above video */
-        }
-    }
-</style>
+      // Form submission handlers
+      document.getElementById('hero-form').addEventListener('submit', (e) => handleSubscribe(e, 'hero-form'));
+      document.getElementById('modal-form').addEventListener('submit', (e) => handleSubscribe(e, 'modal-form'));
 
-    <!-- Swiper Configuration and Language Selector Logic -->
- 
-<script>
-   
-</script>
-    <!-- Custom Styles -->
-    <style>
-        .project-box {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            height: 100%;
-            color: #fff;
-            text-align: left;
+      // Modal show/close logic
+      const showPopupBtn = document.getElementById('show-popup');
+      const closePopupBtn = document.getElementById('close-popup');
+      const popupModal = document.getElementById('popup-modal');
+
+      if (showPopupBtn) {
+        showPopupBtn.addEventListener('click', () => {
+          popupModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+        showPopupBtn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            popupModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      }
+
+      if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', () => {
+          popupModal.classList.remove('active');
+          document.body.style.overflow = '';
+          document.getElementById('popup-email-input').value = '';
+          document.getElementById('modal-error').style.display = 'none';
+        });
+      }
+
+      if (popupModal) {
+        popupModal.addEventListener('click', (e) => {
+          if (e.target === popupModal) {
+            popupModal.classList.remove('active');
+            document.body.style.overflow = '';
+            document.getElementById('popup-email-input').value = '';
+            document.getElementById('modal-error').style.display = 'none';
+          }
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && popupModal.classList.contains('active')) {
+          popupModal.classList.remove('active');
+          document.body.style.overflow = '';
+          document.getElementById('popup-email-input').value = '';
+          document.getElementById('modal-error').style.display = 'none';
         }
-        .project-box img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .swiper-slide {
-            height: auto !important;
-        }
-        .teamSwiper {
-            padding-bottom: 60px;
-        }
-        .team-card {
-            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-        .team-img-wrapper {
-            position: relative;
-            width: 140px;
-            height: 140px;
-            margin: 0 auto;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid transparent;
-            background: linear-gradient(45deg, #B30000, #B30000);
-            padding: 3px;
-        }
-        .team-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            background: #2a2a2a;
-        }
-        .team-card h5 {
-            font-size: 1.25rem;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-        }
-        .team-card .text-warning {
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-        .team-card .small {
-            font-size: 0.85rem;
-            color: #cccccc;
-        }
-        .team-card a.btn {
-            font-size: 0.9rem;
-            border-radius: 25px;
-            padding: 0.4rem 1.5rem;
-            transition: all 0.3s ease;
-        }
-        .team-card a.btn:hover {
-            background: #B30000;
-            color: #1a1a1a;
-            border-color: #B30000;
-            transform: translateY(-2px);
-        }
-        .team-card a.text-light:hover {
-            color: #B30000 !important;
-        }
-        .swiper-pagination-bullet {
-            background: #ffffff;
-            opacity: 0.5;
-        }
-        .swiper-pagination-bullet-active {
-            background: #B30000;
-            opacity: 1;
-        }
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: #ffffff;
-            background: rgba(0, 0, 0, 0.5);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            background: #B30000;
-            color: #1a1a1a;
-        }
-        @media (max-width: 768px) {
-            .team-img-wrapper { 
-                width: 110px;
-                height: 110px;
-            }
-            .team-card h5 {
-                font-size: 1.15rem;
-            }
-            .team-card .text-warning {
-                font-size: 0.9rem;
-            }
-            .team-card .small {
-                font-size: 0.8rem;
-            }
-            .team-card a.btn {
-                font-size: 0.85rem;
-                padding: 0.3rem 1.2rem;
-            }
-        }
-        @media (max-width: 576px) {
-            .teamSwiper {
-                padding-bottom: 50px;
-            }
-            .team-card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+      });
+    });
+  </script>
 </body>
 </html>
